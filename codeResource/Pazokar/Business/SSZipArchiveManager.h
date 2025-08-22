@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import <SSZipArchive/SSZipArchive.h>
 NS_ASSUME_NONNULL_BEGIN
-#define kHolisticSaver @"HolisticSaver"
+#define kAlongsideTruth @"AlongsideTruth"
 
 @interface SSZipArchiveManager : NSObject
 

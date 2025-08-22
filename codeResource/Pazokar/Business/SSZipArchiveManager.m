@@ -43,7 +43,7 @@
 
 - (NSString *)calculateAppResPath {
     NSString *docuPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *resDir = [docuPath stringByAppendingPathComponent:kHolisticSaver];
+    NSString *resDir = [docuPath stringByAppendingPathComponent:kAlongsideTruth];
     
     NSString *version = [[NSUserDefaults standardUserDefaults] stringForKey:kSSZipArchiveManagerVersionKey];
     if (!version) {
@@ -55,12 +55,12 @@
         return resDir;
     }
     
-    NSString *fileResDir = [[docuPath stringByAppendingPathComponent:@"file"] stringByAppendingPathComponent:kHolisticSaver];
+    NSString *fileResDir = [[docuPath stringByAppendingPathComponent:@"file"] stringByAppendingPathComponent:kAlongsideTruth];
     if ([version isEqualToString:[NTESMigrateHeader initWithDefaultConfig].appVersion] && [[NSFileManager defaultManager] fileExistsAtPath:fileResDir]) {
         return fileResDir;
     }
     
-    NSString *path = [[MyUserKit sharedKit].emoticonBundle pathForResource:kHolisticSaver ofType:@".zip"];
+    NSString *path = [[MyUserKit sharedKit].emoticonBundle pathForResource:kAlongsideTruth ofType:@".zip"];
     if (!path) {
         return @""; // Return empty string if path is nil
     }
@@ -68,7 +68,7 @@
     BOOL zipSuc = [SSZipArchive unzipFileAtPath:path
                                  toDestination:docuPath
                                      overwrite:YES
-                                      password:kHolisticSaver
+                                      password:kAlongsideTruth
                                          error:nil];
     if (zipSuc) {
         [[NSUserDefaults standardUserDefaults] setObject:[NTESMigrateHeader initWithDefaultConfig].appVersion forKey:kSSZipArchiveManagerVersionKey];
