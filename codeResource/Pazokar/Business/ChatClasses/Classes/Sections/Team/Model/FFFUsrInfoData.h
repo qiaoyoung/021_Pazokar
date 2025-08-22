@@ -1,3 +1,5 @@
+// __DEBUG__
+// __CLOSE_PRINT__
 //
 //  FFFUsrInfoData.h
 //  NIM
@@ -6,13 +8,21 @@
 //  Copyright (c) 2015年 Netease. All rights reserved.
 //
 
+// __M_A_C_R_O__
+//: #import "FFFContactDefines.h"
 #import "FFFContactDefines.h"
-@class FFFKitInfo;
 
-@interface RiverlaUsrInfo : NSObject <NIMGroupMemberProtocol>
+//: @class FFFKitInfo;
+@class Info;
 
-@property (nonatomic,strong) FFFKitInfo *info;
+//: @interface RiverlaUsrInfo : NSObject <NIMGroupMemberProtocol>
+@interface ButtonInfo : NSObject <DatePraise>
 
-- (BOOL)isFriend;
+//: @property (nonatomic,strong) FFFKitInfo *info;
+@property (nonatomic,strong) Info *info;
 
+//: - (BOOL)isFriend;
+- (BOOL)light;
+
+//: @end
 @end
