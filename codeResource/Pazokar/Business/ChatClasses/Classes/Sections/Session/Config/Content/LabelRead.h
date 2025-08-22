@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFBaseSessionContentConfig.h"
-#import "FFFBaseSessionContentConfig.h"
+//: #import "BusyBaseSessionContentConfig.h"
+#import "BusyBaseSessionContentConfig.h"
 
-//: @interface FFFLocationContentConfig : NSObject<CCCSessionContentConfig>
+//: @interface BusyLocationContentConfig : NSObject<CCCSessionContentConfig>
 @interface LabelRead : NSObject<ViewConfig>
 
 //: @end

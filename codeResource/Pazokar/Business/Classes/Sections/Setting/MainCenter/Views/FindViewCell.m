@@ -260,7 +260,7 @@
 //        _labGoout.textColor = [UIColor redColor];
         //: _labGoout.textAlignment = NSTextAlignmentCenter;
         _labGoout.textAlignment = NSTextAlignmentCenter;
-        //: _labGoout.text = [FFFLanguageManager getTextWithKey:@"activity_comment_setting_exit"];
+        //: _labGoout.text = [BusyLanguageManager getTextWithKey:@"activity_comment_setting_exit"];
         _labGoout.text = [SendName streetSmart:[TeamLiterallyData userFinData]];
         //: _labGoout.hidden = YES;
         _labGoout.hidden = YES;

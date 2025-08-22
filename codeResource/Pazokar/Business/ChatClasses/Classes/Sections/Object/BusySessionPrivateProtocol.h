@@ -1,20 +1,20 @@
 // __DEBUG__
 // __CLOSE_PRINT__
 //
-//  FFFSessionPrivateProtocol.h
+//  BusySessionPrivateProtocol.h
 // Case
 //
 //  Created by chris on 2016/11/7.
 //  Copyright © 2016年 NetEase. All rights reserved.
 //
-//: #import "FFFSessionViewController.h"
+//: #import "BusySessionViewController.h"
 #import "DirectionViewController.h"
 
 // __M_A_C_R_O__
 
 //: @class NIMMessage;
 @class NIMMessage;
-//: @class FFFMessageModel;
+//: @class BusyMessageModel;
 @class MoreModel;
 
 //: @interface NIMSessionMessageOperateResult : NSObject
@@ -41,16 +41,16 @@
 //: - (NIMSessionMessageOperateResult *)insertMessageModels:(NSArray *)models;
 - (AppMore *)pull:(NSArray *)models;
 
-//: - (NIMSessionMessageOperateResult *)deleteMessageModel:(FFFMessageModel *)model;
+//: - (NIMSessionMessageOperateResult *)deleteMessageModel:(BusyMessageModel *)model;
 - (AppMore *)tipDisable:(MoreModel *)model;
 
-//: - (NIMSessionMessageOperateResult *)updateMessageModel:(FFFMessageModel *)model;
+//: - (NIMSessionMessageOperateResult *)updateMessageModel:(BusyMessageModel *)model;
 - (AppMore *)consuetude:(MoreModel *)model;
 
-//: - (FFFMessageModel *)findModel:(NIMMessage *)message;
+//: - (BusyMessageModel *)findModel:(NIMMessage *)message;
 - (MoreModel *)image:(NIMMessage *)message;
 
-//: - (NSInteger)indexAtModelArray:(FFFMessageModel *)model;
+//: - (NSInteger)indexAtModelArray:(BusyMessageModel *)model;
 - (NSInteger)bodyPart:(MoreModel *)model;
 
 //: - (NSArray *)deleteModels:(NSRange)range;
@@ -87,7 +87,7 @@
 - (void)complete:(void (^)(NSError *))handler;
 
 // 展示message之前做额外配置
-//: - (void)willDisplayMessageModel:(FFFMessageModel *)model;
+//: - (void)willDisplayMessageModel:(BusyMessageModel *)model;
 - (void)flash:(MoreModel *)model;
 
 //: - (void)addPinForMessage:(NIMMessage *)message callback:(void (^)(NSError *))handler;
@@ -124,7 +124,7 @@
 //: - (BOOL)canInsertChatroomMessages;
 - (BOOL)canOrMessages;
 
-//: - (void)calculateContent:(FFFMessageModel *)model;
+//: - (void)calculateContent:(BusyMessageModel *)model;
 - (void)assemblage:(MoreModel *)model;
 
 //: - (void)reloadTable;
@@ -137,7 +137,7 @@
 - (void)streetSmart:(CGFloat)inputViewHeight;
 
 //: - (void)setDelegate:(id<NIMSessionLayoutDelegate>)delegate;
-- (void)setRestore:(id<StigmatizePlayer>)delegate;
+- (void)setDelegate:(id<StigmatizePlayer>)delegate;
 
 //: - (void)layoutAfterRefresh;
 - (void)my;
@@ -158,7 +158,7 @@
 
 
 
-//: @interface FFFSessionViewController(Interactor)
+//: @interface BusySessionViewController(Interactor)
 @interface DirectionViewController(Interactor)
 
 //: - (void)setInteractor:(id<NIMSessionInteractor>) interactor;

@@ -9,66 +9,66 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFCellLayoutConfig.h"
+//: #import "BusyCellLayoutConfig.h"
 #import "ParentMargin.h"
-//: #import "FFFSessionMessageContentView.h"
+//: #import "BusySessionMessageContentView.h"
 #import "TextControl.h"
-//: #import "FFFSessionUnknowContentView.h"
+//: #import "BusySessionUnknowContentView.h"
 #import "DateControl.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
-//: #import "FFFBaseSessionContentConfig.h"
-#import "FFFBaseSessionContentConfig.h"
+//: #import "BusyBaseSessionContentConfig.h"
+#import "BusyBaseSessionContentConfig.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @interface FFFCellLayoutConfig()
+//: @interface BusyCellLayoutConfig()
 @interface ParentMargin()
 
 //: @end
 @end
 
-//: @implementation FFFCellLayoutConfig
+//: @implementation BusyCellLayoutConfig
 @implementation ParentMargin
 
-//: - (CGSize)contentSize:(FFFMessageModel *)model cellWidth:(CGFloat)cellWidth{
+//: - (CGSize)contentSize:(BusyMessageModel *)model cellWidth:(CGFloat)cellWidth{
 - (CGSize)big:(MoreModel *)model meanSolarDay:(CGFloat)cellWidth{
-    //: id<CCCSessionContentConfig>config = [[FFFSessionContentConfigFactory sharedFacotry] configBy:model.message];
+    //: id<CCCSessionContentConfig>config = [[BusySessionContentConfigFactory sharedFacotry] configBy:model.message];
     id<ViewConfig>config = [[CleanSpecialSessionFactory degree] path:model.message];
     //: return [config contentSize:cellWidth message:model.message];
     return [config read:cellWidth quantity:model.message];
 }
 
-//: - (NSString *)cellContent:(FFFMessageModel *)model{
+//: - (NSString *)cellContent:(BusyMessageModel *)model{
 - (NSString *)flushCell:(MoreModel *)model{
-    //: id<CCCSessionContentConfig>config = [[FFFSessionContentConfigFactory sharedFacotry] configBy:model.message];
+    //: id<CCCSessionContentConfig>config = [[BusySessionContentConfigFactory sharedFacotry] configBy:model.message];
     id<ViewConfig>config = [[CleanSpecialSessionFactory degree] path:model.message];
     //: NSString *cellContent = [config cellContent:model.message];
     NSString *cellContent = [config picture:model.message];
-    //: return cellContent.length ? cellContent : @"FFFSessionUnknowContentView";
+    //: return cellContent.length ? cellContent : @"BusySessionUnknowContentView";
     return cellContent.length ? cellContent : @"DateControl";
 }
 
 
-//: - (UIEdgeInsets)contentViewInsets:(FFFMessageModel *)model{
+//: - (UIEdgeInsets)contentViewInsets:(BusyMessageModel *)model{
 - (UIEdgeInsets)skip:(MoreModel *)model{
-    //: id<CCCSessionContentConfig>config = [[FFFSessionContentConfigFactory sharedFacotry] configBy:model.message];
+    //: id<CCCSessionContentConfig>config = [[BusySessionContentConfigFactory sharedFacotry] configBy:model.message];
     id<ViewConfig>config = [[CleanSpecialSessionFactory degree] path:model.message];
     //: return [config contentViewInsets:model.message];
     return [config cut:model.message];
 }
 
 
-//: - (UIEdgeInsets)cellInsets:(FFFMessageModel *)model
+//: - (UIEdgeInsets)cellInsets:(BusyMessageModel *)model
 - (UIEdgeInsets)keeping:(MoreModel *)model
 {
-    //: if ([[self cellContent:model] isEqualToString:@"FFFSessionNotificationContentView"]) {
+    //: if ([[self cellContent:model] isEqualToString:@"BusySessionNotificationContentView"]) {
     if ([[self flushCell:model] isEqualToString:@"MediaCustomControl"]) {
         //: return UIEdgeInsetsZero;
         return UIEdgeInsetsZero;
@@ -99,19 +99,19 @@
 
 }
 
-//: - (UIEdgeInsets)replyContentViewInsets:(FFFMessageModel *)model{
+//: - (UIEdgeInsets)replyContentViewInsets:(BusyMessageModel *)model{
 - (UIEdgeInsets)sinceLocationInsets:(MoreModel *)model{
-    //: id<CCCSessionContentConfig>config = [[FFFSessionContentConfigFactory sharedFacotry] replyConfigBy:model.repliedMessage];
+    //: id<CCCSessionContentConfig>config = [[BusySessionContentConfigFactory sharedFacotry] replyConfigBy:model.repliedMessage];
     id<ViewConfig>config = [[CleanSpecialSessionFactory degree] to:model.repliedMessage];
     //: return [config contentViewInsets:model.repliedMessage];
     return [config cut:model.repliedMessage];
 }
 
 
-//: - (UIEdgeInsets)replyCellInsets:(FFFMessageModel *)model
+//: - (UIEdgeInsets)replyCellInsets:(BusyMessageModel *)model
 - (UIEdgeInsets)clean:(MoreModel *)model
 {
-    //: if ([[self cellContent:model] isEqualToString:@"FFFSessionNotificationContentView"]) {
+    //: if ([[self cellContent:model] isEqualToString:@"BusySessionNotificationContentView"]) {
     if ([[self flushCell:model] isEqualToString:@"MediaCustomControl"]) {
         //: return UIEdgeInsetsZero;
         return UIEdgeInsetsZero;
@@ -142,25 +142,25 @@
 
 }
 
-//: - (CGSize)replyContentSize:(FFFMessageModel *)model cellWidth:(CGFloat)cellWidth {
+//: - (CGSize)replyContentSize:(BusyMessageModel *)model cellWidth:(CGFloat)cellWidth {
 - (CGSize)asTitle:(MoreModel *)model show:(CGFloat)cellWidth {
-    //: id<CCCSessionContentConfig>config = [[FFFSessionContentConfigFactory sharedFacotry] replyConfigBy:model.repliedMessage];
+    //: id<CCCSessionContentConfig>config = [[BusySessionContentConfigFactory sharedFacotry] replyConfigBy:model.repliedMessage];
     id<ViewConfig>config = [[CleanSpecialSessionFactory degree] to:model.repliedMessage];
     //: return [config contentSize:cellWidth message:model.repliedMessage];
     return [config read:cellWidth quantity:model.repliedMessage];
 }
 
-//: - (NSString *)replyContent:(FFFMessageModel *)model {
+//: - (NSString *)replyContent:(BusyMessageModel *)model {
 - (NSString *)language:(MoreModel *)model {
-    //: id<CCCSessionContentConfig>config = [[FFFSessionContentConfigFactory sharedFacotry] replyConfigBy:model.repliedMessage];
+    //: id<CCCSessionContentConfig>config = [[BusySessionContentConfigFactory sharedFacotry] replyConfigBy:model.repliedMessage];
     id<ViewConfig>config = [[CleanSpecialSessionFactory degree] to:model.repliedMessage];
     //: NSString *cellContent = [config cellContent:model.repliedMessage];
     NSString *cellContent = [config picture:model.repliedMessage];
-    //: return cellContent.length ? cellContent : @"FFFSessionUnknowContentView";
+    //: return cellContent.length ? cellContent : @"BusySessionUnknowContentView";
     return cellContent.length ? cellContent : @"DateControl";
 }
 
-//: - (BOOL)shouldShowAvatar:(FFFMessageModel *)model
+//: - (BOOL)shouldShowAvatar:(BusyMessageModel *)model
 - (BOOL)team:(MoreModel *)model
 {
     //: return [[MyUserKit sharedKit].config setting:model.message].showAvatar;
@@ -168,7 +168,7 @@
 }
 
 
-//: - (BOOL)shouldShowNickName:(FFFMessageModel *)model{
+//: - (BOOL)shouldShowNickName:(BusyMessageModel *)model{
 - (BOOL)should:(MoreModel *)model{
     //: NIMMessage *message = model.message;
     NIMMessage *message = model.message;
@@ -198,28 +198,28 @@
 }
 
 
-//: - (BOOL)shouldShowLeft:(FFFMessageModel *)model
+//: - (BOOL)shouldShowLeft:(BusyMessageModel *)model
 - (BOOL)model:(MoreModel *)model
 {
     //: return !model.message.isOutgoingMsg;
     return !model.message.isOutgoingMsg;
 }
 
-//: - (CGPoint)avatarMargin:(FFFMessageModel *)model
+//: - (CGPoint)avatarMargin:(BusyMessageModel *)model
 - (CGPoint)green:(MoreModel *)model
 {
     //: return CGPointMake(8.f, 0.f);
     return CGPointMake(8.f, 0.f);
 }
 
-//: - (CGSize)avatarSize:(FFFMessageModel *)model
+//: - (CGSize)avatarSize:(BusyMessageModel *)model
 - (CGSize)session:(MoreModel *)model
 {
     //: return CGSizeMake(36, 36);
     return CGSizeMake(36, 36);
 }
 
-//: - (CGPoint)nickNameMargin:(FFFMessageModel *)model
+//: - (CGPoint)nickNameMargin:(BusyMessageModel *)model
 - (CGPoint)writerSTitle:(MoreModel *)model
 {
     //: return [self shouldShowAvatar:model] ? CGPointMake([self avatarSize:model].width + 15.f, -3.f) : CGPointMake(10.f, -3.f);
@@ -227,21 +227,21 @@
 }
 
 
-//: - (NSArray *)customViews:(FFFMessageModel *)model
+//: - (NSArray *)customViews:(BusyMessageModel *)model
 - (NSArray *)subViews:(MoreModel *)model
 {
     //: return nil;
     return nil;
 }
 
-//: - (BOOL)disableRetryButton:(FFFMessageModel *)model
+//: - (BOOL)disableRetryButton:(BusyMessageModel *)model
 - (BOOL)tiddlerHide:(MoreModel *)model
 {
 
     //: if (model.message.session.sessionType == NIMSessionTypeTeam)
     if (model.message.session.sessionType == NIMSessionTypeTeam)
     {
-        //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+        //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
         id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
         //: BOOL left = [layoutConfig shouldShowLeft:model];
         BOOL left = [layoutConfig model:model];
@@ -261,7 +261,7 @@
     //: else if (model.message.session.sessionType == NIMSessionTypeSuperTeam)
     else if (model.message.session.sessionType == NIMSessionTypeSuperTeam)
     {
-        //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+        //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
         id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
         //: BOOL left = [layoutConfig shouldShowLeft:model];
         BOOL left = [layoutConfig model:model];
@@ -294,10 +294,10 @@
     }
 }
 
-//: - (BOOL)shouldDisplayBubbleBackground:(FFFMessageModel *)model
+//: - (BOOL)shouldDisplayBubbleBackground:(BusyMessageModel *)model
 - (BOOL)text:(MoreModel *)model
 {
-    //: id<CCCSessionContentConfig> config = [[FFFSessionContentConfigFactory sharedFacotry] configBy:model.message];
+    //: id<CCCSessionContentConfig> config = [[BusySessionContentConfigFactory sharedFacotry] configBy:model.message];
     id<ViewConfig> config = [[CleanSpecialSessionFactory degree] path:model.message];
     //: if ([config respondsToSelector:@selector(enableBackgroundBubbleView:)])
     if ([config respondsToSelector:@selector(quantityVideo:)])

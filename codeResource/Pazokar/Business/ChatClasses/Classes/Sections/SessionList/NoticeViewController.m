@@ -157,29 +157,29 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionListViewController.h"
+//: #import "BusySessionListViewController.h"
 #import "NoticeViewController.h"
-//: #import "FFFSessionViewController.h"
+//: #import "BusySessionViewController.h"
 #import "DirectionViewController.h"
-//: #import "FFFSessionListCell.h"
+//: #import "BusySessionListCell.h"
 #import "ValueViewCell.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
-//: #import "FFFMessageUtil.h"
+//: #import "BusyMessageUtil.h"
 #import "CommunicationViewText.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 //: #import <YYText.h>
 #import <YYText.h>
-//: #import "FFFTextHighlight.h"
+//: #import "BusyTextHighlight.h"
 #import "MediaNameContentHighlight.h"
-//: #import "FFFInputEmoticonParser.h"
+//: #import "BusyInputEmoticonParser.h"
 #import "ViewApp.h"
-//: #import "FFFInputEmoticonManager.h"
+//: #import "BusyInputEmoticonManager.h"
 #import "DeviceManager.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
@@ -190,7 +190,7 @@
 //: #import "LEEAlert.h"
 #import "StraddleAlert.h"
 
-//: @interface FFFSessionListViewController ()
+//: @interface BusySessionListViewController ()
 @interface NoticeViewController ()
 
 //@property (nonatomic,strong)  UIImageView *navBarHairlineImageView;
@@ -198,7 +198,7 @@
 //: @end
 @end
 
-//: @implementation FFFSessionListViewController
+//: @implementation BusySessionListViewController
 @implementation NoticeViewController
 
 //: - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -299,20 +299,20 @@
     //: [[NIMSDK sharedSDK].loginManager addDelegate:self];
     [[NIMSDK sharedSDK].loginManager addDelegate:self];
 
-    //: extern NSString *const NIMKitTeamInfoHasUpdatedNotification;
-    extern NSString *const NIMKitTeamInfoHasUpdatedNotification;
-    //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTeamInfoHasUpdatedNotification:) name:NIMKitTeamInfoHasUpdatedNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(infoCreate:) name:NIMKitTeamInfoHasUpdatedNotification object:nil];
+    //: extern NSString *const dreamMessageTableKey;
+    extern NSString *const dreamMessageTableKey;
+    //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTeamInfoHasUpdatedNotification:) name:dreamMessageTableKey object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(infoCreate:) name:dreamMessageTableKey object:nil];
 
-    //: extern NSString *const NIMKitTeamMembersHasUpdatedNotification;
-    extern NSString *const NIMKitTeamMembersHasUpdatedNotification;
-    //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTeamMembersHasUpdatedNotification:) name:NIMKitTeamMembersHasUpdatedNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nearCanShould:) name:NIMKitTeamMembersHasUpdatedNotification object:nil];
+    //: extern NSString *const k_pathIdent;
+    extern NSString *const k_pathIdent;
+    //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTeamMembersHasUpdatedNotification:) name:k_pathIdent object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nearCanShould:) name:k_pathIdent object:nil];
 
-    //: extern NSString *const NIMKitUserInfoHasUpdatedNotification;
-    extern NSString *const NIMKitUserInfoHasUpdatedNotification;
-    //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onUserInfoHasUpdatedNotification:) name:NIMKitUserInfoHasUpdatedNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(files:) name:NIMKitUserInfoHasUpdatedNotification object:nil];
+    //: extern NSString *const notiArrayName;
+    extern NSString *const notiArrayName;
+    //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onUserInfoHasUpdatedNotification:) name:notiArrayName object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(files:) name:notiArrayName object:nil];
 
     //: [self setupSessions];
     [self press];
@@ -330,7 +330,7 @@
 - (void)eventColorPraise:(id)sender {
     //: HMWebViewController *vc = [[HMWebViewController alloc] init];
     AppearViewController *vc = [[AppearViewController alloc] init];
-    //: vc.webTitle = [FFFLanguageManager getTextWithKey:@"activity_comment_setting_ys"];
+    //: vc.webTitle = [BusyLanguageManager getTextWithKey:@"activity_comment_setting_ys"];
     vc.webTitle = [SendName streetSmart:[[ShowSpeakData sharedInstance] app_theologicalValue]];
     //: vc.urlString = [NIMUserDefaults standardUserDefaults].yshref;
     vc.urlString = [DataMaxDefaults max].yshref;
@@ -348,7 +348,7 @@
     [StraddleAlert view].config
         //: .LeeAddTitle(^(UILabel * _Nonnull label) {
         .LeeAddTitle(^(UILabel * _Nonnull label) {
-            //: label.text = [FFFLanguageManager getTextWithKey:@"UserAgreement_PrivacyPolicy"];
+            //: label.text = [BusyLanguageManager getTextWithKey:@"UserAgreement_PrivacyPolicy"];
             label.text = [SendName streetSmart:[[ShowSpeakData sharedInstance] noti_interviewStr]];
             //: label.font = [UIFont boldSystemFontOfSize:17];
             label.font = [UIFont boldSystemFontOfSize:17];
@@ -359,7 +359,7 @@
     //: .LeeAddContent(^(UILabel *label) {
     .LeeAddContent(^(UILabel *label) {
 
-        //: NSString *markString = [FFFLanguageManager getTextWithKey:@"UserAgreementProtocol"];
+        //: NSString *markString = [BusyLanguageManager getTextWithKey:@"UserAgreementProtocol"];
         NSString *markString = [SendName streetSmart:[[ShowSpeakData sharedInstance] kAmbitiousFormat]];
 
         //: NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
@@ -387,7 +387,7 @@
             NSUnderlineStyleAttributeName : @(NSUnderlineStyleSingle),
             //: NSForegroundColorAttributeName: [UIColor colorWithRed:6/255.0f green:53/255.0f blue:253/255.0f alpha:1.0f],
             NSForegroundColorAttributeName: [UIColor colorWithRed:6/255.0f green:53/255.0f blue:253/255.0f alpha:1.0f],
-        //: } range:[attrsString.string rangeOfString:[FFFLanguageManager getTextWithKey:@"UserAgreement_PrivacyPolicy"]]];
+        //: } range:[attrsString.string rangeOfString:[BusyLanguageManager getTextWithKey:@"UserAgreement_PrivacyPolicy"]]];
         } range:[attrsString.string rangeOfString:[SendName streetSmart:[[ShowSpeakData sharedInstance] noti_interviewStr]]]];
 
         //: label.attributedText = attrsString;
@@ -407,7 +407,7 @@
     //: .LeeAddAction(^(LEEAction *action) {
     .LeeAddAction(^(FormatRedApp *action) {
 
-        //: action.title = [FFFLanguageManager getTextWithKey:@"reject"];
+        //: action.title = [BusyLanguageManager getTextWithKey:@"reject"];
         action.title = [SendName streetSmart:[[ShowSpeakData sharedInstance] mainLiableForbidMessage]];
 
         //: action.titleColor = [UIColor darkGrayColor];
@@ -433,7 +433,7 @@
         //: action.type = LEEActionTypeCancel;
         action.type = LEEActionTypeCancel;
 
-        //: action.title = [FFFLanguageManager getTextWithKey:@"agree"];
+        //: action.title = [BusyLanguageManager getTextWithKey:@"agree"];
         action.title = [SendName streetSmart:[[ShowSpeakData sharedInstance] showHaoName]];
 
         //: action.titleColor = [UIColor whiteColor];
@@ -585,13 +585,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //: static NSString *cellId = @"cellId";
     static NSString *cellId = @"cellId";
-    //: FFFSessionListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    //: BusySessionListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     ValueViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     //: cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     //: if (!cell) {
     if (!cell) {
-        //: cell = [[FFFSessionListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        //: cell = [[BusySessionListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
         cell = [[ValueViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
         //: [cell.avatarImageView addTarget:self action:@selector(onTouchAvatar:) forControlEvents:UIControlEventTouchUpInside];
         [cell.avatarImageView addTarget:self action:@selector(neighborhoodsing:) forControlEvents:UIControlEventTouchUpInside];
@@ -772,7 +772,7 @@
 
 //: - (void)onSelectedRecent:(NIMRecentSession *)recentSession atIndexPath:(NSIndexPath *)indexPath{
 - (void)tapSession:(NIMRecentSession *)recentSession image:(NSIndexPath *)indexPath{
-    //: FFFSessionViewController *vc = [[FFFSessionViewController alloc] initWithSession:recentSession.session];
+    //: BusySessionViewController *vc = [[BusySessionViewController alloc] initWithSession:recentSession.session];
     DirectionViewController *vc = [[DirectionViewController alloc] initWithMedia:recentSession.session];
     //: [self.navigationController pushViewController:vc animated:YES];
     [self.navigationController pushViewController:vc animated:YES];
@@ -784,7 +784,7 @@
 - (NSString *)recent:(NIMRecentSession *)recent {
     //: if (recent.session.sessionType == NIMSessionTypeP2P) {
     if (recent.session.sessionType == NIMSessionTypeP2P) {
-        //: return [FFFKitUtil showNick:recent.session.sessionId inSession:recent.session];
+        //: return [BusyKitUtil showNick:recent.session.sessionId inSession:recent.session];
         return [OffMore smallness:recent.session.sessionId flush:recent.session];
     //: } else if (recent.session.sessionType == NIMSessionTypeTeam) {
     } else if (recent.session.sessionType == NIMSessionTypeTeam) {
@@ -819,13 +819,13 @@
 - (NSString *)dismissSession:(NIMRecentSession *)recent{
     //: if (recent.lastMessage) {
     if (recent.lastMessage) {
-        //: return [FFFKitUtil showTime:recent.lastMessage.timestamp showDetail:NO];
+        //: return [BusyKitUtil showTime:recent.lastMessage.timestamp showDetail:NO];
         return [OffMore readShow:recent.lastMessage.timestamp voiceOver:NO];
     }
     // 服务端时间戳以毫秒为单位,需要转化
     //: NSTimeInterval timeSecond = recent.updateTime / 1000.0;
     NSTimeInterval timeSecond = recent.updateTime / 1000.0;
-    //: return [FFFKitUtil showTime:timeSecond showDetail:NO];
+    //: return [BusyKitUtil showTime:timeSecond showDetail:NO];
     return [OffMore readShow:timeSecond voiceOver:NO];
 }
 
@@ -913,7 +913,7 @@
 #pragma mark - Private
 //: - (NSString *)messageContent:(NIMMessage*)lastMessage{
 - (NSString *)keySize:(NIMMessage*)lastMessage{
-    //: NSString *text = [FFFMessageUtil messageContent:lastMessage];
+    //: NSString *text = [BusyMessageUtil messageContent:lastMessage];
     NSString *text = [CommunicationViewText sessionView:lastMessage];
     //: if (lastMessage.session.sessionType == NIMSessionTypeP2P || lastMessage.messageType == NIMMessageTypeTip)
     if (lastMessage.session.sessionType == NIMSessionTypeP2P || lastMessage.messageType == NIMMessageTypeTip)
@@ -927,12 +927,12 @@
 
         //: NIMMessage *msg = [self lastMessageWithNoNotificationMessage:lastMessage];
         NIMMessage *msg = [self dataTo:lastMessage];
-        //: text = [FFFMessageUtil messageContent:msg];
+        //: text = [BusyMessageUtil messageContent:msg];
         text = [CommunicationViewText sessionView:msg];
 
         //: NSString *from = msg.from;
         NSString *from = msg.from;
-        //: NSString *nickName = [FFFKitUtil showNick:from inSession:msg.session];
+        //: NSString *nickName = [BusyKitUtil showNick:from inSession:msg.session];
         NSString *nickName = [OffMore smallness:from flush:msg.session];
         //: return nickName.length ? [nickName stringByAppendingFormat:@" : %@",text] : @"";
         return nickName.length ? [nickName stringByAppendingFormat:@" : %@",text] : @"";

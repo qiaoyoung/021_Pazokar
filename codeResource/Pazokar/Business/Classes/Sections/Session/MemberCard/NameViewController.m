@@ -47,7 +47,7 @@
     return appSeparatePath;
 }
 
-//: #FFF6CF
+//: #Busy6CF
 - (NSString *)app_shouldText {
     /* static */ NSString *app_shouldText = nil;
     if (!app_shouldText) {
@@ -160,17 +160,17 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamMuteMemberListViewController.h"
+//: #import "BusyTeamMuteMemberListViewController.h"
 #import "NameViewController.h"
-//: #import "FFFTeamMemberCardViewController.h"
+//: #import "BusyTeamMemberCardViewController.h"
 #import "FindViewController.h"
-//: #import "FFFCardHeaderCell.h"
+//: #import "BusyCardHeaderCell.h"
 #import "FastenerView.h"
-//: #import "FFFTeamCardMemberItem.h"
+//: #import "BusyTeamCardMemberItem.h"
 #import "HomegirlFormat.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
-//: #import "FFFKitProgressHUD.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
+//: #import "BusyKitProgressHUD.h"
 #import "KitEffectView.h"
 //: #import "NSString+MyUserKit.h"
 #import "NSString+Case.h"
@@ -181,7 +181,7 @@
 //: #import "NTESBlackListTableViewCell.h"
 #import "TagPraiseViewCell.h"
 
-//: @interface FFFTeamMuteMemberListViewController ()<UITableViewDataSource,UITableViewDelegate,NTESUserListCellDelegate>
+//: @interface BusyTeamMuteMemberListViewController ()<UITableViewDataSource,UITableViewDelegate,NTESUserListCellDelegate>
 @interface NameViewController ()<UITableViewDataSource,UITableViewDelegate,CompartmentReload>
 
 //: @property (nonatomic,strong) UITableView *tableView;
@@ -197,7 +197,7 @@
 //: @end
 @end
 
-//: @implementation FFFTeamMuteMemberListViewController
+//: @implementation BusyTeamMuteMemberListViewController
 @implementation NameViewController
 
 
@@ -262,7 +262,7 @@
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"black_list_activity_black"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"black_list_activity_black"];
     labtitle.text = [SendName streetSmart:[[NextData sharedInstance] user_recordMsg]];
     //: [bgView addSubview:labtitle];
     [bgView addSubview:labtitle];
@@ -409,7 +409,7 @@
     //: NIMTeamMember *member = self.memberList[indexPath.section];
     NIMTeamMember *member = self.memberList[indexPath.section];
 
-    //: FFFTeamMemberCardViewController *vc = [[FFFTeamMemberCardViewController alloc] init];
+    //: BusyTeamMemberCardViewController *vc = [[BusyTeamMemberCardViewController alloc] init];
     FindViewController *vc = [[FindViewController alloc] init];
     //: vc.teamListManager = self.teamListManager;
     vc.teamListManager = self.teamListManager;
@@ -437,7 +437,7 @@
 
         //: if(!error) {
         if(!error) {
-            //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"group_chat_avatar_activity_remove_black_success"]
+            //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"group_chat_avatar_activity_remove_black_success"]
             [self.view makeToast:[SendName streetSmart:[[NextData sharedInstance] m_nameEcruPath]]
                          //: duration:2
                          duration:2
@@ -484,7 +484,7 @@
     if(!_box){
         //: _box = [[UIView alloc]initWithFrame:CGRectMake(0, (44.0f + [UIDevice vg_statusBarHeight]), [[UIScreen mainScreen] bounds].size.width, 26)];
         _box = [[UIView alloc]initWithFrame:CGRectMake(0, (44.0f + [UIDevice statusOrLevel]), [[UIScreen mainScreen] bounds].size.width, 26)];
-        //: _box.backgroundColor = [UIColor colorWithHexString:@"#FFF6CF"];
+        //: _box.backgroundColor = [UIColor colorWithHexString:@"#Busy6CF"];
         _box.backgroundColor = [UIColor status:[[NextData sharedInstance] app_shouldText]];
 
         //: UIImageView *defImg = [[UIImageView alloc]initWithFrame:CGRectMake(15, 6, 14, 14)];
@@ -501,7 +501,7 @@
         //: subtitleLabel.textColor = [UIColor colorWithHexString:@"#FF483D"];
         subtitleLabel.textColor = [UIColor status:[[NextData sharedInstance] app_barPath]];
 //        subtitleLabel.textAlignment = NSTextAlignmentLeft;
-        //: subtitleLabel.text = [FFFLanguageManager getTextWithKey:@"black_list_activity_black_list_tip"];
+        //: subtitleLabel.text = [BusyLanguageManager getTextWithKey:@"black_list_activity_black_list_tip"];
         subtitleLabel.text = [SendName streetSmart:[[NextData sharedInstance] appSeparatePath]];
         //: [_box addSubview:subtitleLabel];
         [_box addSubview:subtitleLabel];
@@ -536,7 +536,7 @@
         emptyTipLabel.textAlignment = NSTextAlignmentCenter;
         //: [_defView addSubview:emptyTipLabel];
         [_defView addSubview:emptyTipLabel];
-        //: emptyTipLabel.text = [FFFLanguageManager getTextWithKey:@"group_info_activity_without"];
+        //: emptyTipLabel.text = [BusyLanguageManager getTextWithKey:@"group_info_activity_without"];
         emptyTipLabel.text = [SendName streetSmart:[[NextData sharedInstance] m_defensiveNearlyKey]];
 
 

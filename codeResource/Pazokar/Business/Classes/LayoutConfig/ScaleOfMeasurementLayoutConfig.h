@@ -14,7 +14,7 @@
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @interface NTESCellLayoutConfig : FFFCellLayoutConfig<FFFCellLayoutConfig>
+//: @interface NTESCellLayoutConfig : BusyCellLayoutConfig<BusyCellLayoutConfig>
 @interface ScaleOfMeasurementLayoutConfig : ParentMargin<ParentMargin>
 
 //: @end

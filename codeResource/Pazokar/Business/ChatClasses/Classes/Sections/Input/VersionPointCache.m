@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFInputAtCache.h"
+//: #import "BusyInputAtCache.h"
 #import "VersionPointCache.h"
 
-//: @interface FFFInputAtCache()
+//: @interface BusyInputAtCache()
 @interface VersionPointCache()
 
 //: @property (nonatomic,strong) NSMutableArray *items;
@@ -21,7 +21,7 @@
 //: @end
 @end
 
-//: @implementation FFFInputAtCache
+//: @implementation BusyInputAtCache
 @implementation VersionPointCache
 
 //: - (instancetype)init

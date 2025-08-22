@@ -88,7 +88,7 @@ Byte dream_memberTitle[] = {3, 7, 41, 7, 91, 219, 136, 140, 152, 151, 157, 142, 
 //: - (NSString *)cellContent:(NIMMessage *)message
 - (NSString *)title:(NIMMessage *)message
 {
-    //: return @"FFFSessionShareCardContentView";
+    //: return @"BusySessionShareCardContentView";
     return @"NameContentView";
 }
 

@@ -58,21 +58,21 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionTextContentView.h"
+//: #import "BusySessionTextContentView.h"
 #import "ButtonView.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFTextView.h"
+//: #import "BusyTextView.h"
 #import "FormatNameView.h"
-//: #import "FFFSessionConfig.h"
+//: #import "BusySessionConfig.h"
 #import "QuantityelligenceInformationCan.h"
 //: #import "NTESSessionViewController.h"
 #import "TopViewController.h"
@@ -82,7 +82,7 @@ typedef struct {
 //: NSString *const NIMTextMessageLabelLinkData = @"NIMTextMessageLabelLinkData";
 NSString *const userCellStr = @"NIMTextMessageLabelLinkData";
 
-//: @interface FFFSessionTextContentView()<M80AttributedLabelDelegate>
+//: @interface BusySessionTextContentView()<M80AttributedLabelDelegate>
 @interface ButtonView()<CleanName>
 
 //: @property (nonatomic, strong) NSString *urlStr;
@@ -93,7 +93,7 @@ NSString *const userCellStr = @"NIMTextMessageLabelLinkData";
 //: @end
 @end
 
-//: @implementation FFFSessionTextContentView
+//: @implementation BusySessionTextContentView
 @implementation ButtonView
 
 //: - (instancetype)initSessionMessageContentView
@@ -124,7 +124,7 @@ NSString *const userCellStr = @"NIMTextMessageLabelLinkData";
          //: autoreleasepool{} __weak __typeof__(self) __weak_self__ = self;
          autoreleasepool{} __weak __typeof__(self) __weak_self__ = self;
                       ;
-        //: _textView.selectBlock = ^(FFFMediaItem *item) {
+        //: _textView.selectBlock = ^(BusyMediaItem *item) {
         _textView.selectBlock = ^(ModelMessage *item) {
             @
              //: try{} @finally{} __typeof__(self) self = __weak_self__;
@@ -221,7 +221,7 @@ NSString *const userCellStr = @"NIMTextMessageLabelLinkData";
     return isUrl;
 }
 
-//: - (void)refresh:(FFFMessageModel *)data
+//: - (void)refresh:(BusyMessageModel *)data
 - (void)messagePress:(MoreModel *)data
 {
     //: if (self.model == data) {
@@ -235,7 +235,7 @@ NSString *const userCellStr = @"NIMTextMessageLabelLinkData";
 
     //: NSString *text = self.model.message.text;
     NSString *text = self.model.message.text;
-    //: FFFKitSetting *setting = [[MyUserKit sharedKit].config setting:data.message];
+    //: BusyKitSetting *setting = [[MyUserKit sharedKit].config setting:data.message];
     GreenSetting *setting = [[Case pastTop].config tool:data.message];
     //: self.textView.textColor = setting.textColor;
     self.textView.textColor = setting.textColor;
@@ -255,7 +255,7 @@ NSString *const userCellStr = @"NIMTextMessageLabelLinkData";
                 //: self.textView.actionDelegate = vc;
                 self.textView.actionDelegate = vc;
                 //: self.textView.config = vc.sessionConfig;
-                self.textView.config = vc.secret;
+                self.textView.config = vc.sessionConfig;
             }
         //: }];
         }];
@@ -344,9 +344,9 @@ NSString *const userCellStr = @"NIMTextMessageLabelLinkData";
 - (void)by:(CypherScrollView *)label
              //: clickedOnLink:(id)linkData{
              offClickedAttributedLabelThink:(id)linkData{
-    //: FFFKitEvent *event = [[FFFKitEvent alloc] init];
+    //: BusyKitEvent *event = [[BusyKitEvent alloc] init];
     DirectionEvent *event = [[DirectionEvent alloc] init];
-    //: event.eventName = FFFKitEventNameTapLabelLink;
+    //: event.eventName = BusyKitEventNameTapLabelLink;
     event.eventName = user_commentFormat;
     //: event.messageModel = self.model;
     event.messageModel = self.model;

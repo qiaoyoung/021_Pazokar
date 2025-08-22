@@ -26,7 +26,7 @@
     return [NSString stringWithUTF8String:(char *)[self SemenDataToCache:data]];
 }
 
-//: #ffffff
+//: #fffBusy
 + (NSString *)dream_messageMsg {
     /* static */ NSString *dream_messageMsg = nil;
     if (!dream_messageMsg) {
@@ -227,7 +227,7 @@
 
     //: _viewBg = [[UIView alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen] bounds].size.height-_minHeight, [[UIScreen mainScreen] bounds].size.width, _minHeight)];
     _viewBg = [[UIView alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen] bounds].size.height-_minHeight, [[UIScreen mainScreen] bounds].size.width, _minHeight)];
-    //: _viewBg.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+    //: _viewBg.backgroundColor = [UIColor colorWithHexString:@"#fffBusy"];
     _viewBg.backgroundColor = [UIColor status:[SemenData dream_messageMsg]];
     //: _viewBg.layer.masksToBounds = YES;
     _viewBg.layer.masksToBounds = YES;
@@ -288,7 +288,7 @@
         _confirmButton = [UIButton buttonWithType:UIButtonTypeSystem];
         //: _confirmButton.layer.cornerRadius = 24;
         _confirmButton.layer.cornerRadius = 24;
-        //: [_confirmButton setTitle:[FFFLanguageManager getTextWithKey:@"user_profile_avtivity_send"] forState:UIControlStateNormal];
+        //: [_confirmButton setTitle:[BusyLanguageManager getTextWithKey:@"user_profile_avtivity_send"] forState:UIControlStateNormal];
         [_confirmButton setTitle:[SendName streetSmart:[SemenData showContainerName]] forState:UIControlStateNormal];
         //: [_confirmButton addTarget:self action:@selector(confirmButtonTapped) forControlEvents:UIControlEventTouchUpInside];
         [_confirmButton addTarget:self action:@selector(emptyTapped) forControlEvents:UIControlEventTouchUpInside];
@@ -312,7 +312,7 @@
     //: NSLog(@"选择了 %lu 张图片", (unsigned long)assets.count);
     //: self.selectedPhoto = assets;
     self.selectedPhoto = assets;
-    //: [self.confirmButton setTitle:[NSString stringWithFormat:@"%@(%lu)",[FFFLanguageManager getTextWithKey:@"user_profile_avtivity_send"],(unsigned long)self.selectedPhoto.count] forState:UIControlStateNormal];
+    //: [self.confirmButton setTitle:[NSString stringWithFormat:@"%@(%lu)",[BusyLanguageManager getTextWithKey:@"user_profile_avtivity_send"],(unsigned long)self.selectedPhoto.count] forState:UIControlStateNormal];
     [self.confirmButton setTitle:[NSString stringWithFormat:@"%@(%lu)",[SendName streetSmart:[SemenData showContainerName]],(unsigned long)self.selectedPhoto.count] forState:UIControlStateNormal];
 }
 

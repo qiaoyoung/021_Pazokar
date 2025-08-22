@@ -13,10 +13,10 @@
 #import <UIKit/UIKit.h>
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFCardDataSourceProtocol.h"
-#import "FFFCardDataSourceProtocol.h"
+//: #import "BusyCardDataSourceProtocol.h"
+#import "BusyCardDataSourceProtocol.h"
 
-//: @class FFFAvatarImageView;
+//: @class BusyAvatarImageView;
 @class CustomFormatView;
 
 
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-//: @interface FFFGroupMemberTableViewCell : UITableViewCell
+//: @interface BusyGroupMemberTableViewCell : UITableViewCell
 @interface SortView : UITableViewCell
 
 

@@ -149,20 +149,20 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFCreateTeamAnnouncement.h"
+//: #import "BusyCreateTeamAnnouncement.h"
 #import "AnnouncementViewController.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
-//: #import "FFFKitKeyboardInfo.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
+//: #import "BusyKitKeyboardInfo.h"
 #import "AffairWith.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 //: #import "UITextView+Util.h"
 #import "UITextView+Util.h"
 
-//: @interface FFFCreateTeamAnnouncement () <UITextFieldDelegate, UITextViewDelegate>
+//: @interface BusyCreateTeamAnnouncement () <UITextFieldDelegate, UITextViewDelegate>
 @interface AnnouncementViewController () <UITextFieldDelegate, UITextViewDelegate>
 //: @property (strong, nonatomic) UITextField *titleTextField;
 @property (strong, nonatomic) UITextField *titleTextField;
@@ -177,7 +177,7 @@
 //: @end
 @end
 
-//: @implementation FFFCreateTeamAnnouncement
+//: @implementation BusyCreateTeamAnnouncement
 @implementation AnnouncementViewController
 
 //: - (void)viewWillAppear:(BOOL)animated{
@@ -235,7 +235,7 @@
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"Group_description"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"Group_description"];
     labtitle.text = [SendName streetSmart:[MallPsychologistData user_namePath]];
     //: [bgView addSubview:labtitle];
     [bgView addSubview:labtitle];
@@ -280,7 +280,7 @@
 
     //: self.titleTextField = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, [[UIScreen mainScreen] bounds].size.width-60, 30)];
     self.titleTextField = [[UITextField alloc] initWithFrame:CGRectMake(15, 10, [[UIScreen mainScreen] bounds].size.width-60, 30)];
-    //: self.titleTextField.placeholder = [FFFLanguageManager getTextWithKey:@"Announcement_title"];
+    //: self.titleTextField.placeholder = [BusyLanguageManager getTextWithKey:@"Announcement_title"];
     self.titleTextField.placeholder = [SendName streetSmart:[MallPsychologistData app_mpYaStr]];
     //: self.titleTextField.font = [UIFont systemFontOfSize:18.f];
     self.titleTextField.font = [UIFont systemFontOfSize:18.f];
@@ -308,7 +308,7 @@
     self.contentTextView.font = [UIFont systemFontOfSize:14.f];
     //: self.contentTextView.delegate = self;
     self.contentTextView.delegate = self;
-    //: self.contentTextView.placeholder = [FFFLanguageManager getTextWithKey:@"Please_enter_content"];
+    //: self.contentTextView.placeholder = [BusyLanguageManager getTextWithKey:@"Please_enter_content"];
     self.contentTextView.placeholder = [SendName streetSmart:[MallPsychologistData showNowhereKey]];
     //: self.contentTextView.text = self.defaultContent;
     self.contentTextView.text = self.defaultContent;
@@ -327,7 +327,7 @@
     submitButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
     //: [submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //: [submitButton setTitle:[FFFLanguageManager getTextWithKey:@"feedback_activity_submit"] forState:UIControlStateNormal];
+    //: [submitButton setTitle:[BusyLanguageManager getTextWithKey:@"feedback_activity_submit"] forState:UIControlStateNormal];
     [submitButton setTitle:[SendName streetSmart:[MallPsychologistData dreamTeamMsg]] forState:UIControlStateNormal];
     //: [submitButton addTarget:self action:@selector(onSave:) forControlEvents:UIControlEventTouchUpInside];
     [submitButton addTarget:self action:@selector(oned:) forControlEvents:UIControlEventTouchUpInside];

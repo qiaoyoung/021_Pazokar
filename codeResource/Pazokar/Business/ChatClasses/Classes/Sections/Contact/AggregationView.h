@@ -12,13 +12,13 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: @class FFFContactPickedView;
+//: @class BusyContactPickedView;
 @class LengthView;
 
-//: @interface FFFContactSelectTabView : UIView
+//: @interface BusyContactSelectTabView : UIView
 @interface AggregationView : UIView
 
-//: @property (nonatomic,strong) FFFContactPickedView *pickedView;
+//: @property (nonatomic,strong) BusyContactPickedView *pickedView;
 @property (nonatomic,strong) LengthView *pickedView;
 
 //: @property (nonatomic,strong) UIButton *doneButton;

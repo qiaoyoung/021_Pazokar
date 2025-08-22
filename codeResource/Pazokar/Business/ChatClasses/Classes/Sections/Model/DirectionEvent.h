@@ -13,16 +13,16 @@
 #import <Foundation/Foundation.h>
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
 
-//: @interface FFFKitEvent : NSObject
+//: @interface BusyKitEvent : NSObject
 @interface DirectionEvent : NSObject
 
 //: @property (nonatomic,copy) NSString *eventName;
 @property (nonatomic,copy) NSString *eventName;
 
-//: @property (nonatomic,strong) FFFMessageModel *messageModel;
+//: @property (nonatomic,strong) BusyMessageModel *messageModel;
 @property (nonatomic,strong) MoreModel *messageModel;
 
 //: @property (nonatomic,strong) id data;
@@ -34,12 +34,12 @@
 
 
 
-//: extern NSString *const FFFKitEventNameTapContent;
+//: extern NSString *const BusyKitEventNameTapContent;
 extern NSString *const notiMessageId;
-//: extern NSString *const FFFKitEventNameTapLabelLink;
+//: extern NSString *const BusyKitEventNameTapLabelLink;
 extern NSString *const user_commentFormat;
-//: extern NSString *const FFFKitEventNameTapAudio;
+//: extern NSString *const BusyKitEventNameTapAudio;
 extern NSString *const mainEventId;
 
-//: extern NSString *const FFFKitEventNameTapRepliedContent;
+//: extern NSString *const BusyKitEventNameTapRepliedContent;
 extern NSString *const m_restoreMessage;

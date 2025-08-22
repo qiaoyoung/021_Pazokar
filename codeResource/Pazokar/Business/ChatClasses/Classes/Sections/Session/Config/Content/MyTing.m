@@ -9,14 +9,14 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTipContentConfig.h"
+//: #import "BusyTipContentConfig.h"
 #import "MyTing.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @implementation FFFTipContentConfig
+//: @implementation BusyTipContentConfig
 @implementation MyTing
 
 //: - (CGSize)contentSize:(CGFloat)cellWidth message:(NIMMessage *)message
@@ -26,7 +26,7 @@
     CGFloat messageWidth = cellWidth;
     //: UILabel *label = [[UILabel alloc] init];
     UILabel *label = [[UILabel alloc] init];
-    //: label.text = [FFFKitUtil messageTipContent:message];
+    //: label.text = [BusyKitUtil messageTipContent:message];
     label.text = [OffMore impanel:message];
     //: label.font = [[MyUserKit sharedKit].config setting:message].font;
     label.font = [[Case pastTop].config tool:message].font;
@@ -47,7 +47,7 @@
 //: - (NSString *)cellContent:(NIMMessage *)message
 - (NSString *)picture:(NIMMessage *)message
 {
-    //: return @"FFFSessionNotificationContentView";
+    //: return @"BusySessionNotificationContentView";
     return @"MediaCustomControl";
 }
 

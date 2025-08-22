@@ -29,7 +29,7 @@ Byte app_nearlyStr[] = {96, 26, 11, 6, 78, 87, 99, 94, 98, 35, 89, 90, 98, 100, 
 #import "ModelText.h"
 //: #import "NTESSessionMsgConverter.h"
 #import "PraiseConverter.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
 
 //: typedef void(^NTESMergeForwardTaskResult)(uint64_t identifier, NSError * _Nonnull error, NIMMessage * _Nonnull message);
@@ -199,11 +199,11 @@ typedef void(^NTESMergeForwardTaskResult)(uint64_t identifier, NSError * _Nonnul
                 //show name
                 //: NIMSession *fromSession = [weakSelf.messages firstObject].session;
                 NIMSession *fromSession = [weakSelf.messages firstObject].session;
-                //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+                //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
                 InfoGreenImage *option = [[InfoGreenImage alloc] init];
                 //: option.session = fromSession;
                 option.session = fromSession;
-                //: FFFKitInfo *info = nil;
+                //: BusyKitInfo *info = nil;
                 Info *info = nil;
                 //: if (fromSession.sessionType == NIMSessionTypeP2P) {
                 if (fromSession.sessionType == NIMSessionTypeP2P) {

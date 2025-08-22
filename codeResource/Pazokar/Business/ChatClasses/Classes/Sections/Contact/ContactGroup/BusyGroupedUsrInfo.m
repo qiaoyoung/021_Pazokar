@@ -9,11 +9,11 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFGroupedUsrInfo.h"
-#import "FFFGroupedUsrInfo.h"
-//: #import "FFFSpellingCenter.h"
+//: #import "BusyGroupedUsrInfo.h"
+#import "BusyGroupedUsrInfo.h"
+//: #import "BusySpellingCenter.h"
 #import "PinValueTing.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
 
 //: @interface NIMGroupUser()
@@ -21,7 +21,7 @@
 
 //: @property (nonatomic,copy) NSString *userId;
 @property (nonatomic,copy) NSString *userId;
-//: @property (nonatomic,strong) FFFKitInfo *info;
+//: @property (nonatomic,strong) BusyKitInfo *info;
 @property (nonatomic,strong) Info *info;
 
 //: @end
@@ -47,7 +47,7 @@
 
 //: - (NSString *)groupTitle{
 - (NSString *)end{
-    //: NSString *title = [[FFFSpellingCenter sharedCenter] firstLetter:self.info.showName].capitalizedString;
+    //: NSString *title = [[BusySpellingCenter sharedCenter] firstLetter:self.info.showName].capitalizedString;
     NSString *title = [[PinValueTing sharedToCenterBackground] location:self.info.showName].capitalizedString;
     //: unichar character = [title characterAtIndex:0];
     unichar character = [title characterAtIndex:0];
@@ -76,7 +76,7 @@
 
 //: - (id)sortKey{
 - (id)meanSolarDay{
-    //: return [[FFFSpellingCenter sharedCenter] spellingForString:self.info.showName].shortSpelling;
+    //: return [[BusySpellingCenter sharedCenter] spellingForString:self.info.showName].shortSpelling;
     return [[PinValueTing sharedToCenterBackground] pressedShow:self.info.showName].shortSpelling;
 }
 
@@ -102,7 +102,7 @@
 
 //: @property (nonatomic,copy) NSString *userId;
 @property (nonatomic,copy) NSString *userId;
-//: @property (nonatomic,strong) FFFKitInfo *info;
+//: @property (nonatomic,strong) BusyKitInfo *info;
 @property (nonatomic,strong) Info *info;
 
 //: @end
@@ -121,7 +121,7 @@
     if (self) {
         //: _userId = userId;
         _userId = userId;
-        //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+        //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
         InfoGreenImage *option = [[InfoGreenImage alloc] init];
         //: option.session = session;
         option.session = session;
@@ -134,7 +134,7 @@
 
 //: - (NSString *)groupTitle{
 - (NSString *)end{
-    //: NSString *title = [[FFFSpellingCenter sharedCenter] firstLetter:self.showName].capitalizedString;
+    //: NSString *title = [[BusySpellingCenter sharedCenter] firstLetter:self.showName].capitalizedString;
     NSString *title = [[PinValueTing sharedToCenterBackground] location:self.begin].capitalizedString;
     //: unichar character = [title characterAtIndex:0];
     unichar character = [title characterAtIndex:0];
@@ -151,7 +151,7 @@
 
 //: - (id)sortKey{
 - (id)meanSolarDay{
-    //: return [[FFFSpellingCenter sharedCenter] spellingForString:self.showName].shortSpelling;
+    //: return [[BusySpellingCenter sharedCenter] spellingForString:self.showName].shortSpelling;
     return [[PinValueTing sharedToCenterBackground] pressedShow:self.begin].shortSpelling;
 }
 
@@ -187,7 +187,7 @@
 
 //: @property (nonatomic,copy) NSString *teamId;
 @property (nonatomic,copy) NSString *teamId;
-//: @property (nonatomic,strong) FFFKitInfo *info;
+//: @property (nonatomic,strong) BusyKitInfo *info;
 @property (nonatomic,strong) Info *info;
 
 //: @end
@@ -222,7 +222,7 @@
 
 //: - (NSString *)groupTitle{
 - (NSString *)end{
-    //: NSString *title = [[FFFSpellingCenter sharedCenter] firstLetter:self.showName].capitalizedString;
+    //: NSString *title = [[BusySpellingCenter sharedCenter] firstLetter:self.showName].capitalizedString;
     NSString *title = [[PinValueTing sharedToCenterBackground] location:self.begin].capitalizedString;
     //: unichar character = [title characterAtIndex:0];
     unichar character = [title characterAtIndex:0];
@@ -239,7 +239,7 @@
 
 //: - (id)sortKey{
 - (id)meanSolarDay{
-    //: return [[FFFSpellingCenter sharedCenter] spellingForString:[self showName]].shortSpelling;
+    //: return [[BusySpellingCenter sharedCenter] spellingForString:[self showName]].shortSpelling;
     return [[PinValueTing sharedToCenterBackground] pressedShow:[self begin]].shortSpelling;
 }
 

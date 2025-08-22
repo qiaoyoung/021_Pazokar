@@ -11,10 +11,10 @@
 // __M_A_C_R_O__
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
-//: #import "FFFCellConfig.h"
-#import "FFFCellConfig.h"
+//: #import "BusyCellConfig.h"
+#import "BusyCellConfig.h"
 
-//: @interface FFFTimestampModel : NSObject
+//: @interface BusyTimestampModel : NSObject
 @interface AppRow : NSObject
 
 /**

@@ -105,7 +105,7 @@
     return appBeliefPath;
 }
 
-//: #ffffff
+//: #fffBusy
 - (NSString *)noti_guitarData {
     /* static */ NSString *noti_guitarData = nil;
     if (!noti_guitarData) {
@@ -154,48 +154,48 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFInputView.h"
+//: #import "BusyInputView.h"
 #import "StateView.h"
 //: #import <AVFoundation/AVFoundation.h>
 #import <AVFoundation/AVFoundation.h>
-//: #import "FFFInputMoreContainerView.h"
+//: #import "BusyInputMoreContainerView.h"
 #import "AppView.h"
-//: #import "FFFInputEmoticonContainerView.h"
+//: #import "BusyInputEmoticonContainerView.h"
 #import "EastWestDirectionView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFInputEmoticonDefine.h"
-#import "FFFInputEmoticonDefine.h"
-//: #import "FFFInputEmoticonManager.h"
+//: #import "BusyInputEmoticonDefine.h"
+#import "BusyInputEmoticonDefine.h"
+//: #import "BusyInputEmoticonManager.h"
 #import "DeviceManager.h"
-//: #import "FFFInputToolBar.h"
+//: #import "BusyInputToolBar.h"
 #import "ComplimentView.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
-//: #import "FFFContactSelectViewController.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
+//: #import "BusyContactSelectViewController.h"
 #import "BrandViewController.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
-//: #import "FFFKitKeyboardInfo.h"
+//: #import "BusyKitKeyboardInfo.h"
 #import "AffairWith.h"
 //: #import "NSString+MyUserKit.h"
 #import "NSString+Case.h"
-//: #import "FFFReplyContentView.h"
+//: #import "BusyReplyContentView.h"
 #import "NoticeTagView.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
 //: #import <YYText.h>
 #import <YYText.h>
-//: #import "FFFTextHighlight.h"
+//: #import "BusyTextHighlight.h"
 #import "MediaNameContentHighlight.h"
 //: #import "PhotoContainerView.h"
 #import "PhotoView.h"
 
-//: @interface FFFInputView()<FFFInputToolBarDelegate,NIMInputEmoticonProtocol,NIMContactSelectDelegate,FFFReplyContentViewDelegate,moreCustomPickerViewDelegate>
+//: @interface BusyInputView()<BusyInputToolBarDelegate,NIMInputEmoticonProtocol,NIMContactSelectDelegate,BusyReplyContentViewDelegate,moreCustomPickerViewDelegate>
 @interface StateView()<FormatMoreDelegate,LengthPoint,NoticeBar,IndexMy,moreCustomPickerViewDelegate>
 {
     //: UIView *_emoticonView;
@@ -205,7 +205,7 @@
 
 //: @property (nonatomic, assign) NIMAudioRecordPhase recordPhase;
 @property (nonatomic, assign) NIMAudioRecordPhase recordPhase;
-//: @property (nonatomic, weak) id<FFFSessionConfig> inputConfig;
+//: @property (nonatomic, weak) id<BusySessionConfig> inputConfig;
 @property (nonatomic, weak) id<QuantityelligenceInformationCan> inputConfig;
 //: @property (nonatomic, weak) id<NIMInputDelegate> inputDelegate;
 @property (nonatomic, weak) id<JointBubble> inputDelegate;
@@ -223,7 +223,7 @@
 @end
 
 
-//: @implementation FFFInputView
+//: @implementation BusyInputView
 @implementation StateView
 
 //: @synthesize emoticonContainer = _emoticonContainer;
@@ -233,7 +233,7 @@
 
 //: - (instancetype)initWithFrame:(CGRect)frame
 - (instancetype)initWithSumFrame:(CGRect)frame
-                       //: config:(id<FFFSessionConfig>)config
+                       //: config:(id<BusySessionConfig>)config
                        monthSessionConfig:(id<QuantityelligenceInformationCan>)config
 {
     //: self = [super initWithFrame:frame];
@@ -245,11 +245,11 @@
         _recording = NO;
         //: _recordPhase = AudioRecordPhaseEnd;
         _recordPhase = AudioRecordPhaseEnd;
-        //: _atCache = [[FFFInputAtCache alloc] init];
+        //: _atCache = [[BusyInputAtCache alloc] init];
         _atCache = [[VersionPointCache alloc] init];
         //: _inputConfig = config;
         _inputConfig = config;
-        //: self.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+        //: self.backgroundColor = [UIColor colorWithHexString:@"#fffBusy"];
         self.backgroundColor = [UIColor status:[[InkKillerData sharedInstance] noti_guitarData]];
         //: self.layer.shadowColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.0800].CGColor;
         self.layer.shadowColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.0800].CGColor;
@@ -306,7 +306,7 @@
             //: UIEdgeInsets safeArea = self.superview.safeAreaInsets;
             UIEdgeInsets safeArea = self.superview.safeAreaInsets;
             //键盘是从最底下弹起的，需要减去安全区域底部的高度
-            //: CGFloat keyboardDelta = [FFFKitKeyboardInfo instance].keyboardHeight - safeArea.bottom;
+            //: CGFloat keyboardDelta = [BusyKitKeyboardInfo instance].keyboardHeight - safeArea.bottom;
             CGFloat keyboardDelta = [AffairWith liquidEcstasyInstance].keyboardHeight - safeArea.bottom;
 
             //如果键盘还没有安全区域高，容器的初始值为0；否则则为键盘和安全区域的高度差值，这样可以保证 toolBar 始终在键盘上面
@@ -374,7 +374,7 @@
     //: if (!_toolBar)
     if (!_toolBar)
     {
-        //: _toolBar = [[FFFInputToolBar alloc] initWithFrame:CGRectMake(0, 0, self.nim_width, 0)];
+        //: _toolBar = [[BusyInputToolBar alloc] initWithFrame:CGRectMake(0, 0, self.nim_width, 0)];
         _toolBar = [[ComplimentView alloc] initWithFrame:CGRectMake(0, 0, self.nim_width, 0)];
     }
     //: [self addSubview:_toolBar];
@@ -382,7 +382,7 @@
     //设置placeholder
 //        NSString *placeholder = [Case sharedKit].config.placeholder;
 //        [_toolBar setPlaceHolder:placeholder];
-    //: [_toolBar setPlaceHolder:[FFFLanguageManager getTextWithKey:@"message_please_enter_content"]];
+    //: [_toolBar setPlaceHolder:[BusyLanguageManager getTextWithKey:@"message_please_enter_content"]];
     [_toolBar setCompartmentHolder:[SendName streetSmart:[[InkKillerData sharedInstance] appQuantityUrl]]];
     //设置input bar 上的按钮
     //: if ([_inputConfig respondsToSelector:@selector(inputBarItemTypes)]) {
@@ -457,7 +457,7 @@
 {
     //: if (!_moreContainer) {
     if (!_moreContainer) {
-        //: _moreContainer = [[FFFInputMoreContainerView alloc] initWithFrame:CGRectZero];
+        //: _moreContainer = [[BusyInputMoreContainerView alloc] initWithFrame:CGRectZero];
         _moreContainer = [[AppView alloc] initWithFrame:CGRectZero];
         //: _moreContainer.nim_size = [_moreContainer sizeThatFits:CGSizeMake(self.nim_width, 1.7976931348623157e+308)];
         _moreContainer.nim_size = [_moreContainer sizeThatFits:CGSizeMake(self.nim_width, 1.7976931348623157e+308)];
@@ -502,7 +502,7 @@
 {
     //: if (!_emoticonContainer) {
     if (!_emoticonContainer) {
-        //: FFFInputEmoticonContainerView *emoticonContainer = [[FFFInputEmoticonContainerView alloc] initWithFrame:CGRectZero];
+        //: BusyInputEmoticonContainerView *emoticonContainer = [[BusyInputEmoticonContainerView alloc] initWithFrame:CGRectZero];
         EastWestDirectionView *emoticonContainer = [[EastWestDirectionView alloc] initWithFrame:CGRectZero];
 
         //: emoticonContainer.nim_size = [emoticonContainer sizeThatFits:CGSizeMake(self.nim_width, 1.7976931348623157e+308)];
@@ -593,13 +593,13 @@
     //: NSString *text = [NSString stringWithFormat:@"%@", [[MyUserKit sharedKit] replyedContentWithMessage:message]];
     NSString *text = [NSString stringWithFormat:@"%@", [[Case pastTop] nameForward:message]];
 
-    //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+    //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
     InfoGreenImage *option = [[InfoGreenImage alloc] init];
     //: option.message = message;
     option.message = message;
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:message.from option:option];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:message.from option:option];
     Info *info = [[Case pastTop] consumer:message.from message:option];
-    //: self.replyedContent.fromUser.text = [NSString stringWithFormat:@"%@%@",[FFFLanguageManager getTextWithKey:@"回复"],info.showName];
+    //: self.replyedContent.fromUser.text = [NSString stringWithFormat:@"%@%@",[BusyLanguageManager getTextWithKey:@"回复"],info.showName];
     self.replyedContent.fromUser.text = [NSString stringWithFormat:@"%@%@",[SendName streetSmart:@"回复"],info.showName];
     //: self.replyedContent.label.text = text;
     self.replyedContent.label.text = text;
@@ -733,13 +733,13 @@
 //    _emoticonContainer.nim_top = self.toolBar.nim_bottom;
 }
 
-//: - (FFFReplyContentView *)replyedContent
+//: - (BusyReplyContentView *)replyedContent
 - (NoticeTagView *)replyedContent
 {
     //: if (!_replyedContent)
     if (!_replyedContent)
     {
-        //: _replyedContent = [[FFFReplyContentView alloc] initWithFrame:CGRectMake(0, 0, self.nim_width, 50)];
+        //: _replyedContent = [[BusyReplyContentView alloc] initWithFrame:CGRectMake(0, 0, self.nim_width, 50)];
         _replyedContent = [[NoticeTagView alloc] initWithFrame:CGRectMake(0, 0, self.nim_width, 50)];
         //: _replyedContent.hidden = YES;
         _replyedContent.hidden = YES;
@@ -976,13 +976,13 @@
         [self cellPin];
     //: }else{
     }else{
-        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"] message:[FFFLanguageManager getTextWithKey:@"setting_privacy"] preferredStyle:UIAlertControllerStyleAlert];
+        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"] message:[BusyLanguageManager getTextWithKey:@"setting_privacy"] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[SendName streetSmart:[[InkKillerData sharedInstance] main_killerData]] message:[SendName streetSmart:[[InkKillerData sharedInstance] show_nameFromMsg]] preferredStyle:UIAlertControllerStyleAlert];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[[InkKillerData sharedInstance] kSituationData]] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         //: }])];
         }])];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[[InkKillerData sharedInstance] appBeliefPath]] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             //: NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
             NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
@@ -1049,7 +1049,7 @@
 }
 
 
-//: #pragma mark - FFFInputToolBarDelegate
+//: #pragma mark - BusyInputToolBarDelegate
 #pragma mark - FormatMoreDelegate
 
 //: - (BOOL)textViewShouldBeginEditing
@@ -1136,7 +1136,7 @@
                 config.session = self.session;
                 //: config.filterIds = @[[NIMSDK sharedSDK].loginManager.currentAccount];
                 config.filterIds = @[[NIMSDK sharedSDK].loginManager.currentAccount];
-                //: FFFContactSelectViewController *vc = [[FFFContactSelectViewController alloc] initWithConfig:config];
+                //: BusyContactSelectViewController *vc = [[BusyContactSelectViewController alloc] initWithConfig:config];
                 BrandViewController *vc = [[BrandViewController alloc] initWithMax:config];
                 //: vc.delegate = self;
                 vc.delegate = self;
@@ -1164,7 +1164,7 @@
                 config.session = self.session;
                 //: config.filterIds = @[[NIMSDK sharedSDK].loginManager.currentAccount];
                 config.filterIds = @[[NIMSDK sharedSDK].loginManager.currentAccount];
-                //: FFFContactSelectViewController *vc = [[FFFContactSelectViewController alloc] initWithConfig:config];
+                //: BusyContactSelectViewController *vc = [[BusyContactSelectViewController alloc] initWithConfig:config];
                 BrandViewController *vc = [[BrandViewController alloc] initWithMax:config];
                 //: vc.delegate = self;
                 vc.delegate = self;
@@ -1236,7 +1236,7 @@
 //: - (void)addContacts:(NSArray *)selectedContacts prefix:(NSMutableString *)str
 - (void)pressMessage:(NSArray *)selectedContacts begin:(NSMutableString *)str
 {
-    //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+    //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
     InfoGreenImage *option = [[InfoGreenImage alloc] init];
     //: option.session = self.session;
     option.session = self.session;
@@ -1297,7 +1297,7 @@
 //: - (void)selectedGifEmoticon:(NSString*)gif
 - (void)enable:(NSString*)gif
 {
-    //: [self.toolBar setPlaceHolder:[FFFLanguageManager getTextWithKey:@"message_please_enter_content"]];
+    //: [self.toolBar setPlaceHolder:[BusyLanguageManager getTextWithKey:@"message_please_enter_content"]];
     [self.toolBar setCompartmentHolder:[SendName streetSmart:[[InkKillerData sharedInstance] appQuantityUrl]]];
     //发送贴图消息
     //: if ([self.actionDelegate respondsToSelector:@selector(onSelectChartlet:catalog:)]) {
@@ -1315,7 +1315,7 @@
     //: self.toolBar.sendButton.hidden = YES;
     self.toolBar.sendButton.hidden = YES;
 //    self.toolBar.emoticonBtn2.hidden = YES;
-    //: [self.toolBar setPlaceHolder:[FFFLanguageManager getTextWithKey:@"message_please_enter_content"]];
+    //: [self.toolBar setPlaceHolder:[BusyLanguageManager getTextWithKey:@"message_please_enter_content"]];
     [self.toolBar setCompartmentHolder:[SendName streetSmart:[[InkKillerData sharedInstance] appQuantityUrl]]];
     //: [self doButtonDeleteText];
     [self infoObject];
@@ -1375,7 +1375,7 @@
         self.toolBar.contentText = @"";
 //        self.toolBar.sendButton.hidden = YES;
 //        self.toolBar.emoticonBtn2.hidden = YES;
-        //: [self.toolBar setPlaceHolder:[FFFLanguageManager getTextWithKey:@"message_please_enter_content"]];
+        //: [self.toolBar setPlaceHolder:[BusyLanguageManager getTextWithKey:@"message_please_enter_content"]];
         [self.toolBar setCompartmentHolder:[SendName streetSmart:[[InkKillerData sharedInstance] appQuantityUrl]]];
         //: [self.toolBar layoutIfNeeded];
         [self.toolBar layoutIfNeeded];
@@ -1405,12 +1405,12 @@
 - (NSMutableAttributedString *)max:(NSMutableAttributedString *)attrM {
     //: [attrM enumerateAttribute:YYTextHighlightAttributeName inRange:NSMakeRange(0, attrM.length) options:NSAttributedStringEnumerationReverse usingBlock:^(id _Nullable value, NSRange range, BOOL * _Nonnull stop) {
     [attrM enumerateAttribute:YYTextHighlightAttributeName inRange:NSMakeRange(0, attrM.length) options:NSAttributedStringEnumerationReverse usingBlock:^(id _Nullable value, NSRange range, BOOL * _Nonnull stop) {
-        //: if (value && [value isKindOfClass:[FFFTextHighlight class]]) {
+        //: if (value && [value isKindOfClass:[BusyTextHighlight class]]) {
         if (value && [value isKindOfClass:[MediaNameContentHighlight class]]) {
-            //: FFFTextHighlight *textHighlight = value;
+            //: BusyTextHighlight *textHighlight = value;
             MediaNameContentHighlight *textHighlight = value;
-            //: if (textHighlight.type == FFFTextHighlightTypeEmoji) {
-            if (textHighlight.type == FFFTextHighlightTypeEmoji) {
+            //: if (textHighlight.type == BusyTextHighlightTypeEmoji) {
+            if (textHighlight.type == BusyTextHighlightTypeEmoji) {
                 //: [attrM replaceCharactersInRange:range withString:textHighlight.text];
                 [attrM replaceCharactersInRange:range withString:textHighlight.text];
             }
@@ -1509,7 +1509,7 @@
         {
             //: NSString *name = [text substringWithRange:subRange];
             NSString *name = [text substringWithRange:subRange];
-            //: NIMInputEmoticon *icon = [[FFFInputEmoticonManager sharedManager] emoticonByTag:name];
+            //: NIMInputEmoticon *icon = [[BusyInputEmoticonManager sharedManager] emoticonByTag:name];
             CityCenterWith *icon = [[DeviceManager history] viewText:name];
             //: range = icon? subRange : NSMakeRange(selectedRange.location - 1, 1);
             range = icon? subRange : NSMakeRange(selectedRange.location - 1, 1);
@@ -1548,7 +1548,7 @@
     {
         //: NSString *name = [text substringWithRange:subRange];
         NSString *name = [text substringWithRange:subRange];
-        //: NIMInputEmoticon *icon = [[FFFInputEmoticonManager sharedManager] emoticonByTag:name];
+        //: NIMInputEmoticon *icon = [[BusyInputEmoticonManager sharedManager] emoticonByTag:name];
         CityCenterWith *icon = [[DeviceManager history] viewText:name];
         //: range = icon? subRange : NSMakeRange(selectedRange.location - 1, 1);
         range = icon? subRange : NSMakeRange(selectedRange.location - 1, 1);
@@ -1642,7 +1642,7 @@
     return index == -1? NSMakeRange(endLocation - 1, 1) : NSMakeRange(index, endLocation - index);
 }
 
-//: #pragma mark - FFFReplyContentViewDelegate
+//: #pragma mark - BusyReplyContentViewDelegate
 #pragma mark - IndexMy
 
 //: - (void)onClearReplyContent:(id)sender

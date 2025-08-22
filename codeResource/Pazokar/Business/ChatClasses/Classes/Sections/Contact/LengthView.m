@@ -21,11 +21,11 @@ Byte user_separateFormat[] = {35, 21, 6, 157, 60, 129, 100, 101, 116, 99, 101, 1
 //
 
 // __M_A_C_R_O__
-//: #import "FFFContactPickedView.h"
+//: #import "BusyContactPickedView.h"
 #import "LengthView.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
@@ -40,7 +40,7 @@ enum RefreshType
 //: };
 };
 
-//: @interface NIMContactSelectAvatarView : FFFAvatarImageView
+//: @interface NIMContactSelectAvatarView : BusyAvatarImageView
 @interface DataContentImageView : CustomFormatView
 
 //: @property (nonatomic, strong) NSString *userId;
@@ -76,7 +76,7 @@ enum RefreshType
 @end
 
 
-//: @interface FFFContactPickedView()
+//: @interface BusyContactPickedView()
 @interface LengthView()
 
 //: @property (nonatomic, strong) UIScrollView *scrollView;
@@ -91,7 +91,7 @@ enum RefreshType
 //: @end
 @end
 
-//: @implementation FFFContactPickedView
+//: @implementation BusyContactPickedView
 @implementation LengthView
 
 //: - (instancetype)initWithCoder:(NSCoder *)aDecoder {
@@ -235,7 +235,7 @@ enum RefreshType
 }
 
 
-//: - (void)addMemberInfo:(FFFKitInfo *)info
+//: - (void)addMemberInfo:(BusyKitInfo *)info
 - (void)distanceNim:(Info *)info
 {
 
@@ -251,7 +251,7 @@ enum RefreshType
     [self size:avatar];
 }
 
-//: - (void)removeMemberInfo:(FFFKitInfo *)info
+//: - (void)removeMemberInfo:(BusyKitInfo *)info
 - (void)gesture:(Info *)info
 {
     //: NSInteger i = 0;

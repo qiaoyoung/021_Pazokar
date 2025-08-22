@@ -160,12 +160,12 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamCardOperationViewController.h"
+//: #import "BusyTeamCardOperationViewController.h"
 #import "RearViewController.h"
-//: #import "FFFKitProgressHUD.h"
+//: #import "BusyKitProgressHUD.h"
 #import "KitEffectView.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
 //: #import "NSString+MyUserKit.h"
@@ -173,7 +173,7 @@ typedef struct {
 //: #import "NTESSessionMsgConverter.h"
 #import "PraiseConverter.h"
 
-//: @implementation FFFTeamCardOperationViewController
+//: @implementation BusyTeamCardOperationViewController
 @implementation RearViewController
 
 //: - (void)dealloc {
@@ -186,13 +186,13 @@ typedef struct {
 - (instancetype)initWith:(NIMTeam *)team
                      //: session:(NIMSession *)session
                      scale:(NIMSession *)session
-                      //: option:(FFFTeamCardViewControllerOption *)option {
+                      //: option:(BusyTeamCardViewControllerOption *)option {
                       title:(TextTagOption *)option {
     //: if (self = [super init]) {
     if (self = [super init]) {
         //: _option = option;
         _option = option;
-        //: _teamListManager = [[FFFTeamListDataManager alloc] initWithTeam:team session:session];
+        //: _teamListManager = [[BusyTeamListDataManager alloc] initWithTeam:team session:session];
         _teamListManager = [[FindBaseballTeamManager alloc] initWithTutorial:team dislodge:session];
         //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(teamInfoUpdate:) name:kNIMTeamListDataTeamInfoUpdate object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(translates:) name:dream_sizeCustomUrl object:nil];
@@ -207,7 +207,7 @@ typedef struct {
 - (void)viewDidLoad {
     //: [super viewDidLoad];
     [super viewDidLoad];
-    //: FFFMembersFetchOption *option = [[FFFMembersFetchOption alloc] init];
+    //: BusyMembersFetchOption *option = [[BusyMembersFetchOption alloc] init];
     DateRow *option = [[DateRow alloc] init];
     //: option.isRefresh = YES;
     option.isRefresh = YES;
@@ -229,17 +229,17 @@ typedef struct {
     [self off];
 }
 
-//: - (void)didFetchTeamMember:(FFFMembersFetchOption *)option {
+//: - (void)didFetchTeamMember:(BusyMembersFetchOption *)option {
 - (void)searched:(DateRow *)option {
     //: __weak typeof(self) wself = self;
     __weak typeof(self) wself = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager fetchTeamMembersWithOption:option
     [self.teamListManager read:option
                                           //: completion:^(NSError * _Nullable error, NSString * _Nullable msg) {
                                           tap:^(NSError * _Nullable error, NSString * _Nullable msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -294,11 +294,11 @@ typedef struct {
     }
     //: __weak typeof(self) wself = self;
     __weak typeof(self) wself = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager addUsers:userIds info:info completion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
     [self.teamListManager item:userIds globule:info towardMessageBackground:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -320,11 +320,11 @@ typedef struct {
 - (void)build:(NSString *)userId {
     //: __weak typeof(self) wself = self;
     __weak typeof(self) wself = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager kickUsers:@[userId] completion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
     [self.teamListManager view:@[userId] clear:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -346,13 +346,13 @@ typedef struct {
     }
     //: __weak typeof(self) wself = self;
     __weak typeof(self) wself = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager updateTeamName:name
     [self.teamListManager send:name
                               //: completion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
                               greenBottom:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -374,13 +374,13 @@ typedef struct {
     }
     //: __weak typeof(self) weakSelf = self;
     __weak typeof(self) weakSelf = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager updateTeamNick:nick
     [self.teamListManager blockCompletion:nick
                               //: completion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
                               viewCompletion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -402,11 +402,11 @@ typedef struct {
     }
     //: __weak typeof(self) weakSelf = self;
     __weak typeof(self) weakSelf = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager updateTeamIntro:intro completion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
     [self.teamListManager blue:intro withDataBlock:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -423,13 +423,13 @@ typedef struct {
 - (void)path:(BOOL)mute {
     //: __weak typeof(self) weakSelf = self;
     __weak typeof(self) weakSelf = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager updateTeamMute:mute
     [self.teamListManager info:mute
                               //: completion:^(NSError * _Nullable error, NSString * _Nullable msg) {
                               tinkleDataBlock:^(NSError * _Nullable error, NSString * _Nullable msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -458,11 +458,11 @@ typedef struct {
 - (void)tip:(NIMTeamJoinMode)mode {
     //: __weak typeof(self) weakSelf = self;
     __weak typeof(self) weakSelf = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager updateTeamJoinMode:mode completion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
     [self.teamListManager withAvailable:mode moreCompletion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -479,11 +479,11 @@ typedef struct {
 - (void)imageOf:(NIMTeamInviteMode)mode {
     //: __weak typeof(self) weakSelf = self;
     __weak typeof(self) weakSelf = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager updateTeamInviteMode:mode completion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
     [self.teamListManager statusBy:mode impressionDataBlock:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -500,13 +500,13 @@ typedef struct {
 - (void)state:(NIMTeamBeInviteMode)mode {
     //: __weak typeof(self) weakSelf = self;
     __weak typeof(self) weakSelf = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager updateTeamBeInviteMode:mode
     [self.teamListManager television:mode
                                       //: completion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
                                       teamDataBlock:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -523,11 +523,11 @@ typedef struct {
 - (void)syncopateStyleModeView:(NIMTeamUpdateInfoMode)mode {
     //: __weak typeof(self) weakSelf = self;
     __weak typeof(self) weakSelf = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager updateTeamInfoMode:mode completion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
     [self.teamListManager label:mode key:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -544,11 +544,11 @@ typedef struct {
 - (void)contentFor:(NIMTeamNotifyState)state {
     //: __weak typeof(self) weakSelf = self;
     __weak typeof(self) weakSelf = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager updateTeamNotifyState:state completion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
     [self.teamListManager origin:state content:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -563,7 +563,7 @@ typedef struct {
 
 //: - (void)didOntransferToUser:(NSString *)userId leave:(BOOL)leave {
 - (void)size:(NSString *)userId total:(BOOL)leave {
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager transferOwnerWithUserId:userId
     [self.teamListManager bubbleByChecked:userId
@@ -571,7 +571,7 @@ typedef struct {
                                          array:leave
                                     //: completion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
                                     atColorDataBlock:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (leave) {
         if (leave) {
@@ -592,11 +592,11 @@ typedef struct {
 - (void)at{
     //: __weak typeof(self) weakSelf = self;
     __weak typeof(self) weakSelf = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager dismissTeamCompletion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
     [self.teamListManager dismissCompletion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -613,11 +613,11 @@ typedef struct {
 - (void)diam{
     //: __weak typeof(self) wself = self;
     __weak typeof(self) wself = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: [self.teamListManager quitTeamCompletion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
     [self.teamListManager containerCreate:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if (!error) {
         if (!error) {
@@ -708,13 +708,13 @@ typedef struct {
     __weak typeof(self) wself = self;
     //: if (success) {
     if (success) {
-        //: [FFFKitProgressHUD show];
+        //: [BusyKitProgressHUD show];
         [KitEffectView nim];
         //: __weak typeof(self) weakSelf = self;
         __weak typeof(self) weakSelf = self;
         //: [self.teamListManager updateTeamAvatar:filePath completion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
         [self.teamListManager edgeCompletion:filePath fiveItemCompletion:^(NSError * _Nonnull error, NSString * _Nonnull msg) {
-            //: [FFFKitProgressHUD dismiss];
+            //: [BusyKitProgressHUD dismiss];
             [KitEffectView area];
             //: if (!error) {
             if (!error) {
@@ -741,7 +741,7 @@ typedef struct {
         }];
     //: } else {
     } else {
-        //: [wself showToastMsg:[FFFLanguageManager getTextWithKey:@"group_info_activity_update_failed"]];
+        //: [wself showToastMsg:[BusyLanguageManager getTextWithKey:@"group_info_activity_update_failed"]];
         [wself signature:[SendName streetSmart:[MaleData user_towerIdent]]];
     }
 }
@@ -749,7 +749,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFTeamCardViewControllerOption
+//: @implementation BusyTeamCardViewControllerOption
 @implementation TextTagOption
 
 //: @end

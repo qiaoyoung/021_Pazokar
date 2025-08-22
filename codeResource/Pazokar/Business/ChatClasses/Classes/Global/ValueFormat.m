@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitIndependentModeExtraInfo.h"
+//: #import "BusyKitIndependentModeExtraInfo.h"
 #import "ValueFormat.h"
 
-//: @implementation FFFKitIndependentModeExtraInfo
+//: @implementation BusyKitIndependentModeExtraInfo
 @implementation ValueFormat
 
 //: @end

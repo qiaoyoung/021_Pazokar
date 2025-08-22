@@ -157,29 +157,29 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFGroupMemberTableViewCell.h"
+//: #import "BusyGroupMemberTableViewCell.h"
 #import "SortView.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFTeamHelper.h"
+//: #import "BusyTeamHelper.h"
 #import "EnvelopingTitle.h"
 //: #import "NSString+MyUserKit.h"
 #import "NSString+Case.h"
 
-//: @interface FFFGroupMemberTableViewCell()
+//: @interface BusyGroupMemberTableViewCell()
 @interface SortView()
 
-//: @property (nonatomic,strong) id<FFFKitCardHeaderData> data;
-@property (nonatomic,strong) id<FFFKitCardHeaderData> data;
+//: @property (nonatomic,strong) id<BusyKitCardHeaderData> data;
+@property (nonatomic,strong) id<BusyKitCardHeaderData> data;
 
 //: @end
 @end
 
-//: @implementation FFFGroupMemberTableViewCell
+//: @implementation BusyGroupMemberTableViewCell
 @implementation SortView
 
 //: - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -208,14 +208,14 @@ typedef struct {
 //: + (instancetype)cellWithTableView:(UITableView *)tableView
 + (instancetype)voice:(UITableView *)tableView
 {
-    //: static NSString *identifier = @"FFFGroupMemberTableViewCell";
+    //: static NSString *identifier = @"BusyGroupMemberTableViewCell";
     static NSString *identifier = @"SortView";
-    //: FFFGroupMemberTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    //: BusyGroupMemberTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     SortView *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     //: if (!cell)
     if (!cell)
     {
-        //: cell = [[FFFGroupMemberTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        //: cell = [[BusyGroupMemberTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell = [[SortView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         //: cell.backgroundColor = [UIColor colorWithHexString:@"#F6F6F6"];
         cell.backgroundColor = [UIColor status:[MigrationData sharedInstance].userMigrationSizeStr];
@@ -276,7 +276,7 @@ typedef struct {
     self.userId = UserId;
 }
 
-//: - (void)setUserInfo:(FFFKitInfo *)userInfo
+//: - (void)setUserInfo:(BusyKitInfo *)userInfo
 - (void)setUserInfo:(Info *)userInfo
 {
     //: self.userInfo = userInfo;

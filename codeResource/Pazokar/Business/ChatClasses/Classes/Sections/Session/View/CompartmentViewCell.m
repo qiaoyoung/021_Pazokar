@@ -59,7 +59,7 @@ typedef struct {
     return user_inmateMsg;
 }
 
-//: ffffff
+//: fffBusy
 - (NSString *)kReliabilityManagerContainerKey {
     /* static */ NSString *kReliabilityManagerContainerKey = nil;
     if (!kReliabilityManagerContainerKey) {
@@ -240,38 +240,38 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFMessageCell.h"
+//: #import "BusyMessageCell.h"
 #import "CompartmentViewCell.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
-//: #import "FFFBadgeView.h"
+//: #import "BusyBadgeView.h"
 #import "SharedView.h"
-//: #import "FFFSessionMessageContentView.h"
+//: #import "BusySessionMessageContentView.h"
 #import "TextControl.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
-//: #import "FFFSessionAudioContentView.h"
+//: #import "BusySessionAudioContentView.h"
 #import "RowTingView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
 //: #import "M80AttributedLabel.h"
 #import "CypherScrollView.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFSessionUnknowContentView.h"
+//: #import "BusySessionUnknowContentView.h"
 #import "DateControl.h"
-//: #import "FFFKitConfig.h"
+//: #import "BusyKitConfig.h"
 #import "ChildSend.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFSessionTextContentView.h"
+//: #import "BusySessionTextContentView.h"
 #import "ButtonView.h"
 
-//: @interface FFFMessageCell()<NIMPlayAudioUIDelegate,NIMMessageContentViewDelegate>
+//: @interface BusyMessageCell()<NIMPlayAudioUIDelegate,NIMMessageContentViewDelegate>
 @interface CompartmentViewCell()<GlobuleTag,InformationView>
 {
     //: UILongPressGestureRecognizer *_longPressGesture;
@@ -280,7 +280,7 @@ typedef struct {
     UIMenuController *_menuController;
 }
 
-//: @property (nonatomic,strong) FFFMessageModel *model;
+//: @property (nonatomic,strong) BusyMessageModel *model;
 @property (nonatomic,strong) MoreModel *model;
 
 //: @property (nonatomic,copy) NSArray *customViews;
@@ -291,7 +291,7 @@ typedef struct {
 
 
 
-//: @implementation FFFMessageCell
+//: @implementation BusyMessageCell
 @implementation CompartmentViewCell
 
 //: - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -354,7 +354,7 @@ typedef struct {
     [self.contentView addSubview:_retryButton];
 
     //audioPlayedIcon
-    //: _audioPlayedIcon = [FFFBadgeView viewWithBadgeTip:@""];
+    //: _audioPlayedIcon = [BusyBadgeView viewWithBadgeTip:@""];
     _audioPlayedIcon = [SharedView location:@""];
 //    _audioPlayedIcon.badgeBackgroundColor = RGB_COLOR_String(@"#612CF9");
 //    [self.contentView addSubview:_audioPlayedIcon];
@@ -366,7 +366,7 @@ typedef struct {
     [self.contentView addSubview:_traningActivityIndicator];
 
     //headerView
-    //: _headImageView = [[FFFAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, 36, 36)];
+    //: _headImageView = [[BusyAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, 36, 36)];
     _headImageView = [[CustomFormatView alloc] initWithFrame:CGRectMake(0, 0, 36, 36)];
     //: [_headImageView addTarget:self action:@selector(onTapAvatar:) forControlEvents:UIControlEventTouchUpInside];
     [_headImageView addTarget:self action:@selector(todayses:) forControlEvents:UIControlEventTouchUpInside];
@@ -458,7 +458,7 @@ typedef struct {
     [self addGestureRecognizer:_longPressGesture];
 }
 
-//: - (void)refreshData:(FFFMessageModel *)data
+//: - (void)refreshData:(BusyMessageModel *)data
 - (void)pullSession:(MoreModel *)data
 {
     //: self.model = data;
@@ -475,7 +475,7 @@ typedef struct {
 
 //: - (BOOL)checkData{
 - (BOOL)tingData{
-    //: return [self.model isKindOfClass:[FFFMessageModel class]];
+    //: return [self.model isKindOfClass:[BusyMessageModel class]];
     return [self.model isKindOfClass:[MoreModel class]];
 }
 
@@ -542,7 +542,7 @@ typedef struct {
     //: if([self needShowNickName])
     if([self key])
     {
-        //: NSString *nick = [FFFKitUtil showNick:self.model.message.from inMessage:self.model.message];
+        //: NSString *nick = [BusyKitUtil showNick:self.model.message.from inMessage:self.model.message];
         NSString *nick = [OffMore target:self.model.message.from exist:self.model.message];
         //: [self.nameLabel setText:nick];
         [self.nameLabel setText:nick];
@@ -582,7 +582,7 @@ typedef struct {
     //: [self refreshReadButton];
     [self counterval];
 
-    //: if ([_bubbleView isKindOfClass:[FFFSessionTextContentView class]]) {
+    //: if ([_bubbleView isKindOfClass:[BusySessionTextContentView class]]) {
     if ([_bubbleView isKindOfClass:[ButtonView class]]) {
         //: [self disableLongPress:YES];
         [self chancePress:YES];
@@ -609,7 +609,7 @@ typedef struct {
         _bubblesBackgroundView.hidden = ![[Case pastTop].layoutConfig text:self.model];
         //: if (self.model.shouldShowLeft){
         if (self.model.shouldShowLeft){
-            //: _bubblesBackgroundView.backgroundColor = [UIColor colorWithHexString:@"ffffff"];
+            //: _bubblesBackgroundView.backgroundColor = [UIColor colorWithHexString:@"fffBusy"];
             _bubblesBackgroundView.backgroundColor = [UIColor status:[[GangData sharedInstance] kReliabilityManagerContainerKey]];
         //: }else{
         }else{
@@ -650,7 +650,7 @@ typedef struct {
         //: else if(self.model.message.session.sessionType == NIMSessionTypeTeam)
         else if(self.model.message.session.sessionType == NIMSessionTypeTeam)
         {
-            //: [_readButton setTitle:[NSString stringWithFormat:@"%zd%@",self.model.message.teamReceiptInfo.unreadCount,[FFFLanguageManager getTextWithKey:@"msg_view_4"]] forState:UIControlStateNormal];
+            //: [_readButton setTitle:[NSString stringWithFormat:@"%zd%@",self.model.message.teamReceiptInfo.unreadCount,[BusyLanguageManager getTextWithKey:@"msg_view_4"]] forState:UIControlStateNormal];
             [_readButton setTitle:[NSString stringWithFormat:@"%zd%@",self.model.message.teamReceiptInfo.unreadCount,[SendName streetSmart:[[GangData sharedInstance] showViewMsg]]] forState:UIControlStateNormal];//人未读".nim_localized
             //: [_readButton sizeToFit];
             [_readButton sizeToFit];
@@ -727,7 +727,7 @@ typedef struct {
         //: if (!_replyedBubbleView)
         if (!_replyedBubbleView)
         {
-            //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+            //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
             id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
             //: NSString *contentStr = [layoutConfig replyContent:self.model];
             NSString *contentStr = [layoutConfig language:self.model];
@@ -735,7 +735,7 @@ typedef struct {
             NSAssert([contentStr length] > 0, [[GangData sharedInstance] app_resentTitle]);
             //: Class clazz = NSClassFromString(contentStr);
             Class clazz = NSClassFromString(contentStr);
-            //: FFFSessionMessageContentView *contentView = [[clazz alloc] initSessionMessageContentView];
+            //: BusySessionMessageContentView *contentView = [[clazz alloc] initSessionMessageContentView];
             TextControl *contentView = [[clazz alloc] initColorSession];
             //: NSAssert(contentView, @"can not init content view");
             NSAssert(contentView, [[GangData sharedInstance] user_inmateMsg]);
@@ -768,7 +768,7 @@ typedef struct {
     //: if (_bubbleView == nil)
     if (_bubbleView == nil)
     {
-        //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+        //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
         id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
         //: NSString *contentStr = [layoutConfig cellContent:self.model];
         NSString *contentStr = [layoutConfig flushCell:self.model];
@@ -776,7 +776,7 @@ typedef struct {
         NSAssert([contentStr length] > 0, [[GangData sharedInstance] app_resentTitle]);
         //: Class clazz = NSClassFromString(contentStr);
         Class clazz = NSClassFromString(contentStr);
-        //: FFFSessionMessageContentView *contentView = [[clazz alloc] initSessionMessageContentView];
+        //: BusySessionMessageContentView *contentView = [[clazz alloc] initSessionMessageContentView];
         TextControl *contentView = [[clazz alloc] initColorSession];
         //: NSAssert(contentView, @"can not init content view");
         NSAssert(contentView, [[GangData sharedInstance] user_inmateMsg]);
@@ -788,7 +788,7 @@ typedef struct {
         NIMMessageType messageType = self.model.message.messageType;
         //: if (messageType == NIMMessageTypeAudio) {
         if (messageType == NIMMessageTypeAudio) {
-            //: ((FFFSessionAudioContentView *)_bubbleView).audioUIDelegate = self;
+            //: ((BusySessionAudioContentView *)_bubbleView).audioUIDelegate = self;
             ((RowTingView *)_bubbleView).audioUIDelegate = self;
         }
         //: [self.contentView insertSubview:_bubbleView belowSubview:_selectButtonMask];
@@ -809,7 +809,7 @@ typedef struct {
         //: [view removeFromSuperview];
         [view removeFromSuperview];
     }
-    //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+    //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
     id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
     //: self.customViews = [layoutConfig customViews:self.model];
     self.customViews = [layoutConfig subViews:self.model];
@@ -1182,7 +1182,7 @@ typedef struct {
 
 //: #pragma mark - NIMMessageContentViewDelegate
 #pragma mark - InformationView
-//: - (void)onCatchEvent:(FFFKitEvent *)event{
+//: - (void)onCatchEvent:(BusyKitEvent *)event{
 - (void)memberEvent:(DirectionEvent *)event{
     //: if ([self.delegate respondsToSelector:@selector(onTapCell:)]) {
     if ([self.delegate respondsToSelector:@selector(replyEnable:)]) {
@@ -1273,7 +1273,7 @@ typedef struct {
 - (UIImage *)loadChat:(UIControlState)state
 {
 
-    //: FFFKitSetting *setting = [[MyUserKit sharedKit].config setting:self.model.message];
+    //: BusyKitSetting *setting = [[MyUserKit sharedKit].config setting:self.model.message];
     GreenSetting *setting = [[Case pastTop].config tool:self.model.message];
     //: if (state == UIControlStateNormal)
     if (state == UIControlStateNormal)
@@ -1359,7 +1359,7 @@ typedef struct {
 //: - (BOOL)retryButtonHidden
 - (BOOL)formatHolder
 {
-    //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+    //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
     id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
     //: BOOL disable = NO;
     BOOL disable = NO;

@@ -116,7 +116,7 @@ typedef struct {
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)model{
+//: - (void)refresh:(BusyMessageModel *)model{
 - (void)messagePress:(MoreModel *)model{
     //: [super refresh:model];
     [super messagePress:model];

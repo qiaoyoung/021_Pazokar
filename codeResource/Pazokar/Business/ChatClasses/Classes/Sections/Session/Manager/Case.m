@@ -69,7 +69,7 @@ typedef struct {
 + (NSString *)k_readData {
     /* static */ NSString *k_readData = nil;
     if (!k_readData) {
-		NSString *origin = @"f5faf7e5e5b6e5fef9e3faf2b6f4f3b6e5e3f4f5faf7e5e5b6f9f0b6d8dfdbdaf7eff9e3e2d5f9f8f0fff13a";
+		NSString *origin = @"f5faf7e5e5b6e5fef9e3faf2b6f4f3b6e5e3f4f5faf7e5e5b6f9f0b6d8dfdbdaf7eff9e3e2d5f9f8f0Busy13a";
 		NSData *data = [BalloonPateData BalloonPateDataToData:origin];
         StructBalloonPateData value = (StructBalloonPateData){150, (Byte *)data.bytes, 43, 158, 211, 47};
         k_readData = [self StringFromBalloonPateData:&value];
@@ -92,26 +92,26 @@ typedef struct {
 // __M_A_C_R_O__
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFKitTimerHolder.h"
+//: #import "BusyKitTimerHolder.h"
 #import "NameWith.h"
-//: #import "FFFKitNotificationFirer.h"
+//: #import "BusyKitNotificationFirer.h"
 #import "SecretDevice.h"
-//: #import "FFFKitDataProviderImpl.h"
+//: #import "BusyKitDataProviderImpl.h"
 #import "SaveNameOff.h"
-//: #import "FFFCellLayoutConfig.h"
+//: #import "BusyCellLayoutConfig.h"
 #import "ParentMargin.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
 //: #import "NSBundle+MyUserKit.h"
 #import "NSBundle+Case.h"
 //: #import "NSString+MyUserKit.h"
 #import "NSString+Case.h"
-//: #import "FFFChatUIManager.h"
+//: #import "BusyChatUIManager.h"
 #import "PraiseUimanager.h"
 
-//: extern NSString *const NIMKitUserInfoHasUpdatedNotification;
+//: extern NSString *const notiArrayName;
 extern NSString *const notiArrayName;
-//: extern NSString *const NIMKitTeamInfoHasUpdatedNotification;
+//: extern NSString *const dreamMessageTableKey;
 extern NSString *const dreamMessageTableKey;
 
 
@@ -120,9 +120,9 @@ extern NSString *const dreamMessageTableKey;
     //: NSRegularExpression *_urlRegex;
     NSRegularExpression *_urlRegex;
 }
-//: @property (nonatomic,strong) FFFKitNotificationFirer *firer;
+//: @property (nonatomic,strong) BusyKitNotificationFirer *firer;
 @property (nonatomic,strong) SecretDevice *firer;
-//: @property (nonatomic,strong) id<FFFCellLayoutConfig> layoutConfig;
+//: @property (nonatomic,strong) id<BusyCellLayoutConfig> layoutConfig;
 @property (nonatomic,strong) id<ParentMargin> layoutConfig;
 //: @end
 @end
@@ -135,11 +135,11 @@ extern NSString *const dreamMessageTableKey;
 {
     //: if (self = [super init]) {
     if (self = [super init]) {
-        //: _firer = [[FFFKitNotificationFirer alloc] init];
+        //: _firer = [[BusyKitNotificationFirer alloc] init];
         _firer = [[SecretDevice alloc] init];
-        //: _provider = [[FFFKitDataProviderImpl alloc] init]; 
+        //: _provider = [[BusyKitDataProviderImpl alloc] init]; 
         _provider = [[SaveNameOff alloc] init]; //默认使用 Case 的实现
-        //: _layoutConfig = [[FFFCellLayoutConfig alloc] init];
+        //: _layoutConfig = [[BusyCellLayoutConfig alloc] init];
         _layoutConfig = [[ParentMargin alloc] init];
         //: [self preloadNIMKitBundleResource];
         [self gen];
@@ -165,10 +165,10 @@ extern NSString *const dreamMessageTableKey;
     return instance;
 }
 
-//: - (void)registerLayoutConfig:(FFFCellLayoutConfig *)layoutConfig
+//: - (void)registerLayoutConfig:(BusyCellLayoutConfig *)layoutConfig
 - (void)message:(ParentMargin *)layoutConfig
 {
-    //: if ([layoutConfig isKindOfClass:[FFFCellLayoutConfig class]])
+    //: if ([layoutConfig isKindOfClass:[BusyCellLayoutConfig class]])
     if ([layoutConfig isKindOfClass:[ParentMargin class]])
     {
         //: self.layoutConfig = layoutConfig;
@@ -204,28 +204,28 @@ extern NSString *const dreamMessageTableKey;
     return _languageBundle;
 }
 
-//: - (id<FFFChatUIManager>)chatUIManager
+//: - (id<BusyChatUIManager>)chatUIManager
 - (id<PraiseUimanager>)chatUIManager
 {
-    //: return FFFChatUIManager.sharedManager;
+    //: return BusyChatUIManager.sharedManager;
     return PraiseUimanager.manageressTouch;
 }
 
-//: - (id<FFFCellLayoutConfig>)layoutConfig
+//: - (id<BusyCellLayoutConfig>)layoutConfig
 - (id<ParentMargin>)layoutConfig
 {
     //: return _layoutConfig;
     return _layoutConfig;
 }
 
-//: - (FFFKitConfig *)config
+//: - (BusyKitConfig *)config
 - (ChildSend *)config
 {
     //不要放在 Case 初始化里面，因为 UIConfig 初始化会使用 NIMKit, 防止死循环
     //: if (!_config)
     if (!_config)
     {
-        //: _config = [[FFFKitConfig alloc] init];
+        //: _config = [[BusyKitConfig alloc] init];
         _config = [[ChildSend alloc] init];
     }
     //: return _config;
@@ -247,7 +247,7 @@ extern NSString *const dreamMessageTableKey;
         StateText *info = [[StateText alloc] init];
         //: info.session = session;
         info.session = session;
-        //: info.notificationName = NIMKitUserInfoHasUpdatedNotification;
+        //: info.notificationName = notiArrayName;
         info.notificationName = notiArrayName;
         //: [self.firer addFireInfo:info];
         [self.firer putOff:info];
@@ -275,7 +275,7 @@ extern NSString *const dreamMessageTableKey;
         //: info.session = session;
         info.session = session;
     }
-    //: info.notificationName = NIMKitTeamInfoHasUpdatedNotification;
+    //: info.notificationName = dreamMessageTableKey;
     info.notificationName = dreamMessageTableKey;
     //: [self.firer addFireInfo:info];
     [self.firer putOff:info];
@@ -302,18 +302,18 @@ extern NSString *const dreamMessageTableKey;
         //: info.session = session;
         info.session = session;
     }
-    //: extern NSString *NIMKitTeamMembersHasUpdatedNotification;
-    extern NSString *NIMKitTeamMembersHasUpdatedNotification;
-    //: info.notificationName = NIMKitTeamMembersHasUpdatedNotification;
-    info.notificationName = NIMKitTeamMembersHasUpdatedNotification;
+    //: extern NSString *k_pathIdent;
+    extern NSString *k_pathIdent;
+    //: info.notificationName = k_pathIdent;
+    info.notificationName = k_pathIdent;
     //: [self.firer addFireInfo:info];
     [self.firer putOff:info];
 }
 
-//: - (FFFKitInfo *)infoByUser:(NSString *)userId option:(FFFKitInfoFetchOption *)option
+//: - (BusyKitInfo *)infoByUser:(NSString *)userId option:(BusyKitInfoFetchOption *)option
 - (Info *)consumer:(NSString *)userId message:(InfoGreenImage *)option
 {
-    //: FFFKitInfo *info = nil;
+    //: BusyKitInfo *info = nil;
     Info *info = nil;
     //: if (self.provider && [self.provider respondsToSelector:@selector(infoByUser:option:)]) {
     if (self.provider && [self.provider respondsToSelector:@selector(consumer:message:)]) {
@@ -324,10 +324,10 @@ extern NSString *const dreamMessageTableKey;
     return info;
 }
 
-//: - (FFFKitInfo *)infoByTeam:(NSString *)teamId option:(FFFKitInfoFetchOption *)option
+//: - (BusyKitInfo *)infoByTeam:(NSString *)teamId option:(BusyKitInfoFetchOption *)option
 - (Info *)controlOption:(NSString *)teamId my:(InfoGreenImage *)option
 {
-    //: FFFKitInfo *info = nil;
+    //: BusyKitInfo *info = nil;
     Info *info = nil;
     //: if (self.provider && [self.provider respondsToSelector:@selector(infoByTeam:option:)]) {
     if (self.provider && [self.provider respondsToSelector:@selector(controlOption:my:)]) {
@@ -339,10 +339,10 @@ extern NSString *const dreamMessageTableKey;
 
 }
 
-//: - (FFFKitInfo *)infoBySuperTeam:(NSString *)teamId option:(FFFKitInfoFetchOption *)option
+//: - (BusyKitInfo *)infoBySuperTeam:(NSString *)teamId option:(BusyKitInfoFetchOption *)option
 - (Info *)ting:(NSString *)teamId container:(InfoGreenImage *)option
 {
-    //: FFFKitInfo *info = nil;
+    //: BusyKitInfo *info = nil;
     Info *info = nil;
     //: if (self.provider && [self.provider respondsToSelector:@selector(infoBySuperTeam:option:)]) {
     if (self.provider && [self.provider respondsToSelector:@selector(ting:container:)]) {
@@ -358,7 +358,7 @@ extern NSString *const dreamMessageTableKey;
 - (void)gen {
     //: dispatch_async(dispatch_get_main_queue(), ^{
     dispatch_async(dispatch_get_main_queue(), ^{
-        //: [[FFFInputEmoticonManager sharedManager] start];
+        //: [[BusyInputEmoticonManager sharedManager] start];
         [[DeviceManager history] elect];
     //: });
     });

@@ -71,9 +71,9 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSpellingCenter.h"
+//: #import "BusySpellingCenter.h"
 #import "PinValueTing.h"
-//: #import "FFFPinyinConverter.h"
+//: #import "BusyPinyinConverter.h"
 #import "SeeConverter.h"
 //: #import "YYModel/YYModel.h"
 #import "YYModel/YYModel.h"
@@ -86,7 +86,7 @@
 //: @end
 @end
 
-//: @interface FFFSpellingCenter ()
+//: @interface BusySpellingCenter ()
 @interface PinValueTing ()
 //: - (NIMSpellingUnit *)calcSpellingOfString: (NSString *)source;
 - (CreateUnit *)pin: (NSString *)source;
@@ -94,18 +94,18 @@
 @end
 
 
-//: @implementation FFFSpellingCenter
+//: @implementation BusySpellingCenter
 @implementation PinValueTing
-//: + (FFFSpellingCenter *)sharedCenter
+//: + (BusySpellingCenter *)sharedCenter
 + (PinValueTing *)sharedToCenterBackground
 {
-    //: static FFFSpellingCenter *instance = nil;
+    //: static BusySpellingCenter *instance = nil;
     static PinValueTing *instance = nil;
     //: static dispatch_once_t onceToken;
     static dispatch_once_t onceToken;
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
-        //: instance = [[FFFSpellingCenter alloc]init];
+        //: instance = [[BusySpellingCenter alloc]init];
         instance = [[PinValueTing alloc]init];
     //: });
     });
@@ -226,7 +226,7 @@
     {
         //: NSString *word = [source substringWithRange:NSMakeRange(i, 1)];
         NSString *word = [source substringWithRange:NSMakeRange(i, 1)];
-        //: NSString *pinyin = [[FFFPinyinConverter sharedInstance] toPinyin:word];
+        //: NSString *pinyin = [[BusyPinyinConverter sharedInstance] toPinyin:word];
         NSString *pinyin = [[SeeConverter remove] modelDigitizer:word];
 
         //: if ([pinyin length])

@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFPageView.h"
+//: #import "BusyPageView.h"
 #import "PageView.h"
 
-//: @interface FFFPageView ()
+//: @interface BusyPageView ()
 @interface PageView ()
 {
     //: NSInteger _currentPage;
@@ -37,7 +37,7 @@
 //: @end
 @end
 
-//: @implementation FFFPageView
+//: @implementation BusyPageView
 @implementation PageView
 
 //: - (id)initWithFrame:(CGRect)frame

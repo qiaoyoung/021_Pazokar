@@ -9,13 +9,13 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionTimestampCell.h"
+//: #import "BusySessionTimestampCell.h"
 #import "MaxRedViewCell.h"
 
 //: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
-//: @interface NTESTimestampCell : FFFSessionTimestampCell
+//: @interface NTESTimestampCell : BusySessionTimestampCell
 @interface AlongView : MaxRedViewCell
 
 //: @end

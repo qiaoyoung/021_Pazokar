@@ -47,7 +47,7 @@
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)data
+//: - (void)refresh:(BusyMessageModel *)data
 - (void)messagePress:(MoreModel *)data
 {
     //: [super refresh:data];

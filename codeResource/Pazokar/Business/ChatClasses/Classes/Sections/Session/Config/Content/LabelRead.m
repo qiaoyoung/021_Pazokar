@@ -9,12 +9,12 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFLocationContentConfig.h"
+//: #import "BusyLocationContentConfig.h"
 #import "LabelRead.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @implementation FFFLocationContentConfig
+//: @implementation BusyLocationContentConfig
 @implementation LabelRead
 
 //: - (CGSize)contentSize:(CGFloat)cellWidth message:(NIMMessage *)message
@@ -27,7 +27,7 @@
 //: - (NSString *)cellContent:(NIMMessage *)message
 - (NSString *)picture:(NIMMessage *)message
 {
-    //: return @"FFFSessionLocationContentView";
+    //: return @"BusySessionLocationContentView";
     return @"BubbleControl";
 }
 

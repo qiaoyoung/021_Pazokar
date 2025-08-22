@@ -12,7 +12,7 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: @interface NTESSessionJankenponContentView : FFFSessionMessageContentView
+//: @interface NTESSessionJankenponContentView : BusySessionMessageContentView
 @interface PinRowNameView : TextControl
 
 //: @end

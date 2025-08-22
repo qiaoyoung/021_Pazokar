@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitInfo.h"
+//: #import "BusyKitInfo.h"
 #import "Info.h"
 
-//: @implementation FFFKitInfo
+//: @implementation BusyKitInfo
 @implementation Info
 
 //: @end

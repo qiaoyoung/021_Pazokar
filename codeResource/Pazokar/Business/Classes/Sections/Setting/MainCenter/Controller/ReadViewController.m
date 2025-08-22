@@ -115,7 +115,7 @@ Byte showLetterPath[] = {83, 7, 71, 11, 54, 66, 244, 130, 155, 196, 56, 220, 236
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"activity_set_bio_title"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"activity_set_bio_title"];
     labtitle.text = [SendName streetSmart:StringFromControlMessageData(show_pathKey)];
     //: [bgView addSubview:labtitle];
     [bgView addSubview:labtitle];
@@ -204,7 +204,7 @@ Byte showLetterPath[] = {83, 7, 71, 11, 54, 66, 244, 130, 155, 196, 56, 220, 236
             [nav popViewControllerAnimated:NO];
             //: UIViewController *vc = nav.topViewController;
             UIViewController *vc = nav.topViewController;
-            //: [vc.view makeToast:[FFFLanguageManager getTextWithKey:@"user_profile_avtivity_user_info_update_success"]
+            //: [vc.view makeToast:[BusyLanguageManager getTextWithKey:@"user_profile_avtivity_user_info_update_success"]
             [vc.view makeToast:[SendName streetSmart:StringFromControlMessageData(main_clickId)]
                          //: duration:2
                          duration:2
@@ -212,7 +212,7 @@ Byte showLetterPath[] = {83, 7, 71, 11, 54, 66, 244, 130, 155, 196, 56, 220, 236
                          position:CSToastPositionCenter];
         //: }else{
         }else{
-            //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"user_profile_avtivity_user_info_update_failed"]
+            //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"user_profile_avtivity_user_info_update_failed"]
             [wself.view makeToast:[SendName streetSmart:StringFromControlMessageData(app_toContent)]
                          //: duration:2
                          duration:2
@@ -259,7 +259,7 @@ Byte showLetterPath[] = {83, 7, 71, 11, 54, 66, 244, 130, 155, 196, 56, 220, 236
         _textView.font = [UIFont systemFontOfSize:16.0];
         //: _textView.textColor = [UIColor colorWithHexString:@"#333333"];
         _textView.textColor = [UIColor status:StringFromControlMessageData(showLetterPath)];
-        //: _textView.placeholder = [FFFLanguageManager getTextWithKey:@"activity_set_bio_title"];
+        //: _textView.placeholder = [BusyLanguageManager getTextWithKey:@"activity_set_bio_title"];
         _textView.placeholder = [SendName streetSmart:StringFromControlMessageData(show_pathKey)];
         //: _textView.delegate = self;
         _textView.delegate = self;

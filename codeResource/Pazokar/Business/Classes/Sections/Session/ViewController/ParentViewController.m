@@ -187,7 +187,7 @@ Byte userSeeFainAbsoluteData[] = {69, 12, 50, 10, 41, 240, 117, 198, 251, 116, 1
     return should;
 }
 
-//: - (id<FFFSessionConfig>)sessionConfig
+//: - (id<BusySessionConfig>)sessionConfig
 - (id<QuantityelligenceInformationCan>)sessionConfig
 {
     //: if (_sessionConfig == nil) {

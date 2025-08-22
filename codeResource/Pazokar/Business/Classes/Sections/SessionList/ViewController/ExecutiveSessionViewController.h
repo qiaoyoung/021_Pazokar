@@ -12,7 +12,7 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: @interface NTESSessionListViewController : FFFSessionListViewController
+//: @interface NTESSessionListViewController : BusySessionListViewController
 @interface ExecutiveSessionViewController : NoticeViewController
 
 //: @property (nonatomic,strong) UILabel *emptyTipLabel;

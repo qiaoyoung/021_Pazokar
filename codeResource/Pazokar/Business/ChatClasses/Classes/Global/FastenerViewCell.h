@@ -12,19 +12,19 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: typedef NS_ENUM(NSInteger, FFFKitColorButtonCellStyle){
-typedef NS_ENUM(NSInteger, FFFKitColorButtonCellStyle){
-    //: FFFKitColorButtonCellStyleRed,
-    FFFKitColorButtonCellStyleRed,
-    //: FFFKitColorButtonCellStyleBlue,
-    FFFKitColorButtonCellStyleBlue,
+//: typedef NS_ENUM(NSInteger, BusyKitColorButtonCellStyle){
+typedef NS_ENUM(NSInteger, BusyKitColorButtonCellStyle){
+    //: BusyKitColorButtonCellStyleRed,
+    BusyKitColorButtonCellStyleRed,
+    //: BusyKitColorButtonCellStyleBlue,
+    BusyKitColorButtonCellStyleBlue,
 //: };
 };
 
 //: @class NIMKitColorButton;
 @class ButtonControl;
 
-//: @interface FFFKitColorButtonCell : UITableViewCell
+//: @interface BusyKitColorButtonCell : UITableViewCell
 @interface FastenerViewCell : UITableViewCell
 
 //: @property (nonatomic,strong) NIMKitColorButton *button;
@@ -38,8 +38,8 @@ typedef NS_ENUM(NSInteger, FFFKitColorButtonCellStyle){
 //: @interface NIMKitColorButton : UIButton
 @interface ButtonControl : UIButton
 
-//: @property (nonatomic,assign) FFFKitColorButtonCellStyle style;
-@property (nonatomic,assign) FFFKitColorButtonCellStyle style;
+//: @property (nonatomic,assign) BusyKitColorButtonCellStyle style;
+@property (nonatomic,assign) BusyKitColorButtonCellStyle style;
 
 //: @end
 @end

@@ -162,35 +162,35 @@ Byte dream_recordNameFormat[] = {70, 10, 96, 7, 21, 53, 223, 197, 199, 191, 211,
 //
 
 // __M_A_C_R_O__
-//: #import "FFFLanguageManager.h"
+//: #import "BusyLanguageManager.h"
 #import "SendName.h"
-//: #import "FFFXMLReader.h"
+//: #import "BusyXMLReader.h"
 #import "MarginTag.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 //: #import "SSZipArchiveManager.h"
 #import "ValuePraise.h"
 
-//: @interface FFFLanguageManager ()<NSXMLParserDelegate>
+//: @interface BusyLanguageManager ()<NSXMLParserDelegate>
 @interface SendName ()<NSXMLParserDelegate>
 //: @property (nonatomic ,strong) NSString *currentElementName;
 @property (nonatomic ,strong) NSString *currentElementName;
 //: @end
 @end
 
-//: @implementation FFFLanguageManager
+//: @implementation BusyLanguageManager
 @implementation SendName
 
-//: static FFFLanguageManager *shareInstance = nil;
+//: static BusyLanguageManager *shareInstance = nil;
 static SendName *user_makeFormat = nil;
 
-//: + (FFFLanguageManager *)shareInstance{
+//: + (BusyLanguageManager *)shareInstance{
 + (SendName *)along{
     //: @synchronized(self) {
     @synchronized(self) {
         //: if (shareInstance == nil) {
         if (user_makeFormat == nil) {
-            //: shareInstance = [[FFFLanguageManager alloc] init];
+            //: shareInstance = [[BusyLanguageManager alloc] init];
             user_makeFormat = [[SendName alloc] init];
             //: shareInstance.langDict = [NSMutableDictionary dictionaryWithCapacity:100];
             user_makeFormat.langDict = [NSMutableDictionary dictionaryWithCapacity:100];
@@ -202,7 +202,7 @@ static SendName *user_makeFormat = nil;
 
 //: + (NSString *)getTextWithKey:(NSString *)key{
 + (NSString *)streetSmart:(NSString *)key{
-    //: NSMutableDictionary *dict = [FFFLanguageManager shareInstance].langDict;
+    //: NSMutableDictionary *dict = [BusyLanguageManager shareInstance].langDict;
     NSMutableDictionary *dict = [SendName along].langDict;
     //: NSString *value = [dict objectForKey:key];
     NSString *value = [dict objectForKey:key];
@@ -407,7 +407,7 @@ static SendName *user_makeFormat = nil;
     if (error) {
         //: NSLog(@"error : %@", error);
     }
-    //: NSDictionary *result = [FFFXMLReader dictionaryForXMLData:xmlData error:&error];
+    //: NSDictionary *result = [BusyXMLReader dictionaryForXMLData:xmlData error:&error];
     NSDictionary *result = [MarginTag messageError:xmlData range:&error];
 //    NSDictionary *result = [NSDictionary dictionaryWithXML:xmlData];
 

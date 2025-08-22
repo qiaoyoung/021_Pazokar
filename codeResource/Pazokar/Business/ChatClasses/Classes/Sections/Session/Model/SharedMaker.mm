@@ -31,7 +31,7 @@ Byte m_childFormat[] = {76, 21, 88, 10, 36, 121, 142, 25, 63, 123, 141, 55, 57, 
 // __DEBUG__
 // __CLOSE_PRINT__
 //
-//  FFFMessageMaker.m
+//  BusyMessageMaker.m
 // Case
 //
 //  Created by chris.
@@ -39,13 +39,13 @@ Byte m_childFormat[] = {76, 21, 88, 10, 36, 121, 142, 25, 63, 123, 141, 55, 57, 
 //
 
 // __M_A_C_R_O__
-//: #import "FFFMessageMaker.h"
+//: #import "BusyMessageMaker.h"
 #import "SharedMaker.h"
 //: #import "NSString+MyUserKit.h"
 #import "NSString+Case.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFInputAtCache.h"
+//: #import "BusyInputAtCache.h"
 #import "VersionPointCache.h"
 
 //: NSString * generateUUID(void) {
@@ -63,7 +63,7 @@ NSString * kitData(void) {
     return uuidString;
 }
 
-//: @implementation FFFMessageMaker
+//: @implementation BusyMessageMaker
 @implementation SharedMaker
 
 //: + (NIMMessage*)msgWithText:(NSString*)text
@@ -129,7 +129,7 @@ NSString * kitData(void) {
     option.compressQuality = 0.7;
     //: imageObject.option = option;
     imageObject.option = option;
-    //: return [FFFMessageMaker generateImageMessage:imageObject];
+    //: return [BusyMessageMaker generateImageMessage:imageObject];
     return [SharedMaker mentalImage:imageObject];
 }
 
@@ -138,7 +138,7 @@ NSString * kitData(void) {
 {
     //: NIMImageObject * imageObject = [[NIMImageObject alloc] initWithFilepath:path];
     NIMImageObject * imageObject = [[NIMImageObject alloc] initWithFilepath:path];
-    //: return [FFFMessageMaker generateImageMessage:imageObject];
+    //: return [BusyMessageMaker generateImageMessage:imageObject];
     return [SharedMaker mentalImage:imageObject];
 }
 
@@ -147,7 +147,7 @@ NSString * kitData(void) {
 {
     //: NIMImageObject *imageObject = [[NIMImageObject alloc] initWithData:data extension:extension];
     NIMImageObject *imageObject = [[NIMImageObject alloc] initWithData:data extension:extension];
-    //: return [FFFMessageMaker generateImageMessage:imageObject];
+    //: return [BusyMessageMaker generateImageMessage:imageObject];
     return [SharedMaker mentalImage:imageObject];
 }
 
@@ -163,7 +163,7 @@ NSString * kitData(void) {
     NIMMessage *message = [[NIMMessage alloc] init];
     //: message.messageObject = imageObject;
     message.messageObject = imageObject;
-    //: message.apnsContent = [FFFLanguageManager getTextWithKey:@"init_manager_nim_status_bar_image_message"];
+    //: message.apnsContent = [BusyLanguageManager getTextWithKey:@"init_manager_nim_status_bar_image_message"];
     message.apnsContent = [SendName streetSmart:StringFromDisappointmentBoarData(m_frameMessage)];
     //: [self setupMessage:message];
     [self value:message];

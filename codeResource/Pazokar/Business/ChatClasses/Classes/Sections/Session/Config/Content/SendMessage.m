@@ -9,14 +9,14 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTextContentConfig.h"
+//: #import "BusyTextContentConfig.h"
 #import "SendMessage.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @interface FFFTextContentConfig()
+//: @interface BusyTextContentConfig()
 @interface SendMessage()
 
 //: @property (nonatomic,strong) M80AttributedLabel *label;
@@ -26,7 +26,7 @@
 @end
 
 
-//: @implementation FFFTextContentConfig
+//: @implementation BusyTextContentConfig
 @implementation SendMessage
 
 //: - (CGSize)contentSize:(CGFloat)cellWidth message:(NIMMessage *)message
@@ -61,7 +61,7 @@
 //: - (NSString *)cellContent:(NIMMessage *)message
 - (NSString *)picture:(NIMMessage *)message
 {
-    //: return @"FFFSessionTextContentView";
+    //: return @"BusySessionTextContentView";
     return @"ButtonView";
 }
 

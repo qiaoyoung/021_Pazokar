@@ -9,13 +9,13 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFAdvancedMessageCell.h"
+//: #import "BusyAdvancedMessageCell.h"
 #import "PrecociousSortMessageCell.h"
 
 //: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
-//: @interface NTESMergeMessageCell : FFFAdvancedMessageCell
+//: @interface NTESMergeMessageCell : BusyAdvancedMessageCell
 @interface NameMessageCell : PrecociousSortMessageCell
 
 //: @end

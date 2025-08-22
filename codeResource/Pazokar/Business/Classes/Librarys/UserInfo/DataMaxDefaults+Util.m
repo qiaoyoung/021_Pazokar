@@ -125,7 +125,7 @@ LiterallyData dream_sideName = (LiterallyData){3, (Byte []){116, 102, 97, 85, 10
 
     //: userDefaults.language = lang;
     userDefaults.language = lang;
-    //: [[FFFLanguageManager shareInstance] setLanguagre:lang];
+    //: [[BusyLanguageManager shareInstance] setLanguagre:lang];
     [[SendName along] setMagnitudeernationality:lang];
 
     //: [MyUserKit sharedKit].languageBundle = nil;
@@ -144,7 +144,7 @@ LiterallyData dream_sideName = (LiterallyData){3, (Byte []){116, 102, 97, 85, 10
                            customContentKey:lang];
 
         //: dispatch_after(dispatch_time((0ull), (int64_t)(1 * 1000000000ull)), dispatch_get_main_queue(), ^{
-        dispatch_after(dispatch_time((0ull), (int64_t)(1 * 1000000000ull)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time((DISPATCH_TIME_NOW), (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             //: id<NIMApnsManager> apnsManager = [[NIMSDK sharedSDK] apnsManager];
             id<NIMApnsManager> apnsManager = [[NIMSDK sharedSDK] apnsManager];
             //: NIMPushNotificationSetting *setting = [apnsManager currentSetting];

@@ -119,7 +119,7 @@
 //: quick_icon
 @property (nonatomic, copy) NSString *appVoicePathRedText;
 
-//: #ffffff
+//: #fffBusy
 @property (nonatomic, copy) NSString *showAfterRedFullValue;
 
 //: user_info_avtivity_upload_avatar_failed
@@ -687,7 +687,7 @@
     return _main_controlUrl;
 }
 
-//: #ffffff
+//: #fffBusy
 - (NSString *)showAfterRedFullValue {
     if (!_showAfterRedFullValue) {
 		NSArray<NSString *> *origin = @[@"7", @"80", @"7", @"203", @"49", @"78", @"74", @"211", @"22", @"22", @"22", @"22", @"22", @"22", @"21"];
@@ -763,7 +763,7 @@
 #import "BubbleViewController.h"
 //: #import "CCCContactScanViewController.h"
 #import "AppViewController.h"
-//: #import "FFFContactSelectViewController.h"
+//: #import "BusyContactSelectViewController.h"
 #import "BrandViewController.h"
 //: #import "NTESSystemSignNotificationSheet.h"
 #import "DataView.h"
@@ -771,11 +771,11 @@
 #import "ZCHttpInterfacedConst.h"
 //: #import <YYText.h>
 #import <YYText.h>
-//: #import "FFFTextHighlight.h"
+//: #import "BusyTextHighlight.h"
 #import "MediaNameContentHighlight.h"
-//: #import "FFFInputEmoticonParser.h"
+//: #import "BusyInputEmoticonParser.h"
 #import "ViewApp.h"
-//: #import "FFFInputEmoticonManager.h"
+//: #import "BusyInputEmoticonManager.h"
 #import "DeviceManager.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
@@ -783,7 +783,7 @@
 #import "NSString+Case.h"
 //: #import <objc/runtime.h>
 #import <objc/runtime.h>
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
 //: #import "NTESSystemNotificationViewController.h"
 #import "NotificationViewController.h"
@@ -795,7 +795,7 @@
 #import "OffViewController.h"
 //: #import "NTESMainTabController.h"
 #import "LightGreenViewController.h"
-//: #import "FFFKitFileLocationHelper.h"
+//: #import "BusyKitFileLocationHelper.h"
 #import "LocationHelper.h"
 //: #import "ZMONPrivacyPolicyView.h"
 #import "ImageUltramontanismView.h"
@@ -915,7 +915,7 @@
 
     //: UIView *contentView = [[UIView alloc]initWithFrame:CGRectMake(0, [UIDevice vg_statusBarHeight]+190, [[UIScreen mainScreen] bounds].size.width, ([[UIScreen mainScreen] bounds].size.height - (44.0f + [UIDevice vg_statusBarHeight]) - (({UIEdgeInsets i; if(@available(iOS 11.0, *)) {i = [[[UIApplication sharedApplication] delegate] window].safeAreaInsets;} else {i = UIEdgeInsetsZero;} i;}).bottom))-190)];
     UIView *contentView = [[UIView alloc]initWithFrame:CGRectMake(0, [UIDevice statusOrLevel]+190, [[UIScreen mainScreen] bounds].size.width, ([[UIScreen mainScreen] bounds].size.height - (44.0f + [UIDevice statusOrLevel]) - (({UIEdgeInsets i; if(@available(iOS 11.0, *)) {i = [[[UIApplication sharedApplication] delegate] window].safeAreaInsets;} else {i = UIEdgeInsetsZero;} i;}).bottom))-190)];
-    //: contentView.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+    //: contentView.backgroundColor = [UIColor colorWithHexString:@"#fffBusy"];
     contentView.backgroundColor = [UIColor status:[ManagerMakeData sharedInstance].showAfterRedFullValue];
     //: contentView.layer.cornerRadius = 34;
     contentView.layer.cornerRadius = 34;
@@ -966,7 +966,7 @@
     self.emptyTipLabel = [[UILabel alloc] init];
     //: self.emptyTipLabel.hidden = YES;
     self.emptyTipLabel.hidden = YES;
-    //: self.emptyTipLabel.text = [FFFLanguageManager getTextWithKey:@"no_conversation"];
+    //: self.emptyTipLabel.text = [BusyLanguageManager getTextWithKey:@"no_conversation"];
     self.emptyTipLabel.text = [SendName streetSmart:[ManagerMakeData sharedInstance].user_textPath];//@"还没有会话，在通讯录中找个人聊聊吧".ntes_localized;
     //: self.emptyTipLabel.numberOfLines = 0;
     self.emptyTipLabel.numberOfLines = 0;
@@ -1020,7 +1020,7 @@
     }];
 
     //: dispatch_after(dispatch_time((0ull), (int64_t)(1 * 1000000000ull)), dispatch_get_main_queue(), ^{
-    dispatch_after(dispatch_time((0ull), (int64_t)(1 * 1000000000ull)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time((DISPATCH_TIME_NOW), (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             //: id<NIMApnsManager> apnsManager = [[NIMSDK sharedSDK] apnsManager];
             id<NIMApnsManager> apnsManager = [[NIMSDK sharedSDK] apnsManager];
             //: NIMPushNotificationSetting *setting = [apnsManager currentSetting];
@@ -1113,7 +1113,7 @@
     labtitle.textColor = [UIColor whiteColor];
     //: labtitle.font = [UIFont boldSystemFontOfSize:18];
     labtitle.font = [UIFont boldSystemFontOfSize:18];
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"activity_user_profile_chat"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"activity_user_profile_chat"];
     labtitle.text = [SendName streetSmart:[ManagerMakeData sharedInstance].mainMessageData];
     //: [topview addSubview:labtitle];
     [topview addSubview:labtitle];
@@ -1168,7 +1168,7 @@
 //    label12.textAlignment = NSTextAlignmentCenter;
     //: label12.textColor = [UIColor whiteColor];
     label12.textColor = [UIColor whiteColor];
-    //: label12.text = [FFFLanguageManager getTextWithKey:@"add_friend_activity_add_friend"];
+    //: label12.text = [BusyLanguageManager getTextWithKey:@"add_friend_activity_add_friend"];
     label12.text = [SendName streetSmart:[ManagerMakeData sharedInstance].dream_toData];
     //: label12.numberOfLines = 0;
     label12.numberOfLines = 0;
@@ -1201,7 +1201,7 @@
 //    label2.textAlignment = NSTextAlignmentCenter;
     //: label2.textColor = [UIColor whiteColor];
     label2.textColor = [UIColor whiteColor];
-    //: label2.text = [FFFLanguageManager getTextWithKey:@"activity_create_group_name_create_group"];
+    //: label2.text = [BusyLanguageManager getTextWithKey:@"activity_create_group_name_create_group"];
     label2.text = [SendName streetSmart:[ManagerMakeData sharedInstance].k_controlRecordListStr];
     //: [box2 addSubview:label2];
     [box2 addSubview:label2];
@@ -1237,7 +1237,7 @@
 //    label2.textAlignment = NSTextAlignmentCenter;
     //: label3.textColor = [UIColor whiteColor];
     label3.textColor = [UIColor whiteColor];
-    //: label3.text = [FFFLanguageManager getTextWithKey:@"notification"];
+    //: label3.text = [BusyLanguageManager getTextWithKey:@"notification"];
     label3.text = [SendName streetSmart:[ManagerMakeData sharedInstance].showRangeIdent];
     //: [box4 addSubview:label3];
     [box4 addSubview:label3];
@@ -1431,7 +1431,7 @@
 //: - (void)onDisnodistrubRecentAtIndexPath:(NIMRecentSession *)recent isDis:(BOOL)isDis
 - (void)event:(NIMRecentSession *)recent sign:(BOOL)isDis
 {
-    //: FFFKitInfo *info = nil;
+    //: BusyKitInfo *info = nil;
     Info *info = nil;
     //: if (recent.session.sessionType == NIMSessionTypeTeam) {
     if (recent.session.sessionType == NIMSessionTypeTeam) {
@@ -1450,7 +1450,7 @@
         }];
     //: } else if (recent.session.sessionType == NIMSessionTypeP2P) {
     } else if (recent.session.sessionType == NIMSessionTypeP2P) {
-        //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+        //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
         InfoGreenImage *option = [[InfoGreenImage alloc] init];
         //: option.session = recent.session;
         option.session = recent.session;
@@ -1495,7 +1495,7 @@
 - (NSString *)recent:(NIMRecentSession *)recent{
     //: if ([recent.session.sessionId isEqualToString:[[NIMSDK sharedSDK].loginManager currentAccount]]) {
     if ([recent.session.sessionId isEqualToString:[[NIMSDK sharedSDK].loginManager currentAccount]]) {
-        //: return [FFFLanguageManager getTextWithKey:@"my_computer"];
+        //: return [BusyLanguageManager getTextWithKey:@"my_computer"];
         return [SendName streetSmart:[ManagerMakeData sharedInstance].main_infoIdent];
     }
     //: return [super nameForRecentSession:recent];
@@ -1706,7 +1706,7 @@
 
     //: BOOL isDisnodistrub = NO;
     BOOL isDisnodistrub = NO;
-    //: FFFKitInfo *info = nil;
+    //: BusyKitInfo *info = nil;
     Info *info = nil;
     //: if (recentSession.session.sessionType == NIMSessionTypeTeam) {
     if (recentSession.session.sessionType == NIMSessionTypeTeam) {
@@ -1719,7 +1719,7 @@
 
     //: } else if (recentSession.session.sessionType == NIMSessionTypeP2P) {
     } else if (recentSession.session.sessionType == NIMSessionTypeP2P) {
-        //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+        //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
         InfoGreenImage *option = [[InfoGreenImage alloc] init];
         //: option.session = recentSession.session;
         option.session = recentSession.session;
@@ -1962,7 +1962,7 @@
     {
         //: NIMMessage *msg = recent.lastMessage;
         NIMMessage *msg = recent.lastMessage;
-        //: if ([recent.lastMessage.text containsString:[FFFLanguageManager getTextWithKey:@"retracted_message"]]) {
+        //: if ([recent.lastMessage.text containsString:[BusyLanguageManager getTextWithKey:@"retracted_message"]]) {
         if ([recent.lastMessage.text containsString:[SendName streetSmart:[ManagerMakeData sharedInstance].k_successKey]]) {
             //: msg = [self lastMessageWithNoRevocationMessage:recent.lastMessage];
             msg = [self userTing:recent.lastMessage];
@@ -2068,7 +2068,7 @@
             //: NSString *emoString = [attrM.string substringWithRange:range];
             NSString *emoString = [attrM.string substringWithRange:range];
 
-            //: NIMInputEmoticon *emoticon = [[FFFInputEmoticonManager sharedManager] emoticonByTag:emoString];
+            //: NIMInputEmoticon *emoticon = [[BusyInputEmoticonManager sharedManager] emoticonByTag:emoString];
             CityCenterWith *emoticon = [[DeviceManager history] viewText:emoString];
 
             //: UIImage *image = [UIImage nim_emoticonInKit:emoticon.filename];
@@ -2100,10 +2100,10 @@
                 [emoText yy_setAttribute:NSKernAttributeName value:@(-1)];
             }
 
-            //: FFFTextHighlight *highlight = [[FFFTextHighlight alloc] init];
+            //: BusyTextHighlight *highlight = [[BusyTextHighlight alloc] init];
             MediaNameContentHighlight *highlight = [[MediaNameContentHighlight alloc] init];
-            //: highlight.type = FFFTextHighlightTypeEmoji;
-            highlight.type = FFFTextHighlightTypeEmoji;
+            //: highlight.type = BusyTextHighlightTypeEmoji;
+            highlight.type = BusyTextHighlightTypeEmoji;
             //: highlight.text = emoString;
             highlight.text = emoString;
             //: [emoText yy_setTextHighlight:highlight range:NSMakeRange(0, emoText.length)];
@@ -2218,7 +2218,7 @@
     //: config.showSelectHeaderview = YES;
     config.showSelectHeaderview = YES;
     //初始化联系人选择器
-    //: FFFContactSelectViewController *vc = [[FFFContactSelectViewController alloc] initWithConfig:config];
+    //: BusyContactSelectViewController *vc = [[BusyContactSelectViewController alloc] initWithConfig:config];
     BrandViewController *vc = [[BrandViewController alloc] initWithMax:config];
     //回调处理
     //: vc.finshBlock = block;
@@ -2248,7 +2248,7 @@
     //: config.showSelectHeaderview = NO;
     config.showSelectHeaderview = NO;
     //初始化联系人选择器
-    //: FFFContactSelectViewController *vc = [[FFFContactSelectViewController alloc] initWithConfig:config];
+    //: BusyContactSelectViewController *vc = [[BusyContactSelectViewController alloc] initWithConfig:config];
     BrandViewController *vc = [[BrandViewController alloc] initWithMax:config];
     //回调处理
     //: vc.finshBlock = block;
@@ -2337,7 +2337,7 @@
 //: - (NSArray *)getMenuModelsArray {
 - (NSArray *)my {
     //菜单模型0
-    //: NSString *add_friend = [FFFLanguageManager getTextWithKey:@"add_friend_activity_add_friend"];
+    //: NSString *add_friend = [BusyLanguageManager getTextWithKey:@"add_friend_activity_add_friend"];
     NSString *add_friend = [SendName streetSmart:[ManagerMakeData sharedInstance].dream_toData];
     //: FFDropDownMenuModel *menuModel0 = [FFDropDownMenuModel ff_DropDownMenuModelWithMenuItemTitle:add_friend menuItemIconName:@"ic_add_fiend" menuBlock:^{
     FFDropDownMenuModel *menuModel0 = [FFDropDownMenuModel ff_DropDownMenuModelWithMenuItemTitle:add_friend menuItemIconName:[ManagerMakeData sharedInstance].dream_managerId menuBlock:^{
@@ -2348,7 +2348,7 @@
     //: }];
     }];
 
-    //: NSString *activity = [FFFLanguageManager getTextWithKey:@"activity_create_group_name_create_group"];
+    //: NSString *activity = [BusyLanguageManager getTextWithKey:@"activity_create_group_name_create_group"];
     NSString *activity = [SendName streetSmart:[ManagerMakeData sharedInstance].k_controlRecordListStr];
 
     //菜单模型1
@@ -2356,7 +2356,7 @@
     FFDropDownMenuModel *menuModel1 = [FFDropDownMenuModel ff_DropDownMenuModelWithMenuItemTitle:activity menuItemIconName:[ManagerMakeData sharedInstance].showHandleUrl menuBlock:^{
         //: if (_creatTeam.integerValue != 0) {
         if (_creatTeam.integerValue != 0) {
-            //: [SVProgressHUD showMessage:[FFFLanguageManager getTextWithKey:@"please_contact_your_administrator"]];
+            //: [SVProgressHUD showMessage:[BusyLanguageManager getTextWithKey:@"please_contact_your_administrator"]];
             [SVProgressHUD stormCenter:[SendName streetSmart:[ManagerMakeData sharedInstance].app_dismissListData]];
         //: }else{
         }else{
@@ -2371,7 +2371,7 @@
      //: autoreleasepool{} __weak __typeof__(self) __weak_self__ = self;
      autoreleasepool{} __weak __typeof__(self) __weak_self__ = self;
                   ;
-    //: FFDropDownMenuModel *menuModel3 = [FFDropDownMenuModel ff_DropDownMenuModelWithMenuItemTitle:[FFFLanguageManager getTextWithKey:@"fragment_contact_new_scan"] menuItemIconName:@"ic_scan" menuBlock:^{
+    //: FFDropDownMenuModel *menuModel3 = [FFDropDownMenuModel ff_DropDownMenuModelWithMenuItemTitle:[BusyLanguageManager getTextWithKey:@"fragment_contact_new_scan"] menuItemIconName:@"ic_scan" menuBlock:^{
     FFDropDownMenuModel *menuModel3 = [FFDropDownMenuModel ff_DropDownMenuModelWithMenuItemTitle:[SendName streetSmart:[ManagerMakeData sharedInstance].noti_nextTitle] menuItemIconName:[ManagerMakeData sharedInstance].main_controlUrl menuBlock:^{
         @
          //: try{} @finally{} __typeof__(self) self = __weak_self__;
@@ -2443,13 +2443,13 @@
 //        if( [[UIApplication sharedApplication] canOpenURL:url]) {
 //            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 //        }
-        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"] message:[FFFLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
+        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"] message:[BusyLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[SendName streetSmart:[ManagerMakeData sharedInstance].dreamInfoData] message:[SendName streetSmart:[ManagerMakeData sharedInstance].notiBarMinUrl] preferredStyle:UIAlertControllerStyleAlert];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[ManagerMakeData sharedInstance].dreamFileRedPath] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         //: }])];
         }])];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[ManagerMakeData sharedInstance].m_afterText] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             //: NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
             NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
@@ -2504,7 +2504,7 @@
             option.type = NIMTeamTypeAdvanced;
             //: option.joinMode = NIMTeamJoinModeNoAuth;
             option.joinMode = NIMTeamJoinModeNoAuth;
-            //: option.postscript = [FFFLanguageManager getTextWithKey:@"invite_you_group"];
+            //: option.postscript = [BusyLanguageManager getTextWithKey:@"invite_you_group"];
             option.postscript = [SendName streetSmart:[ManagerMakeData sharedInstance].userMemberId];
 //            [SVProgressHUD show];
 
@@ -2528,7 +2528,7 @@
                     [self clear:option.name playRed:teamId];
                 //: }else{
                 }else{
-                    //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"team_create_helper_create_failed"] duration:2.0 position:CSToastPositionCenter];
+                    //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"team_create_helper_create_failed"] duration:2.0 position:CSToastPositionCenter];
                     [self.view makeToast:[SendName streetSmart:[ManagerMakeData sharedInstance].m_titleMessage] duration:2.0 position:CSToastPositionCenter];
                 }
             //: }];
@@ -2558,9 +2558,9 @@
 
     //: UIImage *imageForAvatarUpload = [image imageByScalingAndCroppingForSize:CGSizeMake(375, 375)];
     UIImage *imageForAvatarUpload = [image view:CGSizeMake(375, 375)];
-    //: NSString *fileName = [FFFKitFileLocationHelper genFilenameWithExt:@"jpg"];
+    //: NSString *fileName = [BusyKitFileLocationHelper genFilenameWithExt:@"jpg"];
     NSString *fileName = [LocationHelper post:[ManagerMakeData sharedInstance].appRedListName];
-    //: NSString *filePath = [[FFFKitFileLocationHelper getAppDocumentPath] stringByAppendingPathComponent:fileName];
+    //: NSString *filePath = [[BusyKitFileLocationHelper getAppDocumentPath] stringByAppendingPathComponent:fileName];
     NSString *filePath = [[LocationHelper showOf] stringByAppendingPathComponent:fileName];
     //: NSData *data = UIImageJPEGRepresentation(imageForAvatarUpload, 0.3);
     NSData *data = UIImageJPEGRepresentation(imageForAvatarUpload, 0.3);
@@ -2581,7 +2581,7 @@
 
             //: }else{
             }else{
-                //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
+                //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
                 [wself.view makeToast:[SendName streetSmart:[ManagerMakeData sharedInstance].app_shouldMessage]
                              //: duration:2
                              duration:2
@@ -2595,7 +2595,7 @@
         }];
     //: }else{
     }else{
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
         [self.view makeToast:[SendName streetSmart:[ManagerMakeData sharedInstance].app_shouldMessage]
                     //: duration:2
                     duration:2
@@ -2687,7 +2687,7 @@
             option.type = NIMTeamTypeAdvanced;
             //: option.joinMode = NIMTeamJoinModeNoAuth;
             option.joinMode = NIMTeamJoinModeNoAuth;
-            //: option.postscript = [FFFLanguageManager getTextWithKey:@"invite_you_group"];
+            //: option.postscript = [BusyLanguageManager getTextWithKey:@"invite_you_group"];
             option.postscript = [SendName streetSmart:[ManagerMakeData sharedInstance].userMemberId];
 //            [SVProgressHUD show];
 
@@ -2711,7 +2711,7 @@
                     [self clear:option.name playRed:teamId];
                 //: }else{
                 }else{
-                    //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"team_create_helper_create_failed"] duration:2.0 position:CSToastPositionCenter];
+                    //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"team_create_helper_create_failed"] duration:2.0 position:CSToastPositionCenter];
                     [self.view makeToast:[SendName streetSmart:[ManagerMakeData sharedInstance].m_titleMessage] duration:2.0 position:CSToastPositionCenter];
                 }
             //: }];
@@ -2797,7 +2797,7 @@
         _QuickChatBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_QuickChatBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_QuickChatBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        //: [_QuickChatBtn setTitle:[FFFLanguageManager getTextWithKey:@"quickchat"] forState:UIControlStateNormal];
+        //: [_QuickChatBtn setTitle:[BusyLanguageManager getTextWithKey:@"quickchat"] forState:UIControlStateNormal];
         [_QuickChatBtn setTitle:[SendName streetSmart:[ManagerMakeData sharedInstance].k_redBottomTitle] forState:UIControlStateNormal];
         //: [_QuickChatBtn layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyleLeft) imageTitleSpace:10];
         [_QuickChatBtn reloadSession:(MKButtonEdgeInsetsStyleLeft) text:10];

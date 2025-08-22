@@ -11,20 +11,20 @@
 // __M_A_C_R_O__
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
-//: #import "FFFInputProtocol.h"
-#import "FFFInputProtocol.h"
-//: #import "FFFSessionConfig.h"
+//: #import "BusyInputProtocol.h"
+#import "BusyInputProtocol.h"
+//: #import "BusySessionConfig.h"
 #import "QuantityelligenceInformationCan.h"
-//: #import "FFFInputToolBar.h"
+//: #import "BusyInputToolBar.h"
 #import "ComplimentView.h"
-//: #import "FFFInputAtCache.h"
+//: #import "BusyInputAtCache.h"
 #import "VersionPointCache.h"
 
-//: @class FFFInputMoreContainerView;
+//: @class BusyInputMoreContainerView;
 @class AppView;
-//: @class FFFInputEmoticonContainerView;
+//: @class BusyInputEmoticonContainerView;
 @class EastWestDirectionView;
-//: @class FFFReplyContentView;
+//: @class BusyReplyContentView;
 @class NoticeTagView;
 
 
@@ -56,7 +56,7 @@ typedef NS_ENUM(NSInteger, NIMAudioRecordPhase) {
 //: @end
 @end
 
-//: @interface FFFInputView : UIView
+//: @interface BusyInputView : UIView
 @interface StateView : UIView
 
 //: @property (nonatomic, strong) NIMSession *session;
@@ -68,24 +68,24 @@ typedef NS_ENUM(NSInteger, NIMAudioRecordPhase) {
 //: @property (assign, nonatomic, getter=isRecording) BOOL recording;
 @property (assign, nonatomic, getter=isRecording) BOOL recording;
 
-//: @property (strong, nonatomic) FFFInputToolBar *toolBar;
+//: @property (strong, nonatomic) BusyInputToolBar *toolBar;
 @property (strong, nonatomic) ComplimentView *toolBar;
-//: @property (strong, nonatomic) FFFInputMoreContainerView *moreContainer;
+//: @property (strong, nonatomic) BusyInputMoreContainerView *moreContainer;
 @property (strong, nonatomic) AppView *moreContainer;
 //: @property (strong, nonatomic) UIView *emoticonContainer;
 @property (strong, nonatomic) UIView *emoticonContainer;
 
-//: @property (nonatomic, strong) FFFReplyContentView *replyedContent;
+//: @property (nonatomic, strong) BusyReplyContentView *replyedContent;
 @property (nonatomic, strong) NoticeTagView *replyedContent;
 
 //: @property (nonatomic, assign) NIMInputStatus status;
 @property (nonatomic, assign) NIMInputStatus status;
-//: @property (nonatomic, strong) FFFInputAtCache *atCache;
+//: @property (nonatomic, strong) BusyInputAtCache *atCache;
 @property (nonatomic, strong) VersionPointCache *atCache;
 
 //: - (instancetype)initWithFrame:(CGRect)frame
 - (instancetype)initWithSumFrame:(CGRect)frame
-                       //: config:(id<FFFSessionConfig>)config;
+                       //: config:(id<BusySessionConfig>)config;
                        monthSessionConfig:(id<QuantityelligenceInformationCan>)config;
 
 //: - (void)reset;

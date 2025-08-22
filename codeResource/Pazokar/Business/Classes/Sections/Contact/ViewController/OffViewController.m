@@ -478,7 +478,7 @@ typedef struct {
 #import "ViewCell.h"
 //: #import "NTESContactDataCell.h"
 #import "IndexPointDataCell.h"
-//: #import "FFFContactSelectViewController.h"
+//: #import "BusyContactSelectViewController.h"
 #import "BrandViewController.h"
 //: #import "NTESUserUtil.h"
 #import "InformationUtil.h"
@@ -510,7 +510,7 @@ typedef struct {
 #import <FFDropDownMenu/FFDropDownMenuView.h>
 //: #import "NTESFriendListTableViewCell.h"
 #import "InsertViewCell.h"
-//: #import "FFFKitFileLocationHelper.h"
+//: #import "BusyKitFileLocationHelper.h"
 #import "LocationHelper.h"
 
 //: static const NSString *contactCellUtilIcon = @"icon";
@@ -531,7 +531,7 @@ static const NSString *main_documentFormat = @"selName";
 @interface OffViewController ()<CompartmentReload,NIMUserManagerDelegate,NIMSystemNotificationManagerDelegate,
 //: NTESContactUtilCellDelegate,
 GreenClean,
-//: FFFContactDataCellDelegate,
+//: BusyContactDataCellDelegate,
 MediaPinDelegate,
 //: NIMLoginManagerDelegate,
 NIMLoginManagerDelegate,
@@ -733,7 +733,7 @@ BarDelegate> {
         emptyTipLabel.textAlignment = NSTextAlignmentCenter;
         //: [_defView addSubview:emptyTipLabel];
         [_defView addSubview:emptyTipLabel];
-        //: emptyTipLabel.text = [FFFLanguageManager getTextWithKey:@"group_info_activity_without"];
+        //: emptyTipLabel.text = [BusyLanguageManager getTextWithKey:@"group_info_activity_without"];
         emptyTipLabel.text = [SendName streetSmart:[[MyData sharedInstance] dreamCellId]];
 
 
@@ -769,7 +769,7 @@ BarDelegate> {
 
             //: NSMutableDictionary *myfriend = [NSMutableDictionary dictionaryWithCapacity:0];
             NSMutableDictionary *myfriend = [NSMutableDictionary dictionaryWithCapacity:0];
-            //: [myfriend setObject:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_friend"] forKey:@"name"];
+            //: [myfriend setObject:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_friend"] forKey:@"name"];
             [myfriend setObject:[SendName streetSmart:[[MyData sharedInstance] dream_toolTitle]] forKey:[[MyData sharedInstance] userSourceKey]];
             //: [myfriend setObject:friendIds forKey:@"ids"];
             [myfriend setObject:friendIds forKey:[[MyData sharedInstance] mToName]];
@@ -831,7 +831,7 @@ BarDelegate> {
     _btnfriend.titleLabel.font = [UIFont systemFontOfSize:14];
     //: [_btnfriend setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_btnfriend setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //: [_btnfriend setTitle:[FFFLanguageManager getTextWithKey:@"contact_fragment_friend"] forState:UIControlStateNormal];
+    //: [_btnfriend setTitle:[BusyLanguageManager getTextWithKey:@"contact_fragment_friend"] forState:UIControlStateNormal];
     [_btnfriend setTitle:[SendName streetSmart:[[MyData sharedInstance] k_showPath]] forState:UIControlStateNormal];
     //: [_btnfriend addTarget:self action:@selector(sliderButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [_btnfriend addTarget:self action:@selector(voiced:) forControlEvents:UIControlEventTouchUpInside];
@@ -850,7 +850,7 @@ BarDelegate> {
     _btngroup.titleLabel.font = [UIFont systemFontOfSize:14];
     //: [_btngroup setTitleColor:[UIColor colorWithHexString:@"#5D5F66"] forState:UIControlStateNormal];
     [_btngroup setTitleColor:[UIColor status:[[MyData sharedInstance] noti_letterMessage]] forState:UIControlStateNormal];
-    //: [_btngroup setTitle:[FFFLanguageManager getTextWithKey:@"contact_fragment_group"] forState:UIControlStateNormal];
+    //: [_btngroup setTitle:[BusyLanguageManager getTextWithKey:@"contact_fragment_group"] forState:UIControlStateNormal];
     [_btngroup setTitle:[SendName streetSmart:[[MyData sharedInstance] showModeVerticalTitle]] forState:UIControlStateNormal];
     //: [_btngroup addTarget:self action:@selector(sliderButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [_btngroup addTarget:self action:@selector(voiced:) forControlEvents:UIControlEventTouchUpInside];
@@ -975,17 +975,17 @@ BarDelegate> {
             SuppressPerformSelectorLeakWarning([self performSelector:sel withObject:nil]);
         }
         //: else if (contactItem.vcName.length) {
-        else if (contactItem.body.length) {
+        else if (contactItem.vcName.length) {
             //: Class clazz = NSClassFromString(contactItem.vcName);
-            Class clazz = NSClassFromString(contactItem.body);
+            Class clazz = NSClassFromString(contactItem.vcName);
             //: UIViewController * vc = [[clazz alloc] initWithNibName:nil bundle:nil];
             UIViewController * vc = [[clazz alloc] initWithNibName:nil bundle:nil];
             //: [self.navigationController pushViewController:vc animated:YES];
             [self.navigationController pushViewController:vc animated:YES];
         //: }else if([contactItem respondsToSelector:@selector(userId)]){
-        }else if([contactItem respondsToSelector:@selector(modeContent)]){
+        }else if([contactItem respondsToSelector:@selector(userId)]){
             //: NSString * friendId = contactItem.userId;
-            NSString * friendId = contactItem.modeContent;
+            NSString * friendId = contactItem.userId;
             //: [self enterPersonalCard:friendId];
             [self preface:friendId];
         }
@@ -1199,7 +1199,7 @@ BarDelegate> {
     return _searchIgoreCase;
 }
 
-//: #pragma mark - FFFContactDataCellDelegate
+//: #pragma mark - BusyContactDataCellDelegate
 #pragma mark - MediaPinDelegate
 //: - (void)onPressAvatar:(NSString *)memberId{
 - (void)offLoad:(NSString *)memberId{
@@ -1306,9 +1306,9 @@ BarDelegate> {
         //: id<NTESContactItem> contactItem = (id<NTESContactItem>)[_contacts memberOfIndex:indexPath];
         id<DirectionImage> contactItem = (id<DirectionImage>)[_contacts sessionMoreIndex:indexPath];
         //: if([contactItem respondsToSelector:@selector(userId)]){
-        if([contactItem respondsToSelector:@selector(modeContent)]){
+        if([contactItem respondsToSelector:@selector(userId)]){
             //: NSString * friendId = contactItem.userId;
-            NSString * friendId = contactItem.modeContent;
+            NSString * friendId = contactItem.userId;
             //: if ([ids containsObject:friendId]) {
             if ([ids containsObject:friendId]) {
                 //: [indexPaths addObject:indexPath];
@@ -1355,7 +1355,7 @@ BarDelegate> {
     //: config.showSelectHeaderview = YES;
     config.showSelectHeaderview = YES;
     //初始化联系人选择器
-    //: FFFContactSelectViewController *vc = [[FFFContactSelectViewController alloc] initWithConfig:config];
+    //: BusyContactSelectViewController *vc = [[BusyContactSelectViewController alloc] initWithConfig:config];
     BrandViewController *vc = [[BrandViewController alloc] initWithMax:config];
     //回调处理
     //: vc.finshBlock = block;
@@ -1445,7 +1445,7 @@ BarDelegate> {
             option.type = NIMTeamTypeAdvanced;
             //: option.joinMode = NIMTeamJoinModeNoAuth;
             option.joinMode = NIMTeamJoinModeNoAuth;
-            //: option.postscript = [FFFLanguageManager getTextWithKey:@"invite_you_group"];
+            //: option.postscript = [BusyLanguageManager getTextWithKey:@"invite_you_group"];
             option.postscript = [SendName streetSmart:[[MyData sharedInstance] kSuccessPath]];
 //            [SVProgressHUD show];
 
@@ -1469,7 +1469,7 @@ BarDelegate> {
                     [self byId:option.name deleteCan:teamId];
                 //: }else{
                 }else{
-                    //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"team_create_helper_create_failed"] duration:2.0 position:CSToastPositionCenter];
+                    //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"team_create_helper_create_failed"] duration:2.0 position:CSToastPositionCenter];
                     [self.view makeToast:[SendName streetSmart:[[MyData sharedInstance] k_sourceModeMessage]] duration:2.0 position:CSToastPositionCenter];
                 }
             //: }];
@@ -1493,9 +1493,9 @@ BarDelegate> {
 
     //: UIImage *imageForAvatarUpload = [image imageByScalingAndCroppingForSize:CGSizeMake(375, 375)];
     UIImage *imageForAvatarUpload = [image view:CGSizeMake(375, 375)];
-    //: NSString *fileName = [FFFKitFileLocationHelper genFilenameWithExt:@"jpg"];
+    //: NSString *fileName = [BusyKitFileLocationHelper genFilenameWithExt:@"jpg"];
     NSString *fileName = [LocationHelper post:[[MyData sharedInstance] main_withMakeFullMessage]];
-    //: NSString *filePath = [[FFFKitFileLocationHelper getAppDocumentPath] stringByAppendingPathComponent:fileName];
+    //: NSString *filePath = [[BusyKitFileLocationHelper getAppDocumentPath] stringByAppendingPathComponent:fileName];
     NSString *filePath = [[LocationHelper showOf] stringByAppendingPathComponent:fileName];
     //: NSData *data = UIImageJPEGRepresentation(imageForAvatarUpload, 0.3);
     NSData *data = UIImageJPEGRepresentation(imageForAvatarUpload, 0.3);
@@ -1516,7 +1516,7 @@ BarDelegate> {
 
             //: }else{
             }else{
-                //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
+                //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
                 [wself.view makeToast:[SendName streetSmart:[[MyData sharedInstance] show_redTitle]]
                              //: duration:2
                              duration:2
@@ -1530,7 +1530,7 @@ BarDelegate> {
         }];
     //: }else{
     }else{
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
         [self.view makeToast:[SendName streetSmart:[[MyData sharedInstance] show_redTitle]]
                     //: duration:2
                     duration:2
@@ -1721,13 +1721,13 @@ BarDelegate> {
 //            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 //        }
 
-        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"] message:[FFFLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
+        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"] message:[BusyLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[SendName streetSmart:[[MyData sharedInstance] mTitleData]] message:[SendName streetSmart:[[MyData sharedInstance] k_cellContent]] preferredStyle:UIAlertControllerStyleAlert];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[[MyData sharedInstance] kClickSuccessMsg]] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         //: }])];
         }])];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[[MyData sharedInstance] user_objectValue]] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             //: NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
             NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
@@ -1762,7 +1762,7 @@ BarDelegate> {
         option.type = NIMTeamTypeAdvanced;
         //: option.joinMode = NIMTeamJoinModeNoAuth;
         option.joinMode = NIMTeamJoinModeNoAuth;
-        //: option.postscript = [FFFLanguageManager getTextWithKey:@"invite_you_group"];
+        //: option.postscript = [BusyLanguageManager getTextWithKey:@"invite_you_group"];
         option.postscript = [SendName streetSmart:[[MyData sharedInstance] kSuccessPath]];
         //: [SVProgressHUD show];
         [SVProgressHUD show];
@@ -1784,7 +1784,7 @@ BarDelegate> {
                 [wself byId:option.name deleteCan:teamId];
             //: }else{
             }else{
-                //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"team_create_helper_create_failed"] duration:2.0 position:CSToastPositionCenter];
+                //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"team_create_helper_create_failed"] duration:2.0 position:CSToastPositionCenter];
                 [wself.view makeToast:[SendName streetSmart:[[MyData sharedInstance] k_sourceModeMessage]] duration:2.0 position:CSToastPositionCenter];
             }
         //: }];
@@ -1843,7 +1843,7 @@ BarDelegate> {
         labedit.font = [UIFont systemFontOfSize:14];
         //: labedit.textColor = [UIColor colorWithHexString:@"#2C3042"];
         labedit.textColor = [UIColor status:[[MyData sharedInstance] dreamBarSuccessTitle]];
-        //: labedit.text = [FFFLanguageManager getTextWithKey:@"notification"];
+        //: labedit.text = [BusyLanguageManager getTextWithKey:@"notification"];
         labedit.text = [SendName streetSmart:[[MyData sharedInstance] main_inputSizeId]];
         //: [editView addSubview:labedit];
         [editView addSubview:labedit];
@@ -1874,7 +1874,7 @@ BarDelegate> {
         lablang.font = [UIFont systemFontOfSize:14];
         //: lablang.textColor = [UIColor colorWithHexString:@"#2C3042"];
         lablang.textColor = [UIColor status:[[MyData sharedInstance] dreamBarSuccessTitle]];
-        //: lablang.text = [FFFLanguageManager getTextWithKey:@"add_friend_activity_add_friend"];
+        //: lablang.text = [BusyLanguageManager getTextWithKey:@"add_friend_activity_add_friend"];
         lablang.text = [SendName streetSmart:[[MyData sharedInstance] show_inputValue]];
         //: [langView addSubview:lablang];
         [langView addSubview:lablang];
@@ -1918,7 +1918,7 @@ BarDelegate> {
         labedit.font = [UIFont systemFontOfSize:14];
         //: labedit.textColor = [UIColor colorWithHexString:@"#2C3042"];
         labedit.textColor = [UIColor status:[[MyData sharedInstance] dreamBarSuccessTitle]];
-        //: labedit.text = [FFFLanguageManager getTextWithKey:@"notification"];
+        //: labedit.text = [BusyLanguageManager getTextWithKey:@"notification"];
         labedit.text = [SendName streetSmart:[[MyData sharedInstance] main_inputSizeId]];
         //: [editView addSubview:labedit];
         [editView addSubview:labedit];
@@ -1949,7 +1949,7 @@ BarDelegate> {
         lablang.font = [UIFont systemFontOfSize:14];
         //: lablang.textColor = [UIColor colorWithHexString:@"#2C3042"];
         lablang.textColor = [UIColor status:[[MyData sharedInstance] dreamBarSuccessTitle]];
-        //: lablang.text = [FFFLanguageManager getTextWithKey:@"activity_create_group_name_create_group"];
+        //: lablang.text = [BusyLanguageManager getTextWithKey:@"activity_create_group_name_create_group"];
         lablang.text = [SendName streetSmart:[[MyData sharedInstance] show_mImageText]];
         //: [langView addSubview:lablang];
         [langView addSubview:lablang];

@@ -212,7 +212,7 @@
 // __M_A_C_R_O__
 //: #import "NTESRedPackagePaySheet.h"
 #import "CollectionView.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 //: #import "TPPasswordTextView.h"
 #import "StraddleView.h"
@@ -303,7 +303,7 @@
         titleLabel_1.textColor = [UIColor status:[MicroOrganismData sharedInstance].dream_sliceMessage];
         //: titleLabel_1.font = [UIFont boldSystemFontOfSize:16];
         titleLabel_1.font = [UIFont boldSystemFontOfSize:16];
-        //: titleLabel_1.text = [FFFLanguageManager getTextWithKey:@"activity_pay_psw_input"];
+        //: titleLabel_1.text = [BusyLanguageManager getTextWithKey:@"activity_pay_psw_input"];
         titleLabel_1.text = [SendName streetSmart:[MicroOrganismData sharedInstance].main_fromLeadershipPath];
         //: titleLabel_1.textAlignment = NSTextAlignmentLeft;
         titleLabel_1.textAlignment = NSTextAlignmentLeft;
@@ -349,7 +349,7 @@
         title.textColor = [UIColor blackColor];
         //: title.font = [UIFont systemFontOfSize:15];
         title.font = [UIFont systemFontOfSize:15];
-        //: title.text = [FFFLanguageManager getTextWithKey:@"red_packet"];
+        //: title.text = [BusyLanguageManager getTextWithKey:@"red_packet"];
         title.text = [SendName streetSmart:[MicroOrganismData sharedInstance].showHappinessPath];
         //: [_backView addSubview:title];
         [_backView addSubview:title];
@@ -486,7 +486,7 @@
     NSString *userID = [[NIMSDK sharedSDK].loginManager currentAccount];
     //: NIMUser *me = [[NIMSDK sharedSDK].userManager userInfo:userID];
     NIMUser *me = [[NIMSDK sharedSDK].userManager userInfo:userID];
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:userID option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:userID option:nil];
     Info *info = [[Case pastTop] consumer:userID message:nil];
     //: NSString *headerUrl = me.userInfo.avatarUrl;
     NSString *headerUrl = me.userInfo.avatarUrl;

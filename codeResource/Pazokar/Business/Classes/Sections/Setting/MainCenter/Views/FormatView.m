@@ -309,7 +309,7 @@ typedef struct {
         _titleLabel.textColor = [UIColor status:[ChronicleData sharedInstance].main_numberName];
         //: _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.textAlignment = NSTextAlignmentCenter;
-        //: _titleLabel.text = [FFFLanguageManager getTextWithKey:@"activity_comment_setting_cancel_account"];
+        //: _titleLabel.text = [BusyLanguageManager getTextWithKey:@"activity_comment_setting_cancel_account"];
         _titleLabel.text = [SendName streetSmart:[ChronicleData sharedInstance].mMigrationData];
     }
     //: return _titleLabel;
@@ -333,7 +333,7 @@ typedef struct {
         labtitle1.font = [UIFont systemFontOfSize:14.f];
         //: labtitle1.textColor = [UIColor colorWithHexString:@"#333333"];
         labtitle1.textColor = [UIColor status:[ChronicleData sharedInstance].k_emphasizeUrl];
-        //: labtitle1.text = [FFFLanguageManager getTextWithKey:@"account_delete_tip1"];
+        //: labtitle1.text = [BusyLanguageManager getTextWithKey:@"account_delete_tip1"];
         labtitle1.text = [SendName streetSmart:[ChronicleData sharedInstance].app_dismissMsg];
         //: labtitle1.numberOfLines = 0;
         labtitle1.numberOfLines = 0;
@@ -348,7 +348,7 @@ typedef struct {
         labsubtitle1.font = [UIFont systemFontOfSize:14.f];
         //: labsubtitle1.textColor = [UIColor colorWithHexString:@"#333333"];
         labsubtitle1.textColor = [UIColor status:[ChronicleData sharedInstance].k_emphasizeUrl];
-        //: labsubtitle1.text = [FFFLanguageManager getTextWithKey:@"account_delete_tip2"];
+        //: labsubtitle1.text = [BusyLanguageManager getTextWithKey:@"account_delete_tip2"];
         labsubtitle1.text = [SendName streetSmart:[ChronicleData sharedInstance].notiVoiceIdent];
         //: labsubtitle1.numberOfLines = 0;
         labsubtitle1.numberOfLines = 0;
@@ -374,7 +374,7 @@ typedef struct {
         _closeBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_closeBtn setTitleColor:[UIColor colorWithHexString:@"#5D5F66"] forState:UIControlStateNormal];
         [_closeBtn setTitleColor:[UIColor status:[ChronicleData sharedInstance].noti_nextUrl] forState:UIControlStateNormal];
-        //: [_closeBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
+        //: [_closeBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
         [_closeBtn setTitle:[SendName streetSmart:[ChronicleData sharedInstance].noti_fromTitle] forState:UIControlStateNormal];
         //: _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
         _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
@@ -401,7 +401,7 @@ typedef struct {
         _sureBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        //: [_sureBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_sure"] forState:UIControlStateNormal];
+        //: [_sureBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_sure"] forState:UIControlStateNormal];
         [_sureBtn setTitle:[SendName streetSmart:[ChronicleData sharedInstance].kAfterOverseeMessage] forState:UIControlStateNormal];
         //: _sureBtn.backgroundColor = [UIColor colorWithHexString:@"#FF483D"];
         _sureBtn.backgroundColor = [UIColor status:[ChronicleData sharedInstance].mainReloadId];

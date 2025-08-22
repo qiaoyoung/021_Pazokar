@@ -1,7 +1,7 @@
 // __DEBUG__
 // __CLOSE_PRINT__
 //
-//  FFFGroupedUsrInfo.h
+//  BusyGroupedUsrInfo.h
 //  NIM
 //
 //  Created by Xuhui on 15/3/24.
@@ -9,15 +9,15 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFContactDefines.h"
-#import "FFFContactDefines.h"
+//: #import "BusyContactDefines.h"
+#import "BusyContactDefines.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
 //: @interface NIMGroupUser:NSObject<NIMGroupMemberProtocol>
 @interface PtolemaicSystemReload:NSObject<DatePraise>
 
-//: @property (nonatomic,readonly) FFFKitInfo *info;
+//: @property (nonatomic,readonly) BusyKitInfo *info;
 @property (nonatomic,readonly) Info *info;
 
 //: - (instancetype)initWithUserId:(NSString *)userId;
@@ -29,7 +29,7 @@
 //: @interface NIMGroupTeamMember:NSObject<NIMGroupMemberProtocol>
 @interface SortMember:NSObject<DatePraise>
 
-//: @property (nonatomic,readonly) FFFKitInfo *info;
+//: @property (nonatomic,readonly) BusyKitInfo *info;
 @property (nonatomic,readonly) Info *info;
 
 //: - (instancetype)initWithUserId:(NSString *)userId
@@ -44,7 +44,7 @@
 //: @interface NIMGroupTeam:NSObject<NIMGroupMemberProtocol>
 @interface PointCenter:NSObject<DatePraise>
 
-//: @property (nonatomic,readonly) FFFKitInfo *info;
+//: @property (nonatomic,readonly) BusyKitInfo *info;
 @property (nonatomic,readonly) Info *info;
 
 //: - (instancetype)initWithTeamId:(NSString *)teamId

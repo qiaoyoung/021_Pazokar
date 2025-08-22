@@ -9,13 +9,13 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionMessageContentView.h"
+//: #import "BusySessionMessageContentView.h"
 #import "TextControl.h"
 
 //: @class M80AttributedLabel;
 @class CypherScrollView;
 
-//: @interface FFFSessionTextContentView : FFFSessionMessageContentView
+//: @interface BusySessionTextContentView : BusySessionMessageContentView
 @interface ButtonView : TextControl
 
 //: @property (nonatomic, strong) M80AttributedLabel *textView;

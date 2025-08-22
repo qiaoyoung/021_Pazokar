@@ -709,33 +709,33 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFAdvancedTeamCardViewController.h"
+//: #import "BusyAdvancedTeamCardViewController.h"
 #import "PtolemaicSystemViewController.h"
-//: #import "FFFContactSelectViewController.h"
+//: #import "BusyContactSelectViewController.h"
 #import "BrandViewController.h"
 //: #import "CCCTeamMemberListViewController.h"
 #import "VersionViewController.h"
-//: #import "FFFTeamMuteMemberListViewController.h"
+//: #import "BusyTeamMuteMemberListViewController.h"
 #import "NameViewController.h"
-//: #import "FFFTeamAnnouncementListViewController.h"
+//: #import "BusyTeamAnnouncementListViewController.h"
 #import "TextViewController.h"
-//: #import "FFFTeamCardRowItem.h"
+//: #import "BusyTeamCardRowItem.h"
 #import "ToAGreaterExtentItem.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFTeamCardMemberItem.h"
+//: #import "BusyTeamCardMemberItem.h"
 #import "HomegirlFormat.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
-//: #import "FFFTeamCardHeaderView.h"
+//: #import "BusyTeamCardHeaderView.h"
 #import "LabelTagView.h"
-//: #import "FFFTeamListDataManager.h"
+//: #import "BusyTeamListDataManager.h"
 #import "FindBaseballTeamManager.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
-//: #import "FFFTeamHelper.h"
+//: #import "BusyTeamHelper.h"
 #import "EnvelopingTitle.h"
-//: #import "FFFTeamIntroduceViewController.h"
+//: #import "BusyTeamIntroduceViewController.h"
 #import "CenterViewController.h"
 //: #import "ZMONSetGroupNameView.h"
 #import "ComponentView.h"
@@ -743,7 +743,7 @@ typedef struct {
 #import "ColorView.h"
 //: #import "ZMONAlartView.h"
 #import "CanView.h"
-//: #import "FFFGroupAvatarViewController.h"
+//: #import "BusyGroupAvatarViewController.h"
 #import "RubyViewController.h"
 //: #import "NTESUserQRCodeViewController.h"
 #import "ContentViewController.h"
@@ -758,7 +758,7 @@ typedef struct {
 //: #import "NSSetAvater.h"
 #import "ParameterView.h"
 
-//: @interface FFFAdvancedTeamCardViewController ()<FFFTeamMemberListCellActionDelegate,
+//: @interface BusyAdvancedTeamCardViewController ()<BusyTeamMemberListCellActionDelegate,
 @interface PtolemaicSystemViewController ()<SoundShared,
 //: NIMContactSelectDelegate,
 NoticeBar,
@@ -766,12 +766,12 @@ NoticeBar,
 GreenProtocol,
 //: NIMTeamManagerDelegate,
 NIMTeamManagerDelegate,
-//: FFFTeamCardHeaderViewDelegate,
+//: BusyTeamCardHeaderViewDelegate,
 DeviceTingDelegate,
 //: NIMTeamAnnouncementListVCDelegate,NTESCustomUIAlertDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
-//: @property (nonatomic,strong) FFFTeamCardHeaderView *headerView;
+//: @property (nonatomic,strong) BusyTeamCardHeaderView *headerView;
 @property (nonatomic,strong) LabelTagView *headerView;
 
 //: @property (nonatomic, strong) UIView *userView;
@@ -802,7 +802,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
 //: @end
 @end
 
-//: @implementation FFFAdvancedTeamCardViewController
+//: @implementation BusyAdvancedTeamCardViewController
 @implementation PtolemaicSystemViewController
 
 //: - (void)viewWillAppear:(BOOL)animated{
@@ -833,29 +833,29 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     [super isSession];
 }
 
-//: - (void)didBuildTeamSwitchCell:(FFFTeamSwitchTableViewCell *)cell {
+//: - (void)didBuildTeamSwitchCell:(BusyTeamSwitchTableViewCell *)cell {
 - (void)windowLock:(WithCellView *)cell {
     //: cell.switchDelegate = self;
     cell.switchDelegate = self;
 }
 
-//: - (void)didBuildTeamMemberCell:(FFFTeamMemberListCell *)cell {
+//: - (void)didBuildTeamMemberCell:(BusyTeamMemberListCell *)cell {
 - (void)picture:(WithView *)cell {
     //: cell.delegate = self;
     cell.delegate = self;
-    //: cell.disableInvite = ![FFFKitUtil canInviteMemberToTeam:self.teamListManager.myTeamInfo];
+    //: cell.disableInvite = ![BusyKitUtil canInviteMemberToTeam:self.teamListManager.myTeamInfo];
     cell.disableInvite = ![OffMore include:self.teamListManager.myTeamInfo];
     //: NSMutableArray <NSDictionary *>*memberInfos = [NSMutableArray array];
     NSMutableArray <NSDictionary *>*memberInfos = [NSMutableArray array];
     //: for (int i = 0; i < ((cell.maxShowMemberCount) < (self.teamListManager.members.count) ? (cell.maxShowMemberCount) : (self.teamListManager.members.count)); i++) {
     for (int i = 0; i < ((cell.maxShowMemberCount) < (self.teamListManager.signal.count) ? (cell.maxShowMemberCount) : (self.teamListManager.signal.count)); i++) {
-        //: FFFTeamCardMemberItem *obj = self.teamListManager.members[i];
+        //: BusyTeamCardMemberItem *obj = self.teamListManager.members[i];
         HomegirlFormat *obj = self.teamListManager.signal[i];
-        //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+        //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
         InfoGreenImage *option = [[InfoGreenImage alloc] init];
         //: option.session = self.teamListManager.session;
-        option.session = self.teamListManager.transparency;
-        //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:obj.userId option:option];
+        option.session = self.teamListManager.session;
+        //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:obj.userId option:option];
         Info *info = [[Case pastTop] consumer:obj.userId message:option];
 
         //: NSMutableDictionary *dic = [NSMutableDictionary dictionary];
@@ -874,22 +874,22 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
 
 //: #pragma mark - Data
 #pragma mark - Data
-//: - (NSArray<NSArray<FFFTeamCardRowItem *> *> *)buildBodyData{
+//: - (NSArray<NSArray<BusyTeamCardRowItem *> *> *)buildBodyData{
 - (NSArray<NSArray<ToAGreaterExtentItem *> *> *)teamCurrentContainer{
     //: NSArray *ret = nil;
     NSArray *ret = nil;
     //: __weak typeof(self) weakSelf = self;
     __weak typeof(self) weakSelf = self;
-    //: BOOL canEdit = [FFFKitUtil canEditTeamInfo:self.teamListManager.myTeamInfo];
+    //: BOOL canEdit = [BusyKitUtil canEditTeamInfo:self.teamListManager.myTeamInfo];
     BOOL canEdit = [OffMore complete:self.teamListManager.myTeamInfo];
     //: BOOL isOwner = self.teamListManager.myTeamInfo.type == NIMTeamMemberTypeOwner;
     BOOL isOwner = self.teamListManager.myTeamInfo.type == NIMTeamMemberTypeOwner;
     //: BOOL isManager = self.teamListManager.myTeamInfo.type == NIMTeamMemberTypeManager;
     BOOL isManager = self.teamListManager.myTeamInfo.type == NIMTeamMemberTypeManager;
 
-    //: FFFTeamCardRowItem *teamShareCart = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *teamShareCart = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *teamShareCart = [[ToAGreaterExtentItem alloc] init];
-    //: teamShareCart.title = [FFFLanguageManager getTextWithKey:@"send_group_card"];
+    //: teamShareCart.title = [BusyLanguageManager getTextWithKey:@"send_group_card"];
     teamShareCart.title = [SendName streetSmart:[LaughData show_guitarStr]];
     //: teamShareCart.subTitle = self.teamListManager.team.teamName;
     teamShareCart.subTitle = self.teamListManager.team.teamName;
@@ -903,9 +903,9 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: teamShareCart.img = [UIImage imageNamed:@"ic_card_share"];
     teamShareCart.img = [UIImage imageNamed:[LaughData m_cellName]];
 
-    //: FFFTeamCardRowItem *teamMembers = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *teamMembers = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *teamMembers = [[ToAGreaterExtentItem alloc] init];
-    //: teamMembers.title = [FFFLanguageManager getTextWithKey:@"group_info_activity_team_member"];
+    //: teamMembers.title = [BusyLanguageManager getTextWithKey:@"group_info_activity_team_member"];
     teamMembers.title = [SendName streetSmart:[LaughData dream_mPath]];
     //: teamMembers.subTitle = self.teamListManager.team.teamName;
     teamMembers.subTitle = self.teamListManager.team.teamName;
@@ -920,9 +920,9 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: teamMembers.img = [UIImage imageNamed:@"ic_group_members"];
     teamMembers.img = [UIImage imageNamed:[LaughData user_differentlyMsg]];
 
-    //: FFFTeamCardRowItem *teamAnnoucement = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *teamAnnoucement = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *teamAnnoucement = [[ToAGreaterExtentItem alloc] init];
-    //: teamAnnoucement.title = [FFFLanguageManager getTextWithKey:@"activity_group_info_group_toast"];
+    //: teamAnnoucement.title = [BusyLanguageManager getTextWithKey:@"activity_group_info_group_toast"];
     teamAnnoucement.title = [SendName streetSmart:[LaughData kMessageIdent]];
     //: teamAnnoucement.subTitle = self.teamListManager.team.teamName;
     teamAnnoucement.subTitle = self.teamListManager.team.teamName;
@@ -936,9 +936,9 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: teamAnnoucement.img = [UIImage imageNamed:@"ic_announcement"];
     teamAnnoucement.img = [UIImage imageNamed:[LaughData showClickValue]];
 
-    //: FFFTeamCardRowItem *teamName = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *teamName = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *teamName = [[ToAGreaterExtentItem alloc] init];
-    //: teamName.title = [FFFLanguageManager getTextWithKey:@"Group_name"];
+    //: teamName.title = [BusyLanguageManager getTextWithKey:@"Group_name"];
     teamName.title = [SendName streetSmart:[LaughData showCellPath]];
     //: teamName.subTitle = self.teamListManager.team.teamName;
     teamName.subTitle = self.teamListManager.team.teamName;
@@ -954,9 +954,9 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     teamName.img = [UIImage imageNamed:[LaughData main_rangePath]];
 
 
-    //: FFFTeamCardRowItem *teamNick = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *teamNick = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *teamNick = [[ToAGreaterExtentItem alloc] init];
-    //: teamNick.title = [FFFLanguageManager getTextWithKey:@"activity_group_info_group_nick"];
+    //: teamNick.title = [BusyLanguageManager getTextWithKey:@"activity_group_info_group_nick"];
     teamNick.title = [SendName streetSmart:[LaughData showCornerMessage]];
     //: teamNick.subTitle = self.teamListManager.myTeamInfo.nickname;
     teamNick.subTitle = self.teamListManager.myTeamInfo.nickname;
@@ -969,11 +969,11 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: teamNick.img = [UIImage imageNamed:@"ic_group_nick"];
     teamNick.img = [UIImage imageNamed:[LaughData dreamNeighborhoodIdent]];
 
-    //: FFFTeamCardRowItem *teamIntro = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *teamIntro = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *teamIntro = [[ToAGreaterExtentItem alloc] init];
-    //: teamIntro.title = [FFFLanguageManager getTextWithKey:@"team_info_set_activity_group_tip"];
+    //: teamIntro.title = [BusyLanguageManager getTextWithKey:@"team_info_set_activity_group_tip"];
     teamIntro.title = [SendName streetSmart:[LaughData m_currentlyIdent]];
-    //: teamIntro.subTitle = self.teamListManager.team.intro.length ? self.teamListManager.team.intro : (canEdit ? [FFFLanguageManager getTextWithKey:@"team_info_set_activity_default_group_tip"] : @"");
+    //: teamIntro.subTitle = self.teamListManager.team.intro.length ? self.teamListManager.team.intro : (canEdit ? [BusyLanguageManager getTextWithKey:@"team_info_set_activity_default_group_tip"] : @"");
     teamIntro.subTitle = self.teamListManager.team.intro.length ? self.teamListManager.team.intro : (canEdit ? [SendName streetSmart:[LaughData appSourceTitleContent]] : @"");
     //: teamIntro.action = @selector(updateTeamIntro);
     teamIntro.action = @selector(lastTing);
@@ -996,9 +996,9 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
 
     //: BOOL inAllMuteMode = self.teamListManager.team.inAllMuteMode;
     BOOL inAllMuteMode = self.teamListManager.team.inAllMuteMode;
-    //: FFFTeamCardRowItem *teamMute = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *teamMute = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *teamMute = [[ToAGreaterExtentItem alloc] init];
-    //: teamMute.title = [FFFLanguageManager getTextWithKey:@"activity_group_info_group_mute"];
+    //: teamMute.title = [BusyLanguageManager getTextWithKey:@"activity_group_info_group_mute"];
     teamMute.title = [SendName streetSmart:[LaughData userSeparateText]];
     //: teamMute.switchOn = inAllMuteMode;
     teamMute.switchOn = inAllMuteMode;
@@ -1007,12 +1007,12 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     teamMute.rowHeight = 50.f;
     //: teamMute.type = TeamCardRowItemTypeSwitch;
     teamMute.type = TeamCardRowItemTypeSwitch;
-    //: teamMute.optionItems = [FFFTeamHelper teamMuteItemsWithSeleced:inAllMuteMode];
+    //: teamMute.optionItems = [BusyTeamHelper teamMuteItemsWithSeleced:inAllMuteMode];
     teamMute.optionItems = [EnvelopingTitle reply:inAllMuteMode];
     //: teamMute.actionDisabled = !canEdit;
     teamMute.actionDisabled = !canEdit;
-    //: teamMute.selectedBlock = ^(id<FFFKitSelectCardData> item) {
-    teamMute.selectedBlock = ^(id<FFFKitSelectCardData> item) {
+    //: teamMute.selectedBlock = ^(id<BusyKitSelectCardData> item) {
+    teamMute.selectedBlock = ^(id<BusyKitSelectCardData> item) {
         //: [weakSelf didUpdateTeamMute:[item.value integerValue]];
         [weakSelf path:[item.value integerValue]];
     //: };
@@ -1022,9 +1022,9 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: teamMute.img = [UIImage imageNamed:@"ic_group_all"];
     teamMute.img = [UIImage imageNamed:[LaughData kReplyMessage]];
 
-    //: FFFTeamCardRowItem *teamMuteList = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *teamMuteList = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *teamMuteList = [[ToAGreaterExtentItem alloc] init];
-    //: teamMuteList.title = [FFFLanguageManager getTextWithKey:@"group_mute_member_list_activity_title"];
+    //: teamMuteList.title = [BusyLanguageManager getTextWithKey:@"group_mute_member_list_activity_title"];
     teamMuteList.title = [SendName streetSmart:[LaughData app_leadershipId]];
     //: teamMuteList.rowHeight = 50.f;
     teamMuteList.rowHeight = 50.f;
@@ -1035,20 +1035,20 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: teamMuteList.img = [UIImage imageNamed:@"ic_card_black"];
     teamMuteList.img = [UIImage imageNamed:[LaughData mainCornerIdent]];
 
-    //: FFFTeamCardRowItem *teamNotify = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *teamNotify = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *teamNotify = [[ToAGreaterExtentItem alloc] init];
-    //: teamNotify.title = [FFFLanguageManager getTextWithKey:@"message_info_activity_msg_notice"];
+    //: teamNotify.title = [BusyLanguageManager getTextWithKey:@"message_info_activity_msg_notice"];
     teamNotify.title = [SendName streetSmart:[LaughData k_selectIdent]];//@"消息提醒".nim_localized;
-    //: teamNotify.subTitle = [FFFTeamHelper notifyStateText:self.teamListManager.team.notifyStateForNewMsg];
+    //: teamNotify.subTitle = [BusyTeamHelper notifyStateText:self.teamListManager.team.notifyStateForNewMsg];
     teamNotify.subTitle = [EnvelopingTitle closedSession:self.teamListManager.team.notifyStateForNewMsg];
     //: teamNotify.rowHeight = 50.f;
     teamNotify.rowHeight = 50.f;
     //: teamNotify.type = TeamCardRowItemTypeSelected;
     teamNotify.type = TeamCardRowItemTypeSelected;
-    //: teamNotify.optionItems = [FFFTeamHelper notifyStateItemsWithSeleced:self.teamListManager.team.notifyStateForNewMsg];
+    //: teamNotify.optionItems = [BusyTeamHelper notifyStateItemsWithSeleced:self.teamListManager.team.notifyStateForNewMsg];
     teamNotify.optionItems = [EnvelopingTitle showAcross:self.teamListManager.team.notifyStateForNewMsg];
-    //: teamNotify.selectedBlock = ^(id<FFFKitSelectCardData> item) {
-    teamNotify.selectedBlock = ^(id<FFFKitSelectCardData> item) {
+    //: teamNotify.selectedBlock = ^(id<BusyKitSelectCardData> item) {
+    teamNotify.selectedBlock = ^(id<BusyKitSelectCardData> item) {
         //: [weakSelf didUpdateNotifiyState:[item.value integerValue]];
         [weakSelf contentFor:[item.value integerValue]];
     //: };
@@ -1057,11 +1057,11 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     teamNotify.img = [UIImage imageNamed:[LaughData app_myText]];
 
 
-    //: FFFTeamCardRowItem *itemAuth = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *itemAuth = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *itemAuth = [[ToAGreaterExtentItem alloc] init];
-    //: itemAuth.title = [FFFLanguageManager getTextWithKey:@"authentication"];
+    //: itemAuth.title = [BusyLanguageManager getTextWithKey:@"authentication"];
     itemAuth.title = [SendName streetSmart:[LaughData user_leadershipMemberMsg]];
-    //: itemAuth.subTitle = [FFFTeamHelper jonModeText:self.teamListManager.team.joinMode];
+    //: itemAuth.subTitle = [BusyTeamHelper jonModeText:self.teamListManager.team.joinMode];
     itemAuth.subTitle = [EnvelopingTitle bar:self.teamListManager.team.joinMode];
     //: itemAuth.actionDisabled = !canEdit;
     itemAuth.actionDisabled = !canEdit;
@@ -1069,10 +1069,10 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     itemAuth.rowHeight = 50.f;
     //: itemAuth.type = TeamCardRowItemTypeSelected;
     itemAuth.type = TeamCardRowItemTypeSelected;
-    //: itemAuth.optionItems = [FFFTeamHelper joinModeItemsWithSeleced:self.teamListManager.team.joinMode];
+    //: itemAuth.optionItems = [BusyTeamHelper joinModeItemsWithSeleced:self.teamListManager.team.joinMode];
     itemAuth.optionItems = [EnvelopingTitle unite:self.teamListManager.team.joinMode];
-    //: itemAuth.selectedBlock = ^(id<FFFKitSelectCardData> item) {
-    itemAuth.selectedBlock = ^(id<FFFKitSelectCardData> item) {
+    //: itemAuth.selectedBlock = ^(id<BusyKitSelectCardData> item) {
+    itemAuth.selectedBlock = ^(id<BusyKitSelectCardData> item) {
         //: [weakSelf didupdateTeamJoinMode:[item.value integerValue]];
         [weakSelf tip:[item.value integerValue]];
     //: };
@@ -1080,11 +1080,11 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: itemAuth.img = [UIImage imageNamed:@"ic_identity_authentication"];
     itemAuth.img = [UIImage imageNamed:[LaughData dreamShowData]];
 
-    //: FFFTeamCardRowItem *itemInvite = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *itemInvite = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *itemInvite = [[ToAGreaterExtentItem alloc] init];
-    //: itemInvite.title = [FFFLanguageManager getTextWithKey:@"activity_group_info_invite_permission"];
+    //: itemInvite.title = [BusyLanguageManager getTextWithKey:@"activity_group_info_invite_permission"];
     itemInvite.title = [SendName streetSmart:[LaughData dream_replyStrikeFormat]];
-    //: itemInvite.subTitle = [FFFTeamHelper InviteModeText:self.teamListManager.team.inviteMode];
+    //: itemInvite.subTitle = [BusyTeamHelper InviteModeText:self.teamListManager.team.inviteMode];
     itemInvite.subTitle = [EnvelopingTitle user:self.teamListManager.team.inviteMode];
     //: itemInvite.actionDisabled = !canEdit;
     itemInvite.actionDisabled = !canEdit;
@@ -1092,10 +1092,10 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     itemInvite.rowHeight = 50.f;
     //: itemInvite.type = TeamCardRowItemTypeSelected;
     itemInvite.type = TeamCardRowItemTypeSelected;
-    //: itemInvite.optionItems = [FFFTeamHelper InviteModeItemsWithSeleced:self.teamListManager.team.inviteMode];
+    //: itemInvite.optionItems = [BusyTeamHelper InviteModeItemsWithSeleced:self.teamListManager.team.inviteMode];
     itemInvite.optionItems = [EnvelopingTitle pin:self.teamListManager.team.inviteMode];
-    //: itemInvite.selectedBlock = ^(id<FFFKitSelectCardData> item) {
-    itemInvite.selectedBlock = ^(id<FFFKitSelectCardData> item) {
+    //: itemInvite.selectedBlock = ^(id<BusyKitSelectCardData> item) {
+    itemInvite.selectedBlock = ^(id<BusyKitSelectCardData> item) {
         //: [weakSelf didUpdateTeamInviteMode:[item.value integerValue]];
         [weakSelf imageOf:[item.value integerValue]];
     //: };
@@ -1103,11 +1103,11 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: itemInvite.img = [UIImage imageNamed:@"ic_invite"];
     itemInvite.img = [UIImage imageNamed:[LaughData k_semenFormat]];
 
-    //: FFFTeamCardRowItem *itemUpdateInfo = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *itemUpdateInfo = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *itemUpdateInfo = [[ToAGreaterExtentItem alloc] init];
-    //: itemUpdateInfo.title = [FFFLanguageManager getTextWithKey:@"activity_group_info_group_modify_permission"];
+    //: itemUpdateInfo.title = [BusyLanguageManager getTextWithKey:@"activity_group_info_group_modify_permission"];
     itemUpdateInfo.title = [SendName streetSmart:[LaughData app_hockUrl]];
-    //: itemUpdateInfo.subTitle = [FFFTeamHelper updateInfoModeText:self.teamListManager.team.updateInfoMode];
+    //: itemUpdateInfo.subTitle = [BusyTeamHelper updateInfoModeText:self.teamListManager.team.updateInfoMode];
     itemUpdateInfo.subTitle = [EnvelopingTitle imageNameText:self.teamListManager.team.updateInfoMode];
     //: itemUpdateInfo.actionDisabled = !canEdit;
     itemUpdateInfo.actionDisabled = !canEdit;
@@ -1115,10 +1115,10 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     itemUpdateInfo.rowHeight = 50.f;
     //: itemUpdateInfo.type = TeamCardRowItemTypeSelected;
     itemUpdateInfo.type = TeamCardRowItemTypeSelected;
-    //: itemUpdateInfo.optionItems = [FFFTeamHelper updateInfoModeItemsWithSeleced:self.teamListManager.team.updateInfoMode];
+    //: itemUpdateInfo.optionItems = [BusyTeamHelper updateInfoModeItemsWithSeleced:self.teamListManager.team.updateInfoMode];
     itemUpdateInfo.optionItems = [EnvelopingTitle bubbleSize:self.teamListManager.team.updateInfoMode];
-    //: itemUpdateInfo.selectedBlock = ^(id<FFFKitSelectCardData> item) {
-    itemUpdateInfo.selectedBlock = ^(id<FFFKitSelectCardData> item) {
+    //: itemUpdateInfo.selectedBlock = ^(id<BusyKitSelectCardData> item) {
+    itemUpdateInfo.selectedBlock = ^(id<BusyKitSelectCardData> item) {
         //: [weakSelf didUpdateTeamInfoMode:[item.value integerValue]];
         [weakSelf syncopateStyleModeView:[item.value integerValue]];
     //: };
@@ -1126,11 +1126,11 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: itemUpdateInfo.img = [UIImage imageNamed:@"ic_modify"];
     itemUpdateInfo.img = [UIImage imageNamed:[LaughData app_currentlyPath]];
 
-    //: FFFTeamCardRowItem *itemBeInvite = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *itemBeInvite = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *itemBeInvite = [[ToAGreaterExtentItem alloc] init];
-    //: itemBeInvite.title = [FFFLanguageManager getTextWithKey:@"activity_group_info_invite_verify"];
+    //: itemBeInvite.title = [BusyLanguageManager getTextWithKey:@"activity_group_info_invite_verify"];
     itemBeInvite.title = [SendName streetSmart:[LaughData notiShouldTightenKey]];
-    //: itemBeInvite.subTitle = [FFFTeamHelper beInviteModeText:self.teamListManager.team.beInviteMode];
+    //: itemBeInvite.subTitle = [BusyTeamHelper beInviteModeText:self.teamListManager.team.beInviteMode];
     itemBeInvite.subTitle = [EnvelopingTitle onTitle:self.teamListManager.team.beInviteMode];
     //: itemBeInvite.actionDisabled = !canEdit;
     itemBeInvite.actionDisabled = !canEdit;
@@ -1138,10 +1138,10 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     itemBeInvite.rowHeight = 50.f;
     //: itemBeInvite.type = TeamCardRowItemTypeSelected;
     itemBeInvite.type = TeamCardRowItemTypeSelected;
-    //: itemBeInvite.optionItems = [FFFTeamHelper beInviteModeItemsWithSeleced:self.teamListManager.team.beInviteMode];
+    //: itemBeInvite.optionItems = [BusyTeamHelper beInviteModeItemsWithSeleced:self.teamListManager.team.beInviteMode];
     itemBeInvite.optionItems = [EnvelopingTitle messageRecord:self.teamListManager.team.beInviteMode];
-    //: itemBeInvite.selectedBlock = ^(id<FFFKitSelectCardData> item) {
-    itemBeInvite.selectedBlock = ^(id<FFFKitSelectCardData> item) {
+    //: itemBeInvite.selectedBlock = ^(id<BusyKitSelectCardData> item) {
+    itemBeInvite.selectedBlock = ^(id<BusyKitSelectCardData> item) {
         //: [weakSelf didUpdateTeamBeInviteMode:[item.value integerValue]];
         [weakSelf state:[item.value integerValue]];
     //: };
@@ -1149,9 +1149,9 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: itemBeInvite.img = [UIImage imageNamed:@"ic_invitee_verification"];
     itemBeInvite.img = [UIImage imageNamed:[LaughData userMakeText]];
 
-    //: FFFTeamCardRowItem *itemTop = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *itemTop = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *itemTop = [[ToAGreaterExtentItem alloc] init];
-    //: itemTop.title = [FFFLanguageManager getTextWithKey:@"Chat_settop"];
+    //: itemTop.title = [BusyLanguageManager getTextWithKey:@"Chat_settop"];
     itemTop.title = [SendName streetSmart:[LaughData m_honestlyTitle]];
     //: itemTop.switchOn = self.option.isTop;
     itemTop.switchOn = self.option.isTop;
@@ -1171,9 +1171,9 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
 //        itemQuit.type   = TeamCardRowItemTypeRedButton;
 //    itemQuit.img = [UIImage imageNamed:@"ic_announcement"];
 
-        //: FFFTeamCardRowItem *itemDismiss = [[FFFTeamCardRowItem alloc] init];
+        //: BusyTeamCardRowItem *itemDismiss = [[BusyTeamCardRowItem alloc] init];
         ToAGreaterExtentItem *itemDismiss = [[ToAGreaterExtentItem alloc] init];
-        //: itemDismiss.title = [FFFLanguageManager getTextWithKey:@"group_info_activity_jiesan"];
+        //: itemDismiss.title = [BusyLanguageManager getTextWithKey:@"group_info_activity_jiesan"];
         itemDismiss.title = [SendName streetSmart:[LaughData m_woodenChildIdent]];
         //: itemDismiss.action = @selector(dismissTeam);
         itemDismiss.action = @selector(createButton);
@@ -1184,9 +1184,9 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: itemDismiss.img = [UIImage imageNamed:@"ic_announcement"];
     itemDismiss.img = [UIImage imageNamed:[LaughData showClickValue]];
 
-    //: FFFTeamCardRowItem *teamChange = [[FFFTeamCardRowItem alloc] init];
+    //: BusyTeamCardRowItem *teamChange = [[BusyTeamCardRowItem alloc] init];
     ToAGreaterExtentItem *teamChange = [[ToAGreaterExtentItem alloc] init];
-    //: teamChange.title = [FFFLanguageManager getTextWithKey:@"Transfer_group_ownership"];
+    //: teamChange.title = [BusyLanguageManager getTextWithKey:@"Transfer_group_ownership"];
     teamChange.title = [SendName streetSmart:[LaughData kValueData]];
     //: teamChange.rowHeight = 50.f;
     teamChange.rowHeight = 50.f;
@@ -1283,7 +1283,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
 - (void)moreMessage{
     //: __weak typeof(self) weakSelf = self;
     __weak typeof(self) weakSelf = self;
-    //: UIAlertAction *action0 = [UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"group_info_activity_give_group"]//@"转让群".nim_localized
+    //: UIAlertAction *action0 = [UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"group_info_activity_give_group"]//@"转让群".nim_localized
     UIAlertAction *action0 = [UIAlertAction actionWithTitle:[SendName streetSmart:[LaughData noti_imageAfterMsg]]//@"转让群".nim_localized
                                                       //: style:UIAlertActionStyleDefault
                                                       style:UIAlertActionStyleDefault
@@ -1294,7 +1294,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: }];
     }];
 
-    //: UIAlertAction *action1 = [UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"Transfer_group_exit"] //@"转让群并退出".nim_localized
+    //: UIAlertAction *action1 = [UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"Transfer_group_exit"] //@"转让群并退出".nim_localized
     UIAlertAction *action1 = [UIAlertAction actionWithTitle:[SendName streetSmart:[LaughData main_situationValue]] //@"转让群并退出".nim_localized
                                                       //: style:UIAlertActionStyleDefault
                                                       style:UIAlertActionStyleDefault
@@ -1305,7 +1305,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: }];
     }];
 
-    //: UIAlertController *alert = [self makeAlertSheetWithTitle:[FFFLanguageManager getTextWithKey:@"please_choose"]//@"请操作".nim_localized
+    //: UIAlertController *alert = [self makeAlertSheetWithTitle:[BusyLanguageManager getTextWithKey:@"please_choose"]//@"请操作".nim_localized
     UIAlertController *alert = [self nameLink:[SendName streetSmart:[LaughData user_greenValue]]//@"请操作".nim_localized
                                                      //: actions:@[action0, action1]];
                                                      selectLabel:@[action0, action1]];
@@ -1401,11 +1401,11 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
 //: - (void)updateTeamIntro
 - (void)lastTing
 {
-    //: FFFTeamIntroduceViewController *vc = [[FFFTeamIntroduceViewController alloc] init];
+    //: BusyTeamIntroduceViewController *vc = [[BusyTeamIntroduceViewController alloc] init];
     CenterViewController *vc = [[CenterViewController alloc] init];
     //: vc.defaultContent = self.teamListManager.team.intro.length ? self.teamListManager.team.intro : @"";
     vc.defaultContent = self.teamListManager.team.intro.length ? self.teamListManager.team.intro : @"";
-    //: vc.canEdit = [FFFKitUtil canEditTeamInfo:self.teamListManager.myTeamInfo];
+    //: vc.canEdit = [BusyKitUtil canEditTeamInfo:self.teamListManager.myTeamInfo];
     vc.canEdit = [OffMore complete:self.teamListManager.myTeamInfo];
     //: [self.navigationController pushViewController:vc animated:YES];
     [self.navigationController pushViewController:vc animated:YES];
@@ -1430,7 +1430,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
 - (void)cellAnnouncement{
     //: NIMTeamAnnouncementListOption *option = [[NIMTeamAnnouncementListOption alloc] init];
     WithOption *option = [[WithOption alloc] init];
-    //: option.canCreateAnnouncement = [FFFKitUtil canEditTeamInfo:self.teamListManager.myTeamInfo];
+    //: option.canCreateAnnouncement = [BusyKitUtil canEditTeamInfo:self.teamListManager.myTeamInfo];
     option.canCreateAnnouncement = [OffMore complete:self.teamListManager.myTeamInfo];
     //: option.announcement = self.teamListManager.team.announcement;
     option.announcement = self.teamListManager.team.announcement;
@@ -1439,7 +1439,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: option.team = self.teamListManager.team;
     option.team = self.teamListManager.team;
 
-    //: FFFTeamAnnouncementListViewController *vc = [[FFFTeamAnnouncementListViewController alloc] initWithOption:option];
+    //: BusyTeamAnnouncementListViewController *vc = [[BusyTeamAnnouncementListViewController alloc] initWithOption:option];
     TextViewController *vc = [[TextViewController alloc] initWithHigh:option];
     //: vc.delegate = self;
     vc.delegate = self;
@@ -1451,9 +1451,9 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
 - (void)titleSelect {
     //: __weak typeof(self) weakSelf = self;
     __weak typeof(self) weakSelf = self;
-    //: UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:[FFFLanguageManager getTextWithKey:@"queren_quit_group"] preferredStyle:UIAlertControllerStyleAlert];
+    //: UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:[BusyLanguageManager getTextWithKey:@"queren_quit_group"] preferredStyle:UIAlertControllerStyleAlert];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:[SendName streetSmart:[LaughData main_ecruKey]] preferredStyle:UIAlertControllerStyleAlert];
-    //: UIAlertAction *sure = [UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"queren"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    //: UIAlertAction *sure = [UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"queren"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
     UIAlertAction *sure = [UIAlertAction actionWithTitle:[SendName streetSmart:[LaughData user_dismissMessage]] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //: [weakSelf didQuitTeam];
         [weakSelf diam];
@@ -1472,7 +1472,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
 
     //: [self.view addSubview:self.groupAlartView];
     [self.view addSubview:self.groupAlartView];
-    //: [self.groupAlartView reloadWithTitlename:[FFFLanguageManager getTextWithKey:@"Confirm_dismiss_group_chat"]];
+    //: [self.groupAlartView reloadWithTitlename:[BusyLanguageManager getTextWithKey:@"Confirm_dismiss_group_chat"]];
     [self.groupAlartView completeOf:[SendName streetSmart:[LaughData showInputIdent]]];
     //: [self.groupAlartView animationShow];
     [self.groupAlartView equal];
@@ -1524,7 +1524,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
 //: - (void)enterMuteList
 - (void)modeHeight
 {
-    //: FFFTeamMuteMemberListViewController *vc = [[FFFTeamMuteMemberListViewController alloc] init];
+    //: BusyTeamMuteMemberListViewController *vc = [[BusyTeamMuteMemberListViewController alloc] init];
     NameViewController *vc = [[NameViewController alloc] init];
     //: vc.teamListManager = self.teamListManager;
     vc.teamListManager = self.teamListManager;
@@ -1534,7 +1534,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
 
 //: #pragma mark - NIMTeamSwitchProtocol
 #pragma mark - GreenProtocol
-//: - (void)cell:(FFFTeamSwitchTableViewCell *)cell onStateChanged:(BOOL)on{
+//: - (void)cell:(BusyTeamSwitchTableViewCell *)cell onStateChanged:(BOOL)on{
 - (void)media:(WithCellView *)cell menu:(BOOL)on{
     //: if (cell.identify == NIMTeamCardSwithCellTypeTop) {
     if (cell.identify == NIMTeamCardSwithCellTypeTop) {
@@ -1560,11 +1560,11 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
             NSString *msg = nil;
             //: if (!error) {
             if (!error) {
-                //: msg = [FFFLanguageManager getTextWithKey:@"modify_activity_modify_success"];
+                //: msg = [BusyLanguageManager getTextWithKey:@"modify_activity_modify_success"];
                 msg = [SendName streetSmart:[LaughData mainTextName]];
             //: }else{
             }else{
-                //: msg = [FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"];
+                //: msg = [BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"];
                 msg = [SendName streetSmart:[LaughData show_enableFormat]];
             }
             //: [self showToastMsg:msg];
@@ -1593,7 +1593,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     }];
 }
 
-//: #pragma mark - FFFTeamMemberListCellActionDelegate
+//: #pragma mark - BusyTeamMemberListCellActionDelegate
 #pragma mark - SoundShared
 //: - (void)didSelectAddOpeartor{
 - (void)addressFrom{
@@ -1610,7 +1610,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     config.filterIds = users;
     //: config.needMutiSelected = YES;
     config.needMutiSelected = YES;
-    //: FFFContactSelectViewController *vc = [[FFFContactSelectViewController alloc] initWithConfig:config];
+    //: BusyContactSelectViewController *vc = [[BusyContactSelectViewController alloc] initWithConfig:config];
     BrandViewController *vc = [[BrandViewController alloc] initWithMax:config];
     //: vc.delegate = self;
     vc.delegate = self;
@@ -1660,14 +1660,14 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
     //: NIMContactTeamMemberSelectConfig *config = [[NIMContactTeamMemberSelectConfig alloc] init];
     ItemConfig *config = [[ItemConfig alloc] init];
     //: config.session = self.teamListManager.session;
-    config.session = self.teamListManager.transparency;
+    config.session = self.teamListManager.session;
     //: config.teamType = NIMKitTeamTypeNomal;
     config.teamType = NIMKitTeamTypeNomal;
     //: config.teamId = self.teamListManager.team.teamId;
     config.teamId = self.teamListManager.team.teamId;
     //: config.filterIds = @[currentUserID];
     config.filterIds = @[currentUserID];
-    //: FFFContactSelectViewController *vc = [[FFFContactSelectViewController alloc] initWithConfig:config];
+    //: BusyContactSelectViewController *vc = [[BusyContactSelectViewController alloc] initWithConfig:config];
     BrandViewController *vc = [[BrandViewController alloc] initWithMax:config];
     //: vc.finshBlock = finishBlock;
     vc.finshBlock = finishBlock;
@@ -1680,7 +1680,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
 {
     //: [self.view addSubview:self.groupAlartView];
     [self.view addSubview:self.groupAlartView];
-    //: [self.groupAlartView reloadWithTitlename:[FFFLanguageManager getTextWithKey:@"clear_history"]];
+    //: [self.groupAlartView reloadWithTitlename:[BusyLanguageManager getTextWithKey:@"clear_history"]];
     [self.groupAlartView completeOf:[SendName streetSmart:[LaughData notiRedTitle]]];
     //: [self.groupAlartView animationShow];
     [self.groupAlartView equal];
@@ -1697,7 +1697,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
             //: options.removeOtherClients = YES;
             options.removeOtherClients = YES;
             //: [NIMSDK.sharedSDK.conversationManager deleteAllRemoteMessagesInSession:self.teamListManager.session options:options completion:^(NSError * _Nullable error) {
-            [NIMSDK.sharedSDK.conversationManager deleteAllRemoteMessagesInSession:self.teamListManager.transparency options:options completion:^(NSError * _Nullable error) {
+            [NIMSDK.sharedSDK.conversationManager deleteAllRemoteMessagesInSession:self.teamListManager.session options:options completion:^(NSError * _Nullable error) {
                 //: if (error) {
                 if (error) {
                     //: return;
@@ -1897,7 +1897,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
         cameraicon.hidden = YES;
         //: [cameraicon addTarget:self action:@selector(onTouchAvatar) forControlEvents:(UIControlEventTouchUpInside)];
         [cameraicon addTarget:self action:@selector(telecastingBefore) forControlEvents:(UIControlEventTouchUpInside)];
-        //: if([FFFKitUtil canEditTeamInfo:self.teamListManager.myTeamInfo]){
+        //: if([BusyKitUtil canEditTeamInfo:self.teamListManager.myTeamInfo]){
         if([OffMore complete:self.teamListManager.myTeamInfo]){
             //: cameraicon.hidden = NO;
             cameraicon.hidden = NO;
@@ -1913,7 +1913,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
         [infoView addSubview:editBtn];
         //: editBtn.hidden = YES;
         editBtn.hidden = YES;
-        //: if([FFFKitUtil canEditTeamInfo:self.teamListManager.myTeamInfo]){
+        //: if([BusyKitUtil canEditTeamInfo:self.teamListManager.myTeamInfo]){
         if([OffMore complete:self.teamListManager.myTeamInfo]){
             //: editBtn.hidden = NO;
             editBtn.hidden = NO;
@@ -1948,7 +1948,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
         _introduce.textColor = [UIColor status:[LaughData notiPathTelevisionValue]];
         //: _introduce.textAlignment = NSTextAlignmentCenter;
         _introduce.textAlignment = NSTextAlignmentCenter;
-        //: _introduce.text = self.teamListManager.team.intro?:[FFFLanguageManager getTextWithKey:@"team_info_set_activity_group_tip"];
+        //: _introduce.text = self.teamListManager.team.intro?:[BusyLanguageManager getTextWithKey:@"team_info_set_activity_group_tip"];
         _introduce.text = self.teamListManager.team.intro?:[SendName streetSmart:[LaughData m_currentlyIdent]];
         //: _introduce.numberOfLines = 0;
         _introduce.numberOfLines = 0;
@@ -1985,7 +1985,7 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
         btnClear.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [btnClear setTitleColor:[UIColor colorWithHexString:@"FF483D"] forState:UIControlStateNormal];
         [btnClear setTitleColor:[UIColor status:[LaughData mMessageValue]] forState:UIControlStateNormal];
-        //: [btnClear setTitle:[FFFLanguageManager getTextWithKey:@"activity_user_profile_clear_chat"] forState:UIControlStateNormal];
+        //: [btnClear setTitle:[BusyLanguageManager getTextWithKey:@"activity_user_profile_clear_chat"] forState:UIControlStateNormal];
         [btnClear setTitle:[SendName streetSmart:[LaughData dreamNearlyToTitle]] forState:UIControlStateNormal];
 //        [btnClear setImage:[UIImage imageNamed:@"ic_clear"] forState:UIControlStateNormal];
         //: [btnClear addTarget:self action:@selector(handlerClear) forControlEvents:UIControlEventTouchUpInside];
@@ -2018,14 +2018,14 @@ NamePlayer,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegat
         //: if(isOwner){
         if(isOwner){
 //            [btnDet setImage:[UIImage imageNamed:@"ic_release"] forState:UIControlStateNormal];
-            //: [btnDet setTitle:[FFFLanguageManager getTextWithKey:@"group_info_activity_jiesan"] forState:UIControlStateNormal];
+            //: [btnDet setTitle:[BusyLanguageManager getTextWithKey:@"group_info_activity_jiesan"] forState:UIControlStateNormal];
             [btnDet setTitle:[SendName streetSmart:[LaughData m_woodenChildIdent]] forState:UIControlStateNormal];
             //: [btnDet addTarget:self action:@selector(dismissTeam) forControlEvents:UIControlEventTouchUpInside];
             [btnDet addTarget:self action:@selector(createButton) forControlEvents:UIControlEventTouchUpInside];
         //: }else{
         }else{
 //            [btnDet setImage:[UIImage imageNamed:@"ic_exit"] forState:UIControlStateNormal];
-            //: [btnDet setTitle:[FFFLanguageManager getTextWithKey:@"group_info_activity_exit"] forState:UIControlStateNormal];
+            //: [btnDet setTitle:[BusyLanguageManager getTextWithKey:@"group_info_activity_exit"] forState:UIControlStateNormal];
             [btnDet setTitle:[SendName streetSmart:[LaughData mainLabelShouldValue]] forState:UIControlStateNormal];
             //: [btnDet addTarget:self action:@selector(quitTeam) forControlEvents:UIControlEventTouchUpInside];
             [btnDet addTarget:self action:@selector(titleSelect) forControlEvents:UIControlEventTouchUpInside];

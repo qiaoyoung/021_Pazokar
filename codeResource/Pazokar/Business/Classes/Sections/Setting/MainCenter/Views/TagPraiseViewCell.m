@@ -168,7 +168,7 @@ typedef struct {
 // __M_A_C_R_O__
 //: #import "NTESBlackListTableViewCell.h"
 #import "TagPraiseViewCell.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 //: #import "UIView+NTES.h"
 #import "UIView+Date.h"
@@ -256,7 +256,7 @@ typedef struct {
 //         _cancleBtn.titleLabel.textAlignment = NSTextAlignmentRight;
     //: _cancleBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     _cancleBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-    //: [_cancleBtn setTitle:[FFFLanguageManager getTextWithKey:@"black_list_item_remove"] forState:(UIControlStateNormal)];
+    //: [_cancleBtn setTitle:[BusyLanguageManager getTextWithKey:@"black_list_item_remove"] forState:(UIControlStateNormal)];
     [_cancleBtn setTitle:[SendName streetSmart:[PepData sharedInstance].k_messageUrl] forState:(UIControlStateNormal)];//移除
     //: [_cancleBtn addTarget:self action:@selector(onTouchButton) forControlEvents:(UIControlEventTouchUpInside)];
     [_cancleBtn addTarget:self action:@selector(catScan) forControlEvents:(UIControlEventTouchUpInside)];
@@ -309,7 +309,7 @@ typedef struct {
 //    [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:data.imageUrl] placeholderImage:nil];
 //    self.labName.text = data.nickname;
 
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:data.userId option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:data.userId option:nil];
     Info *info = [[Case pastTop] consumer:data.userId message:nil];
     //: self.labName.text = info.showName;
     self.labName.text = info.showName;

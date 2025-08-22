@@ -12,9 +12,9 @@
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
-//: @class FFFSessionConfig;
+//: @class BusySessionConfig;
 @class QuantityelligenceInformationCan;
-//: @interface NTESSessionConfig : NSObject<FFFSessionConfig>
+//: @interface NTESSessionConfig : NSObject<BusySessionConfig>
 @interface DateTop : NSObject<QuantityelligenceInformationCan>
 //: @property (nonatomic,strong) NIMSession *session;
 @property (nonatomic,strong) NIMSession *session;

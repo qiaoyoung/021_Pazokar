@@ -9,15 +9,15 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFXMLReader.h"
+//: #import "BusyXMLReader.h"
 #import "MarginTag.h"
 
-//: NSString *const kFFFXMLReaderTextNodeKey = @"text";
+//: NSString *const kBusyXMLReaderTextNodeKey = @"text";
 NSString *const showButtonData = @"text";
-//: NSString *const kFFFXMLReaderAttributePrefix = @"@";
+//: NSString *const kBusyXMLReaderAttributePrefix = @"@";
 NSString *const show_mergeMessage = @"@";
 
-//: @interface FFFXMLReader ()
+//: @interface BusyXMLReader ()
 @interface MarginTag ()
 
 //: @property (nonatomic, strong) NSMutableArray *dictionaryStack;
@@ -31,7 +31,7 @@ NSString *const show_mergeMessage = @"@";
 @end
 
 
-//: @implementation FFFXMLReader
+//: @implementation BusyXMLReader
 @implementation MarginTag
 
 //: #pragma mark - Public methods
@@ -40,7 +40,7 @@ NSString *const show_mergeMessage = @"@";
 //: + (NSDictionary *)dictionaryForXMLData:(NSData *)data error:(NSError **)error
 + (NSDictionary *)messageError:(NSData *)data range:(NSError **)error
 {
-    //: FFFXMLReader *reader = [[FFFXMLReader alloc] initWithError:error];
+    //: BusyXMLReader *reader = [[BusyXMLReader alloc] initWithError:error];
     MarginTag *reader = [[MarginTag alloc] initWithYear:error];
     //: NSDictionary *rootDictionary = [reader objectWithData:data options:0];
     NSDictionary *rootDictionary = [reader view:data blue:0];
@@ -53,14 +53,14 @@ NSString *const show_mergeMessage = @"@";
 {
     //: NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
-    //: return [FFFXMLReader dictionaryForXMLData:data error:error];
+    //: return [BusyXMLReader dictionaryForXMLData:data error:error];
     return [MarginTag messageError:data range:error];
 }
 
-//: + (NSDictionary *)dictionaryForXMLData:(NSData *)data options:(FFFXMLReaderOptions)options error:(NSError **)error
-+ (NSDictionary *)title:(NSData *)data receive:(FFFXMLReaderOptions)options change:(NSError **)error
+//: + (NSDictionary *)dictionaryForXMLData:(NSData *)data options:(BusyXMLReaderOptions)options error:(NSError **)error
++ (NSDictionary *)title:(NSData *)data receive:(BusyXMLReaderOptions)options change:(NSError **)error
 {
-    //: FFFXMLReader *reader = [[FFFXMLReader alloc] initWithError:error];
+    //: BusyXMLReader *reader = [[BusyXMLReader alloc] initWithError:error];
     MarginTag *reader = [[MarginTag alloc] initWithYear:error];
     //: NSDictionary *rootDictionary = [reader objectWithData:data options:options];
     NSDictionary *rootDictionary = [reader view:data blue:options];
@@ -68,12 +68,12 @@ NSString *const show_mergeMessage = @"@";
     return rootDictionary;
 }
 
-//: + (NSDictionary *)dictionaryForXMLString:(NSString *)string options:(FFFXMLReaderOptions)options error:(NSError **)error
-+ (NSDictionary *)view:(NSString *)string lengthError:(FFFXMLReaderOptions)options image:(NSError **)error
+//: + (NSDictionary *)dictionaryForXMLString:(NSString *)string options:(BusyXMLReaderOptions)options error:(NSError **)error
++ (NSDictionary *)view:(NSString *)string lengthError:(BusyXMLReaderOptions)options image:(NSError **)error
 {
     //: NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
-    //: return [FFFXMLReader dictionaryForXMLData:data options:options error:error];
+    //: return [BusyXMLReader dictionaryForXMLData:data options:options error:error];
     return [MarginTag title:data receive:options change:error];
 }
 
@@ -96,8 +96,8 @@ NSString *const show_mergeMessage = @"@";
     return self;
 }
 
-//: - (NSDictionary *)objectWithData:(NSData *)data options:(FFFXMLReaderOptions)options
-- (NSDictionary *)view:(NSData *)data blue:(FFFXMLReaderOptions)options
+//: - (NSDictionary *)objectWithData:(NSData *)data options:(BusyXMLReaderOptions)options
+- (NSDictionary *)view:(NSData *)data blue:(BusyXMLReaderOptions)options
 {
     // Clear out any old data
     //: self.dictionaryStack = [[NSMutableArray alloc] init];
@@ -113,12 +113,12 @@ NSString *const show_mergeMessage = @"@";
     //: NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
     NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
 
-    //: [parser setShouldProcessNamespaces:(options & FFFXMLReaderOptionsProcessNamespaces)];
-    [parser setShouldProcessNamespaces:(options & FFFXMLReaderOptionsProcessNamespaces)];
-    //: [parser setShouldReportNamespacePrefixes:(options & FFFXMLReaderOptionsReportNamespacePrefixes)];
-    [parser setShouldReportNamespacePrefixes:(options & FFFXMLReaderOptionsReportNamespacePrefixes)];
-    //: [parser setShouldResolveExternalEntities:(options & FFFXMLReaderOptionsResolveExternalEntities)];
-    [parser setShouldResolveExternalEntities:(options & FFFXMLReaderOptionsResolveExternalEntities)];
+    //: [parser setShouldProcessNamespaces:(options & BusyXMLReaderOptionsProcessNamespaces)];
+    [parser setShouldProcessNamespaces:(options & BusyXMLReaderOptionsProcessNamespaces)];
+    //: [parser setShouldReportNamespacePrefixes:(options & BusyXMLReaderOptionsReportNamespacePrefixes)];
+    [parser setShouldReportNamespacePrefixes:(options & BusyXMLReaderOptionsReportNamespacePrefixes)];
+    //: [parser setShouldResolveExternalEntities:(options & BusyXMLReaderOptionsResolveExternalEntities)];
+    [parser setShouldResolveExternalEntities:(options & BusyXMLReaderOptionsResolveExternalEntities)];
 
     //: parser.delegate = self;
     parser.delegate = self;
@@ -216,7 +216,7 @@ NSString *const show_mergeMessage = @"@";
         // trim after concatenating
         //: NSString *trimmedString = [self.textInProgress stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         NSString *trimmedString = [self.textInProgress stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        //: [dictInProgress setObject:[trimmedString mutableCopy] forKey:kFFFXMLReaderTextNodeKey];
+        //: [dictInProgress setObject:[trimmedString mutableCopy] forKey:kBusyXMLReaderTextNodeKey];
         [dictInProgress setObject:[trimmedString mutableCopy] forKey:showButtonData];
 
         // Reset the text

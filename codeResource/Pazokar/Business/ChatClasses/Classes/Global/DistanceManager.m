@@ -89,9 +89,9 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitUrlManager.h"
+//: #import "BusyKitUrlManager.h"
 #import "DistanceManager.h"
-//: #import "FFFKitTimerHolder.h"
+//: #import "BusyKitTimerHolder.h"
 #import "NameWith.h"
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
@@ -101,13 +101,13 @@ typedef struct {
 //: NSString *const kNIMKitUrlDataKey = @"kNIMKitUrlDataKey";
 NSString *const mainMakeNameId = @"kNIMKitUrlDataKey";
 
-//: @interface FFFKitUrlManager ()<FFFKitTimerHolderDelegate>
+//: @interface BusyKitUrlManager ()<BusyKitTimerHolderDelegate>
 @interface DistanceManager ()<ChildRefresh>
 
 //: @property (nonatomic, strong) NSMutableDictionary *dic;
 @property (nonatomic, strong) NSMutableDictionary *dic;
 
-//: @property (nonatomic, strong) FFFKitTimerHolder *timer;
+//: @property (nonatomic, strong) BusyKitTimerHolder *timer;
 @property (nonatomic, strong) NameWith *timer;
 
 //: @property (nonatomic, assign) BOOL needSync;
@@ -116,7 +116,7 @@ NSString *const mainMakeNameId = @"kNIMKitUrlDataKey";
 //: @end
 @end
 
-//: @implementation FFFKitUrlManager
+//: @implementation BusyKitUrlManager
 @implementation DistanceManager
 
 //: + (instancetype)shareManager {
@@ -127,7 +127,7 @@ NSString *const mainMakeNameId = @"kNIMKitUrlDataKey";
     static id instance = nil;
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
-        //: instance = [[FFFKitUrlManager alloc] init];
+        //: instance = [[BusyKitUrlManager alloc] init];
         instance = [[DistanceManager alloc] init];
     //: });
     });
@@ -146,7 +146,7 @@ NSString *const mainMakeNameId = @"kNIMKitUrlDataKey";
             //: _dic = [NSMutableDictionary dictionary];
             _dic = [NSMutableDictionary dictionary];
         }
-        //: _timer = [[FFFKitTimerHolder alloc] init];
+        //: _timer = [[BusyKitTimerHolder alloc] init];
         _timer = [[NameWith alloc] init];
         //: [_timer startTimer:5.0f delegate:self repeats:YES];
         [_timer icon:5.0f size:self title:YES];
@@ -271,7 +271,7 @@ NSString *const mainMakeNameId = @"kNIMKitUrlDataKey";
     }
 }
 
-//: - (void)onNIMKitTimerFired:(FFFKitTimerHolder *)holder {
+//: - (void)onNIMKitTimerFired:(BusyKitTimerHolder *)holder {
 - (void)alonging:(NameWith *)holder {
     //: if (holder != _timer) {
     if (holder != _timer) {

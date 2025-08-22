@@ -203,7 +203,7 @@ NSString *const m_imageValue = @"NIMDemoEventNameOpenMergeMessage";
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)data{
+//: - (void)refresh:(BusyMessageModel *)data{
 - (void)messagePress:(MoreModel *)data{
     //: [super refresh:data];
     [super messagePress:data];
@@ -289,7 +289,7 @@ NSString *const m_imageValue = @"NIMDemoEventNameOpenMergeMessage";
 - (void)toAction:(UIButton *)sender {
     //: if ([self.delegate respondsToSelector:@selector(onCatchEvent:)]) {
     if ([self.delegate respondsToSelector:@selector(memberEvent:)]) {
-        //: FFFKitEvent *event = [[FFFKitEvent alloc] init];
+        //: BusyKitEvent *event = [[BusyKitEvent alloc] init];
         DirectionEvent *event = [[DirectionEvent alloc] init];
         //: event.eventName = NIMDemoEventNameOpenMergeMessage;
         event.eventName = m_imageValue;

@@ -21,7 +21,7 @@ extern NSString *const main_weekVersionName;
 //: extern NSString *const kTeamMemberInfo;
 extern NSString *const noti_controlOnText;
 
-//: @protocol FFFTeamMemberListCellActionDelegate <NSObject>
+//: @protocol BusyTeamMemberListCellActionDelegate <NSObject>
 @protocol SoundShared <NSObject>
 
 //: - (void)didSelectAddOpeartor;
@@ -31,7 +31,7 @@ extern NSString *const noti_controlOnText;
 @end
 
 
-//: @interface FFFTeamMemberListCell : UITableViewCell
+//: @interface BusyTeamMemberListCell : UITableViewCell
 @interface WithView : UITableViewCell
 
 
@@ -44,7 +44,7 @@ extern NSString *const noti_controlOnText;
 //: @property(nonatomic, strong) NSMutableArray <NSDictionary *> *infos;
 @property(nonatomic, strong) NSMutableArray <NSDictionary *> *infos;
 
-//: @property(nonatomic, weak) id<FFFTeamMemberListCellActionDelegate>delegate;
+//: @property(nonatomic, weak) id<BusyTeamMemberListCellActionDelegate>delegate;
 @property(nonatomic, weak) id<SoundShared>delegate;
 
 //: @end

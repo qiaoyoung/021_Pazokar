@@ -171,8 +171,8 @@ typedef struct {
 #import "NSBundle+Case.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFInputEmoticonDefine.h"
-#import "FFFInputEmoticonDefine.h"
+//: #import "BusyInputEmoticonDefine.h"
+#import "BusyInputEmoticonDefine.h"
 //: #import "SSZipArchiveManager.h"
 #import "ValuePraise.h"
 

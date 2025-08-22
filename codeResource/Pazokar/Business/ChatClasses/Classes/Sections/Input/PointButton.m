@@ -9,29 +9,29 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFInputEmoticonButton.h"
+//: #import "BusyInputEmoticonButton.h"
 #import "PointButton.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFInputEmoticonManager.h"
+//: #import "BusyInputEmoticonManager.h"
 #import "DeviceManager.h"
-//: #import "FFFInputEmoticonDefine.h"
-#import "FFFInputEmoticonDefine.h"
+//: #import "BusyInputEmoticonDefine.h"
+#import "BusyInputEmoticonDefine.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFKitDevice.h"
+//: #import "BusyKitDevice.h"
 #import "MarginDevice.h"
 //: #import "NSBundle+MyUserKit.h"
 #import "NSBundle+Case.h"
 //: #import "SSZipArchiveManager.h"
 #import "ValuePraise.h"
 
-//: @implementation FFFInputEmoticonButton
+//: @implementation BusyInputEmoticonButton
 @implementation PointButton
 
-//: + (FFFInputEmoticonButton*)iconButtonWithData:(NIMInputEmoticon*)data catalogID:(NSString*)catalogID delegate:( id<NIMEmoticonButtonTouchDelegate>)delegate{
+//: + (BusyInputEmoticonButton*)iconButtonWithData:(NIMInputEmoticon*)data catalogID:(NSString*)catalogID delegate:( id<NIMEmoticonButtonTouchDelegate>)delegate{
 + (PointButton*)input:(CityCenterWith*)data holdfast:(NSString*)catalogID icon:( id<IndexChild>)delegate{
-    //: FFFInputEmoticonButton* icon = [[FFFInputEmoticonButton alloc] init];
+    //: BusyInputEmoticonButton* icon = [[BusyInputEmoticonButton alloc] init];
     PointButton* icon = [[PointButton alloc] init];
     //: [icon addTarget:icon action:@selector(onIconSelected:) forControlEvents:UIControlEventTouchUpInside];
     [icon addTarget:icon action:@selector(addStorage:) forControlEvents:UIControlEventTouchUpInside];

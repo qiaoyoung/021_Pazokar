@@ -13,19 +13,19 @@
 #import <Foundation/Foundation.h>
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
-//: #import "FFFKitTimerHolder.h"
+//: #import "BusyKitTimerHolder.h"
 #import "NameWith.h"
 
 //: @class NIMKitFirerInfo;
 @class StateText;
 
-//: @interface FFFKitNotificationFirer : NSObject<FFFKitTimerHolderDelegate>
+//: @interface BusyKitNotificationFirer : NSObject<BusyKitTimerHolderDelegate>
 @interface SecretDevice : NSObject<ChildRefresh>
 
 //: @property (nonatomic,strong) NSMutableDictionary *cachedInfo;
 @property (nonatomic,strong) NSMutableDictionary *cachedInfo;
 
-//: @property (nonatomic,strong) FFFKitTimerHolder *timer;
+//: @property (nonatomic,strong) BusyKitTimerHolder *timer;
 @property (nonatomic,strong) NameWith *timer;
 
 //: @property (nonatomic,assign) NSTimeInterval timeInterval;

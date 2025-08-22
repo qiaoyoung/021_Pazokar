@@ -12,17 +12,17 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: @class FFFTeamSwitchTableViewCell;
+//: @class BusyTeamSwitchTableViewCell;
 @class WithCellView;
 
 //: @protocol NIMTeamSwitchProtocol <NSObject>
 @protocol GreenProtocol <NSObject>
-//: - (void)cell:(FFFTeamSwitchTableViewCell *)cell onStateChanged:(BOOL)on;
+//: - (void)cell:(BusyTeamSwitchTableViewCell *)cell onStateChanged:(BOOL)on;
 - (void)media:(WithCellView *)cell menu:(BOOL)on;
 //: @end
 @end
 
-//: @interface FFFTeamSwitchTableViewCell : UITableViewCell
+//: @interface BusyTeamSwitchTableViewCell : UITableViewCell
 @interface WithCellView : UITableViewCell
 //: @property (nonatomic, assign) NSInteger identify;
 @property (nonatomic, assign) NSInteger identify;

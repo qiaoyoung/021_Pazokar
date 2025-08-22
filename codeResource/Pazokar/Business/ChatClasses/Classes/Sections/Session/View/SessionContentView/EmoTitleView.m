@@ -9,20 +9,20 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionNetChatNotifyContentView.h"
+//: #import "BusySessionNetChatNotifyContentView.h"
 #import "EmoTitleView.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @implementation FFFSessionNetChatNotifyContentView
+//: @implementation BusySessionNetChatNotifyContentView
 @implementation EmoTitleView
 
 //: -(instancetype)initSessionMessageContentView
@@ -47,15 +47,15 @@
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)data
+//: - (void)refresh:(BusyMessageModel *)data
 - (void)messagePress:(MoreModel *)data
 {
     //: [super refresh:data];
     [super messagePress:data];
-    //: NSString *text = [FFFKitUtil messageTipContent:data.message];
+    //: NSString *text = [BusyKitUtil messageTipContent:data.message];
     NSString *text = [OffMore impanel:data.message];
 
-    //: FFFKitSetting *setting = [[MyUserKit sharedKit].config setting:data.message];
+    //: BusyKitSetting *setting = [[MyUserKit sharedKit].config setting:data.message];
     GreenSetting *setting = [[Case pastTop].config tool:data.message];
     //: self.textLabel.textColor = setting.textColor;;
     self.textLabel.textColor = setting.textColor;;

@@ -9,15 +9,15 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFGrowingTextView.h"
+//: #import "BusyGrowingTextView.h"
 #import "TingScrollView.h"
-//: #import "FFFGrowingInternalTextView.h"
+//: #import "BusyGrowingInternalTextView.h"
 #import "IntervalernalTextView.h"
 
-//: @interface FFFGrowingTextView()<UITextViewDelegate>
+//: @interface BusyGrowingTextView()<UITextViewDelegate>
 @interface TingScrollView()<UITextViewDelegate>
 
-//: @property (nonatomic,strong) FFFGrowingInternalTextView *textView;
+//: @property (nonatomic,strong) BusyGrowingInternalTextView *textView;
 @property (nonatomic,strong) IntervalernalTextView *textView;
 
 //: @property (nonatomic,assign) CGFloat maxHeight;
@@ -35,7 +35,7 @@
 //: @end
 @end
 
-//: @implementation FFFGrowingTextView
+//: @implementation BusyGrowingTextView
 @implementation TingScrollView
 
 //: #pragma mark - Override
@@ -49,7 +49,7 @@
     if (self) {
         //: CGRect rect = CGRectMake(0, 0, frame.size.width, frame.size.height);
         CGRect rect = CGRectMake(0, 0, frame.size.width, frame.size.height);
-        //: FFFGrowingInternalTextView *textView = [[FFFGrowingInternalTextView alloc] initWithFrame:rect];
+        //: BusyGrowingInternalTextView *textView = [[BusyGrowingInternalTextView alloc] initWithFrame:rect];
         IntervalernalTextView *textView = [[IntervalernalTextView alloc] initWithFrame:rect];
         //: self.textView = textView;
         self.textView = textView;
@@ -70,7 +70,7 @@
     self = [super initWithCoder:aDecoder];
     //: if (self) {
     if (self) {
-        //: FFFGrowingInternalTextView *textView = [[FFFGrowingInternalTextView alloc] initWithFrame:CGRectZero];
+        //: BusyGrowingInternalTextView *textView = [[BusyGrowingInternalTextView alloc] initWithFrame:CGRectZero];
         IntervalernalTextView *textView = [[IntervalernalTextView alloc] initWithFrame:CGRectZero];
         //: self.textView = textView;
         self.textView = textView;
@@ -477,7 +477,7 @@
 
 
 
-//: @implementation FFFGrowingTextView(TextView)
+//: @implementation BusyGrowingTextView(TextView)
 @implementation TingScrollView(TextView)
 
 //: - (NSAttributedString *)placeholderAttributedText

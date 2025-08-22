@@ -9,7 +9,7 @@
 //  群组操作
 
 // __M_A_C_R_O__
-//: #import "FFFTeamCardViewController.h"
+//: #import "BusyTeamCardViewController.h"
 #import "ReadOutViewController.h"
 
 //: NS_ASSUME_NONNULL_BEGIN
@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //: #pragma mark - 外部配置项
 #pragma mark - 外部配置项
-//: @interface FFFTeamCardViewControllerOption : NSObject
+//: @interface BusyTeamCardViewControllerOption : NSObject
 @interface TextTagOption : NSObject
 
 //: @property (nonatomic, assign) BOOL isTop;
@@ -26,15 +26,15 @@ NS_ASSUME_NONNULL_BEGIN
 //: @end
 @end
 
-//: @interface FFFTeamCardOperationViewController : FFFTeamCardViewController
+//: @interface BusyTeamCardOperationViewController : BusyTeamCardViewController
 @interface RearViewController : ReadOutViewController
 
 //外部配置
-//: @property (nonatomic,strong) FFFTeamCardViewControllerOption *option;
+//: @property (nonatomic,strong) BusyTeamCardViewControllerOption *option;
 @property (nonatomic,strong) TextTagOption *option;
 
 //群组管理
-//: @property (nonatomic,strong) FFFTeamListDataManager *teamListManager;
+//: @property (nonatomic,strong) BusyTeamListDataManager *teamListManager;
 @property (nonatomic,strong) FindBaseballTeamManager *teamListManager;
 
 
@@ -43,10 +43,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWith:(NIMTeam *)team
                      //: session:(NIMSession *)session
                      scale:(NIMSession *)session
-                      //: option:(FFFTeamCardViewControllerOption * _Nullable)option;
+                      //: option:(BusyTeamCardViewControllerOption * _Nullable)option;
                       title:(TextTagOption * _Nullable)option;
 //查询全部群成员
-//: - (void)didFetchTeamMember:(nullable FFFMembersFetchOption *)option;
+//: - (void)didFetchTeamMember:(nullable BusyMembersFetchOption *)option;
 - (void)searched:(nullable DateRow *)option;
 
 //加人

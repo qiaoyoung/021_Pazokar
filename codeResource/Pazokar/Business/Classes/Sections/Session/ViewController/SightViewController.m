@@ -278,7 +278,7 @@ typedef struct {
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"activity_wallet_zhuan"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"activity_wallet_zhuan"];
     labtitle.text = [SendName streetSmart:[[TextTheologicalData sharedInstance] userDecorateChildSituationValue]];
     //: [navView addSubview:labtitle];
     [navView addSubview:labtitle];
@@ -309,7 +309,7 @@ typedef struct {
     _btnfriend.titleLabel.font = [UIFont systemFontOfSize:14];
     //: [_btnfriend setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_btnfriend setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //: [_btnfriend setTitle:[FFFLanguageManager getTextWithKey:@"contact_fragment_friend"] forState:UIControlStateNormal];
+    //: [_btnfriend setTitle:[BusyLanguageManager getTextWithKey:@"contact_fragment_friend"] forState:UIControlStateNormal];
     [_btnfriend setTitle:[SendName streetSmart:[[TextTheologicalData sharedInstance] app_factorData]] forState:UIControlStateNormal];
     //: [_btnfriend addTarget:self action:@selector(sliderButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [_btnfriend addTarget:self action:@selector(voiced:) forControlEvents:UIControlEventTouchUpInside];
@@ -328,7 +328,7 @@ typedef struct {
     _btngroup.titleLabel.font = [UIFont systemFontOfSize:14];
     //: [_btngroup setTitleColor:[UIColor colorWithHexString:@"#5D5F66"] forState:UIControlStateNormal];
     [_btngroup setTitleColor:[UIColor status:[[TextTheologicalData sharedInstance] mainDeserveId]] forState:UIControlStateNormal];
-    //: [_btngroup setTitle:[FFFLanguageManager getTextWithKey:@"contact_fragment_group"] forState:UIControlStateNormal];
+    //: [_btngroup setTitle:[BusyLanguageManager getTextWithKey:@"contact_fragment_group"] forState:UIControlStateNormal];
     [_btngroup setTitle:[SendName streetSmart:[[TextTheologicalData sharedInstance] notiInmateMsg]] forState:UIControlStateNormal];
     //: [_btngroup addTarget:self action:@selector(sliderButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [_btngroup addTarget:self action:@selector(voiced:) forControlEvents:UIControlEventTouchUpInside];
@@ -443,7 +443,7 @@ typedef struct {
         }];
     //: }else{
     }else{
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2.0 position:CSToastPositionCenter];
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2.0 position:CSToastPositionCenter];
         [self.view makeToast:[SendName streetSmart:[[TextTheologicalData sharedInstance] notiHandleFormat]] duration:2.0 position:CSToastPositionCenter];
     }
 

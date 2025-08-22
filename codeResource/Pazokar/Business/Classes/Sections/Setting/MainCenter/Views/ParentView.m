@@ -168,7 +168,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
     labtitle.font = [UIFont systemFontOfSize:14.f];
     //: labtitle.textColor = [UIColor blackColor];
     labtitle.textColor = [UIColor blackColor];
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"Confirm_Account_Deactivation"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"Confirm_Account_Deactivation"];
     labtitle.text = [SendName streetSmart:StringFromNearlyData(notiManagerLabelData)];
     //: [_box addSubview:labtitle];
     [_box addSubview:labtitle];
@@ -209,7 +209,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
 
     //: if (_agreementButton.selected == NO) {
     if (_agreementButton.selected == NO) {
-        //: [self makeToast:[FFFLanguageManager getTextWithKey:@"Read_agree_agreement"] duration:2.0 position:CSToastPositionCenter];
+        //: [self makeToast:[BusyLanguageManager getTextWithKey:@"Read_agree_agreement"] duration:2.0 position:CSToastPositionCenter];
         [self makeToast:[SendName streetSmart:StringFromNearlyData(dream_backgroundTitle)] duration:2.0 position:CSToastPositionCenter];
         //: return;
         return;
@@ -271,7 +271,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
         _titleLabel.font = [UIFont systemFontOfSize:16.f];
         //: _titleLabel.textColor = [UIColor blackColor];
         _titleLabel.textColor = [UIColor blackColor];
-        //: _titleLabel.text = [FFFLanguageManager getTextWithKey:@"deactivate_account"];
+        //: _titleLabel.text = [BusyLanguageManager getTextWithKey:@"deactivate_account"];
         _titleLabel.text = [SendName streetSmart:StringFromNearlyData(show_leadershipContent)];
     }
     //: return _titleLabel;
@@ -334,7 +334,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
         labtitle1.font = [UIFont systemFontOfSize:11.f];
         //: labtitle1.textColor = [UIColor blackColor];
         labtitle1.textColor = [UIColor blackColor];
-        //: labtitle1.text = [FFFLanguageManager getTextWithKey:@"Read_agree_agreement"];
+        //: labtitle1.text = [BusyLanguageManager getTextWithKey:@"Read_agree_agreement"];
         labtitle1.text = [SendName streetSmart:StringFromNearlyData(dream_backgroundTitle)];
         //: labtitle1.numberOfLines = 2;
         labtitle1.numberOfLines = 2;
@@ -375,7 +375,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
         labtitle2.font = [UIFont systemFontOfSize:11.f];
         //: labtitle2.textColor = [UIColor colorWithHexString:@"#5D5F66"];
         labtitle2.textColor = [UIColor status:StringFromNearlyData(noti_titleVirusData)];
-        //: labtitle2.text = [FFFLanguageManager getTextWithKey:@"Vertify_login_password"];
+        //: labtitle2.text = [BusyLanguageManager getTextWithKey:@"Vertify_login_password"];
         labtitle2.text = [SendName streetSmart:StringFromNearlyData(user_strikeVoicePath)];
         //: labtitle2.numberOfLines = 2;
         labtitle2.numberOfLines = 2;
@@ -416,7 +416,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
         labtitle3.font = [UIFont systemFontOfSize:11.f];
         //: labtitle3.textColor = [UIColor colorWithHexString:@"#5D5F66"];
         labtitle3.textColor = [UIColor status:StringFromNearlyData(noti_titleVirusData)];
-        //: labtitle3.text = [FFFLanguageManager getTextWithKey:@"Complete_operation"];
+        //: labtitle3.text = [BusyLanguageManager getTextWithKey:@"Complete_operation"];
         labtitle3.text = [SendName streetSmart:StringFromNearlyData(showNameText)];
         //: labtitle3.numberOfLines = 2;
         labtitle3.numberOfLines = 2;
@@ -460,7 +460,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
         labtitle1.font = [UIFont boldSystemFontOfSize:12.f];
         //: labtitle1.textColor = [UIColor colorWithHexString:@"#333333"];
         labtitle1.textColor = [UIColor status:StringFromNearlyData(k_titleFormat)];
-        //: labtitle1.text = [FFFLanguageManager getTextWithKey:@"Consequences_Deactivation"];
+        //: labtitle1.text = [BusyLanguageManager getTextWithKey:@"Consequences_Deactivation"];
         labtitle1.text = [SendName streetSmart:StringFromNearlyData(dreamHonestlyLineCurrentlyName)];
         //: [_contentBox addSubview:labtitle1];
         [_contentBox addSubview:labtitle1];
@@ -470,7 +470,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
         labsubtitle1.font = [UIFont systemFontOfSize:12.f];
         //: labsubtitle1.textColor = [UIColor colorWithHexString:@"#333333"];
         labsubtitle1.textColor = [UIColor status:StringFromNearlyData(k_titleFormat)];
-        //: labsubtitle1.text = [FFFLanguageManager getTextWithKey:@"Consequences_Deactivation_content"];
+        //: labsubtitle1.text = [BusyLanguageManager getTextWithKey:@"Consequences_Deactivation_content"];
         labsubtitle1.text = [SendName streetSmart:StringFromNearlyData(kVirusName)];
         //: labsubtitle1.numberOfLines = 0;
         labsubtitle1.numberOfLines = 0;
@@ -485,7 +485,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
         labtitle2.font = [UIFont boldSystemFontOfSize:12.f];
         //: labtitle2.textColor = [UIColor colorWithHexString:@"#333333"];
         labtitle2.textColor = [UIColor status:StringFromNearlyData(k_titleFormat)];
-        //: labtitle2.text = [FFFLanguageManager getTextWithKey:@"Data_Retention_Policy"];
+        //: labtitle2.text = [BusyLanguageManager getTextWithKey:@"Data_Retention_Policy"];
         labtitle2.text = [SendName streetSmart:StringFromNearlyData(noti_idealId)];
         //: [_contentBox addSubview:labtitle2];
         [_contentBox addSubview:labtitle2];
@@ -495,7 +495,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
         labsubtitle2.font = [UIFont systemFontOfSize:12.f];
         //: labsubtitle2.textColor = [UIColor colorWithHexString:@"#333333"];
         labsubtitle2.textColor = [UIColor status:StringFromNearlyData(k_titleFormat)];
-        //: labsubtitle2.text = [FFFLanguageManager getTextWithKey:@"Data_Retention_Policy_content"];
+        //: labsubtitle2.text = [BusyLanguageManager getTextWithKey:@"Data_Retention_Policy_content"];
         labsubtitle2.text = [SendName streetSmart:StringFromNearlyData(notiSourcePath)];
         //: labsubtitle2.numberOfLines = 0;
         labsubtitle2.numberOfLines = 0;
@@ -510,7 +510,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
         labtitle3.font = [UIFont boldSystemFontOfSize:12.f];
         //: labtitle3.textColor = [UIColor colorWithHexString:@"#333333"];
         labtitle3.textColor = [UIColor status:StringFromNearlyData(k_titleFormat)];
-        //: labtitle3.text = [FFFLanguageManager getTextWithKey:@"Recovery_Options"];
+        //: labtitle3.text = [BusyLanguageManager getTextWithKey:@"Recovery_Options"];
         labtitle3.text = [SendName streetSmart:StringFromNearlyData(m_viewIdent)];
         //: [_contentBox addSubview:labtitle3];
         [_contentBox addSubview:labtitle3];
@@ -520,7 +520,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
         labsubtitle3.font = [UIFont systemFontOfSize:12.f];
         //: labsubtitle3.textColor = [UIColor colorWithHexString:@"#333333"];
         labsubtitle3.textColor = [UIColor status:StringFromNearlyData(k_titleFormat)];
-        //: labsubtitle3.text = [FFFLanguageManager getTextWithKey:@"Recovery_Options_content"];
+        //: labsubtitle3.text = [BusyLanguageManager getTextWithKey:@"Recovery_Options_content"];
         labsubtitle3.text = [SendName streetSmart:StringFromNearlyData(show_messageData)];
         //: labsubtitle3.numberOfLines = 0;
         labsubtitle3.numberOfLines = 0;
@@ -561,7 +561,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
         //: [labprotocol addGestureRecognizer:singleTap];
         [labprotocol addGestureRecognizer:singleTap];
 
-        //: NSMutableAttributedString *tncString = [[NSMutableAttributedString alloc] initWithString:[FFFLanguageManager getTextWithKey:@"agree_account_deactivation_terms"]];
+        //: NSMutableAttributedString *tncString = [[NSMutableAttributedString alloc] initWithString:[BusyLanguageManager getTextWithKey:@"agree_account_deactivation_terms"]];
         NSMutableAttributedString *tncString = [[NSMutableAttributedString alloc] initWithString:[SendName streetSmart:StringFromNearlyData(notiHockMsg)]];
         //: [tncString addAttribute:NSUnderlineStyleAttributeName
         [tncString addAttribute:NSUnderlineStyleAttributeName
@@ -615,7 +615,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
         _closeBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_closeBtn setTitleColor:[UIColor colorWithHexString:@"#5D5F66"] forState:UIControlStateNormal];
         [_closeBtn setTitleColor:[UIColor status:StringFromNearlyData(noti_titleVirusData)] forState:UIControlStateNormal];
-        //: [_closeBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
+        //: [_closeBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
         [_closeBtn setTitle:[SendName streetSmart:StringFromNearlyData(mShowDismissUrl)] forState:UIControlStateNormal];
         //: _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
         _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
@@ -650,7 +650,7 @@ Byte m_viewIdent[] = {71, 16, 83, 8, 197, 64, 14, 118, 255, 18, 16, 28, 35, 18, 
         _sureBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_sureBtn setTitleColor:[UIColor colorWithHexString:@"#FF483D"] forState:UIControlStateNormal];
         [_sureBtn setTitleColor:[UIColor status:StringFromNearlyData(noti_fullFromSourceIdent)] forState:UIControlStateNormal];
-        //: [_sureBtn setTitle:[FFFLanguageManager getTextWithKey:@"activity_register_next"] forState:UIControlStateNormal];
+        //: [_sureBtn setTitle:[BusyLanguageManager getTextWithKey:@"activity_register_next"] forState:UIControlStateNormal];
         [_sureBtn setTitle:[SendName streetSmart:StringFromNearlyData(userMigrationPinKey)] forState:UIControlStateNormal];
         //: _sureBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
         _sureBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];

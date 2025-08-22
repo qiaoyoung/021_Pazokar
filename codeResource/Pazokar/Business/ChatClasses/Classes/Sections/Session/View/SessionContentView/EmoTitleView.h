@@ -9,12 +9,12 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionMessageContentView.h"
+//: #import "BusySessionMessageContentView.h"
 #import "TextControl.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
 
-//: @interface FFFSessionNetChatNotifyContentView : FFFSessionMessageContentView
+//: @interface BusySessionNetChatNotifyContentView : BusySessionMessageContentView
 @interface EmoTitleView : TextControl
 
 //: @property (nonatomic, strong) M80AttributedLabel *textLabel;

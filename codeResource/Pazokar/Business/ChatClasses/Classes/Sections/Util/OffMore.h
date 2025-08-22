@@ -13,10 +13,10 @@
 #import <Foundation/Foundation.h>
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 
-//: @interface FFFKitUtil : NSObject
+//: @interface BusyKitUtil : NSObject
 @interface OffMore : NSObject
 
 //: + (NSString *)showNick:(NSString *)uid inMessage:(NIMMessage *)message;

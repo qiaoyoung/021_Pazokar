@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitSetting.h"
+//: #import "BusyKitSetting.h"
 #import "GreenSetting.h"
 
-//: @class FFFKitSettings;
+//: @class BusyKitSettings;
 @class ImageTitle;
 //: @class NIMMessage;
 @class NIMMessage;
@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger,NIMKitAvatarType) {
 //: };
 };
 
-//: @interface FFFKitConfig : NSObject
+//: @interface BusyKitConfig : NSObject
 @interface ChildSend : NSObject
 
 
@@ -114,13 +114,13 @@ typedef NS_ENUM(NSInteger,NIMKitAvatarType) {
 /**
  *  左侧气泡设置
  */
-//: @property (nonatomic, strong) FFFKitSettings *leftBubbleSettings;
+//: @property (nonatomic, strong) BusyKitSettings *leftBubbleSettings;
 @property (nonatomic, strong) ImageTitle *leftBubbleSettings;
 
 /**
  *  右侧气泡设置
  */
-//: @property (nonatomic, strong) FFFKitSettings *rightBubbleSettings;
+//: @property (nonatomic, strong) BusyKitSettings *rightBubbleSettings;
 @property (nonatomic, strong) ImageTitle *rightBubbleSettings;
 
 
@@ -138,13 +138,13 @@ typedef NS_ENUM(NSInteger,NIMKitAvatarType) {
 
 /*根据消息取到配置*/
 
-//: - (FFFKitSetting *)setting:(NIMMessage *)message;
+//: - (BusyKitSetting *)setting:(NIMMessage *)message;
 - (GreenSetting *)tool:(NIMMessage *)message;
 
 
 /*被回复消息取到配置*/
 
-//: - (FFFKitSetting *)repliedSetting:(NIMMessage *)message;
+//: - (BusyKitSetting *)repliedSetting:(NIMMessage *)message;
 - (GreenSetting *)system:(NIMMessage *)message;
 
 //: @end
@@ -156,91 +156,91 @@ typedef NS_ENUM(NSInteger,NIMKitAvatarType) {
 /**
  *  组件 UI 设置
  */
-//: @interface FFFKitSettings : NSObject
+//: @interface BusyKitSettings : NSObject
 @interface ImageTitle : NSObject
 
 /**
  *  文本类型消息设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *textSetting;
+//: @property (nonatomic, strong) BusyKitSetting *textSetting;
 @property (nonatomic, strong) GreenSetting *textSetting;
 
 /**
  *  音频类型消息设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *audioSetting;
+//: @property (nonatomic, strong) BusyKitSetting *audioSetting;
 @property (nonatomic, strong) GreenSetting *audioSetting;
 
 /**
  *  视频类型消息设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *videoSetting;
+//: @property (nonatomic, strong) BusyKitSetting *videoSetting;
 @property (nonatomic, strong) GreenSetting *videoSetting;
 
 /**
  *  文件类型消息设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *fileSetting;
+//: @property (nonatomic, strong) BusyKitSetting *fileSetting;
 @property (nonatomic, strong) GreenSetting *fileSetting;
 
 /**
  *  图片类型消息设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *imageSetting;
+//: @property (nonatomic, strong) BusyKitSetting *imageSetting;
 @property (nonatomic, strong) GreenSetting *imageSetting;
 
 /**
  *  地理位置类型消息设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *locationSetting;
+//: @property (nonatomic, strong) BusyKitSetting *locationSetting;
 @property (nonatomic, strong) GreenSetting *locationSetting;
 
 /**
  *  提示类型消息设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *tipSetting;
+//: @property (nonatomic, strong) BusyKitSetting *tipSetting;
 @property (nonatomic, strong) GreenSetting *tipSetting;
 
 /**
  *  Rtc话单类型消息设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *rtcCallRecordSetting;
+//: @property (nonatomic, strong) BusyKitSetting *rtcCallRecordSetting;
 @property (nonatomic, strong) GreenSetting *rtcCallRecordSetting;
 
 /**
  *  无法识别类型消息设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *unsupportSetting;
+//: @property (nonatomic, strong) BusyKitSetting *unsupportSetting;
 @property (nonatomic, strong) GreenSetting *unsupportSetting;
 
 /**
  *  群组通知类型通知消息设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *teamNotificationSetting;
+//: @property (nonatomic, strong) BusyKitSetting *teamNotificationSetting;
 @property (nonatomic, strong) GreenSetting *teamNotificationSetting;
 
 /**
  *  群组通知类型通知消息设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *superTeamNotificationSetting;
+//: @property (nonatomic, strong) BusyKitSetting *superTeamNotificationSetting;
 @property (nonatomic, strong) GreenSetting *superTeamNotificationSetting;
 
 /**
  *  聊天室类型类型通知消息设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *chatroomNotificationSetting;
+//: @property (nonatomic, strong) BusyKitSetting *chatroomNotificationSetting;
 @property (nonatomic, strong) GreenSetting *chatroomNotificationSetting;
 
 /**
  *  网络电话类型类型通知消息设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *netcallNotificationSetting;
+//: @property (nonatomic, strong) BusyKitSetting *netcallNotificationSetting;
 @property (nonatomic, strong) GreenSetting *netcallNotificationSetting;
 
 /**
  *  被回复消息的设置
  */
-//: @property (nonatomic, strong) FFFKitSetting *repliedSetting;
+//: @property (nonatomic, strong) BusyKitSetting *repliedSetting;
 @property (nonatomic, strong) GreenSetting *repliedSetting;
 
 

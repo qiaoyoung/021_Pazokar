@@ -13,10 +13,10 @@
 #import <UIKit/UIKit.h>
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
 
-//: @interface FFFAvatarImageView : UIControl
+//: @interface BusyAvatarImageView : UIControl
 @interface CustomFormatView : UIControl
 //: @property (nonatomic,strong) UIImage *image;
 @property (nonatomic,strong) UIImage *image;

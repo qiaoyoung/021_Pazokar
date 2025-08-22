@@ -9,7 +9,7 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitKeyboardInfo.h"
+//: #import "BusyKitKeyboardInfo.h"
 #import "AffairWith.h"
 
 //: NSNotificationName const NIMKitKeyboardWillChangeFrameNotification = @"NIMKitKeyboardWillChangeFrameNotification";
@@ -17,7 +17,7 @@ NSNotificationName const notiMakeIdent = @"NIMKitKeyboardWillChangeFrameNotifica
 //: NSNotificationName const NIMKitKeyboardWillHideNotification = @"NIMKitKeyboardWillHideNotification";
 NSNotificationName const mUserFormat = @"NIMKitKeyboardWillHideNotification";
 
-//: @implementation FFFKitKeyboardInfo
+//: @implementation BusyKitKeyboardInfo
 @implementation AffairWith
 
 //: @synthesize keyboardHeight = _keyboardHeight;
@@ -26,13 +26,13 @@ NSNotificationName const mUserFormat = @"NIMKitKeyboardWillHideNotification";
 //: + (instancetype)instance
 + (instancetype)liquidEcstasyInstance
 {
-    //: static FFFKitKeyboardInfo *instance;
+    //: static BusyKitKeyboardInfo *instance;
     static AffairWith *instance;
     //: static dispatch_once_t onceToken;
     static dispatch_once_t onceToken;
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
-        //: instance = [[FFFKitKeyboardInfo alloc] init];
+        //: instance = [[BusyKitKeyboardInfo alloc] init];
         instance = [[AffairWith alloc] init];
     //: });
     });

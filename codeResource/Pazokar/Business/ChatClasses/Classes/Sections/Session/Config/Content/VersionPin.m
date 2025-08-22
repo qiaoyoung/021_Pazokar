@@ -59,18 +59,18 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFNotificationContentConfig.h"
+//: #import "BusyNotificationContentConfig.h"
 #import "VersionPin.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
-//: #import "FFFUnsupportContentConfig.h"
+//: #import "BusyUnsupportContentConfig.h"
 #import "MediaVersionSend.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @implementation FFFNotificationContentConfig
+//: @implementation BusyNotificationContentConfig
 @implementation VersionPin
 //: - (CGSize)contentSize:(CGFloat)cellWidth message:(NIMMessage *)message
 - (CGSize)read:(CGFloat)cellWidth quantity:(NIMMessage *)message
@@ -96,7 +96,7 @@
             CGFloat TeamNotificationMessageWidth = cellWidth;
             //: UILabel *label = [[UILabel alloc] init];
             UILabel *label = [[UILabel alloc] init];
-            //: label.text = [FFFKitUtil messageTipContent:message];
+            //: label.text = [BusyKitUtil messageTipContent:message];
             label.text = [OffMore impanel:message];
             //: label.font = [[MyUserKit sharedKit].config setting:message].font;
             label.font = [[Case pastTop].config tool:message].font;
@@ -121,7 +121,7 @@
             label.autoDetectLinks = NO;
             //: label.font = [[MyUserKit sharedKit].config setting:message].font;
             label.font = [[Case pastTop].config tool:message].font;
-            //: NSString *text = [FFFKitUtil messageTipContent:message];
+            //: NSString *text = [BusyKitUtil messageTipContent:message];
             NSString *text = [OffMore impanel:message];
             //: [label nim_setText:text];
             [label nameCover:text];
@@ -142,7 +142,7 @@
         //: default:
         default:
         {
-            //: FFFUnsupportContentConfig *config = [[FFFUnsupportContentConfig alloc] init];
+            //: BusyUnsupportContentConfig *config = [[BusyUnsupportContentConfig alloc] init];
             MediaVersionSend *config = [[MediaVersionSend alloc] init];
             //: contentSize = [config contentSize:cellWidth message:message];
             contentSize = [config read:cellWidth quantity:message];
@@ -172,15 +172,15 @@
         case NIMNotificationTypeSuperTeam:
         //: case NIMNotificationTypeChatroom:
         case NIMNotificationTypeChatroom:
-            //: return @"FFFSessionNotificationContentView";
+            //: return @"BusySessionNotificationContentView";
             return @"MediaCustomControl";
         //: case NIMNotificationTypeNetCall:
         case NIMNotificationTypeNetCall:
-            //: return @"FFFSessionNetChatNotifyContentView";
+            //: return @"BusySessionNetChatNotifyContentView";
             return @"EmoTitleView";
         //: case NIMNotificationTypeUnsupport:
         case NIMNotificationTypeUnsupport:
-            //: return @"FFFSessionUnknowContentView";
+            //: return @"BusySessionUnknowContentView";
             return @"DateControl";
         //: default:
         default:

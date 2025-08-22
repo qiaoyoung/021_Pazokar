@@ -10,7 +10,7 @@ Byte user_voiceStr[] = {6, 7, 11, 16, 114, 248, 215, 89, 157, 138, 223, 70, 70, 
 //: #EEEEEE
 Byte main_programmingPath[] = {64, 7, 9, 145, 115, 151, 244, 5, 129, 69, 69, 69, 69, 69, 69, 35, 83};
 
-//: #ffffff
+//: #fffBusy
 Byte mainPateMessage[] = {40, 7, 10, 86, 244, 176, 151, 79, 15, 253, 102, 102, 102, 102, 102, 102, 35, 74};
 
 //: contact_tag_fragment_sure
@@ -30,20 +30,20 @@ Byte mainRisingTitle[] = {86, 21, 12, 67, 121, 113, 240, 4, 31, 81, 18, 32, 108,
 //
 
 // __M_A_C_R_O__
-//: #import "FFFContactSelectTabView.h"
+//: #import "BusyContactSelectTabView.h"
 #import "AggregationView.h"
-//: #import "FFFContactPickedView.h"
+//: #import "BusyContactPickedView.h"
 #import "LengthView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @implementation FFFContactSelectTabView
+//: @implementation BusyContactSelectTabView
 @implementation AggregationView
 
 //: - (instancetype)initWithFrame:(CGRect)frame{
@@ -52,7 +52,7 @@ Byte mainRisingTitle[] = {86, 21, 12, 67, 121, 113, 240, 4, 31, 81, 18, 32, 108,
     self = [super initWithFrame:frame];
     //: if (self) {
     if (self) {
-        //: _pickedView = [[FFFContactPickedView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+        //: _pickedView = [[BusyContactPickedView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
         _pickedView = [[LengthView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
         //: [self addSubview:_pickedView];
         [self addSubview:_pickedView];
@@ -67,7 +67,7 @@ Byte mainRisingTitle[] = {86, 21, 12, 67, 121, 113, 240, 4, 31, 81, 18, 32, 108,
         [_doneButton setBackgroundImage:doneButtonNormal forState:UIControlStateNormal];
         //: [_doneButton setBackgroundImage:doneButtonHighlighted forState:UIControlStateHighlighted];
         [_doneButton setBackgroundImage:doneButtonHighlighted forState:UIControlStateHighlighted];
-        //: [_doneButton setTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_sure"] forState:UIControlStateNormal];
+        //: [_doneButton setTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_sure"] forState:UIControlStateNormal];
         [_doneButton setTitle:[SendName streetSmart:StringFromIllegalData(user_handlePath)] forState:UIControlStateNormal];
         //: [_doneButton sizeToFit];
         [_doneButton sizeToFit];
@@ -78,7 +78,7 @@ Byte mainRisingTitle[] = {86, 21, 12, 67, 121, 113, 240, 4, 31, 81, 18, 32, 108,
         //: [self addSubview:_doneButton];
         [self addSubview:_doneButton];
 //        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"contact_bg"]];
-        //: self.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+        //: self.backgroundColor = [UIColor colorWithHexString:@"#fffBusy"];
         self.backgroundColor = [UIColor status:StringFromIllegalData(mainPateMessage)];
 
         //: UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, self.nim_height-1, self.nim_width, 1)];

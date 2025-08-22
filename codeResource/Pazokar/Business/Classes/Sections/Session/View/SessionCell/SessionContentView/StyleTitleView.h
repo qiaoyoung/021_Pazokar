@@ -17,7 +17,7 @@ extern NSString *const app_imageIdent; //自定义消息阅后即焚，打开阅
 //: extern NSString *const NIMDemoEventNameCloseSnapPicture; 
 extern NSString *const notiStyleId; //自定义消息阅后即焚，关闭阅后即焚预览窗口
 
-//: @interface NTESSessionSnapchatContentView : FFFSessionMessageContentView
+//: @interface NTESSessionSnapchatContentView : BusySessionMessageContentView
 @interface StyleTitleView : TextControl
 
 //: @end

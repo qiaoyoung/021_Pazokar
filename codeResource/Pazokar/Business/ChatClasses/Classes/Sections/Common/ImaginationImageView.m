@@ -20,15 +20,15 @@ Byte appOnId[] = {78, 14, 11, 6, 33, 226, 110, 122, 119, 119, 112, 110, 127, 116
 #pragma mark - SendChild
 
 // __M_A_C_R_O__
-//: #import "FFFMemberGroupView.h"
+//: #import "BusyMemberGroupView.h"
 #import "ImaginationImageView.h"
-//: #import "FFFCardHeaderCell.h"
+//: #import "BusyCardHeaderCell.h"
 #import "FastenerView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFCardOperationItem.h"
+//: #import "BusyCardOperationItem.h"
 #import "BubbleAppear.h"
-//: #import "FFFTeamCardMemberItem.h"
+//: #import "BusyTeamCardMemberItem.h"
 #import "HomegirlFormat.h"
 
 //: @implementation NIMMemebrGroupData
@@ -54,10 +54,10 @@ Byte appOnId[] = {78, 14, 11, 6, 33, 226, 110, 122, 119, 119, 112, 110, 127, 116
 //: @end
 @end
 
-//: #pragma mark - FFFMemberGroupView
+//: #pragma mark - BusyMemberGroupView
 #pragma mark - ImaginationImageView
 
-//: @interface FFFMemberGroupView()<UICollectionViewDataSource,UICollectionViewDelegate,FFFCardHeaderCellDelegate>
+//: @interface BusyMemberGroupView()<UICollectionViewDataSource,UICollectionViewDelegate,BusyCardHeaderCellDelegate>
 @interface ImaginationImageView()<UICollectionViewDataSource,UICollectionViewDelegate,OrientationMargin>
 
 //: @property (nonatomic,strong) NSMutableArray *data;
@@ -69,7 +69,7 @@ Byte appOnId[] = {78, 14, 11, 6, 33, 226, 110, 122, 119, 119, 112, 110, 127, 116
 //: @end
 @end
 
-//: @implementation FFFMemberGroupView
+//: @implementation BusyMemberGroupView
 @implementation ImaginationImageView
 
 //: - (instancetype)initWithFrame:(CGRect)frame{
@@ -180,7 +180,7 @@ Byte appOnId[] = {78, 14, 11, 6, 33, 226, 110, 122, 119, 119, 112, 110, 127, 116
 
 //: - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    //: FFFCardHeaderCell *cell;
+    //: BusyCardHeaderCell *cell;
     FastenerView *cell;
     //: NIMMemebrGroupData *data = [self dataAtIndexPath:indexPath];
     SendChild *data = [self dateView:indexPath];
@@ -209,9 +209,9 @@ Byte appOnId[] = {78, 14, 11, 6, 33, 226, 110, 122, 119, 119, 112, 110, 127, 116
     return self.data[index];
 }
 
-//: #pragma mark - FFFCardHeaderCellDelegate
+//: #pragma mark - BusyCardHeaderCellDelegate
 #pragma mark - OrientationMargin
-//: - (void)cellDidSelected:(FFFCardHeaderCell *)cell{
+//: - (void)cellDidSelected:(BusyCardHeaderCell *)cell{
 - (void)hideMax:(FastenerView *)cell{
     //: NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
@@ -228,7 +228,7 @@ Byte appOnId[] = {78, 14, 11, 6, 33, 226, 110, 122, 119, 119, 112, 110, 127, 116
     }
 }
 
-//: - (void)cellShouldBeRemoved:(FFFCardHeaderCell*)cell{
+//: - (void)cellShouldBeRemoved:(BusyCardHeaderCell*)cell{
 - (void)adheres:(FastenerView*)cell{
     //: NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
@@ -280,7 +280,7 @@ Byte appOnId[] = {78, 14, 11, 6, 33, 226, 110, 122, 119, 119, 112, 110, 127, 116
         _collectionView.delegate = self;
         //: _collectionView.dataSource = self;
         _collectionView.dataSource = self;
-        //: [_collectionView registerClass:[FFFCardHeaderCell class] forCellWithReuseIdentifier:@"collectionCell"];
+        //: [_collectionView registerClass:[BusyCardHeaderCell class] forCellWithReuseIdentifier:@"collectionCell"];
         [_collectionView registerClass:[FastenerView class] forCellWithReuseIdentifier:StringFromUsuallyData(appOnId)];
     }
     //: return _collectionView;
@@ -295,9 +295,9 @@ Byte appOnId[] = {78, 14, 11, 6, 33, 226, 110, 122, 119, 119, 112, 110, 127, 116
 
 //: #pragma mark - Private
 #pragma mark - Private
-//: - (FFFCardHeaderCell *)buildUserCell:(NIMMemebrGroupData *)data indexPath:(NSIndexPath *)indexPath{
+//: - (BusyCardHeaderCell *)buildUserCell:(NIMMemebrGroupData *)data indexPath:(NSIndexPath *)indexPath{
 - (FastenerView *)date:(SendChild *)data by:(NSIndexPath *)indexPath{
-    //: FFFCardHeaderCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
+    //: BusyCardHeaderCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
     FastenerView *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:StringFromUsuallyData(appOnId) forIndexPath:indexPath];
     //: NIMCardMemberItem *item = [[NIMCardMemberItem alloc] init];
     NameItem *item = [[NameItem alloc] init];
@@ -312,11 +312,11 @@ Byte appOnId[] = {78, 14, 11, 6, 33, 226, 110, 122, 119, 119, 112, 110, 127, 116
     return cell;
 }
 
-//: - (FFFCardHeaderCell *)buildOperatorCell:(NIMKitCardHeaderOpeator)operator indexPath:(NSIndexPath *)indexPath{
+//: - (BusyCardHeaderCell *)buildOperatorCell:(NIMKitCardHeaderOpeator)operator indexPath:(NSIndexPath *)indexPath{
 - (FastenerView *)linkMathematicalFunction:(NIMKitCardHeaderOpeator)operator tag:(NSIndexPath *)indexPath{
-    //: FFFCardHeaderCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
+    //: BusyCardHeaderCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
     FastenerView *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:StringFromUsuallyData(appOnId) forIndexPath:indexPath];
-    //: FFFCardOperationItem *item = [[FFFCardOperationItem alloc] initWithOperation:operator];
+    //: BusyCardOperationItem *item = [[BusyCardOperationItem alloc] initWithOperation:operator];
     BubbleAppear *item = [[BubbleAppear alloc] initWithOfVersion:operator];
     //: if (self.operatorTitle[@(operator)]) {
     if (self.operatorTitle[@(operator)]) {

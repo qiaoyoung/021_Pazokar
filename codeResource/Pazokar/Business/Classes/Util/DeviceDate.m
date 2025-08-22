@@ -449,12 +449,12 @@
 #import "MediaAttachment.h"
 //: #import "NTESWhiteboardAttachment.h"
 #import "TagAttachment.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
 //: #import "NTESSubscribeManager.h"
 #import "FindManager.h"
-//: #import "FFFExtensionHelper.h"
-#import "FFFExtensionHelper.h"
+//: #import "BusyExtensionHelper.h"
+#import "BusyExtensionHelper.h"
 //: #import "NTESSubscribeDefine.h"
 #import "NTESSubscribeDefine.h"
 //: #import "NSDictionary+NTESJson.h"
@@ -567,19 +567,19 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
 {
     //: static NSDictionary *daysOfWeekDict = nil;
     static NSDictionary *daysOfWeekDict = nil;
-    //: daysOfWeekDict = @{@(1):[FFFLanguageManager getTextWithKey:@"Sunday"],//@"星期日",
+    //: daysOfWeekDict = @{@(1):[BusyLanguageManager getTextWithKey:@"Sunday"],//@"星期日",
     daysOfWeekDict = @{@(1):[SendName streetSmart:[[TelevisionData sharedInstance] user_topicMsg]],//@"星期日",
-                       //: @(2):[FFFLanguageManager getTextWithKey:@"Monday"],//@"星期一",
+                       //: @(2):[BusyLanguageManager getTextWithKey:@"Monday"],//@"星期一",
                        @(2):[SendName streetSmart:[[TelevisionData sharedInstance] showNegativeName]],//@"星期一",
-                       //: @(3):[FFFLanguageManager getTextWithKey:@"Tuesday"],//@"星期二",
+                       //: @(3):[BusyLanguageManager getTextWithKey:@"Tuesday"],//@"星期二",
                        @(3):[SendName streetSmart:[[TelevisionData sharedInstance] userCellKey]],//@"星期二",
-                       //: @(4):[FFFLanguageManager getTextWithKey:@"Wednesday"],//@"星期三",
+                       //: @(4):[BusyLanguageManager getTextWithKey:@"Wednesday"],//@"星期三",
                        @(4):[SendName streetSmart:[[TelevisionData sharedInstance] showYaPath]],//@"星期三",
-                       //: @(5):[FFFLanguageManager getTextWithKey:@"Thursday"],//@"星期四",
+                       //: @(5):[BusyLanguageManager getTextWithKey:@"Thursday"],//@"星期四",
                        @(5):[SendName streetSmart:[[TelevisionData sharedInstance] main_hockMsg]],//@"星期四",
-                       //: @(6):[FFFLanguageManager getTextWithKey:@"Friday"],//@"星期五",
+                       //: @(6):[BusyLanguageManager getTextWithKey:@"Friday"],//@"星期五",
                        @(6):[SendName streetSmart:[[TelevisionData sharedInstance] user_hqIdent]],//@"星期五",
-                       //: @(7):[FFFLanguageManager getTextWithKey:@"Saturday"]};
+                       //: @(7):[BusyLanguageManager getTextWithKey:@"Saturday"]};
                        @(7):[SendName streetSmart:[[TelevisionData sharedInstance] m_oilMessage]]};//@"星期六",};
     //: return [daysOfWeekDict objectForKey:@(dayOfWeek)];
     return [daysOfWeekDict objectForKey:@(dayOfWeek)];
@@ -619,7 +619,7 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
     }
     //: if (!nickname.length) {
     if (!nickname.length) {
-        //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:uid option:nil];
+        //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:uid option:nil];
         Info *info = [[Case pastTop] consumer:uid message:nil];
         //: nickname = info.showName;
         nickname = info.showName;
@@ -666,13 +666,13 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
     //: else if(nowDateComponents.day == (msgDateComponents.day+1))
     else if(nowDateComponents.day == (msgDateComponents.day+1))//昨天
     {
-        //: result = showDetail? [[NSString alloc] initWithFormat:@"%@%@ %zd:%02d",[FFFLanguageManager getTextWithKey:@"yesterday"], result,hour,(int)msgDateComponents.minute] : [FFFLanguageManager getTextWithKey:@"yesterday"];
+        //: result = showDetail? [[NSString alloc] initWithFormat:@"%@%@ %zd:%02d",[BusyLanguageManager getTextWithKey:@"yesterday"], result,hour,(int)msgDateComponents.minute] : [BusyLanguageManager getTextWithKey:@"yesterday"];
         result = showDetail? [[NSString alloc] initWithFormat:@"%@%@ %zd:%02d",[SendName streetSmart:[[TelevisionData sharedInstance] showYaValue]], result,hour,(int)msgDateComponents.minute] : [SendName streetSmart:[[TelevisionData sharedInstance] showYaValue]];//昨天
     }
     //: else if(nowDateComponents.day == (msgDateComponents.day+2)) 
     else if(nowDateComponents.day == (msgDateComponents.day+2)) //前天
     {
-        //: result = showDetail? [[NSString alloc] initWithFormat:@"%@%@ %zd:%02d",[FFFLanguageManager getTextWithKey:@"before_yesterday"], result,hour,(int)msgDateComponents.minute] : [FFFLanguageManager getTextWithKey:@"before_yesterday"];
+        //: result = showDetail? [[NSString alloc] initWithFormat:@"%@%@ %zd:%02d",[BusyLanguageManager getTextWithKey:@"before_yesterday"], result,hour,(int)msgDateComponents.minute] : [BusyLanguageManager getTextWithKey:@"before_yesterday"];
         result = showDetail? [[NSString alloc] initWithFormat:@"%@%@ %zd:%02d",[SendName streetSmart:[[TelevisionData sharedInstance] notiGreenMessage]], result,hour,(int)msgDateComponents.minute] : [SendName streetSmart:[[TelevisionData sharedInstance] notiGreenMessage]];//@"前天";
     }
     //: else if([nowDate timeIntervalSinceDate:msgDate] < 7 * OnedayTimeIntervalValue)
@@ -705,25 +705,25 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
     //: if (totalMin > 0 && totalMin <= 5 * 60)
     if (totalMin > 0 && totalMin <= 5 * 60)
     {
-        //: showPeriodOfTime = [FFFLanguageManager getTextWithKey:@"wee_hours"];
+        //: showPeriodOfTime = [BusyLanguageManager getTextWithKey:@"wee_hours"];
         showPeriodOfTime = [SendName streetSmart:[[TelevisionData sharedInstance] mainSolutionMessage]];//@"凌晨".ntes_localized;
     }
     //: else if (totalMin > 5 * 60 && totalMin < 12 * 60)
     else if (totalMin > 5 * 60 && totalMin < 12 * 60)
     {
-        //: showPeriodOfTime = [FFFLanguageManager getTextWithKey:@"day_am"];
+        //: showPeriodOfTime = [BusyLanguageManager getTextWithKey:@"day_am"];
         showPeriodOfTime = [SendName streetSmart:[[TelevisionData sharedInstance] mainFurtherDemonName]];//@"上午".ntes_localized;
     }
     //: else if (totalMin >= 12 * 60 && totalMin <= 18 * 60)
     else if (totalMin >= 12 * 60 && totalMin <= 18 * 60)
     {
-        //: showPeriodOfTime = [FFFLanguageManager getTextWithKey:@"day_pm"];
+        //: showPeriodOfTime = [BusyLanguageManager getTextWithKey:@"day_pm"];
         showPeriodOfTime = [SendName streetSmart:[[TelevisionData sharedInstance] mReadData]];//@"下午".ntes_localized;
     }
     //: else if ((totalMin > 18 * 60 && totalMin <= (23 * 60 + 59)) || totalMin == 0)
     else if ((totalMin > 18 * 60 && totalMin <= (23 * 60 + 59)) || totalMin == 0)
     {
-        //: showPeriodOfTime = [FFFLanguageManager getTextWithKey:@"day_night"];
+        //: showPeriodOfTime = [BusyLanguageManager getTextWithKey:@"day_night"];
         showPeriodOfTime = [SendName streetSmart:[[TelevisionData sharedInstance] user_draftDoorwayData]];//@"晚上".ntes_localized;
     }
     //: return showPeriodOfTime;
@@ -801,13 +801,13 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
 
 //: + (NSString *)tipOnMessageRevokedLocal:(NSString *)postscript {
 + (NSString *)itemLocal:(NSString *)postscript {
-    //: NSString *tip = [FFFLanguageManager getTextWithKey:@"message_helper_you"];
+    //: NSString *tip = [BusyLanguageManager getTextWithKey:@"message_helper_you"];
     NSString *tip = [SendName streetSmart:[[TelevisionData sharedInstance] notiMentorSeedRegardingIdent]];//@"你".ntes_localized;
-    //: NSString *msg = [NSString stringWithFormat:@"%@%@", tip,[FFFLanguageManager getTextWithKey:@"retracted_message"]];
+    //: NSString *msg = [NSString stringWithFormat:@"%@%@", tip,[BusyLanguageManager getTextWithKey:@"retracted_message"]];
     NSString *msg = [NSString stringWithFormat:@"%@%@", tip,[SendName streetSmart:[[TelevisionData sharedInstance] mTeamContent]]];
     //: if (postscript.length != 0) {
     if (postscript.length != 0) {
-        //: msg = [NSString stringWithFormat:@"%@%@.%@:%@", tip,[FFFLanguageManager getTextWithKey:@"retracted_message"],[FFFLanguageManager getTextWithKey:@"postscript"], postscript];
+        //: msg = [NSString stringWithFormat:@"%@%@.%@:%@", tip,[BusyLanguageManager getTextWithKey:@"retracted_message"],[BusyLanguageManager getTextWithKey:@"postscript"], postscript];
         msg = [NSString stringWithFormat:@"%@%@.%@:%@", tip,[SendName streetSmart:[[TelevisionData sharedInstance] mTeamContent]],[SendName streetSmart:[[TelevisionData sharedInstance] mPateFormat]], postscript];
     }
     //: return msg;
@@ -823,7 +823,7 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
     do {
         //: if (!notification || ![notification isKindOfClass:[NIMRevokeMessageNotification class]]) {
         if (!notification || ![notification isKindOfClass:[NIMRevokeMessageNotification class]]) {
-            //: tip = [FFFLanguageManager getTextWithKey:@"message_helper_you"];
+            //: tip = [BusyLanguageManager getTextWithKey:@"message_helper_you"];
             tip = [SendName streetSmart:[[TelevisionData sharedInstance] notiMentorSeedRegardingIdent]];//@"你".ntes_localized;
             //: break;
             break;
@@ -842,11 +842,11 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
     //: } while (false);
     } while (false);
 
-    //: NSString *msg = [NSString stringWithFormat:@"%@%@", tip,[FFFLanguageManager getTextWithKey:@"retracted_message"]];
+    //: NSString *msg = [NSString stringWithFormat:@"%@%@", tip,[BusyLanguageManager getTextWithKey:@"retracted_message"]];
     NSString *msg = [NSString stringWithFormat:@"%@%@", tip,[SendName streetSmart:[[TelevisionData sharedInstance] mTeamContent]]];
     //: if (notification.postscript.length != 0) {
     if (notification.postscript.length != 0) {
-        //: msg = [NSString stringWithFormat:@"%@ %@.%@:%@", tip,[FFFLanguageManager getTextWithKey:@"retracted_message"],[FFFLanguageManager getTextWithKey:@"postscript"], notification.postscript];
+        //: msg = [NSString stringWithFormat:@"%@ %@.%@:%@", tip,[BusyLanguageManager getTextWithKey:@"retracted_message"],[BusyLanguageManager getTextWithKey:@"postscript"], notification.postscript];
         msg = [NSString stringWithFormat:@"%@ %@.%@:%@", tip,[SendName streetSmart:[[TelevisionData sharedInstance] mTeamContent]],[SendName streetSmart:[[TelevisionData sharedInstance] mPateFormat]], notification.postscript];
     }
     //: return msg;
@@ -859,7 +859,7 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
     NSString *fromUid = notification.messageFromUserId;
     //: BOOL fromMe = [fromUid isEqualToString:[[NIMSDK sharedSDK].loginManager currentAccount]];
     BOOL fromMe = [fromUid isEqualToString:[[NIMSDK sharedSDK].loginManager currentAccount]];
-    //: return fromMe ? [FFFLanguageManager getTextWithKey:@"message_helper_you"]: [FFFLanguageManager getTextWithKey:@"message_opposite"];
+    //: return fromMe ? [BusyLanguageManager getTextWithKey:@"message_helper_you"]: [BusyLanguageManager getTextWithKey:@"message_opposite"];
     return fromMe ? [SendName streetSmart:[[TelevisionData sharedInstance] notiMentorSeedRegardingIdent]]: [SendName streetSmart:[[TelevisionData sharedInstance] dreamSideKey]];//@"对方".ntes_localized;
 }
 
@@ -882,7 +882,7 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
         // 自己撤回自己的
         //: if (revokeBySender && fromMe) {
         if (revokeBySender && fromMe) {
-            //: tipTitle = [FFFLanguageManager getTextWithKey:@"message_helper_you"];
+            //: tipTitle = [BusyLanguageManager getTextWithKey:@"message_helper_you"];
             tipTitle = [SendName streetSmart:[[TelevisionData sharedInstance] notiMentorSeedRegardingIdent]];//@"你".ntes_localized;
             //: break;
             break;
@@ -890,11 +890,11 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
 
         //: NIMSession *session = notification.session;
         NIMSession *session = notification.session;
-        //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+        //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
         InfoGreenImage *option = [[InfoGreenImage alloc] init];
         //: option.session = session;
         option.session = session;
-        //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:(revokeBySender ? fromUid : operatorUid) option:option];
+        //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:(revokeBySender ? fromUid : operatorUid) option:option];
         Info *info = [[Case pastTop] consumer:(revokeBySender ? fromUid : operatorUid) message:option];
 
         // 别人撤回自己的
@@ -920,12 +920,12 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
         // 被群主/管理员撤回的
         //: if (member.type == NIMTeamMemberTypeOwner) {
         if (member.type == NIMTeamMemberTypeOwner) {
-            //: tipTitle = [[FFFLanguageManager getTextWithKey:@"group_member_info_activity_team_creator"] stringByAppendingString:info.showName];
+            //: tipTitle = [[BusyLanguageManager getTextWithKey:@"group_member_info_activity_team_creator"] stringByAppendingString:info.showName];
             tipTitle = [[SendName streetSmart:[[TelevisionData sharedInstance] dreamJusticeId]] stringByAppendingString:info.showName];//@"群主".ntes_localized
         }
         //: else if (member.type == NIMTeamMemberTypeManager) {
         else if (member.type == NIMTeamMemberTypeManager) {
-            //: tipTitle = [[FFFLanguageManager getTextWithKey:@"group_member_info_activity_team_admin"] stringByAppendingString:info.showName];
+            //: tipTitle = [[BusyLanguageManager getTextWithKey:@"group_member_info_activity_team_admin"] stringByAppendingString:info.showName];
             tipTitle = [[SendName streetSmart:[[TelevisionData sharedInstance] k_watMessage]] stringByAppendingString:info.showName];//@"管理员".ntes_localized
         }
     //: } while (false);
@@ -1173,7 +1173,7 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
             {
                 //: NSString *clientName = [self resolveOnlineClientName:client];
                 NSString *clientName = [self matronymic:client];
-                //: state = [NSString stringWithFormat:@"%@ %@", clientName, [FFFLanguageManager getTextWithKey:@"message_online"]];
+                //: state = [NSString stringWithFormat:@"%@ %@", clientName, [BusyLanguageManager getTextWithKey:@"message_online"]];
                 state = [NSString stringWithFormat:@"%@ %@", clientName, [SendName streetSmart:[[TelevisionData sharedInstance] mainEmphasizeRedStr]]];
                 //: break;
                 break;
@@ -1241,7 +1241,7 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
 {
     //: NSString *clientName = [self resolveOnlineClientName:client];
     NSString *clientName = [self matronymic:client];
-    //: NSString *state = [NSString stringWithFormat:@"%@ %@",clientName,[FFFLanguageManager getTextWithKey:@"message_online"]];
+    //: NSString *state = [NSString stringWithFormat:@"%@ %@",clientName,[BusyLanguageManager getTextWithKey:@"message_online"]];
     NSString *state = [NSString stringWithFormat:@"%@ %@",clientName,[SendName streetSmart:[[TelevisionData sharedInstance] mainEmphasizeRedStr]]];//@"在线".ntes_localized
     //: NSDictionary *dict = [ext nimkit_jsonDict];
     NSDictionary *dict = [ext dark];
@@ -1265,7 +1265,7 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
                     client == NIMLoginClientTypemacOS)
                 {
                     //桌面端不显示网络状态，只显示端
-                    //: return [NSString stringWithFormat:@"%@ %@",clientName,[FFFLanguageManager getTextWithKey:@"message_online"]];
+                    //: return [NSString stringWithFormat:@"%@ %@",clientName,[BusyLanguageManager getTextWithKey:@"message_online"]];
                     return [NSString stringWithFormat:@"%@ %@",clientName,[SendName streetSmart:[[TelevisionData sharedInstance] mainEmphasizeRedStr]]];//@"在线".ntes_localized
                 }
                 //: else
@@ -1275,24 +1275,24 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
                     //: if (detail)
                     if (detail)
                     {
-                        //: return [NSString stringWithFormat:@"%@ - %@ %@",clientName,netState,[FFFLanguageManager getTextWithKey:@"message_online"]];
+                        //: return [NSString stringWithFormat:@"%@ - %@ %@",clientName,netState,[BusyLanguageManager getTextWithKey:@"message_online"]];
                         return [NSString stringWithFormat:@"%@ - %@ %@",clientName,netState,[SendName streetSmart:[[TelevisionData sharedInstance] mainEmphasizeRedStr]]];//@"在线".ntes_localized
                     }
                     //: else
                     else
                     {
-                        //: return [NSString stringWithFormat:@"%@ %@",netState,[FFFLanguageManager getTextWithKey:@"message_online"]];
+                        //: return [NSString stringWithFormat:@"%@ %@",netState,[BusyLanguageManager getTextWithKey:@"message_online"]];
                         return [NSString stringWithFormat:@"%@ %@",netState,[SendName streetSmart:[[TelevisionData sharedInstance] mainEmphasizeRedStr]]];//@"在线".ntes_localized
                     }
                 }
             }
             //: case NTESOnlineStateBusy:
             case NTESOnlineStateBusy:
-                //: return [FFFLanguageManager getTextWithKey:@"online_state_event_manager_on_line_busy"];
+                //: return [BusyLanguageManager getTextWithKey:@"online_state_event_manager_on_line_busy"];
                 return [SendName streetSmart:[[TelevisionData sharedInstance] notiConsciousnessMessage]];//@"忙碌".ntes_localized;
             //: case NTESOnlineStateLeave:
             case NTESOnlineStateLeave:
-                //: return [FFFLanguageManager getTextWithKey:@"online_state_event_manager_off_line"];
+                //: return [BusyLanguageManager getTextWithKey:@"online_state_event_manager_off_line"];
                 return [SendName streetSmart:[[TelevisionData sharedInstance] showMessageEllData]];//@"离开".ntes_localized;
             //: default:
             default:
@@ -1307,7 +1307,7 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
 //: + (NSString *)formatAutoLoginMessage:(NSError *)error
 + (NSString *)cypher:(NSError *)error
 {
-    //: NSString *message = [NSString stringWithFormat:@"%@ %@",[FFFLanguageManager getTextWithKey:@"login_failure"], error];
+    //: NSString *message = [NSString stringWithFormat:@"%@ %@",[BusyLanguageManager getTextWithKey:@"login_failure"], error];
     NSString *message = [NSString stringWithFormat:@"%@ %@",[SendName streetSmart:[[TelevisionData sharedInstance] m_popKey]], error];//,@"自动登录失败".ntes_localized
     //: NSString *domain = error.domain;
     NSString *domain = error.domain;
@@ -1319,7 +1319,7 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
         //: if (code == NIMLocalErrorCodeAutoLoginRetryLimit)
         if (code == NIMLocalErrorCodeAutoLoginRetryLimit)
         {
-            //: message = [FFFLanguageManager getTextWithKey:@"please_try_again"];
+            //: message = [BusyLanguageManager getTextWithKey:@"please_try_again"];
             message = [SendName streetSmart:[[TelevisionData sharedInstance] appLetterName]];//@"自动登录错误次数超限，请检查网络后重试".ntes_localized;
         }
     }
@@ -1329,13 +1329,13 @@ static NSString *const dreamFromText = @"NTESRecentSessionTopMark";
         //: if (code == NIMRemoteErrorCodeInvalidPass)
         if (code == NIMRemoteErrorCodeInvalidPass)
         {
-            //: message = [FFFLanguageManager getTextWithKey:@"wrong_password"];
+            //: message = [BusyLanguageManager getTextWithKey:@"wrong_password"];
             message = [SendName streetSmart:[[TelevisionData sharedInstance] notiMemberValue]];//@"密码错误".ntes_localized;
         }
         //: else if(code == NIMRemoteErrorCodeExist)
         else if(code == NIMRemoteErrorCodeExist)
         {
-            //: message = [FFFLanguageManager getTextWithKey:@"logged_another_device"];
+            //: message = [BusyLanguageManager getTextWithKey:@"logged_another_device"];
             message = [SendName streetSmart:[[TelevisionData sharedInstance] m_viewPath]];//@"当前已经其他设备登录，请使用手动模式登录".ntes_localized;
         }
     }

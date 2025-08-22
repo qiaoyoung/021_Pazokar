@@ -12,47 +12,47 @@
 // __M_A_C_R_O__
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
-//: #import "FFFLanguageManager.h"
+//: #import "BusyLanguageManager.h"
 #import "SendName.h"
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
-//: #import "FFFKitInfo.h"
+//: #import "BusyKitInfo.h"
 #import "Info.h"
-//: #import "FFFMediaItem.h"            //多媒体面板对象
+//: #import "BusyMediaItem.h"            //多媒体面板对象
 #import "ModelMessage.h"            //多媒体面板对象
-//: #import "FFFMessageModel.h"         //message Wrapper
+//: #import "BusyMessageModel.h"         //message Wrapper
 #import "MoreModel.h"         //message Wrapper
-//: #import "FFFKitMessageProvider.h"
+//: #import "BusyKitMessageProvider.h"
 #import "ToiletKitImageProviderDevice.h"
-//: #import "FFFCellConfig.h"           //message cell配置协议
-#import "FFFCellConfig.h"           //message cell配置协议
-//: #import "FFFInputProtocol.h"        //输入框回调
-#import "FFFInputProtocol.h"        //输入框回调
-//: #import "FFFKitDataProvider.h"      //APP内容提供器
+//: #import "BusyCellConfig.h"           //message cell配置协议
+#import "BusyCellConfig.h"           //message cell配置协议
+//: #import "BusyInputProtocol.h"        //输入框回调
+#import "BusyInputProtocol.h"        //输入框回调
+//: #import "BusyKitDataProvider.h"      //APP内容提供器
 #import "AccountingDataRead.h"      //APP内容提供器
-//: #import "FFFMessageCellProtocol.h"  //message cell事件回调
-#import "FFFMessageCellProtocol.h"  //message cell事件回调
-//: #import "FFFSessionConfig.h"        //会话页面配置
+//: #import "BusyMessageCellProtocol.h"  //message cell事件回调
+#import "BusyMessageCellProtocol.h"  //message cell事件回调
+//: #import "BusySessionConfig.h"        //会话页面配置
 #import "QuantityelligenceInformationCan.h"        //会话页面配置
-//: #import "FFFKitEvent.h"             //点击事件封装类
+//: #import "BusyKitEvent.h"             //点击事件封装类
 #import "DirectionEvent.h"             //点击事件封装类
-//: #import "FFFCellLayoutConfig.h"
+//: #import "BusyCellLayoutConfig.h"
 #import "ParentMargin.h"
-//: #import "FFFSessionMessageContentView.h"
+//: #import "BusySessionMessageContentView.h"
 #import "TextControl.h"
-//: #import "FFFKitConfig.h"
+//: #import "BusyKitConfig.h"
 #import "ChildSend.h"
-//: #import "FFFSessionViewController.h"
+//: #import "BusySessionViewController.h"
 #import "DirectionViewController.h"
-//: #import "FFFSessionListViewController.h"
+//: #import "BusySessionListViewController.h"
 #import "NoticeViewController.h"
-//: #import "FFFKitIndependentModeExtraInfo.h"
+//: #import "BusyKitIndependentModeExtraInfo.h"
 #import "ValueFormat.h"
-//: #import "FFFChatUIManagerProtocol.h"
-#import "FFFChatUIManagerProtocol.h"
-//: #import "FFFCollectionViewLeftAlignedLayout.h"
+//: #import "BusyChatUIManagerProtocol.h"
+#import "BusyChatUIManagerProtocol.h"
+//: #import "BusyCollectionViewLeftAlignedLayout.h"
 #import "PlayerFlowLayout.h"
-//: #import "FFFKitQuickCommentUtil.h"
+//: #import "BusyKitQuickCommentUtil.h"
 #import "TapColorUtil.h"
 
 //: extern double NIMKitVersionNumber;
@@ -122,25 +122,25 @@ extern const unsigned char main_videoData[];
 /**
  *  注册自定义的排版配置，通过注册自定义排版配置来实现自定义消息的定制化排版
  */
-//: - (void)registerLayoutConfig:(FFFCellLayoutConfig *)layoutConfig;
+//: - (void)registerLayoutConfig:(BusyCellLayoutConfig *)layoutConfig;
 - (void)message:(ParentMargin *)layoutConfig;
 
 /**
  *  返回当前的排版配置
  */
-//: - (id<FFFCellLayoutConfig>)layoutConfig;
+//: - (id<BusyCellLayoutConfig>)layoutConfig;
 - (id<ParentMargin>)layoutConfig;
 
 /**
  *  UI 配置器
  */
-//: @property (nonatomic,strong) FFFKitConfig *config;
+//: @property (nonatomic,strong) BusyKitConfig *config;
 @property (nonatomic,strong) ChildSend *config;
 
 /**
  *  内容提供者，由上层开发者注入。如果没有则使用默认 provider
  */
-//: @property (nonatomic,strong) id<FFFKitDataProvider> provider;
+//: @property (nonatomic,strong) id<BusyKitDataProvider> provider;
 @property (nonatomic,strong) id<AccountingDataRead> provider;
 
 /**
@@ -148,13 +148,13 @@ extern const unsigned char main_videoData[];
  *
  *  此字段需要配合默认的 AccountingDataRead ( SaveNameOff ) 使用，如果上层自己定义了 provider ， 则忽略此字段。
  */
-//: @property (nonatomic,strong) FFFKitIndependentModeExtraInfo *independentModeExtraInfo;
+//: @property (nonatomic,strong) BusyKitIndependentModeExtraInfo *independentModeExtraInfo;
 @property (nonatomic,strong) ValueFormat *independentModeExtraInfo;
 
 /**
  * 聊天模块常用UI方法
  */
-//: @property (nonatomic, readonly) id<FFFChatUIManager> chatUIManager;
+//: @property (nonatomic, readonly) id<BusyChatUIManager> chatUIManager;
 @property (nonatomic, readonly) id<PraiseUimanager> chatUIManager;
 
 /**
@@ -209,25 +209,25 @@ extern const unsigned char main_videoData[];
 /**
  *  返回用户信息
  */
-//: - (FFFKitInfo *)infoByUser:(NSString *)userId
+//: - (BusyKitInfo *)infoByUser:(NSString *)userId
 - (Info *)consumer:(NSString *)userId
-                    //: option:(FFFKitInfoFetchOption *)option;
+                    //: option:(BusyKitInfoFetchOption *)option;
                     message:(InfoGreenImage *)option;
 
 /**
  *  返回群信息
  */
-//: - (FFFKitInfo *)infoByTeam:(NSString *)teamId
+//: - (BusyKitInfo *)infoByTeam:(NSString *)teamId
 - (Info *)controlOption:(NSString *)teamId
-                    //: option:(FFFKitInfoFetchOption *)option;
+                    //: option:(BusyKitInfoFetchOption *)option;
                     my:(InfoGreenImage *)option;
 
 /**
  *  返回群信息
  */
-//: - (FFFKitInfo *)infoBySuperTeam:(NSString *)teamId
+//: - (BusyKitInfo *)infoBySuperTeam:(NSString *)teamId
 - (Info *)ting:(NSString *)teamId
-                         //: option:(FFFKitInfoFetchOption *)option;
+                         //: option:(BusyKitInfoFetchOption *)option;
                          container:(InfoGreenImage *)option;
 
 /**

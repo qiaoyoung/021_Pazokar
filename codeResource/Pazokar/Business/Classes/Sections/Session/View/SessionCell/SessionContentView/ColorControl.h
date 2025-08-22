@@ -9,7 +9,7 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionMessageContentView.h"
+//: #import "BusySessionMessageContentView.h"
 #import "TextControl.h"
 //: #import "M80AttributedLabel.h"
 #import "CypherScrollView.h"
@@ -18,7 +18,7 @@
 static NSString *const m_infoTitle = @"NTESShowRedPacketDetailEvent";
 
 
-//: @interface NTESSessionRedPacketTipContentView : FFFSessionMessageContentView
+//: @interface NTESSessionRedPacketTipContentView : BusySessionMessageContentView
 @interface ColorControl : TextControl
 
 //: @property (nonatomic,strong) M80AttributedLabel *label;

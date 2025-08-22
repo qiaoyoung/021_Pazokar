@@ -11,17 +11,17 @@
 // __M_A_C_R_O__
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
-//: #import "FFFSessionPrivateProtocol.h"
-#import "FFFSessionPrivateProtocol.h"
-//: #import "FFFSessionConfigurateProtocol.h"
-#import "FFFSessionConfigurateProtocol.h"
+//: #import "BusySessionPrivateProtocol.h"
+#import "BusySessionPrivateProtocol.h"
+//: #import "BusySessionConfigurateProtocol.h"
+#import "BusySessionConfigurateProtocol.h"
 
-//: @interface FFFSessionInteractorImpl : NSObject<NIMSessionInteractor,NIMSessionLayoutDelegate>
+//: @interface BusySessionInteractorImpl : NSObject<NIMSessionInteractor,NIMSessionLayoutDelegate>
 @interface FasteningBar : NSObject<TagRed,StigmatizePlayer>
 
 //: - (instancetype)initWithSession:(NIMSession *)session
 - (instancetype)initWithSession:(NIMSession *)session
-                         //: config:(id<FFFSessionConfig>)sessionConfig;
+                         //: config:(id<BusySessionConfig>)sessionConfig;
                          distance:(id<QuantityelligenceInformationCan>)sessionConfig;
 
 //: @property(nonatomic,weak) id<NIMSessionInteractorDelegate> delegate;

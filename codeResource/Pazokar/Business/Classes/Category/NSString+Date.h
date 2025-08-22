@@ -31,7 +31,7 @@ NSString * cornerViewText(NSString *anMaybeEmptyString);
 - (NSString *)stepResolution;
 
 //: - (NSString *)tokenByPassword;
-- (NSString *)read;
+- (NSString *)readToken;
 
 //: - (NSString *)ntes_localized;
 - (NSString *)untilNtes;

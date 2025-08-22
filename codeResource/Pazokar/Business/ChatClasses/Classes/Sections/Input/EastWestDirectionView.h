@@ -9,14 +9,14 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFPageView.h"
+//: #import "BusyPageView.h"
 #import "PageView.h"
-//: #import "FFFSessionConfig.h"
+//: #import "BusySessionConfig.h"
 #import "QuantityelligenceInformationCan.h"
 
 //: @class NIMInputEmoticonCatalog;
 @class ImageColor;
-//: @class FFFInputEmoticonTabView;
+//: @class BusyInputEmoticonTabView;
 @class ViewControl;
 
 //: @protocol NIMInputEmoticonProtocol <NSObject>
@@ -38,10 +38,10 @@
 @end
 
 
-//: @interface FFFInputEmoticonContainerView : UIView<FFFPageViewDataSource,FFFPageViewDelegate>
+//: @interface BusyInputEmoticonContainerView : UIView<BusyPageViewDataSource,BusyPageViewDelegate>
 @interface EastWestDirectionView : UIView<TingSource,CustomAppear>
 
-//: @property (nonatomic, strong) FFFPageView *emoticonPageView;
+//: @property (nonatomic, strong) BusyPageView *emoticonPageView;
 @property (nonatomic, strong) PageView *emoticonPageView;
 //: @property (nonatomic, strong) UIPageControl *emotPageController;
 @property (nonatomic, strong) UIPageControl *emotPageController;
@@ -51,11 +51,11 @@
 @property (nonatomic, strong) ImageColor *currentCatalogData;
 //: @property (nonatomic, readonly)NSArray *allEmoticons;
 @property (nonatomic, readonly)NSArray *allEmoticons;
-//: @property (nonatomic, strong) FFFInputEmoticonTabView *tabView;
+//: @property (nonatomic, strong) BusyInputEmoticonTabView *tabView;
 @property (nonatomic, strong) ViewControl *tabView;
 //: @property (nonatomic, weak) id<NIMInputEmoticonProtocol> delegate;
 @property (nonatomic, weak) id<LengthPoint> delegate;
-//: @property (nonatomic, weak) id<FFFSessionConfig> config;
+//: @property (nonatomic, weak) id<BusySessionConfig> config;
 @property (nonatomic, weak) id<QuantityelligenceInformationCan> config;
 
 //: @property (nonatomic,strong) UIScrollView *scrollView;

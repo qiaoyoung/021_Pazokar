@@ -29,7 +29,7 @@ extern const CGFloat main_nowMessage;
 extern NSString * const kPanPath;
 
 
-//: @interface FFFKitQuickCommentUtil : NSObject
+//: @interface BusyKitQuickCommentUtil : NSObject
 @interface TapColorUtil : NSObject
 
 //: + (UIFont *)commentFont;

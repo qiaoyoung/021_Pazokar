@@ -11,20 +11,20 @@
 // __M_A_C_R_O__
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
-//: #import "FFFKitMessageProvider.h"
+//: #import "BusyKitMessageProvider.h"
 #import "ToiletKitImageProviderDevice.h"
-//: #import "FFFSessionConfig.h"
+//: #import "BusySessionConfig.h"
 #import "QuantityelligenceInformationCan.h"
 
-//: @class FFFMessageModel;
+//: @class BusyMessageModel;
 @class MoreModel;
 
-//: @interface FFFSessionMsgDatasource : NSObject
+//: @interface BusySessionMsgDatasource : NSObject
 @interface EparchyDatasource : NSObject
 
 //: - (instancetype)initWithSession:(NIMSession*)session
 - (instancetype)initWithEnableConfig:(NIMSession*)session
-                         //: config:(id<FFFSessionConfig>)sessionConfig;
+                         //: config:(id<BusySessionConfig>)sessionConfig;
                          nameWithView:(id<QuantityelligenceInformationCan>)sessionConfig;
 
 
@@ -36,10 +36,10 @@
 @property (nonatomic, readonly) NSInteger messageLimit; //每页消息显示条数
 //: @property (nonatomic, readonly) NSInteger showTimeInterval; 
 @property (nonatomic, readonly) NSInteger showTimeInterval; //两条消息相隔多久显示一条时间戳
-//: @property (nonatomic, weak) id<FFFSessionConfig> sessionConfig;
+//: @property (nonatomic, weak) id<BusySessionConfig> sessionConfig;
 @property (nonatomic, weak) id<QuantityelligenceInformationCan> sessionConfig;
 
-//: - (NSInteger)indexAtModelArray:(FFFMessageModel*)model;
+//: - (NSInteger)indexAtModelArray:(BusyMessageModel*)model;
 - (NSInteger)red:(MoreModel*)model;
 
 //复位消息
@@ -62,7 +62,7 @@
 - (void)refresh:(void (^)(NSError *))handler;
 
 // 展示message之前做额外配置
-//: - (void)willDisplayMessageModel:(FFFMessageModel *)model;
+//: - (void)willDisplayMessageModel:(BusyMessageModel *)model;
 - (void)back:(MoreModel *)model;
 
 //添加消息，会根据时间戳插入到相应位置
@@ -74,7 +74,7 @@
 - (NSArray<NSNumber *> *)head:(NSArray *)models;
 
 //删除消息
-//: - (NSArray<NSNumber *> *)deleteMessageModel:(FFFMessageModel*)model;
+//: - (NSArray<NSNumber *> *)deleteMessageModel:(BusyMessageModel*)model;
 - (NSArray<NSNumber *> *)atDown:(MoreModel*)model;
 
 //根据范围批量删除消息

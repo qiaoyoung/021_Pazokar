@@ -102,7 +102,7 @@ ListMemberNameData showRecordKey = (ListMemberNameData){184, (Byte []){209, 219,
     //: }];
     }];
 
-    //: NSString *my_account = [FFFLanguageManager getTextWithKey:@"activity_add_friend_my_account"];
+    //: NSString *my_account = [BusyLanguageManager getTextWithKey:@"activity_add_friend_my_account"];
     NSString *my_account = [SendName streetSmart:StringFromListMemberNameData(&noti_toolStr)];
     //: NSString *myCodeStr = [NSString stringWithFormat:@"%@:%@",my_account,[NIMUserDefaults standardUserDefaults].accountName];
     NSString *myCodeStr = [NSString stringWithFormat:@"%@:%@",my_account,[DataMaxDefaults max].accountName];

@@ -1,7 +1,7 @@
 // __DEBUG__
 // __CLOSE_PRINT__
 //
-//  FFFMessageCellProtocol.h
+//  BusyMessageCellProtocol.h
 // Case
 //
 //  Created by NetEase.
@@ -9,23 +9,23 @@
 //
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
-//: #import "FFFCellConfig.h"
-#import "FFFCellConfig.h"
+//: #import "BusyCellConfig.h"
+#import "BusyCellConfig.h"
 
 // __M_A_C_R_O__
 
-//: @class FFFMessageModel;
+//: @class BusyMessageModel;
 @class MoreModel;
 //: @class NIMMessage;
 @class NIMMessage;
 //: @class NIMQuickComment;
 @class NIMQuickComment;
-//: @class FFFKitEvent;
+//: @class BusyKitEvent;
 @class DirectionEvent;
-//: @class FFFTextView;
+//: @class BusyTextView;
 @class FormatNameView;
 
-//: @protocol FFFMessageCellDelegate <NSObject>
+//: @protocol BusyMessageCellDelegate <NSObject>
 @protocol SharedDelegate <NSObject>
 
 //: @optional
@@ -42,7 +42,7 @@
 
 //: #pragma mark - 点击事件
 #pragma mark - 点击事件
-//: - (BOOL)onTapCell:(FFFKitEvent *)event;
+//: - (BOOL)onTapCell:(BusyKitEvent *)event;
 - (BOOL)replyEnable:(DirectionEvent *)event;
 
 //: - (BOOL)onLongPressCell:(NIMMessage *)message

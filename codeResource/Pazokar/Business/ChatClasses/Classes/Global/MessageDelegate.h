@@ -12,7 +12,7 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: @interface FFFCommonTableDelegate : NSObject<UITableViewDataSource,UITableViewDelegate>
+//: @interface BusyCommonTableDelegate : NSObject<UITableViewDataSource,UITableViewDelegate>
 @interface MessageDelegate : NSObject<UITableViewDataSource,UITableViewDelegate>
 
 //: - (instancetype) initWithTableData:(NSArray *(^)(void))data;

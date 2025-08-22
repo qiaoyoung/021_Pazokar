@@ -113,23 +113,23 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionShareCardContentView.h"
+//: #import "BusySessionShareCardContentView.h"
 #import "NameContentView.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFLoadProgressView.h"
+//: #import "BusyLoadProgressView.h"
 #import "BuildView.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
 //: #import <YYImage/YYImage.h>
 #import <YYImage/YYImage.h>
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFKitDataProviderImpl.h"
+//: #import "BusyKitDataProviderImpl.h"
 #import "SaveNameOff.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
@@ -142,7 +142,7 @@ typedef struct {
 //: #import <objc/message.h>
 #import <objc/message.h>
 
-//: @interface FFFSessionShareCardContentView()
+//: @interface BusySessionShareCardContentView()
 @interface NameContentView()
 
 //: @property (nonatomic,strong) UIImageView *imageView;
@@ -155,7 +155,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFSessionShareCardContentView
+//: @implementation BusySessionShareCardContentView
 @implementation NameContentView
 
 //: - (instancetype)initSessionMessageContentView{
@@ -190,7 +190,7 @@ typedef struct {
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)data
+//: - (void)refresh:(BusyMessageModel *)data
 - (void)messagePress:(MoreModel *)data
 {
     //: [super refresh:data];
@@ -308,9 +308,9 @@ typedef struct {
 //: - (void)onTouchUpInside:(id)sender
 - (void)objects:(id)sender
 {
-    //: FFFKitEvent *event = [[FFFKitEvent alloc] init];
+    //: BusyKitEvent *event = [[BusyKitEvent alloc] init];
     DirectionEvent *event = [[DirectionEvent alloc] init];
-    //: event.eventName = FFFKitEventNameTapContent;
+    //: event.eventName = BusyKitEventNameTapContent;
     event.eventName = notiMessageId;
     //: event.messageModel = self.model;
     event.messageModel = self.model;

@@ -9,25 +9,25 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionConfigurator.h"
+//: #import "BusySessionConfigurator.h"
 #import "ViewConfigurator.h"
-//: #import "FFFSessionMsgDatasource.h"
+//: #import "BusySessionMsgDatasource.h"
 #import "EparchyDatasource.h"
-//: #import "FFFSessionInteractorImpl.h"
+//: #import "BusySessionInteractorImpl.h"
 #import "FasteningBar.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
-//: #import "FFFSessionInteractorImpl.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
+//: #import "BusySessionInteractorImpl.h"
 #import "FasteningBar.h"
-//: #import "FFFSessionDataSourceImpl.h"
+//: #import "BusySessionDataSourceImpl.h"
 #import "NameCenter.h"
-//: #import "FFFSessionLayoutImpl.h"
+//: #import "BusySessionLayoutImpl.h"
 #import "NamePraiseVersion.h"
-//: #import "FFFSessionTableAdapter.h"
+//: #import "BusySessionTableAdapter.h"
 #import "PinAdapter.h"
 
 /*
@@ -57,36 +57,36 @@
             .......................................................................
  */
 
-//: @interface FFFSessionConfigurator()
+//: @interface BusySessionConfigurator()
 @interface ViewConfigurator()
 
-//: @property (nonatomic,strong) FFFSessionInteractorImpl *interactor;
+//: @property (nonatomic,strong) BusySessionInteractorImpl *interactor;
 @property (nonatomic,strong) FasteningBar *interactor;
 
-//: @property (nonatomic,strong) FFFSessionTableAdapter *tableAdapter;
+//: @property (nonatomic,strong) BusySessionTableAdapter *tableAdapter;
 @property (nonatomic,strong) PinAdapter *tableAdapter;
 
 //: @end
 @end
 
-//: @implementation FFFSessionConfigurator
+//: @implementation BusySessionConfigurator
 @implementation ViewConfigurator
 
-//: - (void)setup:(FFFSessionViewController *)vc
+//: - (void)setup:(BusySessionViewController *)vc
 - (void)actionDownTitle:(DirectionViewController *)vc
 {
     //: NIMSession *session = vc.session;
     NIMSession *session = vc.session;
-    //: id<FFFSessionConfig> sessionConfig = vc.sessionConfig;
-    id<QuantityelligenceInformationCan> sessionConfig = vc.secret;
+    //: id<BusySessionConfig> sessionConfig = vc.sessionConfig;
+    id<QuantityelligenceInformationCan> sessionConfig = vc.sessionConfig;
     //: UITableView *tableView = vc.tableView;
     UITableView *tableView = vc.tableView;
-    //: FFFInputView *inputView = vc.sessionInputView;
+    //: BusyInputView *inputView = vc.sessionInputView;
     StateView *inputView = vc.sessionInputView;
 
-    //: FFFSessionDataSourceImpl *datasource = [[FFFSessionDataSourceImpl alloc] initWithSession:session config:sessionConfig];
+    //: BusySessionDataSourceImpl *datasource = [[BusySessionDataSourceImpl alloc] initWithSession:session config:sessionConfig];
     NameCenter *datasource = [[NameCenter alloc] initWithName:session comment:sessionConfig];
-    //: FFFSessionLayoutImpl *layout = [[FFFSessionLayoutImpl alloc] initWithSession:session config:sessionConfig];
+    //: BusySessionLayoutImpl *layout = [[BusySessionLayoutImpl alloc] initWithSession:session config:sessionConfig];
     NamePraiseVersion *layout = [[NamePraiseVersion alloc] initWithHideTool:session indexConfig:sessionConfig];
     //: layout.tableView = tableView;
     layout.tableView = tableView;
@@ -94,7 +94,7 @@
     layout.inputView = inputView;
 
 
-    //: _interactor = [[FFFSessionInteractorImpl alloc] initWithSession:session config:sessionConfig];
+    //: _interactor = [[BusySessionInteractorImpl alloc] initWithSession:session config:sessionConfig];
     _interactor = [[FasteningBar alloc] initWithSession:session distance:sessionConfig];
     //: _interactor.delegate = vc;
     _interactor.delegate = vc;
@@ -104,9 +104,9 @@
     _interactor.layout = layout;
 
     //: [layout setDelegate:_interactor];
-    [layout setRestore:_interactor];
+    [layout setDelegate:_interactor];
 
-    //: _tableAdapter = [[FFFSessionTableAdapter alloc] init];
+    //: _tableAdapter = [[BusySessionTableAdapter alloc] init];
     _tableAdapter = [[PinAdapter alloc] init];
     //: _tableAdapter.interactor = _interactor;
     _tableAdapter.interactor = _interactor;

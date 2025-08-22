@@ -18,7 +18,7 @@
 //: - (NSString *)groupTitle;
 - (NSString *)texter;
 //: - (NSString *)memberId;
-- (NSString *)getStarted;
+- (NSString *)conference;
 //: - (id)sortKey;
 - (id)sort;
 

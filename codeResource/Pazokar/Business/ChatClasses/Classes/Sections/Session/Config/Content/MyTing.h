@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFBaseSessionContentConfig.h"
-#import "FFFBaseSessionContentConfig.h"
+//: #import "BusyBaseSessionContentConfig.h"
+#import "BusyBaseSessionContentConfig.h"
 
-//: @interface FFFTipContentConfig : NSObject<CCCSessionContentConfig>
+//: @interface BusyTipContentConfig : NSObject<CCCSessionContentConfig>
 @interface MyTing : NSObject<ViewConfig>
 
 //: @end

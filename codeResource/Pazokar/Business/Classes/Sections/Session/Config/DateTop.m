@@ -65,7 +65,7 @@ Byte mTelevisionTitle[] = {40, 20, 64, 11, 253, 58, 80, 237, 211, 157, 186, 47, 
 // __M_A_C_R_O__
 //: #import "NTESSessionConfig.h"
 #import "DateTop.h"
-//: #import "FFFMediaItem.h"
+//: #import "BusyMediaItem.h"
 #import "ModelMessage.h"
 //: #import "NTESBundleSetting.h"
 #import "EnvironmentSetting.h"
@@ -77,13 +77,13 @@ Byte mTelevisionTitle[] = {40, 20, 64, 11, 253, 58, 80, 237, 211, 157, 186, 47, 
 #import "EnvironmentSetting.h"
 //: #import "NSString+NTES.h"
 #import "NSString+Date.h"
-//: #import "FFFSessionConfig.h"
+//: #import "BusySessionConfig.h"
 #import "QuantityelligenceInformationCan.h"
 //: #import "NTESSessionUtil.h"
 #import "DeviceDate.h"
-//: #import "FFFInputEmoticonManager.h"
+//: #import "BusyInputEmoticonManager.h"
 #import "DeviceManager.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 
 //: @interface NTESSessionConfig()
@@ -179,18 +179,18 @@ Byte mTelevisionTitle[] = {40, 20, 64, 11, 253, 58, 80, 237, 211, 157, 186, 47, 
 }
 
 
-//: - (NSArray<FFFMediaItem *> *)menuItemsWithMessage:(NIMMessage *)message {
+//: - (NSArray<BusyMediaItem *> *)menuItemsWithMessage:(NIMMessage *)message {
 - (NSArray<ModelMessage *> *)shouldMaxSession:(NIMMessage *)message {
     //: NSMutableArray *items = [NSMutableArray array];
     NSMutableArray *items = [NSMutableArray array];
 
-    //: FFFMediaItem *Praise = [FFFMediaItem item:@"onTapMenuItemPraise:"
+    //: BusyMediaItem *Praise = [BusyMediaItem item:@"onTapMenuItemPraise:"
     ModelMessage *Praise = [ModelMessage canSearched:StringFromBottomHandleData(mTelevisionTitle)
                                  //: normalImage:[UIImage imageNamed:@"menu_praise"]
                                  drop:[UIImage imageNamed:StringFromBottomHandleData(dream_centerUrl)]
                                //: selectedImage:nil
                                statuteTitle:nil
-                                       //: title:[FFFLanguageManager getTextWithKey:@"friend_circle_adapter_like"]];
+                                       //: title:[BusyLanguageManager getTextWithKey:@"friend_circle_adapter_like"]];
                                        text:[SendName streetSmart:StringFromBottomHandleData(app_showData)]];
 
 //    ModelMessage *reply = [ModelMessage item:@"onTapMenuItemReply:"
@@ -198,22 +198,22 @@ Byte mTelevisionTitle[] = {40, 20, 64, 11, 253, 58, 80, 237, 211, 157, 186, 47, 
 //                               selectedImage:nil
 //                                       title:LangKey(@"回复")];
 
-    //: FFFMediaItem *copy = [FFFMediaItem item:@"onTapMenuItemCopy:"
+    //: BusyMediaItem *copy = [BusyMediaItem item:@"onTapMenuItemCopy:"
     ModelMessage *copy = [ModelMessage canSearched:StringFromBottomHandleData(dreamEcruMessage)
                                 //: normalImage:[UIImage imageNamed:@"menu_copy"]
                                 drop:[UIImage imageNamed:StringFromBottomHandleData(mainBarMsg)]
                               //: selectedImage:nil
                               statuteTitle:nil
-                                      //: title:[FFFLanguageManager getTextWithKey:@"复制"]];
+                                      //: title:[BusyLanguageManager getTextWithKey:@"复制"]];
                                       text:[SendName streetSmart:@"复制"]];
 
-    //: FFFMediaItem *forword = [FFFMediaItem item:@"onTapMenuItemForword:"
+    //: BusyMediaItem *forword = [BusyMediaItem item:@"onTapMenuItemForword:"
     ModelMessage *forword = [ModelMessage canSearched:StringFromBottomHandleData(dream_toolHockValue)
                                    //: normalImage:[UIImage imageNamed:@"menu_forword"]
                                    drop:[UIImage imageNamed:StringFromBottomHandleData(noti_memberValue)]
                                  //: selectedImage:nil
                                  statuteTitle:nil
-                                         //: title:[FFFLanguageManager getTextWithKey:@"转发"]];
+                                         //: title:[BusyLanguageManager getTextWithKey:@"转发"]];
                                          text:[SendName streetSmart:@"转发"]];
 
 //    ModelMessage *mark = [ModelMessage item:@"onTapMenuItemMark:"
@@ -229,40 +229,40 @@ Byte mTelevisionTitle[] = {40, 20, 64, 11, 253, 58, 80, 237, 211, 157, 186, 47, 
 //                             selectedImage:nil
 //                                     title:pinTitle];
 
-    //: FFFMediaItem *report = [FFFMediaItem item:@"onTapMenuItemReport:"
+    //: BusyMediaItem *report = [BusyMediaItem item:@"onTapMenuItemReport:"
     ModelMessage *report = [ModelMessage canSearched:StringFromBottomHandleData(dream_removeName)
                                   //: normalImage:[UIImage imageNamed:@"menu_report"]
                                   drop:[UIImage imageNamed:StringFromBottomHandleData(app_tightenMsg)]
                                 //: selectedImage:nil
                                 statuteTitle:nil
-                                        //: title:[FFFLanguageManager getTextWithKey:@"report_Content"]];
+                                        //: title:[BusyLanguageManager getTextWithKey:@"report_Content"]];
                                         text:[SendName streetSmart:StringFromBottomHandleData(main_bottomText)]];
 
-    //: FFFMediaItem *translation = [FFFMediaItem item:@"onTapMenuItemTranslation:"
+    //: BusyMediaItem *translation = [BusyMediaItem item:@"onTapMenuItemTranslation:"
     ModelMessage *translation = [ModelMessage canSearched:StringFromBottomHandleData(dreamStrikeData)
                                   //: normalImage:[UIImage imageNamed:@"menu_translation"]
                                   drop:[UIImage imageNamed:StringFromBottomHandleData(show_fromUrl)]
                                 //: selectedImage:nil
                                 statuteTitle:nil
-                                        //: title:[FFFLanguageManager getTextWithKey:@"翻译"]];
+                                        //: title:[BusyLanguageManager getTextWithKey:@"翻译"]];
                                         text:[SendName streetSmart:@"翻译"]];
 
-    //: FFFMediaItem *revoke = [FFFMediaItem item:@"onTapMenuItemRevoke:"
+    //: BusyMediaItem *revoke = [BusyMediaItem item:@"onTapMenuItemRevoke:"
     ModelMessage *revoke = [ModelMessage canSearched:StringFromBottomHandleData(dream_afterTitleUrl)
                                   //: normalImage:[UIImage imageNamed:@"menu_revoke"]
                                   drop:[UIImage imageNamed:StringFromBottomHandleData(appVirusIdent)]
                                 //: selectedImage:nil
                                 statuteTitle:nil
-                                        //: title:[FFFLanguageManager getTextWithKey:@"撤回"]];
+                                        //: title:[BusyLanguageManager getTextWithKey:@"撤回"]];
                                         text:[SendName streetSmart:@"撤回"]];
 
-    //: FFFMediaItem *delete = [FFFMediaItem item:@"onTapMenuItemDelete:"
+    //: BusyMediaItem *delete = [BusyMediaItem item:@"onTapMenuItemDelete:"
     ModelMessage *delete = [ModelMessage canSearched:StringFromBottomHandleData(m_nextOverseeIdent)
                                   //: normalImage:[UIImage imageNamed:@"menu_del"]
                                   drop:[UIImage imageNamed:StringFromBottomHandleData(show_fullValue)]
                                 //: selectedImage:nil
                                 statuteTitle:nil
-                                        //: title:[FFFLanguageManager getTextWithKey:@"删除"]];
+                                        //: title:[BusyLanguageManager getTextWithKey:@"删除"]];
                                         text:[SendName streetSmart:@"删除"]];
 
 //    ModelMessage *mutiSelect = [ModelMessage item:@"onTapMenuItemMutiSelect:"
@@ -349,7 +349,7 @@ Byte mTelevisionTitle[] = {40, 20, 64, 11, 253, 58, 80, 237, 211, 157, 186, 47, 
     {
         //: NSString * ID = [NSString stringWithFormat:NIMKitQuickCommentFormat, [index integerValue]];
         NSString * ID = [NSString stringWithFormat:kPanPath, [index integerValue]];
-        //: NIMInputEmoticon *item = [[FFFInputEmoticonManager sharedManager] emoticonByID:ID];
+        //: NIMInputEmoticon *item = [[BusyInputEmoticonManager sharedManager] emoticonByID:ID];
         CityCenterWith *item = [[DeviceManager history] pagingTing:ID];
         //: if (item)
         if (item)
@@ -373,13 +373,13 @@ Byte mTelevisionTitle[] = {40, 20, 64, 11, 253, 58, 80, 237, 211, 157, 186, 47, 
 - (NSArray<NSNumber *> *)curContainer{
     //: return @[
     return @[
-//        @(FFFInputBarItemTypeMore),
-//        @(FFFInputBarItemTypeEmoticon),
-//             @(FFFInputBarItemTypeVoice),
-             //: @(FFFInputBarItemTypeTextAndRecord),
-             @(FFFInputBarItemTypeTextAndRecord),
-        //: @(FFFInputBarItemTypeSend),
-        @(FFFInputBarItemTypeSend),
+//        @(BusyInputBarItemTypeMore),
+//        @(BusyInputBarItemTypeEmoticon),
+//             @(BusyInputBarItemTypeVoice),
+             //: @(BusyInputBarItemTypeTextAndRecord),
+             @(BusyInputBarItemTypeTextAndRecord),
+        //: @(BusyInputBarItemTypeSend),
+        @(BusyInputBarItemTypeSend),
             //: ];
             ];
 }

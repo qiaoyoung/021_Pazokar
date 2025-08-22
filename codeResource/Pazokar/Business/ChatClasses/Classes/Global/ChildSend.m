@@ -326,11 +326,11 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitConfig.h"
+//: #import "BusyKitConfig.h"
 #import "ChildSend.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
-//: #import "FFFMediaItem.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
+//: #import "BusyMediaItem.h"
 #import "ModelMessage.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
@@ -339,7 +339,7 @@
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @interface FFFKitSettings()
+//: @interface BusyKitSettings()
 @interface ImageTitle()
 {
     //: BOOL _isRight;
@@ -353,7 +353,7 @@
 @end
 
 
-//: @implementation FFFKitConfig
+//: @implementation BusyKitConfig
 @implementation ChildSend
 
 //: - (instancetype) init
@@ -374,31 +374,31 @@
 //: - (NSArray *)defaultMediaItems
 - (NSArray *)down
 {
-    //: return @[[FFFMediaItem item:@"onTapMediaItemPicture:"
+    //: return @[[BusyMediaItem item:@"onTapMediaItemPicture:"
     return @[[ModelMessage canSearched:[PotatoData sharedInstance].m_ladUrl
            //: normalImage:[UIImage imageNamed:@"bk_media_picture_normal"]
            drop:[UIImage imageNamed:[PotatoData sharedInstance].userVoiceKey]
          //: selectedImage:[UIImage imageNamed:@"bk_media_picture_normal"]
          statuteTitle:[UIImage imageNamed:[PotatoData sharedInstance].userVoiceKey]
-                 //: title:[FFFLanguageManager getTextWithKey:@"message_send_album"]],//@"相册".
+                 //: title:[BusyLanguageManager getTextWithKey:@"message_send_album"]],//@"相册".
                  text:[SendName streetSmart:[PotatoData sharedInstance].dreamFramePath]],//@"相册".
 
-    //: [FFFMediaItem item:@"onTapMediaItemShoot:"
+    //: [BusyMediaItem item:@"onTapMediaItemShoot:"
     [ModelMessage canSearched:[PotatoData sharedInstance].mWeepValue
            //: normalImage:[UIImage imageNamed:@"bk_media_shoot_normal"]
            drop:[UIImage imageNamed:[PotatoData sharedInstance].mGateKey]
          //: selectedImage:[UIImage imageNamed:@"bk_media_shoot_normal"]
          statuteTitle:[UIImage imageNamed:[PotatoData sharedInstance].mGateKey]
-                 //: title:[FFFLanguageManager getTextWithKey:@"message_send_camera"]],//@"拍摄".
+                 //: title:[BusyLanguageManager getTextWithKey:@"message_send_camera"]],//@"拍摄".
                  text:[SendName streetSmart:[PotatoData sharedInstance].app_enemyValue]],//@"拍摄".
 
-    //: [FFFMediaItem item:@"onTapMediaItemLocation:"
+    //: [BusyMediaItem item:@"onTapMediaItemLocation:"
     [ModelMessage canSearched:[PotatoData sharedInstance].dream_messageIdent
            //: normalImage:[UIImage imageNamed:@"bk_media_position_normal"]
            drop:[UIImage imageNamed:[PotatoData sharedInstance].dreamDetectId]
          //: selectedImage:[UIImage imageNamed:@"bk_media_position_normal"]
          statuteTitle:[UIImage imageNamed:[PotatoData sharedInstance].dreamDetectId]
-                 //: title:[FFFLanguageManager getTextWithKey:@"Audios"]],//@"位置".
+                 //: title:[BusyLanguageManager getTextWithKey:@"Audios"]],//@"位置".
                  text:[SendName streetSmart:[PotatoData sharedInstance].app_insteadStr]],//@"位置".
 
     //: ];
@@ -413,13 +413,13 @@
     //: if (message.messageType == NIMMessageTypeText)
     if (message.messageType == NIMMessageTypeText)
     {
-        //: [menuItems addObject:[FFFMediaItem item:@"onTapMenuItemCopy:"
+        //: [menuItems addObject:[BusyMediaItem item:@"onTapMenuItemCopy:"
         [menuItems addObject:[ModelMessage canSearched:[PotatoData sharedInstance].dreamSirIdent
                                     //: normalImage:[UIImage imageNamed:@"bk_media_picture_normal"]
                                     drop:[UIImage imageNamed:[PotatoData sharedInstance].userVoiceKey]
                                   //: selectedImage:[UIImage imageNamed:@"bk_media_picture_pressed"]
                                   statuteTitle:[UIImage imageNamed:[PotatoData sharedInstance].noti_eatingId]
-                                          //: title:[FFFLanguageManager getTextWithKey:@"复制"]]];
+                                          //: title:[BusyLanguageManager getTextWithKey:@"复制"]]];
                                           text:[SendName streetSmart:@"复制"]]];
     }
 
@@ -449,7 +449,7 @@
     _messageLimit = 20;
     //: _recordMaxDuration = 60.f;
     _recordMaxDuration = 60.f;
-    //: _placeholder = [FFFLanguageManager getTextWithKey:@"message_please_enter_content"];
+    //: _placeholder = [BusyLanguageManager getTextWithKey:@"message_please_enter_content"];
     _placeholder = [SendName streetSmart:[PotatoData sharedInstance].k_programmingUrl];//@"请输入消息".;
     //: _inputMaxLength = 1000;
     _inputMaxLength = 1000;
@@ -465,16 +465,16 @@
     _avatarType = NIMKitAvatarTypeRounded;
     //: _cellBackgroundColor = [UIColor colorWithRed:((float)((0xE4E7EC & 0xFF0000) >> 16))/255.0 green:((float)((0xE4E7EC & 0x00FF00) >> 8))/255.0 blue:((float)(0xE4E7EC & 0x0000FF))/255.0 alpha:1.0];
     _cellBackgroundColor = [UIColor colorWithRed:((float)((0xE4E7EC & 0xFF0000) >> 16))/255.0 green:((float)((0xE4E7EC & 0x00FF00) >> 8))/255.0 blue:((float)(0xE4E7EC & 0x0000FF))/255.0 alpha:1.0];
-    //: _leftBubbleSettings = [[FFFKitSettings alloc] init:NO];
+    //: _leftBubbleSettings = [[BusyKitSettings alloc] init:NO];
     _leftBubbleSettings = [[ImageTitle alloc] initCellView:NO];
-    //: _rightBubbleSettings = [[FFFKitSettings alloc] init:YES];
+    //: _rightBubbleSettings = [[BusyKitSettings alloc] init:YES];
     _rightBubbleSettings = [[ImageTitle alloc] initCellView:YES];
 }
 
-//: - (FFFKitSetting *)setting:(NIMMessage *)message
+//: - (BusyKitSetting *)setting:(NIMMessage *)message
 - (GreenSetting *)tool:(NIMMessage *)message
 {
-    //: FFFKitSettings *settings = message.isOutgoingMsg? self.rightBubbleSettings : self.leftBubbleSettings;
+    //: BusyKitSettings *settings = message.isOutgoingMsg? self.rightBubbleSettings : self.leftBubbleSettings;
     ImageTitle *settings = message.isOutgoingMsg? self.rightBubbleSettings : self.leftBubbleSettings;
     //: switch (message.messageType) {
     switch (message.messageType) {
@@ -551,10 +551,10 @@
     return settings.unsupportSetting;
 }
 
-//: - (FFFKitSetting *)repliedSetting:(NIMMessage *)message
+//: - (BusyKitSetting *)repliedSetting:(NIMMessage *)message
 - (GreenSetting *)system:(NIMMessage *)message
 {
-    //: FFFKitSettings *settings = message.isOutgoingMsg? self.rightBubbleSettings : self.leftBubbleSettings;
+    //: BusyKitSettings *settings = message.isOutgoingMsg? self.rightBubbleSettings : self.leftBubbleSettings;
     ImageTitle *settings = message.isOutgoingMsg? self.rightBubbleSettings : self.leftBubbleSettings;
     //: return settings.repliedSetting;
     return settings.repliedSetting;
@@ -564,7 +564,7 @@
 @end
 
 
-//: @implementation FFFKitSettings
+//: @implementation BusyKitSettings
 @implementation ImageTitle
 
 //: - (instancetype)init:(BOOL)isRight
@@ -620,7 +620,7 @@
 //: - (void)applyDefaultRepliedSettings
 - (void)practice
 {
-    //: _repliedSetting = [[FFFKitSetting alloc] init];
+    //: _repliedSetting = [[BusyKitSetting alloc] init];
     _repliedSetting = [[GreenSetting alloc] init];
     //: _repliedSetting.contentInsets = _isRight? UIEdgeInsetsFromString(@"{8,12,8,12}") : UIEdgeInsetsFromString(@"{8,12,8,12}");
     _repliedSetting.contentInsets = _isRight? UIEdgeInsetsFromString([PotatoData sharedInstance].dream_recentMsg) : UIEdgeInsetsFromString([PotatoData sharedInstance].dream_recentMsg);
@@ -635,7 +635,7 @@
 //: - (void)applyDefaultTextSettings
 - (void)utilisation
 {
-    //: _textSetting = [[FFFKitSetting alloc] init:_isRight];
+    //: _textSetting = [[BusyKitSetting alloc] init:_isRight];
     _textSetting = [[GreenSetting alloc] initLieAccount:_isRight];
     //: _textSetting.contentInsets = _isRight? UIEdgeInsetsFromString(@"{8,12,8,12}") : UIEdgeInsetsFromString(@"{8,12,8,12}");
     _textSetting.contentInsets = _isRight? UIEdgeInsetsFromString([PotatoData sharedInstance].dream_recentMsg) : UIEdgeInsetsFromString([PotatoData sharedInstance].dream_recentMsg);
@@ -650,7 +650,7 @@
 //: - (void)applyDefaultAudioSettings
 - (void)info
 {
-    //: _audioSetting = [[FFFKitSetting alloc] init:_isRight];
+    //: _audioSetting = [[BusyKitSetting alloc] init:_isRight];
     _audioSetting = [[GreenSetting alloc] initLieAccount:_isRight];
     //: _audioSetting.contentInsets = _isRight? UIEdgeInsetsFromString(@"{8,12,8,12}") : UIEdgeInsetsFromString(@"{8,12,8,12}");
     _audioSetting.contentInsets = _isRight? UIEdgeInsetsFromString([PotatoData sharedInstance].dream_recentMsg) : UIEdgeInsetsFromString([PotatoData sharedInstance].dream_recentMsg);
@@ -665,7 +665,7 @@
 //: - (void)applyDefaultVideoSettings
 - (void)table
 {
-    //: _videoSetting = [[FFFKitSetting alloc] init:_isRight];
+    //: _videoSetting = [[BusyKitSetting alloc] init:_isRight];
     _videoSetting = [[GreenSetting alloc] initLieAccount:_isRight];
     //: _videoSetting.contentInsets = _isRight? UIEdgeInsetsFromString(@"{3,3,3,8}") : UIEdgeInsetsFromString(@"{3,8,3,3}");
     _videoSetting.contentInsets = _isRight? UIEdgeInsetsFromString([PotatoData sharedInstance].app_neighborhoodStr) : UIEdgeInsetsFromString([PotatoData sharedInstance].show_haoTitle);
@@ -678,7 +678,7 @@
 //: - (void)applyDefaultFileSettings
 - (void)recent
 {
-    //: _fileSetting = [[FFFKitSetting alloc] init:_isRight];
+    //: _fileSetting = [[BusyKitSetting alloc] init:_isRight];
     _fileSetting = [[GreenSetting alloc] initLieAccount:_isRight];
     //: _fileSetting.contentInsets = _isRight? UIEdgeInsetsFromString(@"{3,3,3,8}") : UIEdgeInsetsFromString(@"{3,8,3,3}");
     _fileSetting.contentInsets = _isRight? UIEdgeInsetsFromString([PotatoData sharedInstance].app_neighborhoodStr) : UIEdgeInsetsFromString([PotatoData sharedInstance].show_haoTitle);
@@ -691,7 +691,7 @@
 //: - (void)applyDefaultImageSettings
 - (void)compartment
 {
-    //: _imageSetting = [[FFFKitSetting alloc] init:_isRight];
+    //: _imageSetting = [[BusyKitSetting alloc] init:_isRight];
     _imageSetting = [[GreenSetting alloc] initLieAccount:_isRight];
     //: _imageSetting.contentInsets = _isRight? UIEdgeInsetsFromString(@"{3,3,3,8}") : UIEdgeInsetsFromString(@"{3,8,3,3}");
     _imageSetting.contentInsets = _isRight? UIEdgeInsetsFromString([PotatoData sharedInstance].app_neighborhoodStr) : UIEdgeInsetsFromString([PotatoData sharedInstance].show_haoTitle);
@@ -702,7 +702,7 @@
 //: - (void)applyDefaultLocationSettings
 - (void)session
 {
-    //: _locationSetting = [[FFFKitSetting alloc] init:_isRight];
+    //: _locationSetting = [[BusyKitSetting alloc] init:_isRight];
     _locationSetting = [[GreenSetting alloc] initLieAccount:_isRight];
     //: _locationSetting.contentInsets = _isRight? UIEdgeInsetsFromString(@"{3,3,3,8}") : UIEdgeInsetsFromString(@"{3,8,3,3}");
     _locationSetting.contentInsets = _isRight? UIEdgeInsetsFromString([PotatoData sharedInstance].app_neighborhoodStr) : UIEdgeInsetsFromString([PotatoData sharedInstance].show_haoTitle);
@@ -717,7 +717,7 @@
 //: - (void)applyDefaultTipSettings
 - (void)with
 {
-    //: _tipSetting = [[FFFKitSetting alloc] init:_isRight];
+    //: _tipSetting = [[BusyKitSetting alloc] init:_isRight];
     _tipSetting = [[GreenSetting alloc] initLieAccount:_isRight];
     //: _tipSetting.contentInsets = UIEdgeInsetsZero;
     _tipSetting.contentInsets = UIEdgeInsetsZero;
@@ -738,7 +738,7 @@
 //: - (void)applyDefaultRtcCallRecordSettings
 - (void)display
 {
-    //: _rtcCallRecordSetting = [[FFFKitSetting alloc] init:_isRight];
+    //: _rtcCallRecordSetting = [[BusyKitSetting alloc] init:_isRight];
     _rtcCallRecordSetting = [[GreenSetting alloc] initLieAccount:_isRight];
     //: _rtcCallRecordSetting.contentInsets = _isRight? UIEdgeInsetsFromString(@"{9,11,9,15}") : UIEdgeInsetsFromString(@"{9,15,9,9}");
     _rtcCallRecordSetting.contentInsets = _isRight? UIEdgeInsetsFromString([PotatoData sharedInstance].kAggressiveUrl) : UIEdgeInsetsFromString([PotatoData sharedInstance].user_builderGateFormat);
@@ -754,7 +754,7 @@
 //: - (void)applyDefaultUnsupportSettings
 - (void)onImage
 {
-    //: _unsupportSetting = [[FFFKitSetting alloc] init:_isRight];
+    //: _unsupportSetting = [[BusyKitSetting alloc] init:_isRight];
     _unsupportSetting = [[GreenSetting alloc] initLieAccount:_isRight];
     //: _unsupportSetting.contentInsets = _isRight? UIEdgeInsetsFromString(@"{10,10,10,10}") : UIEdgeInsetsFromString(@"{10,10,10,10}");
     _unsupportSetting.contentInsets = _isRight? UIEdgeInsetsFromString([PotatoData sharedInstance].kHydraMessage) : UIEdgeInsetsFromString([PotatoData sharedInstance].kHydraMessage);
@@ -770,7 +770,7 @@
 //: - (void)applyDefaultTeamNotificationSettings
 - (void)message
 {
-    //: _teamNotificationSetting = [[FFFKitSetting alloc] init:_isRight];
+    //: _teamNotificationSetting = [[BusyKitSetting alloc] init:_isRight];
     _teamNotificationSetting = [[GreenSetting alloc] initLieAccount:_isRight];
     //: _teamNotificationSetting.contentInsets = UIEdgeInsetsZero;
     _teamNotificationSetting.contentInsets = UIEdgeInsetsZero;
@@ -791,7 +791,7 @@
 //: - (void)applyDefaultSuperTeamNotificationSettings
 - (void)originName
 {
-    //: _superTeamNotificationSetting = [[FFFKitSetting alloc] init:_isRight];
+    //: _superTeamNotificationSetting = [[BusyKitSetting alloc] init:_isRight];
     _superTeamNotificationSetting = [[GreenSetting alloc] initLieAccount:_isRight];
     //: _superTeamNotificationSetting.contentInsets = UIEdgeInsetsZero;
     _superTeamNotificationSetting.contentInsets = UIEdgeInsetsZero;
@@ -812,7 +812,7 @@
 //: - (void)applyDefaultChatroomNotificationSettings
 - (void)completeAllow
 {
-    //: _chatroomNotificationSetting = [[FFFKitSetting alloc] init:_isRight];
+    //: _chatroomNotificationSetting = [[BusyKitSetting alloc] init:_isRight];
     _chatroomNotificationSetting = [[GreenSetting alloc] initLieAccount:_isRight];
     //: _chatroomNotificationSetting.contentInsets = UIEdgeInsetsZero;
     _chatroomNotificationSetting.contentInsets = UIEdgeInsetsZero;
@@ -833,7 +833,7 @@
 //: - (void)applyDefaultNetcallNotificationSettings
 - (void)withInput
 {
-    //: _netcallNotificationSetting = [[FFFKitSetting alloc] init:_isRight];
+    //: _netcallNotificationSetting = [[BusyKitSetting alloc] init:_isRight];
     _netcallNotificationSetting = [[GreenSetting alloc] initLieAccount:_isRight];
     //: _netcallNotificationSetting.contentInsets = _isRight? UIEdgeInsetsFromString(@"{11,11,9,15}") : UIEdgeInsetsFromString(@"{11,15,9,9}");
     _netcallNotificationSetting.contentInsets = _isRight? UIEdgeInsetsFromString([PotatoData sharedInstance].showRedFormat) : UIEdgeInsetsFromString([PotatoData sharedInstance].mainCitizenshipPath);

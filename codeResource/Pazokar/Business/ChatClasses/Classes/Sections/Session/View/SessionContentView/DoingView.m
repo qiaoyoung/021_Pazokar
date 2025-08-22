@@ -78,18 +78,18 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionFileTransContentView.h"
+//: #import "BusySessionFileTransContentView.h"
 #import "DoingView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @interface FFFSessionFileTransContentView()
+//: @interface BusySessionFileTransContentView()
 @interface DoingView()
 
 //: @property (nonatomic,strong) UIImageView *imageView;
@@ -110,7 +110,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFSessionFileTransContentView
+//: @implementation BusySessionFileTransContentView
 @implementation DoingView
 
 //: - (instancetype)initSessionMessageContentView{
@@ -166,7 +166,7 @@ typedef struct {
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)data{
+//: - (void)refresh:(BusyMessageModel *)data{
 - (void)messagePress:(MoreModel *)data{
     //: [super refresh:data];
     [super messagePress:data];
@@ -279,9 +279,9 @@ typedef struct {
 //: - (void)onTouchUpInside:(id)sender
 - (void)objects:(id)sender
 {
-    //: FFFKitEvent *event = [[FFFKitEvent alloc] init];
+    //: BusyKitEvent *event = [[BusyKitEvent alloc] init];
     DirectionEvent *event = [[DirectionEvent alloc] init];
-    //: event.eventName = FFFKitEventNameTapContent;
+    //: event.eventName = BusyKitEventNameTapContent;
     event.eventName = notiMessageId;
     //: event.messageModel = self.model;
     event.messageModel = self.model;

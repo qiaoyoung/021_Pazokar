@@ -9,21 +9,21 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFCommonTableDelegate.h"
+//: #import "BusyCommonTableDelegate.h"
 #import "MessageDelegate.h"
-//: #import "FFFCommonTableData.h"
-#import "FFFCommonTableData.h"
-//: #import "FFFCommonTableViewCell.h"
+//: #import "BusyCommonTableData.h"
+#import "BusyCommonTableData.h"
+//: #import "BusyCommonTableViewCell.h"
 #import "MediaApp.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 
 //: static NSString *DefaultTableCell = @"UITableViewCell";
 static NSString *app_kitPath = @"UITableViewCell";
 
-//: @interface FFFCommonTableDelegate()
+//: @interface BusyCommonTableDelegate()
 @interface MessageDelegate()
 
 //: @property (nonatomic,copy) NSArray *(^NTESDataReceiver)(void);
@@ -32,7 +32,7 @@ static NSString *app_kitPath = @"UITableViewCell";
 //: @end
 @end
 
-//: @implementation FFFCommonTableDelegate
+//: @implementation BusyCommonTableDelegate
 @implementation MessageDelegate
 
 //: - (instancetype) initWithTableData:(NSArray *(^)(void))data{
@@ -107,7 +107,7 @@ static NSString *app_kitPath = @"UITableViewCell";
         [self by:tableRow eigenvalueOfASquareMatrix_strong:defaultCell];
     //: }else{
     }else{
-        //: [(id<FFFCommonTableViewCell>)cell refreshData:tableRow tableView:tableView];
+        //: [(id<BusyCommonTableViewCell>)cell refreshData:tableRow tableView:tableView];
         [(id<MediaApp>)cell should:tableRow position_strong:tableView];
     }
     //: cell.accessoryType = tableRow.showAccessory ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;

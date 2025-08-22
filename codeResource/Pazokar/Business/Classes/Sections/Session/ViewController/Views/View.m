@@ -503,7 +503,7 @@
         _unitLabel.textColor = [UIColor whiteColor];
         //: _unitLabel.font = [UIFont systemFontOfSize:15];
         _unitLabel.font = [UIFont systemFontOfSize:15];
-        //: _unitLabel.text = [FFFLanguageManager getTextWithKey:@"team_red_adapter_yuan"];
+        //: _unitLabel.text = [BusyLanguageManager getTextWithKey:@"team_red_adapter_yuan"];
         _unitLabel.text = [SendName streetSmart:[BoarData sharedInstance].notiShouldStr];
         //: [_backView addSubview:_unitLabel];
         [_backView addSubview:_unitLabel];
@@ -760,7 +760,7 @@
 -(void)smart:(NSString *)userID{
     //: NIMUser *me = [[NIMSDK sharedSDK].userManager userInfo:userID];
     NIMUser *me = [[NIMSDK sharedSDK].userManager userInfo:userID];
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:userID option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:userID option:nil];
     Info *info = [[Case pastTop] consumer:userID message:nil];
     //: NSString *headerUrl = me.userInfo.avatarUrl;
     NSString *headerUrl = me.userInfo.avatarUrl;

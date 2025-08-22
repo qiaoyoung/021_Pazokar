@@ -303,7 +303,7 @@ typedef struct {
 // __DEBUG__
 // __CLOSE_PRINT__
 //
-//  FFFCommonTableData.m
+//  BusyCommonTableData.m
 //  NIM
 //
 //  Created by chris on 15/6/26.
@@ -311,8 +311,8 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFCommonTableData.h"
-#import "FFFCommonTableData.h"
+//: #import "BusyCommonTableData.h"
+#import "BusyCommonTableData.h"
 
 //: @implementation NIMCommonTableSection
 @implementation ContentTagSection

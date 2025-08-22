@@ -15,11 +15,11 @@
 //: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
-//: @interface FFFLanguageManager : NSObject
+//: @interface BusyLanguageManager : NSObject
 @interface SendName : NSObject
 //: @property (nonatomic,strong) NSMutableDictionary *langDict;
 @property (nonatomic,strong) NSMutableDictionary *langDict;
-//: + (FFFLanguageManager *)shareInstance;
+//: + (BusyLanguageManager *)shareInstance;
 + (SendName *)along;
 //: - (void)setLanguagre:(NSString *)langType;
 - (void)setMagnitudeernationality:(NSString *)langType;

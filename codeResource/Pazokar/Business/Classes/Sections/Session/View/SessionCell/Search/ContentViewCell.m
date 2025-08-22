@@ -18,7 +18,7 @@
 #import "DeviceDate.h"
 //: #import "UIView+NTES.h"
 #import "UIView+Date.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 
 //: CGFloat SearchCellTitleFontSize = 13.f;
@@ -51,7 +51,7 @@ CGFloat dream_kitId = 15.f; //cell的高度是由文本高度决定的。防止�
 //: @interface NTESSearchMessageContentCell()
 @interface ContentViewCell()
 
-//: @property (nonatomic,strong) FFFAvatarImageView *avatar;
+//: @property (nonatomic,strong) BusyAvatarImageView *avatar;
 @property (nonatomic,strong) CustomFormatView *avatar;
 
 //: @property (nonatomic,strong) UILabel *titleLabel;
@@ -78,7 +78,7 @@ CGFloat dream_kitId = 15.f; //cell的高度是由文本高度决定的。防止�
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     //: if (self) {
     if (self) {
-        //: _avatar = [[FFFAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+        //: _avatar = [[BusyAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
         _avatar = [[CustomFormatView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
         //: [self.contentView addSubview:_avatar];
         [self.contentView addSubview:_avatar];
@@ -115,7 +115,7 @@ CGFloat dream_kitId = 15.f; //cell的高度是由文本高度决定的。防止�
     self.object = object;
     //: NIMMessage *message = object.message;
     NIMMessage *message = object.message;
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:message.from option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:message.from option:nil];
     Info *info = [[Case pastTop] consumer:message.from message:nil];
     //: NSURL *avatarURL;
     NSURL *avatarURL;

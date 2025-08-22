@@ -12,10 +12,10 @@
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
-//: @interface FFFPinyinConverter : NSObject
+//: @interface BusyPinyinConverter : NSObject
 @interface SeeConverter : NSObject
 
-//: + (FFFPinyinConverter *)sharedInstance;
+//: + (BusyPinyinConverter *)sharedInstance;
 + (SeeConverter *)remove;
 
 //: - (NSString *)toPinyin: (NSString *)source;

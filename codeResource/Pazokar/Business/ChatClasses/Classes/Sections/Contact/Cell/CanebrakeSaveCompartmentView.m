@@ -129,9 +129,9 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFContactDataCell.h"
+//: #import "BusyContactDataCell.h"
 #import "CanebrakeSaveCompartmentView.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
@@ -140,13 +140,13 @@ typedef struct {
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
 
-//: @interface FFFContactDataCell()
+//: @interface BusyContactDataCell()
 @interface CanebrakeSaveCompartmentView()
 
 //: @end
 @end
 
-//: @implementation FFFContactDataCell
+//: @implementation BusyContactDataCell
 @implementation CanebrakeSaveCompartmentView
 
 //: - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -166,7 +166,7 @@ typedef struct {
         [self.contentView addSubview:bgView];
 
 
-        //: _avatarImageView = [[FFFAvatarImageView alloc] initWithFrame:CGRectMake(15, 12, 48, 48)];
+        //: _avatarImageView = [[BusyAvatarImageView alloc] initWithFrame:CGRectMake(15, 12, 48, 48)];
         _avatarImageView = [[CustomFormatView alloc] initWithFrame:CGRectMake(15, 12, 48, 48)];
         //: [_avatarImageView addTarget:self action:@selector(onPressAvatar:) forControlEvents:UIControlEventTouchUpInside];
         [_avatarImageView addTarget:self action:@selector(offLoad:) forControlEvents:UIControlEventTouchUpInside];
@@ -226,7 +226,7 @@ typedef struct {
     [self replyName:member.begin];
     //: self.memberId = [member memberId];
     self.memberId = [member conference];
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:self.memberId option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:self.memberId option:nil];
     Info *info = [[Case pastTop] consumer:self.memberId message:nil];
     //: [self refreshAvatar:info];
     [self byGray:info];
@@ -238,7 +238,7 @@ typedef struct {
     [self replyName:team.teamName];
     //: self.memberId = [team teamId];
     self.memberId = [team teamId];
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByTeam:self.memberId option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByTeam:self.memberId option:nil];
     Info *info = [[Case pastTop] controlOption:self.memberId my:nil];
     //: [self refreshAvatar:info];
     [self byGray:info];
@@ -250,7 +250,7 @@ typedef struct {
     self.labName.text = title;
 }
 
-//: - (void)refreshAvatar:(FFFKitInfo *)info{
+//: - (void)refreshAvatar:(BusyKitInfo *)info{
 - (void)byGray:(Info *)info{
     //: NSURL *url = info.avatarUrlString ? [NSURL URLWithString:info.avatarUrlString] : nil;
     NSURL *url = info.avatarUrlString ? [NSURL URLWithString:info.avatarUrlString] : nil;

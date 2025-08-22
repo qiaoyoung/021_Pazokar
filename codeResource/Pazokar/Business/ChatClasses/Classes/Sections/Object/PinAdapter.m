@@ -154,11 +154,11 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionTableAdapter.h"
+//: #import "BusySessionTableAdapter.h"
 #import "PinAdapter.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
-//: #import "FFFMessageCellFactory.h"
+//: #import "BusyMessageCellFactory.h"
 #import "MessageFactory.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
@@ -167,16 +167,16 @@
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
 
-//: @interface FFFSessionTableAdapter()
+//: @interface BusySessionTableAdapter()
 @interface PinAdapter()
 
-//: @property (nonatomic,strong) FFFMessageCellFactory *cellFactory;
+//: @property (nonatomic,strong) BusyMessageCellFactory *cellFactory;
 @property (nonatomic,strong) MessageFactory *cellFactory;
 
 //: @end
 @end
 
-//: @implementation FFFSessionTableAdapter
+//: @implementation BusySessionTableAdapter
 @implementation PinAdapter
 
 //: - (instancetype)init
@@ -186,7 +186,7 @@
     self = [super init];
     //: if (self) {
     if (self) {
-        //: _cellFactory = [[FFFMessageCellFactory alloc] init];
+        //: _cellFactory = [[BusyMessageCellFactory alloc] init];
         _cellFactory = [[MessageFactory alloc] init];
     }
     //: return self;
@@ -214,20 +214,20 @@
     UITableViewCell *cell = nil;
     //: id model = [[self.interactor items] objectAtIndex:indexPath.row];
     id model = [[self.interactor view] objectAtIndex:indexPath.row];
-    //: if ([model isKindOfClass:[FFFMessageModel class]]) {
+    //: if ([model isKindOfClass:[BusyMessageModel class]]) {
     if ([model isKindOfClass:[MoreModel class]]) {
         //: cell = [self.cellFactory cellInTable:tableView
         cell = [self.cellFactory progressRange:tableView
                                    //: forMessageMode:model];
                                    message:model];
-        //: [(FFFMessageCell *)cell setDelegate:self.delegate];
+        //: [(BusyMessageCell *)cell setDelegate:self.delegate];
         [(CompartmentViewCell *)cell setDelegate:self.delegate];
         //: [self.interactor willDisplayMessageModel:model];
         [self.interactor child:model];
-        //: [(FFFMessageCell *)cell refreshData:model];
+        //: [(BusyMessageCell *)cell refreshData:model];
         [(CompartmentViewCell *)cell pullSession:model];
     }
-    //: else if ([model isKindOfClass:[FFFTimestampModel class]])
+    //: else if ([model isKindOfClass:[BusyTimestampModel class]])
     else if ([model isKindOfClass:[AppRow class]])
     {
         //: cell = [self.cellFactory cellInTable:tableView
@@ -277,10 +277,10 @@
     CGFloat cellHeight = 0;
     //: id modelInArray = [[self.interactor items] objectAtIndex:indexPath.row];
     id modelInArray = [[self.interactor view] objectAtIndex:indexPath.row];
-    //: if ([modelInArray isKindOfClass:[FFFMessageModel class]])
+    //: if ([modelInArray isKindOfClass:[BusyMessageModel class]])
     if ([modelInArray isKindOfClass:[MoreModel class]])
     {
-        //: FFFMessageModel *model = (FFFMessageModel *)modelInArray;
+        //: BusyMessageModel *model = (BusyMessageModel *)modelInArray;
         MoreModel *model = (MoreModel *)modelInArray;
 
         // 撤回的消息 发送自定义消息
@@ -381,7 +381,7 @@
         }
 
         //: if ([model needShowReplyCountContent] && model.childMessagesCount > 0)
-        if ([model info] && model.childMessagesCount > 0)
+        if ([model needShowReplyCountContent] && model.childMessagesCount > 0)
         {
             //: cellHeight += 25;
             cellHeight += 25;
@@ -393,10 +393,10 @@
 
 
     }
-    //: else if ([modelInArray isKindOfClass:[FFFTimestampModel class]])
+    //: else if ([modelInArray isKindOfClass:[BusyTimestampModel class]])
     else if ([modelInArray isKindOfClass:[AppRow class]])
     {
-        //: cellHeight = [(FFFTimestampModel *)modelInArray height];
+        //: cellHeight = [(BusyTimestampModel *)modelInArray height];
         cellHeight = [(AppRow *)modelInArray height];
     }
     //: else

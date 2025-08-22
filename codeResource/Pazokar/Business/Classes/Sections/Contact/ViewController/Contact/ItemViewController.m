@@ -16,7 +16,7 @@ NSString *StringFromSizeData(SizeData *data);
 //: friend_delete_fail
 SizeData m_showTextContent = (SizeData){182, (Byte []){208, 196, 223, 211, 216, 210, 233, 210, 211, 218, 211, 194, 211, 233, 208, 215, 223, 218, 91}, 18, 154, 158, 1, 54};
 
-//: #FFF6CF
+//: #Busy6CF
 SizeData notiRangeName = (SizeData){203, (Byte []){232, 141, 141, 141, 253, 136, 141, 155}, 7, 253, 48, 185, 219};
 
 //: black_list_activity_black_list_tip
@@ -69,7 +69,7 @@ SizeData appReadKey = (SizeData){32, (Byte []){66, 76, 65, 67, 75, 127, 76, 73, 
 #import "ItemViewController.h"
 //: #import "UIView+Toast.h"
 #import "UIView+Toast.h"
-//: #import "FFFContactSelectViewController.h"
+//: #import "BusyContactSelectViewController.h"
 #import "BrandViewController.h"
 //: #import "UIView+NTES.h"
 #import "UIView+Date.h"
@@ -157,7 +157,7 @@ SizeData appReadKey = (SizeData){32, (Byte []){66, 76, 65, 67, 75, 127, 76, 73, 
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"black_list_activity_black"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"black_list_activity_black"];
     labtitle.text = [SendName streetSmart:StringFromSizeData(&appReadKey)];
     //: [bgView addSubview:labtitle];
     [bgView addSubview:labtitle];
@@ -339,7 +339,7 @@ SizeData appReadKey = (SizeData){32, (Byte []){66, 76, 65, 67, 75, 127, 76, 73, 
             }
         //: }else{
         }else{
-            //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"friend_delete_fail"] duration:2.0f position:CSToastPositionCenter];
+            //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"friend_delete_fail"] duration:2.0f position:CSToastPositionCenter];
             [wself.view makeToast:[SendName streetSmart:StringFromSizeData(&m_showTextContent)] duration:2.0f position:CSToastPositionCenter];
         }
     //: }];
@@ -361,7 +361,7 @@ SizeData appReadKey = (SizeData){32, (Byte []){66, 76, 65, 67, 75, 127, 76, 73, 
     config.filterIds = users;
     //: config.showSelectHeaderview = NO;
     config.showSelectHeaderview = NO;
-    //: FFFContactSelectViewController *vc = [[FFFContactSelectViewController alloc] initWithConfig:config];
+    //: BusyContactSelectViewController *vc = [[BusyContactSelectViewController alloc] initWithConfig:config];
     BrandViewController *vc = [[BrandViewController alloc] initWithMax:config];
     //: vc.delegate = self;
     vc.delegate = self;
@@ -382,7 +382,7 @@ SizeData appReadKey = (SizeData){32, (Byte []){66, 76, 65, 67, 75, 127, 76, 73, 
         [[NIMSDK sharedSDK].userManager addToBlackList:selectedContacts.firstObject completion:^(NSError *error) {
             //: if (!error) {
             if (!error) {
-                //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"group_chat_avatar_activity_add_black_success"] duration:2.0 position:CSToastPositionCenter];
+                //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"group_chat_avatar_activity_add_black_success"] duration:2.0 position:CSToastPositionCenter];
                 [wself.view makeToast:[SendName streetSmart:StringFromSizeData(&k_nameUrl)] duration:2.0 position:CSToastPositionCenter];
                 //: wself.data = wself.myBlackListUser;
                 wself.data = wself.keyUser;
@@ -390,7 +390,7 @@ SizeData appReadKey = (SizeData){32, (Byte []){66, 76, 65, 67, 75, 127, 76, 73, 
                 [wself.tableView reloadData];
             //: }else{
             }else{
-                //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2.0 position:CSToastPositionCenter];
+                //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2.0 position:CSToastPositionCenter];
                 [wself.view makeToast:[SendName streetSmart:StringFromSizeData(&dreamRecordName)] duration:2.0 position:CSToastPositionCenter];
             }
         //: }];
@@ -414,7 +414,7 @@ SizeData appReadKey = (SizeData){32, (Byte []){66, 76, 65, 67, 75, 127, 76, 73, 
     for (NIMUser *user in [NIMSDK sharedSDK].userManager.myBlackList) {
         //: NTESContactDataMember *member = [[NTESContactDataMember alloc] init];
         TextMember *member = [[TextMember alloc] init];
-        //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:user.userId option:nil];
+        //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:user.userId option:nil];
         Info *info = [[Case pastTop] consumer:user.userId message:nil];
         //: member.info = info;
         member.info = info;
@@ -433,7 +433,7 @@ SizeData appReadKey = (SizeData){32, (Byte []){66, 76, 65, 67, 75, 127, 76, 73, 
     if(!_box){
         //: _box = [[UIView alloc]initWithFrame:CGRectMake(0, (44.0f + [UIDevice vg_statusBarHeight]), [[UIScreen mainScreen] bounds].size.width, 26)];
         _box = [[UIView alloc]initWithFrame:CGRectMake(0, (44.0f + [UIDevice statusOrLevel]), [[UIScreen mainScreen] bounds].size.width, 26)];
-        //: _box.backgroundColor = [UIColor colorWithHexString:@"#FFF6CF"];
+        //: _box.backgroundColor = [UIColor colorWithHexString:@"#Busy6CF"];
         _box.backgroundColor = [UIColor status:StringFromSizeData(&notiRangeName)];
 
         //: UIImageView *defImg = [[UIImageView alloc]initWithFrame:CGRectMake(15, 6, 14, 14)];
@@ -450,7 +450,7 @@ SizeData appReadKey = (SizeData){32, (Byte []){66, 76, 65, 67, 75, 127, 76, 73, 
         //: subtitleLabel.textColor = [UIColor colorWithHexString:@"#FF483D"];
         subtitleLabel.textColor = [UIColor status:StringFromSizeData(&show_contentStr)];
 //        subtitleLabel.textAlignment = NSTextAlignmentLeft;
-        //: subtitleLabel.text = [FFFLanguageManager getTextWithKey:@"black_list_activity_black_list_tip"];
+        //: subtitleLabel.text = [BusyLanguageManager getTextWithKey:@"black_list_activity_black_list_tip"];
         subtitleLabel.text = [SendName streetSmart:StringFromSizeData(&appMinContent)];
         //: [_box addSubview:subtitleLabel];
         [_box addSubview:subtitleLabel];
@@ -485,7 +485,7 @@ SizeData appReadKey = (SizeData){32, (Byte []){66, 76, 65, 67, 75, 127, 76, 73, 
         emptyTipLabel.textAlignment = NSTextAlignmentCenter;
         //: [_defView addSubview:emptyTipLabel];
         [_defView addSubview:emptyTipLabel];
-        //: emptyTipLabel.text = [FFFLanguageManager getTextWithKey:@"group_info_activity_without"];
+        //: emptyTipLabel.text = [BusyLanguageManager getTextWithKey:@"group_info_activity_without"];
         emptyTipLabel.text = [SendName streetSmart:StringFromSizeData(&dreamLineValue)];
 
 

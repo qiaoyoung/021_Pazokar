@@ -62,14 +62,14 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFVideoContentConfig.h"
+//: #import "BusyVideoContentConfig.h"
 #import "FormatMarginConfig.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @implementation FFFVideoContentConfig
+//: @implementation BusyVideoContentConfig
 @implementation FormatMarginConfig
 //: - (CGSize)contentSize:(CGFloat)cellWidth message:(NIMMessage *)message
 - (CGSize)read:(CGFloat)cellWidth quantity:(NIMMessage *)message
@@ -109,7 +109,7 @@
 //: - (NSString *)cellContent:(NIMMessage *)message
 - (NSString *)picture:(NIMMessage *)message
 {
-    //: return @"FFFSessionVideoContentView";
+    //: return @"BusySessionVideoContentView";
     return @"IndexSessionContentView";
 }
 

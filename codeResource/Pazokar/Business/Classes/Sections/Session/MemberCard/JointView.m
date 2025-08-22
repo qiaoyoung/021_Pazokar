@@ -124,7 +124,7 @@
 //: - (void)refreshWithModel:(NIMTeamMember *)member
 - (void)common:(NIMTeamMember *)member
 {
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:member.userId option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:member.userId option:nil];
     Info *info = [[Case pastTop] consumer:member.userId message:nil];
     //: self.titleLabel.text = info.showName;
     self.titleLabel.text = info.showName;

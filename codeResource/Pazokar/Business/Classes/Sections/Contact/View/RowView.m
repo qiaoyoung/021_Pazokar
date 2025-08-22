@@ -96,7 +96,7 @@
     //: [self addSubview:_iconImageView];
     [self addSubview:_iconImageView];
 
-    //: _avatar = [[FFFAvatarImageView alloc] init];
+    //: _avatar = [[BusyAvatarImageView alloc] init];
     _avatar = [[CustomFormatView alloc] init];
     //: [self addSubview:_avatar];
     [self addSubview:_avatar];
@@ -143,7 +143,7 @@
 
     //: NIMUser *user = [[NIMSDK sharedSDK].userManager userInfo:user_id];
     NIMUser *user = [[NIMSDK sharedSDK].userManager userInfo:user_id];
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:user_id option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:user_id option:nil];
     Info *info = [[Case pastTop] consumer:user_id message:nil];
 
     //: [_avatar nim_setImageWithURL:[NSURL URLWithString:info.avatarUrlString] placeholderImage:info.avatarImage options:SDWebImageRetryFailed];

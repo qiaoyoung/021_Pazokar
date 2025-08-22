@@ -1,7 +1,7 @@
 // __DEBUG__
 // __CLOSE_PRINT__
 //
-//  FFFInputEmoticonDefine.h
+//  BusyInputEmoticonDefine.h
 // Case
 //
 //  Created by chris.

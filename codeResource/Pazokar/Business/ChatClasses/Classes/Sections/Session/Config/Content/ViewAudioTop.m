@@ -78,12 +78,12 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFAudioContentConfig.h"
+//: #import "BusyAudioContentConfig.h"
 #import "ViewAudioTop.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @implementation FFFAudioContentConfig
+//: @implementation BusyAudioContentConfig
 @implementation ViewAudioTop
 
 //: - (CGSize)contentSize:(CGFloat)cellWidth message:(NIMMessage *)message
@@ -112,7 +112,7 @@ typedef struct {
 //: - (NSString *)cellContent:(NIMMessage *)message
 - (NSString *)picture:(NIMMessage *)message
 {
-    //: return @"FFFSessionAudioContentView";
+    //: return @"BusySessionAudioContentView";
     return @"RowTingView";
 }
 

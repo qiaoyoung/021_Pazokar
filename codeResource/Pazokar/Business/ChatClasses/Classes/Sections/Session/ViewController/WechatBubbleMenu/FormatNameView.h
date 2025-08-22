@@ -15,10 +15,10 @@
 //: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
-//: @interface FFFTextView : UITextView
+//: @interface BusyTextView : UITextView
 @interface FormatNameView : UITextView
 
-//: @property (nonatomic, copy)void (^selectBlock)(FFFMediaItem *item);
+//: @property (nonatomic, copy)void (^selectBlock)(BusyMediaItem *item);
 @property (nonatomic, copy)void (^selectBlock)(ModelMessage *item);
 
 //: @property (nonatomic, copy)void (^praiseSelectBlock)(NSInteger tag);
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 //: @property (nonatomic, copy) NSArray *selectedPartRangeButtons;
 @property (nonatomic, copy) NSArray *selectedPartRangeButtons;
 
-//: @property (nonatomic,weak) id<FFFSessionConfig> config;
+//: @property (nonatomic,weak) id<BusySessionConfig> config;
 @property (nonatomic,weak) id<QuantityelligenceInformationCan> config;
 //: @property (nonatomic,weak) id<NIMInputActionDelegate> actionDelegate;
 @property (nonatomic,weak) id<FuturismDelegate> actionDelegate;

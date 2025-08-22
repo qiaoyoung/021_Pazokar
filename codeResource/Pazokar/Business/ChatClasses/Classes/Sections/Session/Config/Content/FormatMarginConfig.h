@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFBaseSessionContentConfig.h"
-#import "FFFBaseSessionContentConfig.h"
+//: #import "BusyBaseSessionContentConfig.h"
+#import "BusyBaseSessionContentConfig.h"
 
-//: @interface FFFVideoContentConfig : NSObject<CCCSessionContentConfig>
+//: @interface BusyVideoContentConfig : NSObject<CCCSessionContentConfig>
 @interface FormatMarginConfig : NSObject<ViewConfig>
 
 //: @end

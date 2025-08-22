@@ -21,7 +21,7 @@
 //: @end
 @end
 
-//: @interface FFFCreateTeamAnnouncement : UIViewController
+//: @interface BusyCreateTeamAnnouncement : UIViewController
 @interface AnnouncementViewController : UIViewController
 
 //: @property (nonatomic, weak) id<NTESCreateTeamAnnouncementDelegate> delegate;

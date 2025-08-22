@@ -1,7 +1,7 @@
 // __DEBUG__
 // __CLOSE_PRINT__
 //
-//  FFFCellConfig.h
+//  BusyCellConfig.h
 // Case
 //
 //  Created by chris.
@@ -12,12 +12,12 @@
 
 // __M_A_C_R_O__
 
-//: @class FFFSessionMessageContentView;
+//: @class BusySessionMessageContentView;
 @class TextControl;
-//: @class FFFMessageModel;
+//: @class BusyMessageModel;
 @class MoreModel;
 
-//: @protocol FFFCellLayoutConfig <NSObject>
+//: @protocol BusyCellLayoutConfig <NSObject>
 @protocol ParentMargin <NSObject>
 
 //: @optional
@@ -26,107 +26,107 @@
 /**
  * @return 返回message的内容大小
  */
-//: - (CGSize)contentSize:(FFFMessageModel *)model cellWidth:(CGFloat)width;
+//: - (CGSize)contentSize:(BusyMessageModel *)model cellWidth:(CGFloat)width;
 - (CGSize)big:(MoreModel *)model meanSolarDay:(CGFloat)width;
 
 /**
  *  需要构造的cellContent类名
  */
-//: - (NSString *)cellContent:(FFFMessageModel *)model;
+//: - (NSString *)cellContent:(BusyMessageModel *)model;
 - (NSString *)flushCell:(MoreModel *)model;
 
 /**
  *  左对齐的气泡，cell气泡距离整个cell的内间距
  */
-//: - (UIEdgeInsets)cellInsets:(FFFMessageModel *)model;
+//: - (UIEdgeInsets)cellInsets:(BusyMessageModel *)model;
 - (UIEdgeInsets)keeping:(MoreModel *)model;
 
 /**
  *  左对齐的气泡，cell内容距离气泡的内间距，
  */
-//: - (UIEdgeInsets)contentViewInsets:(FFFMessageModel *)model;
+//: - (UIEdgeInsets)contentViewInsets:(BusyMessageModel *)model;
 - (UIEdgeInsets)skip:(MoreModel *)model;
 
 /**
  * @return 返回message的所回复消息内容大小
  */
-//: - (CGSize)replyContentSize:(FFFMessageModel *)model cellWidth:(CGFloat)width;
+//: - (CGSize)replyContentSize:(BusyMessageModel *)model cellWidth:(CGFloat)width;
 - (CGSize)asTitle:(MoreModel *)model show:(CGFloat)width;
 
 /**
  *  需要构造的ReplyContent类名
  */
-//: - (NSString *)replyContent:(FFFMessageModel *)model;
+//: - (NSString *)replyContent:(BusyMessageModel *)model;
 - (NSString *)language:(MoreModel *)model;
 
 /**
  *  左对齐的气泡，cell reply气泡距离整个cell的内间距
  */
-//: - (UIEdgeInsets)replyCellInsets:(FFFMessageModel *)model;
+//: - (UIEdgeInsets)replyCellInsets:(BusyMessageModel *)model;
 - (UIEdgeInsets)clean:(MoreModel *)model;
 
 /**
  *  左对齐的气泡，cell reply内容距离气泡的内间距，
  */
-//: - (UIEdgeInsets)replyContentViewInsets:(FFFMessageModel *)model;
+//: - (UIEdgeInsets)replyContentViewInsets:(BusyMessageModel *)model;
 - (UIEdgeInsets)sinceLocationInsets:(MoreModel *)model;
 
 /**
  *  是否显示头像
  */
-//: - (BOOL)shouldShowAvatar:(FFFMessageModel *)model;
+//: - (BOOL)shouldShowAvatar:(BusyMessageModel *)model;
 - (BOOL)team:(MoreModel *)model;
 
 
 /**
  *  左对齐的气泡，头像控件的 origin 点
  */
-//: - (CGPoint)avatarMargin:(FFFMessageModel *)model;
+//: - (CGPoint)avatarMargin:(BusyMessageModel *)model;
 - (CGPoint)green:(MoreModel *)model;
 
 /**
  *  左对齐的气泡，头像控件的 size
  */
-//: - (CGSize)avatarSize:(FFFMessageModel *)model;
+//: - (CGSize)avatarSize:(BusyMessageModel *)model;
 - (CGSize)session:(MoreModel *)model;
 
 /**
  *  是否显示姓名
  */
-//: - (BOOL)shouldShowNickName:(FFFMessageModel *)model;
+//: - (BOOL)shouldShowNickName:(BusyMessageModel *)model;
 - (BOOL)should:(MoreModel *)model;
 
 /**
  *  左对齐的气泡，昵称控件的 origin 点
  */
-//: - (CGPoint)nickNameMargin:(FFFMessageModel *)model;
+//: - (CGPoint)nickNameMargin:(BusyMessageModel *)model;
 - (CGPoint)writerSTitle:(MoreModel *)model;
 
 
 /**
  *  消息显示在左边
  */
-//: - (BOOL)shouldShowLeft:(FFFMessageModel *)model;
+//: - (BOOL)shouldShowLeft:(BusyMessageModel *)model;
 - (BOOL)model:(MoreModel *)model;
 
 
 /**
  *  需要添加到Cell上的自定义视图
  */
-//: - (NSArray *)customViews:(FFFMessageModel *)model;
+//: - (NSArray *)customViews:(BusyMessageModel *)model;
 - (NSArray *)subViews:(MoreModel *)model;
 
 
 /**
  *  是否开启重试叹号开关
  */
-//: - (BOOL)disableRetryButton:(FFFMessageModel *)model;
+//: - (BOOL)disableRetryButton:(BusyMessageModel *)model;
 - (BOOL)tiddlerHide:(MoreModel *)model;
 
 /**
  * 是否显示气泡背景图
  */
-//: - (BOOL)shouldDisplayBubbleBackground:(FFFMessageModel *)model;
+//: - (BOOL)shouldDisplayBubbleBackground:(BusyMessageModel *)model;
 - (BOOL)text:(MoreModel *)model;
 
 

@@ -128,7 +128,7 @@ typedef struct {
 - (NSString *)userNameShowData {
     /* static */ NSString *userNameShowData = nil;
     if (!userNameShowData) {
-		NSString *origin = @"f0f2e5f8e7f8e5e8cefce8cee4e2f4e3cef8fff7fecefff8f2fa7e";
+		NSString *origin = @"f0f2e5f8e7f8e5e8cefce8cee4e2f4e3cef8Busy7feceBusy8f2fa7e";
 		NSData *data = [TextIdealData TextIdealDataToData:origin];
         StructTextIdealData value = (StructTextIdealData){145, (Byte *)data.bytes, 26, 101, 101, 159};
         userNameShowData = [self StringFromTextIdealData:&value];
@@ -197,12 +197,12 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFRegisterNickNameViewController.h"
+//: #import "BusyRegisterNickNameViewController.h"
 #import "GenerateTapViewController.h"
-//: #import "FFFRegisterAvatarViewController.h"
+//: #import "BusyRegisterAvatarViewController.h"
 #import "AvatarViewController.h"
 
-//: @interface FFFRegisterNickNameViewController ()<UITextFieldDelegate>
+//: @interface BusyRegisterNickNameViewController ()<UITextFieldDelegate>
 @interface GenerateTapViewController ()<UITextFieldDelegate>
 
 //: @property (nonatomic, strong) UIButton *closeBtn;
@@ -239,7 +239,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFRegisterNickNameViewController
+//: @implementation BusyRegisterNickNameViewController
 @implementation GenerateTapViewController
 
 //: - (void)viewDidLoad {
@@ -286,7 +286,7 @@ typedef struct {
     titleLabel.textColor = [UIColor blackColor];
     //: titleLabel.font = [UIFont boldSystemFontOfSize:24];
     titleLabel.font = [UIFont boldSystemFontOfSize:24];
-    //: titleLabel.text = [FFFLanguageManager getTextWithKey:@"activity_my_user_info_nick"];
+    //: titleLabel.text = [BusyLanguageManager getTextWithKey:@"activity_my_user_info_nick"];
     titleLabel.text = [SendName streetSmart:[[TextIdealData sharedInstance] userNameShowData]];
     //: titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -300,7 +300,7 @@ typedef struct {
     self.accountLabel.font = [UIFont systemFontOfSize:14];
     //: self.accountLabel.textColor = [UIColor colorWithHexString:@"#5D5F66"];
     self.accountLabel.textColor = [UIColor status:[[TextIdealData sharedInstance] noti_modeTitle]];
-    //: self.accountLabel.text = [FFFLanguageManager getTextWithKey:@"register_good_nick"];
+    //: self.accountLabel.text = [BusyLanguageManager getTextWithKey:@"register_good_nick"];
     self.accountLabel.text = [SendName streetSmart:[[TextIdealData sharedInstance] mMessageChildKey]];
     //: self.accountLabel.textAlignment = NSTextAlignmentCenter;
     self.accountLabel.textAlignment = NSTextAlignmentCenter;
@@ -338,7 +338,7 @@ typedef struct {
     self.accountTextfield.font = [UIFont systemFontOfSize:16];
     //: self.accountTextfield.textColor = [UIColor colorWithHexString:@"#333333"];
     self.accountTextfield.textColor = [UIColor status:[[TextIdealData sharedInstance] kFullListId]];
-    //: self.accountTextfield.placeholder = [FFFLanguageManager getTextWithKey:@"register_avtivity3_nick"];
+    //: self.accountTextfield.placeholder = [BusyLanguageManager getTextWithKey:@"register_avtivity3_nick"];
     self.accountTextfield.placeholder = [SendName streetSmart:[[TextIdealData sharedInstance] appMinId]];
     //: self.accountTextfield.delegate = self;
     self.accountTextfield.delegate = self;
@@ -367,7 +367,7 @@ typedef struct {
     self.registButton.titleLabel.font = [UIFont systemFontOfSize:16];
     //: [self.registButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.registButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //: [self.registButton setTitle:[FFFLanguageManager getTextWithKey:@"activity_register_next"] forState:UIControlStateNormal];
+    //: [self.registButton setTitle:[BusyLanguageManager getTextWithKey:@"activity_register_next"] forState:UIControlStateNormal];
     [self.registButton setTitle:[SendName streetSmart:[[TextIdealData sharedInstance] appTightenContent]] forState:UIControlStateNormal];
     //: [self.view addSubview:self.registButton];
     [self.view addSubview:self.registButton];
@@ -381,7 +381,7 @@ typedef struct {
 {
     //: if (_accountTextfield.text.length == 0) {
     if (_accountTextfield.text.length == 0) {
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"register_avtivity3_nick"]
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"register_avtivity3_nick"]
         [self.view makeToast:[SendName streetSmart:[[TextIdealData sharedInstance] appMinId]]
                     //: duration:2.0
                     duration:2.0
@@ -392,7 +392,7 @@ typedef struct {
     }
     //: if ([_accountTextfield.text isEqualToString:self.accountName]) {
     if ([_accountTextfield.text isEqualToString:self.accountName]) {
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"nickname_same_account"]
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"nickname_same_account"]
         [self.view makeToast:[SendName streetSmart:[[TextIdealData sharedInstance] kTextUrl]]
                     //: duration:2.0
                     duration:2.0
@@ -403,7 +403,7 @@ typedef struct {
     }
 
 
-    //: FFFRegisterAvatarViewController *vc = [[FFFRegisterAvatarViewController alloc]init];
+    //: BusyRegisterAvatarViewController *vc = [[BusyRegisterAvatarViewController alloc]init];
     AvatarViewController *vc = [[AvatarViewController alloc]init];
     //: vc.nickName = self.accountTextfield.text;
     vc.nickName = self.accountTextfield.text;

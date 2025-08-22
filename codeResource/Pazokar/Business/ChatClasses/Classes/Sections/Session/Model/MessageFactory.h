@@ -1,7 +1,7 @@
 // __DEBUG__
 // __CLOSE_PRINT__
 //
-//  FFFMessageCellMaker.h
+//  BusyMessageCellMaker.h
 // Case
 //
 //  Created by chris.
@@ -11,26 +11,26 @@
 // __M_A_C_R_O__
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
-//: #import "FFFMessageCell.h"
+//: #import "BusyMessageCell.h"
 #import "CompartmentViewCell.h"
-//: #import "FFFSessionTimestampCell.h"
+//: #import "BusySessionTimestampCell.h"
 #import "MaxRedViewCell.h"
-//: #import "FFFCellConfig.h"
-#import "FFFCellConfig.h"
-//: #import "FFFMessageCellProtocol.h"
-#import "FFFMessageCellProtocol.h"
+//: #import "BusyCellConfig.h"
+#import "BusyCellConfig.h"
+//: #import "BusyMessageCellProtocol.h"
+#import "BusyMessageCellProtocol.h"
 
-//: @interface FFFMessageCellFactory : NSObject
+//: @interface BusyMessageCellFactory : NSObject
 @interface MessageFactory : NSObject
 
-//: - (FFFMessageCell *)cellInTable:(UITableView*)tableView
+//: - (BusyMessageCell *)cellInTable:(UITableView*)tableView
 - (CompartmentViewCell *)progressRange:(UITableView*)tableView
-                 //: forMessageMode:(FFFMessageModel *)model;
+                 //: forMessageMode:(BusyMessageModel *)model;
                  message:(MoreModel *)model;
 
-//: - (FFFSessionTimestampCell *)cellInTable:(UITableView *)tableView
+//: - (BusySessionTimestampCell *)cellInTable:(UITableView *)tableView
 - (MaxRedViewCell *)toAGreaterExtent:(UITableView *)tableView
-                            //: forTimeModel:(FFFTimestampModel *)model;
+                            //: forTimeModel:(BusyTimestampModel *)model;
                             tinkle:(AppRow *)model;
 
 //: @end

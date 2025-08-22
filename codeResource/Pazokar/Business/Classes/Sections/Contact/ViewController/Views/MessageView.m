@@ -216,7 +216,7 @@ WithData user_nameData = (WithData){75, (Byte []){38, 46, 56, 56, 42, 44, 46, 20
     if (!_tipsLab) {
         //: _tipsLab = [[UILabel alloc] init];
         _tipsLab = [[UILabel alloc] init];
-        //: _tipsLab.text = [FFFLanguageManager getTextWithKey:@"activity_qrcode_scan_me"];
+        //: _tipsLab.text = [BusyLanguageManager getTextWithKey:@"activity_qrcode_scan_me"];
         _tipsLab.text = [SendName streetSmart:StringFromWithData(&kNameText)];
 //        _tipsLab.text = @"将二维码放入扫面框内";
         //: _tipsLab.textAlignment = NSTextAlignmentCenter;
@@ -253,7 +253,7 @@ WithData user_nameData = (WithData){75, (Byte []){38, 46, 56, 56, 42, 44, 46, 20
     if (!_qrcodeLab) {
         //: _qrcodeLab = [[UILabel alloc] init];
         _qrcodeLab = [[UILabel alloc] init];
-        //: _qrcodeLab.text = [FFFLanguageManager getTextWithKey:@"qrcode_activity_title"];
+        //: _qrcodeLab.text = [BusyLanguageManager getTextWithKey:@"qrcode_activity_title"];
         _qrcodeLab.text = [SendName streetSmart:StringFromWithData(&dream_voiceIdent)];
         //: _qrcodeLab.textAlignment = NSTextAlignmentCenter;
         _qrcodeLab.textAlignment = NSTextAlignmentCenter;
@@ -289,7 +289,7 @@ WithData user_nameData = (WithData){75, (Byte []){38, 46, 56, 56, 42, 44, 46, 20
     if (!_albumLab) {
         //: _albumLab = [[UILabel alloc] init];
         _albumLab = [[UILabel alloc] init];
-        //: _albumLab.text = [FFFLanguageManager getTextWithKey:@"message_send_album"];
+        //: _albumLab.text = [BusyLanguageManager getTextWithKey:@"message_send_album"];
         _albumLab.text = [SendName streetSmart:StringFromWithData(&user_nameData)];
         //: _albumLab.textAlignment = NSTextAlignmentCenter;
         _albumLab.textAlignment = NSTextAlignmentCenter;

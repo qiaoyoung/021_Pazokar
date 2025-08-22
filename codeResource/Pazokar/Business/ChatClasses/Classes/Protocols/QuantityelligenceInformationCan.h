@@ -9,26 +9,26 @@
 //
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
-//: #import "FFFMediaItem.h"
+//: #import "BusyMediaItem.h"
 #import "ModelMessage.h"
-//: #import "FFFCellConfig.h"
-#import "FFFCellConfig.h"
-//: #import "FFFKitMessageProvider.h"
+//: #import "BusyCellConfig.h"
+#import "BusyCellConfig.h"
+//: #import "BusyKitMessageProvider.h"
 #import "ToiletKitImageProviderDevice.h"
-//: #import "FFFInputBarItemType.h"
-#import "FFFInputBarItemType.h"
-//: #import "FFFInputEmoticonManager.h"
+//: #import "BusyInputBarItemType.h"
+#import "BusyInputBarItemType.h"
+//: #import "BusyInputEmoticonManager.h"
 #import "DeviceManager.h"
 
 // __M_A_C_R_O__
 
-//: @protocol FFFSessionConfig <NSObject>
+//: @protocol BusySessionConfig <NSObject>
 @protocol QuantityelligenceInformationCan <NSObject>
 //: @optional
 @optional
 
 /**
- *  输入按钮类型，请填入 FFFInputBarItemType 枚举，按顺序排列。不实现则按默认排列。
+ *  输入按钮类型，请填入 BusyInputBarItemType 枚举，按顺序排列。不实现则按默认排列。
  */
 //: - (NSArray<NSNumber *> *)inputBarItemTypes;
 - (NSArray<NSNumber *> *)curContainer;
@@ -37,13 +37,13 @@
 /**
  *  可以显示在点击输入框“+”按钮之后的多媒体按钮
  */
-//: - (NSArray<FFFMediaItem *> *)mediaItems;
+//: - (NSArray<BusyMediaItem *> *)mediaItems;
 - (NSArray<ModelMessage *> *)sumInfo;
 
 /**
  *  菜单选项
  */
-//: - (NSArray<FFFMediaItem *> *)menuItemsWithMessage:(NIMMessage *)message;
+//: - (NSArray<BusyMediaItem *> *)menuItemsWithMessage:(NIMMessage *)message;
 - (NSArray<ModelMessage *> *)shouldMaxSession:(NIMMessage *)message;
 
 /**
@@ -159,7 +159,7 @@
  *
  *  @return 消息数据提供者，如果不实现则读取本地聊天记录
  */
-//: - (id<FFFKitMessageProvider>)messageDataProvider;
+//: - (id<BusyKitMessageProvider>)messageDataProvider;
 - (id<ToiletKitImageProviderDevice>)disableSafe;
 
 /**

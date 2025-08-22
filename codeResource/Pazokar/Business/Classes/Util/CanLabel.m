@@ -114,8 +114,6 @@
 #import "UIView+Toast.h"
 //: #import "NTESCustomSysNotificationSender.h"
 #import "ChildShared.h"
-//: #import "NTESGlobalMacro.h"
-#import "NTESGlobalMacro.h"
 //: #import <AVFoundation/AVFoundation.h>
 #import <AVFoundation/AVFoundation.h>
 //: #import "NTESSessionMsgConverter.h"
@@ -129,8 +127,8 @@
 //: #import "SSZipArchiveManager.h"
 #import "ValuePraise.h"
 
-//: NSString *NTESCustomNotificationCountChanged = @"NTESCustomNotificationCountChanged";
-NSString *userTapPath = @"NTESCustomNotificationCountChanged";
+//: NSString *userTapPath = @"userTapPath";
+NSString *userTapPath = @"userTapPath";
 
 //: @interface NTESNotificationCenter () <NIMSystemNotificationManagerDelegate,NIMChatManagerDelegate,NIMBroadcastManagerDelegate, NIMSignalManagerDelegate,NIMConversationManagerDelegate>
 @interface CanLabel () <NIMSystemNotificationManagerDelegate,NIMChatManagerDelegate,NIMBroadcastManagerDelegate, NIMSignalManagerDelegate,NIMConversationManagerDelegate>
@@ -267,7 +265,7 @@ NSString *userTapPath = @"NTESCustomNotificationCountChanged";
     BOOL needPlay = YES;
     //: for (UIViewController *vc in nav.viewControllers) {
     for (UIViewController *vc in nav.viewControllers) {
-        //: if ([vc isKindOfClass:[FFFSessionViewController class]])
+        //: if ([vc isKindOfClass:[BusySessionViewController class]])
         if ([vc isKindOfClass:[DirectionViewController class]])
         {
             //: needPlay = NO;
@@ -404,7 +402,7 @@ NSString *userTapPath = @"NTESCustomNotificationCountChanged";
         if ([vc isKindOfClass:[TopViewController class]]
             //: && [vc.session.sessionId isEqualToString:notification.session.sessionId]) {
             && [vc.session.sessionId isEqualToString:notification.session.sessionId]) {
-            //: FFFMessageModel *model = [vc uiDeleteMessage:notification.message];
+            //: BusyMessageModel *model = [vc uiDeleteMessage:notification.message];
             MoreModel *model = [vc analogDigitalConverter:notification.message];
             //: if (notification.notificationType == NIMRevokeMessageNotificationTypeP2POneWay ||
             if (notification.notificationType == NIMRevokeMessageNotificationTypeP2POneWay ||
@@ -500,7 +498,7 @@ NSString *userTapPath = @"NTESCustomNotificationCountChanged";
                     }
                     //: if (notification.setting.shouldBeCounted) {
                     if (notification.setting.shouldBeCounted) {
-                        //: [[NSNotificationCenter defaultCenter] postNotificationName:NTESCustomNotificationCountChanged object:nil];
+                        //: [[NSNotificationCenter defaultCenter] postNotificationName:userTapPath object:nil];
                         [[NSNotificationCenter defaultCenter] postNotificationName:userTapPath object:nil];
                     }
                     //: NSString *content = [dict jsonString:@"content"];
@@ -603,7 +601,7 @@ NSString *userTapPath = @"NTESCustomNotificationCountChanged";
 {
     //: NSString *text = @"你收到了一个白板请求".ntes_localized;
     NSString *text = [ScapeData showHockId].untilNtes;
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:caller option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:caller option:nil];
     Info *info = [[Case pastTop] consumer:caller message:nil];
     //: if ([info.showName length])
     if ([info.showName length])
@@ -677,7 +675,7 @@ NSString *userTapPath = @"NTESCustomNotificationCountChanged";
     return should;
 }
 
-//: - (FFFSessionViewController *)currentSessionViewController
+//: - (BusySessionViewController *)currentSessionViewController
 - (DirectionViewController *)comment
 {
     //: UINavigationController *nav = [NTESMainTabController instance].selectedViewController;
@@ -685,10 +683,10 @@ NSString *userTapPath = @"NTESCustomNotificationCountChanged";
     //: for (UIViewController *vc in nav.viewControllers)
     for (UIViewController *vc in nav.viewControllers)
     {
-        //: if ([vc isKindOfClass:[FFFSessionViewController class]])
+        //: if ([vc isKindOfClass:[BusySessionViewController class]])
         if ([vc isKindOfClass:[DirectionViewController class]])
         {
-            //: return (FFFSessionViewController *)vc;
+            //: return (BusySessionViewController *)vc;
             return (DirectionViewController *)vc;
         }
     }

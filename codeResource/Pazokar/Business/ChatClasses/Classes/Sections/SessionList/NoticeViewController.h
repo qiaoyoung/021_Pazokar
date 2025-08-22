@@ -11,12 +11,12 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFCellConfig.h"
-#import "FFFCellConfig.h"
+//: #import "BusyCellConfig.h"
+#import "BusyCellConfig.h"
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
 
-//: @interface FFFSessionListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,NIMLoginManagerDelegate,NIMConversationManagerDelegate>
+//: @interface BusySessionListViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,NIMLoginManagerDelegate,NIMConversationManagerDelegate>
 @interface NoticeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,NIMLoginManagerDelegate,NIMConversationManagerDelegate>
 /**
  *  会话列表tableView
@@ -94,7 +94,7 @@
  *
  *  @return 时间戳格式化后的字符串
  *
- *  @discussion 默认实现为：最后一条消息的时间戳，具体时间戳消息格式详见FFFKitUtil中， + (NSString*)showTime:(NSTimeInterval) msglastTime showDetail:(BOOL)showDetail 方法的实现。
+ *  @discussion 默认实现为：最后一条消息的时间戳，具体时间戳消息格式详见BusyKitUtil中， + (NSString*)showTime:(NSTimeInterval) msglastTime showDetail:(BOOL)showDetail 方法的实现。
  */
 //: - (NSString *)timestampDescriptionForRecentSession:(NIMRecentSession *)recent;
 - (NSString *)dismissSession:(NIMRecentSession *)recent;

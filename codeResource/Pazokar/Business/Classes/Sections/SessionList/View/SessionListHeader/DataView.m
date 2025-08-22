@@ -174,7 +174,7 @@ typedef struct {
         title_1.font = [UIFont boldSystemFontOfSize:25];
         //: title_1.textAlignment = NSTextAlignmentCenter;
         title_1.textAlignment = NSTextAlignmentCenter;
-        //: title_1.text = [FFFLanguageManager getTextWithKey:@"sign_gold_title"];
+        //: title_1.text = [BusyLanguageManager getTextWithKey:@"sign_gold_title"];
         title_1.text = [SendName streetSmart:[PathNextData show_numberId]];
         //: [topImageView addSubview:title_1];
         [topImageView addSubview:title_1];
@@ -199,7 +199,7 @@ typedef struct {
         title_2.textAlignment = NSTextAlignmentCenter;
         //: title_2.font = [UIFont boldSystemFontOfSize:15];
         title_2.font = [UIFont boldSystemFontOfSize:15];
-        //: title_2.text = [FFFLanguageManager getTextWithKey:@"sign_keep_title"];
+        //: title_2.text = [BusyLanguageManager getTextWithKey:@"sign_keep_title"];
         title_2.text = [SendName streetSmart:[PathNextData mClickFormat]];
         //: [topImageView addSubview:title_2];
         [topImageView addSubview:title_2];
@@ -225,7 +225,7 @@ typedef struct {
         closeButton.titleLabel.font = [UIFont systemFontOfSize:15];
         //: closeButton.backgroundColor = [UIColor colorWithHexString:@"#EE4A5C"];
         closeButton.backgroundColor = [UIColor status:[PathNextData k_removeTitlePath]];
-        //: [closeButton setTitle:[FFFLanguageManager getTextWithKey:@"dialog_sign_now"] forState:UIControlStateNormal];
+        //: [closeButton setTitle:[BusyLanguageManager getTextWithKey:@"dialog_sign_now"] forState:UIControlStateNormal];
         [closeButton setTitle:[SendName streetSmart:[PathNextData dreamVerticalName]] forState:UIControlStateNormal];
         //: [closeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [closeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

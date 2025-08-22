@@ -23,11 +23,11 @@ Byte kViewMessage[] = {86, 5, 8, 50, 74, 1, 23, 8, 48, 48, 58, 48, 48, 180};
 // __M_A_C_R_O__
 //: #import "NTESMergeMessageCell.h"
 #import "NameMessageCell.h"
-//: #import "FFFBadgeView.h"
+//: #import "BusyBadgeView.h"
 #import "SharedView.h"
-//: #import "FFFSessionTextContentView.h"
+//: #import "BusySessionTextContentView.h"
 #import "ButtonView.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 //: #import "M80AttributedLabel.h"
 #import "CypherScrollView.h"
@@ -131,7 +131,7 @@ Byte kViewMessage[] = {86, 5, 8, 50, 74, 1, 23, 8, 48, 48, 58, 48, 48, 180};
     return _timeLab;
 }
 
-//: - (void)refreshData:(FFFMessageModel *)data {
+//: - (void)refreshData:(BusyMessageModel *)data {
 - (void)pullSession:(MoreModel *)data {
     //: [super refreshData:data];
     [super pullSession:data];
@@ -150,8 +150,8 @@ Byte kViewMessage[] = {86, 5, 8, 50, 74, 1, 23, 8, 48, 48, 58, 48, 48, 180};
         //: _timeLab.text = timeInfo ?: @"00:00";
         _timeLab.text = timeInfo ?: StringFromFrameData(kViewMessage);
 
-        //: self.bubbleView.layoutStyle = FFFSessionMessageContentViewLayoutLeft;
-        self.bubbleView.layoutStyle = FFFSessionMessageContentViewLayoutLeft;
+        //: self.bubbleView.layoutStyle = BusySessionMessageContentViewLayoutLeft;
+        self.bubbleView.layoutStyle = BusySessionMessageContentViewLayoutLeft;
     }
 
     //: self.bubbleView.bubbleImageView.hidden = YES;
@@ -163,9 +163,9 @@ Byte kViewMessage[] = {86, 5, 8, 50, 74, 1, 23, 8, 48, 48, 58, 48, 48, 180};
 
     //: id bubbleView = self.bubbleView;
     id bubbleView = self.bubbleView;
-    //: if ([bubbleView isKindOfClass:[FFFSessionTextContentView class]]) {
+    //: if ([bubbleView isKindOfClass:[BusySessionTextContentView class]]) {
     if ([bubbleView isKindOfClass:[ButtonView class]]) {
-        //: ((FFFSessionTextContentView *)bubbleView).textView.textColor = [UIColor blackColor];
+        //: ((BusySessionTextContentView *)bubbleView).textView.textColor = [UIColor blackColor];
         ((ButtonView *)bubbleView).textView.textColor = [UIColor blackColor];
     }
 }

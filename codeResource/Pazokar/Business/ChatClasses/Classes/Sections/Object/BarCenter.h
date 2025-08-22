@@ -15,7 +15,7 @@
 //: @class NIMMessage;
 @class NIMMessage;
 
-//: @interface FFFKitAudioCenter : NSObject
+//: @interface BusyKitAudioCenter : NSObject
 @interface BarCenter : NSObject
 
 //: @property (nonatomic,strong) NIMMessage *currentPlayingMessage;

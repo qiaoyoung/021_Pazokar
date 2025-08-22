@@ -16,7 +16,7 @@ Byte appToMessage[] = {70, 11, 7, 13, 110, 86, 135, 108, 102, 18, 103, 141, 32, 
 //: ic_pic_save
 Byte noti_televisionId[] = {68, 11, 36, 7, 144, 171, 4, 69, 63, 59, 76, 69, 63, 59, 79, 61, 82, 65, 170};
 
-//: #66FFFFFF
+//: #66FFFBusy
 Byte show_fromValue[] = {9, 9, 13, 5, 220, 22, 41, 41, 57, 57, 57, 57, 57, 57, 4};
 
 //: 0.5x
@@ -28,7 +28,7 @@ Byte showToolMessage[] = {74, 12, 17, 9, 245, 123, 227, 22, 220, 213, 129, 156, 
 //: /  00:00
 Byte mSourcePath[] = {72, 8, 25, 10, 26, 30, 116, 143, 31, 38, 22, 7, 7, 23, 23, 33, 23, 23, 229};
 
-//: #ffffff
+//: #fffBusy
 Byte showMessagePath[] = {49, 7, 8, 4, 27, 94, 94, 94, 94, 94, 94, 244};
 
 //: friend_verify_avtivity_net_error
@@ -299,7 +299,7 @@ Byte kVirusMsg[] = {13, 12, 54, 5, 196, 51, 45, 41, 58, 51, 45, 41, 61, 50, 43, 
     //: self.progressSlider.maximumTrackTintColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.2];
     self.progressSlider.maximumTrackTintColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.2];
 //    self.progressSlider.thumbTintColor = ThemeColor;
-    //: [self.progressSlider setThumbImage:[UIImage createImageWithColor:[UIColor colorWithHexString:@"#ffffff"] radius:3.0] forState:UIControlStateNormal];
+    //: [self.progressSlider setThumbImage:[UIImage createImageWithColor:[UIColor colorWithHexString:@"#fffBusy"] radius:3.0] forState:UIControlStateNormal];
     [self.progressSlider setThumbImage:[UIImage parentServer:[UIColor status:StringFromMData(showMessagePath)] distance:3.0] forState:UIControlStateNormal];
     //: self.progressSlider.layer.cornerRadius = 3;
     self.progressSlider.layer.cornerRadius = 3;
@@ -318,7 +318,7 @@ Byte kVirusMsg[] = {13, 12, 54, 5, 196, 51, 45, 41, 58, 51, 45, 41, 61, 50, 43, 
     _btnRate.backgroundColor = [UIColor blackColor];
     //: _btnRate.layer.cornerRadius = 9;
     _btnRate.layer.cornerRadius = 9;
-    //: _btnRate.layer.borderColor = [UIColor colorWithHexString:@"#66FFFFFF"].CGColor;
+    //: _btnRate.layer.borderColor = [UIColor colorWithHexString:@"#66FFFBusy"].CGColor;
     _btnRate.layer.borderColor = [UIColor status:StringFromMData(show_fromValue)].CGColor;
     //: _btnRate.layer.borderWidth = 1;
     _btnRate.layer.borderWidth = 1;
@@ -326,7 +326,7 @@ Byte kVirusMsg[] = {13, 12, 54, 5, 196, 51, 45, 41, 58, 51, 45, 41, 61, 50, 43, 
     [_btnRate addTarget:self action:@selector(groups:) forControlEvents:UIControlEventTouchUpInside];
     //: _btnRate.titleLabel.font = [UIFont systemFontOfSize:12];
     _btnRate.titleLabel.font = [UIFont systemFontOfSize:12];
-    //: [_btnRate setTitleColor:[UIColor colorWithHexString:@"#ffffff"] forState:UIControlStateNormal];
+    //: [_btnRate setTitleColor:[UIColor colorWithHexString:@"#fffBusy"] forState:UIControlStateNormal];
     [_btnRate setTitleColor:[UIColor status:StringFromMData(showMessagePath)] forState:UIControlStateNormal];
     //: [_btnRate setTitle:@"1x" forState:UIControlStateNormal];
     [_btnRate setTitle:@"1x" forState:UIControlStateNormal];
@@ -350,7 +350,7 @@ Byte kVirusMsg[] = {13, 12, 54, 5, 196, 51, 45, 41, 58, 51, 45, 41, 61, 50, 43, 
                 [wself session];
             //: }else{
             }else{
-                //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"friend_verify_avtivity_net_error"]
+                //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"friend_verify_avtivity_net_error"]
                 [wself.view makeToast:[SendName streetSmart:StringFromMData(app_popName)]
                              //: duration:2
                              duration:2
@@ -466,7 +466,7 @@ Byte kVirusMsg[] = {13, 12, 54, 5, 196, 51, 45, 41, 58, 51, 45, 41, 61, 50, 43, 
     } completionHandler:^(BOOL success, NSError * _Nullable error) {
         //: dispatch_async(dispatch_get_main_queue(), ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            //: NSString *toast = (success)?[FFFLanguageManager getTextWithKey:@"group_info_activity_update_success"] :[FFFLanguageManager getTextWithKey:@"group_info_activity_update_failed"];
+            //: NSString *toast = (success)?[BusyLanguageManager getTextWithKey:@"group_info_activity_update_success"] :[BusyLanguageManager getTextWithKey:@"group_info_activity_update_failed"];
             NSString *toast = (success)?[SendName streetSmart:StringFromMData(m_fainValue)] :[SendName streetSmart:StringFromMData(noti_showReadDismissMessage)];
             //: [self.view makeToast:toast duration:2.0 position:CSToastPositionCenter];
             [self.view makeToast:toast duration:2.0 position:CSToastPositionCenter];
@@ -782,7 +782,7 @@ Byte kVirusMsg[] = {13, 12, 54, 5, 196, 51, 45, 41, 58, 51, 45, 41, 61, 50, 43, 
 
 //        //设置滑块图片样式
         // 1 通过颜色创建 Image
-        //: UIImage *normalImage = [UIImage createImageWithColor:[UIColor colorWithHexString:@"#ffffff"] radius:7.0];
+        //: UIImage *normalImage = [UIImage createImageWithColor:[UIColor colorWithHexString:@"#fffBusy"] radius:7.0];
         UIImage *normalImage = [UIImage parentServer:[UIColor status:StringFromMData(showMessagePath)] distance:7.0];
 
         //        UIView *normalImageView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 8, 8)];
@@ -803,8 +803,8 @@ Byte kVirusMsg[] = {13, 12, 54, 5, 196, 51, 45, 41, 58, 51, 45, 41, 61, 50, 43, 
 //        [_videoSlider setThumbImage:highlightImage forState:UIControlStateHighlighted];
 
 //        _videoSlider.trackColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.2];//轨道的颜色
-//        _videoSlider.bufferColor = RGB_COLOR_String(@"#ffffff");//缓冲的颜色
-//        _videoSlider.thumbValueColor = RGB_COLOR_String(@"#ffffff");///播放进度的颜色
+//        _videoSlider.bufferColor = RGB_COLOR_String(@"#fffBusy");//缓冲的颜色
+//        _videoSlider.thumbValueColor = RGB_COLOR_String(@"#fffBusy");///播放进度的颜色
         ///
         //: _videoSlider.trackHeight = 6;
         _videoSlider.trackHeight = 6;

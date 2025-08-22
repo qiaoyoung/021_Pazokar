@@ -9,18 +9,18 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionViewController.h"
+//: #import "BusySessionViewController.h"
 #import "DirectionViewController.h"
-//: #import "FFFSessionConfigurateProtocol.h"
-#import "FFFSessionConfigurateProtocol.h"
+//: #import "BusySessionConfigurateProtocol.h"
+#import "BusySessionConfigurateProtocol.h"
 
-//: @class FFFSessionViewController;
+//: @class BusySessionViewController;
 @class DirectionViewController;
 
-//: @interface FFFSessionConfigurator : NSObject
+//: @interface BusySessionConfigurator : NSObject
 @interface ViewConfigurator : NSObject
 
-//: - (void)setup:(FFFSessionViewController *)vc;
+//: - (void)setup:(BusySessionViewController *)vc;
 - (void)actionDownTitle:(DirectionViewController *)vc;
 
 //: @end

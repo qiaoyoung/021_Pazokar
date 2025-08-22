@@ -98,7 +98,7 @@ NSString * cornerViewText(NSString *anMaybeEmptyString) {
 }
 
 //: - (NSString *)tokenByPassword
-- (NSString *)read
+- (NSString *)readToken
 {
     //demo直接使用username作为account，md5(password)作为token
     //接入应用开发需要根据自己的实际情况来获取 account和tokenself

@@ -11,18 +11,18 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFSessionConfigurateProtocol.h"
-#import "FFFSessionConfigurateProtocol.h"
-//: #import "FFFMessageCellProtocol.h"
-#import "FFFMessageCellProtocol.h"
+//: #import "BusySessionConfigurateProtocol.h"
+#import "BusySessionConfigurateProtocol.h"
+//: #import "BusyMessageCellProtocol.h"
+#import "BusyMessageCellProtocol.h"
 
-//: @interface FFFSessionTableAdapter : NSObject<UITableViewDelegate,UITableViewDataSource>
+//: @interface BusySessionTableAdapter : NSObject<UITableViewDelegate,UITableViewDataSource>
 @interface PinAdapter : NSObject<UITableViewDelegate,UITableViewDataSource>
 
 //: @property (nonatomic,weak) id<NIMSessionInteractor> interactor;
 @property (nonatomic,weak) id<TagRed> interactor;
 
-//: @property (nonatomic,weak) id<FFFMessageCellDelegate> delegate;
+//: @property (nonatomic,weak) id<BusyMessageCellDelegate> delegate;
 @property (nonatomic,weak) id<SharedDelegate> delegate;
 
 //: @end

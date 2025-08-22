@@ -11,13 +11,13 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFMessageCellProtocol.h"
-#import "FFFMessageCellProtocol.h"
+//: #import "BusyMessageCellProtocol.h"
+#import "BusyMessageCellProtocol.h"
 
-//: @class FFFTimestampModel;
+//: @class BusyTimestampModel;
 @class AppRow;
 
-//: @interface FFFSessionTimestampCell : UITableViewCell
+//: @interface BusySessionTimestampCell : UITableViewCell
 @interface MaxRedViewCell : UITableViewCell
 
 //: @property (strong, nonatomic) UIImageView *timeBGView;
@@ -26,7 +26,7 @@
 //: @property (strong, nonatomic) UILabel *timeLabel;
 @property (strong, nonatomic) UILabel *timeLabel;
 
-//: - (void)refreshData:(FFFTimestampModel *)data;
+//: - (void)refreshData:(BusyTimestampModel *)data;
 - (void)stopMetadata:(AppRow *)data;
 
 //: @end

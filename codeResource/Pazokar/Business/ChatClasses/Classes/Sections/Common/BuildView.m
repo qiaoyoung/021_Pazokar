@@ -86,10 +86,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFLoadProgressView.h"
+//: #import "BusyLoadProgressView.h"
 #import "BuildView.h"
 
-//: @implementation FFFLoadProgressView
+//: @implementation BusyLoadProgressView
 @implementation BuildView
 
 //: - (id)initWithFrame:(CGRect)frame {

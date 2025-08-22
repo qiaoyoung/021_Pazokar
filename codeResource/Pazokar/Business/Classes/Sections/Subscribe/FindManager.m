@@ -15,8 +15,8 @@
 #import "NTESSubscribeDefine.h"
 //: #import "NTESDevice.h"
 #import "SharedDataParent.h"
-//: #import "FFFExtensionHelper.h"
-#import "FFFExtensionHelper.h"
+//: #import "BusyExtensionHelper.h"
+#import "BusyExtensionHelper.h"
 
 //: NSString *const NTESSubscribeNetState = @"net_state";
 NSString *const notiTextTableValue = @"net_state";

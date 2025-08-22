@@ -9,9 +9,9 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFUsrInfoData.h"
-#import "FFFUsrInfoData.h"
-//: #import "FFFSpellingCenter.h"
+//: #import "BusyUsrInfoData.h"
+#import "BusyUsrInfoData.h"
+//: #import "BusySpellingCenter.h"
 #import "PinValueTing.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
@@ -37,7 +37,7 @@
 
 //: - (NSString *)groupTitle {
 - (NSString *)end {
-    //: NSString *title = [[FFFSpellingCenter sharedCenter] firstLetter:self.info.showName].capitalizedString;
+    //: NSString *title = [[BusySpellingCenter sharedCenter] firstLetter:self.info.showName].capitalizedString;
     NSString *title = [[PinValueTing sharedToCenterBackground] location:self.info.showName].capitalizedString;
     //: unichar character = [title characterAtIndex:0];
     unichar character = [title characterAtIndex:0];
@@ -78,7 +78,7 @@
 
 //: - (id)sortKey {
 - (id)meanSolarDay {
-    //: return [[FFFSpellingCenter sharedCenter] spellingForString:self.info.showName].shortSpelling;
+    //: return [[BusySpellingCenter sharedCenter] spellingForString:self.info.showName].shortSpelling;
     return [[PinValueTing sharedToCenterBackground] pressedShow:self.info.showName].shortSpelling;
 }
 

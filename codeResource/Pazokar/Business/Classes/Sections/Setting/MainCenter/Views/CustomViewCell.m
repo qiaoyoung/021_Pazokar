@@ -210,7 +210,7 @@ typedef struct {
     _textfile_1.font = [UIFont systemFontOfSize:16];
     //: _textfile_1.delegate = self;
     _textfile_1.delegate = self;
-    //: _textfile_1.placeholder = [FFFLanguageManager getTextWithKey:@"activity_modify_old"];
+    //: _textfile_1.placeholder = [BusyLanguageManager getTextWithKey:@"activity_modify_old"];
     _textfile_1.placeholder = [SendName streetSmart:[IdealData sharedInstance].kRedName];//@"请输入旧密码";
     //: [backGround addSubview:_textfile_1];
     [backGround addSubview:_textfile_1];
@@ -235,7 +235,7 @@ typedef struct {
     _textfile_2.font = [UIFont systemFontOfSize:16];
     //: _textfile_2.delegate = self;
     _textfile_2.delegate = self;
-    //: _textfile_2.placeholder = [FFFLanguageManager getTextWithKey:@"activity_modify_new"];
+    //: _textfile_2.placeholder = [BusyLanguageManager getTextWithKey:@"activity_modify_new"];
     _textfile_2.placeholder = [SendName streetSmart:[IdealData sharedInstance].dreamMyValue];//@"请输入新密码";
     //: [backGround addSubview:_textfile_2];
     [backGround addSubview:_textfile_2];
@@ -260,7 +260,7 @@ typedef struct {
     _textfile_3.font = [UIFont systemFontOfSize:16];
     //: _textfile_3.delegate = self;
     _textfile_3.delegate = self;
-    //: _textfile_3.placeholder = [FFFLanguageManager getTextWithKey:@"activity_modify_new"];
+    //: _textfile_3.placeholder = [BusyLanguageManager getTextWithKey:@"activity_modify_new"];
     _textfile_3.placeholder = [SendName streetSmart:[IdealData sharedInstance].dreamMyValue];//@"请确认新密码";
     //: [backGround addSubview:_textfile_3];
     [backGround addSubview:_textfile_3];

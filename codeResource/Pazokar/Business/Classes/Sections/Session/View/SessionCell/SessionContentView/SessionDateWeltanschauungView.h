@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionNotificationContentView.h"
+//: #import "BusySessionNotificationContentView.h"
 #import "MediaCustomControl.h"
 
-//: @interface NTESSessionTipContentView : FFFSessionMessageContentView
+//: @interface NTESSessionTipContentView : BusySessionMessageContentView
 @interface SessionDateWeltanschauungView : TextControl
 
 //: @property (nonatomic,strong) UILabel *label;

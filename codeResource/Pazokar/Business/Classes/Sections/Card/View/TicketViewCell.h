@@ -11,10 +11,10 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFCommonTableViewCell.h"
+//: #import "BusyCommonTableViewCell.h"
 #import "MediaApp.h"
 
-//: @interface NTESCardPortraitCell : UITableViewCell<FFFCommonTableViewCell>
+//: @interface NTESCardPortraitCell : UITableViewCell<BusyCommonTableViewCell>
 @interface TicketViewCell : UITableViewCell<MediaApp>
 
 //: @end

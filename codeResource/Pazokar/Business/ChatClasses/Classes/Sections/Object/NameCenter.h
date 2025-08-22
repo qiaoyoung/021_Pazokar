@@ -11,19 +11,19 @@
 // __M_A_C_R_O__
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
-//: #import "FFFSessionConfigurateProtocol.h"
-#import "FFFSessionConfigurateProtocol.h"
-//: #import "FFFSessionPrivateProtocol.h"
-#import "FFFSessionPrivateProtocol.h"
-//: #import "FFFSessionConfig.h"
+//: #import "BusySessionConfigurateProtocol.h"
+#import "BusySessionConfigurateProtocol.h"
+//: #import "BusySessionPrivateProtocol.h"
+#import "BusySessionPrivateProtocol.h"
+//: #import "BusySessionConfig.h"
 #import "QuantityelligenceInformationCan.h"
 
-//: @interface FFFSessionDataSourceImpl : NSObject<NIMSessionDataSource>
+//: @interface BusySessionDataSourceImpl : NSObject<NIMSessionDataSource>
 @interface NameCenter : NSObject<DirectionSource>
 
 //: - (instancetype)initWithSession:(NIMSession *)session
 - (instancetype)initWithName:(NIMSession *)session
-                         //: config:(id<FFFSessionConfig>)sessionConfig;
+                         //: config:(id<BusySessionConfig>)sessionConfig;
                          comment:(id<QuantityelligenceInformationCan>)sessionConfig;
 
 //: @end

@@ -66,7 +66,7 @@
 //userId和Vcname必有一个有值，根据有值的状态push进不同的页面
 
 //: - (NSString *)vcName{
-- (NSString *)dateName{
+- (NSString *)vcName{
     //: return nil;
     return nil;
 }
@@ -90,7 +90,7 @@
 }
 
 //: - (NSString *)groupTitle {
-- (NSString *)bottom {
+- (NSString *)texter {
     //: NSString *title = [[NTESSpellingCenter sharedCenter] firstLetter:self.info.showName].capitalizedString;
     NSString *title = [[ParentCenter mean] carryEnable:self.info.showName].capitalizedString;
     //: unichar character = [title characterAtIndex:0];
@@ -107,7 +107,7 @@
 }
 
 //: - (NSString *)userId{
-- (NSString *)modeContent{
+- (NSString *)userId{
     //: return self.info.infoId;
     return self.info.infoId;
 }
@@ -125,19 +125,19 @@
 }
 
 //: - (NSString *)memberId{
-- (NSString *)colorData{
+- (NSString *)conference{
     //: return self.info.infoId;
     return self.info.infoId;
 }
 
 //: - (NSString *)showName{
-- (NSString *)ting{
+- (NSString *)begin{
     //: return self.info.showName;
     return self.info.showName;
 }
 
 //: - (BOOL)showAccessoryView{
-- (BOOL)bringHomeUponPosition{
+- (BOOL)physicalObject{
     //: return NO;
     return NO;
 }

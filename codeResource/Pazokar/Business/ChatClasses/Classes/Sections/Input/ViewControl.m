@@ -24,18 +24,18 @@ Byte show_feeText[] = {84, 12, 63, 4, 38, 46, 48, 43, 42, 32, 35, 34, 51, 32, 35
 //
 
 // __M_A_C_R_O__
-//: #import "FFFInputEmoticonTabView.h"
+//: #import "BusyInputEmoticonTabView.h"
 #import "ViewControl.h"
-//: #import "FFFInputEmoticonManager.h"
+//: #import "BusyInputEmoticonManager.h"
 #import "DeviceManager.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 
-//: const NSInteger FFFInputEmoticonTabViewHeight = 44;
+//: const NSInteger BusyInputEmoticonTabViewHeight = 44;
 const NSInteger main_lengthValue = 44;
 //: const NSInteger NIMInputEmoticonSendButtonWidth = 56;
 const NSInteger notiSuccessStr = 56;
@@ -43,7 +43,7 @@ const NSInteger notiSuccessStr = 56;
 //: const CGFloat NIMInputLineBoarder = .5f;
 const CGFloat noti_sizeTeamKey = .5f;
 
-//: @interface FFFInputEmoticonTabView()
+//: @interface BusyInputEmoticonTabView()
 @interface ViewControl()
 
 //: @property (nonatomic,strong) NSMutableArray * tabs;
@@ -57,12 +57,12 @@ const CGFloat noti_sizeTeamKey = .5f;
 
 
 
-//: @implementation FFFInputEmoticonTabView
+//: @implementation BusyInputEmoticonTabView
 @implementation ViewControl
 
 //: - (instancetype)initWithFrame:(CGRect)frame{
 - (instancetype)initWithFrame:(CGRect)frame{
-    //: self = [super initWithFrame:CGRectMake(0, 0, frame.size.width, FFFInputEmoticonTabViewHeight)];
+    //: self = [super initWithFrame:CGRectMake(0, 0, frame.size.width, BusyInputEmoticonTabViewHeight)];
     self = [super initWithFrame:CGRectMake(0, 0, frame.size.width, main_lengthValue)];
     //: if (self) {
     if (self) {
@@ -98,7 +98,7 @@ const CGFloat noti_sizeTeamKey = .5f;
 //        _sendButton.layer.shadowOpacity = 1;
 //        _sendButton.layer.shadowRadius = 8;
 //        
-        //: _sendButton.nim_height = FFFInputEmoticonTabViewHeight;
+        //: _sendButton.nim_height = BusyInputEmoticonTabViewHeight;
         _sendButton.nim_height = main_lengthValue;
         //: _sendButton.nim_width = NIMInputEmoticonSendButtonWidth;
         _sendButton.nim_width = notiSuccessStr;
@@ -161,7 +161,7 @@ const CGFloat noti_sizeTeamKey = .5f;
         //: [_tabs addObject:button];
         [_tabs addObject:button];
 
-//        UIView *sep = [[UIView alloc] initWithFrame:CGRectMake(0, 0, NIMInputLineBoarder, FFFInputEmoticonTabViewHeight)];
+//        UIView *sep = [[UIView alloc] initWithFrame:CGRectMake(0, 0, NIMInputLineBoarder, BusyInputEmoticonTabViewHeight)];
 ////        sep.backgroundColor = sepColor;
 //        sep.backgroundColor = [UIColor whiteColor];
 //        [_seps addObject:sep];
@@ -219,7 +219,7 @@ const CGFloat noti_sizeTeamKey = .5f;
         UIButton *button = self.tabs[index];
         //: button.nim_width = NIMInputEmoticonSendButtonWidth;
         button.nim_width = notiSuccessStr;
-        //: button.nim_height = FFFInputEmoticonTabViewHeight;
+        //: button.nim_height = BusyInputEmoticonTabViewHeight;
         button.nim_height = main_lengthValue;
         //: button.nim_left = left;
         button.nim_left = left;

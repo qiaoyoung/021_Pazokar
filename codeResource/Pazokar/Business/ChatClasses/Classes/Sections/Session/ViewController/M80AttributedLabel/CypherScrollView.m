@@ -13,7 +13,7 @@
 #import "CypherScrollView.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFTextHighlight.h"
+//: #import "BusyTextHighlight.h"
 #import "MediaNameContentHighlight.h"
 
 //: static NSString* const M80EllipsesCharacter = @"\u2026";
@@ -284,7 +284,7 @@ static NSString* const mReportFormat = @"\u2026";
             //: NSString *emoString = [attrM.string substringWithRange:range];
             NSString *emoString = [attrM.string substringWithRange:range];
 
-            //: NIMInputEmoticon *emoticon = [[FFFInputEmoticonManager sharedManager] emoticonByTag:emoString];
+            //: NIMInputEmoticon *emoticon = [[BusyInputEmoticonManager sharedManager] emoticonByTag:emoString];
             CityCenterWith *emoticon = [[DeviceManager history] viewText:emoString];
 
             //: UIImage *image = [UIImage nim_emoticonInKit:emoticon.filename];
@@ -319,10 +319,10 @@ static NSString* const mReportFormat = @"\u2026";
                     [emoText yy_setAttribute:NSKernAttributeName value:@(-1)];
                 }
 
-                //: FFFTextHighlight *highlight = [[FFFTextHighlight alloc] init];
+                //: BusyTextHighlight *highlight = [[BusyTextHighlight alloc] init];
                 MediaNameContentHighlight *highlight = [[MediaNameContentHighlight alloc] init];
-                //: highlight.type = FFFTextHighlightTypeEmoji;
-                highlight.type = FFFTextHighlightTypeEmoji;
+                //: highlight.type = BusyTextHighlightTypeEmoji;
+                highlight.type = BusyTextHighlightTypeEmoji;
                 //: highlight.text = emoString;
                 highlight.text = emoString;
                 //: [emoText yy_setTextHighlight:highlight range:NSMakeRange(0, emoText.length)];

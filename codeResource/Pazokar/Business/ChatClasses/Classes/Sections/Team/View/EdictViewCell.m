@@ -109,18 +109,18 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamAnnouncementListCell.h"
+//: #import "BusyTeamAnnouncementListCell.h"
 #import "EdictViewCell.h"
-//: #import "FFFUsrInfoData.h"
-#import "FFFUsrInfoData.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyUsrInfoData.h"
+#import "BusyUsrInfoData.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "M80AttributedLabel.h"
 #import "CypherScrollView.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
 
-//: @interface FFFTeamAnnouncementListCell ()
+//: @interface BusyTeamAnnouncementListCell ()
 @interface EdictViewCell ()
 //: @property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) UILabel *titleLabel;
@@ -134,7 +134,7 @@
 //: @end
 @end
 
-//: @implementation FFFTeamAnnouncementListCell
+//: @implementation BusyTeamAnnouncementListCell
 @implementation EdictViewCell
 
 //: - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -204,7 +204,7 @@
          //: autoreleasepool{} __weak __typeof__(self) __weak_self__ = self;
          autoreleasepool{} __weak __typeof__(self) __weak_self__ = self;
                       ;
-        //: _contentLabel.selectBlock = ^(FFFMediaItem *item) {
+        //: _contentLabel.selectBlock = ^(BusyMediaItem *item) {
         _contentLabel.selectBlock = ^(ModelMessage *item) {
             @
              //: try{} @finally{} __typeof__(self) self = __weak_self__;

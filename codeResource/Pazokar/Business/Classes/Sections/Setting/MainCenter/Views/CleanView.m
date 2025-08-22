@@ -16,7 +16,7 @@ Byte showLeadershipInmateVsId[] = {14, 17, 85, 6, 81, 90, 200, 182, 187, 186, 18
 //: Vertify_login_password
 Byte dreamOptionKey[] = {93, 22, 37, 8, 32, 100, 218, 97, 123, 138, 151, 153, 142, 139, 158, 132, 145, 148, 140, 142, 147, 132, 149, 134, 152, 152, 156, 148, 151, 137, 166};
 
-//: #ffffff
+//: #fffBusy
 Byte userSemenMsg[] = {14, 7, 43, 5, 20, 78, 145, 145, 145, 145, 145, 145, 129};
 
 //: Read_agree_agreement
@@ -215,7 +215,7 @@ Byte noti_explainMessage[] = {70, 7, 26, 4, 61, 74, 76, 94, 82, 93, 83, 80};
         labtitle1.font = [UIFont systemFontOfSize:11.f];
         //: labtitle1.textColor = [UIColor blackColor];
         labtitle1.textColor = [UIColor blackColor];
-        //: labtitle1.text = [FFFLanguageManager getTextWithKey:@"Read_agree_agreement"];
+        //: labtitle1.text = [BusyLanguageManager getTextWithKey:@"Read_agree_agreement"];
         labtitle1.text = [SendName streetSmart:StringFromMidfieldData(showDoingName)];
         //: labtitle1.numberOfLines = 2;
         labtitle1.numberOfLines = 2;
@@ -240,7 +240,7 @@ Byte noti_explainMessage[] = {70, 7, 26, 4, 61, 74, 76, 94, 82, 93, 83, 80};
         labtitle2.font = [UIFont systemFontOfSize:11.f];
         //: labtitle2.textColor = [UIColor blackColor];
         labtitle2.textColor = [UIColor blackColor];
-        //: labtitle2.text = [FFFLanguageManager getTextWithKey:@"Vertify_login_password"];
+        //: labtitle2.text = [BusyLanguageManager getTextWithKey:@"Vertify_login_password"];
         labtitle2.text = [SendName streetSmart:StringFromMidfieldData(dreamOptionKey)];
         //: labtitle2.numberOfLines = 2;
         labtitle2.numberOfLines = 2;
@@ -265,7 +265,7 @@ Byte noti_explainMessage[] = {70, 7, 26, 4, 61, 74, 76, 94, 82, 93, 83, 80};
         labtitle3.font = [UIFont systemFontOfSize:11.f];
         //: labtitle3.textColor = [UIColor blackColor];
         labtitle3.textColor = [UIColor blackColor];
-        //: labtitle3.text = [FFFLanguageManager getTextWithKey:@"Complete_operation"];
+        //: labtitle3.text = [BusyLanguageManager getTextWithKey:@"Complete_operation"];
         labtitle3.text = [SendName streetSmart:StringFromMidfieldData(notiCellPath)];
         //: labtitle3.numberOfLines = 2;
         labtitle3.numberOfLines = 2;
@@ -322,7 +322,7 @@ Byte noti_explainMessage[] = {70, 7, 26, 4, 61, 74, 76, 94, 82, 93, 83, 80};
         [_sureBtn addTarget:self action:@selector(exceptRecord) forControlEvents:UIControlEventTouchUpInside];
         //: _sureBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         _sureBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-        //: [_sureBtn setTitleColor:[UIColor colorWithHexString:@"#ffffff"] forState:UIControlStateNormal];
+        //: [_sureBtn setTitleColor:[UIColor colorWithHexString:@"#fffBusy"] forState:UIControlStateNormal];
         [_sureBtn setTitleColor:[UIColor status:StringFromMidfieldData(userSemenMsg)] forState:UIControlStateNormal];
         //: [_sureBtn setTitle:@"OK" forState:UIControlStateNormal];
         [_sureBtn setTitle:@"OK" forState:UIControlStateNormal];

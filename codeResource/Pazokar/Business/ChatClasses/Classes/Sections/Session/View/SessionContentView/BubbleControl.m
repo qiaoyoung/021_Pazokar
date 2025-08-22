@@ -61,9 +61,9 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionLocationContentView.h"
+//: #import "BusySessionLocationContentView.h"
 #import "BubbleControl.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
@@ -72,7 +72,7 @@ typedef struct {
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @interface FFFSessionLocationContentView()
+//: @interface BusySessionLocationContentView()
 @interface BubbleControl()
 
 //: @property (nonatomic,strong) UIImageView * imageView;
@@ -84,7 +84,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFSessionLocationContentView
+//: @implementation BusySessionLocationContentView
 @implementation BubbleControl
 
 //: - (instancetype)initSessionMessageContentView{
@@ -128,7 +128,7 @@ typedef struct {
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)data
+//: - (void)refresh:(BusyMessageModel *)data
 - (void)messagePress:(MoreModel *)data
 {
     //: [super refresh:data];
@@ -138,7 +138,7 @@ typedef struct {
     //: self.titleLabel.text = locationObject.title;
     self.titleLabel.text = locationObject.title;
 
-    //: FFFKitSetting *setting = [[MyUserKit sharedKit].config setting:data.message];
+    //: BusyKitSetting *setting = [[MyUserKit sharedKit].config setting:data.message];
     GreenSetting *setting = [[Case pastTop].config tool:data.message];
 
     //: self.titleLabel.textColor = setting.textColor;
@@ -150,9 +150,9 @@ typedef struct {
 //: - (void)onTouchUpInside:(id)sender
 - (void)objects:(id)sender
 {
-    //: FFFKitEvent *event = [[FFFKitEvent alloc] init];
+    //: BusyKitEvent *event = [[BusyKitEvent alloc] init];
     DirectionEvent *event = [[DirectionEvent alloc] init];
-    //: event.eventName = FFFKitEventNameTapContent;
+    //: event.eventName = BusyKitEventNameTapContent;
     event.eventName = notiMessageId;
     //: event.messageModel = self.model;
     event.messageModel = self.model;

@@ -13,7 +13,7 @@
 //: @class NTESCustomNotificationDB;
 @class AppDb;
 
-//: extern NSString *NTESCustomNotificationCountChanged;
+//: extern NSString *userTapPath;
 extern NSString *userTapPath;
 
 //: @interface NTESNotificationCenter : NSObject

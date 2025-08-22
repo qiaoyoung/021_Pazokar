@@ -26,7 +26,7 @@
 
 
 
-//: @interface FFFInputEmoticonButton : UIButton
+//: @interface BusyInputEmoticonButton : UIButton
 @interface PointButton : UIButton
 
 //: @property (nonatomic, strong) NIMInputEmoticon *emoticonData;
@@ -38,7 +38,7 @@
 //: @property (nonatomic, weak) id<NIMEmoticonButtonTouchDelegate> delegate;
 @property (nonatomic, weak) id<IndexChild> delegate;
 
-//: + (FFFInputEmoticonButton*)iconButtonWithData:(NIMInputEmoticon*)data catalogID:(NSString*)catalogID delegate:( id<NIMEmoticonButtonTouchDelegate>)delegate;
+//: + (BusyInputEmoticonButton*)iconButtonWithData:(NIMInputEmoticon*)data catalogID:(NSString*)catalogID delegate:( id<NIMEmoticonButtonTouchDelegate>)delegate;
 + (PointButton*)input:(CityCenterWith*)data holdfast:(NSString*)catalogID icon:( id<IndexChild>)delegate;
 
 //: - (void)onIconSelected:(id)sender;

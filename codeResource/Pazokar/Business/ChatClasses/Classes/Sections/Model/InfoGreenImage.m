@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
 
-//: @implementation FFFKitInfoFetchOption
+//: @implementation BusyKitInfoFetchOption
 @implementation InfoGreenImage
 
 //: @end

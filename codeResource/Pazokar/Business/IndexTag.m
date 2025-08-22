@@ -182,7 +182,7 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFConfig.h"
+//: #import "BusyConfig.h"
 #import "IndexTag.h"
 //: #import "RestUtil.h"
 #import "PointOnUtil.h"
@@ -192,7 +192,7 @@ static NSString *const userOperationName = @"https://apple.akunjapan0206chat.com
 //: static NSString *const kSavedDomainKey = @"SavedDomainKey";
 static NSString *const m_spacePointKey = @"SavedDomainKey";
 
-//: @interface FFFConfig ()
+//: @interface BusyConfig ()
 @interface IndexTag ()
 
 //: @property (nonatomic,copy) NSString *hostFrom;
@@ -203,19 +203,19 @@ static NSString *const m_spacePointKey = @"SavedDomainKey";
 //: @end
 @end
 
-//: @implementation FFFConfig
+//: @implementation BusyConfig
 @implementation IndexTag
 
 //: + (instancetype)sharedConfig
 + (instancetype)ambit
 {
-    //: static FFFConfig *instance = nil;
+    //: static BusyConfig *instance = nil;
     static IndexTag *instance = nil;
     //: static dispatch_once_t onceToken;
     static dispatch_once_t onceToken;
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
-        //: instance = [[FFFConfig alloc] init];
+        //: instance = [[BusyConfig alloc] init];
         instance = [[IndexTag alloc] init];
     //: });
     });
@@ -235,7 +235,7 @@ static NSString *const m_spacePointKey = @"SavedDomainKey";
 
         //        _apnsCername = @"DEVELOPER";
         //: _apnsCername = @"pushDev";
-        _apnsCername = [ManipulateData sharedInstance].mOverageStr;
+        _apnsCername =  @"push_Pazokar_release";
         //: _pkCername = @"pushkit_voice_test";
         _pkCername = [ManipulateData sharedInstance].dreamCreatureId;
         //: _allowAutoLogin = YES; 

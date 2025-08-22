@@ -18,26 +18,26 @@ Byte noti_justiceKey[] = {17, 33, 92, 7, 187, 185, 254, 197, 202, 194, 203, 124,
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitNotificationFirer.h"
+//: #import "BusyKitNotificationFirer.h"
 #import "SecretDevice.h"
 
-//: NSString *const NIMKitUserInfoHasUpdatedNotification = @"NIMKitUserInfoHasUpdatedNotification";
-NSString *const notiArrayName = @"NIMKitUserInfoHasUpdatedNotification";
-//: NSString *const NIMKitTeamInfoHasUpdatedNotification = @"NIMKitTeamInfoHasUpdatedNotification";
-NSString *const dreamMessageTableKey = @"NIMKitTeamInfoHasUpdatedNotification";
+//: NSString *const notiArrayName = @"notiArrayName";
+NSString *const notiArrayName = @"notiArrayName";
+//: NSString *const dreamMessageTableKey = @"dreamMessageTableKey";
+NSString *const dreamMessageTableKey = @"dreamMessageTableKey";
 
 //: NSString *const NIMKitUserBlackListHasUpdatedNotification = @"NIMKitUserBlackListHasUpdatedNotification";
 NSString *const noti_kitName = @"NIMKitUserBlackListHasUpdatedNotification";
 //: NSString *const NIMKitUserMuteListHasUpdatedNotification = @"NIMKitUserMuteListHasUpdatedNotification";
 NSString *const user_insideFormat = @"NIMKitUserMuteListHasUpdatedNotification";
 
-//: NSString *const NIMKitTeamMembersHasUpdatedNotification = @"NIMKitTeamMembersHasUpdatedNotification";
-NSString *const k_pathIdent = @"NIMKitTeamMembersHasUpdatedNotification";
+//: NSString *const k_pathIdent = @"k_pathIdent";
+NSString *const k_pathIdent = @"k_pathIdent";
 
-//: NSString *const FFFKitInfoKey = @"InfoId";
+//: NSString *const mFileThreadTitle = @"InfoId";
 NSString *const mFileThreadTitle = @"InfoId";
 
-//: @implementation FFFKitNotificationFirer
+//: @implementation BusyKitNotificationFirer
 @implementation SecretDevice
 
 //: - (instancetype)init{
@@ -46,7 +46,7 @@ NSString *const mFileThreadTitle = @"InfoId";
     self = [super init];
     //: if (self) {
     if (self) {
-        //: _timer = [[FFFKitTimerHolder alloc] init];
+        //: _timer = [[BusyKitTimerHolder alloc] init];
         _timer = [[NameWith alloc] init];
         //: _timeInterval = 1.0f;
         _timeInterval = 1.0f;
@@ -70,10 +70,10 @@ NSString *const mFileThreadTitle = @"InfoId";
     [self.cachedInfo setObject:info forKey:info.tingIdentity];
 }
 
-//: #pragma mark - FFFKitTimerHolderDelegate
+//: #pragma mark - BusyKitTimerHolderDelegate
 #pragma mark - ChildRefresh
 
-//: - (void)onNIMKitTimerFired:(FFFKitTimerHolder *)holder{
+//: - (void)onNIMKitTimerFired:(BusyKitTimerHolder *)holder{
 - (void)alonging:(NameWith *)holder{
     //: NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
@@ -97,7 +97,7 @@ NSString *const mFileThreadTitle = @"InfoId";
 
     //: for (NSString *notificationName in dict) {
     for (NSString *notificationName in dict) {
-        //: NSDictionary *userInfo = dict[notificationName]? @{ FFFKitInfoKey:dict[notificationName] } : nil;
+        //: NSDictionary *userInfo = dict[notificationName]? @{ mFileThreadTitle:dict[notificationName] } : nil;
         NSDictionary *userInfo = dict[notificationName]? @{ mFileThreadTitle:dict[notificationName] } : nil;
         //: [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:nil userInfo:userInfo];
         [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:nil userInfo:userInfo];

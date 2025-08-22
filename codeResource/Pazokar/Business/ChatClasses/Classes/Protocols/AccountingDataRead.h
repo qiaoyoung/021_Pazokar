@@ -14,14 +14,14 @@
 
 //: @class NIMSession;
 @class NIMSession;
-//: @class FFFKitInfo;
+//: @class BusyKitInfo;
 @class Info;
-//: @class FFFKitInfoFetchOption;
+//: @class BusyKitInfoFetchOption;
 @class InfoGreenImage;
 //: @class NIMMessage;
 @class NIMMessage;
 
-//: @protocol FFFKitDataProvider <NSObject>
+//: @protocol BusyKitDataProvider <NSObject>
 @protocol AccountingDataRead <NSObject>
 
 //: @optional
@@ -35,9 +35,9 @@
  *
  *  @return 用户信息
  */
-//: - (FFFKitInfo *)infoByUser:(NSString *)userId
+//: - (BusyKitInfo *)infoByUser:(NSString *)userId
 - (Info *)consumer:(NSString *)userId
-                    //: option:(FFFKitInfoFetchOption *)option;
+                    //: option:(BusyKitInfoFetchOption *)option;
                     message:(InfoGreenImage *)option;
 
 
@@ -49,9 +49,9 @@
  *
  *  @return 群组信息
  */
-//: - (FFFKitInfo *)infoByTeam:(NSString *)teamId
+//: - (BusyKitInfo *)infoByTeam:(NSString *)teamId
 - (Info *)controlOption:(NSString *)teamId
-                    //: option:(FFFKitInfoFetchOption *)option;
+                    //: option:(BusyKitInfoFetchOption *)option;
                     my:(InfoGreenImage *)option;
 
 /**
@@ -62,9 +62,9 @@
  *
  *  @return 群组信息
  */
-//: - (FFFKitInfo *)infoBySuperTeam:(NSString *)teamId
+//: - (BusyKitInfo *)infoBySuperTeam:(NSString *)teamId
 - (Info *)ting:(NSString *)teamId
-                         //: option:(FFFKitInfoFetchOption *)option;
+                         //: option:(BusyKitInfoFetchOption *)option;
                          container:(InfoGreenImage *)option;
 
 /**

@@ -9,25 +9,25 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionMsgDatasource.h"
+//: #import "BusySessionMsgDatasource.h"
 #import "EparchyDatasource.h"
 //: #import "UITableView+NIMScrollToBottom.h"
 #import "UITableView+NIMScrollToBottom.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
-//: #import "FFFTimestampModel.h"
+//: #import "BusyTimestampModel.h"
 #import "AppRow.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
 
-//: @interface FFFSessionMsgDatasource()
+//: @interface BusySessionMsgDatasource()
 @interface EparchyDatasource()
 
-//: @property (nonatomic,strong) id<FFFKitMessageProvider> dataProvider;
+//: @property (nonatomic,strong) id<BusyKitMessageProvider> dataProvider;
 @property (nonatomic,strong) id<ToiletKitImageProviderDevice> dataProvider;
 
 //: @property (nonatomic,strong) NSMutableDictionary *msgIdDict;
@@ -39,7 +39,7 @@
 //: @end
 @end
 
-//: @implementation FFFSessionMsgDatasource
+//: @implementation BusySessionMsgDatasource
 @implementation EparchyDatasource
 {
     //: NIMSession *_currentSession;
@@ -50,7 +50,7 @@
 
 //: - (instancetype)initWithSession:(NIMSession*)session
 - (instancetype)initWithEnableConfig:(NIMSession*)session
-                         //: config:(id<FFFSessionConfig>)sessionConfig
+                         //: config:(id<BusySessionConfig>)sessionConfig
                          nameWithView:(id<QuantityelligenceInformationCan>)sessionConfig
 {
     //: if (self = [self init]) {
@@ -59,7 +59,7 @@
         _currentSession = session;
         //: _sessionConfig = sessionConfig;
         _sessionConfig = sessionConfig;
-        //: id<FFFKitMessageProvider> dataProvider = [_sessionConfig respondsToSelector:@selector(messageDataProvider)] ? [_sessionConfig messageDataProvider] : nil;
+        //: id<BusyKitMessageProvider> dataProvider = [_sessionConfig respondsToSelector:@selector(messageDataProvider)] ? [_sessionConfig messageDataProvider] : nil;
         id<ToiletKitImageProviderDevice> dataProvider = [_sessionConfig respondsToSelector:@selector(disableSafe)] ? [_sessionConfig disableSafe] : nil;
 
         //: NSInteger limit = [MyUserKit sharedKit].config.messageLimit;
@@ -207,7 +207,7 @@
     }
     //: NSMutableArray *append = [[NSMutableArray alloc] init];
     NSMutableArray *append = [[NSMutableArray alloc] init];
-    //: for (FFFMessageModel *model in models) {
+    //: for (BusyMessageModel *model in models) {
     for (MoreModel *model in models) {
         //: if ([self modelIsExist:model]) {
         if ([self numbererval:model]) {
@@ -243,15 +243,15 @@
     //由于找到插入位置后会直接插入，所以这里按时间戳大小先排个序，避免造成先插了时间大的，再插了时间小的，导致之前时间大的消息的位置还需要后移的情况.
     //: NSArray *sortModels = [models sortedArrayUsingComparator:^NSComparisonResult(id _Nonnull obj1, id _Nonnull obj2) {
     NSArray *sortModels = [models sortedArrayUsingComparator:^NSComparisonResult(id _Nonnull obj1, id _Nonnull obj2) {
-        //: FFFMessageModel *first = obj1;
+        //: BusyMessageModel *first = obj1;
         MoreModel *first = obj1;
-        //: FFFMessageModel *second = obj2;
+        //: BusyMessageModel *second = obj2;
         MoreModel *second = obj2;
         //: return first.messageTime < second.messageTime ? NSOrderedAscending : NSOrderedDescending;
         return first.messageTime < second.messageTime ? NSOrderedAscending : NSOrderedDescending;
     //: }];
     }];
-    //: for (FFFMessageModel *model in sortModels) {
+    //: for (BusyMessageModel *model in sortModels) {
     for (MoreModel *model in sortModels) {
         //: if ([self modelIsExist:model]) {
         if ([self numbererval:model]) {
@@ -271,7 +271,7 @@
 }
 
 
-//: - (NSInteger)indexAtModelArray:(FFFMessageModel *)model
+//: - (NSInteger)indexAtModelArray:(BusyMessageModel *)model
 - (NSInteger)red:(MoreModel *)model
 {
     //: __block NSInteger index = -1;
@@ -283,7 +283,7 @@
     }
     //: [self.items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
     [self.items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        //: if ([obj isKindOfClass:[FFFMessageModel class]]) {
+        //: if ([obj isKindOfClass:[BusyMessageModel class]]) {
         if ([obj isKindOfClass:[MoreModel class]]) {
             //: if ([model isEqual:obj]) {
             if ([model isEqual:obj]) {
@@ -302,7 +302,7 @@
 //: #pragma mark - msg
 #pragma mark - msg
 
-//: - (BOOL)modelIsExist:(FFFMessageModel *)model
+//: - (BOOL)modelIsExist:(BusyMessageModel *)model
 - (BOOL)numbererval:(MoreModel *)model
 {
     //: return [_msgIdDict objectForKey:model.message.messageId] != nil;
@@ -313,13 +313,13 @@
 //: - (void)loadHistoryMessagesWithComplete:(void(^)(NSInteger index, NSArray *messages , NSError *error))handler
 - (void)name:(void(^)(NSInteger index, NSArray *messages , NSError *error))handler
 {
-    //: __block FFFMessageModel *currentOldestMsg = nil;
+    //: __block BusyMessageModel *currentOldestMsg = nil;
     __block MoreModel *currentOldestMsg = nil;
     //: [self.items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
     [self.items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        //: if ([obj isKindOfClass:[FFFMessageModel class]]) {
+        //: if ([obj isKindOfClass:[BusyMessageModel class]]) {
         if ([obj isKindOfClass:[MoreModel class]]) {
-            //: currentOldestMsg = (FFFMessageModel*)obj;
+            //: currentOldestMsg = (BusyMessageModel*)obj;
             currentOldestMsg = (MoreModel*)obj;
             //: *stop = YES;
             *stop = YES;
@@ -419,7 +419,7 @@
 
 //: - (void)loadPullUpMessagesWithComplete:(void (^)(NSInteger, NSArray *, NSError *))handler {
 - (void)upMore:(void (^)(NSInteger, NSArray *, NSError *))handler {
-    //: __block FFFMessageModel *currentNewestMsg = self.items.lastObject;
+    //: __block BusyMessageModel *currentNewestMsg = self.items.lastObject;
     __block MoreModel *currentNewestMsg = self.items.lastObject;
     //: __block NSInteger index = 0;
     __block NSInteger index = 0;
@@ -463,7 +463,7 @@
         [items enumerateObjectsUsingBlock:^(NIMMessagePinItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             //: NSString *pinUserID = obj.accountID ?: NIMSDK.sharedSDK.loginManager.currentAccount;
             NSString *pinUserID = obj.accountID ?: NIMSDK.sharedSDK.loginManager.currentAccount;
-            //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+            //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
             InfoGreenImage *option = [[InfoGreenImage alloc] init];
             //: option.session = _currentSession;
             option.session = _currentSession;
@@ -480,7 +480,7 @@
     }];
 }
 
-//: - (NSArray*)deleteMessageModel:(FFFMessageModel *)msgModel
+//: - (NSArray*)deleteMessageModel:(BusyMessageModel *)msgModel
 - (NSArray*)atDown:(MoreModel *)msgModel
 {
     //: NSMutableArray *dels = [NSMutableArray array];
@@ -491,9 +491,9 @@
     NSInteger delMsgIndex = [self.items indexOfObject:msgModel];
     //: if (delMsgIndex > 0) {
     if (delMsgIndex > 0) {
-        //: BOOL delMsgIsSingle = (delMsgIndex == self.items.count-1 || [self.items[delMsgIndex+1] isKindOfClass:[FFFTimestampModel class]]);
+        //: BOOL delMsgIsSingle = (delMsgIndex == self.items.count-1 || [self.items[delMsgIndex+1] isKindOfClass:[BusyTimestampModel class]]);
         BOOL delMsgIsSingle = (delMsgIndex == self.items.count-1 || [self.items[delMsgIndex+1] isKindOfClass:[AppRow class]]);
-        //: if ([self.items[delMsgIndex-1] isKindOfClass:[FFFTimestampModel class]] && delMsgIsSingle) {
+        //: if ([self.items[delMsgIndex-1] isKindOfClass:[BusyTimestampModel class]] && delMsgIsSingle) {
         if ([self.items[delMsgIndex-1] isKindOfClass:[AppRow class]] && delMsgIsSingle) {
             //: delTimeIndex = delMsgIndex-1;
             delTimeIndex = delMsgIndex-1;
@@ -525,9 +525,9 @@
     NSMutableArray *dels = [NSMutableArray array];
     //: NSMutableArray *all = [NSMutableArray arrayWithArray:self.items];
     NSMutableArray *all = [NSMutableArray arrayWithArray:self.items];
-    //: for (FFFMessageModel *model in models) {
+    //: for (BusyMessageModel *model in models) {
     for (MoreModel *model in models) {
-        //: if ([model isKindOfClass:[FFFTimestampModel class]]) {
+        //: if ([model isKindOfClass:[BusyTimestampModel class]]) {
         if ([model isKindOfClass:[AppRow class]]) {
             //: continue;
             continue;
@@ -538,9 +538,9 @@
         NSInteger delMsgIndex = [all indexOfObject:model];
         //: if (delMsgIndex > 0) {
         if (delMsgIndex > 0) {
-            //: BOOL delMsgIsSingle = (delMsgIndex == all.count-1 || [all[delMsgIndex+1] isKindOfClass:[FFFTimestampModel class]]);
+            //: BOOL delMsgIsSingle = (delMsgIndex == all.count-1 || [all[delMsgIndex+1] isKindOfClass:[BusyTimestampModel class]]);
             BOOL delMsgIsSingle = (delMsgIndex == all.count-1 || [all[delMsgIndex+1] isKindOfClass:[AppRow class]]);
-            //: if ([all[delMsgIndex-1] isKindOfClass:[FFFTimestampModel class]] && delMsgIsSingle) {
+            //: if ([all[delMsgIndex-1] isKindOfClass:[BusyTimestampModel class]] && delMsgIsSingle) {
             if ([all[delMsgIndex-1] isKindOfClass:[AppRow class]] && delMsgIsSingle) {
                 //: delTimeIndex = delMsgIndex-1;
                 delTimeIndex = delMsgIndex-1;
@@ -574,10 +574,10 @@
     //: for (id item in self.items)
     for (id item in self.items)
     {
-        //: if ([item isKindOfClass:[FFFMessageModel class]])
+        //: if ([item isKindOfClass:[BusyMessageModel class]])
         if ([item isKindOfClass:[MoreModel class]])
         {
-            //: FFFMessageModel *model = (FFFMessageModel *)item;
+            //: BusyMessageModel *model = (BusyMessageModel *)item;
             MoreModel *model = (MoreModel *)item;
             //: [model cleanCache];
             [model question];
@@ -593,10 +593,10 @@
     //: for (id item in self.items)
     for (id item in self.items)
     {
-        //: if ([item isKindOfClass:[FFFMessageModel class]])
+        //: if ([item isKindOfClass:[BusyMessageModel class]])
         if ([item isKindOfClass:[MoreModel class]])
         {
-            //: FFFMessageModel *model = (FFFMessageModel *)item;
+            //: BusyMessageModel *model = (BusyMessageModel *)item;
             MoreModel *model = (MoreModel *)item;
             //: model.shouldShowSelect = isShow;
             model.shouldShowSelect = isShow;
@@ -621,7 +621,7 @@
     }
 }
 
-//: - (void)willDisplayMessageModel:(FFFMessageModel *)model
+//: - (void)willDisplayMessageModel:(BusyMessageModel *)model
 - (void)back:(MoreModel *)model
 {
     //: if ([_sessionConfig respondsToSelector:@selector(shouldShowPinContent)]) {
@@ -647,7 +647,7 @@
     NIMMessagePinItem *item = [NIMSDK.sharedSDK.chatExtendManager pinItemForMessage:message];
     //: NSString *accountID = item.accountID ?: NIMSDK.sharedSDK.loginManager.currentAccount;
     NSString *accountID = item.accountID ?: NIMSDK.sharedSDK.loginManager.currentAccount;
-    //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+    //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
     InfoGreenImage *option = [[InfoGreenImage alloc] init];
     //: option.session = message.session;
     option.session = message.session;
@@ -675,7 +675,7 @@
 #pragma mark - private methods
 //: - (void)insertMessage:(NIMMessage *)message{
 - (void)pieceMessage:(NIMMessage *)message{
-    //: FFFMessageModel *model = [[FFFMessageModel alloc] initWithMessage:message];
+    //: BusyMessageModel *model = [[BusyMessageModel alloc] initWithMessage:message];
     MoreModel *model = [[MoreModel alloc] initWithLabel:message];
     //: model.shouldShowSelect = _messageModelShowSelect;
     model.shouldShowSelect = _messageModelShowSelect;
@@ -709,7 +709,7 @@
     if (firstTimeInterval && firstTimeInterval - model.messageTime < self.showTimeInterval) {
         //此时至少有一条消息和时间戳（如果有的话）
         //干掉时间戳（如果有的话）
-        //: if ([self.items.firstObject isKindOfClass:[FFFTimestampModel class]]) {
+        //: if ([self.items.firstObject isKindOfClass:[BusyTimestampModel class]]) {
         if ([self.items.firstObject isKindOfClass:[AppRow class]]) {
             //: [self.items removeObjectAtIndex:0];
             [self.items removeObjectAtIndex:0];
@@ -720,7 +720,7 @@
     //: if ((![self.dataProvider respondsToSelector:@selector(needTimetag)] || self.dataProvider.needTimetag) && self.dataProvider) {
     if ((![self.dataProvider respondsToSelector:@selector(placeDisplay)] || self.dataProvider.placeDisplay) && self.dataProvider) {
         //这种情况下必须要插入时间戳
-        //: FFFTimestampModel *timeModel = [[FFFTimestampModel alloc] init];
+        //: BusyTimestampModel *timeModel = [[BusyTimestampModel alloc] init];
         AppRow *timeModel = [[AppRow alloc] init];
         //: timeModel.messageTime = model.messageTime;
         timeModel.messageTime = model.messageTime;
@@ -732,7 +732,7 @@
 }
 
 
-//: - (NSArray *)insertMessageModel:(FFFMessageModel *)model index:(NSInteger)index{
+//: - (NSArray *)insertMessageModel:(BusyMessageModel *)model index:(NSInteger)index{
 - (NSArray *)viewTotal:(MoreModel *)model cellIndex:(NSInteger)index{
     //: NSMutableArray *inserts = [[NSMutableArray alloc] init];
     NSMutableArray *inserts = [[NSMutableArray alloc] init];
@@ -741,7 +741,7 @@
     {
         //: if ([self shouldInsertTimestamp:model]) {
         if ([self coloured:model]) {
-            //: FFFTimestampModel *timeModel = [[FFFTimestampModel alloc] init];
+            //: BusyTimestampModel *timeModel = [[BusyTimestampModel alloc] init];
             AppRow *timeModel = [[AppRow alloc] init];
             //: timeModel.messageTime = model.messageTime;
             timeModel.messageTime = model.messageTime;
@@ -770,9 +770,9 @@
     NSInteger catch = 0;
     //: NSArray *modelArray = [NSArray arrayWithArray:self.items];
     NSArray *modelArray = [NSArray arrayWithArray:self.items];
-    //: for (FFFMessageModel *model in modelArray) {
+    //: for (BusyMessageModel *model in modelArray) {
     for (MoreModel *model in modelArray) {
-        //: if ([model isKindOfClass:[FFFMessageModel class]]) {
+        //: if ([model isKindOfClass:[BusyMessageModel class]]) {
         if ([model isKindOfClass:[MoreModel class]]) {
             //: catch++;
             catch++;
@@ -787,14 +787,14 @@
     }
 }
 
-//: - (NSArray<FFFMessageModel *> *)modelsWithMessages:(NSArray<NIMMessage *> *)messages
+//: - (NSArray<BusyMessageModel *> *)modelsWithMessages:(NSArray<NIMMessage *> *)messages
 - (NSArray<MoreModel *> *)nakedOption:(NSArray<NIMMessage *> *)messages
 {
     //: NSMutableArray *array = [[NSMutableArray alloc] init];
     NSMutableArray *array = [[NSMutableArray alloc] init];
     //: for (NIMMessage *message in messages) {
     for (NIMMessage *message in messages) {
-        //: FFFMessageModel *model = [[FFFMessageModel alloc] initWithMessage:message];
+        //: BusyMessageModel *model = [[BusyMessageModel alloc] initWithMessage:message];
         MoreModel *model = [[MoreModel alloc] initWithLabel:message];
         //: model.shouldShowSelect = _messageModelShowSelect;
         model.shouldShowSelect = _messageModelShowSelect;
@@ -829,14 +829,14 @@
 }
 
 
-//: - (NSInteger)findInsertPosistion:(FFFMessageModel *)model
+//: - (NSInteger)findInsertPosistion:(BusyMessageModel *)model
 - (NSInteger)change:(MoreModel *)model
 {
     //: return [self findInsertPosistion:self.items model:model];
     return [self anyRemove:self.items key:model];
 }
 
-//: - (NSInteger)findInsertPosistion:(NSArray *)array model:(FFFMessageModel *)model
+//: - (NSInteger)findInsertPosistion:(NSArray *)array model:(BusyMessageModel *)model
 - (NSInteger)anyRemove:(NSArray *)array key:(MoreModel *)model
 {
     //: if (array.count == 0) {
@@ -848,7 +848,7 @@
     //: if (array.count == 1) {
     if (array.count == 1) {
         //递归出口
-        //: FFFMessageModel *obj = array.firstObject;
+        //: BusyMessageModel *obj = array.firstObject;
         MoreModel *obj = array.firstObject;
         //: NSInteger index = [self.items indexOfObject:obj];
         NSInteger index = [self.items indexOfObject:obj];
@@ -857,7 +857,7 @@
     }
     //: NSInteger sep = (array.count+1) / 2;
     NSInteger sep = (array.count+1) / 2;
-    //: FFFMessageModel *center = array[sep];
+    //: BusyMessageModel *center = array[sep];
     MoreModel *center = array[sep];
     //: NSTimeInterval timestamp = [center messageTime];
     NSTimeInterval timestamp = [center messageTime];
@@ -877,10 +877,10 @@
 }
 
 
-//: - (BOOL)shouldInsertTimestamp:(FFFMessageModel *)model
+//: - (BOOL)shouldInsertTimestamp:(BusyMessageModel *)model
 - (BOOL)coloured:(MoreModel *)model
 {
-    //: FFFMessageModel *lastmodel = self.items.lastObject;
+    //: BusyMessageModel *lastmodel = self.items.lastObject;
     MoreModel *lastmodel = self.items.lastObject;
     //: if (model.message.messageType == NIMMessageTypeCustom && model.message.messageSubType == 20) {
     if (model.message.messageType == NIMMessageTypeCustom && model.message.messageSubType == 20) {
@@ -911,7 +911,7 @@
         //: return 0;
         return 0;
     }
-    //: FFFMessageModel *model;
+    //: BusyMessageModel *model;
     MoreModel *model;
     //: if (![self.dataProvider respondsToSelector:@selector(needTimetag)] || self.dataProvider.needTimetag) {
     if (![self.dataProvider respondsToSelector:@selector(placeDisplay)] || self.dataProvider.placeDisplay) {

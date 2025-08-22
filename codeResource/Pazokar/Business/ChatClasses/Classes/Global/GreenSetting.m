@@ -30,12 +30,12 @@ Byte showBeerPath[] = {99, 13, 86, 13, 225, 208, 13, 244, 248, 167, 24, 22, 30, 
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitSetting.h"
+//: #import "BusyKitSetting.h"
 #import "GreenSetting.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
 
-//: @implementation FFFKitSetting
+//: @implementation BusyKitSetting
 @implementation GreenSetting
 
 //: - (instancetype)init:(BOOL)isRight

@@ -9,9 +9,9 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionMessageContentView.h"
+//: #import "BusySessionMessageContentView.h"
 #import "TextControl.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
@@ -20,13 +20,13 @@
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @interface FFFSessionMessageContentView()
+//: @interface BusySessionMessageContentView()
 @interface TextControl()
 
 //: @end
 @end
 
-//: @implementation FFFSessionMessageContentView
+//: @implementation BusySessionMessageContentView
 @implementation TextControl
 
 //: - (instancetype)initSessionMessageContentView
@@ -56,7 +56,7 @@
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel*)data
+//: - (void)refresh:(BusyMessageModel*)data
 - (void)messagePress:(MoreModel*)data
 {
     //: _model = data;
@@ -107,7 +107,7 @@
 - (UIImage *)success:(UIControlState)state point:(BOOL)outgoing
 {
 
-    //: FFFKitSetting *setting = [[MyUserKit sharedKit].config setting:self.model.message];
+    //: BusyKitSetting *setting = [[MyUserKit sharedKit].config setting:self.model.message];
     GreenSetting *setting = [[Case pastTop].config tool:self.model.message];
     //: if (state == UIControlStateNormal)
     if (state == UIControlStateNormal)

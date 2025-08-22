@@ -9,9 +9,9 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamCardMemberItem.h"
+//: #import "BusyTeamCardMemberItem.h"
 #import "HomegirlFormat.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
@@ -54,7 +54,7 @@
 
 //: - (UIImage *)imageNormal{
 - (UIImage *)imageNormal{
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:self.userId option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:self.userId option:nil];
     Info *info = [[Case pastTop] consumer:self.userId message:nil];
     //: return info.avatarImage;
     return info.avatarImage;
@@ -64,7 +64,7 @@
 - (NSString *)title {
     //: NIMSession *session = [NIMSession session:self.userId type:NIMSessionTypeP2P];
     NIMSession *session = [NIMSession session:self.userId type:NIMSessionTypeP2P];
-    //: return [FFFKitUtil showNick:self.userId inSession:session];
+    //: return [BusyKitUtil showNick:self.userId inSession:session];
     return [OffMore smallness:self.userId flush:session];
 }
 
@@ -95,7 +95,7 @@
 //: @end
 @end
 
-//: @interface FFFTeamCardMemberItem ()
+//: @interface BusyTeamCardMemberItem ()
 @interface HomegirlFormat ()
 
 //: @property (nonatomic, strong) NIMTeamMember *member;
@@ -107,7 +107,7 @@
 //: @end
 @end
 
-//: @implementation FFFTeamCardMemberItem
+//: @implementation BusyTeamCardMemberItem
 @implementation HomegirlFormat
 
 //: - (instancetype)init {
@@ -148,19 +148,19 @@
 
 //: - (BOOL)isEqual:(id)object{
 - (BOOL)isEqual:(id)object{
-    //: if (![object isKindOfClass:[FFFTeamCardMemberItem class]]) {
+    //: if (![object isKindOfClass:[BusyTeamCardMemberItem class]]) {
     if (![object isKindOfClass:[HomegirlFormat class]]) {
         //: return NO;
         return NO;
     }
-    //: FFFTeamCardMemberItem *obj = (FFFTeamCardMemberItem*)object;
+    //: BusyTeamCardMemberItem *obj = (BusyTeamCardMemberItem*)object;
     HomegirlFormat *obj = (HomegirlFormat*)object;
     //: return [obj.userId isEqual:self.userId];
     return [obj.userId isEqual:self.userId];
 }
 
-//: #pragma mark - <FFFKitCardHeaderData>
-#pragma mark - <FFFKitCardHeaderData>
+//: #pragma mark - <BusyKitCardHeaderData>
+#pragma mark - <BusyKitCardHeaderData>
 //: - (NSString *)teamId {
 - (NSString *)teamId {
     //: return _member.teamId;
@@ -200,7 +200,7 @@
 
 //: - (UIImage *)imageNormal{
 - (UIImage *)imageNormal{
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:self.userId option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:self.userId option:nil];
     Info *info = [[Case pastTop] consumer:self.userId message:nil];
     //: return info.avatarImage;
     return info.avatarImage;
@@ -226,7 +226,7 @@
             session = [NIMSession session:self.teamId type:NIMSessionTypeTeam];
         }
     }
-    //: return [FFFKitUtil showNick:self.userId inSession:session];
+    //: return [BusyKitUtil showNick:self.userId inSession:session];
     return [OffMore smallness:self.userId flush:session];
 }
 

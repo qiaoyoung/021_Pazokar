@@ -180,7 +180,7 @@ typedef struct {
         self.delegate = delegate;
         //: self.viewController = viewController;
         self.viewController = viewController;
-        //: self.title = [FFFLanguageManager getTextWithKey:@"please_choose"];
+        //: self.title = [BusyLanguageManager getTextWithKey:@"please_choose"];
         self.title = [SendName streetSmart:[[HaoData sharedInstance] noti_ellPossePath]];//@"请选择";
     }
     //: return self;
@@ -239,9 +239,9 @@ typedef struct {
     //: if (_actionSheet == nil) {
     if (_actionSheet == nil) {
 
-        //: NSString *from_phone = [FFFLanguageManager getTextWithKey:@"friend_circle_activity_from_phone"];
+        //: NSString *from_phone = [BusyLanguageManager getTextWithKey:@"friend_circle_activity_from_phone"];
         NSString *from_phone = [SendName streetSmart:[[HaoData sharedInstance] mainChildIdent]];
-        //: NSString *activity_camera = [FFFLanguageManager getTextWithKey:@"friend_circle_activity_camera"];
+        //: NSString *activity_camera = [BusyLanguageManager getTextWithKey:@"friend_circle_activity_camera"];
         NSString *activity_camera = [SendName streetSmart:[[HaoData sharedInstance] k_sirPath]];
 
         //: _actionSheet = [[UIActionSheet alloc] initWithTitle:self.title
@@ -273,7 +273,7 @@ typedef struct {
             cancelIndex++;
         }
 
-        //: [_actionSheet addButtonWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"]];
+        //: [_actionSheet addButtonWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"]];
         [_actionSheet addButtonWithTitle:[SendName streetSmart:[[HaoData sharedInstance] showEnemyTextAttemptMessage]]];
         //: cancelIndex++;
         cancelIndex++;
@@ -299,7 +299,6 @@ typedef struct {
     return _imagePickerController;
 }
 
-//: - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
     //: if (buttonIndex == 0) {
     if (buttonIndex == 0) {

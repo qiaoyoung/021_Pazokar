@@ -21,7 +21,7 @@
 //: @end
 @end
 
-//: @interface FFFSpellingCenter : NSObject
+//: @interface BusySpellingCenter : NSObject
 @interface PinValueTing : NSObject
 {
     //: NSMutableDictionary *_spellingCache; 
@@ -29,7 +29,7 @@
     //: NSString *_filepath;
     NSString *_filepath;
 }
-//: + (FFFSpellingCenter *)sharedCenter;
+//: + (BusySpellingCenter *)sharedCenter;
 + (PinValueTing *)sharedToCenterBackground;
 //: - (void)saveSpellingCache; 
 - (void)keyMagnitudeImage; //写入缓存

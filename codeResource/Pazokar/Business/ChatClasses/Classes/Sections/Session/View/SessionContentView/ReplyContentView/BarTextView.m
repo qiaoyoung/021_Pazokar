@@ -55,7 +55,7 @@ NumbererviewData userRecordData = (NumbererviewData){159, (Byte []){252, 240, 24
 //
 
 // __M_A_C_R_O__
-//: #import "FFFReplyedTextContentView.h"
+//: #import "BusyReplyedTextContentView.h"
 #import "BarTextView.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
@@ -64,12 +64,12 @@ NumbererviewData userRecordData = (NumbererviewData){159, (Byte []){252, 240, 24
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @interface FFFReplyedTextContentView ()<M80AttributedLabelDelegate>
+//: @interface BusyReplyedTextContentView ()<M80AttributedLabelDelegate>
 @interface BarTextView ()<CleanName>
 //: @end
 @end
 
-//: @implementation FFFReplyedTextContentView
+//: @implementation BusyReplyedTextContentView
 @implementation BarTextView
 
 //: - (instancetype)initSessionMessageContentView {
@@ -88,7 +88,7 @@ NumbererviewData userRecordData = (NumbererviewData){159, (Byte []){252, 240, 24
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)data {
+//: - (void)refresh:(BusyMessageModel *)data {
 - (void)messagePress:(MoreModel *)data {
     //: [super refresh:data];
     [super messagePress:data];
@@ -263,7 +263,7 @@ NumbererviewData userRecordData = (NumbererviewData){159, (Byte []){252, 240, 24
 
     }
 
-    //: FFFKitSetting *setting = [[MyUserKit sharedKit].config repliedSetting:data.message];
+    //: BusyKitSetting *setting = [[MyUserKit sharedKit].config repliedSetting:data.message];
     GreenSetting *setting = [[Case pastTop].config system:data.message];
     //: self.textLabel.textColor = setting.replyedTextColor;
     self.textLabel.textColor = setting.replyedTextColor;
@@ -379,9 +379,9 @@ NumbererviewData userRecordData = (NumbererviewData){159, (Byte []){252, 240, 24
 - (void)by:(CypherScrollView *)label
              //: clickedOnLink:(id)linkData{
              offClickedAttributedLabelThink:(id)linkData{
-    //: FFFKitEvent *event = [[FFFKitEvent alloc] init];
+    //: BusyKitEvent *event = [[BusyKitEvent alloc] init];
     DirectionEvent *event = [[DirectionEvent alloc] init];
-    //: event.eventName = FFFKitEventNameTapLabelLink;
+    //: event.eventName = BusyKitEventNameTapLabelLink;
     event.eventName = user_commentFormat;
     //: event.messageModel = self.model;
     event.messageModel = self.model;
@@ -396,7 +396,7 @@ NumbererviewData userRecordData = (NumbererviewData){159, (Byte []){252, 240, 24
 - (void)objects:(id)sender
 {
 //    DirectionEvent *event = [[DirectionEvent alloc] init];
-//    event.eventName = FFFKitEventNameTapRepliedContent;
+//    event.eventName = BusyKitEventNameTapRepliedContent;
 //    event.messageModel = self.model;
 //    [self.delegate onCatchEvent:event];
 }

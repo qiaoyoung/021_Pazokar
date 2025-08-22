@@ -133,14 +133,14 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFInputAudioView.h"
+//: #import "BusyInputAudioView.h"
 #import "SaluteView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
 //: #import "UIView+NTES.h"
 #import "UIView+Date.h"
 
-//: @interface FFFInputAudioView()
+//: @interface BusyInputAudioView()
 @interface SaluteView()
 
 //: @property (nonatomic,strong) UIView *audioBgview;
@@ -163,7 +163,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFInputAudioView
+//: @implementation BusyInputAudioView
 @implementation SaluteView
 
 
@@ -212,7 +212,7 @@ typedef struct {
         _delLabel.textAlignment = NSTextAlignmentCenter;
         //: _delLabel.hidden = YES;
         _delLabel.hidden = YES;
-        //: _delLabel.text = [FFFLanguageManager getTextWithKey:@"Releasetocancel"];
+        //: _delLabel.text = [BusyLanguageManager getTextWithKey:@"Releasetocancel"];
         _delLabel.text = [SendName streetSmart:[FurtherData sharedInstance].dream_inmateCargoUrl];
         //: [_audioBgview addSubview:_delLabel];
         [_audioBgview addSubview:_delLabel];
@@ -231,7 +231,7 @@ typedef struct {
         //: _tipLabel.textAlignment = NSTextAlignmentCenter;
         _tipLabel.textAlignment = NSTextAlignmentCenter;
 //        _tipLabel.text = @"手指上滑，取消发送".nim_localized;
-        //: _tipLabel.text = [FFFLanguageManager getTextWithKey:@"Releasetosend_swipeuptocancel"];
+        //: _tipLabel.text = [BusyLanguageManager getTextWithKey:@"Releasetosend_swipeuptocancel"];
         _tipLabel.text = [SendName streetSmart:[FurtherData sharedInstance].app_seeMsg];
         //: [_audioBgview addSubview:_tipLabel];
         [_audioBgview addSubview:_tipLabel];
@@ -446,7 +446,7 @@ typedef struct {
     }
 }
 
-//: - (void)setConfig:(id<FFFSessionConfig>)config
+//: - (void)setConfig:(id<BusySessionConfig>)config
 - (void)setConfig:(id<QuantityelligenceInformationCan>)config
 {
     //: _config = config;

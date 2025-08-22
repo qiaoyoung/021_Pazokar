@@ -376,7 +376,7 @@
     //: self.delegate = delegate;
     self.delegate = delegate;
     //: delegateClass = object_getClass(delegate);
-    delegateClass = doingceAttributeMake(delegate);
+    delegateClass = object_getClass(delegate);
 }
 
 //: - (void)datePickerValueChanged{
@@ -522,7 +522,7 @@
 //: - (void)leftButtonClicked:(id)sender{
 - (void)exceptButton:(id)sender{
     //: Class currentClass = object_getClass(self.delegate);
-    Class currentClass = doingceAttributeMake(self.delegate);
+    Class currentClass = object_getClass(self.delegate);
     //: if ((currentClass == delegateClass) && [self.delegate respondsToSelector:@selector(dismissDataPickerView)]) {
     if ((currentClass == delegateClass) && [self.delegate respondsToSelector:@selector(dismissAccumulationSessionView)]) {
         //: [self.delegate dismissDataPickerView];
@@ -546,7 +546,7 @@
 //: - (void)rightButtonClicked:(id)sender{
 - (void)names:(id)sender{
     //: Class currentClass = object_getClass(self.delegate);
-    Class currentClass = doingceAttributeMake(self.delegate);
+    Class currentClass = object_getClass(self.delegate);
     //: if ((currentClass == delegateClass) && [self.delegate respondsToSelector:@selector(dismissDataPickerView)]) {
     if ((currentClass == delegateClass) && [self.delegate respondsToSelector:@selector(dismissAccumulationSessionView)]) {
         //: [self.delegate dismissDataPickerView];

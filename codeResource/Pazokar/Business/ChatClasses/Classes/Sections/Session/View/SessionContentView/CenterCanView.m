@@ -21,16 +21,16 @@ Byte mGloveUrl[] = {12, 15, 15, 8, 85, 56, 251, 176, 84, 89, 82, 101, 80, 90, 84
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionRtcCallRecordContentView.h"
+//: #import "BusySessionRtcCallRecordContentView.h"
 #import "CenterCanView.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 //: #import "NSString+MyUserKit.h"
 #import "NSString+Case.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 
-//: @implementation FFFSessionRtcCallRecordContentView
+//: @implementation BusySessionRtcCallRecordContentView
 @implementation CenterCanView
 
 //: - (instancetype)initSessionMessageContentView
@@ -57,17 +57,17 @@ Byte mGloveUrl[] = {12, 15, 15, 8, 85, 56, 251, 176, 84, 89, 82, 101, 80, 90, 84
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)data {
+//: - (void)refresh:(BusyMessageModel *)data {
 - (void)messagePress:(MoreModel *)data {
     //: [super refresh:data];
     [super messagePress:data];
-    //: FFFKitSetting *setting = [[MyUserKit sharedKit].config setting:data.message];
+    //: BusyKitSetting *setting = [[MyUserKit sharedKit].config setting:data.message];
     GreenSetting *setting = [[Case pastTop].config tool:data.message];
     //: self.textLabel.textColor = setting.textColor;
     self.textLabel.textColor = setting.textColor;
     //: self.textLabel.font = setting.font;
     self.textLabel.font = setting.font;
-    //: self.textLabel.text = [FFFKitUtil messageTipContent:data.message];
+    //: self.textLabel.text = [BusyKitUtil messageTipContent:data.message];
     self.textLabel.text = [OffMore impanel:data.message];
 
     //: NIMRtcCallRecordObject *record = data.message.messageObject;

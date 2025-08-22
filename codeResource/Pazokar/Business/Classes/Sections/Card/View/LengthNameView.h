@@ -11,7 +11,7 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFCommonTableViewCell.h"
+//: #import "BusyCommonTableViewCell.h"
 #import "MediaApp.h"
 
 //: typedef NS_ENUM(NSInteger, ColorButtonCellStyle){
@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, ColorButtonCellStyle){
 //: @class NTESColorButton;
 @class ValuePraiseControl;
 
-//: @interface NTESColorButtonCell : UITableViewCell<FFFCommonTableViewCell>
+//: @interface NTESColorButtonCell : UITableViewCell<BusyCommonTableViewCell>
 @interface LengthNameView : UITableViewCell<MediaApp>
 
 //: @property (nonatomic,strong) NTESColorButton *button;

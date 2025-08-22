@@ -1,7 +1,7 @@
 // __DEBUG__
 // __CLOSE_PRINT__
 //
-//  FFFInputProtocol.h
+//  BusyInputProtocol.h
 // Case
 //
 //  Created by chris.
@@ -14,7 +14,7 @@
 
 // __M_A_C_R_O__
 
-//: @class FFFMediaItem;
+//: @class BusyMediaItem;
 @class ModelMessage;
 
 
@@ -23,7 +23,7 @@
 
 //: @optional
 @optional
-//: - (BOOL)onTapMediaItem:(FFFMediaItem *)item;
+//: - (BOOL)onTapMediaItem:(BusyMediaItem *)item;
 - (BOOL)ended:(ModelMessage *)item;
 
 //: - (void)onTextChanged:(id)sender;

@@ -12,30 +12,30 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: @class FFFPageView;
+//: @class BusyPageView;
 @class PageView;
 
-//: @protocol FFFPageViewDataSource <NSObject>
+//: @protocol BusyPageViewDataSource <NSObject>
 @protocol TingSource <NSObject>
-//: - (NSInteger)numberOfPages: (FFFPageView *)pageView;
+//: - (NSInteger)numberOfPages: (BusyPageView *)pageView;
 - (NSInteger)ofses: (PageView *)pageView;
-//: - (UIView *)pageView: (FFFPageView *)pageView viewInPage: (NSInteger)index;
+//: - (UIView *)pageView: (BusyPageView *)pageView viewInPage: (NSInteger)index;
 - (UIView *)month: (PageView *)pageView input: (NSInteger)index;
 //: @end
 @end
 
-//: @protocol FFFPageViewDelegate <NSObject>
+//: @protocol BusyPageViewDelegate <NSObject>
 @protocol CustomAppear <NSObject>
 //: @optional
 @optional
-//: - (void)pageViewScrollEnd: (FFFPageView *)pageView
+//: - (void)pageViewScrollEnd: (BusyPageView *)pageView
 - (void)change: (PageView *)pageView
              //: currentIndex: (NSInteger)index
              convert: (NSInteger)index
                //: totolPages: (NSInteger)pages;
                faculty: (NSInteger)pages;
 
-//: - (void)pageViewDidScroll: (FFFPageView *)pageView;
+//: - (void)pageViewDidScroll: (BusyPageView *)pageView;
 - (void)existed: (PageView *)pageView;
 //: - (BOOL)needScrollAnimation;
 - (BOOL)requireScrollAnimation;
@@ -43,13 +43,13 @@
 @end
 
 
-//: @interface FFFPageView : UIView<UIScrollViewDelegate>
+//: @interface BusyPageView : UIView<UIScrollViewDelegate>
 @interface PageView : UIView<UIScrollViewDelegate>
 //: @property (nonatomic,strong) UIScrollView *scrollView;
 @property (nonatomic,strong) UIScrollView *scrollView;
-//: @property (nonatomic,weak) id<FFFPageViewDataSource> dataSource;
+//: @property (nonatomic,weak) id<BusyPageViewDataSource> dataSource;
 @property (nonatomic,weak) id<TingSource> dataSource;
-//: @property (nonatomic,weak) id<FFFPageViewDelegate> pageViewDelegate;
+//: @property (nonatomic,weak) id<BusyPageViewDelegate> pageViewDelegate;
 @property (nonatomic,weak) id<CustomAppear> pageViewDelegate;
 //: - (void)scrollToPage: (NSInteger)pages;
 - (void)encounter: (NSInteger)pages;

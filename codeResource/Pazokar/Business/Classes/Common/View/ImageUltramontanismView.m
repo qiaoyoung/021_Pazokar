@@ -338,7 +338,7 @@
         _closeBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_closeBtn setTitleColor:[UIColor colorWithHexString:@"#5D5F66"] forState:UIControlStateNormal];
         [_closeBtn setTitleColor:[UIColor status:[AmbagesData dreamPoemPath]] forState:UIControlStateNormal];
-        //: [_closeBtn setTitle:[FFFLanguageManager getTextWithKey:@"reject"] forState:UIControlStateNormal];
+        //: [_closeBtn setTitle:[BusyLanguageManager getTextWithKey:@"reject"] forState:UIControlStateNormal];
         [_closeBtn setTitle:[SendName streetSmart:[AmbagesData noti_verticalStr]] forState:UIControlStateNormal];
         //: _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
         _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
@@ -369,7 +369,7 @@
         _sureBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        //: [_sureBtn setTitle:[FFFLanguageManager getTextWithKey:@"agree"] forState:UIControlStateNormal];
+        //: [_sureBtn setTitle:[BusyLanguageManager getTextWithKey:@"agree"] forState:UIControlStateNormal];
         [_sureBtn setTitle:[SendName streetSmart:[AmbagesData main_feeName]] forState:UIControlStateNormal];
         //: _sureBtn.backgroundColor = [UIColor colorWithHexString:@"#02D8C9"];
         _sureBtn.backgroundColor = [UIColor status:[AmbagesData dreamBottomKey]];

@@ -26,11 +26,11 @@ Byte main_modeId[] = {86, 8, 18, 12, 145, 106, 218, 215, 68, 33, 249, 157, 49, 8
 // __M_A_C_R_O__
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFInputEmoticonDefine.h"
-#import "FFFInputEmoticonDefine.h"
+//: #import "BusyInputEmoticonDefine.h"
+#import "BusyInputEmoticonDefine.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFKitDevice.h"
+//: #import "BusyKitDevice.h"
 #import "MarginDevice.h"
 //: #import "NSBundle+MyUserKit.h"
 #import "NSBundle+Case.h"
@@ -177,7 +177,7 @@ Byte main_modeId[] = {86, 8, 18, 12, 145, 106, 218, 215, 68, 33, 249, 157, 49, 8
 //: - (UIImage *)nim_imageForAvatarUpload
 - (UIImage *)doseUpload
 {
-    //: CGFloat pixels = [[FFFKitDevice currentDevice] suggestImagePixels];
+    //: CGFloat pixels = [[BusyKitDevice currentDevice] suggestImagePixels];
     CGFloat pixels = [[MarginDevice send] show];
     //: UIImage * image = [self nim_imageForUpload:pixels];
     UIImage * image = [self pictureWithoutUpload:pixels];

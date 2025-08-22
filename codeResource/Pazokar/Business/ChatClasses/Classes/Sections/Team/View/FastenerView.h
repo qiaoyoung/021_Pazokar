@@ -13,20 +13,20 @@
 #import <UIKit/UIKit.h>
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFCardDataSourceProtocol.h"
-#import "FFFCardDataSourceProtocol.h"
+//: #import "BusyCardDataSourceProtocol.h"
+#import "BusyCardDataSourceProtocol.h"
 
-//: @class FFFAvatarImageView;
+//: @class BusyAvatarImageView;
 @class CustomFormatView;
-//: @protocol FFFCardHeaderCellDelegate;
+//: @protocol BusyCardHeaderCellDelegate;
 @protocol OrientationMargin;
 
 
 
-//: @interface FFFCardHeaderCell : UICollectionViewCell
+//: @interface BusyCardHeaderCell : UICollectionViewCell
 @interface FastenerView : UICollectionViewCell
 
-//: @property (nonatomic,strong) FFFAvatarImageView *imageView;
+//: @property (nonatomic,strong) BusyAvatarImageView *imageView;
 @property (nonatomic,strong) CustomFormatView *imageView;
 
 //: @property (nonatomic,strong) UIImageView *roleImageView;
@@ -38,29 +38,29 @@
 //: @property (nonatomic,strong) UIButton *removeBtn;
 @property (nonatomic,strong) UIButton *removeBtn;
 
-//: @property (nonatomic,weak) id<FFFCardHeaderCellDelegate>delegate;
+//: @property (nonatomic,weak) id<BusyCardHeaderCellDelegate>delegate;
 @property (nonatomic,weak) id<OrientationMargin>delegate;
 
-//: @property (nonatomic,readonly) id<FFFKitCardHeaderData> data;
-@property (nonatomic,readonly) id<FFFKitCardHeaderData> data;
+//: @property (nonatomic,readonly) id<BusyKitCardHeaderData> data;
+@property (nonatomic,readonly) id<BusyKitCardHeaderData> data;
 
-//: - (void)refreshData:(id<FFFKitCardHeaderData>)data;
-- (void)latentPeriod:(id<FFFKitCardHeaderData>)data;
+//: - (void)refreshData:(id<BusyKitCardHeaderData>)data;
+- (void)latentPeriod:(id<BusyKitCardHeaderData>)data;
 
 //: @end
 @end
 
 
-//: @protocol FFFCardHeaderCellDelegate <NSObject>
+//: @protocol BusyCardHeaderCellDelegate <NSObject>
 @protocol OrientationMargin <NSObject>
 
-//: - (void)cellDidSelected:(FFFCardHeaderCell*)cell;
+//: - (void)cellDidSelected:(BusyCardHeaderCell*)cell;
 - (void)hideMax:(FastenerView*)cell;
 
 
 //: @optional
 @optional
-//: - (void)cellShouldBeRemoved:(FFFCardHeaderCell*)cell;
+//: - (void)cellShouldBeRemoved:(BusyCardHeaderCell*)cell;
 - (void)adheres:(FastenerView*)cell;
 
 //: @end

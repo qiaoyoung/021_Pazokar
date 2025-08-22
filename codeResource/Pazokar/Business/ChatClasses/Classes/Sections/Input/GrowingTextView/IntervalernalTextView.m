@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFGrowingInternalTextView.h"
+//: #import "BusyGrowingInternalTextView.h"
 #import "IntervalernalTextView.h"
 
-//: @interface FFFGrowingInternalTextView()
+//: @interface BusyGrowingInternalTextView()
 @interface IntervalernalTextView()
 
 //: @property (nonatomic,assign) BOOL displayPlaceholder;
@@ -21,7 +21,7 @@
 //: @end
 @end
 
-//: @implementation FFFGrowingInternalTextView
+//: @implementation BusyGrowingInternalTextView
 @implementation IntervalernalTextView
 
 //: - (instancetype)initWithFrame:(CGRect)frame textContainer:(NSTextContainer *)textContainer

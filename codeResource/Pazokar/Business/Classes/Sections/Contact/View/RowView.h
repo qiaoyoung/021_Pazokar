@@ -11,7 +11,7 @@
 // __M_A_C_R_O__
 //: #import "BaseTableViewCell.h"
 #import "MediaView.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 
 //: NS_ASSUME_NONNULL_BEGIN
@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic ,strong) UIImageView *iconImageView;
 //: @property (nonatomic ,strong) UILabel *titleLabel;
 @property (nonatomic ,strong) UILabel *titleLabel;
-//: @property (nonatomic,strong) FFFAvatarImageView *avatar;
+//: @property (nonatomic,strong) BusyAvatarImageView *avatar;
 @property (nonatomic,strong) CustomFormatView *avatar;
 
 //: @end

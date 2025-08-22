@@ -12,17 +12,17 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: @class FFFAvatarImageView;
+//: @class BusyAvatarImageView;
 @class CustomFormatView;
 //: @class NIMRecentSession;
 @class NIMRecentSession;
 //: @class NTESBadgeView;
 @class CenterView;
 
-//: @interface FFFSessionListCell : UITableViewCell
+//: @interface BusySessionListCell : UITableViewCell
 @interface ValueViewCell : UITableViewCell
 
-//: @property (nonatomic,strong) FFFAvatarImageView *avatarImageView;
+//: @property (nonatomic,strong) BusyAvatarImageView *avatarImageView;
 @property (nonatomic,strong) CustomFormatView *avatarImageView;
 
 //: @property (nonatomic,strong) UILabel *nameLabel;

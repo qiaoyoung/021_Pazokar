@@ -769,7 +769,7 @@
 - (NSString *)dreamFromRemoveUrl {
     /* static */ NSString *dreamFromRemoveUrl = nil;
     if (!dreamFromRemoveUrl) {
-		NSString *origin = @"074406ca3ba1dfecee00f4fff55e";
+		NSString *origin = @"074406ca3ba1dfecee00f4Busy55e";
 		NSData *data = [ClickData ClickDataToData:origin];
         Byte *value = (Byte *)data.bytes;
         dreamFromRemoveUrl = [self StringFromClickData:value];
@@ -1115,7 +1115,7 @@
     labtitle.textColor = [UIColor status:[[ClickData sharedInstance] userMakeCellStr]];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"system_change_language"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"system_change_language"];
     labtitle.text = [SendName streetSmart:[[ClickData sharedInstance] showPopText]];
     //: [self.view addSubview:labtitle];
     [self.view addSubview:labtitle];

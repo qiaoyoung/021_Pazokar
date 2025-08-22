@@ -198,7 +198,7 @@ Byte dreamClickRedName[] = {57, 3, 31, 8, 157, 245, 128, 46, 140, 146, 134, 165}
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"feedback_activity_title"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"feedback_activity_title"];
     labtitle.text = [SendName streetSmart:StringFromMakeFullData(user_recentStr)];
     //: [bgView addSubview:labtitle];
     [bgView addSubview:labtitle];
@@ -218,7 +218,7 @@ Byte dreamClickRedName[] = {57, 3, 31, 8, 157, 245, 128, 46, 140, 146, 134, 165}
 
     //: _textView = [[UITextView alloc] initWithFrame:CGRectMake(15, 15, [[UIScreen mainScreen] bounds].size.width-60, 230)];
     _textView = [[UITextView alloc] initWithFrame:CGRectMake(15, 15, [[UIScreen mainScreen] bounds].size.width-60, 230)];
-    //: _textView.placeholder = [FFFLanguageManager getTextWithKey:@"report_info"];
+    //: _textView.placeholder = [BusyLanguageManager getTextWithKey:@"report_info"];
     _textView.placeholder = [SendName streetSmart:StringFromMakeFullData(dreamCenterTitle)];//@"请输入您的举报信息";
     //: _textView.backgroundColor = [UIColor whiteColor];
     _textView.backgroundColor = [UIColor whiteColor];
@@ -241,7 +241,7 @@ Byte dreamClickRedName[] = {57, 3, 31, 8, 157, 245, 128, 46, 140, 146, 134, 165}
     lab.font = [UIFont systemFontOfSize:16.f];
     //: lab.textColor = [UIColor colorWithHexString:@"#2C3042"];
     lab.textColor = [UIColor status:StringFromMakeFullData(userViewId)];
-    //: lab.text = [FFFLanguageManager getTextWithKey:@"upload_picture"];
+    //: lab.text = [BusyLanguageManager getTextWithKey:@"upload_picture"];
     lab.text = [SendName streetSmart:StringFromMakeFullData(main_rangeName)];
     //: [self.view addSubview:lab];
     [self.view addSubview:lab];
@@ -271,7 +271,7 @@ Byte dreamClickRedName[] = {57, 3, 31, 8, 157, 245, 128, 46, 140, 146, 134, 165}
     submitButton.titleLabel.font = [UIFont systemFontOfSize:16];
     //: [submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //: [submitButton setTitle:[FFFLanguageManager getTextWithKey:@"feedback_activity_submit"] forState:UIControlStateNormal];
+    //: [submitButton setTitle:[BusyLanguageManager getTextWithKey:@"feedback_activity_submit"] forState:UIControlStateNormal];
     [submitButton setTitle:[SendName streetSmart:StringFromMakeFullData(appCenterData)] forState:UIControlStateNormal];
     //: submitButton.backgroundColor = [UIColor colorWithHexString:@"#02D8C9"];
     submitButton.backgroundColor = [UIColor status:StringFromMakeFullData(dream_titleData)];
@@ -356,7 +356,7 @@ Byte dreamClickRedName[] = {57, 3, 31, 8, 157, 245, 128, 46, 140, 146, 134, 165}
 //        [SVProgressHUD dismiss];
         //: [self.loadingView animationClose];
         [self.loadingView tingShould];
-        //: [SVProgressHUD showMessage:[FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"]];
+        //: [SVProgressHUD showMessage:[BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"]];
         [SVProgressHUD stormCenter:[SendName streetSmart:StringFromMakeFullData(appMemberTitle)]];
     //: }];
     }];

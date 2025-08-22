@@ -12,10 +12,10 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: @class FFFKitInfo;
+//: @class BusyKitInfo;
 @class Info;
 
-//: @protocol FFFContactPickedViewDelegate <NSObject>
+//: @protocol BusyContactPickedViewDelegate <NSObject>
 @protocol ReadDelegate <NSObject>
 
 //: - (void)removeUser:(NSString *)userId;
@@ -24,16 +24,16 @@
 //: @end
 @end
 
-//: @interface FFFContactPickedView : UIView <UIScrollViewDelegate>
+//: @interface BusyContactPickedView : UIView <UIScrollViewDelegate>
 @interface LengthView : UIView <UIScrollViewDelegate>
 
-//: @property (nonatomic, weak) id<FFFContactPickedViewDelegate> delegate;
+//: @property (nonatomic, weak) id<BusyContactPickedViewDelegate> delegate;
 @property (nonatomic, weak) id<ReadDelegate> delegate;
 
-//: - (void)removeMemberInfo:(FFFKitInfo *)info;
+//: - (void)removeMemberInfo:(BusyKitInfo *)info;
 - (void)gesture:(Info *)info;
 
-//: - (void)addMemberInfo:(FFFKitInfo *)info;
+//: - (void)addMemberInfo:(BusyKitInfo *)info;
 - (void)distanceNim:(Info *)info;
 
 //: @end

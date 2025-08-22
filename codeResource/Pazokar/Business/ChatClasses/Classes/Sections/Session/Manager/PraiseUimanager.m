@@ -186,18 +186,18 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFChatUIManager.h"
+//: #import "BusyChatUIManager.h"
 #import "PraiseUimanager.h"
-//: #import "FFFContactSelectConfig.h"
+//: #import "BusyContactSelectConfig.h"
 #import "NameConfig.h"
-//: #import "FFFContactSelectViewController.h"
+//: #import "BusyContactSelectViewController.h"
 #import "BrandViewController.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
-//: #import "UIView+FFFToast.h"
+//: #import "UIView+BusyToast.h"
 #import "UIView+ParentToast.h"
 
-//: @implementation FFFChatUIManager
+//: @implementation BusyChatUIManager
 @implementation PraiseUimanager
 
 //: + (instancetype)sharedManager
@@ -205,7 +205,7 @@ typedef struct {
 {
     //: static dispatch_once_t onceToken;
     static dispatch_once_t onceToken;
-    //: static FFFChatUIManager *instance;
+    //: static BusyChatUIManager *instance;
     static PraiseUimanager *instance;
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
@@ -220,15 +220,15 @@ typedef struct {
 //: - (void)forwardMessage:(NIMMessage *)message fromViewController:(UIViewController *)fromVC
 - (void)noneFrom:(NIMMessage *)message icon:(UIViewController *)fromVC
 {
-    //: UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[FFFLanguageManager getTextWithKey:@"选择会话类型"] message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    //: UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[BusyLanguageManager getTextWithKey:@"选择会话类型"] message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[SendName streetSmart:[WhetherData dreamAdequateStr]] message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    //: [alertController addAction:[UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"watch_multiretweet_activity_person"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    //: [alertController addAction:[UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"watch_multiretweet_activity_person"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
     [alertController addAction:[UIAlertAction actionWithTitle:[SendName streetSmart:[WhetherData kShouldSelectClassifyMsg]] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //: NIMContactFriendSelectConfig *config = [[NIMContactFriendSelectConfig alloc] init];
         TitleConfig *config = [[TitleConfig alloc] init];
         //: config.needMutiSelected = NO;
         config.needMutiSelected = NO;
-        //: FFFContactSelectViewController *vc = [[FFFContactSelectViewController alloc] initWithConfig:config];
+        //: BusyContactSelectViewController *vc = [[BusyContactSelectViewController alloc] initWithConfig:config];
         BrandViewController *vc = [[BrandViewController alloc] initWithMax:config];
         //: vc.finshBlock = ^(NSArray *array, NSString *name, UIImage *avater){
         vc.finshBlock = ^(NSArray *array, NSString *name, UIImage *avater){
@@ -244,13 +244,13 @@ typedef struct {
         [vc totalRelation];
     //: }]];
     }]];
-    //: [alertController addAction:[UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_fragment_group"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    //: [alertController addAction:[UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_fragment_group"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
     [alertController addAction:[UIAlertAction actionWithTitle:[SendName streetSmart:[WhetherData showPiMessage]] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //: NIMContactTeamSelectConfig *config = [[NIMContactTeamSelectConfig alloc] init];
         ButtonColorConfig *config = [[ButtonColorConfig alloc] init];
         //: config.teamType = NIMKitTeamTypeNomal;
         config.teamType = NIMKitTeamTypeNomal;
-        //: FFFContactSelectViewController *vc = [[FFFContactSelectViewController alloc] initWithConfig:config];
+        //: BusyContactSelectViewController *vc = [[BusyContactSelectViewController alloc] initWithConfig:config];
         BrandViewController *vc = [[BrandViewController alloc] initWithMax:config];
         //: vc.finshBlock = ^(NSArray *array, NSString *name, UIImage *avater){
         vc.finshBlock = ^(NSArray *array, NSString *name, UIImage *avater){
@@ -266,13 +266,13 @@ typedef struct {
         [vc totalRelation];
     //: }]];
     }]];
-    //: [alertController addAction:[UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"message_super_team"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    //: [alertController addAction:[UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"message_super_team"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
     [alertController addAction:[UIAlertAction actionWithTitle:[SendName streetSmart:[WhetherData notiMaleAfterMsg]] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //: NIMContactTeamSelectConfig *config = [[NIMContactTeamSelectConfig alloc] init];
         ButtonColorConfig *config = [[ButtonColorConfig alloc] init];
         //: config.teamType = NIMKitTeamTypeSuper;
         config.teamType = NIMKitTeamTypeSuper;
-        //: FFFContactSelectViewController *vc = [[FFFContactSelectViewController alloc] initWithConfig:config];
+        //: BusyContactSelectViewController *vc = [[BusyContactSelectViewController alloc] initWithConfig:config];
         BrandViewController *vc = [[BrandViewController alloc] initWithMax:config];
         //: vc.finshBlock = ^(NSArray *array, NSString *name, UIImage *avater){
         vc.finshBlock = ^(NSArray *array, NSString *name, UIImage *avater){
@@ -288,7 +288,7 @@ typedef struct {
         [vc totalRelation];
     //: }]];
     }]];
-    //: [alertController addAction:[UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:nil]];
+    //: [alertController addAction:[UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:nil]];
     [alertController addAction:[UIAlertAction actionWithTitle:[SendName streetSmart:[WhetherData dreamAttemptKey]] style:UIAlertActionStyleCancel handler:nil]];
     //: [fromVC presentViewController:alertController animated:YES completion:nil];
     [fromVC presentViewController:alertController animated:YES completion:nil];
@@ -301,7 +301,7 @@ typedef struct {
     NSString *name;
     //: if (session.sessionType == NIMSessionTypeP2P) {
     if (session.sessionType == NIMSessionTypeP2P) {
-        //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+        //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
         InfoGreenImage *option = [[InfoGreenImage alloc] init];
         //: option.session = session;
         option.session = session;

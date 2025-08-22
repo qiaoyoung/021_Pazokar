@@ -23,7 +23,7 @@ typedef void(^NIMKitLibraryFetchResult)(NSArray *images, NSString *path, PHAsset
 //: typedef void(^NIMKitCameraFetchResult)(NSString *path, UIImage *image);
 typedef void(^NIMKitCameraFetchResult)(NSString *path, UIImage *image);
 
-//: @interface FFFKitMediaFetcher : NSObject
+//: @interface BusyKitMediaFetcher : NSObject
 @interface ParentFetcher : NSObject
 
 //: @property (nonatomic,assign) NSInteger limit;

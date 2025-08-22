@@ -97,7 +97,7 @@
     return showRefreshNowherePath;
 }
 
-//: ffffff
+//: fffBusy
 + (NSString *)mainMBeerFormat {
     /* static */ NSString *mainMBeerFormat = nil;
     if (!mainMBeerFormat) {
@@ -182,43 +182,43 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFAdvancedMessageCell.h"
+//: #import "BusyAdvancedMessageCell.h"
 #import "PrecociousSortMessageCell.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
 //: #import "NSString+MyUserKit.h"
 #import "NSString+Case.h"
-//: #import "FFFQuickCommentCell.h"
+//: #import "BusyQuickCommentCell.h"
 #import "EnableViewCell.h"
-//: #import "FFFSessionMessageContentView.h"
+//: #import "BusySessionMessageContentView.h"
 #import "TextControl.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 //: #import "M80AttributedLabel.h"
 #import "CypherScrollView.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
-//: #import "FFFKitQuickCommentUtil.h"
+//: #import "BusyKitQuickCommentUtil.h"
 #import "TapColorUtil.h"
 //: #import "UIColor+MyUserKit.h"
 #import "UIColor+Case.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFCollectionViewLeftAlignedLayout.h"
+//: #import "BusyCollectionViewLeftAlignedLayout.h"
 #import "PlayerFlowLayout.h"
 //: #import "M80AttributedLabel.h"
 #import "CypherScrollView.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
 
-//: static NSString * const kNIMListCellReuseID = @"FFFQuickCommentCell";
+//: static NSString * const kNIMListCellReuseID = @"BusyQuickCommentCell";
 static NSString * const user_backgroundTitle = @"EnableViewCell";
 //: static const CGFloat kNIMAdvancedBackgroundPadding = 5;
 static const CGFloat main_countKey = 5;
 
-//: @interface FFFAdvancedMessageCell () <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
+//: @interface BusyAdvancedMessageCell () <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 @interface PrecociousSortMessageCell () <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
 //: @property (nonatomic,strong) NSArray *objects;
@@ -230,7 +230,7 @@ static const CGFloat main_countKey = 5;
 //: @end
 @end
 
-//: @implementation FFFAdvancedMessageCell
+//: @implementation BusyAdvancedMessageCell
 @implementation PrecociousSortMessageCell
 
 //: - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -289,7 +289,7 @@ static const CGFloat main_countKey = 5;
 
         //: _translationView = [[UIView alloc]init];
         _translationView = [[UIView alloc]init];
-        //: _translationView.backgroundColor = [UIColor colorWithHexString:@"ffffff"];
+        //: _translationView.backgroundColor = [UIColor colorWithHexString:@"fffBusy"];
         _translationView.backgroundColor = [UIColor status:[ContainerData mainMBeerFormat]];
         //: _translationView.layer.cornerRadius = 8;
         _translationView.layer.cornerRadius = 8;
@@ -309,7 +309,7 @@ static const CGFloat main_countKey = 5;
     return self;
 }
 
-//: - (void)refreshData:(FFFMessageModel *)data
+//: - (void)refreshData:(BusyMessageModel *)data
 - (void)pullSession:(MoreModel *)data
 {
 
@@ -464,7 +464,7 @@ static const CGFloat main_countKey = 5;
 
     }
 }
-//: - (void)refreshtranslationView:(FFFMessageModel *)data
+//: - (void)refreshtranslationView:(BusyMessageModel *)data
 - (void)languageFor:(MoreModel *)data
 {
     //: if([data.message.localExt.allKeys containsObject:@"NTESMessageTranslate"])
@@ -528,7 +528,7 @@ static const CGFloat main_countKey = 5;
 
 
 
-//: - (void)refreshEmoticonsView:(FFFMessageModel *)data
+//: - (void)refreshEmoticonsView:(BusyMessageModel *)data
 - (void)holdfast:(MoreModel *)data
 {
     //: self.objects = nil;
@@ -541,7 +541,7 @@ static const CGFloat main_countKey = 5;
     //: self.map = result;
     self.map = result;
     // 按最近评论优先排序
-    //: self.objects = [FFFKitQuickCommentUtil sortedKeys:result];
+    //: self.objects = [BusyKitQuickCommentUtil sortedKeys:result];
     self.objects = [TapColorUtil beCircle:result];
 
     //: if (self.objects.count > 0)
@@ -591,7 +591,7 @@ static const CGFloat main_countKey = 5;
 
 }
 
-//: - (void)refreshCollection:(FFFMessageModel *)data
+//: - (void)refreshCollection:(BusyMessageModel *)data
 - (void)eyeglasses:(MoreModel *)data
 {
     //: if ([data needShowEmoticonsView])
@@ -602,7 +602,7 @@ static const CGFloat main_countKey = 5;
         //: if (!collectionView)
         if (!collectionView)
         {
-            //: UICollectionViewFlowLayout *flowLayout = [[FFFCollectionViewLeftAlignedLayout alloc] init];
+            //: UICollectionViewFlowLayout *flowLayout = [[BusyCollectionViewLeftAlignedLayout alloc] init];
             UICollectionViewFlowLayout *flowLayout = [[PlayerFlowLayout alloc] init];
             //: flowLayout.minimumLineSpacing = NIMKitCommentUtilCellPadding;
             flowLayout.minimumLineSpacing = mTapValue;
@@ -612,7 +612,7 @@ static const CGFloat main_countKey = 5;
             collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero
                                                 //: collectionViewLayout:flowLayout];
                                                 collectionViewLayout:flowLayout];
-            //: [collectionView registerClass:[FFFQuickCommentCell class] forCellWithReuseIdentifier:kNIMListCellReuseID];
+            //: [collectionView registerClass:[BusyQuickCommentCell class] forCellWithReuseIdentifier:kNIMListCellReuseID];
             [collectionView registerClass:[EnableViewCell class] forCellWithReuseIdentifier:user_backgroundTitle];
             //: self.emoticonsContainerView = collectionView;
             self.emoticonsContainerView = collectionView;
@@ -631,7 +631,7 @@ static const CGFloat main_countKey = 5;
     }
 }
 
-//: - (void)refreshPinView:(FFFMessageModel *)data
+//: - (void)refreshPinView:(BusyMessageModel *)data
 - (void)min:(MoreModel *)data
 {
     //: if (data.pinUserName.length && data.shouldShowPinContent)
@@ -650,7 +650,7 @@ static const CGFloat main_countKey = 5;
     }
 }
 
-//: - (void)refreshReplyCountView:(FFFMessageModel *)data
+//: - (void)refreshReplyCountView:(BusyMessageModel *)data
 - (void)refresh:(MoreModel *)data
 {
     //: NSInteger count = data.childMessagesCount;
@@ -913,7 +913,7 @@ static const CGFloat main_countKey = 5;
 //: - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    //: FFFQuickCommentCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kNIMListCellReuseID forIndexPath:indexPath];
+    //: BusyQuickCommentCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kNIMListCellReuseID forIndexPath:indexPath];
     EnableViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:user_backgroundTitle forIndexPath:indexPath];
     //: NSNumber *number = [self.objects objectAtIndex:indexPath.item];
     NSNumber *number = [self.objects objectAtIndex:indexPath.item];
@@ -935,7 +935,7 @@ static const CGFloat main_countKey = 5;
     NSNumber *number = [self.objects objectAtIndex:indexPath.item];
     //: NSArray *comments = [self.map objectForKey:number];
     NSArray *comments = [self.map objectForKey:number];
-    //: CGSize size = [FFFKitQuickCommentUtil itemSizeWithComments:comments];
+    //: CGSize size = [BusyKitQuickCommentUtil itemSizeWithComments:comments];
     CGSize size = [TapColorUtil enable:comments];
     //: return size;
     return size;
@@ -951,7 +951,7 @@ static const CGFloat main_countKey = 5;
 //: - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    //: NIMQuickComment *comment = [FFFKitQuickCommentUtil myCommentFromComments:indexPath.item
+    //: NIMQuickComment *comment = [BusyKitQuickCommentUtil myCommentFromComments:indexPath.item
     NIMQuickComment *comment = [TapColorUtil file:indexPath.item
                                                                  //: keys:self.objects
                                                                  net:self.objects

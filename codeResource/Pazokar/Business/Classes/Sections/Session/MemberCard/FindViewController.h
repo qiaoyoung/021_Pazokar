@@ -11,11 +11,11 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFTeamCardMemberItem.h"
+//: #import "BusyTeamCardMemberItem.h"
 #import "HomegirlFormat.h"
-//: #import "FFFTeamMemberListDataSource.h"
+//: #import "BusyTeamMemberListDataSource.h"
 #import "RowCenter.h"
-//: #import "FFFTeamListDataManager.h"
+//: #import "BusyTeamListDataManager.h"
 #import "FindBaseballTeamManager.h"
 
 //: @protocol NIMTeamMemberCardActionDelegate <NSObject>
@@ -23,21 +23,21 @@
 //: @optional
 @optional
 
-//: - (void)onTeamMemberMuted:(FFFTeamCardMemberItem *)member mute:(BOOL)mute;
+//: - (void)onTeamMemberMuted:(BusyTeamCardMemberItem *)member mute:(BOOL)mute;
 - (void)send:(HomegirlFormat *)member comment:(BOOL)mute;
-//: - (void)onTeamMemberKicked:(FFFTeamCardMemberItem *)member;
+//: - (void)onTeamMemberKicked:(BusyTeamCardMemberItem *)member;
 - (void)interval:(HomegirlFormat *)member;
 
 //: @end
 @end
 
-//: @interface FFFTeamMemberCardViewController : UIViewController
+//: @interface BusyTeamMemberCardViewController : UIViewController
 @interface FindViewController : UIViewController
 
 //: @property (nonatomic, strong) id<NIMTeamMemberCardActionDelegate> delegate;
 @property (nonatomic, strong) id<TradingCardDate> delegate;
 
-//: @property (nonatomic, strong) FFFTeamListDataManager *teamListManager;
+//: @property (nonatomic, strong) BusyTeamListDataManager *teamListManager;
 @property (nonatomic, strong) FindBaseballTeamManager *teamListManager;
 //: @property (nonatomic, strong) NSString *memberId;
 @property (nonatomic, strong) NSString *memberId;

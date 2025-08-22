@@ -80,17 +80,17 @@ typedef struct {
 // __M_A_C_R_O__
 //: #import "NTESKeyWordMessageCell.h"
 #import "MasterKeyViewCell.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
-//: #import "FFFCommonTableData.h"
-#import "FFFCommonTableData.h"
+//: #import "BusyCommonTableData.h"
+#import "BusyCommonTableData.h"
 //: #import "UIView+NTES.h"
 #import "UIView+Date.h"
 
 //: @interface NTESKeyWordMessageCell ()
 @interface MasterKeyViewCell ()
 
-//: @property (nonatomic,strong) FFFAvatarImageView * avatar;
+//: @property (nonatomic,strong) BusyAvatarImageView * avatar;
 @property (nonatomic,strong) CustomFormatView * avatar;
 
 //: @property (nonatomic,strong) UILabel * nickL;
@@ -173,7 +173,7 @@ typedef struct {
     //: if ([message isKindOfClass:[NIMMessage class]])
     if ([message isKindOfClass:[NIMMessage class]])
     {
-        //: FFFKitInfo * info = nil;
+        //: BusyKitInfo * info = nil;
         Info * info = nil;
         //: NIMSession * session = message.session;
         NIMSession * session = message.session;
@@ -263,13 +263,13 @@ typedef struct {
 
 
 
-//: - (FFFAvatarImageView *)avatar
+//: - (BusyAvatarImageView *)avatar
 - (CustomFormatView *)avatar
 {
     //: if (!_avatar)
     if (!_avatar)
     {
-        //: _avatar = [[FFFAvatarImageView alloc] init];
+        //: _avatar = [[BusyAvatarImageView alloc] init];
         _avatar = [[CustomFormatView alloc] init];
     }
     //: return _avatar;

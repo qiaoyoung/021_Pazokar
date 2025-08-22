@@ -40,7 +40,7 @@ typedef struct {
 // __DEBUG__
 // __CLOSE_PRINT__
 //
-//  FFFMessageCellMaker.m
+//  BusyMessageCellMaker.m
 // Case
 //
 //  Created by chris.
@@ -48,28 +48,28 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFMessageCellFactory.h"
+//: #import "BusyMessageCellFactory.h"
 #import "MessageFactory.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
-//: #import "FFFTimestampModel.h"
+//: #import "BusyTimestampModel.h"
 #import "AppRow.h"
-//: #import "FFFSessionAudioContentView.h"
+//: #import "BusySessionAudioContentView.h"
 #import "RowTingView.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFKitAudioCenter.h"
+//: #import "BusyKitAudioCenter.h"
 #import "BarCenter.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
 
-//: @interface FFFMessageCellFactory()
+//: @interface BusyMessageCellFactory()
 @interface MessageFactory()
 
 //: @end
 @end
 
-//: @implementation FFFMessageCellFactory
+//: @implementation BusyMessageCellFactory
 @implementation MessageFactory
 
 //: - (instancetype)init
@@ -90,42 +90,42 @@ typedef struct {
 
 }
 
-//: - (FFFMessageCell *)cellInTable:(UITableView*)tableView
+//: - (BusyMessageCell *)cellInTable:(UITableView*)tableView
 - (CompartmentViewCell *)progressRange:(UITableView*)tableView
-                 //: forMessageMode:(FFFMessageModel *)model
+                 //: forMessageMode:(BusyMessageModel *)model
                  message:(MoreModel *)model
 {
-    //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+    //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
     id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
     //: NSString *identity = [layoutConfig cellContent:model];
     NSString *identity = [layoutConfig flushCell:model];
-    //: FFFMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:identity];
+    //: BusyMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:identity];
     CompartmentViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identity];
     //: if (!cell) {
     if (!cell) {
-        //: NSString *clz = @"FFFAdvancedMessageCell";
+        //: NSString *clz = @"BusyAdvancedMessageCell";
         NSString *clz = @"PrecociousSortMessageCell";
         //: [tableView registerClass:NSClassFromString(clz) forCellReuseIdentifier:identity];
         [tableView registerClass:NSClassFromString(clz) forCellReuseIdentifier:identity];
         //: cell = [tableView dequeueReusableCellWithIdentifier:identity];
         cell = [tableView dequeueReusableCellWithIdentifier:identity];
     }
-    //: return (FFFMessageCell *)cell;
+    //: return (BusyMessageCell *)cell;
     return (CompartmentViewCell *)cell;
 }
 
-//: - (FFFSessionTimestampCell *)cellInTable:(UITableView *)tableView
+//: - (BusySessionTimestampCell *)cellInTable:(UITableView *)tableView
 - (MaxRedViewCell *)toAGreaterExtent:(UITableView *)tableView
-                            //: forTimeModel:(FFFTimestampModel *)model
+                            //: forTimeModel:(BusyTimestampModel *)model
                             tinkle:(AppRow *)model
 {
     //: NSString *identity = @"time";
     NSString *identity = [ProcedureData user_showVsFormat];
-    //: FFFSessionTimestampCell *cell = [tableView dequeueReusableCellWithIdentifier:identity];
+    //: BusySessionTimestampCell *cell = [tableView dequeueReusableCellWithIdentifier:identity];
     MaxRedViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identity];
     //: if (!cell) {
     if (!cell) {
-        //: NSString *clz = @"FFFSessionTimestampCell";
+        //: NSString *clz = @"BusySessionTimestampCell";
         NSString *clz = @"MaxRedViewCell";
         //: [tableView registerClass:NSClassFromString(clz) forCellReuseIdentifier:identity];
         [tableView registerClass:NSClassFromString(clz) forCellReuseIdentifier:identity];
@@ -134,7 +134,7 @@ typedef struct {
     }
     //: [cell refreshData:model];
     [cell stopMetadata:model];
-    //: return (FFFSessionTimestampCell *)cell;
+    //: return (BusySessionTimestampCell *)cell;
     return (MaxRedViewCell *)cell;
 }
 

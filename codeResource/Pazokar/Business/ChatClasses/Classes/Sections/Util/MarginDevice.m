@@ -9,18 +9,18 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitDevice.h"
+//: #import "BusyKitDevice.h"
 #import "MarginDevice.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 
-//: @interface FFFKitDevice ()
+//: @interface BusyKitDevice ()
 @interface MarginDevice ()
 
 //: @end
 @end
 
-//: @implementation FFFKitDevice
+//: @implementation BusyKitDevice
 @implementation MarginDevice
 
 //: - (instancetype)init
@@ -36,15 +36,15 @@
 }
 
 
-//: + (FFFKitDevice *)currentDevice{
+//: + (BusyKitDevice *)currentDevice{
 + (MarginDevice *)send{
-    //: static FFFKitDevice *instance = nil;
+    //: static BusyKitDevice *instance = nil;
     static MarginDevice *instance = nil;
     //: static dispatch_once_t onceToken;
     static dispatch_once_t onceToken;
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
-        //: instance = [[FFFKitDevice alloc] init];
+        //: instance = [[BusyKitDevice alloc] init];
         instance = [[MarginDevice alloc] init];
     //: });
     });

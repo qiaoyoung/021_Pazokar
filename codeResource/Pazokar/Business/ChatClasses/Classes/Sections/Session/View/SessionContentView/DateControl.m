@@ -9,22 +9,22 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionUnknowContentView.h"
+//: #import "BusySessionUnknowContentView.h"
 #import "DateControl.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 //: #import "NSString+MyUserKit.h"
 #import "NSString+Case.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 
-//: @interface FFFSessionUnknowContentView()
+//: @interface BusySessionUnknowContentView()
 @interface DateControl()
 
 //: @property (nonatomic,strong) UILabel *label;
@@ -33,7 +33,7 @@
 //: @end
 @end
 
-//: @implementation FFFSessionUnknowContentView
+//: @implementation BusySessionUnknowContentView
 @implementation DateControl
 
 //: -(instancetype)initSessionMessageContentView
@@ -54,14 +54,14 @@
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)data{
+//: - (void)refresh:(BusyMessageModel *)data{
 - (void)messagePress:(MoreModel *)data{
     //: [super refresh:data];
     [super messagePress:data];
     //: NSString *text = @"";
     NSString *text = @"";
 //    NSString *text = @"未知类型消息".nim_localized;
-    //: FFFKitSetting *setting = [[MyUserKit sharedKit].config setting:data.message];
+    //: BusyKitSetting *setting = [[MyUserKit sharedKit].config setting:data.message];
     GreenSetting *setting = [[Case pastTop].config tool:data.message];
 
     //: self.label.textColor = setting.textColor;

@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFMembersFetchOption.h"
+//: #import "BusyMembersFetchOption.h"
 #import "DateRow.h"
 
-//: @implementation FFFMembersFetchOption
+//: @implementation BusyMembersFetchOption
 @implementation DateRow
 
 //: - (instancetype)init {

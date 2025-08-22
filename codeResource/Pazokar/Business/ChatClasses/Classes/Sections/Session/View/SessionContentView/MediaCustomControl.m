@@ -9,20 +9,20 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionNotificationContentView.h"
+//: #import "BusySessionNotificationContentView.h"
 #import "MediaCustomControl.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @implementation FFFSessionNotificationContentView
+//: @implementation BusySessionNotificationContentView
 @implementation MediaCustomControl
 
 //: - (instancetype)initSessionMessageContentView
@@ -41,14 +41,14 @@
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)model
+//: - (void)refresh:(BusyMessageModel *)model
 - (void)messagePress:(MoreModel *)model
 {
     //: [super refresh:model];
     [super messagePress:model];
-    //: self.label.text = [FFFKitUtil messageTipContent:model.message];
+    //: self.label.text = [BusyKitUtil messageTipContent:model.message];
     self.label.text = [OffMore impanel:model.message];
-    //: FFFKitSetting *setting = [[MyUserKit sharedKit].config setting:model.message];
+    //: BusyKitSetting *setting = [[MyUserKit sharedKit].config setting:model.message];
     GreenSetting *setting = [[Case pastTop].config tool:model.message];
 
     //: self.label.textColor = setting.textColor;

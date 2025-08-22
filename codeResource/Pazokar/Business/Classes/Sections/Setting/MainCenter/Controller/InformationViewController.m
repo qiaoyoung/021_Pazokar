@@ -37,7 +37,7 @@ Byte k_pinCenterName[] = {20, 8, 67, 14, 245, 208, 242, 54, 168, 116, 172, 6, 17
 #import "InformationViewController.h"
 //: #import <WebKit/WebKit.h>
 #import <WebKit/WebKit.h>
-//: #import "FFFRegisterViewController.h"
+//: #import "BusyRegisterViewController.h"
 #import "TapViewController.h"
 //: #import "SSZipArchiveManager.h"
 #import "ValuePraise.h"
@@ -121,7 +121,7 @@ Byte k_pinCenterName[] = {20, 8, 67, 14, 245, 208, 242, 54, 168, 116, 172, 6, 17
 //: - (void)doAgree{
 - (void)recentRight{
 
-    //: FFFRegisterViewController *vc = [[FFFRegisterViewController alloc]init];
+    //: BusyRegisterViewController *vc = [[BusyRegisterViewController alloc]init];
     TapViewController *vc = [[TapViewController alloc]init];
     //: [self.navigationController pushViewController:vc animated:YES];
     [self.navigationController pushViewController:vc animated:YES];

@@ -71,31 +71,31 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionTimestampCell.h"
+//: #import "BusySessionTimestampCell.h"
 #import "MaxRedViewCell.h"
-//: #import "FFFCellConfig.h"
-#import "FFFCellConfig.h"
+//: #import "BusyCellConfig.h"
+#import "BusyCellConfig.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFTimestampModel.h"
+//: #import "BusyTimestampModel.h"
 #import "AppRow.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @interface FFFSessionTimestampCell()
+//: @interface BusySessionTimestampCell()
 @interface MaxRedViewCell()
 
-//: @property (nonatomic,strong) FFFTimestampModel *model;
+//: @property (nonatomic,strong) BusyTimestampModel *model;
 @property (nonatomic,strong) AppRow *model;
 
 //: @end
 @end
 
-//: @implementation FFFSessionTimestampCell
+//: @implementation BusySessionTimestampCell
 @implementation MaxRedViewCell
 
 //: - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -143,7 +143,7 @@
 }
 
 
-//: - (void)refreshData:(FFFTimestampModel *)data{
+//: - (void)refreshData:(BusyTimestampModel *)data{
 - (void)stopMetadata:(AppRow *)data{
     //: if (self.model == data) {
     if (self.model == data) {
@@ -154,16 +154,16 @@
     self.model = data;
     //: if([self checkData]){
     if([self status]){
-        //: FFFTimestampModel *model = (FFFTimestampModel *)data;
+        //: BusyTimestampModel *model = (BusyTimestampModel *)data;
         AppRow *model = (AppRow *)data;
-        //: [_timeLabel setText:[FFFKitUtil showTime:model.messageTime showDetail:YES]];
+        //: [_timeLabel setText:[BusyKitUtil showTime:model.messageTime showDetail:YES]];
         [_timeLabel setText:[OffMore readShow:model.messageTime voiceOver:YES]];
     }
 }
 
 //: - (BOOL)checkData{
 - (BOOL)status{
-    //: return [self.model isKindOfClass:[FFFTimestampModel class]];
+    //: return [self.model isKindOfClass:[BusyTimestampModel class]];
     return [self.model isKindOfClass:[AppRow class]];
 }
 

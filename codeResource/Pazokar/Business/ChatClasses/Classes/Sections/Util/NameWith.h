@@ -16,24 +16,24 @@
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
-//: @class FFFKitTimerHolder;
+//: @class BusyKitTimerHolder;
 @class NameWith;
 
-//: @protocol FFFKitTimerHolderDelegate <NSObject>
+//: @protocol BusyKitTimerHolderDelegate <NSObject>
 @protocol ChildRefresh <NSObject>
-//: - (void)onNIMKitTimerFired:(FFFKitTimerHolder *)holder;
+//: - (void)onNIMKitTimerFired:(BusyKitTimerHolder *)holder;
 - (void)alonging:(NameWith *)holder;
 //: @end
 @end
 
-//: @interface FFFKitTimerHolder : NSObject
+//: @interface BusyKitTimerHolder : NSObject
 @interface NameWith : NSObject
-//: @property (nonatomic,weak) id<FFFKitTimerHolderDelegate> timerDelegate;
+//: @property (nonatomic,weak) id<BusyKitTimerHolderDelegate> timerDelegate;
 @property (nonatomic,weak) id<ChildRefresh> timerDelegate;
 
 //: - (void)startTimer:(NSTimeInterval)seconds
 - (void)icon:(NSTimeInterval)seconds
-          //: delegate:(id<FFFKitTimerHolderDelegate>)delegate
+          //: delegate:(id<BusyKitTimerHolderDelegate>)delegate
           size:(id<ChildRefresh>)delegate
            //: repeats:(BOOL)repeats;
            title:(BOOL)repeats;

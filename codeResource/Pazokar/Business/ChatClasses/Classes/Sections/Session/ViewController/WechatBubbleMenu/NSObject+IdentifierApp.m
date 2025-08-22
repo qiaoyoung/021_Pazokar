@@ -17,8 +17,7 @@
 //: @implementation NSObject (tyl_internalIdentifier)
 @implementation NSObject (IdentifierApp)
 
-//: - (void)setTyl_internalIdentifier:(NSString *)tyl_internalIdentifier{
-- (void)setTyl_internalIdentifier:(NSString *)IdentifierApp{
+- (void)setIdentifierApp:(NSString *)IdentifierApp{
     //: objc_setAssociatedObject(self, @selector(tyl_internalIdentifier), tyl_internalIdentifier, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     objc_setAssociatedObject(self, @selector(IdentifierApp), IdentifierApp, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }

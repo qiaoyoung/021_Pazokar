@@ -28,11 +28,11 @@ PregnantData userShowName = (PregnantData){81, (Byte []){114, 103, 96, 99, 18, 2
 //
 
 // __M_A_C_R_O__
-//: #import "FFFInputMoreContainerView.h"
+//: #import "BusyInputMoreContainerView.h"
 #import "AppView.h"
-//: #import "FFFPageView.h"
+//: #import "BusyPageView.h"
 #import "PageView.h"
-//: #import "FFFMediaItem.h"
+//: #import "BusyMediaItem.h"
 #import "ModelMessage.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
@@ -55,7 +55,7 @@ NSInteger user_arrayContextTitle = 11;
 
 
 
-//: @interface FFFInputMoreContainerView() <FFFPageViewDataSource,FFFPageViewDelegate,CustomMediaPickerViewDelegate>
+//: @interface BusyInputMoreContainerView() <BusyPageViewDataSource,BusyPageViewDelegate,CustomMediaPickerViewDelegate>
 @interface AppView() <TingSource,CustomAppear,StateTing>
 {
     //: NSArray *_mediaButtons;
@@ -65,13 +65,13 @@ NSInteger user_arrayContextTitle = 11;
 }
 
 
-//: @property (nonatomic, strong) FFFPageView *pageView;
+//: @property (nonatomic, strong) BusyPageView *pageView;
 @property (nonatomic, strong) PageView *pageView;
 
 //: @end
 @end
 
-//: @implementation FFFInputMoreContainerView
+//: @implementation BusyInputMoreContainerView
 @implementation AppView
 
 //: - (instancetype)initWithFrame:(CGRect)frame
@@ -103,7 +103,7 @@ NSInteger user_arrayContextTitle = 11;
     return self;
 }
 
-//: - (void)setConfig:(id<FFFSessionConfig>)config
+//: - (void)setConfig:(id<BusySessionConfig>)config
 - (void)setConfig:(id<QuantityelligenceInformationCan>)config
 {
     //: _config = config;
@@ -201,7 +201,7 @@ NSInteger user_arrayContextTitle = 11;
         //: items = [self.config mediaItems];
         items = [self.config sumInfo];
     }
-    //: [items enumerateObjectsUsingBlock:^(FFFMediaItem *item, NSUInteger idx, BOOL *stop) {
+    //: [items enumerateObjectsUsingBlock:^(BusyMediaItem *item, NSUInteger idx, BOOL *stop) {
     [items enumerateObjectsUsingBlock:^(ModelMessage *item, NSUInteger idx, BOOL *stop) {
         //: [mediaItems addObject:item];
         [mediaItems addObject:item];
@@ -285,7 +285,7 @@ NSInteger user_arrayContextTitle = 11;
 
 //: #pragma mark PageViewDataSource
 #pragma mark PageViewDataSource
-//: - (NSInteger)numberOfPages: (FFFPageView *)pageView
+//: - (NSInteger)numberOfPages: (BusyPageView *)pageView
 - (NSInteger)ofses: (PageView *)pageView
 {
     //: NSInteger count = [_mediaButtons count] / NIMMaxItemCountInPage;
@@ -296,7 +296,7 @@ NSInteger user_arrayContextTitle = 11;
     return ((count) > (1) ? (count) : (1));
 }
 
-//: - (UIView*)mediaPageView:(FFFPageView*)pageView beginItem:(NSInteger)begin endItem:(NSInteger)end
+//: - (UIView*)mediaPageView:(BusyPageView*)pageView beginItem:(NSInteger)begin endItem:(NSInteger)end
 - (UIView*)upgrade:(PageView*)pageView barInput:(NSInteger)begin length:(NSInteger)end
 {
     //: UIView *subView = [[UIView alloc] init];
@@ -350,7 +350,7 @@ NSInteger user_arrayContextTitle = 11;
     return subView;
 }
 
-//: - (UIView*)oneLineMediaInPageView:(FFFPageView *)pageView
+//: - (UIView*)oneLineMediaInPageView:(BusyPageView *)pageView
 - (UIView*)trademark:(PageView *)pageView
                        //: viewInPage: (NSInteger)index
                        selectedGreen: (NSInteger)index
@@ -380,7 +380,7 @@ NSInteger user_arrayContextTitle = 11;
     return subView;
 }
 
-//: - (UIView *)pageView: (FFFPageView *)pageView viewInPage: (NSInteger)index
+//: - (UIView *)pageView: (BusyPageView *)pageView viewInPage: (NSInteger)index
 - (UIView *)month: (PageView *)pageView input: (NSInteger)index
 {
     //: if ([_mediaButtons count] == 2 || [_mediaButtons count] == 3) 
@@ -419,7 +419,7 @@ NSInteger user_arrayContextTitle = 11;
 {
     //: NSInteger index = [(UIButton *)sender tag];
     NSInteger index = [(UIButton *)sender tag];
-    //: FFFMediaItem *item = _mediaItems[index];
+    //: BusyMediaItem *item = _mediaItems[index];
     ModelMessage *item = _mediaItems[index];
     //: if (_actionDelegate && [_actionDelegate respondsToSelector:@selector(onTapMediaItem:)]) {
     if (_actionDelegate && [_actionDelegate respondsToSelector:@selector(ended:)]) {

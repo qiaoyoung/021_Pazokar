@@ -566,7 +566,7 @@ typedef struct {
     AFHTTPSessionManager *manager = [TitleManageressManager off].manager;
 
     //添加请求头
-    //: NSString *appKey = [[FFFConfig sharedConfig] appKey];
+    //: NSString *appKey = [[BusyConfig sharedConfig] appKey];
     NSString *appKey = [[IndexTag ambit] appKey];
     //: [manager.requestSerializer setValue:appKey forHTTPHeaderField:@"AppKey"];
     [manager.requestSerializer setValue:appKey forHTTPHeaderField:[[RelationshipData sharedInstance] dream_nousYaUrl]];

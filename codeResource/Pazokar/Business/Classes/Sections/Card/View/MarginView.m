@@ -233,7 +233,7 @@ typedef struct {
     labsubLabel.textColor = [UIColor status:[NameDismissData mainFactorReadNameStr]];
     //: labsubLabel.numberOfLines = 0;
     labsubLabel.numberOfLines = 0;
-    //: labsubLabel.text = [FFFLanguageManager getTextWithKey:@"report_next_select"];
+    //: labsubLabel.text = [BusyLanguageManager getTextWithKey:@"report_next_select"];
     labsubLabel.text = [SendName streetSmart:[NameDismissData kSourceMessage]];
     //: [_box addSubview:labsubLabel];
     [_box addSubview:labsubLabel];
@@ -274,7 +274,7 @@ typedef struct {
         _titleLabel.font = [UIFont boldSystemFontOfSize:16.f];
         //: _titleLabel.textColor = [UIColor blackColor];
         _titleLabel.textColor = [UIColor blackColor];
-        //: _titleLabel.text = [FFFLanguageManager getTextWithKey:@"report_Content"];
+        //: _titleLabel.text = [BusyLanguageManager getTextWithKey:@"report_Content"];
         _titleLabel.text = [SendName streetSmart:[NameDismissData dreamFullIdent]];
 
     }
@@ -306,7 +306,7 @@ typedef struct {
         lab.textColor = [UIColor status:[NameDismissData mainFactorReadNameStr]];
         //: lab.font = [UIFont systemFontOfSize:14];
         lab.font = [UIFont systemFontOfSize:14];
-        //: lab.text = [FFFLanguageManager getTextWithKey:@"activity_group_chat_avatar_add_black"];
+        //: lab.text = [BusyLanguageManager getTextWithKey:@"activity_group_chat_avatar_add_black"];
         lab.text = [SendName streetSmart:[NameDismissData noti_withSelectTitle]];
         //: [_blockView addSubview:lab];
         [_blockView addSubview:lab];
@@ -343,7 +343,7 @@ typedef struct {
         _closeBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_closeBtn setTitleColor:[UIColor colorWithHexString:@"#5D5F66"] forState:UIControlStateNormal];
         [_closeBtn setTitleColor:[UIColor status:[NameDismissData mainFactorReadNameStr]] forState:UIControlStateNormal];
-        //: [_closeBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
+        //: [_closeBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
         [_closeBtn setTitle:[SendName streetSmart:[NameDismissData app_listDismissManagerIdent]] forState:UIControlStateNormal];
         //: _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
         _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
@@ -370,7 +370,7 @@ typedef struct {
         _sureBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        //: [_sureBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_sure"] forState:UIControlStateNormal];
+        //: [_sureBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_sure"] forState:UIControlStateNormal];
         [_sureBtn setTitle:[SendName streetSmart:[NameDismissData k_cellUrl]] forState:UIControlStateNormal];
         //: _sureBtn.backgroundColor = [UIColor colorWithHexString:@"#02D8C9"];
         _sureBtn.backgroundColor = [UIColor status:[NameDismissData dreamTitleFormat]];

@@ -231,7 +231,7 @@ typedef struct {
     NSString *userID = [[NIMSDK sharedSDK].loginManager currentAccount];
     //: NIMUser *me = [[NIMSDK sharedSDK].userManager userInfo:userID];
     NIMUser *me = [[NIMSDK sharedSDK].userManager userInfo:userID];
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:userID option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:userID option:nil];
     Info *info = [[Case pastTop] consumer:userID message:nil];
 
     //: [_box addSubview:self.iconImageView];
@@ -286,7 +286,7 @@ typedef struct {
     contentLabel.textColor = [UIColor status:[MessageData showFrameSourceMsg]];
     //: contentLabel.textAlignment = NSTextAlignmentCenter;
     contentLabel.textAlignment = NSTextAlignmentCenter;
-    //: contentLabel.text = [FFFLanguageManager getTextWithKey:@"activity_qrcode_scan_me"];
+    //: contentLabel.text = [BusyLanguageManager getTextWithKey:@"activity_qrcode_scan_me"];
     contentLabel.text = [SendName streetSmart:[MessageData notiContentFormat]];//@"扫描二维码，加我为好友";
     //: [_box addSubview:contentLabel];
     [_box addSubview:contentLabel];
@@ -372,7 +372,7 @@ typedef struct {
         _sureBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         //: [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        //: [_sureBtn setTitle:[FFFLanguageManager getTextWithKey:@"activity_qrcode_save_code"] forState:UIControlStateNormal];
+        //: [_sureBtn setTitle:[BusyLanguageManager getTextWithKey:@"activity_qrcode_save_code"] forState:UIControlStateNormal];
         [_sureBtn setTitle:[SendName streetSmart:[MessageData show_myId]] forState:UIControlStateNormal];
         //: [_sureBtn setImage:[UIImage imageNamed:@"ic_down"] forState:UIControlStateNormal];
         [_sureBtn setImage:[UIImage imageNamed:[MessageData m_managerKey]] forState:UIControlStateNormal];
@@ -416,7 +416,7 @@ typedef struct {
           if (error) {
               //: dispatch_async(dispatch_get_main_queue(), ^{
               dispatch_async(dispatch_get_main_queue(), ^{
-                  //: NSString *failed = [FFFLanguageManager getTextWithKey:@"group_info_activity_update_failed"];
+                  //: NSString *failed = [BusyLanguageManager getTextWithKey:@"group_info_activity_update_failed"];
                   NSString *failed = [SendName streetSmart:[MessageData kRangeMinPath]];//@"保存失败"
                   //: [SVProgressHUD showMessage:failed];
                   [SVProgressHUD stormCenter:failed];
@@ -424,7 +424,7 @@ typedef struct {
               });
           //: } else {
           } else {
-              //: NSString *success = [FFFLanguageManager getTextWithKey:@"group_info_activity_update_success"];
+              //: NSString *success = [BusyLanguageManager getTextWithKey:@"group_info_activity_update_success"];
               NSString *success = [SendName streetSmart:[MessageData dream_showStr]];//保存成功
               //: dispatch_async(dispatch_get_main_queue(), ^{
               dispatch_async(dispatch_get_main_queue(), ^{

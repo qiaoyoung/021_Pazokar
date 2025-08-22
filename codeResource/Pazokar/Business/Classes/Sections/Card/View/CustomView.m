@@ -181,10 +181,10 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFRemarksView.h"
+//: #import "BusyRemarksView.h"
 #import "CustomView.h"
 
-//: @interface FFFRemarksView ()<UITextFieldDelegate>
+//: @interface BusyRemarksView ()<UITextFieldDelegate>
 @interface CustomView ()<UITextFieldDelegate>
 
 //: @property (nonatomic,assign) NSInteger inputLimit;
@@ -209,7 +209,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFRemarksView
+//: @implementation BusyRemarksView
 @implementation CustomView
 
 //: - (instancetype)initWithFrame:(CGRect)frame
@@ -285,7 +285,7 @@ typedef struct {
 {
     //: self.user = user;
     self.user = user;
-    //: self.titleLabel.text = [FFFLanguageManager getTextWithKey:@"message_remark_name"];
+    //: self.titleLabel.text = [BusyLanguageManager getTextWithKey:@"message_remark_name"];
     self.titleLabel.text = [SendName streetSmart:[[VerticalData sharedInstance] k_makePath]];
     //: self.searchField.text = user.alias;
     self.searchField.text = user.alias;
@@ -301,7 +301,7 @@ typedef struct {
 //    self.box.frame = CGRectMake(0, SCREEN_HEIGHT-180, SCREEN_WIDTH, 180);
     //: if (!self.searchField.text.length) {
     if (!self.searchField.text.length) {
-        //: [self makeToast:[FFFLanguageManager getTextWithKey:@"user_profile_avtivity_input_beizhu"] duration:2.0 position:CSToastPositionCenter];
+        //: [self makeToast:[BusyLanguageManager getTextWithKey:@"user_profile_avtivity_input_beizhu"] duration:2.0 position:CSToastPositionCenter];
         [self makeToast:[SendName streetSmart:[[VerticalData sharedInstance] appReadDropName]] duration:2.0 position:CSToastPositionCenter];
         //: return;
         return;
@@ -322,7 +322,7 @@ typedef struct {
         [SVProgressHUD dismiss];
         //: if (!error) {
         if (!error) {
-            //: [wself makeToast:[FFFLanguageManager getTextWithKey:@"user_profile_avtivity_user_info_update_success"]
+            //: [wself makeToast:[BusyLanguageManager getTextWithKey:@"user_profile_avtivity_user_info_update_success"]
             [wself makeToast:[SendName streetSmart:[[VerticalData sharedInstance] dreamGreenPath]]
                          //: duration:2
                          duration:2
@@ -334,7 +334,7 @@ typedef struct {
 
         //: }else{
         }else{
-            //: [wself makeToast:[FFFLanguageManager getTextWithKey:@"user_profile_avtivity_user_info_update_failed"]
+            //: [wself makeToast:[BusyLanguageManager getTextWithKey:@"user_profile_avtivity_user_info_update_failed"]
             [wself makeToast:[SendName streetSmart:[[VerticalData sharedInstance] show_clickData]]
                          //: duration:2
                          duration:2
@@ -451,7 +451,7 @@ typedef struct {
         _closeBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_closeBtn setTitleColor:[UIColor colorWithHexString:@"#5D5F66"] forState:UIControlStateNormal];
         [_closeBtn setTitleColor:[UIColor status:[[VerticalData sharedInstance] app_myData]] forState:UIControlStateNormal];
-        //: [_closeBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
+        //: [_closeBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
         [_closeBtn setTitle:[SendName streetSmart:[[VerticalData sharedInstance] m_listTitle]] forState:UIControlStateNormal];
         //: _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
         _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
@@ -478,7 +478,7 @@ typedef struct {
         _sureBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        //: [_sureBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_sure"] forState:UIControlStateNormal];
+        //: [_sureBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_sure"] forState:UIControlStateNormal];
         [_sureBtn setTitle:[SendName streetSmart:[[VerticalData sharedInstance] main_verticalUrl]] forState:UIControlStateNormal];
         //: _sureBtn.backgroundColor = [UIColor colorWithHexString:@"#02D8C9"];
         _sureBtn.backgroundColor = [UIColor status:[[VerticalData sharedInstance] user_viewUrl]];
@@ -516,7 +516,7 @@ typedef struct {
 
         //: _searchField = [[UITextField alloc]initWithFrame:CGRectMake(15, 6, [[UIScreen mainScreen] bounds].size.width-80-30, 40)];
         _searchField = [[UITextField alloc]initWithFrame:CGRectMake(15, 6, [[UIScreen mainScreen] bounds].size.width-80-30, 40)];
-        //: _searchField.placeholder = [FFFLanguageManager getTextWithKey:@"message_remark_name"];
+        //: _searchField.placeholder = [BusyLanguageManager getTextWithKey:@"message_remark_name"];
         _searchField.placeholder = [SendName streetSmart:[[VerticalData sharedInstance] k_makePath]];
         //: _searchField.textColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];
         _searchField.textColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];

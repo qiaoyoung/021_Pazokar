@@ -111,20 +111,20 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionListCell.h"
+//: #import "BusySessionListCell.h"
 #import "ValueViewCell.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "NTESBadgeView.h"
 #import "CenterView.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
 
-//: @implementation FFFSessionListCell
+//: @implementation BusySessionListCell
 @implementation ValueViewCell
 
 //: - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -155,7 +155,7 @@ typedef struct {
         //: self.layer.shadowRadius = 3;
         self.layer.shadowRadius = 3;
 
-        //: _avatarImageView = [[FFFAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+        //: _avatarImageView = [[BusyAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
         _avatarImageView = [[CustomFormatView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
         //: [self.contentView addSubview:_avatarImageView];
         [self.contentView addSubview:_avatarImageView];
@@ -226,7 +226,7 @@ typedef struct {
 //    }else{
 //        self.badgeView.hidden = YES;
 
-        //: FFFKitInfo *info = nil;
+        //: BusyKitInfo *info = nil;
         Info *info = nil;
         //: if (recent.session.sessionType == NIMSessionTypeTeam) {
         if (recent.session.sessionType == NIMSessionTypeTeam) {
@@ -254,7 +254,7 @@ typedef struct {
 
         //: } else if (recent.session.sessionType == NIMSessionTypeP2P) {
         } else if (recent.session.sessionType == NIMSessionTypeP2P) {
-            //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+            //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
             InfoGreenImage *option = [[InfoGreenImage alloc] init];
             //: option.session = recent.session;
             option.session = recent.session;

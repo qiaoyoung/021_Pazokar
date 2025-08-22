@@ -262,20 +262,20 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFMessageUtil.h"
+//: #import "BusyMessageUtil.h"
 #import "CommunicationViewText.h"
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 //: #import "NSDictionary+MyUserKit.h"
 #import "NSDictionary+Case.h"
 
-//: @implementation FFFMessageUtil
+//: @implementation BusyMessageUtil
 @implementation CommunicationViewText
 
 //: + (NSString *)messageContent:(NIMMessage*)message {
@@ -292,25 +292,25 @@
             break;
         //: case NIMMessageTypeAudio:
         case NIMMessageTypeAudio:
-            //: text = [FFFLanguageManager getTextWithKey:@"Audio"]; 
+            //: text = [BusyLanguageManager getTextWithKey:@"Audio"]; 
             text = [SendName streetSmart:[[VietnameseMonetaryUnitData sharedInstance] noti_managerPotatoGateIdent]]; //@"[语音]".;
             //: break;
             break;
         //: case NIMMessageTypeImage:
         case NIMMessageTypeImage:
-            //: text = [FFFLanguageManager getTextWithKey:@"Image"];
+            //: text = [BusyLanguageManager getTextWithKey:@"Image"];
             text = [SendName streetSmart:[[VietnameseMonetaryUnitData sharedInstance] dream_successRecentUrl]];//@"[图片]".;
             //: break;
             break;
         //: case NIMMessageTypeVideo:
         case NIMMessageTypeVideo:
-            //: text = [FFFLanguageManager getTextWithKey:@"Video"];
+            //: text = [BusyLanguageManager getTextWithKey:@"Video"];
             text = [SendName streetSmart:[[VietnameseMonetaryUnitData sharedInstance] main_makeValue]];//@"[视频]".;
             //: break;
             break;
         //: case NIMMessageTypeLocation:
         case NIMMessageTypeLocation:
-            //: text = [FFFLanguageManager getTextWithKey:@"Location"];
+            //: text = [BusyLanguageManager getTextWithKey:@"Location"];
             text = [SendName streetSmart:[[VietnameseMonetaryUnitData sharedInstance] kHappinessLineIdent]];//@"[位置]".;
             //: break;
             break;
@@ -321,7 +321,7 @@
         }
         //: case NIMMessageTypeFile:
         case NIMMessageTypeFile:
-            //: text = [FFFLanguageManager getTextWithKey:@"File"];
+            //: text = [BusyLanguageManager getTextWithKey:@"File"];
             text = [SendName streetSmart:[[VietnameseMonetaryUnitData sharedInstance] main_absoluteMessage]];//@"[文件]".;
             //: break;
             break;
@@ -335,7 +335,7 @@
         case NIMMessageTypeRtcCallRecord: {
             //: NIMRtcCallRecordObject *record = message.messageObject;
             NIMRtcCallRecordObject *record = message.messageObject;
-            //: return (record.callType == NIMRtcCallTypeAudio ? [FFFLanguageManager getTextWithKey:@"Internet_call"] : [FFFLanguageManager getTextWithKey:@"Video_chat"]);
+            //: return (record.callType == NIMRtcCallTypeAudio ? [BusyLanguageManager getTextWithKey:@"Internet_call"] : [BusyLanguageManager getTextWithKey:@"Video_chat"]);
             return (record.callType == NIMRtcCallTypeAudio ? [SendName streetSmart:[[VietnameseMonetaryUnitData sharedInstance] dream_preventionId]] : [SendName streetSmart:[[VietnameseMonetaryUnitData sharedInstance] mInkMessage]]);
         }
         //: default:
@@ -357,10 +357,10 @@
         NIMNetCallNotificationContent *content = (NIMNetCallNotificationContent *)object.content;
         //: if (content.callType == NIMNetCallTypeAudio) {
         if (content.callType == NIMNetCallTypeAudio) {
-            //: return [FFFLanguageManager getTextWithKey:@"Internet_call"];
+            //: return [BusyLanguageManager getTextWithKey:@"Internet_call"];
             return [SendName streetSmart:[[VietnameseMonetaryUnitData sharedInstance] dream_preventionId]];//@"[网络通话]".;
         }
-        //: return [FFFLanguageManager getTextWithKey:@"Video_chat"];
+        //: return [BusyLanguageManager getTextWithKey:@"Video_chat"];
         return [SendName streetSmart:[[VietnameseMonetaryUnitData sharedInstance] mInkMessage]];//@"[视频聊天]".;
     }
     //: if (object.notificationType == NIMNotificationTypeTeam) {
@@ -369,7 +369,7 @@
         NIMTeam *team = [[NIMSDK sharedSDK].teamManager teamById:message.session.sessionId];
         //: if (team.type == NIMTeamTypeNormal) {
         if (team.type == NIMTeamTypeNormal) {
-            //: return [FFFLanguageManager getTextWithKey:@"Group_chat_information_update"];
+            //: return [BusyLanguageManager getTextWithKey:@"Group_chat_information_update"];
             return [SendName streetSmart:[[VietnameseMonetaryUnitData sharedInstance] showDropName]];//@"[讨论组信息更新]".;
         //: }else{
         }else{
@@ -451,14 +451,14 @@
                         break;
             }
 
-            //: return [FFFLanguageManager getTextWithKey:@"Group_information_update"];
+            //: return [BusyLanguageManager getTextWithKey:@"Group_information_update"];
             return [SendName streetSmart:[[VietnameseMonetaryUnitData sharedInstance] app_happinessFormat]];//@"[群信息更新]".;
         }
     }
 
     //: if (object.notificationType == NIMNotificationTypeSuperTeam) {
     if (object.notificationType == NIMNotificationTypeSuperTeam) {
-        //: return [FFFLanguageManager getTextWithKey:@"Super_Group_Information_Update"];
+        //: return [BusyLanguageManager getTextWithKey:@"Super_Group_Information_Update"];
         return [SendName streetSmart:[[VietnameseMonetaryUnitData sharedInstance] app_reliabilityToolPath]];//@"[超大群信息更新]".;
     }
     //: return @"";

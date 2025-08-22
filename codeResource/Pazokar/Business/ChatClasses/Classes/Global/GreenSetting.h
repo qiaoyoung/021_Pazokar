@@ -15,7 +15,7 @@
 /**
  *  气泡设置
  */
-//: @interface FFFKitSetting : NSObject
+//: @interface BusyKitSetting : NSObject
 @interface GreenSetting : NSObject
 
 /**

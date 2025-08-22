@@ -114,7 +114,7 @@
 // __M_A_C_R_O__
 //: #import "NTESUserUtil.h"
 #import "InformationUtil.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 
 //: @implementation NTESUserUtil
@@ -128,19 +128,19 @@
     switch (gender) {
         //: case NIMUserGenderMale:
         case NIMUserGenderMale:
-            //: genderStr = [FFFLanguageManager getTextWithKey:@"friend_info_activity_nan"];
+            //: genderStr = [BusyLanguageManager getTextWithKey:@"friend_info_activity_nan"];
             genderStr = [SendName streetSmart:[InclusionData sharedInstance].k_happinessName];
             //: break;
             break;
         //: case NIMUserGenderFemale:
         case NIMUserGenderFemale:
-            //: genderStr = [FFFLanguageManager getTextWithKey:@"friend_info_activity_nv"];
+            //: genderStr = [BusyLanguageManager getTextWithKey:@"friend_info_activity_nv"];
             genderStr = [SendName streetSmart:[InclusionData sharedInstance].dream_solutionMessage];
             //: break;
             break;
         //: case NIMUserGenderUnknown:
         case NIMUserGenderUnknown:
-            //: genderStr = [FFFLanguageManager getTextWithKey:@"friend_info_activity_xu"];
+            //: genderStr = [BusyLanguageManager getTextWithKey:@"friend_info_activity_xu"];
             genderStr = [SendName streetSmart:[InclusionData sharedInstance].kSeedStr];
         //: default:
         default:

@@ -9,14 +9,14 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTimestampModel.h"
+//: #import "BusyTimestampModel.h"
 #import "AppRow.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 
-//: @implementation FFFTimestampModel
+//: @implementation BusyTimestampModel
 @implementation AppRow
 
 //: - (instancetype)init{

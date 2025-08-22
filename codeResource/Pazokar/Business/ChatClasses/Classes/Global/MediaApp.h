@@ -15,7 +15,7 @@
 //: @class NIMCommonTableRow;
 @class PublicAppearRow;
 
-//: @protocol FFFCommonTableViewCell <NSObject>
+//: @protocol BusyCommonTableViewCell <NSObject>
 @protocol MediaApp <NSObject>
 
 //: - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;

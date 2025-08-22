@@ -186,10 +186,10 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFInputEmoticonManager.h"
+//: #import "BusyInputEmoticonManager.h"
 #import "DeviceManager.h"
-//: #import "FFFInputEmoticonDefine.h"
-#import "FFFInputEmoticonDefine.h"
+//: #import "BusyInputEmoticonDefine.h"
+#import "BusyInputEmoticonDefine.h"
 //: #import "NSString+MyUserKit.h"
 #import "NSString+Case.h"
 //: #import "MyUserKit.h"
@@ -292,26 +292,26 @@ typedef struct {
 //: @end
 @end
 
-//: @interface FFFInputEmoticonManager ()
+//: @interface BusyInputEmoticonManager ()
 @interface DeviceManager ()
 //: @property (nonatomic,strong) NSArray *catalogs;
 @property (nonatomic,strong) NSArray *catalogs;
 //: @end
 @end
 
-//: @implementation FFFInputEmoticonManager
+//: @implementation BusyInputEmoticonManager
 @implementation DeviceManager
 
 //: + (instancetype)sharedManager
 + (instancetype)history
 {
-    //: static FFFInputEmoticonManager *instance = nil;
+    //: static BusyInputEmoticonManager *instance = nil;
     static DeviceManager *instance = nil;
     //: static dispatch_once_t onceToken;
     static dispatch_once_t onceToken;
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
-        //: instance = [[FFFInputEmoticonManager alloc]init];
+        //: instance = [[BusyInputEmoticonManager alloc]init];
         instance = [[DeviceManager alloc]init];
     //: });
     });

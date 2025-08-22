@@ -1,7 +1,7 @@
 // __DEBUG__
 // __CLOSE_PRINT__
 //
-//  FFFUsrInfoData.h
+//  BusyUsrInfoData.h
 //  NIM
 //
 //  Created by Xuhui on 15/3/19.
@@ -9,16 +9,16 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFContactDefines.h"
-#import "FFFContactDefines.h"
+//: #import "BusyContactDefines.h"
+#import "BusyContactDefines.h"
 
-//: @class FFFKitInfo;
+//: @class BusyKitInfo;
 @class Info;
 
 //: @interface RiverlaUsrInfo : NSObject <NIMGroupMemberProtocol>
 @interface ButtonInfo : NSObject <DatePraise>
 
-//: @property (nonatomic,strong) FFFKitInfo *info;
+//: @property (nonatomic,strong) BusyKitInfo *info;
 @property (nonatomic,strong) Info *info;
 
 //: - (BOOL)isFriend;

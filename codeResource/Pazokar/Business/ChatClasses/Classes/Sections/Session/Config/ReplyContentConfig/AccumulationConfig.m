@@ -9,14 +9,14 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFReplyedTextContentConfig.h"
+//: #import "BusyReplyedTextContentConfig.h"
 #import "AccumulationConfig.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @interface FFFReplyedTextContentConfig ()
+//: @interface BusyReplyedTextContentConfig ()
 @interface AccumulationConfig ()
 
 //: @property (nonatomic,strong) M80AttributedLabel *label;
@@ -25,7 +25,7 @@
 //: @end
 @end
 
-//: @implementation FFFReplyedTextContentConfig
+//: @implementation BusyReplyedTextContentConfig
 @implementation AccumulationConfig
 
 
@@ -79,7 +79,7 @@
 //: - (NSString *)cellContent:(NIMMessage *)message
 - (NSString *)picture:(NIMMessage *)message
 {
-    //: return @"FFFReplyedTextContentView";
+    //: return @"BusyReplyedTextContentView";
     return @"BarTextView";
 }
 

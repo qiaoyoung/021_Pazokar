@@ -11,18 +11,18 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFTeamMemberListDataSource.h"
+//: #import "BusyTeamMemberListDataSource.h"
 #import "RowCenter.h"
-//: #import "FFFTeamListDataManager.h"
+//: #import "BusyTeamListDataManager.h"
 #import "FindBaseballTeamManager.h"
 
 //: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
-//: @interface FFFTeamMuteMemberListViewController : UIViewController
+//: @interface BusyTeamMuteMemberListViewController : UIViewController
 @interface NameViewController : UIViewController
 
-//: @property (nonatomic,strong) FFFTeamListDataManager *teamListManager;
+//: @property (nonatomic,strong) BusyTeamListDataManager *teamListManager;
 @property (nonatomic,strong) FindBaseballTeamManager *teamListManager;
 
 //: @end

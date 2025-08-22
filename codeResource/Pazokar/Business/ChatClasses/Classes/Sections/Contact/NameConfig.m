@@ -97,19 +97,19 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFContactSelectConfig.h"
+//: #import "BusyContactSelectConfig.h"
 #import "NameConfig.h"
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 //: #import "UserGroupedData.h"
 #import "DiscoverIndex.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
-//: #import "FFFKitInfo.h"
+//: #import "BusyKitInfo.h"
 #import "Info.h"
 
 //: @implementation NIMContactFriendSelectConfig : NSObject
@@ -123,7 +123,7 @@
 
 //: - (NSString *)title{
 - (NSString *)modelTitle{
-    //: return [FFFLanguageManager getTextWithKey:@"select_contact"];
+    //: return [BusyLanguageManager getTextWithKey:@"select_contact"];
     return [SendName streetSmart:[[SuicideData sharedInstance] dream_boarTitle]];
 }
 
@@ -203,9 +203,9 @@
     return nil;
 }
 
-//: - (FFFKitInfo *)getInfoById:(NSString *)selectedId {
+//: - (BusyKitInfo *)getInfoById:(NSString *)selectedId {
 - (Info *)tingNeed:(NSString *)selectedId {
-    //: FFFKitInfo *info = nil;
+    //: BusyKitInfo *info = nil;
     Info *info = nil;
     //: info = [[MyUserKit sharedKit] infoByUser:selectedId option:nil];
     info = [[Case pastTop] consumer:selectedId message:nil];
@@ -234,7 +234,7 @@
 
 //: - (NSString *)title{
 - (NSString *)modelTitle{
-    //: return [FFFLanguageManager getTextWithKey:@"select_contact"];
+    //: return [BusyLanguageManager getTextWithKey:@"select_contact"];
     return [SendName streetSmart:[[SuicideData sharedInstance] dream_boarTitle]];
 }
 
@@ -377,11 +377,11 @@
     return nil;
 }
 
-//: - (FFFKitInfo *)getInfoById:(NSString *)selectedId {
+//: - (BusyKitInfo *)getInfoById:(NSString *)selectedId {
 - (Info *)tingNeed:(NSString *)selectedId {
-    //: FFFKitInfo *info = nil;
+    //: BusyKitInfo *info = nil;
     Info *info = nil;
-    //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+    //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
     InfoGreenImage *option = [[InfoGreenImage alloc] init];
     //: option.session = _session;
     option.session = _session;
@@ -503,9 +503,9 @@
     return nil;
 }
 
-//: - (FFFKitInfo *)getInfoById:(NSString *)selectedId {
+//: - (BusyKitInfo *)getInfoById:(NSString *)selectedId {
 - (Info *)tingNeed:(NSString *)selectedId {
-    //: FFFKitInfo *info = nil;
+    //: BusyKitInfo *info = nil;
     Info *info = nil;
     //: if (_teamType == NIMKitTeamTypeNomal) {
     if (_teamType == NIMKitTeamTypeNomal) {

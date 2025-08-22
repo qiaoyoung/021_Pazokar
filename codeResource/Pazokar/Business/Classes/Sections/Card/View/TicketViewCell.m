@@ -121,10 +121,10 @@
 // __M_A_C_R_O__
 //: #import "NTESCardPortraitCell.h"
 #import "TicketViewCell.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
-//: #import "FFFCommonTableData.h"
-#import "FFFCommonTableData.h"
+//: #import "BusyCommonTableData.h"
+#import "BusyCommonTableData.h"
 //: #import "UIView+NTES.h"
 #import "UIView+Date.h"
 //: #import "NTESSessionUtil.h"
@@ -133,7 +133,7 @@
 //: @interface NTESCardPortraitCell()
 @interface TicketViewCell()
 
-//: @property (nonatomic,strong) FFFAvatarImageView *avatar;
+//: @property (nonatomic,strong) BusyAvatarImageView *avatar;
 @property (nonatomic,strong) CustomFormatView *avatar;
 
 //: @property (nonatomic,strong) UILabel *nameLabel;
@@ -162,7 +162,7 @@
     if (self) {
         //: CGFloat avatarWidth = 55.f;
         CGFloat avatarWidth = 55.f;
-        //: _avatar = [[FFFAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, avatarWidth, avatarWidth)];
+        //: _avatar = [[BusyAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, avatarWidth, avatarWidth)];
         _avatar = [[CustomFormatView alloc] initWithFrame:CGRectMake(0, 0, avatarWidth, avatarWidth)];
         //: [self.contentView addSubview:_avatar];
         [self.contentView addSubview:_avatar];
@@ -210,11 +210,11 @@
     if ([uid isKindOfClass:[NSString class]]) {
         //: NIMUser *user = [[NIMSDK sharedSDK].userManager userInfo:uid];
         NIMUser *user = [[NIMSDK sharedSDK].userManager userInfo:uid];
-        //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:uid option:nil];
+        //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:uid option:nil];
         Info *info = [[Case pastTop] consumer:uid message:nil];
         //: self.nameLabel.text = info.showName ;
         self.nameLabel.text = info.showName ;
-        //: NSString *register_avtivity_account = [FFFLanguageManager getTextWithKey:@"register_avtivity_account"];
+        //: NSString *register_avtivity_account = [BusyLanguageManager getTextWithKey:@"register_avtivity_account"];
         NSString *register_avtivity_account = [SendName streetSmart:[SourceData app_removeTitle]];
         //: self.accountLabel.text = [NSString stringWithFormat:@"%@：%@",register_avtivity_account, uid];
         self.accountLabel.text = [NSString stringWithFormat:@"%@：%@",register_avtivity_account, uid];
@@ -281,7 +281,7 @@
             NSString *account = [data tag:[SourceData showRedMsg]];
             //: self.accountLabel.hidden = NO;
             self.accountLabel.hidden = NO;
-            //: NSString *register_avtivity_account = [FFFLanguageManager getTextWithKey:@"register_avtivity_account"];
+            //: NSString *register_avtivity_account = [BusyLanguageManager getTextWithKey:@"register_avtivity_account"];
             NSString *register_avtivity_account = [SendName streetSmart:[SourceData app_removeTitle]];
 
             //: self.accountLabel.text = [NSString stringWithFormat:@"%@:%@",register_avtivity_account, account];

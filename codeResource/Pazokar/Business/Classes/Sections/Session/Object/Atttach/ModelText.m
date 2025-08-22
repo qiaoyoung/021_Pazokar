@@ -64,7 +64,7 @@ Byte main_killerTitle[] = {93, 9, 72, 4, 173, 182, 171, 186, 193, 184, 188, 173,
 #import "ModelText.h"
 //: #import "NTESFileLocationHelper.h"
 #import "VersionData.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
 //: #import "NSDictionary+NTESJson.h"
 #import "NSDictionary+Doing.h"
@@ -72,7 +72,7 @@ Byte main_killerTitle[] = {93, 9, 72, 4, 173, 182, 171, 186, 193, 184, 188, 173,
 #import "CypherScrollView+Case.h"
 //: #import "NTESMessageUtil.h"
 #import "WithUtil.h"
-//: #import "FFFInputEmoticonParser.h"
+//: #import "BusyInputEmoticonParser.h"
 #import "ViewApp.h"
 
 //: @interface NTESMultiRetweetAttachment ()
@@ -411,13 +411,13 @@ Byte main_killerTitle[] = {93, 9, 72, 4, 173, 182, 171, 186, 193, 184, 188, 173,
     }
     //: NTESMessageAbstract *ret = [[NTESMessageAbstract alloc] init];
     TextAbstract *ret = [[TextAbstract alloc] init];
-    //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+    //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
     InfoGreenImage *option = [[InfoGreenImage alloc] init];
     //: option.session = message.session;
     option.session = message.session;
     //: option.message = message;
     option.message = message;
-    //: FFFKitInfo *info = [[MyUserKit sharedKit].provider infoByUser:message.from option:option];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit].provider infoByUser:message.from option:option];
     Info *info = [[Case pastTop].provider consumer:message.from message:option];
     //: ret.sender = info.showName ?: @"null";
     ret.sender = info.showName ?: StringFromChromaticData(kLetterTitle);
@@ -452,7 +452,7 @@ Byte main_killerTitle[] = {93, 9, 72, 4, 173, 182, 171, 186, 193, 184, 188, 173,
     NSMutableString *ret = [NSMutableString string];
     //: if (msg.length > (32)) {
     if (msg.length > (32)) {
-        //: NSArray *tokens = [[FFFInputEmoticonParser currentParser] tokens:msg];
+        //: NSArray *tokens = [[BusyInputEmoticonParser currentParser] tokens:msg];
         NSArray *tokens = [[ViewApp today] bySumervalRed:msg];
         //: for (NIMInputTextToken *token in tokens) { 
         for (Saloon *token in tokens) { //防止emoji表情被截断

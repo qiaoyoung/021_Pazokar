@@ -62,12 +62,12 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamInfoData.h"
+//: #import "BusyTeamInfoData.h"
 #import "NameFlush.h"
-//: #import "FFFSpellingCenter.h"
+//: #import "BusySpellingCenter.h"
 #import "PinValueTing.h"
 
-//: @implementation FFFTeamInfoData
+//: @implementation BusyTeamInfoData
 @implementation NameFlush
 
 //: - (instancetype)initWithTeam:(NIMTeam *)team{
@@ -89,7 +89,7 @@
 
 //: - (NSString *)groupTitle{
 - (NSString *)end{
-    //: NSString *title = [[FFFSpellingCenter sharedCenter] firstLetter:self.teamName].capitalizedString;
+    //: NSString *title = [[BusySpellingCenter sharedCenter] firstLetter:self.teamName].capitalizedString;
     NSString *title = [[PinValueTing sharedToCenterBackground] location:self.teamName].capitalizedString;
     //: unichar character = [title characterAtIndex:0];
     unichar character = [title characterAtIndex:0];
@@ -113,7 +113,7 @@
 
 //: - (id)sortKey{
 - (id)meanSolarDay{
-    //: return [[FFFSpellingCenter sharedCenter] spellingForString:self.teamName].shortSpelling;
+    //: return [[BusySpellingCenter sharedCenter] spellingForString:self.teamName].shortSpelling;
     return [[PinValueTing sharedToCenterBackground] pressedShow:self.teamName].shortSpelling;
 }
 

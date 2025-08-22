@@ -9,21 +9,21 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitEvent.h"
+//: #import "BusyKitEvent.h"
 #import "DirectionEvent.h"
 
-//: NSString *const FFFKitEventNameTapContent = @"FFFKitEventNameTapContent";
-NSString *const notiMessageId = @"FFFKitEventNameTapContent";
-//: NSString *const FFFKitEventNameTapLabelLink = @"FFFKitEventNameTapLabelLink";
-NSString *const user_commentFormat = @"FFFKitEventNameTapLabelLink";
-//: NSString *const FFFKitEventNameTapAudio = @"FFFKitEventNameTapAudio";
-NSString *const mainEventId = @"FFFKitEventNameTapAudio";
+//: NSString *const BusyKitEventNameTapContent = @"BusyKitEventNameTapContent";
+NSString *const notiMessageId = @"BusyKitEventNameTapContent";
+//: NSString *const BusyKitEventNameTapLabelLink = @"BusyKitEventNameTapLabelLink";
+NSString *const user_commentFormat = @"BusyKitEventNameTapLabelLink";
+//: NSString *const BusyKitEventNameTapAudio = @"BusyKitEventNameTapAudio";
+NSString *const mainEventId = @"BusyKitEventNameTapAudio";
 
-//: NSString *const FFFKitEventNameTapRepliedContent = @"FFFKitEventNameTapRepliedContent";
-NSString *const m_restoreMessage = @"FFFKitEventNameTapRepliedContent";
+//: NSString *const BusyKitEventNameTapRepliedContent = @"BusyKitEventNameTapRepliedContent";
+NSString *const m_restoreMessage = @"BusyKitEventNameTapRepliedContent";
 
 
-//: @implementation FFFKitEvent
+//: @implementation BusyKitEvent
 @implementation DirectionEvent
 
 //: @end

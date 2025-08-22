@@ -76,25 +76,25 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamMemberCardHeaderCell.h"
+//: #import "BusyTeamMemberCardHeaderCell.h"
 #import "PaperView.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
-//: #import "FFFUsrInfoData.h"
-#import "FFFUsrInfoData.h"
-//: #import "FFFCommonTableData.h"
-#import "FFFCommonTableData.h"
+//: #import "BusyUsrInfoData.h"
+#import "BusyUsrInfoData.h"
+//: #import "BusyCommonTableData.h"
+#import "BusyCommonTableData.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 
-//: @interface FFFTeamMemberCardHeaderCell()
+//: @interface BusyTeamMemberCardHeaderCell()
 @interface PaperView()
 
-//: @property (nonatomic,strong) FFFAvatarImageView *avatarView;
+//: @property (nonatomic,strong) BusyAvatarImageView *avatarView;
 @property (nonatomic,strong) CustomFormatView *avatarView;
 
 //: @property (nonatomic,strong) UILabel *nickLabel;
@@ -103,7 +103,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFTeamMemberCardHeaderCell
+//: @implementation BusyTeamMemberCardHeaderCell
 @implementation PaperView
 
 //: - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -124,7 +124,7 @@ typedef struct {
 
 //: - (void)refreshData:(NIMCommonTableRow *)rowData tableView:(UITableView *)tableView;{
 - (void)should:(PublicAppearRow *)rowData position_strong:(UITableView *)tableView;{
-    //: FFFKitInfo *userInfo = rowData.extraInfo[@"user"];
+    //: BusyKitInfo *userInfo = rowData.extraInfo[@"user"];
     Info *userInfo = rowData.extraInfo[[BlinkData dreamChannelUrl]];
     //: NSLog(@"userInfo===%@",userInfo);
     //: NSURL *avatarURL;
@@ -160,12 +160,12 @@ typedef struct {
 }
 
 
-//: - (FFFAvatarImageView *)avatarView
+//: - (BusyAvatarImageView *)avatarView
 - (CustomFormatView *)avatarView
 {
     //: if (!_avatarView) {
     if (!_avatarView) {
-        //: _avatarView = [[FFFAvatarImageView alloc] initWithFrame:CGRectMake(125, 52, 70, 70)];
+        //: _avatarView = [[BusyAvatarImageView alloc] initWithFrame:CGRectMake(125, 52, 70, 70)];
         _avatarView = [[CustomFormatView alloc] initWithFrame:CGRectMake(125, 52, 70, 70)];
         //: _avatarView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         _avatarView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;

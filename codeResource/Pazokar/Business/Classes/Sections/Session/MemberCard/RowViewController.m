@@ -292,15 +292,15 @@
 // __M_A_C_R_O__
 //: #import "TeamMemberNormalViewController.h"
 #import "RowViewController.h"
-//: #import "FFFContactSelectViewController.h"
+//: #import "BusyContactSelectViewController.h"
 #import "BrandViewController.h"
-//: #import "FFFCardHeaderCell.h"
+//: #import "BusyCardHeaderCell.h"
 #import "FastenerView.h"
 //: #import "TeamMemberNormalCollectionViewCell.h"
 #import "JointView.h"
 //: #import "NTESPersonalCardViewController.h"
 #import "SharedViewController.h"
-//: #import "FFFTeamMemberCardViewController.h"
+//: #import "BusyTeamMemberCardViewController.h"
 #import "FindViewController.h"
 
 //: @interface TeamMemberNormalViewController ()<UICollectionViewDelegate, UICollectionViewDataSource,NIMContactSelectDelegate>
@@ -418,7 +418,7 @@
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"group_info_activity_team_member"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"group_info_activity_team_member"];
     labtitle.text = [SendName streetSmart:[SeedData k_differentlyFormat]];
     //: [bgView addSubview:labtitle];
     [bgView addSubview:labtitle];
@@ -474,7 +474,7 @@
     subtitleLabel.textColor = [UIColor status:[SeedData notiCurrentlyText]];
     //: subtitleLabel.textAlignment = NSTextAlignmentRight;
     subtitleLabel.textAlignment = NSTextAlignmentRight;
-    //: subtitleLabel.text = [FFFLanguageManager getTextWithKey:@"group_member_info_activity_team_creator"];
+    //: subtitleLabel.text = [BusyLanguageManager getTextWithKey:@"group_member_info_activity_team_creator"];
     subtitleLabel.text = [SendName streetSmart:[SeedData mLeadershipUrl]];
     //: [owerView addSubview:subtitleLabel];
     [owerView addSubview:subtitleLabel];
@@ -532,7 +532,7 @@
         config.filterIds = users;
         //: config.needMutiSelected = YES;
         config.needMutiSelected = YES;
-        //: FFFContactSelectViewController *vc = [[FFFContactSelectViewController alloc] initWithConfig:config];
+        //: BusyContactSelectViewController *vc = [[BusyContactSelectViewController alloc] initWithConfig:config];
         BrandViewController *vc = [[BrandViewController alloc] initWithMax:config];
         //: vc.delegate = self;
         vc.delegate = self;
@@ -641,7 +641,7 @@
                     //: self.owerInfo = member;
                     self.owerInfo = member;
 
-                    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:member.userId option:nil];
+                    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:member.userId option:nil];
                     Info *info = [[Case pastTop] consumer:member.userId message:nil];
                     //: self.titleLabel.text = info.showName;
                     self.titleLabel.text = info.showName;
@@ -680,7 +680,7 @@
     //: TeamMemberNormalCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TeamMemberNormalCollectionViewCell" forIndexPath:indexPath];
     JointView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JointView" forIndexPath:indexPath];
     //    cell.delegate = self;
-//    cell.backgroundColor  = RGB_COLOR_String(@"#ffffff");
+//    cell.backgroundColor  = RGB_COLOR_String(@"#fffBusy");
 
     //: NIMTeamMember *member = self.memberList[indexPath.row];
     NIMTeamMember *member = self.memberList[indexPath.row];

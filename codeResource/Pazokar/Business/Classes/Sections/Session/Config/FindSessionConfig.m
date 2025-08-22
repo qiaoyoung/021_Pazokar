@@ -48,7 +48,7 @@
     return self;
 }
 
-//: - (id<FFFKitMessageProvider>)messageDataProvider
+//: - (id<BusyKitMessageProvider>)messageDataProvider
 - (id<ToiletKitImageProviderDevice>)disableSafe
 {
     //: return self.provider;

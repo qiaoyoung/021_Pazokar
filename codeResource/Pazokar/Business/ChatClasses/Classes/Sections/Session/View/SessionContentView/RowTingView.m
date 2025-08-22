@@ -218,22 +218,22 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionAudioContentView.h"
+//: #import "BusySessionAudioContentView.h"
 #import "RowTingView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFKitAudioCenter.h"
+//: #import "BusyKitAudioCenter.h"
 #import "BarCenter.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 //: #import "UIColor+MyUserKit.h"
 #import "UIColor+Case.h"
 
-//: @interface FFFSessionAudioContentView()<NIMMediaManagerDelegate>
+//: @interface BusySessionAudioContentView()<NIMMediaManagerDelegate>
 @interface RowTingView()<NIMMediaManagerDelegate>
 
 //: @property (nonatomic,strong) UIImageView *voiceImageView;
@@ -252,7 +252,7 @@
 //: @end
 @end
 
-//: @implementation FFFSessionAudioContentView
+//: @implementation BusySessionAudioContentView
 @implementation RowTingView
 
 //: -(instancetype)initSessionMessageContentView{
@@ -387,7 +387,7 @@
 
 }
 
-//: - (void)refresh:(FFFMessageModel *)data {
+//: - (void)refresh:(BusyMessageModel *)data {
 - (void)messagePress:(MoreModel *)data {
     //: [super refresh:data];
     [super messagePress:data];
@@ -396,7 +396,7 @@
     //: self.durationLabel.text = [NSString stringWithFormat:@"%zd\"",(NSInteger)((object.duration+500)/1000)];
     self.durationLabel.text = [NSString stringWithFormat:@"%zd\"",(NSInteger)((object.duration+500)/1000)];//四舍五入
 
-    //: FFFKitSetting *setting = [[MyUserKit sharedKit].config setting:data.message];
+    //: BusyKitSetting *setting = [[MyUserKit sharedKit].config setting:data.message];
     GreenSetting *setting = [[Case pastTop].config tool:data.message];
 
     //: self.durationLabel.font = setting.font;
@@ -412,7 +412,7 @@
     [self nameOfWords:data];
 }
 
-//: - (void)refreshBackground:(FFFMessageModel *)data
+//: - (void)refreshBackground:(BusyMessageModel *)data
 - (void)nameOfWords:(MoreModel *)data
 {
     //: if (data.shouldShowLeft)
@@ -450,8 +450,8 @@
     UIEdgeInsets contentInsets = self.model.contentViewInsets;
     //: switch (self.layoutStyle) {
     switch (self.layoutStyle) {
-        //: case FFFSessionMessageContentViewLayoutLeft: {
-        case FFFSessionMessageContentViewLayoutLeft: {
+        //: case BusySessionMessageContentViewLayoutLeft: {
+        case BusySessionMessageContentViewLayoutLeft: {
 //            _voiceImageView.transform = CGAffineTransformIdentity;
 //            self.voiceImageView.left = contentInsets.left * 2;
             //: self.voiceImageViewleft.left = contentInsets.left * 2;
@@ -461,8 +461,8 @@
             //: break;
             break;
         }
-        //: case FFFSessionMessageContentViewLayoutRight: {
-        case FFFSessionMessageContentViewLayoutRight: {
+        //: case BusySessionMessageContentViewLayoutRight: {
+        case BusySessionMessageContentViewLayoutRight: {
 //            _voiceImageView.transform = CGAffineTransformMakeRotation(M_PI);
             //: self.voiceImageView.right = self.width - contentInsets.right * 2;
             self.voiceImageView.right = self.width - contentInsets.right * 2;
@@ -471,8 +471,8 @@
             //: break;
             break;
         }
-        //: case FFFSessionMessageContentViewLayoutAuto:
-        case FFFSessionMessageContentViewLayoutAuto:
+        //: case BusySessionMessageContentViewLayoutAuto:
+        case BusySessionMessageContentViewLayoutAuto:
         //: default:
         default:
         {
@@ -541,8 +541,8 @@
     CGFloat backgroundLeft = 0;
     //: switch (self.layoutStyle) {
     switch (self.layoutStyle) {
-        //: case FFFSessionMessageContentViewLayoutLeft:
-        case FFFSessionMessageContentViewLayoutLeft:
+        //: case BusySessionMessageContentViewLayoutLeft:
+        case BusySessionMessageContentViewLayoutLeft:
             {
                 //: backgroundWidth = self.width - contentInsets.left * .5f - 2;
                 backgroundWidth = self.width - contentInsets.left * .5f - 2;
@@ -551,8 +551,8 @@
             }
             //: break;
             break;
-        //: case FFFSessionMessageContentViewLayoutRight:
-        case FFFSessionMessageContentViewLayoutRight:
+        //: case BusySessionMessageContentViewLayoutRight:
+        case BusySessionMessageContentViewLayoutRight:
             {
                 //: backgroundWidth = self.width - 2 - contentInsets.right * .5f;
                 backgroundWidth = self.width - 2 - contentInsets.right * .5f;
@@ -614,9 +614,9 @@
             [self lineItem];
         }
 
-        //: FFFKitEvent *event = [[FFFKitEvent alloc] init];
+        //: BusyKitEvent *event = [[BusyKitEvent alloc] init];
         DirectionEvent *event = [[DirectionEvent alloc] init];
-        //: event.eventName = FFFKitEventNameTapAudio;
+        //: event.eventName = BusyKitEventNameTapAudio;
         event.eventName = mainEventId;
         //: event.messageModel = self.model;
         event.messageModel = self.model;
@@ -667,7 +667,7 @@
 //: - (BOOL)isPlaying
 - (BOOL)shouldNet
 {
-    //: BOOL play = [FFFKitAudioCenter instance].currentPlayingMessage == self.model.message; 
+    //: BOOL play = [BusyKitAudioCenter instance].currentPlayingMessage == self.model.message; 
     BOOL play = [BarCenter disable].currentPlayingMessage == self.model.message; //对比是否是同一条消息，严格同一条，不能是相同ID，防止进了会话又进云端消息界面，导致同一个ID的云消息也在动画
     //: return play;
     return play;

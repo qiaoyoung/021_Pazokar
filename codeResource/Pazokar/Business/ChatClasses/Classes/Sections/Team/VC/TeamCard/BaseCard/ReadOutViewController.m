@@ -149,24 +149,24 @@ typedef struct {
 //  
 
 // __M_A_C_R_O__
-//: #import "FFFTeamCardViewController.h"
+//: #import "BusyTeamCardViewController.h"
 #import "ReadOutViewController.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFKitColorButtonCell.h"
+//: #import "BusyKitColorButtonCell.h"
 #import "FastenerViewCell.h"
-//: #import "FFFTeamMemberListCell.h"
+//: #import "BusyTeamMemberListCell.h"
 #import "WithView.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
-//: #import "FFFTeamCardSelectedViewController.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
+//: #import "BusyTeamCardSelectedViewController.h"
 #import "StateViewController.h"
-//: #import "FFFGroupEditTableViewCell.h"
+//: #import "BusyGroupEditTableViewCell.h"
 #import "MaxView.h"
 
-//: @interface FFFTeamCardViewController () <UITableViewDataSource,
+//: @interface BusyTeamCardViewController () <UITableViewDataSource,
 @interface ReadOutViewController () <UITableViewDataSource,
                                          //: UITableViewDelegate,
                                          UITableViewDelegate,
@@ -179,7 +179,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFTeamCardViewController
+//: @implementation BusyTeamCardViewController
 @implementation ReadOutViewController
 
 //: - (void)viewDidLoad {
@@ -263,7 +263,7 @@ typedef struct {
 
 //: - (UIAlertAction *)makeCancelAction {
 - (UIAlertAction *)large {
-    //: UIAlertAction *cancel = [UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"]
+    //: UIAlertAction *cancel = [UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"]
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:[SendName streetSmart:[[GivenData sharedInstance] kHandleRangeDisappointedTitle]]
                                                      //: style:UIAlertActionStyleCancel
                                                      style:UIAlertActionStyleCancel
@@ -589,11 +589,11 @@ typedef struct {
 {
     //: NSString *identifier = [NSString stringWithFormat:@"builidCommonCell%ld%ld",(long)indexPath.section,(long)indexPath.row];
     NSString *identifier = [NSString stringWithFormat:[[GivenData sharedInstance] user_conversationExplainData],(long)indexPath.section,(long)indexPath.row];
-    //: FFFGroupEditTableViewCell * cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
+    //: BusyGroupEditTableViewCell * cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
     MaxView * cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
     //: if (!cell) {
     if (!cell) {
-        //: cell = [[FFFGroupEditTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        //: cell = [[BusyGroupEditTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell = [[MaxView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         //: CGFloat left = 60.f;
         CGFloat left = 60.f;
@@ -687,12 +687,12 @@ typedef struct {
     }
     //: if (bodyData.type == TeamCardRowItemTypeSelected) {
     if (bodyData.type == TeamCardRowItemTypeSelected) {
-        //: FFFTeamCardSelectedViewController *vc = [FFFTeamCardSelectedViewController instanceWithTitle:bodyData.title
+        //: BusyTeamCardSelectedViewController *vc = [BusyTeamCardSelectedViewController instanceWithTitle:bodyData.title
         StateViewController *vc = [StateViewController title:bodyData.title
                                                                                //: items:bodyData.optionItems
                                                                                by:bodyData.optionItems
-                                                                              //: result:^(id<FFFKitSelectCardData> _Nonnull item) {
-                                                                              user:^(id<FFFKitSelectCardData> _Nonnull item) {
+                                                                              //: result:^(id<BusyKitSelectCardData> _Nonnull item) {
+                                                                              user:^(id<BusyKitSelectCardData> _Nonnull item) {
               //: if (bodyData.selectedBlock) {
               if (bodyData.selectedBlock) {
                   //: bodyData.selectedBlock(item);
@@ -724,17 +724,17 @@ typedef struct {
 //    tableButtonCell
     //: NSString *identifier = [NSString stringWithFormat:@"tableButtonCell%ld%ld",(long)indexPath.section,(long)indexPath.row];
     NSString *identifier = [NSString stringWithFormat:[[GivenData sharedInstance] dreamAwlUrl],(long)indexPath.section,(long)indexPath.row];
-    //: FFFKitColorButtonCell * cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
+    //: BusyKitColorButtonCell * cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
     FastenerViewCell * cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
     //: if (!cell) {
     if (!cell) {
-        //: cell = [[FFFKitColorButtonCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        //: cell = [[BusyKitColorButtonCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell = [[FastenerViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     //: cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    //: cell.button.style = FFFKitColorButtonCellStyleRed;
-    cell.button.style = FFFKitColorButtonCellStyleRed;
+    //: cell.button.style = BusyKitColorButtonCellStyleRed;
+    cell.button.style = BusyKitColorButtonCellStyleRed;
     //: [cell.button setTitle:bodyData.title forState:UIControlStateNormal];
     [cell.button setTitle:bodyData.title forState:UIControlStateNormal];
     //: return cell;
@@ -743,17 +743,17 @@ typedef struct {
 
 //: - (UITableViewCell*)builidBlueButtonCell:(id<NTESCardBodyData>) bodyData{
 - (UITableViewCell*)builidToCompartment:(id<NTESCardBodyData>) bodyData{
-    //: FFFKitColorButtonCell * cell = [self.tableView dequeueReusableCellWithIdentifier:@"tableButtonCell"];
+    //: BusyKitColorButtonCell * cell = [self.tableView dequeueReusableCellWithIdentifier:@"tableButtonCell"];
     FastenerViewCell * cell = [self.tableView dequeueReusableCellWithIdentifier:[[GivenData sharedInstance] user_hydraId]];
     //: if (!cell) {
     if (!cell) {
-        //: cell = [[FFFKitColorButtonCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tableButtonCell"];
+        //: cell = [[BusyKitColorButtonCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tableButtonCell"];
         cell = [[FastenerViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[[GivenData sharedInstance] user_hydraId]];
     }
     //: cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    //: cell.button.style = FFFKitColorButtonCellStyleBlue;
-    cell.button.style = FFFKitColorButtonCellStyleBlue;
+    //: cell.button.style = BusyKitColorButtonCellStyleBlue;
+    cell.button.style = BusyKitColorButtonCellStyleBlue;
     //: [cell.button setTitle:bodyData.title forState:UIControlStateNormal];
     [cell.button setTitle:bodyData.title forState:UIControlStateNormal];
     //: return cell;
@@ -762,11 +762,11 @@ typedef struct {
 
 //: - (UITableViewCell*)builidTeamMemberCell:(id<NTESCardBodyData>) bodyData{
 - (UITableViewCell*)invest:(id<NTESCardBodyData>) bodyData{
-    //: FFFTeamMemberListCell * cell = [self.tableView dequeueReusableCellWithIdentifier:@"tableMemberCell"];
+    //: BusyTeamMemberListCell * cell = [self.tableView dequeueReusableCellWithIdentifier:@"tableMemberCell"];
     WithView * cell = [self.tableView dequeueReusableCellWithIdentifier:[[GivenData sharedInstance] main_clickFormat]];
     //: if (!cell) {
     if (!cell) {
-        //: cell = [[FFFTeamMemberListCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"tableMemberCell"];
+        //: cell = [[BusyTeamMemberListCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"tableMemberCell"];
         cell = [[WithView alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:[[GivenData sharedInstance] main_clickFormat]];
     }
     //: cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -820,13 +820,13 @@ typedef struct {
 {
     //: NSString *identifier = [NSString stringWithFormat:@"TableSwitch%ld%ld",(long)indexPath.section,(long)indexPath.row];
     NSString *identifier = [NSString stringWithFormat:[[GivenData sharedInstance] main_beamValue],(long)indexPath.section,(long)indexPath.row];
-    //: FFFTeamSwitchTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
+    //: BusyTeamSwitchTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
     WithCellView *cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
     //: cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     //: if (!cell) {
     if (!cell) {
-        //: cell = [[FFFTeamSwitchTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        //: cell = [[BusyTeamSwitchTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell = [[WithCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         //: CGFloat left = 60.f;
         CGFloat left = 60.f;
@@ -899,7 +899,7 @@ typedef struct {
 
 //: #pragma mark - Setter
 #pragma mark - Setter
-//: - (void)setDatas:(NSArray<NSArray<FFFTeamCardRowItem *> *> *)datas {
+//: - (void)setDatas:(NSArray<NSArray<BusyTeamCardRowItem *> *> *)datas {
 - (void)setDatas:(NSArray<NSArray<ToAGreaterExtentItem *> *> *)datas {
     //: _datas = datas;
     _datas = datas;
@@ -967,10 +967,10 @@ typedef struct {
 //: - (UIView *)didGetHeaderView { return [UIView new]; }
 - (UIView *)asRed { return [UIView new]; }
 
-//: - (void)didBuildTeamMemberCell:(FFFTeamMemberListCell *)cell {}
+//: - (void)didBuildTeamMemberCell:(BusyTeamMemberListCell *)cell {}
 - (void)picture:(WithView *)cell {}
 
-//: - (void)didBuildTeamSwitchCell:(FFFTeamSwitchTableViewCell *)cell {}
+//: - (void)didBuildTeamSwitchCell:(BusyTeamSwitchTableViewCell *)cell {}
 - (void)windowLock:(WithCellView *)cell {}
 
 //: - (void)reloadTableViewData {};

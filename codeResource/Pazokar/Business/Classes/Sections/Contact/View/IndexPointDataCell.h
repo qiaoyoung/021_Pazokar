@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFContactDataCell.h"
+//: #import "BusyContactDataCell.h"
 #import "CanebrakeSaveCompartmentView.h"
 
-//: @interface NTESContactDataCell : FFFContactDataCell
+//: @interface NTESContactDataCell : BusyContactDataCell
 @interface IndexPointDataCell : CanebrakeSaveCompartmentView
 
 //: @end

@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitDataProvider.h"
+//: #import "BusyKitDataProvider.h"
 #import "AccountingDataRead.h"
 
-//: @interface FFFKitDataProviderImpl : NSObject<FFFKitDataProvider>
+//: @interface BusyKitDataProviderImpl : NSObject<BusyKitDataProvider>
 @interface SaveNameOff : NSObject<AccountingDataRead>
 
 //: @end

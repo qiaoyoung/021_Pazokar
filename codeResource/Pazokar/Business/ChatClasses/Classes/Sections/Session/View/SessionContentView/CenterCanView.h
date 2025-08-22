@@ -11,13 +11,13 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFSessionMessageContentView.h"
+//: #import "BusySessionMessageContentView.h"
 #import "TextControl.h"
 
 //: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
-//: @interface FFFSessionRtcCallRecordContentView : FFFSessionMessageContentView
+//: @interface BusySessionRtcCallRecordContentView : BusySessionMessageContentView
 @interface CenterCanView : TextControl
 
 //: @property (nonatomic, strong) UILabel *textLabel;

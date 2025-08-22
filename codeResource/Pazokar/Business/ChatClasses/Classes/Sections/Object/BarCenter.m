@@ -9,12 +9,12 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitAudioCenter.h"
+//: #import "BusyKitAudioCenter.h"
 #import "BarCenter.h"
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
 
-//: @interface FFFKitAudioCenter()<NIMMediaManagerDelegate>
+//: @interface BusyKitAudioCenter()<NIMMediaManagerDelegate>
 @interface BarCenter()<NIMMediaManagerDelegate>
 
 //: @property (nonatomic,assign) NSInteger retryCount;
@@ -23,19 +23,19 @@
 //: @end
 @end
 
-//: @implementation FFFKitAudioCenter
+//: @implementation BusyKitAudioCenter
 @implementation BarCenter
 
 //: + (instancetype)instance
 + (instancetype)disable
 {
-    //: static FFFKitAudioCenter *instance;
+    //: static BusyKitAudioCenter *instance;
     static BarCenter *instance;
     //: static dispatch_once_t onceToken;
     static dispatch_once_t onceToken;
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
-        //: instance = [[FFFKitAudioCenter alloc] init];
+        //: instance = [[BusyKitAudioCenter alloc] init];
         instance = [[BarCenter alloc] init];
     //: });
     });

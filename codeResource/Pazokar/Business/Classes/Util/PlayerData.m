@@ -22,10 +22,7 @@ Byte user_redSideSeparateMessage[] = {17, 12, 63, 13, 5, 136, 65, 211, 32, 193, 
 
 // __M_A_C_R_O__
 //: #import "NTESAVNotifier.h"
-#import "PlayerData.h"
-//: #import "NTESGlobalMacro.h"
-#import "NTESGlobalMacro.h"
-
+#import "PlayerData.h" 
 //: @import AudioToolbox;
 @import AudioToolbox;
 

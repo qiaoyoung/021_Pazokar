@@ -12,10 +12,10 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: @class FFFGrowingTextView;
+//: @class BusyGrowingTextView;
 @class TingScrollView;
 
-//: @protocol FFFGrowingTextViewDelegate <NSObject>
+//: @protocol BusyGrowingTextViewDelegate <NSObject>
 @protocol ViewLabel <NSObject>
 //: @optional
 @optional
@@ -29,22 +29,22 @@
 //: - (BOOL)shouldInteractWithTextAttachment:(NSTextAttachment *)textAttachment inRange:(NSRange)range;
 - (BOOL)handle:(NSTextAttachment *)textAttachment pressedSend:(NSRange)range;
 
-//: - (void)textViewDidBeginEditing:(FFFGrowingTextView *)growingTextView;
+//: - (void)textViewDidBeginEditing:(BusyGrowingTextView *)growingTextView;
 - (void)drafts:(TingScrollView *)growingTextView;
 
-//: - (void)textViewDidChangeSelection:(FFFGrowingTextView *)growingTextView;
+//: - (void)textViewDidChangeSelection:(BusyGrowingTextView *)growingTextView;
 - (void)limitManager:(TingScrollView *)growingTextView;
 
-//: - (void)textViewDidEndEditing:(FFFGrowingTextView *)growingTextView;
+//: - (void)textViewDidEndEditing:(BusyGrowingTextView *)growingTextView;
 - (void)batteried:(TingScrollView *)growingTextView;
 
-//: - (BOOL)textViewShouldBeginEditing:(FFFGrowingTextView *)growingTextView;
+//: - (BOOL)textViewShouldBeginEditing:(BusyGrowingTextView *)growingTextView;
 - (BOOL)bringHome:(TingScrollView *)growingTextView;
 
-//: - (BOOL)textViewShouldEndEditing:(FFFGrowingTextView *)growingTextView;
+//: - (BOOL)textViewShouldEndEditing:(BusyGrowingTextView *)growingTextView;
 - (BOOL)alongRecordRestore:(TingScrollView *)growingTextView;
 
-//: - (void)textViewDidChange:(FFFGrowingTextView *)growingTextView;
+//: - (void)textViewDidChange:(BusyGrowingTextView *)growingTextView;
 - (void)valued:(TingScrollView *)growingTextView;
 
 //: - (void)willChangeHeight:(CGFloat)height;
@@ -56,10 +56,10 @@
 //: @end
 @end
 
-//: @interface FFFGrowingTextView : UIScrollView
+//: @interface BusyGrowingTextView : UIScrollView
 @interface TingScrollView : UIScrollView
 
-//: @property (nonatomic,weak) id<FFFGrowingTextViewDelegate> textViewDelegate;
+//: @property (nonatomic,weak) id<BusyGrowingTextViewDelegate> textViewDelegate;
 @property (nonatomic,weak) id<ViewLabel> textViewDelegate;
 
 //: @property (nonatomic,assign) NSInteger minNumberOfLines;
@@ -74,7 +74,7 @@
 //: @end
 @end
 
-//: @interface FFFGrowingTextView(TextView)
+//: @interface BusyGrowingTextView(TextView)
 @interface TingScrollView(TextView)
 
 //: @property (nonatomic,copy) NSAttributedString *placeholderAttributedText;

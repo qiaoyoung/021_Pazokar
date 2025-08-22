@@ -13,18 +13,18 @@
 #import <UIKit/UIKit.h>
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
-//: #import "FFFTeamMemberListDataSource.h"
+//: #import "BusyTeamMemberListDataSource.h"
 #import "RowCenter.h"
-//: #import "FFFTeamListDataManager.h"
+//: #import "BusyTeamListDataManager.h"
 #import "FindBaseballTeamManager.h"
 
 //: @interface CCCTeamMemberListViewController : UIViewController
 @interface VersionViewController : UIViewController
 
-//: @property (nonatomic,strong) FFFTeamListDataManager *teamListManager;
+//: @property (nonatomic,strong) BusyTeamListDataManager *teamListManager;
 @property (nonatomic,strong) FindBaseballTeamManager *teamListManager;
 
-//: - (instancetype)initWithDataSource:(FFFTeamListDataManager *)dataSource;
+//: - (instancetype)initWithDataSource:(BusyTeamListDataManager *)dataSource;
 - (instancetype)initWithOffSource:(FindBaseballTeamManager *)dataSource;
 
 //: @end

@@ -118,10 +118,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFGroupEditTableViewCell.h"
+//: #import "BusyGroupEditTableViewCell.h"
 #import "MaxView.h"
 
-//: @implementation FFFGroupEditTableViewCell
+//: @implementation BusyGroupEditTableViewCell
 @implementation MaxView
 
 //: - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{

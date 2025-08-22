@@ -67,14 +67,14 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFImageContentConfig.h"
+//: #import "BusyImageContentConfig.h"
 #import "MoreConfig.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @implementation FFFImageContentConfig
+//: @implementation BusyImageContentConfig
 @implementation MoreConfig
 //: - (CGSize)contentSize:(CGFloat)cellWidth message:(NIMMessage *)message
 - (CGSize)read:(CGFloat)cellWidth quantity:(NIMMessage *)message
@@ -127,7 +127,7 @@ typedef struct {
 //: - (NSString *)cellContent:(NIMMessage *)message
 - (NSString *)picture:(NIMMessage *)message
 {
-    //: return @"FFFSessionImageContentView";
+    //: return @"BusySessionImageContentView";
     return @"MessageControl";
 }
 

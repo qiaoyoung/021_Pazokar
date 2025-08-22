@@ -443,9 +443,9 @@
 #import "ExplosiveDetectionSystemView.h"
 //: #import "UIView+NTES.h"
 #import "UIView+Date.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 
 //: @interface NTESSystemNotificationCell ()
@@ -615,7 +615,7 @@
         //: [_acceptButton addTarget:self action:@selector(onAcceptBtn) forControlEvents:(UIControlEventTouchUpInside)];
         [_acceptButton addTarget:self action:@selector(topRead) forControlEvents:(UIControlEventTouchUpInside)];
 //        [_acceptButton setTitleColor:[KEKESkinColorManager shareInstance].skinColor forState:(UIControlStateNormal)];
-//        [_acceptButton setBackgroundColor:RGB_COLOR_String(@"#ffffff")];
+//        [_acceptButton setBackgroundColor:RGB_COLOR_String(@"#fffBusy")];
         //: [_acceptButton setImage:[UIImage imageNamed:@"ic_btn_accept"] forState:UIControlStateNormal];
         [_acceptButton setImage:[UIImage imageNamed:[AfterTextData sharedInstance].k_afterId] forState:UIControlStateNormal];
 //        _acceptButton.layer.cornerRadius = 16;
@@ -642,7 +642,7 @@
         //: [_refuseButton addTarget:self action:@selector(onRefusebtn) forControlEvents:(UIControlEventTouchUpInside)];
         [_refuseButton addTarget:self action:@selector(pressedInput) forControlEvents:(UIControlEventTouchUpInside)];
 //        [_refuseButton setTitleColor:kTextColor_2c3042 forState:(UIControlStateNormal)];
-//        [_refuseButton setBackgroundColor:RGB_COLOR_String(@"#ffffff")];
+//        [_refuseButton setBackgroundColor:RGB_COLOR_String(@"#fffBusy")];
         //: [_refuseButton setImage:[UIImage imageNamed:@"ic_btn_disaccept"] forState:UIControlStateNormal];
         [_refuseButton setImage:[UIImage imageNamed:[AfterTextData sharedInstance].user_messageStr] forState:UIControlStateNormal];
 //        _refuseButton.layer.cornerRadius = 16;
@@ -678,25 +678,25 @@
         switch (self.notification.handleStatus) {
             //: case NotificationHandleTypeOk:
             case NotificationHandleTypeOk:
-                //: self.handleInfoLabel.text = [FFFLanguageManager getTextWithKey:@"message_helper_already_ok"];
+                //: self.handleInfoLabel.text = [BusyLanguageManager getTextWithKey:@"message_helper_already_ok"];
                 self.handleInfoLabel.text = [SendName streetSmart:[AfterTextData sharedInstance].showTitleIdent];//@"已同意".nim_localized;
                 //: break;
                 break;
             //: case NotificationHandleTypeNo:
             case NotificationHandleTypeNo:
-                //: self.handleInfoLabel.text = [FFFLanguageManager getTextWithKey:@"message_helper_already_no"];
+                //: self.handleInfoLabel.text = [BusyLanguageManager getTextWithKey:@"message_helper_already_no"];
                 self.handleInfoLabel.text = [SendName streetSmart:[AfterTextData sharedInstance].mLabelValue];//@"已拒绝".nim_localized;
                 //: break;
                 break;
             //: case NotificationHandleTypeOutOfDate:
             case NotificationHandleTypeOutOfDate:
-                //: self.handleInfoLabel.text = [FFFLanguageManager getTextWithKey:@"message_helper_already_time"];
+                //: self.handleInfoLabel.text = [BusyLanguageManager getTextWithKey:@"message_helper_already_time"];
                 self.handleInfoLabel.text = [SendName streetSmart:[AfterTextData sharedInstance].dreamRedText];//@"已过期".nim_localized;
                 //: break;
                 break;
             //: default:
             default:
-                //: self.handleInfoLabel.text = [FFFLanguageManager getTextWithKey:@"is_read"];
+                //: self.handleInfoLabel.text = [BusyLanguageManager getTextWithKey:@"is_read"];
                 self.handleInfoLabel.text = [SendName streetSmart:[AfterTextData sharedInstance].main_readStr];
                 //: break;
                 break;
@@ -708,18 +708,18 @@
     }
 
 
-    //: self.timeLabel.text = [FFFKitUtil showTime:self.notification.timestamp showDetail:YES];
+    //: self.timeLabel.text = [BusyKitUtil showTime:self.notification.timestamp showDetail:YES];
     self.timeLabel.text = [OffMore readShow:self.notification.timestamp voiceOver:YES];
 
     //: NSString *sourceID = self.notification.sourceID;
     NSString *sourceID = self.notification.sourceID;
-    //: FFFKitInfo *sourceMember = [[MyUserKit sharedKit] infoByUser:sourceID option:nil];
+    //: BusyKitInfo *sourceMember = [[MyUserKit sharedKit] infoByUser:sourceID option:nil];
     Info *sourceMember = [[Case pastTop] consumer:sourceID message:nil];
     //: [self updateSourceMember:sourceMember];
     [self along:sourceMember];
 }
 
-//: - (void)updateSourceMember:(FFFKitInfo *)sourceMember{
+//: - (void)updateSourceMember:(BusyKitInfo *)sourceMember{
 - (void)along:(Info *)sourceMember{
 
     //: NIMSystemNotificationType type = self.notification.type;
@@ -743,7 +743,7 @@
         //: case NIMSystemNotificationTypeTeamApply:
         case NIMSystemNotificationTypeTeamApply:
         {
-            //: NSString *message_helper_apply_to_group = [FFFLanguageManager getTextWithKey:@"message_helper_apply_to_group"];
+            //: NSString *message_helper_apply_to_group = [BusyLanguageManager getTextWithKey:@"message_helper_apply_to_group"];
             NSString *message_helper_apply_to_group = [SendName streetSmart:[AfterTextData sharedInstance].mainLetterRangePath];//@"申请加入群".nim_localized
             //: NIMTeam *team = [[NIMSDK sharedSDK].teamManager teamById:self.notification.targetID];
             NIMTeam *team = [[NIMSDK sharedSDK].teamManager teamById:self.notification.targetID];
@@ -755,9 +755,9 @@
         //: case NIMSystemNotificationTypeTeamApplyReject:
         case NIMSystemNotificationTypeTeamApplyReject:
         {
-            //: NSString *contact_fragment_group = [FFFLanguageManager getTextWithKey:@"contact_fragment_group"];
+            //: NSString *contact_fragment_group = [BusyLanguageManager getTextWithKey:@"contact_fragment_group"];
             NSString *contact_fragment_group = [SendName streetSmart:[AfterTextData sharedInstance].main_messageTitle];//@"群".nim_localized
-            //: NSString *message_helper_refuse_you = [FFFLanguageManager getTextWithKey:@"message_helper_refuse_you"];
+            //: NSString *message_helper_refuse_you = [BusyLanguageManager getTextWithKey:@"message_helper_refuse_you"];
             NSString *message_helper_refuse_you = [SendName streetSmart:[AfterTextData sharedInstance].userFrameMessage];//@"拒绝你加入".nim_localized
             //: NIMTeam *team = [[NIMSDK sharedSDK].teamManager teamById:self.notification.targetID];
             NIMTeam *team = [[NIMSDK sharedSDK].teamManager teamById:self.notification.targetID];
@@ -775,9 +775,9 @@
         //: case NIMSystemNotificationTypeTeamInvite:
         case NIMSystemNotificationTypeTeamInvite:
         {
-            //: NSString *contact_fragment_group = [FFFLanguageManager getTextWithKey:@"contact_fragment_group"];
+            //: NSString *contact_fragment_group = [BusyLanguageManager getTextWithKey:@"contact_fragment_group"];
             NSString *contact_fragment_group = [SendName streetSmart:[AfterTextData sharedInstance].main_messageTitle];//@"群".nim_localized
-            //: NSString *invite_you_group = [FFFLanguageManager getTextWithKey:@"invite_you_group"];
+            //: NSString *invite_you_group = [BusyLanguageManager getTextWithKey:@"invite_you_group"];
             NSString *invite_you_group = [SendName streetSmart:[AfterTextData sharedInstance].app_fullText];//@"邀请你加入".nim_localized
             //: NIMTeam *team = [[NIMSDK sharedSDK].teamManager teamById:self.notification.targetID];
             NIMTeam *team = [[NIMSDK sharedSDK].teamManager teamById:self.notification.targetID];
@@ -803,9 +803,9 @@
         //: case NIMSystemNotificationTypeTeamIviteReject:
         case NIMSystemNotificationTypeTeamIviteReject:
         {
-            //: NSString *message_helper_refuse_group = [FFFLanguageManager getTextWithKey:@"message_helper_refuse_group"];
+            //: NSString *message_helper_refuse_group = [BusyLanguageManager getTextWithKey:@"message_helper_refuse_group"];
             NSString *message_helper_refuse_group = [SendName streetSmart:[AfterTextData sharedInstance].show_barPath];
-            //: NSString *message_helper_invite = [FFFLanguageManager getTextWithKey:@"message_helper_invite"];
+            //: NSString *message_helper_invite = [BusyLanguageManager getTextWithKey:@"message_helper_invite"];
             NSString *message_helper_invite = [SendName streetSmart:[AfterTextData sharedInstance].appNamePath];//@"邀请".nim_localized
             //: NIMTeam *team = [[NIMSDK sharedSDK].teamManager teamById:self.notification.targetID];
             NIMTeam *team = [[NIMSDK sharedSDK].teamManager teamById:self.notification.targetID];
@@ -823,7 +823,7 @@
         //: case NIMSystemNotificationTypeSuperTeamApply:
         case NIMSystemNotificationTypeSuperTeamApply:
         {
-            //: NSString *apply_join_supergroup = [FFFLanguageManager getTextWithKey:@"apply_join_supergroup"];
+            //: NSString *apply_join_supergroup = [BusyLanguageManager getTextWithKey:@"apply_join_supergroup"];
             NSString *apply_join_supergroup = [SendName streetSmart:[AfterTextData sharedInstance].main_factorKey];//@"申请加入超大群 %@".nim_localized
             //: NIMTeam *team = [[NIMSDK sharedSDK].superTeamManager teamById:self.notification.targetID];
             NIMTeam *team = [[NIMSDK sharedSDK].superTeamManager teamById:self.notification.targetID];
@@ -835,9 +835,9 @@
         //: case NIMSystemNotificationTypeSuperTeamApplyReject:
         case NIMSystemNotificationTypeSuperTeamApplyReject:
         {
-            //: NSString *large_group = [FFFLanguageManager getTextWithKey:@"large_group"];
+            //: NSString *large_group = [BusyLanguageManager getTextWithKey:@"large_group"];
             NSString *large_group = [SendName streetSmart:[AfterTextData sharedInstance].appChildData];//超大群
-            //: NSString *to_deny_entry = [FFFLanguageManager getTextWithKey:@"to_deny_entry"];
+            //: NSString *to_deny_entry = [BusyLanguageManager getTextWithKey:@"to_deny_entry"];
             NSString *to_deny_entry = [SendName streetSmart:[AfterTextData sharedInstance].dream_modeId];//拒绝你加入
             //: NIMTeam *team = [[NIMSDK sharedSDK].superTeamManager teamById:self.notification.targetID];
             NIMTeam *team = [[NIMSDK sharedSDK].superTeamManager teamById:self.notification.targetID];
@@ -849,9 +849,9 @@
         //: case NIMSystemNotificationTypeSuperTeamInvite:
         case NIMSystemNotificationTypeSuperTeamInvite:
         {
-            //: NSString *large_group = [FFFLanguageManager getTextWithKey:@"large_group"];
+            //: NSString *large_group = [BusyLanguageManager getTextWithKey:@"large_group"];
             NSString *large_group = [SendName streetSmart:[AfterTextData sharedInstance].appChildData];//超大群
-            //: NSString *invite_you_join_us = [FFFLanguageManager getTextWithKey:@"invite_you_join_us"];
+            //: NSString *invite_you_join_us = [BusyLanguageManager getTextWithKey:@"invite_you_join_us"];
             NSString *invite_you_join_us = [SendName streetSmart:[AfterTextData sharedInstance].show_bottomMessageTitle];//邀请你加入
             //: NIMTeam *team = [[NIMSDK sharedSDK].superTeamManager teamById:self.notification.targetID];
             NIMTeam *team = [[NIMSDK sharedSDK].superTeamManager teamById:self.notification.targetID];
@@ -863,7 +863,7 @@
         //: case NIMSystemNotificationTypeSuperTeamIviteReject:
         case NIMSystemNotificationTypeSuperTeamIviteReject:
         {
-            //: NSString *rejected_group_invitation = [FFFLanguageManager getTextWithKey:@"rejected_group_invitation"];
+            //: NSString *rejected_group_invitation = [BusyLanguageManager getTextWithKey:@"rejected_group_invitation"];
             NSString *rejected_group_invitation = [SendName streetSmart:[AfterTextData sharedInstance].notiWithPath];
             //: NIMTeam *team = [[NIMSDK sharedSDK].superTeamManager teamById:self.notification.targetID];
             NIMTeam *team = [[NIMSDK sharedSDK].superTeamManager teamById:self.notification.targetID];
@@ -890,25 +890,25 @@
                 switch (operation) {
                     //: case NIMUserOperationAdd:
                     case NIMUserOperationAdd:
-                        //: text = [FFFLanguageManager getTextWithKey:@"message_helper_already_add"];
+                        //: text = [BusyLanguageManager getTextWithKey:@"message_helper_already_add"];
                         text = [SendName streetSmart:[AfterTextData sharedInstance].mToolRecordForName];//@"已添加你为好友".nim_localized;
                         //: break;
                         break;
                     //: case NIMUserOperationRequest:
                     case NIMUserOperationRequest:
-                        //: text = [FFFLanguageManager getTextWithKey:@"request_add_you_as_a_friend"];
+                        //: text = [BusyLanguageManager getTextWithKey:@"request_add_you_as_a_friend"];
                         text = [SendName streetSmart:[AfterTextData sharedInstance].kCenterUrl];//@"请求添加你为好友".nim_localized;
                         //: break;
                         break;
                     //: case NIMUserOperationVerify:
                     case NIMUserOperationVerify:
-                        //: text = [FFFLanguageManager getTextWithKey:@"message_helper_allow_you_apply"];
+                        //: text = [BusyLanguageManager getTextWithKey:@"message_helper_allow_you_apply"];
                         text = [SendName streetSmart:[AfterTextData sharedInstance].user_lineFrameText];//@"通过了你的好友请求".nim_localized;
                         //: break;
                         break;
                     //: case NIMUserOperationReject:
                     case NIMUserOperationReject:
-                        //: text = [FFFLanguageManager getTextWithKey:@"message_helper_refuse_you_apply"];
+                        //: text = [BusyLanguageManager getTextWithKey:@"message_helper_refuse_you_apply"];
                         text = [SendName streetSmart:[AfterTextData sharedInstance].kFromIdent];//@"拒绝了你的好友请求".nim_localized;
                         //: break;
                         break;

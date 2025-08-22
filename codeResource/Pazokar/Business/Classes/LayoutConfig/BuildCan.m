@@ -82,8 +82,8 @@ typedef struct {
 #import "BuildCan.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 
 //: @interface NTESChatroomTextContentConfig()
 @interface BuildCan()

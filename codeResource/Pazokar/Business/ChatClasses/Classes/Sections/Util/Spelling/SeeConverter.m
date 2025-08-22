@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFPinyinConverter.h"
+//: #import "BusyPinyinConverter.h"
 #import "SeeConverter.h"
 
-//: @interface FFFPinyinConverter ()
+//: @interface BusyPinyinConverter ()
 @interface SeeConverter ()
 {
     //: int *_codeIndex;
@@ -25,18 +25,18 @@
 //: @end
 @end
 
-//: @implementation FFFPinyinConverter
+//: @implementation BusyPinyinConverter
 @implementation SeeConverter
-//: + (FFFPinyinConverter *)sharedInstance
+//: + (BusyPinyinConverter *)sharedInstance
 + (SeeConverter *)remove
 {
-    //: static FFFPinyinConverter *instance = nil;
+    //: static BusyPinyinConverter *instance = nil;
     static SeeConverter *instance = nil;
     //: static dispatch_once_t onceToken;
     static dispatch_once_t onceToken;
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
-        //: instance = [[FFFPinyinConverter alloc] init];
+        //: instance = [[BusyPinyinConverter alloc] init];
         instance = [[SeeConverter alloc] init];
     //: });
     });

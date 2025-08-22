@@ -179,39 +179,39 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFContactSelectViewController.h"
+//: #import "BusyContactSelectViewController.h"
 #import "BrandViewController.h"
-//: #import "FFFContactSelectTabView.h"
+//: #import "BusyContactSelectTabView.h"
 #import "AggregationView.h"
-//: #import "FFFContactPickedView.h"
+//: #import "BusyContactPickedView.h"
 #import "LengthView.h"
-//: #import "FFFGroupedUsrInfo.h"
-#import "FFFGroupedUsrInfo.h"
+//: #import "BusyGroupedUsrInfo.h"
+#import "BusyGroupedUsrInfo.h"
 //: #import "UserGroupedData.h"
 #import "DiscoverIndex.h"
-//: #import "FFFContactDataCell.h"
+//: #import "BusyContactDataCell.h"
 #import "CanebrakeSaveCompartmentView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
-//: #import "FFFSetGroupNameView.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
+//: #import "BusySetGroupNameView.h"
 #import "DeviceRestView.h"
-//: #import "FFFGroupAvatarViewController.h"
+//: #import "BusyGroupAvatarViewController.h"
 #import "RubyViewController.h"
 
-//: @interface FFFContactSelectViewController ()<UITableViewDataSource, UITableViewDelegate, FFFContactPickedViewDelegate>{
+//: @interface BusyContactSelectViewController ()<UITableViewDataSource, UITableViewDelegate, BusyContactPickedViewDelegate>{
 @interface BrandViewController ()<UITableViewDataSource, UITableViewDelegate, ReadDelegate>{
     //: NSMutableArray *_selectecContacts;
     NSMutableArray *_selectecContacts;
 }
 //: @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) UITableView *tableView;
-//: @property(nonatomic, strong) FFFSetGroupNameView *setGroupnameView;
+//: @property(nonatomic, strong) BusySetGroupNameView *setGroupnameView;
 @property(nonatomic, strong) DeviceRestView *setGroupnameView;
 //: @property(nonatomic, strong) UIView *headerview;
 @property(nonatomic, strong) UIView *headerview;
@@ -222,7 +222,7 @@
 //: @property(nonatomic, strong) UIImage *headPortrait;
 @property(nonatomic, strong) UIImage *headPortrait;
 
-//: @property (strong, nonatomic) FFFContactSelectTabView *selectIndicatorView;
+//: @property (strong, nonatomic) BusyContactSelectTabView *selectIndicatorView;
 @property (strong, nonatomic) AggregationView *selectIndicatorView;
 
 //: @property (nonatomic, assign) NSInteger maxSelectCount;
@@ -239,7 +239,7 @@
 //: @end
 @end
 
-//: @implementation FFFContactSelectViewController
+//: @implementation BusyContactSelectViewController
 @implementation BrandViewController
 
 //: - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -256,7 +256,7 @@
     return self;
 }
 
-//: - (instancetype)initWithConfig:(id<FFFContactSelectConfig>) config{
+//: - (instancetype)initWithConfig:(id<BusyContactSelectConfig>) config{
 - (instancetype)initWithMax:(id<NameConfig>) config{
     //: self = [self initWithNibName:nil bundle:nil];
     self = [self initWithNibName:nil bundle:nil];
@@ -355,7 +355,7 @@
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"select_contact"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"select_contact"];
     labtitle.text = [SendName streetSmart:[BoarTopicData showValueImageMsg]];
     //: [bgView addSubview:labtitle];
     [bgView addSubview:labtitle];
@@ -477,7 +477,7 @@
     [vc presentViewController:[[UINavigationController alloc] initWithRootViewController:self] animated:YES completion:nil];
 }
 
-//: - (void)setConfig:(id<FFFContactSelectConfig>)config{
+//: - (void)setConfig:(id<BusyContactSelectConfig>)config{
 - (void)setConfig:(id<NameConfig>)config{
     //: _config = config;
     _config = config;
@@ -519,7 +519,7 @@
 
     //: if (_selectecContacts.count == 0) {
     if (_selectecContacts.count == 0) {
-        //: [SVProgressHUD showMessage:[FFFLanguageManager getTextWithKey:@"main_activity_choose_least_one"]];
+        //: [SVProgressHUD showMessage:[BusyLanguageManager getTextWithKey:@"main_activity_choose_least_one"]];
         [SVProgressHUD stormCenter:[SendName streetSmart:[BoarTopicData notiSeedNameData]]];
         //: return;
         return;
@@ -527,7 +527,7 @@
 
 
     //: if (self.config.showSelectHeaderview) {
-    if (self.config.checkion) {
+    if (self.config.showSelectHeaderview) {
 
         //: [self.view addSubview:self.setGroupnameView];
         [self.view addSubview:self.setGroupnameView];
@@ -549,7 +549,7 @@
                         [self.delegate fillInSearch:_selectecContacts];
                     }
 
-                    //: FFFGroupAvatarViewController *vc = [[FFFGroupAvatarViewController alloc]init];
+                    //: BusyGroupAvatarViewController *vc = [[BusyGroupAvatarViewController alloc]init];
                     RubyViewController *vc = [[RubyViewController alloc]init];
                     //: vc.groupName = groupName;
                     vc.groupName = groupName;
@@ -673,7 +673,7 @@
     _selectecContacts = _selectecContacts.count ? _selectecContacts : [NSMutableArray array];
     //: for (NSString *selectId in _selectecContacts) {
     for (NSString *selectId in _selectecContacts) {
-        //: FFFKitInfo *info;
+        //: BusyKitInfo *info;
         Info *info;
         //: info = [self.config getInfoById:selectId];
         info = [self.config tingNeed:selectId];
@@ -712,11 +712,11 @@
     //: id<NIMGroupMemberProtocol> contactItem = arr[indexPath.row];
     id<DatePraise> contactItem = arr[indexPath.row];
 
-    //: FFFContactDataCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SelectContactCellID"];
+    //: BusyContactDataCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SelectContactCellID"];
     CanebrakeSaveCompartmentView *cell = [tableView dequeueReusableCellWithIdentifier:[BoarTopicData notiBarData]];
     //: if (cell == nil) {
     if (cell == nil) {
-        //: cell = [[FFFContactDataCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SelectContactCellID"];
+        //: cell = [[BusyContactDataCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SelectContactCellID"];
         cell = [[CanebrakeSaveCompartmentView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[BoarTopicData notiBarData]];
     }
     //: cell.accessoryBtn.hidden = NO;
@@ -756,9 +756,9 @@
 
     //: NSString *memberId = [(id<NIMGroupMemberProtocol>)member memberId];
     NSString *memberId = [(id<DatePraise>)member conference];
-    //: FFFContactDataCell *cell = (FFFContactDataCell *)[tableView cellForRowAtIndexPath:indexPath];
+    //: BusyContactDataCell *cell = (BusyContactDataCell *)[tableView cellForRowAtIndexPath:indexPath];
     CanebrakeSaveCompartmentView *cell = (CanebrakeSaveCompartmentView *)[tableView cellForRowAtIndexPath:indexPath];
-    //: FFFKitInfo *info;
+    //: BusyKitInfo *info;
     Info *info;
     //: info = [self.config getInfoById:memberId];
     info = [self.config tingNeed:memberId];
@@ -812,7 +812,7 @@
 //: #pragma mark - Private
 #pragma mark - Private
 
-//: - (FFFContactSelectTabView *)selectIndicatorView{
+//: - (BusyContactSelectTabView *)selectIndicatorView{
 - (AggregationView *)selectIndicatorView{
     //: if (_selectIndicatorView) {
     if (_selectIndicatorView) {
@@ -820,7 +820,7 @@
         return _selectIndicatorView;
     }
 
-    //: _selectIndicatorView = [[FFFContactSelectTabView alloc] initWithFrame:CGRectMake(0, (44.0f + [UIDevice vg_statusBarHeight]), [[UIScreen mainScreen] bounds].size.width, 64)];
+    //: _selectIndicatorView = [[BusyContactSelectTabView alloc] initWithFrame:CGRectMake(0, (44.0f + [UIDevice vg_statusBarHeight]), [[UIScreen mainScreen] bounds].size.width, 64)];
     _selectIndicatorView = [[AggregationView alloc] initWithFrame:CGRectMake(0, (44.0f + [UIDevice statusOrLevel]), [[UIScreen mainScreen] bounds].size.width, 64)];
     //: _selectIndicatorView.doneButton.hidden = YES;
     _selectIndicatorView.doneButton.hidden = YES;
@@ -828,11 +828,11 @@
     return _selectIndicatorView;
 }
 
-//: - (FFFSetGroupNameView *)setGroupnameView{
+//: - (BusySetGroupNameView *)setGroupnameView{
 - (DeviceRestView *)setGroupnameView{
     //: if(!_setGroupnameView){
     if(!_setGroupnameView){
-        //: _setGroupnameView = [[FFFSetGroupNameView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+        //: _setGroupnameView = [[BusySetGroupNameView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
         _setGroupnameView = [[DeviceRestView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
     }
     //: return _setGroupnameView;

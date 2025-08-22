@@ -446,7 +446,7 @@
     //: if (self.link == nil) {
     if (self.link == nil) {
         //: self.link = [CADisplayLink displayLinkWithTarget:[SGWeakProxy weakProxyWithTarget:self] selector:@selector(updateUI)];
-        self.link = [CADisplayLink displayLinkWithTarget:[BubbleProxy with:self] selector:@selector(updateUI)];
+        self.link = [CADisplayLink displayLinkWithTarget:[BubbleProxy with:self] selector:@selector(tableText)];
         //: [self.link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
         [self.link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
     }

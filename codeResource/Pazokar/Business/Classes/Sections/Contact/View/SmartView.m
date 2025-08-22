@@ -11,7 +11,7 @@
 // __M_A_C_R_O__
 //: #import "NTESUserListCell.h"
 #import "SmartView.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 //: #import "UIView+NTES.h"
 #import "UIView+Date.h"
@@ -41,7 +41,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     //: if (self) {
     if (self) {
-        //: _avatarImageView = [[FFFAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+        //: _avatarImageView = [[BusyAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
         _avatarImageView = [[CustomFormatView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
         //: [_avatarImageView addTarget:self action:@selector(onTouchAvatar:) forControlEvents:UIControlEventTouchUpInside];
         [_avatarImageView addTarget:self action:@selector(neighborhoodsing:) forControlEvents:UIControlEventTouchUpInside];

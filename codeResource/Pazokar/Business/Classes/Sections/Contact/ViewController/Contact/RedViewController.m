@@ -210,7 +210,7 @@
 #import "UIView+Toast.h"
 //: #import "UIView+NTES.h"
 #import "UIView+Date.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 //: #import "NTESSessionViewController.h"
 #import "TopViewController.h"
@@ -569,7 +569,7 @@
 
 //: - (NSMutableAttributedString *)showNameWithUser:(NIMUser *)user {
 - (NSMutableAttributedString *)recording:(NIMUser *)user {
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:user.userId option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:user.userId option:nil];
     Info *info = [[Case pastTop] consumer:user.userId message:nil];
     //: NSMutableAttributedString *ret = [[NSMutableAttributedString alloc] init];
     NSMutableAttributedString *ret = [[NSMutableAttributedString alloc] init];

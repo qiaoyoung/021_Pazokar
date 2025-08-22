@@ -111,24 +111,24 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTextView.h"
+//: #import "BusyTextView.h"
 #import "FormatNameView.h"
-//: #import "FFFBubbleMenuView.h"
+//: #import "BusyBubbleMenuView.h"
 #import "ButtonPointView.h"
-//: #import "FFFBubbleButtonModel.h"
+//: #import "BusyBubbleButtonModel.h"
 #import "ModelContent.h"
 //: #import "AppDelegate.h"
 #import "AppDelegate.h"
-//: #import "FFFMediaItem.h"
+//: #import "BusyMediaItem.h"
 #import "ModelMessage.h"
 
-//: @interface FFFTextView()<UITextViewDelegate, UITextInputDelegate>
+//: @interface BusyTextView()<UITextViewDelegate, UITextInputDelegate>
 @interface FormatNameView()<UITextViewDelegate, UITextInputDelegate>
 
 //: @end
 @end
 
-//: @implementation FFFTextView
+//: @implementation BusyTextView
 @implementation FormatNameView
 
 //: - (id)initWithFrame:(CGRect)frame {
@@ -209,7 +209,7 @@ typedef struct {
     //: CGRect cursorStartRectToWindow = [self convertRect:startRect toView:((AppDelegate*)([UIApplication sharedApplication].delegate)).window];
     CGRect cursorStartRectToWindow = [self convertRect:startRect toView:((AppDelegate*)([UIApplication sharedApplication].delegate)).window];
 
-    //: [[FFFBubbleMenuView shareMenuView] showViewWithButtonModels:self.selectedAllRangeButtons cursorStartRect:cursorStartRectToWindow selectionTextRectInWindow:tempRect selectBlock:^(FFFMediaItem *item) {
+    //: [[BusyBubbleMenuView shareMenuView] showViewWithButtonModels:self.selectedAllRangeButtons cursorStartRect:cursorStartRectToWindow selectionTextRectInWindow:tempRect selectBlock:^(BusyMediaItem *item) {
     [[ButtonPointView line] info:self.selectedAllRangeButtons praiseRect:cursorStartRectToWindow streetSmartMode:tempRect title:^(ModelMessage *item) {
 
         //: !_selectBlock ? : _selectBlock(item);
@@ -217,7 +217,7 @@ typedef struct {
 
         //: [self hideTextSelection];
         [self anyHideShould];
-        //: [FFFBubbleMenuView.shareMenuView removeFromSuperview];
+        //: [BusyBubbleMenuView.shareMenuView removeFromSuperview];
         [ButtonPointView.line removeFromSuperview];
 
     //: } praiseBlock:^(NSInteger tag) {
@@ -227,7 +227,7 @@ typedef struct {
 
         //: [self hideTextSelection];
         [self anyHideShould];
-        //: [FFFBubbleMenuView.shareMenuView removeFromSuperview];
+        //: [BusyBubbleMenuView.shareMenuView removeFromSuperview];
         [ButtonPointView.line removeFromSuperview];
     //: }];
     }];
@@ -244,7 +244,7 @@ typedef struct {
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     //: [self hideTextSelection];
     [self anyHideShould];
-    //: [FFFBubbleMenuView.shareMenuView removeFromSuperview];
+    //: [BusyBubbleMenuView.shareMenuView removeFromSuperview];
     [ButtonPointView.line removeFromSuperview];
     //: [super touchesEnded:touches withEvent:event];
     [super touchesEnded:touches withEvent:event];
@@ -391,10 +391,10 @@ typedef struct {
         //: items = [self.config menuItemsWithMessage:message];
         items = [self.config shouldMaxSession:message];
     }
-    //: [items enumerateObjectsUsingBlock:^(FFFMediaItem *item, NSUInteger idx, BOOL *stop) {
+    //: [items enumerateObjectsUsingBlock:^(BusyMediaItem *item, NSUInteger idx, BOOL *stop) {
     [items enumerateObjectsUsingBlock:^(ModelMessage *item, NSUInteger idx, BOOL *stop) {
 
-        //: FFFBubbleButtonModel *model = [[FFFBubbleButtonModel alloc] init];
+        //: BusyBubbleButtonModel *model = [[BusyBubbleButtonModel alloc] init];
         ModelContent *model = [[ModelContent alloc] init];
         //: model.normalImage = item.normalImage;
         model.normalImage = item.normalImage;
@@ -407,7 +407,7 @@ typedef struct {
         [selectedAllRangeButtons addObject:model];
 
         //: if (item.selctor == @selector(onTapMenuItemCopy:)) {
-        if (item.selctor == @selector(withDomain:)) {
+        if (item.selctor == @selector(onTapMenuItemCopy:)) {
             //: [selectedPartRangeButtons addObject:model];
             [selectedPartRangeButtons addObject:model];
         }
@@ -431,17 +431,17 @@ typedef struct {
     NSMutableArray *selectedPartRangeButtons = [NSMutableArray array];
 
 
-    //: FFFMediaItem *copy = [FFFMediaItem item:@"onTapMenuItemCopy:"
+    //: BusyMediaItem *copy = [BusyMediaItem item:@"onTapMenuItemCopy:"
     ModelMessage *copy = [ModelMessage canSearched:[ConstraintData sharedInstance].noti_totallyTitle
                                 //: normalImage:[UIImage imageNamed:@"menu_copy"]
                                 drop:[UIImage imageNamed:[ConstraintData sharedInstance].user_nowhereFormationName]
                               //: selectedImage:nil
                               statuteTitle:nil
-                                      //: title:[FFFLanguageManager getTextWithKey:@"复制"]];
+                                      //: title:[BusyLanguageManager getTextWithKey:@"复制"]];
                                       text:[SendName streetSmart:@"复制"]];
 
 
-    //: FFFBubbleButtonModel *model = [[FFFBubbleButtonModel alloc] init];
+    //: BusyBubbleButtonModel *model = [[BusyBubbleButtonModel alloc] init];
     ModelContent *model = [[ModelContent alloc] init];
     //: model.normalImage = copy.normalImage;
     model.normalImage = copy.normalImage;

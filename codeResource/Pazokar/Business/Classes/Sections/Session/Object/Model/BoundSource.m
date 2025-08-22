@@ -92,7 +92,7 @@
 #import "WithNameSerialization.h"
 //: #import "NTESMessageModel.h"
 #import "TheoreticalAccountMessageModel.h"
-//: #import "FFFTimestampModel.h"
+//: #import "BusyTimestampModel.h"
 #import "AppRow.h"
 //: #import "NTESMultiRetweetAttachment.h"
 #import "ModelText.h"
@@ -267,9 +267,9 @@
     return model;
 }
 
-//: - (FFFTimestampModel *)setupTimeModel:(NSTimeInterval)timestamp {
+//: - (BusyTimestampModel *)setupTimeModel:(NSTimeInterval)timestamp {
 - (AppRow *)possibility:(NSTimeInterval)timestamp {
-    //: FFFTimestampModel *ret = [[FFFTimestampModel alloc] init];
+    //: BusyTimestampModel *ret = [[BusyTimestampModel alloc] init];
     AppRow *ret = [[AppRow alloc] init];
     //: ret.messageTime = timestamp;
     ret.messageTime = timestamp;
@@ -292,7 +292,7 @@
         if (idx == 0) { //插入时间
             //: weakSelf.currentDay = [weakSelf getDay:obj.timestamp];
             weakSelf.currentDay = [weakSelf mismanage:obj.timestamp];
-            //: FFFTimestampModel *timeModel = [weakSelf setupTimeModel:obj.timestamp];
+            //: BusyTimestampModel *timeModel = [weakSelf setupTimeModel:obj.timestamp];
             AppRow *timeModel = [weakSelf possibility:obj.timestamp];
             //: [items addObject:timeModel];
             [items addObject:timeModel];
@@ -314,7 +314,7 @@
                 model.hiddenSeparatorLine = YES;
             }
 
-            //: FFFTimestampModel *timeModel = [weakSelf setupTimeModel:obj.timestamp];
+            //: BusyTimestampModel *timeModel = [weakSelf setupTimeModel:obj.timestamp];
             AppRow *timeModel = [weakSelf possibility:obj.timestamp];
             //: [items addObject:timeModel];
             [items addObject:timeModel];
@@ -381,9 +381,9 @@
             //: message = item;
             message = item;
         }
-        //: if ([item isKindOfClass:[FFFMessageModel class]]) {
+        //: if ([item isKindOfClass:[BusyMessageModel class]]) {
         if ([item isKindOfClass:[MoreModel class]]) {
-            //: message = [(FFFMessageModel *)item message];
+            //: message = [(BusyMessageModel *)item message];
             message = [(MoreModel *)item message];
         }
         //: if (message && !message.isOutgoingMsg

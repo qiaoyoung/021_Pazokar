@@ -9,22 +9,22 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFRtcCallRecordContentConfig.h"
+//: #import "BusyRtcCallRecordContentConfig.h"
 #import "LabelItemBuild.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 
-//: @implementation FFFRtcCallRecordContentConfig
+//: @implementation BusyRtcCallRecordContentConfig
 @implementation LabelItemBuild
 
 //: - (CGSize)contentSize:(CGFloat)cellWidth message:(NIMMessage *)message
 - (CGSize)read:(CGFloat)cellWidth quantity:(NIMMessage *)message
 {
-    //: NSString *text = [FFFKitUtil messageTipContent:message];
+    //: NSString *text = [BusyKitUtil messageTipContent:message];
     NSString *text = [OffMore impanel:message];
     //: UIFont *font = [[MyUserKit sharedKit].config setting:message].font;;
     UIFont *font = [[Case pastTop].config tool:message].font;;
@@ -48,7 +48,7 @@
 //: - (NSString *)cellContent:(NIMMessage *)message
 - (NSString *)picture:(NIMMessage *)message
 {
-    //: return @"FFFSessionRtcCallRecordContentView";
+    //: return @"BusySessionRtcCallRecordContentView";
     return @"CenterCanView";
 }
 

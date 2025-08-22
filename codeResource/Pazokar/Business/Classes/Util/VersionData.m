@@ -106,7 +106,7 @@
 #import "VersionData.h"
 //: #import <sys/stat.h>
 #import <sys/stat.h>
-//: #import "FFFConfig.h"
+//: #import "BusyConfig.h"
 #import "IndexTag.h"
 
 //: @interface NTESFileLocationHelper ()
@@ -151,7 +151,7 @@
     static dispatch_once_t onceToken;
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
-        //: NSString *appKey = [[FFFConfig sharedConfig] appKey];
+        //: NSString *appKey = [[BusyConfig sharedConfig] appKey];
         NSString *appKey = [[IndexTag ambit] appKey];
         //: NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

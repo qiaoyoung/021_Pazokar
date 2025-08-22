@@ -15,7 +15,7 @@
 //: @interface NTESContactDataMember : NSObject
 @interface TextMember : NSObject
 
-//: @property (nonatomic,strong) FFFKitInfo *info;
+//: @property (nonatomic,strong) BusyKitInfo *info;
 @property (nonatomic,strong) Info *info;
 
 //: @end

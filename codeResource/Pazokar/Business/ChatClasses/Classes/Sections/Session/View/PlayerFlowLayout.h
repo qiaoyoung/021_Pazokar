@@ -31,7 +31,7 @@
 
 
 
-//: @interface FFFCollectionViewLeftAlignedLayout : UICollectionViewFlowLayout
+//: @interface BusyCollectionViewLeftAlignedLayout : UICollectionViewFlowLayout
 @interface PlayerFlowLayout : UICollectionViewFlowLayout
 
 //: @end

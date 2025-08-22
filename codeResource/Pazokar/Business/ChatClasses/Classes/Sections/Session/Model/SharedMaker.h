@@ -17,7 +17,7 @@
 //: @class MyUserKitLocationPoint;
 @class MyUserKitLocationPoint;
 
-//: @interface FFFMessageMaker : NSObject
+//: @interface BusyMessageMaker : NSObject
 @interface SharedMaker : NSObject
 
 //: + (NIMMessage*)msgWithText:(NSString *)text;

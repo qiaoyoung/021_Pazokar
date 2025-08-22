@@ -145,7 +145,7 @@
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)model{
+//: - (void)refresh:(BusyMessageModel *)model{
 - (void)messagePress:(MoreModel *)model{
     //: [super refresh:model];
     [super messagePress:model];
@@ -214,7 +214,7 @@
 {
     //: if ([self.delegate respondsToSelector:@selector(onCatchEvent:)]) {
     if ([self.delegate respondsToSelector:@selector(memberEvent:)]) {
-        //: FFFKitEvent *event = [[FFFKitEvent alloc] init];
+        //: BusyKitEvent *event = [[BusyKitEvent alloc] init];
         DirectionEvent *event = [[DirectionEvent alloc] init];
         //: event.eventName = NTESShowRedPacketDetailEvent;
         event.eventName = m_infoTitle;

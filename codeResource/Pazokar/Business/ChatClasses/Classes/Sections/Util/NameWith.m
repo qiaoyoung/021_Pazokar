@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitTimerHolder.h"
+//: #import "BusyKitTimerHolder.h"
 #import "NameWith.h"
 
-//: @interface FFFKitTimerHolder ()
+//: @interface BusyKitTimerHolder ()
 @interface NameWith ()
 {
     //: NSTimer *_timer;
@@ -25,7 +25,7 @@
 //: @end
 @end
 
-//: @implementation FFFKitTimerHolder
+//: @implementation BusyKitTimerHolder
 @implementation NameWith
 
 //: - (void)dealloc
@@ -37,7 +37,7 @@
 
 //: - (void)startTimer: (NSTimeInterval)seconds
 - (void)icon: (NSTimeInterval)seconds
-          //: delegate: (id<FFFKitTimerHolderDelegate>)delegate
+          //: delegate: (id<BusyKitTimerHolderDelegate>)delegate
           size: (id<ChildRefresh>)delegate
            //: repeats: (BOOL)repeats
            title: (BOOL)repeats

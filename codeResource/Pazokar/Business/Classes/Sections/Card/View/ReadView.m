@@ -104,7 +104,7 @@ Byte showLetterMsg[] = {47, 15, 62, 7, 113, 188, 200, 176, 163, 174, 173, 176, 1
         //: [self initUI];
         [self initInput];
 
-        //: self.selectButtons = @[[FFFLanguageManager getTextWithKey:@"report_reasons1"],[FFFLanguageManager getTextWithKey:@"report_reasons2"],[FFFLanguageManager getTextWithKey:@"report_reasons3"],[FFFLanguageManager getTextWithKey:@"report_reasons4"],[FFFLanguageManager getTextWithKey:@"report_reasons5"],[FFFLanguageManager getTextWithKey:@"report_reasons6"]];
+        //: self.selectButtons = @[[BusyLanguageManager getTextWithKey:@"report_reasons1"],[BusyLanguageManager getTextWithKey:@"report_reasons2"],[BusyLanguageManager getTextWithKey:@"report_reasons3"],[BusyLanguageManager getTextWithKey:@"report_reasons4"],[BusyLanguageManager getTextWithKey:@"report_reasons5"],[BusyLanguageManager getTextWithKey:@"report_reasons6"]];
         self.selectButtons = @[[SendName streetSmart:StringFromRemoveShowData(showEnableStr)],[SendName streetSmart:StringFromRemoveShowData(dream_listFormat)],[SendName streetSmart:StringFromRemoveShowData(showLetterMsg)],[SendName streetSmart:StringFromRemoveShowData(m_titleId)],[SendName streetSmart:StringFromRemoveShowData(dreamLabelViewMakeFormat)],[SendName streetSmart:StringFromRemoveShowData(showRecordName)]];
         //: self.index = 0;
         self.index = 0;
@@ -139,7 +139,7 @@ Byte showLetterMsg[] = {47, 15, 62, 7, 113, 188, 200, 176, 163, 174, 173, 176, 1
     labsub.textColor = [UIColor status:StringFromRemoveShowData(mainOptionMakeUrl)];
     //: labsub.numberOfLines = 0;
     labsub.numberOfLines = 0;
-    //: labsub.text = [FFFLanguageManager getTextWithKey:@"report_Tip"];
+    //: labsub.text = [BusyLanguageManager getTextWithKey:@"report_Tip"];
     labsub.text = [SendName streetSmart:StringFromRemoveShowData(app_controlTitle)];
     //: [_box addSubview:labsub];
     [_box addSubview:labsub];
@@ -185,7 +185,7 @@ Byte showLetterMsg[] = {47, 15, 62, 7, 113, 188, 200, 176, 163, 174, 173, 176, 1
 //        _titleLabel.textAlignment = NSTextAlignmentCenter;
 //        _titleLabel.numberOfLines = 0;
 //        _titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-        //: _titleLabel.text = [FFFLanguageManager getTextWithKey:@"report_User"];
+        //: _titleLabel.text = [BusyLanguageManager getTextWithKey:@"report_User"];
         _titleLabel.text = [SendName streetSmart:StringFromRemoveShowData(mSourceFormat)];
     }
     //: return _titleLabel;
@@ -222,7 +222,7 @@ Byte showLetterMsg[] = {47, 15, 62, 7, 113, 188, 200, 176, 163, 174, 173, 176, 1
         [Btn1 setImage:[UIImage imageNamed:StringFromRemoveShowData(notiContentTitle)] forState:UIControlStateNormal];
         //: [Btn1 setImage:[UIImage imageNamed:@"icon_accessory_selected"] forState:UIControlStateSelected];
         [Btn1 setImage:[UIImage imageNamed:StringFromRemoveShowData(kInputViewUrl)] forState:UIControlStateSelected];
-        //: [Btn1 setTitle:[FFFLanguageManager getTextWithKey:@"report_reasons1"] forState:UIControlStateNormal];
+        //: [Btn1 setTitle:[BusyLanguageManager getTextWithKey:@"report_reasons1"] forState:UIControlStateNormal];
         [Btn1 setTitle:[SendName streetSmart:StringFromRemoveShowData(showEnableStr)] forState:UIControlStateNormal];
         //: Btn1.titleLabel.font = [UIFont systemFontOfSize:14];
         Btn1.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -249,7 +249,7 @@ Byte showLetterMsg[] = {47, 15, 62, 7, 113, 188, 200, 176, 163, 174, 173, 176, 1
         [Btn2 setImage:[UIImage imageNamed:StringFromRemoveShowData(notiContentTitle)] forState:UIControlStateNormal];
         //: [Btn2 setImage:[UIImage imageNamed:@"icon_accessory_selected"] forState:UIControlStateSelected];
         [Btn2 setImage:[UIImage imageNamed:StringFromRemoveShowData(kInputViewUrl)] forState:UIControlStateSelected];
-        //: [Btn2 setTitle:[FFFLanguageManager getTextWithKey:@"report_reasons2"] forState:UIControlStateNormal];
+        //: [Btn2 setTitle:[BusyLanguageManager getTextWithKey:@"report_reasons2"] forState:UIControlStateNormal];
         [Btn2 setTitle:[SendName streetSmart:StringFromRemoveShowData(dream_listFormat)] forState:UIControlStateNormal];
         //: Btn2.titleLabel.font = [UIFont systemFontOfSize:14];
         Btn2.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -277,7 +277,7 @@ Byte showLetterMsg[] = {47, 15, 62, 7, 113, 188, 200, 176, 163, 174, 173, 176, 1
         [Btn3 setImage:[UIImage imageNamed:StringFromRemoveShowData(kInputViewUrl)] forState:UIControlStateSelected];
         //: [_buttonBox addSubview:Btn3];
         [_buttonBox addSubview:Btn3];
-        //: [Btn3 setTitle:[FFFLanguageManager getTextWithKey:@"report_reasons3"] forState:UIControlStateNormal];
+        //: [Btn3 setTitle:[BusyLanguageManager getTextWithKey:@"report_reasons3"] forState:UIControlStateNormal];
         [Btn3 setTitle:[SendName streetSmart:StringFromRemoveShowData(showLetterMsg)] forState:UIControlStateNormal];
         //: Btn3.titleLabel.font = [UIFont systemFontOfSize:14];
         Btn3.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -303,7 +303,7 @@ Byte showLetterMsg[] = {47, 15, 62, 7, 113, 188, 200, 176, 163, 174, 173, 176, 1
         [Btn4 setImage:[UIImage imageNamed:StringFromRemoveShowData(kInputViewUrl)] forState:UIControlStateSelected];
         //: [_buttonBox addSubview:Btn4];
         [_buttonBox addSubview:Btn4];
-        //: [Btn4 setTitle:[FFFLanguageManager getTextWithKey:@"report_reasons4"] forState:UIControlStateNormal];
+        //: [Btn4 setTitle:[BusyLanguageManager getTextWithKey:@"report_reasons4"] forState:UIControlStateNormal];
         [Btn4 setTitle:[SendName streetSmart:StringFromRemoveShowData(m_titleId)] forState:UIControlStateNormal];
         //: Btn4.titleLabel.font = [UIFont systemFontOfSize:14];
         Btn4.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -329,7 +329,7 @@ Byte showLetterMsg[] = {47, 15, 62, 7, 113, 188, 200, 176, 163, 174, 173, 176, 1
         [Btn5 setImage:[UIImage imageNamed:StringFromRemoveShowData(kInputViewUrl)] forState:UIControlStateSelected];
         //: [_buttonBox addSubview:Btn5];
         [_buttonBox addSubview:Btn5];
-        //: [Btn5 setTitle:[FFFLanguageManager getTextWithKey:@"report_reasons5"] forState:UIControlStateNormal];
+        //: [Btn5 setTitle:[BusyLanguageManager getTextWithKey:@"report_reasons5"] forState:UIControlStateNormal];
         [Btn5 setTitle:[SendName streetSmart:StringFromRemoveShowData(dreamLabelViewMakeFormat)] forState:UIControlStateNormal];
         //: Btn5.titleLabel.font = [UIFont systemFontOfSize:14];
         Btn5.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -355,7 +355,7 @@ Byte showLetterMsg[] = {47, 15, 62, 7, 113, 188, 200, 176, 163, 174, 173, 176, 1
         [Btn6 setImage:[UIImage imageNamed:StringFromRemoveShowData(kInputViewUrl)] forState:UIControlStateSelected];
         //: [_buttonBox addSubview:Btn6];
         [_buttonBox addSubview:Btn6];
-        //: [Btn6 setTitle:[FFFLanguageManager getTextWithKey:@"report_reasons6"] forState:UIControlStateNormal];
+        //: [Btn6 setTitle:[BusyLanguageManager getTextWithKey:@"report_reasons6"] forState:UIControlStateNormal];
         [Btn6 setTitle:[SendName streetSmart:StringFromRemoveShowData(showRecordName)] forState:UIControlStateNormal];
         //: Btn6.titleLabel.font = [UIFont systemFontOfSize:14];
         Btn6.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -386,7 +386,7 @@ Byte showLetterMsg[] = {47, 15, 62, 7, 113, 188, 200, 176, 163, 174, 173, 176, 1
         _closeBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_closeBtn setTitleColor:[UIColor colorWithHexString:@"#5D5F66"] forState:UIControlStateNormal];
         [_closeBtn setTitleColor:[UIColor status:StringFromRemoveShowData(kContentKey)] forState:UIControlStateNormal];
-        //: [_closeBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
+        //: [_closeBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
         [_closeBtn setTitle:[SendName streetSmart:StringFromRemoveShowData(user_mName)] forState:UIControlStateNormal];
         //: _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
         _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
@@ -413,7 +413,7 @@ Byte showLetterMsg[] = {47, 15, 62, 7, 113, 188, 200, 176, 163, 174, 173, 176, 1
         _sureBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        //: [_sureBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_sure"] forState:UIControlStateNormal];
+        //: [_sureBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_sure"] forState:UIControlStateNormal];
         [_sureBtn setTitle:[SendName streetSmart:StringFromRemoveShowData(user_sizeMsg)] forState:UIControlStateNormal];
         //: _sureBtn.backgroundColor = [UIColor colorWithHexString:@"#02D8C9"];
         _sureBtn.backgroundColor = [UIColor status:StringFromRemoveShowData(user_contentMsg)];

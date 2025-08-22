@@ -12,19 +12,19 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: @class FFFInputEmoticonTabView;
+//: @class BusyInputEmoticonTabView;
 @class ViewControl;
 
 //: @protocol NIMInputEmoticonTabDelegate <NSObject>
 @protocol BirthdayDelegate <NSObject>
 
-//: - (void)tabView:(FFFInputEmoticonTabView *)tabView didSelectTabIndex:(NSInteger) index;
+//: - (void)tabView:(BusyInputEmoticonTabView *)tabView didSelectTabIndex:(NSInteger) index;
 - (void)send:(ViewControl *)tabView childShared:(NSInteger) index;
 
 //: @end
 @end
 
-//: @interface FFFInputEmoticonTabView : UIControl
+//: @interface BusyInputEmoticonTabView : UIControl
 @interface ViewControl : UIControl
 
 //: @property (nonatomic,strong) UIButton * sendButton;

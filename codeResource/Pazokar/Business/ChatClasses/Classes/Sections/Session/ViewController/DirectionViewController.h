@@ -13,22 +13,22 @@
 #import <UIKit/UIKit.h>
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
-//: #import "FFFSessionConfig.h"
+//: #import "BusySessionConfig.h"
 #import "QuantityelligenceInformationCan.h"
-//: #import "FFFMessageCellProtocol.h"
-#import "FFFMessageCellProtocol.h"
-//: #import "FFFSessionConfigurateProtocol.h"
-#import "FFFSessionConfigurateProtocol.h"
-//: #import "FFFInputView.h"
+//: #import "BusyMessageCellProtocol.h"
+#import "BusyMessageCellProtocol.h"
+//: #import "BusySessionConfigurateProtocol.h"
+#import "BusySessionConfigurateProtocol.h"
+//: #import "BusyInputView.h"
 #import "StateView.h"
 
-//: @interface FFFSessionViewController : UIViewController<NIMSessionInteractorDelegate,NIMInputActionDelegate,FFFMessageCellDelegate,NIMChatManagerDelegate,NIMConversationManagerDelegate,NIMChatExtendManagerDelegate>
+//: @interface BusySessionViewController : UIViewController<NIMSessionInteractorDelegate,NIMInputActionDelegate,BusyMessageCellDelegate,NIMChatManagerDelegate,NIMConversationManagerDelegate,NIMChatExtendManagerDelegate>
 @interface DirectionViewController : UIViewController<StateModel,FuturismDelegate,SharedDelegate,NIMChatManagerDelegate,NIMConversationManagerDelegate,NIMChatExtendManagerDelegate>
 
 //: @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UITableView *tableView;
 
-//: @property (nonatomic, strong) FFFInputView *sessionInputView;
+//: @property (nonatomic, strong) BusyInputView *sessionInputView;
 @property (nonatomic, strong) StateView *sessionInputView;
 //: @property (nonatomic, assign) BOOL canTapVoiceBtn; 
 @property (nonatomic, assign) BOOL canTapVoiceBtn; // 能够点击语音按钮
@@ -144,8 +144,8 @@
 /**
  *  会话页详细配置
  */
-//: - (id<FFFSessionConfig>)sessionConfig;
-- (id<QuantityelligenceInformationCan>)secret;
+//: - (id<BusySessionConfig>)sessionConfig;
+- (id<QuantityelligenceInformationCan>)sessionConfig;
 
 
 //: #pragma mark - 消息接口
@@ -234,7 +234,7 @@
  *
  *  @discussion 不会触发 DB 操作，请手动调用 SDK 里 deleteMessage: 接口
  */
-//: - (FFFMessageModel *)uiDeleteMessage:(NIMMessage *)message;
+//: - (BusyMessageModel *)uiDeleteMessage:(NIMMessage *)message;
 - (MoreModel *)analogDigitalConverter:(NIMMessage *)message;
 
 /**

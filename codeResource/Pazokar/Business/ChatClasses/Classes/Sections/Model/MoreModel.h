@@ -11,10 +11,10 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFSessionConfig.h"
+//: #import "BusySessionConfig.h"
 #import "QuantityelligenceInformationCan.h"
 
-//: @interface FFFMessageModel : NSObject
+//: @interface BusyMessageModel : NSObject
 @interface MoreModel : NSObject
 
 /**
@@ -129,11 +129,11 @@
 
 
 /**
- *  NIMMessage封装成FFFMessageModel的方法
+ *  NIMMessage封装成BusyMessageModel的方法
  *
  *  @param  message 消息体
  *
- *  @return FFFMessageModel实例
+ *  @return BusyMessageModel实例
  */
 //: - (instancetype)initWithMessage:(NIMMessage*)message;
 - (instancetype)initWithLabel:(NIMMessage*)message;
@@ -175,7 +175,7 @@
  *  @return 是否显示该消息被回复的条数内容
  */
 //: - (BOOL)needShowReplyCountContent;
-- (BOOL)info;
+- (BOOL)needShowReplyCountContent;
 
 /**
  *  @return 是否显示快捷表情内容

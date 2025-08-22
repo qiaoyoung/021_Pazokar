@@ -11,17 +11,17 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFKitEvent.h"
+//: #import "BusyKitEvent.h"
 #import "DirectionEvent.h"
 
-//: typedef NS_ENUM (NSInteger, FFFSessionMessageContentViewLayout){
-typedef NS_ENUM (NSInteger, FFFSessionMessageContentViewLayout){
-    //: FFFSessionMessageContentViewLayoutAuto = 0, 
-    FFFSessionMessageContentViewLayoutAuto = 0, //根据消息自动布局
-    //: FFFSessionMessageContentViewLayoutLeft, 
-    FFFSessionMessageContentViewLayoutLeft, //左边布局
-    //: FFFSessionMessageContentViewLayoutRight, 
-    FFFSessionMessageContentViewLayoutRight, //右边布局
+//: typedef NS_ENUM (NSInteger, BusySessionMessageContentViewLayout){
+typedef NS_ENUM (NSInteger, BusySessionMessageContentViewLayout){
+    //: BusySessionMessageContentViewLayoutAuto = 0, 
+    BusySessionMessageContentViewLayoutAuto = 0, //根据消息自动布局
+    //: BusySessionMessageContentViewLayoutLeft, 
+    BusySessionMessageContentViewLayoutLeft, //左边布局
+    //: BusySessionMessageContentViewLayoutRight, 
+    BusySessionMessageContentViewLayoutRight, //右边布局
 //: };
 };
 
@@ -31,7 +31,7 @@ typedef NS_ENUM (NSInteger, FFFSessionMessageContentViewLayout){
 //: @protocol NIMMessageContentViewDelegate <NSObject>
 @protocol InformationView <NSObject>
 
-//: - (void)onCatchEvent:(FFFKitEvent *)event;
+//: - (void)onCatchEvent:(BusyKitEvent *)event;
 - (void)memberEvent:(DirectionEvent *)event;
 
 //: - (void)disableLongPress:(BOOL)disable;
@@ -49,20 +49,20 @@ typedef NS_ENUM (NSInteger, FFFSessionMessageContentViewLayout){
 //: @end
 @end
 
-//: @class FFFMessageModel;
+//: @class BusyMessageModel;
 @class MoreModel;
 
-//: @interface FFFSessionMessageContentView : UIControl
+//: @interface BusySessionMessageContentView : UIControl
 @interface TextControl : UIControl
 
-//: @property (nonatomic,strong,readonly) FFFMessageModel *model;
+//: @property (nonatomic,strong,readonly) BusyMessageModel *model;
 @property (nonatomic,strong,readonly) MoreModel *model;
 
 //: @property (nonatomic,strong) UIImageView * bubbleImageView;
 @property (nonatomic,strong) UIImageView * bubbleImageView;
 
-//: @property (nonatomic,assign) FFFSessionMessageContentViewLayout layoutStyle;
-@property (nonatomic,assign) FFFSessionMessageContentViewLayout layoutStyle;
+//: @property (nonatomic,assign) BusySessionMessageContentViewLayout layoutStyle;
+@property (nonatomic,assign) BusySessionMessageContentViewLayout layoutStyle;
 
 //: @property (nonatomic,weak) id<NIMMessageContentViewDelegate> delegate;
 @property (nonatomic,weak) id<InformationView> delegate;
@@ -81,7 +81,7 @@ typedef NS_ENUM (NSInteger, FFFSessionMessageContentViewLayout){
  *  @param data 刷新数据
  *
  */
-//: - (void)refresh:(FFFMessageModel*)data;
+//: - (void)refresh:(BusyMessageModel*)data;
 - (void)messagePress:(MoreModel*)data;
 
 

@@ -11,10 +11,10 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFCommonTableViewCell.h"
+//: #import "BusyCommonTableViewCell.h"
 #import "MediaApp.h"
 
-//: @interface FFFKitSwitcherCell : UITableViewCell<FFFCommonTableViewCell>
+//: @interface BusyKitSwitcherCell : UITableViewCell<BusyCommonTableViewCell>
 @interface ParentViewCell : UITableViewCell<MediaApp>
 
 //: @property(nonatomic,strong,readonly) UISwitch *switcher;

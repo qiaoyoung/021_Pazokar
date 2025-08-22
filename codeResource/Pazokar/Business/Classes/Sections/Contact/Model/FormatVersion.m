@@ -101,7 +101,7 @@
     //: for (id<NTESGroupMemberProtocol>member in members) {
     for (id<GroupCan>member in members) {
         //: if ([[member memberId] isEqualToString:me]) {
-        if ([[member getStarted] isEqualToString:me]) {
+        if ([[member conference] isEqualToString:me]) {
             //: continue;
             continue;
         }
@@ -287,7 +287,7 @@
         //: for (id<NTESGroupMemberProtocol> member in members) {
         for (id<GroupCan> member in members) {
             //: if ([[member memberId] isEqualToString:uid]) {
-            if ([[member getStarted] isEqualToString:uid]) {
+            if ([[member conference] isEqualToString:uid]) {
                 //: return member;
                 return member;
             }

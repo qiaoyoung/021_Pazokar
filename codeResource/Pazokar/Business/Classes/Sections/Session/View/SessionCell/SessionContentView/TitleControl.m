@@ -307,7 +307,7 @@ NSString *const k_statusMessage = @"NIMDemoEventNameOpenRedPacket";
 {
     //: if ([self.delegate respondsToSelector:@selector(onCatchEvent:)]) {
     if ([self.delegate respondsToSelector:@selector(memberEvent:)]) {
-        //: FFFKitEvent *event = [[FFFKitEvent alloc] init];
+        //: BusyKitEvent *event = [[BusyKitEvent alloc] init];
         DirectionEvent *event = [[DirectionEvent alloc] init];
         //: event.eventName = NIMDemoEventNameOpenRedPacket;
         event.eventName = k_statusMessage;
@@ -322,7 +322,7 @@ NSString *const k_statusMessage = @"NIMDemoEventNameOpenRedPacket";
 
 //: #pragma mark - 系统父类方法
 #pragma mark - 系统父类方法
-//: - (void)refresh:(FFFMessageModel*)data{
+//: - (void)refresh:(BusyMessageModel*)data{
 - (void)messagePress:(MoreModel*)data{
     //: [super refresh:data];
     [super messagePress:data];

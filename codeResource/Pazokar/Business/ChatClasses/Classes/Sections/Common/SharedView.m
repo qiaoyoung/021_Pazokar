@@ -9,12 +9,12 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFBadgeView.h"
+//: #import "BusyBadgeView.h"
 #import "SharedView.h"
 //: #import "NSString+MyUserKit.h"
 #import "NSString+Case.h"
 
-//: @interface FFFBadgeView ()
+//: @interface BusyBadgeView ()
 @interface SharedView ()
 
 //: @property (strong) UIColor *badgeBackgroundColor;
@@ -38,7 +38,7 @@
 //: @end
 @end
 
-//: @implementation FFFBadgeView
+//: @implementation BusyBadgeView
 @implementation SharedView
 
 //: + (instancetype)viewWithBadgeTip:(NSString *)badgeValue{
@@ -48,7 +48,7 @@
         //: badgeValue = @"";
         badgeValue = @"";
     }
-    //: FFFBadgeView *instance = [[FFFBadgeView alloc] init];
+    //: BusyBadgeView *instance = [[BusyBadgeView alloc] init];
     SharedView *instance = [[SharedView alloc] init];
     //: instance.frame = [instance frameWithStr:badgeValue];
     instance.frame = [instance divertStr:badgeValue];

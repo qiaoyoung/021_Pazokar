@@ -77,13 +77,13 @@
 
 //: - (NTESMergeMessageCell *)ntesCellInTable:(UITableView*)tableView
 - (NameMessageCell *)littleLeagueTeam:(UITableView*)tableView
-                         //: forMessageMode:(FFFMessageModel *)model {
+                         //: forMessageMode:(BusyMessageModel *)model {
                          size:(MoreModel *)model {
-    //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+    //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
     id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
     //: NSString *identity = [[layoutConfig cellContent:model] stringByAppendingString:@"_ntes"];
     NSString *identity = [[layoutConfig flushCell:model] stringByAppendingString:[[HonestlyData sharedInstance] notiNameText]];
-    //: FFFMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:identity];
+    //: BusyMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:identity];
     CompartmentViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identity];
     //: if (!cell) {
     if (!cell) {
@@ -100,7 +100,7 @@
 
 //: - (NTESTimestampCell *)ntesCellInTable:(UITableView *)tableView
 - (AlongView *)net:(UITableView *)tableView
-                            //: forTimeModel:(FFFTimestampModel *)model {
+                            //: forTimeModel:(BusyTimestampModel *)model {
                             total:(AppRow *)model {
     //: NSString *identity = @"time_ntes";
     NSString *identity = [[HonestlyData sharedInstance] kRecentValue];

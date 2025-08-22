@@ -1,7 +1,7 @@
 // __DEBUG__
 // __CLOSE_PRINT__
 //
-//  FFFSessionConfigurateProtocol.h
+//  BusySessionConfigurateProtocol.h
 // Case
 //
 //  Created by chris on 2016/11/7.
@@ -9,7 +9,7 @@
 //
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
 
 // __M_A_C_R_O__
@@ -90,10 +90,10 @@ typedef NS_ENUM(NSUInteger, NIMKitSessionState) {
 //: - (void)insertMessages:(NSArray *)messages;
 - (void)bar:(NSArray *)messages;
 
-//: - (FFFMessageModel *)updateMessage:(NIMMessage *)message;
+//: - (BusyMessageModel *)updateMessage:(NIMMessage *)message;
 - (MoreModel *)modify:(NIMMessage *)message;
 
-//: - (FFFMessageModel *)deleteMessage:(NIMMessage *)message;
+//: - (BusyMessageModel *)deleteMessage:(NIMMessage *)message;
 - (MoreModel *)messageFind:(NIMMessage *)message;
 
 //: - (void)addPinForMessage:(NIMMessage *)message;
@@ -109,7 +109,7 @@ typedef NS_ENUM(NSUInteger, NIMKitSessionState) {
 //: - (void)markRead:(BOOL)needMarkDataModel;
 - (void)keyWithFile:(BOOL)needMarkDataModel;
 
-//: - (FFFMessageModel *)findMessageModel:(NIMMessage *)message;
+//: - (BusyMessageModel *)findMessageModel:(NIMMessage *)message;
 - (MoreModel *)with:(NIMMessage *)message;
 
 //: - (BOOL)shouldHandleReceipt;
@@ -136,7 +136,7 @@ typedef NS_ENUM(NSUInteger, NIMKitSessionState) {
 //: - (void)loadMessagePins:(void (^)(NSError *error))handler;
 - (void)info:(void (^)(NSError *error))handler;
 
-//: - (void)willDisplayMessageModel:(FFFMessageModel *)model;
+//: - (void)willDisplayMessageModel:(BusyMessageModel *)model;
 - (void)child:(MoreModel *)model;
 
 //排版接口
@@ -154,7 +154,7 @@ typedef NS_ENUM(NSUInteger, NIMKitSessionState) {
 - (void)manage;
 
 //按钮响应接口
-//: - (void)mediaAudioPressed:(FFFMessageModel *)messageModel;
+//: - (void)mediaAudioPressed:(BusyMessageModel *)messageModel;
 - (void)item:(MoreModel *)messageModel;
 
 //: - (void)mediaPicturePressed;
@@ -182,7 +182,7 @@ typedef NS_ENUM(NSUInteger, NIMKitSessionState) {
 - (void)setEncounter:(NIMKitSessionState)sessionState;
 
 //: - (void)setReferenceMessage:(NIMMessage *)message;
-- (void)setMagnitudeRelation:(NIMMessage *)message;
+- (void)setReferenceMessage:(NIMMessage *)message;
 
 //: @end
 @end

@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
-//: #import "FFFTeamMemberListDataSource.h"
+//: #import "BusyTeamMemberListDataSource.h"
 #import "RowCenter.h"
 
 //: extern NSString * _Nonnull const kNIMTeamListDataTeamInfoUpdate;
@@ -24,7 +24,7 @@ extern NSString * _Nonnull const show_errorIdent;
 //: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
-//: @interface FFFTeamListDataManager : NSObject<FFFTeamMemberListDataSource>
+//: @interface BusyTeamListDataManager : NSObject<BusyTeamMemberListDataSource>
 @interface FindBaseballTeamManager : NSObject<RowCenter>
 
 //当前群

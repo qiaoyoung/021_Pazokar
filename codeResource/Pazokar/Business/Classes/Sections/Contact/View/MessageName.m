@@ -70,7 +70,7 @@
 }
 
 //: - (NSString *)memberId{
-- (NSString *)getStarted{
+- (NSString *)conference{
     //: return self.userId;
     return self.userId;
 }

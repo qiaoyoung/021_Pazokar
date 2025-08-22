@@ -11,10 +11,10 @@
 // __M_A_C_R_O__
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
-//: #import "FFFBaseSessionContentConfig.h"
-#import "FFFBaseSessionContentConfig.h"
+//: #import "BusyBaseSessionContentConfig.h"
+#import "BusyBaseSessionContentConfig.h"
 
-//: @interface FFFUnsupportContentConfig : NSObject<CCCSessionContentConfig>
+//: @interface BusyUnsupportContentConfig : NSObject<CCCSessionContentConfig>
 @interface MediaVersionSend : NSObject<ViewConfig>
 //: @end
 @end

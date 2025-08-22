@@ -11,10 +11,10 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFCardDataSourceProtocol.h"
-#import "FFFCardDataSourceProtocol.h"
+//: #import "BusyCardDataSourceProtocol.h"
+#import "BusyCardDataSourceProtocol.h"
 
-//: @protocol FFFMemberGroupViewDelegate <NSObject>
+//: @protocol BusyMemberGroupViewDelegate <NSObject>
 @protocol TextPlayer <NSObject>
 //: @optional
 @optional
@@ -46,7 +46,7 @@
 //: @end
 @end
 
-//: @interface FFFMemberGroupView : UIView
+//: @interface BusyMemberGroupView : UIView
 @interface ImaginationImageView : UIView
 
 //: @property (nonatomic,strong) UICollectionView *collectionView;
@@ -61,7 +61,7 @@
 //: @property (nonatomic,assign) BOOL enableRemove;
 @property (nonatomic,assign) BOOL enableRemove;
 
-//: @property (nonatomic,weak) id<FFFMemberGroupViewDelegate> delegate;
+//: @property (nonatomic,weak) id<BusyMemberGroupViewDelegate> delegate;
 @property (nonatomic,weak) id<TextPlayer> delegate;
 
 //: - (void)refreshDatas:(NSArray <NIMMemebrGroupData *> *)datas operators:(NIMKitCardHeaderOpeator)operators;

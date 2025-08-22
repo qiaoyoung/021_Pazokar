@@ -59,9 +59,9 @@ Byte appPosseMessage[] = {66, 11, 38, 9, 138, 73, 80, 42, 108, 142, 139, 135, 13
 // __M_A_C_R_O__
 //: #import "NTESMigrateMessageViewController.h"
 #import "OpenViewController.h"
-//: #import "FFFCommonTableData.h"
-#import "FFFCommonTableData.h"
-//: #import "FFFCommonTableDelegate.h"
+//: #import "BusyCommonTableData.h"
+#import "BusyCommonTableData.h"
+//: #import "BusyCommonTableDelegate.h"
 #import "MessageDelegate.h"
 //: #import "SVProgressHUD.h"
 #import "SVProgressHUD.h"
@@ -77,7 +77,7 @@ Byte appPosseMessage[] = {66, 11, 38, 9, 138, 73, 80, 42, 108, 142, 139, 135, 13
 
 //: @property (nonatomic,copy) NSArray *data;
 @property (nonatomic,copy) NSArray *data;
-//: @property (nonatomic,strong) FFFCommonTableDelegate *delegator;
+//: @property (nonatomic,strong) BusyCommonTableDelegate *delegator;
 @property (nonatomic,strong) MessageDelegate *delegator;
 
 //: @end
@@ -100,7 +100,7 @@ Byte appPosseMessage[] = {66, 11, 38, 9, 138, 73, 80, 42, 108, 142, 139, 135, 13
     [self mode];
     //: __weak typeof(self) wself = self;
     __weak typeof(self) wself = self;
-    //: self.delegator = [[FFFCommonTableDelegate alloc] initWithTableData:^NSArray *{
+    //: self.delegator = [[BusyCommonTableDelegate alloc] initWithTableData:^NSArray *{
     self.delegator = [[MessageDelegate alloc] initWithFrame:^NSArray *{
         //: return wself.data;
         return wself.data;

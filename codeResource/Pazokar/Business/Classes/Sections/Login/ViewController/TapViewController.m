@@ -609,7 +609,7 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFRegisterViewController.h"
+//: #import "BusyRegisterViewController.h"
 #import "TapViewController.h"
 //: #import "NTESMainTabController.h"
 #import "LightGreenViewController.h"
@@ -627,12 +627,12 @@ typedef struct {
 #import "CanLabel.h"
 //: #import "UIActionSheet+NTESBlock.h"
 #import "UIActionSheet+Enable.h"
-//: #import "FFFRegisterViewController.h"
+//: #import "BusyRegisterViewController.h"
 #import "TapViewController.h"
 //: #import "NTESRegistConfigManager.h"
 #import "PinMoreManager.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 //: #import "AppDelegate.h"
 #import "AppDelegate.h"
 //: #import "CCCAutoLoginManager.h"
@@ -644,7 +644,7 @@ typedef struct {
 //: #import "ZMONPolicyPrivacyViewController.h"
 #import "InformationViewController.h"
 
-//: @interface FFFRegisterViewController () <UITextFieldDelegate>
+//: @interface BusyRegisterViewController () <UITextFieldDelegate>
 @interface TapViewController () <UITextFieldDelegate>
 
 //: @property (strong, nonatomic) UIImageView *logoImageView;
@@ -673,7 +673,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFRegisterViewController
+//: @implementation BusyRegisterViewController
 @implementation TapViewController
 
 //: - (void)viewDidLoad {
@@ -726,7 +726,7 @@ typedef struct {
 
     //: UILabel *labtitle = [[UILabel alloc]initWithFrame:CGRectMake(0, _logoImageView.bottom, [[UIScreen mainScreen] bounds].size.width, 30)];
     UILabel *labtitle = [[UILabel alloc]initWithFrame:CGRectMake(0, _logoImageView.bottom, [[UIScreen mainScreen] bounds].size.width, 30)];
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"register_account"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"register_account"];
     labtitle.text = [SendName streetSmart:[BulgeData sharedInstance].userShowKey];
     //: labtitle.textColor = [UIColor blackColor];
     labtitle.textColor = [UIColor blackColor];
@@ -763,7 +763,7 @@ typedef struct {
     _usernameTextField.textColor = [UIColor status:[BulgeData sharedInstance].main_objectFainStr];
     //    _usernameTextField.keyboardType = UIKeyboardTypeASCIICapable;
 //    _usernameTextField.delegate = self;
-    //: NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc]initWithString:[FFFLanguageManager getTextWithKey:@"user_tip"] attributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#999999"]}];
+    //: NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc]initWithString:[BusyLanguageManager getTextWithKey:@"user_tip"] attributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#999999"]}];
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc]initWithString:[SendName streetSmart:[BulgeData sharedInstance].mTouristName] attributes:@{NSForegroundColorAttributeName:[UIColor status:[BulgeData sharedInstance].k_proximateData]}];
     //: _usernameTextField.attributedPlaceholder = attrString;
     _usernameTextField.attributedPlaceholder = attrString;
@@ -796,7 +796,7 @@ typedef struct {
     _passwordTextField.textColor = [UIColor status:[BulgeData sharedInstance].main_objectFainStr];
 //    _passwordTextField.secureTextEntry = YES;
 //    self.passwordTextField.delegate = self;
-    //: NSMutableAttributedString *attrString1 = [[NSMutableAttributedString alloc]initWithString:[FFFLanguageManager getTextWithKey:@"pass_tip"] attributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#999999"]}];
+    //: NSMutableAttributedString *attrString1 = [[NSMutableAttributedString alloc]initWithString:[BusyLanguageManager getTextWithKey:@"pass_tip"] attributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#999999"]}];
     NSMutableAttributedString *attrString1 = [[NSMutableAttributedString alloc]initWithString:[SendName streetSmart:[BulgeData sharedInstance].kControlFormat] attributes:@{NSForegroundColorAttributeName:[UIColor status:[BulgeData sharedInstance].k_proximateData]}];
     //: _passwordTextField.attributedPlaceholder = attrString1;
     _passwordTextField.attributedPlaceholder = attrString1;
@@ -825,7 +825,7 @@ typedef struct {
     _loginButton.titleLabel.font = [UIFont systemFontOfSize:16];
     //: [_loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //: [_loginButton setTitle:[FFFLanguageManager getTextWithKey:@"activity_register_next"] forState:UIControlStateNormal];
+    //: [_loginButton setTitle:[BusyLanguageManager getTextWithKey:@"activity_register_next"] forState:UIControlStateNormal];
     [_loginButton setTitle:[SendName streetSmart:[BulgeData sharedInstance].kClickMessage] forState:UIControlStateNormal];
     //: [_loginButton addTarget:self action:@selector(doLogin) forControlEvents:UIControlEventTouchUpInside];
     [_loginButton addTarget:self action:@selector(thanEvent) forControlEvents:UIControlEventTouchUpInside];
@@ -852,7 +852,7 @@ typedef struct {
     [_registerButton addTarget:self action:@selector(tapBack) forControlEvents:UIControlEventTouchUpInside];
     //: NSDictionary *attributes = @{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)};
     NSDictionary *attributes = @{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)};
-    //: NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:[FFFLanguageManager getTextWithKey:@"activity_login_login"] attributes:attributes];
+    //: NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:[BusyLanguageManager getTextWithKey:@"activity_login_login"] attributes:attributes];
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:[SendName streetSmart:[BulgeData sharedInstance].mMCountMsg] attributes:attributes];
     //: [_registerButton setAttributedTitle:attributedString forState:UIControlStateNormal];
     [_registerButton setAttributedTitle:attributedString forState:UIControlStateNormal];
@@ -891,7 +891,7 @@ typedef struct {
 //    _registerButton.frame = CGRectMake(SCREEN_WIDTH-136, SCREEN_STATUS_HEIGHT+20, 146, 32);
 //    _registerButton.backgroundColor = ThemeColor;
 //    _registerButton.titleLabel.font = [UIFont systemFontOfSize:16];
-//    [_registerButton setTitleColor:RGB_COLOR_String(@"#ffffff") forState:UIControlStateNormal];
+//    [_registerButton setTitleColor:RGB_COLOR_String(@"#fffBusy") forState:UIControlStateNormal];
 //    [_registerButton setTitle:[NSString stringWithFormat:@"%@,%@",LangKey(@"activity_register_account_has_account"),LangKey(@"activity_login_login")] forState:UIControlStateNormal];
 //    [_registerButton addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
 //    [self.view addSubview:_registerButton];
@@ -943,7 +943,7 @@ typedef struct {
 - (YYLabel *)protocolLabel {
     //: if (!_protocolLabel) {
     if (!_protocolLabel) {
-        //: NSString *originText = [FFFLanguageManager getTextWithKey:@"activity_register_agree"];
+        //: NSString *originText = [BusyLanguageManager getTextWithKey:@"activity_register_agree"];
         NSString *originText = [SendName streetSmart:[BulgeData sharedInstance].notiWithSeedName];
         //: NSMutableAttributedString *text1 = [[NSMutableAttributedString alloc] initWithString:originText];
         NSMutableAttributedString *text1 = [[NSMutableAttributedString alloc] initWithString:originText];
@@ -964,7 +964,7 @@ typedef struct {
          {
             //: ZMONPolicyPrivacyViewController *vc = [[ZMONPolicyPrivacyViewController alloc] init];
             InformationViewController *vc = [[InformationViewController alloc] init];
-            //: vc.webTitle = [FFFLanguageManager getTextWithKey:@"activity_comment_setting_ys"];
+            //: vc.webTitle = [BusyLanguageManager getTextWithKey:@"activity_comment_setting_ys"];
             vc.webTitle = [SendName streetSmart:[BulgeData sharedInstance].m_separateShowCatalogName];
             //: vc.urlString = [NIMUserDefaults standardUserDefaults].yshref;
             vc.urlString = [DataMaxDefaults max].yshref;
@@ -1082,7 +1082,7 @@ typedef struct {
 
     //: if (self.agreementButton.selected == NO) {
     if (self.agreementButton.selected == NO) {
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"Read_agree_agreement"] duration:2.0 position:CSToastPositionCenter];
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"Read_agree_agreement"] duration:2.0 position:CSToastPositionCenter];
         [self.view makeToast:[SendName streetSmart:[BulgeData sharedInstance].k_viewValue] duration:2.0 position:CSToastPositionCenter];
         //: return;
         return;
@@ -1095,7 +1095,7 @@ typedef struct {
 
     //: if (_usernameTextField.text && _usernameTextField.text.length <= 0){
     if (_usernameTextField.text && _usernameTextField.text.length <= 0){
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"register_account_activity_account"] duration:2.0 position:CSToastPositionCenter];
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"register_account_activity_account"] duration:2.0 position:CSToastPositionCenter];
         [self.view makeToast:[SendName streetSmart:[BulgeData sharedInstance].notiMessageValue] duration:2.0 position:CSToastPositionCenter];
         //: return;
         return;
@@ -1103,7 +1103,7 @@ typedef struct {
 
     //: if (_passwordTextField.text && _passwordTextField.text.length <= 0){
     if (_passwordTextField.text && _passwordTextField.text.length <= 0){
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"register_account_activity_psw"] duration:2.0 position:CSToastPositionCenter];
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"register_account_activity_psw"] duration:2.0 position:CSToastPositionCenter];
         [self.view makeToast:[SendName streetSmart:[BulgeData sharedInstance].userValueKey] duration:2.0 position:CSToastPositionCenter];
         //: return;
         return;
@@ -1121,7 +1121,7 @@ typedef struct {
 
     //: if ([_usernameTextField.text isEqualToString:_passwordTextField.text]){
     if ([_usernameTextField.text isEqualToString:_passwordTextField.text]){
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"pass_user"] duration:2.0 position:CSToastPositionCenter];
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"pass_user"] duration:2.0 position:CSToastPositionCenter];
         [self.view makeToast:[SendName streetSmart:[BulgeData sharedInstance].showLiterallyEcruStr] duration:2.0 position:CSToastPositionCenter];
         //: return;
         return;

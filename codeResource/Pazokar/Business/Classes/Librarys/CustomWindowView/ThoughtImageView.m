@@ -184,7 +184,7 @@
 
         //: _textField = [[UITextField alloc] init];
         _textField = [[UITextField alloc] init];
-        //: _textField.placeholder = [FFFLanguageManager getTextWithKey:@"register_avtivity3_nick"];
+        //: _textField.placeholder = [BusyLanguageManager getTextWithKey:@"register_avtivity3_nick"];
         _textField.placeholder = [SendName streetSmart:[[ImageMovieData sharedInstance] showPotatoFormat]];
         //: [backGroundView addSubview:_textField];
         [backGroundView addSubview:_textField];
@@ -225,7 +225,7 @@
         UIButton *knowButton = [UIButton buttonWithType:UIButtonTypeCustom];
         //: knowButton.titleLabel.font = [UIFont systemFontOfSize:16];
         knowButton.titleLabel.font = [UIFont systemFontOfSize:16];
-        //: [knowButton setTitle:[FFFLanguageManager getTextWithKey:@"activity_register_next"] forState:UIControlStateNormal];
+        //: [knowButton setTitle:[BusyLanguageManager getTextWithKey:@"activity_register_next"] forState:UIControlStateNormal];
         [knowButton setTitle:[SendName streetSmart:[[ImageMovieData sharedInstance] show_gangIdent]] forState:UIControlStateNormal];
         //: [knowButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [knowButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

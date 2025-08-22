@@ -170,7 +170,7 @@ Byte dream_textId[] = {24, 7, 46, 8, 207, 28, 242, 165, 156, 147, 165, 158, 143,
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"activity_safe_setting_modify"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"activity_safe_setting_modify"];
     labtitle.text = [SendName streetSmart:StringFromMinData(notiSourceMessage)];
     //: [bgView addSubview:labtitle];
     [bgView addSubview:labtitle];
@@ -198,7 +198,7 @@ Byte dream_textId[] = {24, 7, 46, 8, 207, 28, 242, 165, 156, 147, 165, 158, 143,
     self.textfile_1.font = [UIFont systemFontOfSize:16];
     //: self.textfile_1.textColor = [UIColor colorWithHexString:@"#333333"];
     self.textfile_1.textColor = [UIColor status:StringFromMinData(app_popUrl)];
-    //: self.textfile_1.placeholder = [FFFLanguageManager getTextWithKey:@"register_account_activity_account"];
+    //: self.textfile_1.placeholder = [BusyLanguageManager getTextWithKey:@"register_account_activity_account"];
     self.textfile_1.placeholder = [SendName streetSmart:StringFromMinData(kLaughMessageData)];
 //    self.textfile_1.delegate = self;
     //: [view1 addSubview:self.textfile_1];
@@ -227,7 +227,7 @@ Byte dream_textId[] = {24, 7, 46, 8, 207, 28, 242, 165, 156, 147, 165, 158, 143,
     self.textfile_2.font = [UIFont systemFontOfSize:16];
     //: self.textfile_2.textColor = [UIColor colorWithHexString:@"#333333"];
     self.textfile_2.textColor = [UIColor status:StringFromMinData(app_popUrl)];
-    //: self.textfile_2.placeholder = [FFFLanguageManager getTextWithKey:@"activity_modify_new"];
+    //: self.textfile_2.placeholder = [BusyLanguageManager getTextWithKey:@"activity_modify_new"];
     self.textfile_2.placeholder = [SendName streetSmart:StringFromMinData(app_imageMsg)];
 //    self.textfile_2.delegate = self;
     //: self.textfile_2.secureTextEntry = YES;
@@ -272,7 +272,7 @@ Byte dream_textId[] = {24, 7, 46, 8, 207, 28, 242, 165, 156, 147, 165, 158, 143,
     self.textfile_3.font = [UIFont systemFontOfSize:16];
     //: self.textfile_3.textColor = [UIColor colorWithHexString:@"#333333"];
     self.textfile_3.textColor = [UIColor status:StringFromMinData(app_popUrl)];
-    //: self.textfile_3.placeholder = [FFFLanguageManager getTextWithKey:@"activity_modify_new_again"];
+    //: self.textfile_3.placeholder = [BusyLanguageManager getTextWithKey:@"activity_modify_new_again"];
     self.textfile_3.placeholder = [SendName streetSmart:StringFromMinData(mKillerKey)];
 //    self.textfile_3.delegate = self;
     //: self.textfile_3.secureTextEntry = YES;
@@ -302,7 +302,7 @@ Byte dream_textId[] = {24, 7, 46, 8, 207, 28, 242, 165, 156, 147, 165, 158, 143,
     emptyButton.titleLabel.font = [UIFont systemFontOfSize:15];
     //: [emptyButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [emptyButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //: [emptyButton setTitle:[FFFLanguageManager getTextWithKey:@"contact_list_activity_complete"] forState:UIControlStateNormal];
+    //: [emptyButton setTitle:[BusyLanguageManager getTextWithKey:@"contact_list_activity_complete"] forState:UIControlStateNormal];
     [emptyButton setTitle:[SendName streetSmart:StringFromMinData(show_clickPath)] forState:UIControlStateNormal];
     //: [emptyButton addTarget:self action:@selector(commitButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [emptyButton addTarget:self action:@selector(historyView) forControlEvents:UIControlEventTouchUpInside];
@@ -389,7 +389,7 @@ Byte dream_textId[] = {24, 7, 46, 8, 207, 28, 242, 165, 156, 147, 165, 158, 143,
         style.imageSize = CGSizeMake(20, 20);
         //: style.messageColor = [UIColor colorWithHexString:@"#5D5F66"];
         style.messageColor = [UIColor status:StringFromMinData(mainPosseContent)];
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"modify_activity_psw_no_same"] duration:2.0 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"login_error"] style:style completion:nil];
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"modify_activity_psw_no_same"] duration:2.0 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"login_error"] style:style completion:nil];
         [self.view makeToast:[SendName streetSmart:StringFromMinData(m_redSourceFormat)] duration:2.0 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:StringFromMinData(kEmphasizeName)] style:style completion:nil];
         //: return;
         return;
@@ -456,7 +456,7 @@ Byte dream_textId[] = {24, 7, 46, 8, 207, 28, 242, 165, 156, 147, 165, 158, 143,
         style.imageSize = CGSizeMake(20, 20);
         //: style.messageColor = [UIColor colorWithHexString:@"#5D5F66"];
         style.messageColor = [UIColor status:StringFromMinData(mainPosseContent)];
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"friend_verify_avtivity_net_error"] duration:2.0 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"login_error"] style:style completion:nil];
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"friend_verify_avtivity_net_error"] duration:2.0 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:@"login_error"] style:style completion:nil];
         [self.view makeToast:[SendName streetSmart:StringFromMinData(k_makeMsg)] duration:2.0 position:CSToastPositionCenter title:nil image:[UIImage imageNamed:StringFromMinData(kEmphasizeName)] style:style completion:nil];
     //: }];
     }];

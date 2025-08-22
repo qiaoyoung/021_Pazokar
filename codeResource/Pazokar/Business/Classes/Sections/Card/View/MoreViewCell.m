@@ -81,8 +81,8 @@ typedef struct {
 // __M_A_C_R_O__
 //: #import "NTESCardVerificationCell.h"
 #import "MoreViewCell.h"
-//: #import "FFFCommonTableData.h"
-#import "FFFCommonTableData.h"
+//: #import "BusyCommonTableData.h"
+#import "BusyCommonTableData.h"
 
 //: @interface NTESCardVerificationCell ()<UITextViewDelegate>
 @interface MoreViewCell ()<UITextViewDelegate>
@@ -128,9 +128,9 @@ typedef struct {
 //        }];
 //
 
-        //: NSString *activity_add_friend_my_is = [FFFLanguageManager getTextWithKey:@"activity_add_friend_my_is"];
+        //: NSString *activity_add_friend_my_is = [BusyLanguageManager getTextWithKey:@"activity_add_friend_my_is"];
         NSString *activity_add_friend_my_is = [SendName streetSmart:[PinControlData sharedInstance].userTotalText];
-        //: NSString *activity_add_friend_my_request = [FFFLanguageManager getTextWithKey:@"activity_add_friend_my_request"];
+        //: NSString *activity_add_friend_my_request = [BusyLanguageManager getTextWithKey:@"activity_add_friend_my_request"];
         NSString *activity_add_friend_my_request = [SendName streetSmart:[PinControlData sharedInstance].show_readKey];
 
         //: NIMUser *me = [[NIMSDK sharedSDK].userManager userInfo:[[NIMSDK sharedSDK].loginManager currentAccount]];

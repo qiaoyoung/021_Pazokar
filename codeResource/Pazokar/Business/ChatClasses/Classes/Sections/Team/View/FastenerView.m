@@ -85,29 +85,29 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFCardHeaderCell.h"
+//: #import "BusyCardHeaderCell.h"
 #import "FastenerView.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFTeamHelper.h"
+//: #import "BusyTeamHelper.h"
 #import "EnvelopingTitle.h"
 //: #import "NSString+MyUserKit.h"
 #import "NSString+Case.h"
 
-//: @interface FFFCardHeaderCell()
+//: @interface BusyCardHeaderCell()
 @interface FastenerView()
 
-//: @property (nonatomic,strong) id<FFFKitCardHeaderData> data;
-@property (nonatomic,strong) id<FFFKitCardHeaderData> data;
+//: @property (nonatomic,strong) id<BusyKitCardHeaderData> data;
+@property (nonatomic,strong) id<BusyKitCardHeaderData> data;
 
 //: @end
 @end
 
-//: @implementation FFFCardHeaderCell
+//: @implementation BusyCardHeaderCell
 @implementation FastenerView
 
 //: - (instancetype)initWithFrame:(CGRect)frame{
@@ -116,7 +116,7 @@
     self = [super initWithFrame:frame];
     //: if (self) {
     if (self) {
-        //: _imageView = [[FFFAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, 55, 55)];
+        //: _imageView = [[BusyAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, 55, 55)];
         _imageView = [[CustomFormatView alloc] initWithFrame:CGRectMake(0, 0, 55, 55)];
         //: [self addSubview:_imageView];
         [self addSubview:_imageView];
@@ -151,8 +151,8 @@
     return self;
 }
 
-//: - (void)refreshData:(id<FFFKitCardHeaderData>)data{
-- (void)latentPeriod:(id<FFFKitCardHeaderData>)data{
+//: - (void)refreshData:(id<BusyKitCardHeaderData>)data{
+- (void)latentPeriod:(id<BusyKitCardHeaderData>)data{
     //: self.data = data;
     self.data = data;
     //: NSURL *url = [NSURL URLWithString:data.imageUrl];
@@ -166,12 +166,12 @@
     NSString *showName = data.title;
     //: if ([data isMyUserId]) {
     if ([data isMyUserId]) {
-        //: showName = [FFFLanguageManager getTextWithKey:@"Group_Me"];
+        //: showName = [BusyLanguageManager getTextWithKey:@"Group_Me"];
         showName = [SendName streetSmart:[[CooperationData sharedInstance] k_teamMessage]];//@"我".nim_localized;
     }
     //: self.titleLabel.text = showName;
     self.titleLabel.text = showName;
-    //: self.roleImageView.image = [FFFTeamHelper imageWithMemberType:data.userType];
+    //: self.roleImageView.image = [BusyTeamHelper imageWithMemberType:data.userType];
     self.roleImageView.image = [EnvelopingTitle smart:data.userType];
     //: [self.titleLabel sizeToFit];
     [self.titleLabel sizeToFit];

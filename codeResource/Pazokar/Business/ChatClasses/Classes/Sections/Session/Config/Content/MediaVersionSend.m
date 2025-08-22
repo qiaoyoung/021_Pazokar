@@ -82,12 +82,12 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFUnsupportContentConfig.h"
+//: #import "BusyUnsupportContentConfig.h"
 #import "MediaVersionSend.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @interface FFFUnsupportContentConfig ()
+//: @interface BusyUnsupportContentConfig ()
 @interface MediaVersionSend ()
 
 //: @property (nonatomic,strong) UILabel *label;
@@ -96,7 +96,7 @@
 //: @end
 @end
 
-//: @implementation FFFUnsupportContentConfig
+//: @implementation BusyUnsupportContentConfig
 @implementation MediaVersionSend
 
 //: - (instancetype)init
@@ -128,21 +128,21 @@
 //: - (NSString *)cellContent:(NIMMessage *)message
 - (NSString *)picture:(NIMMessage *)message
 {
-    //: FFFKitSetting *setting = [[MyUserKit sharedKit].config setting:message];
+    //: BusyKitSetting *setting = [[MyUserKit sharedKit].config setting:message];
     GreenSetting *setting = [[Case pastTop].config tool:message];
     //: self.label.textColor = setting.textColor;
     self.label.textColor = setting.textColor;
     //: self.label.font = setting.font;
     self.label.font = setting.font;
 
-    //: return @"FFFSessionUnknowContentView";
+    //: return @"BusySessionUnknowContentView";
     return @"DateControl";
 }
 
 //: - (UIEdgeInsets)contentViewInsets:(NIMMessage *)message
 - (UIEdgeInsets)cut:(NIMMessage *)message
 {
-    //: FFFKitSettings *settings = message.isOutgoingMsg? [MyUserKit sharedKit].config.rightBubbleSettings : [MyUserKit sharedKit].config.leftBubbleSettings;
+    //: BusyKitSettings *settings = message.isOutgoingMsg? [MyUserKit sharedKit].config.rightBubbleSettings : [MyUserKit sharedKit].config.leftBubbleSettings;
     ImageTitle *settings = message.isOutgoingMsg? [Case pastTop].config.rightBubbleSettings : [Case pastTop].config.leftBubbleSettings;
     //: return settings.unsupportSetting.contentInsets;
     return settings.unsupportSetting.contentInsets;

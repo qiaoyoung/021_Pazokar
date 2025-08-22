@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionMessageContentView.h"
+//: #import "BusySessionMessageContentView.h"
 #import "TextControl.h"
 
-//: @interface FFFSessionLocationContentView : FFFSessionMessageContentView
+//: @interface BusySessionLocationContentView : BusySessionMessageContentView
 @interface BubbleControl : TextControl
 
 //: @end

@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamCardRowItem.h"
+//: #import "BusyTeamCardRowItem.h"
 #import "ToAGreaterExtentItem.h"
 
-//: @implementation FFFTeamCardRowItem
+//: @implementation BusyTeamCardRowItem
 @implementation ToAGreaterExtentItem
 
 //: @end

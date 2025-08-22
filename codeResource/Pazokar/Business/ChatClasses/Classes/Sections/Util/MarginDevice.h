@@ -12,10 +12,10 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: @interface FFFKitDevice : NSObject
+//: @interface BusyKitDevice : NSObject
 @interface MarginDevice : NSObject
 
-//: + (FFFKitDevice *)currentDevice;
+//: + (BusyKitDevice *)currentDevice;
 + (MarginDevice *)send;
 
 /// 语言

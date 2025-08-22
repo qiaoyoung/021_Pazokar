@@ -110,7 +110,7 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitProgressHUD.h"
+//: #import "BusyKitProgressHUD.h"
 #import "KitEffectView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
@@ -119,7 +119,7 @@
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @interface FFFKitProgressHUD()
+//: @interface BusyKitProgressHUD()
 @interface KitEffectView()
 
 //: @property (nonatomic, strong) CAShapeLayer *indefiniteAnimatedLayer;
@@ -128,19 +128,19 @@
 //: @end
 @end
 
-//: @implementation FFFKitProgressHUD
+//: @implementation BusyKitProgressHUD
 @implementation KitEffectView
 
 //: + (instancetype)sharedView
 + (instancetype)paradigm
 {
-    //: static FFFKitProgressHUD *instance = nil;
+    //: static BusyKitProgressHUD *instance = nil;
     static KitEffectView *instance = nil;
     //: static dispatch_once_t onceToken;
     static dispatch_once_t onceToken;
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
-        //: instance = [[FFFKitProgressHUD alloc] initWithFrame:CGRectMake(0, 0, 84, 84)];
+        //: instance = [[BusyKitProgressHUD alloc] initWithFrame:CGRectMake(0, 0, 84, 84)];
         instance = [[KitEffectView alloc] initWithFrame:CGRectMake(0, 0, 84, 84)];
     //: });
     });
@@ -183,7 +183,7 @@
 //: + (void)show
 + (void)nim
 {
-    //: [[FFFKitProgressHUD sharedView] showInView:[UIApplication sharedApplication].windows.firstObject];
+    //: [[BusyKitProgressHUD sharedView] showInView:[UIApplication sharedApplication].windows.firstObject];
     [[KitEffectView paradigm] nameView:[UIApplication sharedApplication].windows.firstObject];
 }
 
@@ -192,9 +192,9 @@
 {
     //: dispatch_async(dispatch_get_main_queue(), ^{
     dispatch_async(dispatch_get_main_queue(), ^{
-        //: [[FFFKitProgressHUD sharedView] removeFromSuperview];
+        //: [[BusyKitProgressHUD sharedView] removeFromSuperview];
         [[KitEffectView paradigm] removeFromSuperview];
-        //: [[FFFKitProgressHUD sharedView].indefiniteAnimatedLayer removeFromSuperlayer];
+        //: [[BusyKitProgressHUD sharedView].indefiniteAnimatedLayer removeFromSuperlayer];
         [[KitEffectView paradigm].indefiniteAnimatedLayer removeFromSuperlayer];
     //: });
     });

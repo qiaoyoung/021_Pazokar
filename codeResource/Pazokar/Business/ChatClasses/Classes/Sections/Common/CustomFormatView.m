@@ -85,22 +85,22 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
 //: #import "objc/runtime.h"
 #import "objc/runtime.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
-//: #import "FFFKitUrlManager.h"
+//: #import "BusyKitUrlManager.h"
 #import "DistanceManager.h"
 
-//: @interface FFFAvatarImageView()
+//: @interface BusyAvatarImageView()
 @interface CustomFormatView()
 
 //: @property (nonatomic,strong) UIImageView *imageView;
@@ -109,7 +109,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFAvatarImageView
+//: @implementation BusyAvatarImageView
 @implementation CustomFormatView
 
 //: - (id)initWithFrame:(CGRect)frame
@@ -272,7 +272,7 @@ typedef struct {
 //: - (void)setAvatarBySession:(NIMSession *)session
 - (void)setLetter:(NIMSession *)session
 {
-    //: FFFKitInfo *info = nil;
+    //: BusyKitInfo *info = nil;
     Info *info = nil;
     //: if (session.sessionType == NIMSessionTypeTeam) {
     if (session.sessionType == NIMSessionTypeTeam) {
@@ -290,7 +290,7 @@ typedef struct {
         info.avatarImage = [UIImage imageNamed:[[AssertiveData sharedInstance] k_proximateStr]];
     //: } else {
     } else {
-        //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+        //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
         InfoGreenImage *option = [[InfoGreenImage alloc] init];
         //: option.session = session;
         option.session = session;
@@ -304,13 +304,13 @@ typedef struct {
 //: - (void)setAvatarByMessage:(NIMMessage *)message
 - (void)setBeginView:(NIMMessage *)message
 {
-    //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+    //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
     InfoGreenImage *option = [[InfoGreenImage alloc] init];
     //: option.message = message;
     option.message = message;
     //: NSString *from = message.from;
     NSString *from = message.from;
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:from option:option];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:from option:option];
     Info *info = [[Case pastTop] consumer:from message:option];
     //: [self setImageWithUrlString:info.avatarUrlString placeholderImage:info.avatarImage options:0];
     [self title:info.avatarUrlString add:info.avatarImage cell:0];
@@ -346,7 +346,7 @@ typedef struct {
     __block NSURL *targetUrl = nil;
     //: __weak typeof(self) weakSelf = self;
     __weak typeof(self) weakSelf = self;
-    //: [[FFFKitUrlManager shareManager] queryQriginalUrlWithShortUrl:urlString completion:^(NSString *originalUrl, NSError *error) {
+    //: [[BusyKitUrlManager shareManager] queryQriginalUrlWithShortUrl:urlString completion:^(NSString *originalUrl, NSError *error) {
     [[DistanceManager fast] pressed:urlString momentaryTeam:^(NSString *originalUrl, NSError *error) {
         //: if (urlString && !error) {
         if (urlString && !error) {

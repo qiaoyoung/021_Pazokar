@@ -17,7 +17,7 @@
 //: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
-//: @protocol FFFReplyContentViewDelegate <NSObject>
+//: @protocol BusyReplyContentViewDelegate <NSObject>
 @protocol IndexMy <NSObject>
 
 //: @optional
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 //: @end
 @end
 
-//: @interface FFFReplyContentView : UIView
+//: @interface BusyReplyContentView : UIView
 @interface NoticeTagView : UIView
 
 //: @property (nonatomic,strong) UIButton *closeButton;
@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 //: @property (nonatomic,strong) NIMMessage *replymessage;
 @property (nonatomic,strong) NIMMessage *replymessage;
 
-//: @property (nonatomic,weak) id<FFFReplyContentViewDelegate> delegate;
+//: @property (nonatomic,weak) id<BusyReplyContentViewDelegate> delegate;
 @property (nonatomic,weak) id<IndexMy> delegate;
 
 //: - (void)dismiss;

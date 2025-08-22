@@ -9,13 +9,13 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionViewController.h"
+//: #import "BusySessionViewController.h"
 #import "DirectionViewController.h"
 
 //: extern NSString *kNTESDemoRevokeMessageFromMeNotication;
 extern NSString *noti_singleLabelMessage;
 
-//: @interface NTESSessionViewController : FFFSessionViewController
+//: @interface NTESSessionViewController : BusySessionViewController
 @interface TopViewController : DirectionViewController
 
 //: @property (nonatomic,assign) BOOL disableCommandTyping; 

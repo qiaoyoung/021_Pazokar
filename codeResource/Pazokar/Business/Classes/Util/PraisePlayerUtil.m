@@ -40,17 +40,17 @@ Byte dreamEnableValue[] = {88, 17, 36, 5, 193, 68, 75, 73, 65, 59, 66, 78, 61, 6
         case NIMLoginClientTypeiOS:
         //: case NIMLoginClientTypeWP:
         case NIMLoginClientTypeWP:
-            //: return [FFFLanguageManager getTextWithKey:@"home_fragment_phone"];
+            //: return [BusyLanguageManager getTextWithKey:@"home_fragment_phone"];
             return [SendName streetSmart:StringFromTermsData(userDetectName)];
         //: case NIMLoginClientTypePC:
         case NIMLoginClientTypePC:
         //: case NIMLoginClientTypemacOS:
         case NIMLoginClientTypemacOS:
-            //: return [FFFLanguageManager getTextWithKey:@"home_fragment_pc"];
+            //: return [BusyLanguageManager getTextWithKey:@"home_fragment_pc"];
             return [SendName streetSmart:StringFromTermsData(k_literallyMsg)];
         //: case NIMLoginClientTypeWeb:
         case NIMLoginClientTypeWeb:
-            //: return [FFFLanguageManager getTextWithKey:@"home_fragment_web"];
+            //: return [BusyLanguageManager getTextWithKey:@"home_fragment_web"];
             return [SendName streetSmart:StringFromTermsData(dreamEnableValue)];
         //: default:
         default:

@@ -109,7 +109,7 @@
     return show_enableName;
 }
 
-//: #ffffff
+//: #fffBusy
 + (NSString *)mWoodenTitle {
     /* static */ NSString *mWoodenTitle = nil;
     if (!mWoodenTitle) {
@@ -220,7 +220,7 @@
 
     //: _viewBg = [[UIView alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen] bounds].size.height-278, [[UIScreen mainScreen] bounds].size.width, 278)];
     _viewBg = [[UIView alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen] bounds].size.height-278, [[UIScreen mainScreen] bounds].size.width, 278)];
-    //: _viewBg.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+    //: _viewBg.backgroundColor = [UIColor colorWithHexString:@"#fffBusy"];
     _viewBg.backgroundColor = [UIColor status:[RecordData mWoodenTitle]];
     //: _viewBg.layer.masksToBounds = YES;
     _viewBg.layer.masksToBounds = YES;
@@ -320,7 +320,7 @@
         lab.font = [UIFont systemFontOfSize:14];
         //: lab.textColor = [UIColor colorWithHexString:@"#000000"];
         lab.textColor = [UIColor status:[RecordData notiFromMessage]];
-        //: lab.text = [FFFLanguageManager getTextWithKey:@"message_send_camera"];
+        //: lab.text = [BusyLanguageManager getTextWithKey:@"message_send_camera"];
         lab.text = [SendName streetSmart:[RecordData kPosseInmateInfoPath]];
         //: lab.textAlignment = NSTextAlignmentCenter;
         lab.textAlignment = NSTextAlignmentCenter;
@@ -368,7 +368,7 @@
         lab.font = [UIFont systemFontOfSize:14];
         //: lab.textColor = [UIColor colorWithHexString:@"#000000"];
         lab.textColor = [UIColor status:[RecordData notiFromMessage]];
-        //: lab.text = [FFFLanguageManager getTextWithKey:@"message_send_album"];
+        //: lab.text = [BusyLanguageManager getTextWithKey:@"message_send_album"];
         lab.text = [SendName streetSmart:[RecordData mainPepTitle]];
         //: lab.textAlignment = NSTextAlignmentCenter;
         lab.textAlignment = NSTextAlignmentCenter;
@@ -401,9 +401,9 @@
         _cancelBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_cancelBtn setTitleColor:[UIColor colorWithHexString:@"#5D5F66"] forState:UIControlStateNormal];
         [_cancelBtn setTitleColor:[UIColor status:[RecordData showFrameFormat]] forState:UIControlStateNormal];
-        //: [_cancelBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
+        //: [_cancelBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
         [_cancelBtn setTitle:[SendName streetSmart:[RecordData show_hockSuccessKey]] forState:UIControlStateNormal];
-        //: _cancelBtn.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+        //: _cancelBtn.backgroundColor = [UIColor colorWithHexString:@"#fffBusy"];
         _cancelBtn.backgroundColor = [UIColor status:[RecordData mWoodenTitle]];
         //: _cancelBtn.layer.cornerRadius = 22;
         _cancelBtn.layer.cornerRadius = 22;

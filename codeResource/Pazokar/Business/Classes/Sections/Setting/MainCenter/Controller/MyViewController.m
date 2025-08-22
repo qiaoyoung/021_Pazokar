@@ -324,7 +324,7 @@ typedef struct {
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"activity_safe_setting_modify"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"activity_safe_setting_modify"];
     labtitle.text = [SendName streetSmart:[LabelData notiListViewData]];
     //: [bgView addSubview:labtitle];
     [bgView addSubview:labtitle];
@@ -358,7 +358,7 @@ typedef struct {
     self.textfile_1.font = [UIFont systemFontOfSize:16];
     //: self.textfile_1.textColor = [UIColor colorWithHexString:@"#333333"];
     self.textfile_1.textColor = [UIColor status:[LabelData mainSourceTitle]];
-    //: self.textfile_1.placeholder = [FFFLanguageManager getTextWithKey:@"activity_modify_old"];
+    //: self.textfile_1.placeholder = [BusyLanguageManager getTextWithKey:@"activity_modify_old"];
     self.textfile_1.placeholder = [SendName streetSmart:[LabelData main_textId]];
     //: self.textfile_1.delegate = self;
     self.textfile_1.delegate = self;
@@ -390,7 +390,7 @@ typedef struct {
     self.textfile_2.font = [UIFont systemFontOfSize:16];
     //: self.textfile_2.textColor = [UIColor colorWithHexString:@"#333333"];
     self.textfile_2.textColor = [UIColor status:[LabelData mainSourceTitle]];
-    //: self.textfile_2.placeholder = [FFFLanguageManager getTextWithKey:@"activity_modify_new"];
+    //: self.textfile_2.placeholder = [BusyLanguageManager getTextWithKey:@"activity_modify_new"];
     self.textfile_2.placeholder = [SendName streetSmart:[LabelData m_labelUrl]];
     //: self.textfile_2.delegate = self;
     self.textfile_2.delegate = self;
@@ -428,7 +428,7 @@ typedef struct {
     self.textfile_3.font = [UIFont systemFontOfSize:16];
     //: self.textfile_3.textColor = [UIColor colorWithHexString:@"#333333"];
     self.textfile_3.textColor = [UIColor status:[LabelData mainSourceTitle]];
-    //: self.textfile_3.placeholder = [FFFLanguageManager getTextWithKey:@"activity_modify_new"];
+    //: self.textfile_3.placeholder = [BusyLanguageManager getTextWithKey:@"activity_modify_new"];
     self.textfile_3.placeholder = [SendName streetSmart:[LabelData m_labelUrl]];
     //: self.textfile_3.delegate = self;
     self.textfile_3.delegate = self;
@@ -445,7 +445,7 @@ typedef struct {
     emptyButton.titleLabel.font = [UIFont systemFontOfSize:16];
     //: [emptyButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [emptyButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //: [emptyButton setTitle:[FFFLanguageManager getTextWithKey:@"sure_edit"] forState:UIControlStateNormal];
+    //: [emptyButton setTitle:[BusyLanguageManager getTextWithKey:@"sure_edit"] forState:UIControlStateNormal];
     [emptyButton setTitle:[SendName streetSmart:[LabelData show_rangeMessage]] forState:UIControlStateNormal];
     //: [emptyButton addTarget:self action:@selector(commitButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [emptyButton addTarget:self action:@selector(historyView) forControlEvents:UIControlEventTouchUpInside];

@@ -112,14 +112,14 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFCardOperationItem.h"
+//: #import "BusyCardOperationItem.h"
 #import "BubbleAppear.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 
-//: @interface FFFCardOperationItem()
+//: @interface BusyCardOperationItem()
 @interface BubbleAppear()
 
 //: @property(nonatomic,assign) NIMKitCardHeaderOpeator opera;
@@ -128,7 +128,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFCardOperationItem
+//: @implementation BusyCardOperationItem
 @implementation BubbleAppear
 
 //: - (instancetype)initWithOperation:(NIMKitCardHeaderOpeator)opera{

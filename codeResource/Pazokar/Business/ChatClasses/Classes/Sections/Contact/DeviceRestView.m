@@ -144,7 +144,7 @@ typedef struct {
 //: #F6F7FA
 - (NSString *)showLabelId {
     if (!_showLabelId) {
-		NSString *origin = @"EA8FFF8FFE8F88C4";
+		NSString *origin = @"EA8Busy8FFE8F88C4";
 		NSData *data = [TheologicalData TheologicalDataToData:origin];
         StructTheologicalData value = (StructTheologicalData){201, (Byte *)data.bytes, 7, 15, 159};
         _showLabelId = [self StringFromTheologicalData:&value];
@@ -187,10 +187,10 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSetGroupNameView.h"
+//: #import "BusySetGroupNameView.h"
 #import "DeviceRestView.h"
 
-//: @interface FFFSetGroupNameView ()<UITextFieldDelegate>
+//: @interface BusySetGroupNameView ()<UITextFieldDelegate>
 @interface DeviceRestView ()<UITextFieldDelegate>
 
 //: @property (nonatomic,assign) NSInteger inputLimit;
@@ -217,7 +217,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFSetGroupNameView
+//: @implementation BusySetGroupNameView
 @implementation DeviceRestView
 
 //: - (instancetype)initWithFrame:(CGRect)frame
@@ -364,7 +364,7 @@ typedef struct {
 //        _titleLabel.textAlignment = NSTextAlignmentCenter;
 //        _titleLabel.numberOfLines = 1;
 //        _titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-        //: _titleLabel.text = [FFFLanguageManager getTextWithKey:@"activity_group_nickname_title"];
+        //: _titleLabel.text = [BusyLanguageManager getTextWithKey:@"activity_group_nickname_title"];
         _titleLabel.text = [SendName streetSmart:[TheologicalData sharedInstance].userAfterPath];
     }
     //: return _titleLabel;
@@ -382,7 +382,7 @@ typedef struct {
         _subtitleLabel.textAlignment = NSTextAlignmentCenter;
         //: _subtitleLabel.textColor = [UIColor colorWithHexString:@"#02D8C9"];
         _subtitleLabel.textColor = [UIColor status:[TheologicalData sharedInstance].notiTightenName];
-        //: _subtitleLabel.text = [FFFLanguageManager getTextWithKey:@"Required"];
+        //: _subtitleLabel.text = [BusyLanguageManager getTextWithKey:@"Required"];
         _subtitleLabel.text = [SendName streetSmart:[TheologicalData sharedInstance].appVsKey];
     }
     //: return _subtitleLabel;
@@ -419,7 +419,7 @@ typedef struct {
         _closeBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_closeBtn setTitleColor:[UIColor colorWithHexString:@"#5D5F66"] forState:UIControlStateNormal];
         [_closeBtn setTitleColor:[UIColor status:[TheologicalData sharedInstance].show_labelIdent] forState:UIControlStateNormal];
-        //: [_closeBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
+        //: [_closeBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
         [_closeBtn setTitle:[SendName streetSmart:[TheologicalData sharedInstance].kDecorateValue] forState:UIControlStateNormal];
         //: _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
         _closeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
@@ -446,7 +446,7 @@ typedef struct {
         _sureBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        //: [_sureBtn setTitle:[FFFLanguageManager getTextWithKey:@"user_info_avtivity_keep"] forState:UIControlStateNormal];
+        //: [_sureBtn setTitle:[BusyLanguageManager getTextWithKey:@"user_info_avtivity_keep"] forState:UIControlStateNormal];
         [_sureBtn setTitle:[SendName streetSmart:[TheologicalData sharedInstance].user_chapterData] forState:UIControlStateNormal];
         //: _sureBtn.backgroundColor = [UIColor colorWithHexString:@"#02D8C9"];
         _sureBtn.backgroundColor = [UIColor status:[TheologicalData sharedInstance].notiTightenName];
@@ -485,7 +485,7 @@ typedef struct {
 
         //: _searchField = [[UITextField alloc]initWithFrame:CGRectMake(15, 6, [[UIScreen mainScreen] bounds].size.width-80-30, 40)];
         _searchField = [[UITextField alloc]initWithFrame:CGRectMake(15, 6, [[UIScreen mainScreen] bounds].size.width-80-30, 40)];
-        //: _searchField.placeholder = [FFFLanguageManager getTextWithKey:@"contact_tag_fragment_name"];
+        //: _searchField.placeholder = [BusyLanguageManager getTextWithKey:@"contact_tag_fragment_name"];
         _searchField.placeholder = [SendName streetSmart:[TheologicalData sharedInstance].notiApartmentFormat];
         //: _searchField.textColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];
         _searchField.textColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];

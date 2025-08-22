@@ -91,12 +91,12 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamSwitchTableViewCell.h"
+//: #import "BusyTeamSwitchTableViewCell.h"
 #import "WithCellView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
 
-//: @implementation FFFTeamSwitchTableViewCell
+//: @implementation BusyTeamSwitchTableViewCell
 @implementation WithCellView
 
 //: - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{

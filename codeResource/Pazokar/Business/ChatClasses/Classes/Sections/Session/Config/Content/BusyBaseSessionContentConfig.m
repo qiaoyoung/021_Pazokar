@@ -1,7 +1,7 @@
 // __DEBUG__
 // __CLOSE_PRINT__
 //
-//  FFFBaseSessionContentConfig.m
+//  BusyBaseSessionContentConfig.m
 // Case
 //
 //  Created by amao on 9/15/15.
@@ -9,55 +9,55 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFBaseSessionContentConfig.h"
-#import "FFFBaseSessionContentConfig.h"
-//: #import "FFFTextContentConfig.h"
+//: #import "BusyBaseSessionContentConfig.h"
+#import "BusyBaseSessionContentConfig.h"
+//: #import "BusyTextContentConfig.h"
 #import "SendMessage.h"
-//: #import "FFFImageContentConfig.h"
+//: #import "BusyImageContentConfig.h"
 #import "MoreConfig.h"
-//: #import "FFFAudioContentConfig.h"
+//: #import "BusyAudioContentConfig.h"
 #import "ViewAudioTop.h"
-//: #import "FFFVideoContentConfig.h"
+//: #import "BusyVideoContentConfig.h"
 #import "FormatMarginConfig.h"
-//: #import "FFFFileContentConfig.h"
+//: #import "BusyFileContentConfig.h"
 #import "PointConfig.h"
-//: #import "FFFNotificationContentConfig.h"
+//: #import "BusyNotificationContentConfig.h"
 #import "VersionPin.h"
-//: #import "FFFLocationContentConfig.h"
+//: #import "BusyLocationContentConfig.h"
 #import "LabelRead.h"
-//: #import "FFFUnsupportContentConfig.h"
+//: #import "BusyUnsupportContentConfig.h"
 #import "MediaVersionSend.h"
-//: #import "FFFTipContentConfig.h"
+//: #import "BusyTipContentConfig.h"
 #import "MyTing.h"
-//: #import "FFFReplyedTextContentConfig.h"
+//: #import "BusyReplyedTextContentConfig.h"
 #import "AccumulationConfig.h"
-//: #import "FFFRtcCallRecordContentConfig.h"
+//: #import "BusyRtcCallRecordContentConfig.h"
 #import "LabelItemBuild.h"
 
-//: @interface FFFSessionContentConfigFactory ()
+//: @interface BusySessionContentConfigFactory ()
 @interface CleanSpecialSessionFactory ()
 //: @property (nonatomic,strong) NSDictionary *dict;
 @property (nonatomic,strong) NSDictionary *dict;
 //: @property (nonatomic,strong) NSDictionary *replyDict;
 @property (nonatomic,strong) NSDictionary *replyDict;
-//: @property (nonatomic,strong) FFFUnsupportContentConfig *unsupportConfig;
+//: @property (nonatomic,strong) BusyUnsupportContentConfig *unsupportConfig;
 @property (nonatomic,strong) MediaVersionSend *unsupportConfig;
 //: @end
 @end
 
-//: @implementation FFFSessionContentConfigFactory
+//: @implementation BusySessionContentConfigFactory
 @implementation CleanSpecialSessionFactory
 
 //: + (instancetype)sharedFacotry
 + (instancetype)degree
 {
-    //: static FFFSessionContentConfigFactory *instance = nil;
+    //: static BusySessionContentConfigFactory *instance = nil;
     static CleanSpecialSessionFactory *instance = nil;
     //: static dispatch_once_t onceToken;
     static dispatch_once_t onceToken;
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
-        //: instance = [[FFFSessionContentConfigFactory alloc] init];
+        //: instance = [[BusySessionContentConfigFactory alloc] init];
         instance = [[CleanSpecialSessionFactory alloc] init];
     //: });
     });
@@ -71,28 +71,28 @@
     //: if (self = [super init])
     if (self = [super init])
     {
-        //: _dict = @{@(NIMMessageTypeText) : [FFFTextContentConfig new],
+        //: _dict = @{@(NIMMessageTypeText) : [BusyTextContentConfig new],
         _dict = @{@(NIMMessageTypeText) : [SendMessage new],
-                  //: @(NIMMessageTypeImage) : [FFFImageContentConfig new],
+                  //: @(NIMMessageTypeImage) : [BusyImageContentConfig new],
                   @(NIMMessageTypeImage) : [MoreConfig new],
-                  //: @(NIMMessageTypeAudio) : [FFFAudioContentConfig new],
+                  //: @(NIMMessageTypeAudio) : [BusyAudioContentConfig new],
                   @(NIMMessageTypeAudio) : [ViewAudioTop new],
-                  //: @(NIMMessageTypeVideo) : [FFFVideoContentConfig new],
+                  //: @(NIMMessageTypeVideo) : [BusyVideoContentConfig new],
                   @(NIMMessageTypeVideo) : [FormatMarginConfig new],
-                  //: @(NIMMessageTypeFile) : [FFFFileContentConfig new],
+                  //: @(NIMMessageTypeFile) : [BusyFileContentConfig new],
                   @(NIMMessageTypeFile) : [PointConfig new],
-                  //: @(NIMMessageTypeLocation) : [FFFLocationContentConfig new],
+                  //: @(NIMMessageTypeLocation) : [BusyLocationContentConfig new],
                   @(NIMMessageTypeLocation) : [LabelRead new],
-                  //: @(NIMMessageTypeNotification) : [FFFNotificationContentConfig new],
+                  //: @(NIMMessageTypeNotification) : [BusyNotificationContentConfig new],
                   @(NIMMessageTypeNotification) : [VersionPin new],
-                  //: @(NIMMessageTypeTip) : [FFFTipContentConfig new],
+                  //: @(NIMMessageTypeTip) : [BusyTipContentConfig new],
                   @(NIMMessageTypeTip) : [MyTing new],
-                  //: @(NIMMessageTypeRtcCallRecord): [FFFRtcCallRecordContentConfig new],
+                  //: @(NIMMessageTypeRtcCallRecord): [BusyRtcCallRecordContentConfig new],
                   @(NIMMessageTypeRtcCallRecord): [LabelItemBuild new],
         //: };
         };
 
-        //: FFFReplyedTextContentConfig *replyedTextConfig = [FFFReplyedTextContentConfig new];
+        //: BusyReplyedTextContentConfig *replyedTextConfig = [BusyReplyedTextContentConfig new];
         AccumulationConfig *replyedTextConfig = [AccumulationConfig new];
         //: _replyDict = @{
         _replyDict = @{
@@ -120,7 +120,7 @@
             @(NIMMessageTypeRtcCallRecord) : replyedTextConfig,
         //: };
         };
-        //: _unsupportConfig = [[FFFUnsupportContentConfig alloc] init];
+        //: _unsupportConfig = [[BusyUnsupportContentConfig alloc] init];
         _unsupportConfig = [[MediaVersionSend alloc] init];
     }
     //: return self;

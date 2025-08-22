@@ -24,16 +24,16 @@ Byte app_finUrl[] = {34, 21, 45, 10, 19, 182, 91, 200, 11, 111, 150, 144, 156, 1
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitColorButtonCell.h"
+//: #import "BusyKitColorButtonCell.h"
 #import "FastenerViewCell.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFCommonTableData.h"
-#import "FFFCommonTableData.h"
+//: #import "BusyCommonTableData.h"
+#import "BusyCommonTableData.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
 
-//: @interface FFFKitColorButtonCell()
+//: @interface BusyKitColorButtonCell()
 @interface FastenerViewCell()
 
 //: @property (nonatomic,strong) NIMCommonTableRow *rowData;
@@ -42,7 +42,7 @@ Byte app_finUrl[] = {34, 21, 45, 10, 19, 182, 91, 200, 11, 111, 150, 144, 156, 1
 //: @end
 @end
 
-//: @implementation FFFKitColorButtonCell
+//: @implementation BusyKitColorButtonCell
 @implementation FastenerViewCell
 
 //: - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -72,8 +72,8 @@ Byte app_finUrl[] = {34, 21, 45, 10, 19, 182, 91, 200, 11, 111, 150, 144, 156, 1
     self.rowData = rowData;
     //: [self.button setTitle:rowData.title forState:UIControlStateNormal];
     [self.button setTitle:rowData.title forState:UIControlStateNormal];
-    //: FFFKitColorButtonCellStyle style = [rowData.extraInfo integerValue];
-    FFFKitColorButtonCellStyle style = [rowData.extraInfo integerValue];
+    //: BusyKitColorButtonCellStyle style = [rowData.extraInfo integerValue];
+    BusyKitColorButtonCellStyle style = [rowData.extraInfo integerValue];
     //: self.button.style = style;
     self.button.style = style;
     //: [self.button removeTarget:tableView.nim_viewController action:NULL forControlEvents:UIControlEventTouchUpInside];
@@ -144,8 +144,8 @@ Byte app_finUrl[] = {34, 21, 45, 10, 19, 182, 91, 200, 11, 111, 150, 144, 156, 1
     return self;
 }
 
-//: - (void)setStyle:(FFFKitColorButtonCellStyle)style{
-- (void)setStyle:(FFFKitColorButtonCellStyle)style{
+//: - (void)setStyle:(BusyKitColorButtonCellStyle)style{
+- (void)setStyle:(BusyKitColorButtonCellStyle)style{
     //: _style = style;
     _style = style;
     //: [self reset];
@@ -158,8 +158,8 @@ Byte app_finUrl[] = {34, 21, 45, 10, 19, 182, 91, 200, 11, 111, 150, 144, 156, 1
     NSString *imageNormalName = @"";
     //: switch (self.style) {
     switch (self.style) {
-        //: case FFFKitColorButtonCellStyleRed:{
-        case FFFKitColorButtonCellStyleRed:{
+        //: case BusyKitColorButtonCellStyleRed:{
+        case BusyKitColorButtonCellStyleRed:{
             //: imageNormalName = @"icon_cell_red_normal";
             imageNormalName = StringFromPrecipiceData(mDrawingId);
             //: UIImage *imageNormal = [[UIImage imageNamed:imageNormalName] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10) resizingMode:UIImageResizingModeStretch];
@@ -169,8 +169,8 @@ Byte app_finUrl[] = {34, 21, 45, 10, 19, 182, 91, 200, 11, 111, 150, 144, 156, 1
         }
             //: break;
             break;
-        //: case FFFKitColorButtonCellStyleBlue:
-        case FFFKitColorButtonCellStyleBlue:
+        //: case BusyKitColorButtonCellStyleBlue:
+        case BusyKitColorButtonCellStyleBlue:
         {
             //: imageNormalName = @"icon_cell_blue_normal";
             imageNormalName = StringFromPrecipiceData(app_finUrl);

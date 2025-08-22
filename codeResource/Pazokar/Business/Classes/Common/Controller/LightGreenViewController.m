@@ -421,10 +421,10 @@ typedef NS_ENUM(NSInteger,NTESMainTabType) {
     //: [[NIMSDK sharedSDK].conversationManager addDelegate:self];
     [[NIMSDK sharedSDK].conversationManager addDelegate:self];
 
-    //: extern NSString *NTESCustomNotificationCountChanged;
-    extern NSString *NTESCustomNotificationCountChanged;
-    //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onCustomNotifyChanged:) name:NTESCustomNotificationCountChanged object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(framing:) name:NTESCustomNotificationCountChanged object:nil];
+    //: extern NSString *userTapPath;
+    extern NSString *userTapPath;
+    //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onCustomNotifyChanged:) name:userTapPath object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(framing:) name:userTapPath object:nil];
     //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(languageChanged:) name:@"KEKENotificationLanguageChanged" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contented:) name:[NousData mainRedPath] object:nil];
 
@@ -465,14 +465,14 @@ typedef NS_ENUM(NSInteger,NTESMainTabType) {
     Reachability *reachability = [note object];
     //: if ([reachability currentReachabilityStatus] != NotReachable) {
     if ([reachability currentReachabilityStatus] != NotReachable) {
-        //: [[FFFConfig sharedConfig] fetchLatestDomainWithCompletion:^(BOOL success) {
+        //: [[BusyConfig sharedConfig] fetchLatestDomainWithCompletion:^(BOOL success) {
         [[IndexTag ambit] keep:^(BOOL success) {
             //: if (success) {
             if (success) {
-                //: NSLog(@"域名更新成功: %@", [[FFFConfig sharedConfig] getCurrentDomain]);
+                //: NSLog(@"域名更新成功: %@", [[BusyConfig sharedConfig] getCurrentDomain]);
             //: } else {
             } else {
-                //: NSLog(@"使用默认域名: %@", [[FFFConfig sharedConfig] getCurrentDomain]);
+                //: NSLog(@"使用默认域名: %@", [[BusyConfig sharedConfig] getCurrentDomain]);
             }
         //: }]; 
         }]; // 网络恢复时更新域名
@@ -574,19 +574,19 @@ typedef NS_ENUM(NSInteger,NTESMainTabType) {
         NSString *title = @"";
         //: if(idx == 0){
         if(idx == 0){
-            //: title = [FFFLanguageManager getTextWithKey:@"activity_user_profile_chat"];
+            //: title = [BusyLanguageManager getTextWithKey:@"activity_user_profile_chat"];
             title = [SendName streetSmart:[NousData show_inmateMsg]];
         //: }else if (idx == 1){
         }else if (idx == 1){
-            //: title = [FFFLanguageManager getTextWithKey:@"discovery"];
+            //: title = [BusyLanguageManager getTextWithKey:@"discovery"];
             title = [SendName streetSmart:[NousData user_makeName]];
         //: }else if (idx == 2){
         }else if (idx == 2){
-            //: title = [FFFLanguageManager getTextWithKey:@"contacts_list_title"];
+            //: title = [BusyLanguageManager getTextWithKey:@"contacts_list_title"];
             title = [SendName streetSmart:[NousData user_spouseStr]];
         //: }else if (idx == 3){
         }else if (idx == 3){
-            //: title = [FFFLanguageManager getTextWithKey:@"main_tab_my"];
+            //: title = [BusyLanguageManager getTextWithKey:@"main_tab_my"];
             title = [SendName streetSmart:[NousData user_doorwayPath]];
         }
 
@@ -889,7 +889,7 @@ typedef NS_ENUM(NSInteger,NTESMainTabType) {
                      @(NTESMainTabTypeMessageList) : @{
                              //: @"vc" : @"NTESSessionListViewController",
                              @"vc" : @"ExecutiveSessionViewController",
-                             //: @"title" : [FFFLanguageManager getTextWithKey:@"activity_user_profile_chat"],
+                             //: @"title" : [BusyLanguageManager getTextWithKey:@"activity_user_profile_chat"],
                              [NousData dream_electronText] : [SendName streetSmart:[NousData show_inmateMsg]],
                              //: @"image" : @"icon_message_normal",
                              [NousData mViewStr] : [NousData appDoorwayRecommendValue],
@@ -903,7 +903,7 @@ typedef NS_ENUM(NSInteger,NTESMainTabType) {
                      @(NTESMainTabTypeChatroomList): @{
                              //: @"vc" : @"DisCorveyViewController",
                              @"vc" : @"EnableSendViewController",
-                             //: @"title" : [FFFLanguageManager getTextWithKey:@"discovery"],
+                             //: @"title" : [BusyLanguageManager getTextWithKey:@"discovery"],
                              [NousData dream_electronText] : [SendName streetSmart:[NousData user_makeName]],
                              //: @"image" : @"icon_discovery_normal",
                              [NousData mViewStr] : [NousData dream_redId],
@@ -915,7 +915,7 @@ typedef NS_ENUM(NSInteger,NTESMainTabType) {
                      @(NTESMainTabTypeContact) : @{
                              //: @"vc" : @"CCCContactsViewController",
                              @"vc" : @"OffViewController",
-                             //: @"title" : [FFFLanguageManager getTextWithKey:@"contacts_list_title"],
+                             //: @"title" : [BusyLanguageManager getTextWithKey:@"contacts_list_title"],
                              [NousData dream_electronText] : [SendName streetSmart:[NousData user_spouseStr]],
                              //: @"image" : @"icon_contact_normal",
                              [NousData mViewStr] : [NousData app_crisisValue],
@@ -927,7 +927,7 @@ typedef NS_ENUM(NSInteger,NTESMainTabType) {
                      @(NTESMainTabTypeSetting) : @{
                              //: @"vc" : @"NTESMainCenterViewController",
                              @"vc" : @"BackgroundViewController",
-                             //: @"title" : [FFFLanguageManager getTextWithKey:@"main_tab_my"],
+                             //: @"title" : [BusyLanguageManager getTextWithKey:@"main_tab_my"],
                              [NousData dream_electronText] : [SendName streetSmart:[NousData user_doorwayPath]],
                              //: @"image" : @"icon_setting_normal",
                              [NousData mViewStr] : [NousData m_seniorName],

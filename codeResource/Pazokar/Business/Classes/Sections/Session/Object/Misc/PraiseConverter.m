@@ -229,7 +229,7 @@ typedef struct {
     NIMMessage *message = [[NIMMessage alloc] init];
     //: message.messageObject = imageObject;
     message.messageObject = imageObject;
-    //: message.apnsContent = [FFFLanguageManager getTextWithKey:@"init_manager_nim_status_bar_image_message"];
+    //: message.apnsContent = [BusyLanguageManager getTextWithKey:@"init_manager_nim_status_bar_image_message"];
     message.apnsContent = [SendName streetSmart:[CenterData show_withValue]];
     //: NIMMessageSetting *setting = [[NIMMessageSetting alloc] init];
     NIMMessageSetting *setting = [[NIMMessageSetting alloc] init];
@@ -259,7 +259,7 @@ typedef struct {
     NIMMessage *message = [[NIMMessage alloc] init];
     //: message.messageObject = audioObject;
     message.messageObject = audioObject;
-    //: message.apnsContent = [FFFLanguageManager getTextWithKey:@"init_manager_nim_status_bar_audio_message"];
+    //: message.apnsContent = [BusyLanguageManager getTextWithKey:@"init_manager_nim_status_bar_audio_message"];
     message.apnsContent = [SendName streetSmart:[CenterData dreamNameKey]];
     //: NIMMessageSetting *setting = [[NIMMessageSetting alloc] init];
     NIMMessageSetting *setting = [[NIMMessageSetting alloc] init];
@@ -288,7 +288,7 @@ typedef struct {
     NIMMessage *message = [[NIMMessage alloc] init];
     //: message.messageObject = videoObject;
     message.messageObject = videoObject;
-    //: message.apnsContent = [FFFLanguageManager getTextWithKey:@"init_manager_nim_status_bar_video_message"];
+    //: message.apnsContent = [BusyLanguageManager getTextWithKey:@"init_manager_nim_status_bar_video_message"];
     message.apnsContent = [SendName streetSmart:[CenterData kObjectStr]];
     //: NIMMessageSetting *setting = [[NIMMessageSetting alloc] init];
     NIMMessageSetting *setting = [[NIMMessageSetting alloc] init];
@@ -668,7 +668,7 @@ typedef struct {
     //: message.messageSubType = 20;
     message.messageSubType = 20;
 
-    //: NSString *msg = [NSString stringWithFormat:@"%@%@", revocationMessage.senderName,[FFFLanguageManager getTextWithKey:@"retracted_message"]];
+    //: NSString *msg = [NSString stringWithFormat:@"%@%@", revocationMessage.senderName,[BusyLanguageManager getTextWithKey:@"retracted_message"]];
     NSString *msg = [NSString stringWithFormat:@"%@%@", revocationMessage.senderName,[SendName streetSmart:[CenterData userTelevisionFormat]]];
 
     //: NIMCustomObject *object = revocationMessage.messageObject;

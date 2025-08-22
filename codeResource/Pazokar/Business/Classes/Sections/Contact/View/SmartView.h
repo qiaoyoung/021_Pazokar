@@ -12,7 +12,7 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: @class FFFAvatarImageView;
+//: @class BusyAvatarImageView;
 @class CustomFormatView;
 //: @class NTESContactDataMember;
 @class TextMember;
@@ -30,7 +30,7 @@
 //: @interface NTESUserListCell : UITableViewCell
 @interface SmartView : UITableViewCell
 
-//: @property (nonatomic,strong) FFFAvatarImageView * avatarImageView;
+//: @property (nonatomic,strong) BusyAvatarImageView * avatarImageView;
 @property (nonatomic,strong) CustomFormatView * avatarImageView;
 
 //: @property (nonatomic,weak) id<NTESUserListCellDelegate> delegate;

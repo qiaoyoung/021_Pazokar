@@ -9,22 +9,22 @@
 //
 //: #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
-//: #import "FFFTeamCardMemberItem.h"
+//: #import "BusyTeamCardMemberItem.h"
 #import "HomegirlFormat.h"
-//: #import "FFFMembersFetchOption.h"
+//: #import "BusyMembersFetchOption.h"
 #import "DateRow.h"
 
 // __M_A_C_R_O__
 
 //: typedef void(^NIMTeamListDataBlock)(NSError * _Nullable error, NSString * _Nullable msg);
 typedef void(^NIMTeamListDataBlock)(NSError * _Nullable error, NSString * _Nullable msg);
-//: typedef void(^NIMTeamMuteListDataBlock)(NSError * _Nullable error, NSMutableArray<FFFTeamCardMemberItem *> * _Nullable members);
+//: typedef void(^NIMTeamMuteListDataBlock)(NSError * _Nullable error, NSMutableArray<BusyTeamCardMemberItem *> * _Nullable members);
 typedef void(^NIMTeamMuteListDataBlock)(NSError * _Nullable error, NSMutableArray<HomegirlFormat *> * _Nullable members);
 //: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
 
-//: @protocol FFFTeamOperation <NSObject>
+//: @protocol BusyTeamOperation <NSObject>
 @protocol BubbleDeviceCustom <NSObject>
 
 //加人
@@ -144,7 +144,7 @@ NS_ASSUME_NONNULL_BEGIN
                  stateDataBlock:(NIMTeamListDataBlock)completion;
 
 //查询群成员
-//: - (void)fetchTeamMembersWithOption:(FFFMembersFetchOption * _Nullable )option
+//: - (void)fetchTeamMembersWithOption:(BusyMembersFetchOption * _Nullable )option
 - (void)read:(DateRow * _Nullable )option
                         //: completion:(NIMTeamListDataBlock)completion;
                         tap:(NIMTeamListDataBlock)completion;
@@ -166,25 +166,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-//: @protocol FFFTeamMemberListDataSource <FFFTeamOperation>
+//: @protocol BusyTeamMemberListDataSource <BusyTeamOperation>
 @protocol RowCenter <BubbleDeviceCustom>
 
 //: - (NIMTeam *)team;
 - (NIMTeam *)length;
 
 //: - (NIMSession *)session;
-- (NIMSession *)transparency;
+- (NIMSession *)session;
 
 //: - (NSInteger)memberNumber;
 - (NSInteger)cell;
 
-//: - (NSMutableArray <FFFTeamCardMemberItem *> *)members;
+//: - (NSMutableArray <BusyTeamCardMemberItem *> *)members;
 - (NSMutableArray <HomegirlFormat *> *)signal;
 
-//: - (FFFTeamCardMemberItem *)myCard;
+//: - (BusyTeamCardMemberItem *)myCard;
 - (HomegirlFormat *)byShow;
 
-//: - (FFFTeamCardMemberItem *)memberWithUserId:(NSString *)userId;
+//: - (BusyTeamCardMemberItem *)memberWithUserId:(NSString *)userId;
 - (HomegirlFormat *)memberTo:(NSString *)userId;
 
 //: @end

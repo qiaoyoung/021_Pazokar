@@ -113,7 +113,7 @@ typedef struct {
     return dream_voiceMessage;
 }
 
-//: #ffffff
+//: #fffBusy
 + (NSString *)show_titleMsg {
     /* static */ NSString *show_titleMsg = nil;
     if (!show_titleMsg) {
@@ -825,7 +825,7 @@ typedef struct {
 + (NSString *)dreamTitleStr {
     /* static */ NSString *dreamTitleStr = nil;
     if (!dreamTitleStr) {
-		NSString *origin = @"FFF4FBF8F6FF36";
+		NSString *origin = @"Busy4FBF8F6FF36";
 		NSData *data = [AfterData AfterDataToData:origin];
         StructAfterData value = (StructAfterData){154, (Byte *)data.bytes, 6, 178, 131, 11};
         dreamTitleStr = [self StringFromAfterData:&value];
@@ -860,9 +860,9 @@ typedef struct {
 // __M_A_C_R_O__
 //: #import "NTESMainCenterViewController.h"
 #import "BackgroundViewController.h"
-//: #import "FFFCommonTableData.h"
-#import "FFFCommonTableData.h"
-//: #import "FFFCommonTableDelegate.h"
+//: #import "BusyCommonTableData.h"
+#import "BusyCommonTableData.h"
+//: #import "BusyCommonTableDelegate.h"
 #import "MessageDelegate.h"
 //: #import "SVProgressHUD.h"
 #import "SVProgressHUD.h"
@@ -898,7 +898,7 @@ typedef struct {
 #import "UIView+Date.h"
 //: #import "UIAlertView+NTESBlock.h"
 #import "UIAlertView+Enable.h"
-//: #import "FFFUserInfoViewController.h"//个人资料
+//: #import "BusyUserInfoViewController.h"//个人资料
 #import "TabularMatterOrientationReadUserViewController.h"//个人资料
 //: #import "NTESUserQRCodeViewController.h" //我的二维码
 #import "ContentViewController.h" //我的二维码
@@ -1002,7 +1002,7 @@ typedef struct {
     NSString *userID = [[NIMSDK sharedSDK].loginManager currentAccount];
     //: NIMUser *me = [[NIMSDK sharedSDK].userManager userInfo:userID];
     NIMUser *me = [[NIMSDK sharedSDK].userManager userInfo:userID];
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:userID option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:userID option:nil];
     Info *info = [[Case pastTop] consumer:userID message:nil];
 
     //: self.titleLabel.text = me.userInfo.nickName;
@@ -1193,7 +1193,7 @@ typedef struct {
     NSString *userID = [[NIMSDK sharedSDK].loginManager currentAccount];
     //: NIMUser *me = [[NIMSDK sharedSDK].userManager userInfo:userID];
     NIMUser *me = [[NIMSDK sharedSDK].userManager userInfo:userID];
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:userID option:nil];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:userID option:nil];
     Info *info = [[Case pastTop] consumer:userID message:nil];
 
     //: _headerImage = [[UIImageView alloc] initWithFrame:CGRectMake(20,(44.0f + [UIDevice vg_statusBarHeight]), 64, 64)];
@@ -1243,7 +1243,7 @@ typedef struct {
     qrBtn.titleLabel.font = [UIFont systemFontOfSize:12];
     //: [qrBtn setTitleColor:[UIColor colorWithHexString:@"#02D8C9"] forState:UIControlStateNormal];
     [qrBtn setTitleColor:[UIColor status:[AfterData user_listName]] forState:UIControlStateNormal];
-    //: [qrBtn setTitle:[FFFLanguageManager getTextWithKey:@"qrcode_activity_title"] forState:UIControlStateNormal];
+    //: [qrBtn setTitle:[BusyLanguageManager getTextWithKey:@"qrcode_activity_title"] forState:UIControlStateNormal];
     [qrBtn setTitle:[SendName streetSmart:[AfterData user_frameValue]] forState:UIControlStateNormal];
     //: [qrBtn layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyleTop) imageTitleSpace:10];
     [qrBtn reloadSession:(MKButtonEdgeInsetsStyleTop) text:10];
@@ -1252,7 +1252,7 @@ typedef struct {
 
     //: UIView *contentView = [[UIView alloc]initWithFrame:CGRectMake(0, (44.0f + [UIDevice vg_statusBarHeight])+100, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height-(44.0f + [UIDevice vg_statusBarHeight])-(49.0f))];
     UIView *contentView = [[UIView alloc]initWithFrame:CGRectMake(0, (44.0f + [UIDevice statusOrLevel])+100, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height-(44.0f + [UIDevice statusOrLevel])-(49.0f))];
-    //: contentView.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+    //: contentView.backgroundColor = [UIColor colorWithHexString:@"#fffBusy"];
     contentView.backgroundColor = [UIColor status:[AfterData show_titleMsg]];
     //: contentView.layer.cornerRadius = 34;
     contentView.layer.cornerRadius = 34;
@@ -1289,7 +1289,7 @@ typedef struct {
     labedit.font = [UIFont systemFontOfSize:14];
     //: labedit.textColor = [UIColor colorWithHexString:@"#2C3042"];
     labedit.textColor = [UIColor status:[AfterData noti_factorContentPath]];
-    //: labedit.text = [FFFLanguageManager getTextWithKey:@"edit_profile"];
+    //: labedit.text = [BusyLanguageManager getTextWithKey:@"edit_profile"];
     labedit.text = [SendName streetSmart:[AfterData k_mName]];
     //: [editView addSubview:labedit];
     [editView addSubview:labedit];
@@ -1363,7 +1363,7 @@ typedef struct {
     label11.font = [UIFont systemFontOfSize:13.f];
     //: label11.textColor = [UIColor blackColor];
     label11.textColor = [UIColor blackColor];
-    //: label11.text = [FFFLanguageManager getTextWithKey:@"receiver_model"];
+    //: label11.text = [BusyLanguageManager getTextWithKey:@"receiver_model"];
     label11.text = [SendName streetSmart:[AfterData m_toolData]];
     //: [box1 addSubview:label11];
     [box1 addSubview:label11];
@@ -1402,7 +1402,7 @@ typedef struct {
     labellog.font = [UIFont systemFontOfSize:13.f];
     //: labellog.textColor = [UIColor blackColor];
     labellog.textColor = [UIColor blackColor];
-    //: labellog.text = [FFFLanguageManager getTextWithKey:@"my_log"];
+    //: labellog.text = [BusyLanguageManager getTextWithKey:@"my_log"];
     labellog.text = [SendName streetSmart:[AfterData notiClickId]];
     //: [boxlog addSubview:labellog];
     [boxlog addSubview:labellog];
@@ -1438,7 +1438,7 @@ typedef struct {
     label23.font = [UIFont systemFontOfSize:13.f];
     //: label23.textColor = [UIColor blackColor];
     label23.textColor = [UIColor blackColor];
-    //: label23.text = [FFFLanguageManager getTextWithKey:@"safe_setting_activity_title"];
+    //: label23.text = [BusyLanguageManager getTextWithKey:@"safe_setting_activity_title"];
     label23.text = [SendName streetSmart:[AfterData mNameId]];
     //: [box6 addSubview:label23];
     [box6 addSubview:label23];
@@ -1488,7 +1488,7 @@ typedef struct {
     label14.font = [UIFont systemFontOfSize:13.f];
     //: label14.textColor = [UIColor blackColor];
     label14.textColor = [UIColor blackColor];
-    //: label14.text = [FFFLanguageManager getTextWithKey:@"activity_comment_setting_ys"];
+    //: label14.text = [BusyLanguageManager getTextWithKey:@"activity_comment_setting_ys"];
     label14.text = [SendName streetSmart:[AfterData show_afterId]];//@"用户协议和隐私协议";
     //: [box3 addSubview:label14];
     [box3 addSubview:label14];
@@ -1530,7 +1530,7 @@ typedef struct {
     label22.font = [UIFont systemFontOfSize:13.f];
     //: label22.textColor = [UIColor blackColor];
     label22.textColor = [UIColor blackColor];
-    //: label22.text = [FFFLanguageManager getTextWithKey:@"feedback_activity_title"];
+    //: label22.text = [BusyLanguageManager getTextWithKey:@"feedback_activity_title"];
     label22.text = [SendName streetSmart:[AfterData showChildKey]];
     //: [box5 addSubview:label22];
     [box5 addSubview:label22];
@@ -1568,7 +1568,7 @@ typedef struct {
     label31.textColor = [UIColor blackColor];
     //: [box7 addSubview:label31];
     [box7 addSubview:label31];
-    //: NSString *fragment_my_version = [FFFLanguageManager getTextWithKey:@"fragment_my_version"];
+    //: NSString *fragment_my_version = [BusyLanguageManager getTextWithKey:@"fragment_my_version"];
     NSString *fragment_my_version = [SendName streetSmart:[AfterData k_messageName]];
     //: NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
     NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
@@ -1585,7 +1585,7 @@ typedef struct {
     loginButton.titleLabel.font = [UIFont systemFontOfSize:14];
     //: [loginButton setTitleColor:[UIColor colorWithHexString:@"5D5F66"] forState:UIControlStateNormal];
     [loginButton setTitleColor:[UIColor status:[AfterData show_titleValue]] forState:UIControlStateNormal];
-    //: [loginButton setTitle:[FFFLanguageManager getTextWithKey:@"activity_comment_setting_exit"] forState:UIControlStateNormal];
+    //: [loginButton setTitle:[BusyLanguageManager getTextWithKey:@"activity_comment_setting_exit"] forState:UIControlStateNormal];
     [loginButton setTitle:[SendName streetSmart:[AfterData mainRangeUrl]] forState:UIControlStateNormal];
     //: [loginButton addTarget:self action:@selector(logoutCurrentAccount) forControlEvents:UIControlEventTouchUpInside];
     [loginButton addTarget:self action:@selector(logoutOf) forControlEvents:UIControlEventTouchUpInside];
@@ -1607,7 +1607,7 @@ typedef struct {
 #pragma mark - NTESMainCenterDelegate
 //: -(void)userInfoCenter{
 -(void)sizeShow{
-    //: FFFUserInfoViewController *vc = [[FFFUserInfoViewController alloc] init];
+    //: BusyUserInfoViewController *vc = [[BusyUserInfoViewController alloc] init];
     TabularMatterOrientationReadUserViewController *vc = [[TabularMatterOrientationReadUserViewController alloc] init];
     //: [self.navigationController pushViewController:vc animated:YES];
     [self.navigationController pushViewController:vc animated:YES];
@@ -1735,18 +1735,18 @@ typedef struct {
 }
 //: -(void)exitApp{
 -(void)littlenessReceive{
-    //: NSString *alertStr = [FFFLanguageManager getTextWithKey:@"system_change_language_title"];
+    //: NSString *alertStr = [BusyLanguageManager getTextWithKey:@"system_change_language_title"];
     NSString *alertStr = [SendName streetSmart:[AfterData dream_voiceMessage]];
     //: UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:alertStr preferredStyle:UIAlertControllerStyleAlert];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:alertStr preferredStyle:UIAlertControllerStyleAlert];
-    //: [alert addAction:[UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_sure"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    //: [alert addAction:[UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_sure"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
     [alert addAction:[UIAlertAction actionWithTitle:[SendName streetSmart:[AfterData dream_nameFormat]] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //: exit(0);
         exit(0);
     //: }]];
     }]];
 
-    //: [alert addAction:[UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    //: [alert addAction:[UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
     [alert addAction:[UIAlertAction actionWithTitle:[SendName streetSmart:[AfterData show_pathName]] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
 
     //: }]];
@@ -1764,7 +1764,7 @@ typedef struct {
 
     //: ZMONPolicyPrivacyViewController *vc = [[ZMONPolicyPrivacyViewController alloc] init];
     InformationViewController *vc = [[InformationViewController alloc] init];
-    //: vc.webTitle = [FFFLanguageManager getTextWithKey:@"activity_comment_setting_ys"];
+    //: vc.webTitle = [BusyLanguageManager getTextWithKey:@"activity_comment_setting_ys"];
     vc.webTitle = [SendName streetSmart:[AfterData show_afterId]];//@"隐私协议";
     //: vc.urlString = [NIMUserDefaults standardUserDefaults].yshref;
     vc.urlString = [DataMaxDefaults max].yshref;

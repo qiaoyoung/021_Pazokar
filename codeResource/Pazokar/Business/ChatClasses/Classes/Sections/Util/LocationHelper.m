@@ -90,14 +90,14 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitFileLocationHelper.h"
+//: #import "BusyKitFileLocationHelper.h"
 #import "LocationHelper.h"
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
 //: #import <sys/stat.h>
 #import <sys/stat.h>
 
-//: @interface FFFKitFileLocationHelper ()
+//: @interface BusyKitFileLocationHelper ()
 @interface LocationHelper ()
 //: + (NSString *)filepathForDir: (NSString *)dirname filename: (NSString *)filename;
 + (NSString *)contentFilename: (NSString *)dirname produce: (NSString *)filename;
@@ -105,7 +105,7 @@ typedef struct {
 @end
 
 
-//: @implementation FFFKitFileLocationHelper
+//: @implementation BusyKitFileLocationHelper
 @implementation LocationHelper
 //: + (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL
 + (BOOL)canMaxAdd:(NSURL *)URL
@@ -158,7 +158,7 @@ typedef struct {
                                                             //: error:nil];
                                                             error:nil];
         }
-        //: [FFFKitFileLocationHelper addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:appDocumentPath]];
+        //: [BusyKitFileLocationHelper addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:appDocumentPath]];
         [LocationHelper canMaxAdd:[NSURL fileURLWithPath:appDocumentPath]];
     //: });
     });
@@ -177,7 +177,7 @@ typedef struct {
 //: + (NSString *)userDirectory
 + (NSString *)usufructuaryInDirectory
 {
-    //: NSString *documentPath = [FFFKitFileLocationHelper getAppDocumentPath];
+    //: NSString *documentPath = [BusyKitFileLocationHelper getAppDocumentPath];
     NSString *documentPath = [LocationHelper showOf];
     //: NSString *userID = [NIMSDK sharedSDK].loginManager.currentAccount;
     NSString *userID = [NIMSDK sharedSDK].loginManager.currentAccount;
@@ -208,7 +208,7 @@ typedef struct {
 //: + (NSString *)resourceDir: (NSString *)resouceName
 + (NSString *)noneEmpty: (NSString *)resouceName
 {
-    //: NSString *dir = [[FFFKitFileLocationHelper userDirectory] stringByAppendingPathComponent:resouceName];
+    //: NSString *dir = [[BusyKitFileLocationHelper userDirectory] stringByAppendingPathComponent:resouceName];
     NSString *dir = [[LocationHelper usufructuaryInDirectory] stringByAppendingPathComponent:resouceName];
     //: if (![[NSFileManager defaultManager] fileExistsAtPath:dir])
     if (![[NSFileManager defaultManager] fileExistsAtPath:dir])
@@ -230,7 +230,7 @@ typedef struct {
 //: + (NSString *)filepathForVideo:(NSString *)filename
 + (NSString *)searchVideo:(NSString *)filename
 {
-    //: return [FFFKitFileLocationHelper filepathForDir:@"video"
+    //: return [BusyKitFileLocationHelper filepathForDir:@"video"
     return [LocationHelper contentFilename:[InstallmentData dreamPoemIdent]
                                          //: filename:filename];
                                          produce:filename];
@@ -239,7 +239,7 @@ typedef struct {
 //: + (NSString *)filepathForImage:(NSString *)filename
 + (NSString *)tingUser:(NSString *)filename
 {
-    //: return [FFFKitFileLocationHelper filepathForDir:@"image"
+    //: return [BusyKitFileLocationHelper filepathForDir:@"image"
     return [LocationHelper contentFilename:[InstallmentData mSeedTitle]
                                          //: filename:filename];
                                          produce:filename];
@@ -270,7 +270,7 @@ typedef struct {
                     //: filename:(NSString *)filename
                     produce:(NSString *)filename
 {
-    //: return [[FFFKitFileLocationHelper resourceDir:dirname] stringByAppendingPathComponent:filename];
+    //: return [[BusyKitFileLocationHelper resourceDir:dirname] stringByAppendingPathComponent:filename];
     return [[LocationHelper noneEmpty:dirname] stringByAppendingPathComponent:filename];
 }
 

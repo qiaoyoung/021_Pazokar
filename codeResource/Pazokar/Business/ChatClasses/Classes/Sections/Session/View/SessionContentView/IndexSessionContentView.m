@@ -71,15 +71,15 @@
 //#import "WMPlayer.h"
 
 // __M_A_C_R_O__
-//: #import "FFFSessionVideoContentView.h"
+//: #import "BusySessionVideoContentView.h"
 #import "IndexSessionContentView.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFLoadProgressView.h"
+//: #import "BusyLoadProgressView.h"
 #import "BuildView.h"
 //: #import "NTESAVMoivePlayerController.h"
 #import "LabelController.h"
@@ -89,7 +89,7 @@
 //: static void *KVO_AVPlayerItem_state = &KVO_AVPlayerItem_state;
 static void *appViewId = &appViewId;
 
-//: @interface FFFSessionVideoContentView()
+//: @interface BusySessionVideoContentView()
 @interface IndexSessionContentView()
 
 //: @property (nonatomic,strong,readwrite) UIImageView * imageView;
@@ -98,7 +98,7 @@ static void *appViewId = &appViewId;
 //: @property (nonatomic,strong) UIButton *playBtn;
 @property (nonatomic,strong) UIButton *playBtn;
 
-//: @property (nonatomic,strong) FFFLoadProgressView * progressView;
+//: @property (nonatomic,strong) BusyLoadProgressView * progressView;
 @property (nonatomic,strong) BuildView * progressView;
 
 //: @property (nonatomic, strong) NSURL *fileURL;
@@ -119,7 +119,7 @@ static void *appViewId = &appViewId;
 //: @end
 @end
 
-//: @implementation FFFSessionVideoContentView
+//: @implementation BusySessionVideoContentView
 @implementation IndexSessionContentView
 
 //: - (instancetype)initSessionMessageContentView{
@@ -157,7 +157,7 @@ static void *appViewId = &appViewId;
         //: [self addSubview:_playBtn];
         [self addSubview:_playBtn];
 
-        //: _progressView = [[FFFLoadProgressView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+        //: _progressView = [[BusyLoadProgressView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
         _progressView = [[BuildView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
         //: _progressView.maxProgress = 1.0;
         _progressView.maxProgress = 1.0;
@@ -196,7 +196,7 @@ static void *appViewId = &appViewId;
    }
 }
 
-//: - (void)refresh:(FFFMessageModel *)data{
+//: - (void)refresh:(BusyMessageModel *)data{
 - (void)messagePress:(MoreModel *)data{
     //: [super refresh:data];
     [super messagePress:data];
@@ -389,9 +389,9 @@ static void *appViewId = &appViewId;
 //: - (void)onTouchUpInside:(id)sender
 - (void)objects:(id)sender
 {
-    //: FFFKitEvent *event = [[FFFKitEvent alloc] init];
+    //: BusyKitEvent *event = [[BusyKitEvent alloc] init];
     DirectionEvent *event = [[DirectionEvent alloc] init];
-    //: event.eventName = FFFKitEventNameTapContent;
+    //: event.eventName = BusyKitEventNameTapContent;
     event.eventName = notiMessageId;
     //: event.messageModel = self.model;
     event.messageModel = self.model;

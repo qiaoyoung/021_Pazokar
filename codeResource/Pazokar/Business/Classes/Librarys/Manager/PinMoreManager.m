@@ -443,7 +443,7 @@ static PinMoreManager *kResultUrl = nil;
 
     //: } failed:^(id responseObject, NSError *error) {
     } showResponseFailed:^(id responseObject, NSError *error) {
-        //: !complete ? : complete(NO,[FFFLanguageManager getTextWithKey:@"friend_verify_avtivity_net_error"]);
+        //: !complete ? : complete(NO,[BusyLanguageManager getTextWithKey:@"friend_verify_avtivity_net_error"]);
         !complete ? : complete(NO,[SendName streetSmart:[DemonData kDetectNameOnId]]);
     //: }];
     }];
@@ -597,7 +597,7 @@ static PinMoreManager *kResultUrl = nil;
 
         //: } failed:^(id responseObject, NSError *error) {
         } prolusionResponseFailed:^(id responseObject, NSError *error) {
-            //: [SVProgressHUD showMessage:[FFFLanguageManager getTextWithKey:@"register_avtivity3_register_fail"]];
+            //: [SVProgressHUD showMessage:[BusyLanguageManager getTextWithKey:@"register_avtivity3_register_fail"]];
             [SVProgressHUD stormCenter:[SendName streetSmart:[DemonData appFinId]]];
 
         //: }];

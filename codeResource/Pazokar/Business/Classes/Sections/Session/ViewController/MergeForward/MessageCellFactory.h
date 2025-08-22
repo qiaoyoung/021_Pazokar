@@ -9,7 +9,7 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFMessageCellFactory.h"
+//: #import "BusyMessageCellFactory.h"
 #import "MessageFactory.h"
 //: #import "NTESTimestampCell.h"
 #import "AlongView.h"
@@ -19,17 +19,17 @@
 //: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
-//: @interface NTESMessageCellFactory : FFFMessageCellFactory
+//: @interface NTESMessageCellFactory : BusyMessageCellFactory
 @interface MessageCellFactory : MessageFactory
 
 //: - (NTESMergeMessageCell *)ntesCellInTable:(UITableView*)tableView
 - (NameMessageCell *)littleLeagueTeam:(UITableView*)tableView
-                           //: forMessageMode:(FFFMessageModel *)model;
+                           //: forMessageMode:(BusyMessageModel *)model;
                            size:(MoreModel *)model;
 
 //: - (NTESTimestampCell *)ntesCellInTable:(UITableView *)tableView
 - (AlongView *)net:(UITableView *)tableView
-                          //: forTimeModel:(FFFTimestampModel *)model;
+                          //: forTimeModel:(BusyTimestampModel *)model;
                           total:(AppRow *)model;
 
 //: @end

@@ -9,9 +9,9 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFQuickCommentCell.h"
+//: #import "BusyQuickCommentCell.h"
 #import "EnableViewCell.h"
-//: #import "FFFKitQuickCommentUtil.h"
+//: #import "BusyKitQuickCommentUtil.h"
 #import "TapColorUtil.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
@@ -22,7 +22,7 @@
 //: #import "UIColor+MyUserKit.h"
 #import "UIColor+Case.h"
 
-//: @interface FFFQuickCommentCell ()
+//: @interface BusyQuickCommentCell ()
 @interface EnableViewCell ()
 
 //: @property (nonatomic, strong) M80AttributedLabel *textLabel;
@@ -33,7 +33,7 @@
 //: @end
 @end
 
-//: @implementation FFFQuickCommentCell
+//: @implementation BusyQuickCommentCell
 @implementation EnableViewCell
 
 
@@ -45,7 +45,7 @@
     //: if (self)
     if (self)
     {
-        //: _textLabel = [FFFKitQuickCommentUtil newCommentLabel];
+        //: _textLabel = [BusyKitQuickCommentUtil newCommentLabel];
         _textLabel = [TapColorUtil sizeGreen];
         //: [self.contentView addSubview:_textLabel];
         [self.contentView addSubview:_textLabel];
@@ -66,12 +66,12 @@
     return self;
 }
 
-//: - (void)refreshWithData:(NSArray *)comments model:(FFFMessageModel *)data
+//: - (void)refreshWithData:(NSArray *)comments model:(BusyMessageModel *)data
 - (void)sound:(NSArray *)comments dataSum:(MoreModel *)data
 {
-    //: self.textLabel.textColor = data.shouldShowLeft ? [UIColor colorWithHex:0x000000 alpha:1] : [UIColor colorWithHex:0xFFFFFF alpha:1];
+    //: self.textLabel.textColor = data.shouldShowLeft ? [UIColor colorWithHex:0x000000 alpha:1] : [UIColor colorWithHex:0xFFFBusy alpha:1];
     self.textLabel.textColor = data.shouldShowLeft ? [UIColor title:0x000000 from:1] : [UIColor title:0xFFFFFF from:1];
-    //: [self.textLabel nim_setText:[FFFKitQuickCommentUtil commentsContent:comments]];
+    //: [self.textLabel nim_setText:[BusyKitQuickCommentUtil commentsContent:comments]];
     [self.textLabel nameCover:[TapColorUtil tinkle:comments]];
 }
 

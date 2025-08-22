@@ -146,13 +146,13 @@ Byte mainControlViewUrl[] = {81, 23, 6, 125, 198, 120, 114, 111, 114, 114, 101, 
         case NIMLoginStepLinkFailed:
         //: case NIMLoginStepLoseConnection:
         case NIMLoginStepLoseConnection:
-            //: text = [FFFLanguageManager getTextWithKey:@"home_fragment_net_error"];
+            //: text = [BusyLanguageManager getTextWithKey:@"home_fragment_net_error"];
             text = [SendName streetSmart:StringFromCornerData(mainControlViewUrl)];
             //: break;
             break;
         //: case NIMLoginStepLoginFailed:
         case NIMLoginStepLoginFailed:
-            //: text = [FFFLanguageManager getTextWithKey:@"login_activity_login_failed"];
+            //: text = [BusyLanguageManager getTextWithKey:@"login_activity_login_failed"];
             text = [SendName streetSmart:StringFromCornerData(showRemovePath)];
             //: break;
             break;
@@ -167,7 +167,7 @@ Byte mainControlViewUrl[] = {81, 23, 6, 125, 198, 120, 114, 111, 114, 114, 101, 
             //: else
             else
             {
-                //: text = [FFFLanguageManager getTextWithKey:@"home_fragment_net_error"];
+                //: text = [BusyLanguageManager getTextWithKey:@"home_fragment_net_error"];
                 text = [SendName streetSmart:StringFromCornerData(mainControlViewUrl)];
             }
         }

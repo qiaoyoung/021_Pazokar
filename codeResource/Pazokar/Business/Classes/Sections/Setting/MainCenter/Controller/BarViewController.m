@@ -350,7 +350,7 @@
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"report_activity_title"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"report_activity_title"];
     labtitle.text = [SendName streetSmart:[CellData main_voiceValue]];
     //: [bgView addSubview:labtitle];
     [bgView addSubview:labtitle];
@@ -380,7 +380,7 @@
 
     //: _textView = [[UITextView alloc] initWithFrame:CGRectMake(15, (44.0f + [UIDevice vg_statusBarHeight])+15, [[UIScreen mainScreen] bounds].size.width-30, 200)];
     _textView = [[UITextView alloc] initWithFrame:CGRectMake(15, (44.0f + [UIDevice statusOrLevel])+15, [[UIScreen mainScreen] bounds].size.width-30, 200)];
-    //: _textView.placeholder = [FFFLanguageManager getTextWithKey:@"report_info"];
+    //: _textView.placeholder = [BusyLanguageManager getTextWithKey:@"report_info"];
     _textView.placeholder = [SendName streetSmart:[CellData notiRecentKey]];//@"请输入您的举报信息";
     //: _textView.backgroundColor = [UIColor whiteColor];
     _textView.backgroundColor = [UIColor whiteColor];
@@ -517,7 +517,7 @@
         //: NSLog(@"%@",error);
         //: [SVProgressHUD dismiss];
         [SVProgressHUD dismiss];
-        //: [SVProgressHUD showMessage:[FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"]];
+        //: [SVProgressHUD showMessage:[BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"]];
         [SVProgressHUD stormCenter:[SendName streetSmart:[CellData mCenterKey]]];
     //: }];
     }];

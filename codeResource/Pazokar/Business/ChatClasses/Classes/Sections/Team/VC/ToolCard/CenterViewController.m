@@ -134,12 +134,12 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamIntroduceViewController.h"
+//: #import "BusyTeamIntroduceViewController.h"
 #import "CenterViewController.h"
 //: #import "UITextView+Util.h"
 #import "UITextView+Util.h"
 
-//: @interface FFFTeamIntroduceViewController ()<UITextFieldDelegate, UITextViewDelegate>
+//: @interface BusyTeamIntroduceViewController ()<UITextFieldDelegate, UITextViewDelegate>
 @interface CenterViewController ()<UITextFieldDelegate, UITextViewDelegate>
 
 
@@ -157,7 +157,7 @@
 //: @end
 @end
 
-//: @implementation FFFTeamIntroduceViewController
+//: @implementation BusyTeamIntroduceViewController
 @implementation CenterViewController
 
 //: - (void)viewWillAppear:(BOOL)animated{
@@ -214,7 +214,7 @@
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"Group_description"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"Group_description"];
     labtitle.text = [SendName streetSmart:[BeatitudeData user_cliffStr]];
     //: [bgView addSubview:labtitle];
     [bgView addSubview:labtitle];
@@ -242,7 +242,7 @@
     self.contentTextView.font = [UIFont systemFontOfSize:16.f];
     //: self.contentTextView.delegate = self;
     self.contentTextView.delegate = self;
-    //: self.contentTextView.placeholder = [FFFLanguageManager getTextWithKey:@"Please_enter_content"];
+    //: self.contentTextView.placeholder = [BusyLanguageManager getTextWithKey:@"Please_enter_content"];
     self.contentTextView.placeholder = [SendName streetSmart:[BeatitudeData notiBottomName]];
     //: self.contentTextView.text = self.defaultContent;
     self.contentTextView.text = self.defaultContent;
@@ -266,7 +266,7 @@
         submitButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
         //: [submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [submitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        //: [submitButton setTitle:[FFFLanguageManager getTextWithKey:@"feedback_activity_submit"] forState:UIControlStateNormal];
+        //: [submitButton setTitle:[BusyLanguageManager getTextWithKey:@"feedback_activity_submit"] forState:UIControlStateNormal];
         [submitButton setTitle:[SendName streetSmart:[BeatitudeData userGuitarUrl]] forState:UIControlStateNormal];
         //: [submitButton addTarget:self action:@selector(onSave:) forControlEvents:UIControlEventTouchUpInside];
         [submitButton addTarget:self action:@selector(oned:) forControlEvents:UIControlEventTouchUpInside];

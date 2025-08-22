@@ -130,23 +130,23 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFInputEmoticonContainerView.h"
+//: #import "BusyInputEmoticonContainerView.h"
 #import "EastWestDirectionView.h"
-//: #import "FFFPageView.h"
+//: #import "BusyPageView.h"
 #import "PageView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFInputEmoticonButton.h"
+//: #import "BusyInputEmoticonButton.h"
 #import "PointButton.h"
-//: #import "FFFInputEmoticonManager.h"
+//: #import "BusyInputEmoticonManager.h"
 #import "DeviceManager.h"
-//: #import "FFFInputEmoticonTabView.h"
+//: #import "BusyInputEmoticonTabView.h"
 #import "ViewControl.h"
-//: #import "FFFInputEmoticonDefine.h"
-#import "FFFInputEmoticonDefine.h"
+//: #import "BusyInputEmoticonDefine.h"
+#import "BusyInputEmoticonDefine.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFMessageMaker.h"
+//: #import "BusyMessageMaker.h"
 #import "SharedMaker.h"
 
 //: NSInteger NIMCustomPageControlHeight = 36;
@@ -154,20 +154,20 @@ NSInteger show_styleStr = 36;
 //: NSInteger NIMCustomPageViewHeight = 159;
 NSInteger notiNamePath = 159;
 
-//: @interface FFFInputEmoticonContainerView()<NIMEmoticonButtonTouchDelegate,NIMInputEmoticonTabDelegate>
+//: @interface BusyInputEmoticonContainerView()<NIMEmoticonButtonTouchDelegate,NIMInputEmoticonTabDelegate>
 @interface EastWestDirectionView()<IndexChild,BirthdayDelegate>
 
 //: @property (nonatomic,strong) NSMutableArray *pageData;
 @property (nonatomic,strong) NSMutableArray *pageData;
 
-//: @property (nonatomic,strong) FFFInputEmoticonButton* deleteIcon;
+//: @property (nonatomic,strong) BusyInputEmoticonButton* deleteIcon;
 @property (nonatomic,strong) PointButton* deleteIcon;
 
 //: @end
 @end
 
 
-//: @implementation FFFInputEmoticonContainerView
+//: @implementation BusyInputEmoticonContainerView
 @implementation EastWestDirectionView
 
 //: - (instancetype)initWithFrame:(CGRect)frame
@@ -189,7 +189,7 @@ NSInteger notiNamePath = 159;
     self.backgroundColor = [UIColor status:[[DeserveData sharedInstance] main_successText]];
 }
 
-//: - (void)setConfig:(id<FFFSessionConfig>)config{
+//: - (void)setConfig:(id<BusySessionConfig>)config{
 - (void)setConfig:(id<QuantityelligenceInformationCan>)config{
     //: _config = config;
     _config = config;
@@ -341,7 +341,7 @@ NSInteger notiNamePath = 159;
             //: NIMInputEmoticon *data = [self.currentCatalogData.emoticons objectAtIndex:index];
             CityCenterWith *data = [self.currentCatalogData.emoticons objectAtIndex:index];
 
-            //: FFFInputEmoticonButton *button = [FFFInputEmoticonButton iconButtonWithData:data catalogID:self.currentCatalogData.catalogID delegate:self];
+            //: BusyInputEmoticonButton *button = [BusyInputEmoticonButton iconButtonWithData:data catalogID:self.currentCatalogData.catalogID delegate:self];
             PointButton *button = [PointButton input:data holdfast:self.currentCatalogData.catalogID icon:self];
             //计算表情位置
             //: rowIndex = indexInPage / self.currentCatalogData.layout.columes;
@@ -384,7 +384,7 @@ NSInteger notiNamePath = 159;
 }
 
 
-//: - (UIView*)emojPageView:(FFFPageView*)pageView inEmoticonCatalog:(NIMInputEmoticonCatalog *)emoticon page:(NSInteger)page
+//: - (UIView*)emojPageView:(BusyPageView*)pageView inEmoticonCatalog:(NIMInputEmoticonCatalog *)emoticon page:(NSInteger)page
 - (UIView*)inLayer:(PageView*)pageView emojLabelPage:(ImageColor *)emoticon icon:(NSInteger)page
 {
     //: UIView *subView = [[UIView alloc] init];
@@ -415,7 +415,7 @@ NSInteger notiNamePath = 159;
         //: NIMInputEmoticon *data = [emoticon.emoticons objectAtIndex:index];
         CityCenterWith *data = [emoticon.emoticons objectAtIndex:index];
 
-        //: FFFInputEmoticonButton *button = [FFFInputEmoticonButton iconButtonWithData:data catalogID:emoticon.catalogID delegate:self];
+        //: BusyInputEmoticonButton *button = [BusyInputEmoticonButton iconButtonWithData:data catalogID:emoticon.catalogID delegate:self];
         PointButton *button = [PointButton input:data holdfast:emoticon.catalogID icon:self];
         //计算表情位置
         //: rowIndex = indexInPage / emoticon.layout.columes;
@@ -467,7 +467,7 @@ NSInteger notiNamePath = 159;
                 //: inEmoticonCatalog:(NIMInputEmoticonCatalog *)emoticon
                 canByImage:(ImageColor *)emoticon
 {
-    //: FFFInputEmoticonButton* deleteIcon = [[FFFInputEmoticonButton alloc] init];
+    //: BusyInputEmoticonButton* deleteIcon = [[BusyInputEmoticonButton alloc] init];
     PointButton* deleteIcon = [[PointButton alloc] init];
     //: deleteIcon.delegate = self;
     deleteIcon.delegate = self;
@@ -505,14 +505,14 @@ NSInteger notiNamePath = 159;
 
 //: #pragma mark - pageviewDelegate
 #pragma mark - pageviewDelegate
-//: - (NSInteger)numberOfPages: (FFFPageView *)pageView
+//: - (NSInteger)numberOfPages: (BusyPageView *)pageView
 - (NSInteger)ofses: (PageView *)pageView
 {
     //: return [self sumPages];
     return [self build];
 }
 
-//: - (UIView *)pageView:(FFFPageView *)pageView viewInPage:(NSInteger)index
+//: - (UIView *)pageView:(BusyPageView *)pageView viewInPage:(NSInteger)index
 - (UIView *)month:(PageView *)pageView input:(NSInteger)index
 {
     //: NSInteger page = 0;
@@ -539,7 +539,7 @@ NSInteger notiNamePath = 159;
 //: - (NIMInputEmoticonCatalog*)loadDefaultCatalog
 - (ImageColor*)blue
 {
-    //: NIMInputEmoticonCatalog *emoticonCatalog = [[FFFInputEmoticonManager sharedManager] emoticonCatalog:@"default"];
+    //: NIMInputEmoticonCatalog *emoticonCatalog = [[BusyInputEmoticonManager sharedManager] emoticonCatalog:@"default"];
     ImageColor *emoticonCatalog = [[DeviceManager history] play:[[DeserveData sharedInstance] dream_ayeMessage]];
     //: if (emoticonCatalog) {
     if (emoticonCatalog) {
@@ -557,7 +557,7 @@ NSInteger notiNamePath = 159;
 //: - (NIMInputEmoticonCatalog*)loadGifCatalog
 - (ImageColor*)buttonCreate
 {
-    //: NIMInputEmoticonCatalog *emoticonCatalog = [[FFFInputEmoticonManager sharedManager] emoticonCatalog:@"gif"];
+    //: NIMInputEmoticonCatalog *emoticonCatalog = [[BusyInputEmoticonManager sharedManager] emoticonCatalog:@"gif"];
     ImageColor *emoticonCatalog = [[DeviceManager history] play:[[DeserveData sharedInstance] dreamVirusMessage]];
     //: if (emoticonCatalog) {
     if (emoticonCatalog) {
@@ -664,7 +664,7 @@ NSInteger notiNamePath = 159;
     }
 }
 
-//: - (void)pageViewScrollEnd: (FFFPageView *)pageView
+//: - (void)pageViewScrollEnd: (BusyPageView *)pageView
 - (void)change: (PageView *)pageView
              //: currentIndex: (NSInteger)index
              convert: (NSInteger)index
@@ -736,7 +736,7 @@ NSInteger notiNamePath = 159;
 
 //: #pragma mark - InputEmoticonTabDelegate
 #pragma mark - InputEmoticonTabDelegate
-//: - (void)tabView:(FFFInputEmoticonTabView *)tabView didSelectTabIndex:(NSInteger) index{
+//: - (void)tabView:(BusyInputEmoticonTabView *)tabView didSelectTabIndex:(NSInteger) index{
 - (void)send:(ViewControl *)tabView childShared:(NSInteger) index{
     //: self.currentCatalogData = self.totalCatalogData[index];
     self.currentCatalogData = self.totalCatalogData[index];
@@ -779,12 +779,12 @@ NSInteger notiNamePath = 159;
 
 //: #pragma mark - Get
 #pragma mark - Get
-//: - (FFFInputEmoticonTabView *)tabView
+//: - (BusyInputEmoticonTabView *)tabView
 - (ViewControl *)tabView
 {
     //: if (!_tabView) {
     if (!_tabView) {
-        //: _tabView = [[FFFInputEmoticonTabView alloc] initWithFrame:CGRectMake(0, 0, self.nim_width, 0)];
+        //: _tabView = [[BusyInputEmoticonTabView alloc] initWithFrame:CGRectMake(0, 0, self.nim_width, 0)];
         _tabView = [[ViewControl alloc] initWithFrame:CGRectMake(0, 0, self.nim_width, 0)];
         //: _tabView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         _tabView.autoresizingMask = UIViewAutoresizingFlexibleWidth;

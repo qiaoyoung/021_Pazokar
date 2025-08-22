@@ -378,20 +378,20 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamAnnouncementListViewController.h"
+//: #import "BusyTeamAnnouncementListViewController.h"
 #import "TextViewController.h"
-//: #import "FFFUsrInfoData.h"
-#import "FFFUsrInfoData.h"
-//: #import "FFFCreateTeamAnnouncement.h"
+//: #import "BusyUsrInfoData.h"
+#import "BusyUsrInfoData.h"
+//: #import "BusyCreateTeamAnnouncement.h"
 #import "AnnouncementViewController.h"
-//: #import "FFFTeamAnnouncementListCell.h"
+//: #import "BusyTeamAnnouncementListCell.h"
 #import "EdictViewCell.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
-//: #import "FFFKitProgressHUD.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
+//: #import "BusyKitProgressHUD.h"
 #import "KitEffectView.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 //: #import "LEEAlert.h"
 #import "StraddleAlert.h"
 //: #import "LEEAlertHelper.h"
@@ -399,7 +399,7 @@
 //: #import "ZMONAlartView.h"
 #import "CanView.h"
 
-//: @interface FFFTeamAnnouncementListViewController () <UITableViewDelegate,
+//: @interface BusyTeamAnnouncementListViewController () <UITableViewDelegate,
 @interface TextViewController () <UITableViewDelegate,
                                                      //: UITableViewDataSource,
                                                      UITableViewDataSource,
@@ -424,7 +424,7 @@
 //: @end
 @end
 
-//: @implementation FFFTeamAnnouncementListViewController
+//: @implementation BusyTeamAnnouncementListViewController
 @implementation TextViewController
 
 //: - (instancetype)initWithOption:(NIMTeamAnnouncementListOption *)option {
@@ -491,7 +491,7 @@
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"activity_group_info_group_toast"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"activity_group_info_group_toast"];
     labtitle.text = [SendName streetSmart:[DetectConversationData sharedInstance].noti_petStr];//群公告
     //: [bgView addSubview:labtitle];
     [bgView addSubview:labtitle];
@@ -555,7 +555,7 @@
 
 //: - (void)onCreateAnnouncement:(id)sender {
 - (void)sent:(id)sender {
-    //: FFFCreateTeamAnnouncement *vc = [[FFFCreateTeamAnnouncement alloc] initWithNibName:nil bundle:nil];
+    //: BusyCreateTeamAnnouncement *vc = [[BusyCreateTeamAnnouncement alloc] initWithNibName:nil bundle:nil];
     AnnouncementViewController *vc = [[AnnouncementViewController alloc] initWithNibName:nil bundle:nil];
     //: vc.delegate = self;
     vc.delegate = self;
@@ -569,7 +569,7 @@
     //: NSDictionary *announcement = _announcements.lastObject;
     NSDictionary *announcement = _announcements.lastObject;
 
-    //: FFFCreateTeamAnnouncement *vc = [[FFFCreateTeamAnnouncement alloc] initWithNibName:nil bundle:nil];
+    //: BusyCreateTeamAnnouncement *vc = [[BusyCreateTeamAnnouncement alloc] initWithNibName:nil bundle:nil];
     AnnouncementViewController *vc = [[AnnouncementViewController alloc] initWithNibName:nil bundle:nil];
     //: vc.delegate = self;
     vc.delegate = self;
@@ -586,7 +586,7 @@
 
     //: [self.view addSubview:self.groupAlartView];
     [self.view addSubview:self.groupAlartView];
-    //: [self.groupAlartView reloadWithTitlename:[FFFLanguageManager getTextWithKey:@"sure_to_clear"]];
+    //: [self.groupAlartView reloadWithTitlename:[BusyLanguageManager getTextWithKey:@"sure_to_clear"]];
     [self.groupAlartView completeOf:[SendName streetSmart:[DetectConversationData sharedInstance].main_defensiveMessage]];
     //: [self.groupAlartView animationShow];
     [self.groupAlartView equal];
@@ -650,7 +650,7 @@
 {
     //: __weak typeof(self) wself = self;
     __weak typeof(self) wself = self;
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
 //    NSDictionary *announcement = @{@"title": @"",
 //                                   @"content": @"",
@@ -661,11 +661,11 @@
 
     //: [[NIMSDK sharedSDK].teamManager updateTeamAnnouncement:@"" teamId:wself.option.team.teamId completion:^(NSError *error) {
     [[NIMSDK sharedSDK].teamManager updateTeamAnnouncement:@"" teamId:wself.option.team.teamId completion:^(NSError *error) {
-        //: [FFFKitProgressHUD dismiss];
+        //: [BusyKitProgressHUD dismiss];
         [KitEffectView area];
         //: if(!error && wself) {
         if(!error && wself) {
-            //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"Clean_success"]];
+            //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"Clean_success"]];
             [wself.view makeToast:[SendName streetSmart:[DetectConversationData sharedInstance].notiListFormat]];// @"清理成功"
             //: wself.announcements = nil;
             wself.announcements = nil;
@@ -699,7 +699,7 @@
     //: NSString *content = [announcement objectForKey:@"content"];
     NSString *content = [announcement objectForKey:[DetectConversationData sharedInstance].mLabelIdent];
 
-    //: return [FFFTeamAnnouncementListCell cellHeight:content];
+    //: return [BusyTeamAnnouncementListCell cellHeight:content];
     return [EdictViewCell along:content];
 }
 
@@ -707,11 +707,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //: NSDictionary *announcement = _announcements.lastObject;
     NSDictionary *announcement = _announcements.lastObject;
-    //: FFFTeamAnnouncementListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FFFTeamAnnouncementListCell"];
+    //: BusyTeamAnnouncementListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BusyTeamAnnouncementListCell"];
     EdictViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EdictViewCell"];
     //: if (!cell) {
     if (!cell) {
-        //: cell = [[FFFTeamAnnouncementListCell alloc] initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"FFFTeamAnnouncementListCell"];
+        //: cell = [[BusyTeamAnnouncementListCell alloc] initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"BusyTeamAnnouncementListCell"];
         cell = [[EdictViewCell alloc] initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"EdictViewCell"];
     }
     //: [cell refreshData:announcement nick:_option.nick];
@@ -743,7 +743,7 @@
     //: ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
-    //: [FFFKitProgressHUD show];
+    //: [BusyKitProgressHUD show];
     [KitEffectView nim];
     //: if ([_delegate respondsToSelector:@selector(didUpdateAnnouncement:completion:)]) {
     if ([_delegate respondsToSelector:@selector(lastCompletion:redCompletion:)]) {
@@ -751,11 +751,11 @@
         __weak typeof(self) wself = self;
         //: [_delegate didUpdateAnnouncement:ret completion:^(NSError *error) {
         [_delegate lastCompletion:ret redCompletion:^(NSError *error) {
-            //: [FFFKitProgressHUD dismiss];
+            //: [BusyKitProgressHUD dismiss];
             [KitEffectView area];
             //: if(!error) {
             if(!error) {
-                //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"team_create_helper_create_success"]];
+                //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"team_create_helper_create_success"]];
                 [wself.view makeToast:[SendName streetSmart:[DetectConversationData sharedInstance].mainDifferentlyMessage]];
                 //: [wself updateAnnouncementsWithContent:ret];
                 [wself format:ret];
@@ -763,7 +763,7 @@
                 [wself.tableView reloadData];
             //: } else {
             } else {
-                //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"team_create_helper_create_failed"]];
+                //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"team_create_helper_create_failed"]];
                 [wself.view makeToast:[SendName streetSmart:[DetectConversationData sharedInstance].kMemberData]];
             }
         //: }];
@@ -821,7 +821,7 @@
         emptyTipLabel.textAlignment = NSTextAlignmentCenter;
         //: [_defView addSubview:emptyTipLabel];
         [_defView addSubview:emptyTipLabel];
-        //: emptyTipLabel.text = [FFFLanguageManager getTextWithKey:@"No_group_announcement"];
+        //: emptyTipLabel.text = [BusyLanguageManager getTextWithKey:@"No_group_announcement"];
         emptyTipLabel.text = [SendName streetSmart:[DetectConversationData sharedInstance].noti_situationIdent];
 
         //: if(_option.canCreateAnnouncement) {
@@ -834,7 +834,7 @@
             emptyButton.titleLabel.font = [UIFont systemFontOfSize:15];
             //: [emptyButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [emptyButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            //: [emptyButton setTitle:[FFFLanguageManager getTextWithKey:@"Create_group_announcement"] forState:UIControlStateNormal];
+            //: [emptyButton setTitle:[BusyLanguageManager getTextWithKey:@"Create_group_announcement"] forState:UIControlStateNormal];
             [emptyButton setTitle:[SendName streetSmart:[DetectConversationData sharedInstance].mainCurrentlyIdent] forState:UIControlStateNormal];
             //: [emptyButton setImage:[UIImage imageNamed:@"icon_add_w"] forState:UIControlStateNormal];
             [emptyButton setImage:[UIImage imageNamed:[DetectConversationData sharedInstance].m_hmIdent] forState:UIControlStateNormal];
@@ -889,7 +889,7 @@
         closeBtn.titleLabel.font = [UIFont systemFontOfSize:15];
         //: [closeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [closeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        //: [closeBtn setTitle:[FFFLanguageManager getTextWithKey:@"user_profile_avtivity_edit"] forState:UIControlStateNormal];
+        //: [closeBtn setTitle:[BusyLanguageManager getTextWithKey:@"user_profile_avtivity_edit"] forState:UIControlStateNormal];
         [closeBtn setTitle:[SendName streetSmart:[DetectConversationData sharedInstance].dream_malePath] forState:UIControlStateNormal];
         //: [closeBtn layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyleLeft) imageTitleSpace:10];
         [closeBtn reloadSession:(MKButtonEdgeInsetsStyleLeft) text:10];
@@ -913,7 +913,7 @@
         sureBtn.titleLabel.font = [UIFont systemFontOfSize:15];
         //: [sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        //: [sureBtn setTitle:[FFFLanguageManager getTextWithKey:@"delete"] forState:UIControlStateNormal];
+        //: [sureBtn setTitle:[BusyLanguageManager getTextWithKey:@"delete"] forState:UIControlStateNormal];
         [sureBtn setTitle:[SendName streetSmart:[DetectConversationData sharedInstance].m_sharpMessage] forState:UIControlStateNormal];
         //: [sureBtn layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyleLeft) imageTitleSpace:10];
         [sureBtn reloadSession:(MKButtonEdgeInsetsStyleLeft) text:10];

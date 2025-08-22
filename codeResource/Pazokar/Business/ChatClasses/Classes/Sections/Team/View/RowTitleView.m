@@ -21,10 +21,10 @@ Byte show_yaMpName[] = {8, 23, 69, 5, 143, 36, 30, 42, 41, 26, 28, 30, 30, 32, 4
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamCartSetTableViewCell.h"
+//: #import "BusyTeamCartSetTableViewCell.h"
 #import "RowTitleView.h"
 
-//: @implementation FFFTeamCartSetTableViewCell
+//: @implementation BusyTeamCartSetTableViewCell
 @implementation RowTitleView
 
 //: - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -61,14 +61,14 @@ Byte show_yaMpName[] = {8, 23, 69, 5, 143, 36, 30, 42, 41, 26, 28, 30, 30, 32, 4
 //: + (instancetype)cellWithTableView:(UITableView *)tableView
 + (instancetype)input:(UITableView *)tableView
 {
-    //: static NSString *identifier = @"FFFTeamCartSetTableViewCell";
+    //: static NSString *identifier = @"BusyTeamCartSetTableViewCell";
     static NSString *identifier = @"RowTitleView";
-    //: FFFTeamCartSetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    //: BusyTeamCartSetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     RowTitleView *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     //: if (!cell)
     if (!cell)
     {
-        //: cell = [[FFFTeamCartSetTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        //: cell = [[BusyTeamCartSetTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell = [[RowTitleView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
 
     }

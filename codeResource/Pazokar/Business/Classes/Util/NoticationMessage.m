@@ -124,8 +124,8 @@
 // __M_A_C_R_O__
 //: #import "NTESNoticationUtil.h"
 #import "NoticationMessage.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
 
 //: @implementation NTESNoticationUtil
 @implementation NoticationMessage

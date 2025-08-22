@@ -642,11 +642,11 @@
         return [NSDate end:self textQuantity:[[CloseData sharedInstance] m_myCargoFormat]];
     //: } else if ([components day] >= 2) {
     } else if ([components day] >= 2) {
-        //: return [FFFLanguageManager getTextWithKey:@"before_yesterday"];
+        //: return [BusyLanguageManager getTextWithKey:@"before_yesterday"];
         return [SendName streetSmart:[[CloseData sharedInstance] notiReliabilityValue]];
     //: } else if ([components day] >= 1) {
     } else if ([components day] >= 1) {
-        //: return [FFFLanguageManager getTextWithKey:@"yesterday"];
+        //: return [BusyLanguageManager getTextWithKey:@"yesterday"];
         return [SendName streetSmart:[[CloseData sharedInstance] app_viewFormat]];
     //: } else if ([components hour] > 0) {
     } else if ([components hour] > 0) {

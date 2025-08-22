@@ -11,18 +11,18 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFSessionConfig.h"
+//: #import "BusySessionConfig.h"
 #import "QuantityelligenceInformationCan.h"
-//: #import "FFFInputProtocol.h"
-#import "FFFInputProtocol.h"
+//: #import "BusyInputProtocol.h"
+#import "BusyInputProtocol.h"
 
 //: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
-//: @interface FFFInputAudioView : UIView
+//: @interface BusyInputAudioView : UIView
 @interface SaluteView : UIView
 
-//: @property (nonatomic,weak) id<FFFSessionConfig> config;
+//: @property (nonatomic,weak) id<BusySessionConfig> config;
 @property (nonatomic,weak) id<QuantityelligenceInformationCan> config;
 //: @property (nonatomic,weak) id<NIMInputActionDelegate> actionDelegate;
 @property (nonatomic,weak) id<FuturismDelegate> actionDelegate;

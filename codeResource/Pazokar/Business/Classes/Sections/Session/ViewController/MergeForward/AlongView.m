@@ -22,7 +22,7 @@ Byte dream_reliabilityMsg[] = {44, 10, 59, 12, 106, 19, 188, 41, 57, 59, 186, 47
 #import "AlongView.h"
 //: #import "UIView+NTES.h"
 #import "UIView+Date.h"
-//: #import "FFFTimestampModel.h"
+//: #import "BusyTimestampModel.h"
 #import "AppRow.h"
 
 //: @interface NTESTimestampCell ()
@@ -76,9 +76,9 @@ Byte dream_reliabilityMsg[] = {44, 10, 59, 12, 106, 19, 188, 41, 57, 59, 186, 47
     _lineRight.centerY = self.timeLabel.centerY;
 }
 
-//: - (void)refreshData:(FFFTimestampModel *)data {
+//: - (void)refreshData:(BusyTimestampModel *)data {
 - (void)stopMetadata:(AppRow *)data {
-    //: if ([data isKindOfClass:[FFFTimestampModel class]]) {
+    //: if ([data isKindOfClass:[BusyTimestampModel class]]) {
     if ([data isKindOfClass:[AppRow class]]) {
         //: self.timeLabel.text = [self timeFormatString:data.messageTime];
         self.timeLabel.text = [self wearer:data.messageTime];

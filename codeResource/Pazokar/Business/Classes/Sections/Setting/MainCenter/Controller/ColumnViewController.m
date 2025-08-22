@@ -238,7 +238,7 @@
     labtitle.textColor = [UIColor status:[SemenAwarenessData sharedInstance].m_idealFormat];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"my_log"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"my_log"];
     labtitle.text = [SendName streetSmart:[SemenAwarenessData sharedInstance].mainLineName];
     //: [self.view addSubview:labtitle];
     [self.view addSubview:labtitle];
@@ -399,7 +399,7 @@
         emptyTipLabel.textAlignment = NSTextAlignmentCenter;
         //: [_defView addSubview:emptyTipLabel];
         [_defView addSubview:emptyTipLabel];
-        //: emptyTipLabel.text = [FFFLanguageManager getTextWithKey:@"group_info_activity_without"];
+        //: emptyTipLabel.text = [BusyLanguageManager getTextWithKey:@"group_info_activity_without"];
         emptyTipLabel.text = [SendName streetSmart:[SemenAwarenessData sharedInstance].appAggressiveUrl];
     }
     //: return _defView;

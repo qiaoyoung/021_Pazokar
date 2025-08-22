@@ -9,8 +9,8 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFBaseSessionContentConfig.h"
-#import "FFFBaseSessionContentConfig.h"
+//: #import "BusyBaseSessionContentConfig.h"
+#import "BusyBaseSessionContentConfig.h"
 
 //: @interface NTESChatroomTextContentConfig : NSObject<CCCSessionContentConfig>
 @interface BuildCan : NSObject<ViewConfig>

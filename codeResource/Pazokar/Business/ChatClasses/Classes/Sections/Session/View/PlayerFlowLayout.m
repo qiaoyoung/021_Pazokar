@@ -20,7 +20,7 @@
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 // __M_A_C_R_O__
-//: #import "FFFCollectionViewLeftAlignedLayout.h"
+//: #import "BusyCollectionViewLeftAlignedLayout.h"
 #import "PlayerFlowLayout.h"
 
 //: @interface UICollectionViewLayoutAttributes (LeftAligned)
@@ -52,7 +52,7 @@
 //: #pragma mark -
 #pragma mark -
 
-//: @implementation FFFCollectionViewLeftAlignedLayout
+//: @implementation BusyCollectionViewLeftAlignedLayout
 @implementation PlayerFlowLayout
 
 //: #pragma mark - UICollectionViewLayout

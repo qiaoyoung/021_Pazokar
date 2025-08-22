@@ -27,21 +27,21 @@ Byte notiMSharpValue[] = {62, 11, 95, 7, 28, 179, 129, 134, 41, 60, 134, 92, 91,
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamCardHeaderView.h"
+//: #import "BusyTeamCardHeaderView.h"
 #import "LabelTagView.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
 
-//: @interface FFFTeamCardHeaderView ()
+//: @interface BusyTeamCardHeaderView ()
 @interface LabelTagView ()
 
-//: @property (nonatomic,strong) FFFAvatarImageView *avatar;
+//: @property (nonatomic,strong) BusyAvatarImageView *avatar;
 @property (nonatomic,strong) CustomFormatView *avatar;
 
 //: @property (nonatomic,strong) UILabel *titleLabel;
@@ -56,7 +56,7 @@ Byte notiMSharpValue[] = {62, 11, 95, 7, 28, 179, 129, 134, 41, 60, 134, 92, 91,
 //: @end
 @end
 
-//: @implementation FFFTeamCardHeaderView
+//: @implementation BusyTeamCardHeaderView
 @implementation LabelTagView
 
 //: - (instancetype)initWithFrame:(CGRect)frame {
@@ -181,11 +181,11 @@ Byte notiMSharpValue[] = {62, 11, 95, 7, 28, 179, 129, 134, 41, 60, 134, 92, 91,
 
 //: #pragma mark - Getter
 #pragma mark - Getter
-//: - (FFFAvatarImageView *)avatar {
+//: - (BusyAvatarImageView *)avatar {
 - (CustomFormatView *)avatar {
     //: if (!_avatar) {
     if (!_avatar) {
-        //: _avatar = [[FFFAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+        //: _avatar = [[BusyAvatarImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
         _avatar = [[CustomFormatView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
         //: [_avatar addTarget:self
         [_avatar addTarget:self

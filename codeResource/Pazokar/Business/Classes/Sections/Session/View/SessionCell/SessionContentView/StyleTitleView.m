@@ -86,7 +86,7 @@ NSString *const notiStyleId = @"NIMDemoEventNameCloseSnapPicture";
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)model{
+//: - (void)refresh:(BusyMessageModel *)model{
 - (void)messagePress:(MoreModel *)model{
     //: [super refresh:model];
     [super messagePress:model];
@@ -101,7 +101,7 @@ NSString *const notiStyleId = @"NIMDemoEventNameCloseSnapPicture";
     //: self.longpressGesture.enabled = !attachment.isFired;
     self.longpressGesture.enabled = !attachment.isFired;
 
-    //禁用掉FFFMessageCell中的长按手势，防止手势冲突
+    //禁用掉BusyMessageCell中的长按手势，防止手势冲突
     //: [self disableMessageCellGesture:!attachment.isFired];
     [self by:!attachment.isFired];
 }
@@ -188,7 +188,7 @@ NSString *const notiStyleId = @"NIMDemoEventNameCloseSnapPicture";
 - (void)countOn{
     //: if ([self.delegate respondsToSelector:@selector(onCatchEvent:)]) {
     if ([self.delegate respondsToSelector:@selector(memberEvent:)]) {
-        //: FFFKitEvent *event = [[FFFKitEvent alloc] init];
+        //: BusyKitEvent *event = [[BusyKitEvent alloc] init];
         DirectionEvent *event = [[DirectionEvent alloc] init];
         //: event.eventName = NIMDemoEventNameOpenSnapPicture;
         event.eventName = app_imageIdent;
@@ -205,7 +205,7 @@ NSString *const notiStyleId = @"NIMDemoEventNameCloseSnapPicture";
 - (void)changeNim{
     //: if ([self.delegate respondsToSelector:@selector(onCatchEvent:)]) {
     if ([self.delegate respondsToSelector:@selector(memberEvent:)]) {
-        //: FFFKitEvent *event = [[FFFKitEvent alloc] init];
+        //: BusyKitEvent *event = [[BusyKitEvent alloc] init];
         DirectionEvent *event = [[DirectionEvent alloc] init];
         //: event.eventName = NIMDemoEventNameCloseSnapPicture;
         event.eventName = notiStyleId;

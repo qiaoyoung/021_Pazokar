@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 //: @end
 @end
 
-//: @interface NTESThreadDataSourceProvider : NSObject <FFFKitMessageProvider>
+//: @interface NTESThreadDataSourceProvider : NSObject <BusyKitMessageProvider>
 @interface ValueSourceBubble : NSObject <ToiletKitImageProviderDevice>
 
 //: @property (nonatomic,strong) NIMMessage *threadMessage;

@@ -27,7 +27,7 @@
 //: @end
 @end
 
-//: @interface FFFInputAtCache : NSObject
+//: @interface BusyInputAtCache : NSObject
 @interface VersionPointCache : NSObject
 
 //: - (NSArray *)allAtUid:(NSString *)sendText;

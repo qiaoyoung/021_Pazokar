@@ -249,7 +249,7 @@ typedef struct {
     _mesBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     //: [_mesBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_mesBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //: [_mesBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_my_tag_activity_my_friend"] forState:UIControlStateNormal];
+    //: [_mesBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_my_tag_activity_my_friend"] forState:UIControlStateNormal];
     [_mesBtn setTitle:[SendName streetSmart:[MakeData main_modeMsg]] forState:UIControlStateNormal];
     //: [_mesBtn addTarget:self action:@selector(sliderButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [_mesBtn addTarget:self action:@selector(voiced:) forControlEvents:UIControlEventTouchUpInside];
@@ -269,7 +269,7 @@ typedef struct {
     _resqBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     //: [_resqBtn setTitleColor:[UIColor colorWithHexString:@"#5D5F66"] forState:UIControlStateNormal];
     [_resqBtn setTitleColor:[UIColor status:[MakeData app_bottomKey]] forState:UIControlStateNormal];
-    //: [_resqBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_fragment_group"] forState:UIControlStateNormal];
+    //: [_resqBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_fragment_group"] forState:UIControlStateNormal];
     [_resqBtn setTitle:[SendName streetSmart:[MakeData m_memberName]] forState:UIControlStateNormal];
     //: [_resqBtn addTarget:self action:@selector(sliderButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [_resqBtn addTarget:self action:@selector(voiced:) forControlEvents:UIControlEventTouchUpInside];

@@ -90,9 +90,9 @@ Byte m_letterPath[] = {82, 20, 33, 12, 36, 8, 197, 249, 109, 179, 157, 238, 111,
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamHelper.h"
+//: #import "BusyTeamHelper.h"
 #import "EnvelopingTitle.h"
-//: #import "FFFTeamCardRowItem.h"
+//: #import "BusyTeamCardRowItem.h"
 #import "ToAGreaterExtentItem.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
@@ -106,7 +106,7 @@ static NSString *const mainRecentFormat = @"kTeamHelperValue";
 //: static NSString *const kTeamHelperImg = @"kTeamHelperImg";
 static NSString *const notiSessionData = @"kTeamHelperImg";
 
-//: @implementation FFFTeamHelper
+//: @implementation BusyTeamHelper
 @implementation EnvelopingTitle
 
 //: #pragma mark - 验证方式
@@ -119,7 +119,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamJoinModeNoAuth),
                          mainRecentFormat : @(NIMTeamJoinModeNoAuth),
-                         //: kTeamHelperText : [FFFTeamHelper jonModeText:NIMTeamJoinModeNoAuth],
+                         //: kTeamHelperText : [BusyTeamHelper jonModeText:NIMTeamJoinModeNoAuth],
                          notiQuickUrl : [EnvelopingTitle bar:NIMTeamJoinModeNoAuth],
                          //: kTeamHelperImg: @"ic_all_yes",
                          notiSessionData: StringFromModeDropData(dream_linePath),
@@ -129,7 +129,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamJoinModeNeedAuth),
                          mainRecentFormat : @(NIMTeamJoinModeNeedAuth),
-                         //: kTeamHelperText : [FFFTeamHelper jonModeText:NIMTeamJoinModeNeedAuth],
+                         //: kTeamHelperText : [BusyTeamHelper jonModeText:NIMTeamJoinModeNeedAuth],
                          notiQuickUrl : [EnvelopingTitle bar:NIMTeamJoinModeNeedAuth],
                          //: kTeamHelperImg: @"ic_yanzheng_yes",
                          notiSessionData: StringFromModeDropData(userInfoData),
@@ -139,7 +139,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamJoinModeRejectAll),
                          mainRecentFormat : @(NIMTeamJoinModeRejectAll),
-                         //: kTeamHelperText : [FFFTeamHelper jonModeText:NIMTeamJoinModeRejectAll],
+                         //: kTeamHelperText : [BusyTeamHelper jonModeText:NIMTeamJoinModeRejectAll],
                          notiQuickUrl : [EnvelopingTitle bar:NIMTeamJoinModeRejectAll],
                          //: kTeamHelperImg: @"ic_all_no",
                          notiSessionData: StringFromModeDropData(showNameMessage),
@@ -157,15 +157,15 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
     switch (mode) {
         //: case NIMTeamJoinModeNoAuth:
         case NIMTeamJoinModeNoAuth:
-            //: return [FFFLanguageManager getTextWithKey:@"Allow_anyone"];
+            //: return [BusyLanguageManager getTextWithKey:@"Allow_anyone"];
             return [SendName streetSmart:StringFromModeDropData(showFinPath)];//@"允许任何人".;
         //: case NIMTeamJoinModeNeedAuth:
         case NIMTeamJoinModeNeedAuth:
-            //: return [FFFLanguageManager getTextWithKey:@"Need_verification"];
+            //: return [BusyLanguageManager getTextWithKey:@"Need_verification"];
             return [SendName streetSmart:StringFromModeDropData(show_perceiveMsg)];//@"需要验证".;
         //: case NIMTeamJoinModeRejectAll:
         case NIMTeamJoinModeRejectAll:
-            //: return [FFFLanguageManager getTextWithKey:@"Reject_anyone"];
+            //: return [BusyLanguageManager getTextWithKey:@"Reject_anyone"];
             return [SendName streetSmart:StringFromModeDropData(userOmitKey)];//@"拒绝任何人".;
         //: default:
         default:
@@ -174,8 +174,8 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
     }
 }
 
-//: + (NSMutableArray<id <FFFKitSelectCardData>> *)joinModeItemsWithSeleced:(NIMTeamJoinMode)mode {
-+ (NSMutableArray<id <FFFKitSelectCardData>> *)unite:(NIMTeamJoinMode)mode {
+//: + (NSMutableArray<id <BusyKitSelectCardData>> *)joinModeItemsWithSeleced:(NIMTeamJoinMode)mode {
++ (NSMutableArray<id <BusyKitSelectCardData>> *)unite:(NIMTeamJoinMode)mode {
     //: return [self itemsWithListDic:[self allJoinModes] selectValue:mode];
     return [self perimeter:[self checked] count:mode];
 }
@@ -190,7 +190,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamInviteModeManager),
                          mainRecentFormat : @(NIMTeamInviteModeManager),
-                         //: kTeamHelperText : [FFFTeamHelper InviteModeText:NIMTeamInviteModeManager],
+                         //: kTeamHelperText : [BusyTeamHelper InviteModeText:NIMTeamInviteModeManager],
                          notiQuickUrl : [EnvelopingTitle user:NIMTeamInviteModeManager],
                          //: kTeamHelperImg: @"ic_guanliyuan",
                          notiSessionData: StringFromModeDropData(show_nearlyHydraContent),
@@ -200,7 +200,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamInviteModeAll),
                          mainRecentFormat : @(NIMTeamInviteModeAll),
-                         //: kTeamHelperText : [FFFTeamHelper InviteModeText:NIMTeamInviteModeAll],
+                         //: kTeamHelperText : [BusyTeamHelper InviteModeText:NIMTeamInviteModeAll],
                          notiQuickUrl : [EnvelopingTitle user:NIMTeamInviteModeAll],
                          //: kTeamHelperImg: @"ic_all",
                          notiSessionData: StringFromModeDropData(appImageHormoneStr),
@@ -218,11 +218,11 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
     switch (mode) {
         //: case NIMTeamInviteModeManager:
         case NIMTeamInviteModeManager:
-            //: return [FFFLanguageManager getTextWithKey:@"group_member_info_activity_team_admin"];
+            //: return [BusyLanguageManager getTextWithKey:@"group_member_info_activity_team_admin"];
             return [SendName streetSmart:StringFromModeDropData(mainFullSideHormoneKey)];//@"管理员".;
         //: case NIMTeamInviteModeAll:
         case NIMTeamInviteModeAll:
-            //: return [FFFLanguageManager getTextWithKey:@"Group_Everyone"];
+            //: return [BusyLanguageManager getTextWithKey:@"Group_Everyone"];
             return [SendName streetSmart:StringFromModeDropData(dreamCanData)];//@"所有人".;
         //: default:
         default:
@@ -231,8 +231,8 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
     }
 }
 
-//: + (NSMutableArray<id <FFFKitSelectCardData>> *)InviteModeItemsWithSeleced:(NIMTeamInviteMode)mode {
-+ (NSMutableArray<id <FFFKitSelectCardData>> *)pin:(NIMTeamInviteMode)mode {
+//: + (NSMutableArray<id <BusyKitSelectCardData>> *)InviteModeItemsWithSeleced:(NIMTeamInviteMode)mode {
++ (NSMutableArray<id <BusyKitSelectCardData>> *)pin:(NIMTeamInviteMode)mode {
     //: return [self itemsWithListDic:[self allInviteModes] selectValue:mode];
     return [self perimeter:[self sumModes] count:mode];
 }
@@ -247,7 +247,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamBeInviteModeNeedAuth),
                          mainRecentFormat : @(NIMTeamBeInviteModeNeedAuth),
-                         //: kTeamHelperText : [FFFTeamHelper beInviteModeText:NIMTeamBeInviteModeNeedAuth],
+                         //: kTeamHelperText : [BusyTeamHelper beInviteModeText:NIMTeamBeInviteModeNeedAuth],
                          notiQuickUrl : [EnvelopingTitle onTitle:NIMTeamBeInviteModeNeedAuth],
                          //: kTeamHelperImg: @"ic_yanzheng_yes",
                          notiSessionData: StringFromModeDropData(userInfoData),
@@ -257,7 +257,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamBeInviteModeNoAuth),
                          mainRecentFormat : @(NIMTeamBeInviteModeNoAuth),
-                         //: kTeamHelperText : [FFFTeamHelper beInviteModeText:NIMTeamBeInviteModeNoAuth],
+                         //: kTeamHelperText : [BusyTeamHelper beInviteModeText:NIMTeamBeInviteModeNoAuth],
                          notiQuickUrl : [EnvelopingTitle onTitle:NIMTeamBeInviteModeNoAuth],
                          //: kTeamHelperImg: @"ic_yanzheng_no",
                          notiSessionData: StringFromModeDropData(dreamSelectAheadName),
@@ -275,11 +275,11 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
     switch (mode) {
         //: case NIMTeamBeInviteModeNeedAuth:
         case NIMTeamBeInviteModeNeedAuth:
-            //: return [FFFLanguageManager getTextWithKey:@"Need_verification"];
+            //: return [BusyLanguageManager getTextWithKey:@"Need_verification"];
             return [SendName streetSmart:StringFromModeDropData(show_perceiveMsg)];//@"需要验证".;
         //: case NIMTeamBeInviteModeNoAuth:
         case NIMTeamBeInviteModeNoAuth:
-            //: return [FFFLanguageManager getTextWithKey:@"No_Need_verification"];
+            //: return [BusyLanguageManager getTextWithKey:@"No_Need_verification"];
             return [SendName streetSmart:StringFromModeDropData(m_letterPath)];//@"不需要验证".;
         //: default:
         default:
@@ -288,8 +288,8 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
     }
 }
 
-//: + (NSMutableArray<id <FFFKitSelectCardData>> *)beInviteModeItemsWithSeleced:(NIMTeamBeInviteMode)mode {
-+ (NSMutableArray<id <FFFKitSelectCardData>> *)messageRecord:(NIMTeamBeInviteMode)mode {
+//: + (NSMutableArray<id <BusyKitSelectCardData>> *)beInviteModeItemsWithSeleced:(NIMTeamBeInviteMode)mode {
++ (NSMutableArray<id <BusyKitSelectCardData>> *)messageRecord:(NIMTeamBeInviteMode)mode {
     //: return [self itemsWithListDic:[self allBeInviteModes] selectValue:mode];
     return [self perimeter:[self image] count:mode];
 }
@@ -304,7 +304,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamUpdateInfoModeManager),
                          mainRecentFormat : @(NIMTeamUpdateInfoModeManager),
-                         //: kTeamHelperText : [FFFTeamHelper updateInfoModeText:NIMTeamUpdateInfoModeManager],
+                         //: kTeamHelperText : [BusyTeamHelper updateInfoModeText:NIMTeamUpdateInfoModeManager],
                          notiQuickUrl : [EnvelopingTitle imageNameText:NIMTeamUpdateInfoModeManager],
                          //: kTeamHelperImg: @"ic_guanliyuan",
                          notiSessionData: StringFromModeDropData(show_nearlyHydraContent),
@@ -314,7 +314,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamUpdateInfoModeAll),
                          mainRecentFormat : @(NIMTeamUpdateInfoModeAll),
-                         //: kTeamHelperText : [FFFTeamHelper updateInfoModeText:NIMTeamUpdateInfoModeAll],
+                         //: kTeamHelperText : [BusyTeamHelper updateInfoModeText:NIMTeamUpdateInfoModeAll],
                          notiQuickUrl : [EnvelopingTitle imageNameText:NIMTeamUpdateInfoModeAll],
                          //: kTeamHelperImg: @"ic_all",
                          notiSessionData: StringFromModeDropData(appImageHormoneStr),
@@ -332,11 +332,11 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
     switch (mode) {
         //: case NIMTeamUpdateInfoModeManager:
         case NIMTeamUpdateInfoModeManager:
-            //: return [FFFLanguageManager getTextWithKey:@"group_member_info_activity_team_admin"];
+            //: return [BusyLanguageManager getTextWithKey:@"group_member_info_activity_team_admin"];
             return [SendName streetSmart:StringFromModeDropData(mainFullSideHormoneKey)];//@"管理员".;
         //: case NIMTeamUpdateInfoModeAll:
         case NIMTeamUpdateInfoModeAll:
-            //: return [FFFLanguageManager getTextWithKey:@"Group_Everyone"];
+            //: return [BusyLanguageManager getTextWithKey:@"Group_Everyone"];
             return [SendName streetSmart:StringFromModeDropData(dreamCanData)];//@"所有人".;
         //: default:
         default:
@@ -345,8 +345,8 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
     }
 }
 
-//: + (NSMutableArray<id <FFFKitSelectCardData>> *)updateInfoModeItemsWithSeleced:(NIMTeamUpdateInfoMode)mode {
-+ (NSMutableArray<id <FFFKitSelectCardData>> *)bubbleSize:(NIMTeamUpdateInfoMode)mode {
+//: + (NSMutableArray<id <BusyKitSelectCardData>> *)updateInfoModeItemsWithSeleced:(NIMTeamUpdateInfoMode)mode {
++ (NSMutableArray<id <BusyKitSelectCardData>> *)bubbleSize:(NIMTeamUpdateInfoMode)mode {
     //: return [self itemsWithListDic:[self allUpdateInfoModes] selectValue:mode];
     return [self perimeter:[self shoot] count:mode];
 }
@@ -361,7 +361,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamNotifyStateAll),
                          mainRecentFormat : @(NIMTeamNotifyStateAll),
-                         //: kTeamHelperText : [FFFTeamHelper notifyStateText:NIMTeamNotifyStateAll],
+                         //: kTeamHelperText : [BusyTeamHelper notifyStateText:NIMTeamNotifyStateAll],
                          notiQuickUrl : [EnvelopingTitle closedSession:NIMTeamNotifyStateAll],
                          //: kTeamHelperImg: @"ic_reminde_all",
                          notiSessionData: StringFromModeDropData(app_poemData),
@@ -371,7 +371,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamNotifyStateNone),
                          mainRecentFormat : @(NIMTeamNotifyStateNone),
-                         //: kTeamHelperText : [FFFTeamHelper notifyStateText:NIMTeamNotifyStateNone],
+                         //: kTeamHelperText : [BusyTeamHelper notifyStateText:NIMTeamNotifyStateNone],
                          notiQuickUrl : [EnvelopingTitle closedSession:NIMTeamNotifyStateNone],
                          //: kTeamHelperImg: @"ic_reminde_all_no",
                          notiSessionData: StringFromModeDropData(mainMallPinMessage),
@@ -381,7 +381,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamNotifyStateOnlyManager),
                          mainRecentFormat : @(NIMTeamNotifyStateOnlyManager),
-                         //: kTeamHelperText : [FFFTeamHelper notifyStateText:NIMTeamNotifyStateOnlyManager],
+                         //: kTeamHelperText : [BusyTeamHelper notifyStateText:NIMTeamNotifyStateOnlyManager],
                          notiQuickUrl : [EnvelopingTitle closedSession:NIMTeamNotifyStateOnlyManager],
                          //: kTeamHelperImg: @"ic_reminde_manager",
                          notiSessionData: StringFromModeDropData(dream_winterData),
@@ -401,7 +401,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamNotifyStateAll),
                          mainRecentFormat : @(NIMTeamNotifyStateAll),
-                         //: kTeamHelperText : [FFFTeamHelper notifyStateText:NIMTeamNotifyStateAll],
+                         //: kTeamHelperText : [BusyTeamHelper notifyStateText:NIMTeamNotifyStateAll],
                          notiQuickUrl : [EnvelopingTitle closedSession:NIMTeamNotifyStateAll],
                          //: kTeamHelperImg: @"ic_reminde_all",
                          notiSessionData: StringFromModeDropData(app_poemData),
@@ -411,7 +411,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NIMTeamNotifyStateNone),
                          mainRecentFormat : @(NIMTeamNotifyStateNone),
-                         //: kTeamHelperText : [FFFTeamHelper notifyStateText:NIMTeamNotifyStateNone],
+                         //: kTeamHelperText : [BusyTeamHelper notifyStateText:NIMTeamNotifyStateNone],
                          notiQuickUrl : [EnvelopingTitle closedSession:NIMTeamNotifyStateNone],
                          //: kTeamHelperImg: @"ic_reminde_all_no",
                          notiSessionData: StringFromModeDropData(mainMallPinMessage),
@@ -429,15 +429,15 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
     switch (state) {
         //: case NIMTeamNotifyStateAll:
         case NIMTeamNotifyStateAll:
-            //: return [FFFLanguageManager getTextWithKey:@"group_info_activity_team_notify_all"];
+            //: return [BusyLanguageManager getTextWithKey:@"group_info_activity_team_notify_all"];
             return [SendName streetSmart:StringFromModeDropData(m_consciousnessImageIdent)];//@"提醒所有消息".;
         //: case NIMTeamNotifyStateNone:
         case NIMTeamNotifyStateNone:
-            //: return [FFFLanguageManager getTextWithKey:@"group_info_activity_team_notify_mute"];
+            //: return [BusyLanguageManager getTextWithKey:@"group_info_activity_team_notify_mute"];
             return [SendName streetSmart:StringFromModeDropData(show_absoluteStr)];//@"不提醒任何消息".;
         //: case NIMTeamNotifyStateOnlyManager:
         case NIMTeamNotifyStateOnlyManager:
-            //: return [FFFLanguageManager getTextWithKey:@"group_info_activity_team_notify_manager"];
+            //: return [BusyLanguageManager getTextWithKey:@"group_info_activity_team_notify_manager"];
             return [SendName streetSmart:StringFromModeDropData(kGuaranteeText)];//@"只提醒管理员消息".;
         //: default:
         default:
@@ -446,14 +446,14 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
     }
 }
 
-//: + (NSMutableArray<id <FFFKitSelectCardData>> *)notifyStateItemsWithSeleced:(NIMTeamNotifyState)state {
-+ (NSMutableArray<id <FFFKitSelectCardData>> *)showAcross:(NIMTeamNotifyState)state {
+//: + (NSMutableArray<id <BusyKitSelectCardData>> *)notifyStateItemsWithSeleced:(NIMTeamNotifyState)state {
++ (NSMutableArray<id <BusyKitSelectCardData>> *)showAcross:(NIMTeamNotifyState)state {
     //: return [self itemsWithListDic:[self allNotifyStates] selectValue:state];
     return [self perimeter:[self all] count:state];
 }
 
-//: + (NSMutableArray<id <FFFKitSelectCardData>> *)superNotifyStateItemsWithSeleced:(NIMTeamNotifyState)state {
-+ (NSMutableArray<id <FFFKitSelectCardData>> *)with:(NIMTeamNotifyState)state {
+//: + (NSMutableArray<id <BusyKitSelectCardData>> *)superNotifyStateItemsWithSeleced:(NIMTeamNotifyState)state {
++ (NSMutableArray<id <BusyKitSelectCardData>> *)with:(NIMTeamNotifyState)state {
     //: return [self itemsWithListDic:[self allSuperNotifyStates] selectValue:state];
     return [self perimeter:[self textIndexView] count:state];
 }
@@ -468,7 +468,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(YES),
                          mainRecentFormat : @(YES),
-                         //: kTeamHelperText : [FFFTeamHelper teamMuteText:YES]
+                         //: kTeamHelperText : [BusyTeamHelper teamMuteText:YES]
                          notiQuickUrl : [EnvelopingTitle publication:YES]
                          //: },
                          },
@@ -476,7 +476,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
                      @{
                          //: kTeamHelperValue : @(NO),
                          mainRecentFormat : @(NO),
-                         //: kTeamHelperText : [FFFTeamHelper teamMuteText:NO]
+                         //: kTeamHelperText : [BusyTeamHelper teamMuteText:NO]
                          notiQuickUrl : [EnvelopingTitle publication:NO]
                          //: },
                          },
@@ -487,12 +487,12 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
 }
 //: + (NSString *)teamMuteText:(BOOL)isMute {
 + (NSString *)publication:(BOOL)isMute {
-    //: return isMute ? [FFFLanguageManager getTextWithKey:@"group_info_activity_open"] : [FFFLanguageManager getTextWithKey:@"group_info_activity_close"];
+    //: return isMute ? [BusyLanguageManager getTextWithKey:@"group_info_activity_open"] : [BusyLanguageManager getTextWithKey:@"group_info_activity_close"];
     return isMute ? [SendName streetSmart:StringFromModeDropData(dream_protectText)] : [SendName streetSmart:StringFromModeDropData(showLaserText)];
 }
 
-//: + (NSMutableArray<id <FFFKitSelectCardData>> *)teamMuteItemsWithSeleced:(BOOL)isMute {
-+ (NSMutableArray<id <FFFKitSelectCardData>> *)reply:(BOOL)isMute {
+//: + (NSMutableArray<id <BusyKitSelectCardData>> *)teamMuteItemsWithSeleced:(BOOL)isMute {
++ (NSMutableArray<id <BusyKitSelectCardData>> *)reply:(BOOL)isMute {
     //: return [self itemsWithListDic:[self allTeamMuteState] selectValue:isMute];
     return [self perimeter:[self erase] count:isMute];
 }
@@ -505,19 +505,19 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
     switch (type) {
         //: case NIMTeamMemberTypeNormal:
         case NIMTeamMemberTypeNormal:
-            //: return [FFFLanguageManager getTextWithKey:@"group_info_activity_team_member"];
+            //: return [BusyLanguageManager getTextWithKey:@"group_info_activity_team_member"];
             return [SendName streetSmart:StringFromModeDropData(show_spouseValue)];//@"普通成员".;
         //: case NIMTeamMemberTypeOwner:
         case NIMTeamMemberTypeOwner:
-            //: return [FFFLanguageManager getTextWithKey:@"group_member_info_activity_team_creator"];
+            //: return [BusyLanguageManager getTextWithKey:@"group_member_info_activity_team_creator"];
             return [SendName streetSmart:StringFromModeDropData(dream_spectacularName)];//@"群主".;
         //: case NIMTeamMemberTypeManager:
         case NIMTeamMemberTypeManager:
-            //: return [FFFLanguageManager getTextWithKey:@"group_member_info_activity_team_admin"];
+            //: return [BusyLanguageManager getTextWithKey:@"group_member_info_activity_team_admin"];
             return [SendName streetSmart:StringFromModeDropData(mainFullSideHormoneKey)];//@"管理员".;
         //: default:
         default:
-            //: return [FFFLanguageManager getTextWithKey:@"online_state_event_manager_unknown"];
+            //: return [BusyLanguageManager getTextWithKey:@"online_state_event_manager_unknown"];
             return [SendName streetSmart:StringFromModeDropData(show_beliefLeadershipName)];//@"未知".;
     }
 }
@@ -561,7 +561,7 @@ static NSString *const notiSessionData = @"kTeamHelperImg";
     NSMutableArray *items = [[NSMutableArray alloc] init];
     //: for (NSDictionary *dic in listDic) {
     for (NSDictionary *dic in listDic) {
-        //: FFFTeamCardRowItem *item = [[FFFTeamCardRowItem alloc] init];
+        //: BusyTeamCardRowItem *item = [[BusyTeamCardRowItem alloc] init];
         ToAGreaterExtentItem *item = [[ToAGreaterExtentItem alloc] init];
         //: item.value = dic[kTeamHelperValue];
         item.value = dic[mainRecentFormat];

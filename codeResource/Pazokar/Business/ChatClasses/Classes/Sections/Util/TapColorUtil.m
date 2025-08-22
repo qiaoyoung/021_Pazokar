@@ -74,19 +74,19 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitQuickCommentUtil.h"
+//: #import "BusyKitQuickCommentUtil.h"
 #import "TapColorUtil.h"
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFInputEmoticonManager.h"
+//: #import "BusyInputEmoticonManager.h"
 #import "DeviceManager.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
 
 //: static const CGFloat kHeightPerRow = 25.0;
@@ -101,7 +101,7 @@ const CGFloat main_nowMessage = 5.f;
 NSString * const kPanPath = @"emoticon_emoji_%02ld";
 
 
-//: @implementation FFFKitQuickCommentUtil
+//: @implementation BusyKitQuickCommentUtil
 @implementation TapColorUtil
 
 //: + (void)initialize
@@ -152,7 +152,7 @@ NSString * const kPanPath = @"emoticon_emoji_%02ld";
 {
     //: NSString *ID = [NSString stringWithFormat:NIMKitQuickCommentFormat, (long)comment.replyType];
     NSString *ID = [NSString stringWithFormat:kPanPath, (long)comment.replyType];
-    //: NIMInputEmoticon *emoticon = [[FFFInputEmoticonManager sharedManager] emoticonByID:ID];
+    //: NIMInputEmoticon *emoticon = [[BusyInputEmoticonManager sharedManager] emoticonByID:ID];
     CityCenterWith *emoticon = [[DeviceManager history] pagingTing:ID];
     //: NSString *content = nil;
     NSString *content = nil;
@@ -352,13 +352,13 @@ NSString * const kPanPath = @"emoticon_emoji_%02ld";
 //: + (NSString *)showNameWithCommentFrom:(NIMQuickComment *)comment
 + (NSString *)filter:(NIMQuickComment *)comment
 {
-    //: FFFKitInfo *info = nil;
+    //: BusyKitInfo *info = nil;
     Info *info = nil;
     //: NIMChatExtendBasicInfo *basicInfo = comment.basicInfo;
     NIMChatExtendBasicInfo *basicInfo = comment.basicInfo;
     //: NIMSession *session = basicInfo.session;
     NIMSession *session = basicInfo.session;
-    //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+    //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
     InfoGreenImage *option = [[InfoGreenImage alloc] init];
     //: option.session = session;
     option.session = session;

@@ -9,24 +9,24 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionLayoutImpl.h"
+//: #import "BusySessionLayoutImpl.h"
 #import "NamePraiseVersion.h"
 //: #import "UITableView+NIMScrollToBottom.h"
 #import "UITableView+NIMScrollToBottom.h"
-//: #import "FFFMessageCell.h"
+//: #import "BusyMessageCell.h"
 #import "CompartmentViewCell.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
-//: #import "FFFSessionTableAdapter.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
+//: #import "BusySessionTableAdapter.h"
 #import "PinAdapter.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFKitKeyboardInfo.h"
+//: #import "BusyKitKeyboardInfo.h"
 #import "AffairWith.h"
-//: #import "FFFReplyContentView.h"
+//: #import "BusyReplyContentView.h"
 #import "NoticeTagView.h"
 
-//: @interface FFFSessionLayoutImpl()
+//: @interface BusySessionLayoutImpl()
 @interface NamePraiseVersion()
 {
     //: NSMutableArray *_inserts;
@@ -41,7 +41,7 @@
 //: @property (nonatomic,strong) NIMSession *session;
 @property (nonatomic,strong) NIMSession *session;
 
-//: @property (nonatomic,strong) id<FFFSessionConfig> sessionConfig;
+//: @property (nonatomic,strong) id<BusySessionConfig> sessionConfig;
 @property (nonatomic,strong) id<QuantityelligenceInformationCan> sessionConfig;
 
 //: @property (nonatomic,weak) id<NIMSessionLayoutDelegate> delegate;
@@ -50,12 +50,12 @@
 //: @end
 @end
 
-//: @implementation FFFSessionLayoutImpl
+//: @implementation BusySessionLayoutImpl
 @implementation NamePraiseVersion
 
 //: - (instancetype)initWithSession:(NIMSession *)session
 - (instancetype)initWithHideTool:(NIMSession *)session
-                         //: config:(id<FFFSessionConfig>)sessionConfig
+                         //: config:(id<BusySessionConfig>)sessionConfig
                          indexConfig:(id<QuantityelligenceInformationCan>)sessionConfig
 {
     //: self = [super init];
@@ -235,7 +235,7 @@
 //: #pragma mark - Private
 #pragma mark - Private
 
-//: - (void)calculateContent:(FFFMessageModel *)model{
+//: - (void)calculateContent:(BusyMessageModel *)model{
 - (void)assemblage:(MoreModel *)model{
     //: if ([NSThread isMainThread]) {^{ [model contentSize:self.tableView.nim_width]; }();} else {dispatch_sync(dispatch_get_main_queue(), ^{ [model contentSize:self.tableView.nim_width]; });};
     if ([NSThread isMainThread]) {^{ [model searched:self.tableView.nim_width]; }();} else {dispatch_sync(dispatch_get_main_queue(), ^{ [model searched:self.tableView.nim_width]; });};
@@ -400,7 +400,7 @@
 //: - (void)update:(NSIndexPath *)indexPath
 - (void)socialStatus:(NSIndexPath *)indexPath
 {
-    //: FFFMessageCell *cell = (FFFMessageCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    //: BusyMessageCell *cell = (BusyMessageCell *)[self.tableView cellForRowAtIndexPath:indexPath];
     CompartmentViewCell *cell = (CompartmentViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
     //: if (cell) {
     if (cell) {

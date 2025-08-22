@@ -84,9 +84,9 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFInputEmoticonParser.h"
+//: #import "BusyInputEmoticonParser.h"
 #import "ViewApp.h"
-//: #import "FFFInputEmoticonManager.h"
+//: #import "BusyInputEmoticonManager.h"
 #import "DeviceManager.h"
 
 //: @implementation NIMInputTextToken
@@ -94,7 +94,7 @@
 //: @end
 @end
 
-//: @interface FFFInputEmoticonParser ()
+//: @interface BusyInputEmoticonParser ()
 @interface ViewApp ()
 //: @property (nonatomic,strong) NSCache *tokens;
 @property (nonatomic,strong) NSCache *tokens;
@@ -102,18 +102,18 @@
 @end
 
 
-//: @implementation FFFInputEmoticonParser
+//: @implementation BusyInputEmoticonParser
 @implementation ViewApp
 //: + (instancetype)currentParser
 + (instancetype)today
 {
-    //: static FFFInputEmoticonParser *instance = nil;
+    //: static BusyInputEmoticonParser *instance = nil;
     static ViewApp *instance = nil;
     //: static dispatch_once_t onceToken;
     static dispatch_once_t onceToken;
     //: _dispatch_once(&onceToken, ^{
     _dispatch_once(&onceToken, ^{
-        //: instance = [[FFFInputEmoticonParser alloc] init];
+        //: instance = [[BusyInputEmoticonParser alloc] init];
         instance = [[ViewApp alloc] init];
     //: });
     });
@@ -190,7 +190,7 @@
                        usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
                            //: NSString *rangeText = [text substringWithRange:result.range];
                            NSString *rangeText = [text substringWithRange:result.range];
-                           //: if ([[FFFInputEmoticonManager sharedManager] emoticonByTag:rangeText])
+                           //: if ([[BusyInputEmoticonManager sharedManager] emoticonByTag:rangeText])
                            if ([[DeviceManager history] viewText:rangeText])
                            {
                                //: if (result.range.location > index)

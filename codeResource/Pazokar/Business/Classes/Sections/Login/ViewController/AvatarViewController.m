@@ -295,7 +295,7 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFRegisterAvatarViewController.h"
+//: #import "BusyRegisterAvatarViewController.h"
 #import "AvatarViewController.h"
 //: #import "SVProgressHUD.h"
 #import "SVProgressHUD.h"
@@ -326,7 +326,7 @@ typedef struct {
 //: #import "NTESRegistConfigManager.h"
 #import "PinMoreManager.h"
 
-//: @interface FFFRegisterAvatarViewController ()
+//: @interface BusyRegisterAvatarViewController ()
 @interface AvatarViewController ()
 
 
@@ -349,7 +349,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFRegisterAvatarViewController
+//: @implementation BusyRegisterAvatarViewController
 @implementation AvatarViewController
 
 //: - (void)viewDidLoad {
@@ -400,7 +400,7 @@ typedef struct {
     titleLabel.textColor = [UIColor blackColor];
     //: titleLabel.font = [UIFont boldSystemFontOfSize:24];
     titleLabel.font = [UIFont boldSystemFontOfSize:24];
-    //: titleLabel.text = [FFFLanguageManager getTextWithKey:@"user_profile_avtivity_head"];
+    //: titleLabel.text = [BusyLanguageManager getTextWithKey:@"user_profile_avtivity_head"];
     titleLabel.text = [SendName streetSmart:[[ShouldData sharedInstance] notiControlUrl]];
     //: titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -413,7 +413,7 @@ typedef struct {
     self.accountLabel.font = [UIFont boldSystemFontOfSize:14];
     //: self.accountLabel.textColor = [UIColor colorWithHexString:@"#5D5F66"];
     self.accountLabel.textColor = [UIColor status:[[ShouldData sharedInstance] k_fainFormat]];
-    //: self.accountLabel.text = [FFFLanguageManager getTextWithKey:@"register_good_avater"];
+    //: self.accountLabel.text = [BusyLanguageManager getTextWithKey:@"register_good_avater"];
     self.accountLabel.text = [SendName streetSmart:[[ShouldData sharedInstance] dreamSeedTitle]];
     //: self.accountLabel.textAlignment = NSTextAlignmentCenter;
     self.accountLabel.textAlignment = NSTextAlignmentCenter;
@@ -496,7 +496,7 @@ typedef struct {
     self.registButton.titleLabel.font = [UIFont systemFontOfSize:16];
     //: [self.registButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.registButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //: [self.registButton setTitle:[FFFLanguageManager getTextWithKey:@"contact_list_activity_complete"] forState:UIControlStateNormal];
+    //: [self.registButton setTitle:[BusyLanguageManager getTextWithKey:@"contact_list_activity_complete"] forState:UIControlStateNormal];
     [self.registButton setTitle:[SendName streetSmart:[[ShouldData sharedInstance] dreamMessageData]] forState:UIControlStateNormal];
     //: [self.view addSubview:self.registButton];
     [self.view addSubview:self.registButton];
@@ -557,13 +557,13 @@ typedef struct {
 //            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 //        }
 
-        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"] message:[FFFLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
+        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"] message:[BusyLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[SendName streetSmart:[[ShouldData sharedInstance] dream_numberPath]] message:[SendName streetSmart:[[ShouldData sharedInstance] userRecentMessage]] preferredStyle:UIAlertControllerStyleAlert];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[[ShouldData sharedInstance] dream_lineFormat]] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         //: }])];
         }])];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[[ShouldData sharedInstance] noti_messageFormat]] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             //: NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
             NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
@@ -624,13 +624,13 @@ typedef struct {
 //            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 //        }
 
-        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"] message:[FFFLanguageManager getTextWithKey:@"setting_privacy"] preferredStyle:UIAlertControllerStyleAlert];
+        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"] message:[BusyLanguageManager getTextWithKey:@"setting_privacy"] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[SendName streetSmart:[[ShouldData sharedInstance] dream_numberPath]] message:[SendName streetSmart:[[ShouldData sharedInstance] dreamSeedFormat]] preferredStyle:UIAlertControllerStyleAlert];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[[ShouldData sharedInstance] dream_lineFormat]] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         //: }])];
         }])];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[[ShouldData sharedInstance] noti_messageFormat]] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             //: NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
             NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
@@ -665,7 +665,7 @@ typedef struct {
 //
 //    }];
 
-    //: UIAlertAction *picture = [UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"message_send_album"] style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    //: UIAlertAction *picture = [UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"message_send_album"] style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
     UIAlertAction *picture = [UIAlertAction actionWithTitle:[SendName streetSmart:[[ShouldData sharedInstance] main_listFormat]] style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
 
 //        [self pushTZImagePickerControllerWithAsset:nil];
@@ -675,7 +675,7 @@ typedef struct {
             //: }];
             }];
 
-    //: UIAlertAction *cancle = [UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
+    //: UIAlertAction *cancle = [UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
     UIAlertAction *cancle = [UIAlertAction actionWithTitle:[SendName streetSmart:[[ShouldData sharedInstance] dream_lineFormat]] style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
    //: }];
    }];
@@ -885,7 +885,7 @@ typedef struct {
         manager.headerImage = _headerImage;
     //: }else{
     }else{
-        //: [SVProgressHUD showMessage:[FFFLanguageManager getTextWithKey:@"register_avtivity3_avatar"]];
+        //: [SVProgressHUD showMessage:[BusyLanguageManager getTextWithKey:@"register_avtivity3_avatar"]];
         [SVProgressHUD stormCenter:[SendName streetSmart:[[ShouldData sharedInstance] mainSemenContent]]];
         //: return;
         return;

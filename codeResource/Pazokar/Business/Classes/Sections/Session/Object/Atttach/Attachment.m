@@ -54,7 +54,7 @@ Byte main_imageData[] = {47, 4, 92, 9, 53, 85, 3, 72, 158, 208, 213, 204, 193, 8
 #import "DeviceDate.h"
 //: #import "M80AttributedLabel.h"
 #import "CypherScrollView.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
 
 //: @interface NTESRedPacketTipAttachment()
@@ -141,7 +141,7 @@ Byte main_imageData[] = {47, 4, 92, 9, 53, 85, 3, 72, 158, 208, 213, 204, 193, 8
     //: NSString * currentUserId = [[NIMSDK sharedSDK].loginManager currentAccount];
     NSString * currentUserId = [[NIMSDK sharedSDK].loginManager currentAccount];
     // 领取别人的红包
-    //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+    //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
     InfoGreenImage *option = [[InfoGreenImage alloc] init];
     //: option.message = self.message;
     option.message = self.message;
@@ -165,7 +165,7 @@ Byte main_imageData[] = {47, 4, 92, 9, 53, 85, 3, 72, 158, 208, 213, 204, 193, 8
     //: else if ([currentUserId isEqualToString:self.openPacketId])
     else if ([currentUserId isEqualToString:self.openPacketId])
     {
-        //: FFFKitInfo * sendUserInfo = [[MyUserKit sharedKit] infoByUser:self.sendPacketId option:option];
+        //: BusyKitInfo * sendUserInfo = [[MyUserKit sharedKit] infoByUser:self.sendPacketId option:option];
         Info * sendUserInfo = [[Case pastTop] consumer:self.sendPacketId message:option];
         //: NSString * name = sendUserInfo.showName;
         NSString * name = sendUserInfo.showName;
@@ -183,7 +183,7 @@ Byte main_imageData[] = {47, 4, 92, 9, 53, 85, 3, 72, 158, 208, 213, 204, 193, 8
     //: else if ([currentUserId isEqualToString:self.sendPacketId])
     else if ([currentUserId isEqualToString:self.sendPacketId])
     {
-        //: FFFKitInfo * openUserInfo = [[MyUserKit sharedKit] infoByUser:self.openPacketId option:option];
+        //: BusyKitInfo * openUserInfo = [[MyUserKit sharedKit] infoByUser:self.openPacketId option:option];
         Info * openUserInfo = [[Case pastTop] consumer:self.openPacketId message:option];
         //: NSString * name = openUserInfo.showName;
         NSString * name = openUserInfo.showName;

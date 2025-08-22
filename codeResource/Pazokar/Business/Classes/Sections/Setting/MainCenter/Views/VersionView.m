@@ -17,7 +17,7 @@ typedef struct {
 //: #27303F
 @property (nonatomic, copy) NSString *showDefensiveModeUrl;
 
-//: #ffffff
+//: #fffBusy
 @property (nonatomic, copy) NSString *k_hockIdent;
 
 //: #F6F7FA
@@ -75,7 +75,7 @@ typedef struct {
     return _appForbidRedData;
 }
 
-//: #ffffff
+//: #fffBusy
 - (NSString *)k_hockIdent {
     if (!_k_hockIdent) {
         StructDismissData value = (StructDismissData){71, (Byte []){100, 33, 33, 33, 33, 33, 33, 223}, 7};
@@ -121,7 +121,7 @@ typedef struct {
         //: self.labTitle.frame = CGRectMake(40+32, 0, [[UIScreen mainScreen] bounds].size.width-80, 56);
         self.labTitle.frame = CGRectMake(40+32, 0, [[UIScreen mainScreen] bounds].size.width-80, 56);
 
-        //: self.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+        //: self.backgroundColor = [UIColor colorWithHexString:@"#fffBusy"];
         self.backgroundColor = [UIColor status:[DismissData sharedInstance].k_hockIdent];
         //: self.layer.cornerRadius = 12;
         self.layer.cornerRadius = 12;

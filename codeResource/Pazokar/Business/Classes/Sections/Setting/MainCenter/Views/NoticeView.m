@@ -43,7 +43,7 @@ AwarenessData dreamShowCornerStr = (AwarenessData){221, (Byte []){254, 237, 237,
 //: sex_unknow
 AwarenessData showTelevisionKey = (AwarenessData){84, (Byte []){39, 49, 44, 11, 33, 58, 63, 58, 59, 35, 179}, 10, 197, 43, 99, 135};
 
-//: #ffffff
+//: #fffBusy
 AwarenessData appSemenRedId = (AwarenessData){170, (Byte []){137, 204, 204, 204, 204, 204, 204, 198}, 7, 224, 213, 13, 83};
 
 //: user_info_avtivity_keep
@@ -142,7 +142,7 @@ AwarenessData kModePath = (AwarenessData){110, (Byte []){77, 94, 92, 42, 86, 45,
     CGFloat totalwidth = 295;
     //: _box = [[UIView alloc]initWithFrame:CGRectMake(([[UIScreen mainScreen] bounds].size.width-totalwidth)/2, ([[UIScreen mainScreen] bounds].size.height-250)/2, totalwidth, 250)];
     _box = [[UIView alloc]initWithFrame:CGRectMake(([[UIScreen mainScreen] bounds].size.width-totalwidth)/2, ([[UIScreen mainScreen] bounds].size.height-250)/2, totalwidth, 250)];
-    //: _box.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+    //: _box.backgroundColor = [UIColor colorWithHexString:@"#fffBusy"];
     _box.backgroundColor = [UIColor status:StringFromAwarenessData(&appSemenRedId)];
     //: _box.layer.cornerRadius = 20;
     _box.layer.cornerRadius = 20;
@@ -196,7 +196,7 @@ AwarenessData kModePath = (AwarenessData){110, (Byte []){77, 94, 92, 42, 86, 45,
     _labUnknow.textColor = [UIColor status:StringFromAwarenessData(&kModePath)];
     //: _labUnknow.textAlignment = NSTextAlignmentCenter;
     _labUnknow.textAlignment = NSTextAlignmentCenter;
-    //: _labUnknow.text = [FFFLanguageManager getTextWithKey:@"friend_info_activity_xu"];
+    //: _labUnknow.text = [BusyLanguageManager getTextWithKey:@"friend_info_activity_xu"];
     _labUnknow.text = [SendName streetSmart:StringFromAwarenessData(&mInmateName)];
     //: [view1 addSubview:_labUnknow];
     [view1 addSubview:_labUnknow];
@@ -242,7 +242,7 @@ AwarenessData kModePath = (AwarenessData){110, (Byte []){77, 94, 92, 42, 86, 45,
     _labMan.textColor = [UIColor blackColor];
     //: _labMan.textAlignment = NSTextAlignmentCenter;
     _labMan.textAlignment = NSTextAlignmentCenter;
-    //: _labMan.text = [FFFLanguageManager getTextWithKey:@"friend_info_activity_nan"];
+    //: _labMan.text = [BusyLanguageManager getTextWithKey:@"friend_info_activity_nan"];
     _labMan.text = [SendName streetSmart:StringFromAwarenessData(&mainFainProcedureMsg)];
     //: [view2 addSubview:_labMan];
     [view2 addSubview:_labMan];
@@ -287,7 +287,7 @@ AwarenessData kModePath = (AwarenessData){110, (Byte []){77, 94, 92, 42, 86, 45,
     _labWoman.textColor = [UIColor blackColor];
     //: _labWoman.textAlignment = NSTextAlignmentCenter;
     _labWoman.textAlignment = NSTextAlignmentCenter;
-    //: _labWoman.text = [FFFLanguageManager getTextWithKey:@"friend_info_activity_nv"];
+    //: _labWoman.text = [BusyLanguageManager getTextWithKey:@"friend_info_activity_nv"];
     _labWoman.text = [SendName streetSmart:StringFromAwarenessData(&showSeparateStr)];
     //: [view3 addSubview:_labWoman];
     [view3 addSubview:_labWoman];
@@ -425,7 +425,7 @@ AwarenessData kModePath = (AwarenessData){110, (Byte []){77, 94, 92, 42, 86, 45,
         //: _titleLabel.textColor = [UIColor colorWithHexString:@"#000000"];
         _titleLabel.textColor = [UIColor status:StringFromAwarenessData(&dreamShowCornerStr)];
 //        _titleLabel.textAlignment = NSTextAlignmentCenter;
-        //: _titleLabel.text = [FFFLanguageManager getTextWithKey:@"activity_friend_info_sex"];
+        //: _titleLabel.text = [BusyLanguageManager getTextWithKey:@"activity_friend_info_sex"];
         _titleLabel.text = [SendName streetSmart:StringFromAwarenessData(&dreamFainValue)];
     }
     //: return _titleLabel;
@@ -445,9 +445,9 @@ AwarenessData kModePath = (AwarenessData){110, (Byte []){77, 94, 92, 42, 86, 45,
         _closeBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         //: [_closeBtn setTitleColor:[UIColor colorWithHexString:@"#5D5F66"] forState:UIControlStateNormal];
         [_closeBtn setTitleColor:[UIColor status:StringFromAwarenessData(&notiMyTeamMsg)] forState:UIControlStateNormal];
-        //: [_closeBtn setTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
+        //: [_closeBtn setTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] forState:UIControlStateNormal];
         [_closeBtn setTitle:[SendName streetSmart:StringFromAwarenessData(&userShowUrl)] forState:UIControlStateNormal];
-        //: _closeBtn.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+        //: _closeBtn.backgroundColor = [UIColor colorWithHexString:@"#fffBusy"];
         _closeBtn.backgroundColor = [UIColor status:StringFromAwarenessData(&appSemenRedId)];
         //: _closeBtn.layer.cornerRadius = 22;
         _closeBtn.layer.cornerRadius = 22;
@@ -468,9 +468,9 @@ AwarenessData kModePath = (AwarenessData){110, (Byte []){77, 94, 92, 42, 86, 45,
         [_sureBtn addTarget:self action:@selector(existDate) forControlEvents:UIControlEventTouchUpInside];
         //: _sureBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         _sureBtn.titleLabel.font = [UIFont systemFontOfSize:16];
-        //: [_sureBtn setTitleColor:[UIColor colorWithHexString:@"#ffffff"] forState:UIControlStateNormal];
+        //: [_sureBtn setTitleColor:[UIColor colorWithHexString:@"#fffBusy"] forState:UIControlStateNormal];
         [_sureBtn setTitleColor:[UIColor status:StringFromAwarenessData(&appSemenRedId)] forState:UIControlStateNormal];
-        //: [_sureBtn setTitle:[FFFLanguageManager getTextWithKey:@"user_info_avtivity_keep"] forState:UIControlStateNormal];
+        //: [_sureBtn setTitle:[BusyLanguageManager getTextWithKey:@"user_info_avtivity_keep"] forState:UIControlStateNormal];
         [_sureBtn setTitle:[SendName streetSmart:StringFromAwarenessData(&kRecentUrl)] forState:UIControlStateNormal];
         //: CGFloat width = (295-60)/2;
         CGFloat width = (295-60)/2;

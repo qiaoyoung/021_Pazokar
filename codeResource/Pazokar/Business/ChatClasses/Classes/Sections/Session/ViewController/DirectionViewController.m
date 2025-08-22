@@ -421,68 +421,68 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionConfigurateProtocol.h"
-#import "FFFSessionConfigurateProtocol.h"
+//: #import "BusySessionConfigurateProtocol.h"
+#import "BusySessionConfigurateProtocol.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFMessageCellProtocol.h"
-#import "FFFMessageCellProtocol.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageCellProtocol.h"
+#import "BusyMessageCellProtocol.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
-//: #import "FFFBadgeView.h"
+//: #import "BusyBadgeView.h"
 #import "SharedView.h"
 //: #import "UITableView+NIMScrollToBottom.h"
 #import "UITableView+NIMScrollToBottom.h"
-//: #import "FFFMessageMaker.h"
+//: #import "BusyMessageMaker.h"
 #import "SharedMaker.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFSessionConfigurator.h"
+//: #import "BusySessionConfigurator.h"
 #import "ViewConfigurator.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
-//: #import "FFFKitTitleView.h"
+//: #import "BusyKitTitleView.h"
 #import "MyNameView.h"
-//: #import "FFFKitKeyboardInfo.h"
+//: #import "BusyKitKeyboardInfo.h"
 #import "AffairWith.h"
-//: #import "FFFReplyContentView.h"
+//: #import "BusyReplyContentView.h"
 #import "NoticeTagView.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
-//: #import "FFFKitQuickCommentUtil.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
+//: #import "BusyKitQuickCommentUtil.h"
 #import "TapColorUtil.h"
-//: #import "FFFBubbleMenuView.h"
+//: #import "BusyBubbleMenuView.h"
 #import "ButtonPointView.h"
-//: #import "FFFTextView.h"
+//: #import "BusyTextView.h"
 #import "FormatNameView.h"
 //: #import "AppDelegate.h"
 #import "AppDelegate.h"
 //: #import "NSObject+tyl_internalIdentifier.h"
 #import "NSObject+IdentifierApp.h"
-//: #import "FFFBubbleMenuView.h"
+//: #import "BusyBubbleMenuView.h"
 #import "ButtonPointView.h"
-//: #import "FFFBubbleButtonModel.h"
+//: #import "BusyBubbleButtonModel.h"
 #import "ModelContent.h"
-//: #import "FFFInputEmoticonDefine.h"
-#import "FFFInputEmoticonDefine.h"
-//: #import "FFFInputAudioView.h"
+//: #import "BusyInputEmoticonDefine.h"
+#import "BusyInputEmoticonDefine.h"
+//: #import "BusyInputAudioView.h"
 #import "SaluteView.h"
 //: #import "UIView+NTES.h"
 #import "UIView+Date.h"
 //: #import "NTESPersonalCardViewController.h"
 #import "SharedViewController.h"
-//: #import "FFFTeamCardViewController.h"
+//: #import "BusyTeamCardViewController.h"
 #import "ReadOutViewController.h"
-//: #import "FFFAdvancedTeamCardViewController.h"
+//: #import "BusyAdvancedTeamCardViewController.h"
 #import "PtolemaicSystemViewController.h"
 //: #import "PhotoContainerView.h"
 #import "PhotoView.h"
 //: #import "SSZipArchiveManager.h"
 #import "ValuePraise.h"
 
-//: @interface FFFSessionViewController ()<NIMMediaManagerDelegate,NIMInputDelegate,FFFTeamCardViewControllerDelegate,NIMConversationManagerDelegate,CustomUISeletePhotosDelegate,UIGestureRecognizerDelegate>
+//: @interface BusySessionViewController ()<NIMMediaManagerDelegate,NIMInputDelegate,BusyTeamCardViewControllerDelegate,NIMConversationManagerDelegate,CustomUISeletePhotosDelegate,UIGestureRecognizerDelegate>
 @interface DirectionViewController ()<NIMMediaManagerDelegate,JointBubble,ImageTop,NIMConversationManagerDelegate,RowRed,UIGestureRecognizerDelegate>
 
 //: @property (nonatomic,readwrite) NIMMessage *messageForMenu;
@@ -497,7 +497,7 @@
 //: @property (nonatomic,strong) NSIndexPath *lastVisibleIndexPathBeforeRotation;
 @property (nonatomic,strong) NSIndexPath *lastVisibleIndexPathBeforeRotation;
 
-//: @property (nonatomic,strong) FFFSessionConfigurator *configurator;
+//: @property (nonatomic,strong) BusySessionConfigurator *configurator;
 @property (nonatomic,strong) ViewConfigurator *configurator;
 
 //: @property (nonatomic,strong) UITapGestureRecognizer *tableViewTapGesture;
@@ -505,7 +505,7 @@
 
 //: @property (nonatomic,assign) NSInteger sessionUnreadCount;
 @property (nonatomic,assign) NSInteger sessionUnreadCount;
-//: @property (nonatomic,strong) FFFBadgeView *badgeView;
+//: @property (nonatomic,strong) BusyBadgeView *badgeView;
 @property (nonatomic,strong) SharedView *badgeView;
 //: @property (nonatomic,strong) UIImageView *headerImage;
 @property (nonatomic,strong) UIImageView *headerImage;
@@ -520,7 +520,7 @@
 @property (nonatomic, strong) UIView *topview;
 //: @property (nonatomic, strong) UIButton *btnAudio;
 @property (nonatomic, strong) UIButton *btnAudio;
-//: @property (nonatomic, strong) FFFInputAudioView *audioContent;
+//: @property (nonatomic, strong) BusyInputAudioView *audioContent;
 @property (nonatomic, strong) SaluteView *audioContent;
 
 //: @property (nonatomic, strong) UIView *photopicview;
@@ -532,7 +532,7 @@
 //: @end
 @end
 
-//: @implementation FFFSessionViewController
+//: @implementation BusySessionViewController
 @implementation DirectionViewController
 
 //: - (instancetype)initWithSession:(NIMSession *)session{
@@ -802,7 +802,7 @@
 
     //: self.sessionUnreadCount = [NIMSDK sharedSDK].conversationManager.allUnreadCount;
     self.sessionUnreadCount = [NIMSDK sharedSDK].conversationManager.allUnreadCount;
-     //: _badgeView = [FFFBadgeView viewWithBadgeTip:@""];
+     //: _badgeView = [BusyBadgeView viewWithBadgeTip:@""];
      _badgeView = [SharedView location:@""];
     //: _badgeView.frame = CGRectMake(backBtn.right+5, backBtn.top+8, 24, 24);
     _badgeView.frame = CGRectMake(backBtn.right+5, backBtn.top+8, 24, 24);
@@ -919,7 +919,7 @@
             [SVProgressHUD dismiss];
             //: if (error) {
             if (error) {
-                //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2.0f position:CSToastPositionCenter];
+                //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2.0f position:CSToastPositionCenter];
                 [wself.view makeToast:[SendName streetSmart:[GrayBottomData kRedId]] duration:2.0f position:CSToastPositionCenter];
             }
         //: }];
@@ -936,9 +936,9 @@
 }
 //: - (void)enterTeamCard:(id)sender {
 - (void)locations:(id)sender {
-    //: FFFTeamCardViewController *vc = nil;
+    //: BusyTeamCardViewController *vc = nil;
     ReadOutViewController *vc = nil;
-    //: FFFTeamCardViewControllerOption *option = [[FFFTeamCardViewControllerOption alloc] init];
+    //: BusyTeamCardViewControllerOption *option = [[BusyTeamCardViewControllerOption alloc] init];
     TextTagOption *option = [[TextTagOption alloc] init];
     //: option.isTop = [NIMSDK.sharedSDK.chatExtendManager stickTopInfoForSession:self.session] != nil;
     option.isTop = [NIMSDK.sharedSDK.chatExtendManager stickTopInfoForSession:self.session] != nil;
@@ -947,7 +947,7 @@
     NIMTeam *team = [[NIMSDK sharedSDK].teamManager teamById:self.session.sessionId];
     //: if(team.type == NIMTeamTypeAdvanced){
     if(team.type == NIMTeamTypeAdvanced){
-            //: vc = [[FFFAdvancedTeamCardViewController alloc] initWithTeam:team
+            //: vc = [[BusyAdvancedTeamCardViewController alloc] initWithTeam:team
             vc = [[PtolemaicSystemViewController alloc] initWith:team
                                                                  //: session:self.session
                                                                  scale:self.session
@@ -1025,8 +1025,8 @@
     //: if ([self shouldShowInputView])
     if ([self bindView])
     {
-        //: self.sessionInputView = [[FFFInputView alloc] initWithFrame:CGRectMake(0, 0, self.view.nim_width,0) config:self.sessionConfig];
-        self.sessionInputView = [[StateView alloc] initWithSumFrame:CGRectMake(0, 0, self.view.nim_width,0) monthSessionConfig:self.secret];
+        //: self.sessionInputView = [[BusyInputView alloc] initWithFrame:CGRectMake(0, 0, self.view.nim_width,0) config:self.sessionConfig];
+        self.sessionInputView = [[StateView alloc] initWithSumFrame:CGRectMake(0, 0, self.view.nim_width,0) monthSessionConfig:self.sessionConfig];
         //: self.sessionInputView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
         self.sessionInputView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
         //: [self.sessionInputView setSession:self.session];
@@ -1051,7 +1051,7 @@
 //: - (void)setupConfigurator
 - (void)tap
 {
-    //: _configurator = [[FFFSessionConfigurator alloc] init];
+    //: _configurator = [[BusySessionConfigurator alloc] init];
     _configurator = [[ViewConfigurator alloc] init];
     //: [_configurator setup:self];
     [_configurator actionDownTitle:self];
@@ -1090,7 +1090,7 @@
     //: [self.sessionInputView endEditing:YES];
     [self.sessionInputView endEditing:YES];
     // 隐藏长按弹窗
-    //: [FFFBubbleMenuView.shareMenuView removeFromSuperview];
+    //: [BusyBubbleMenuView.shareMenuView removeFromSuperview];
     [ButtonPointView.line removeFromSuperview];
     //: [self.navigationController.navigationBar setHidden:NO];
     [self.navigationController.navigationBar setHidden:NO];
@@ -1120,7 +1120,7 @@
 //: - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self.serviceContentTextView hideTextSelection];
-    //: [FFFBubbleMenuView.shareMenuView removeFromSuperview];
+    //: [BusyBubbleMenuView.shareMenuView removeFromSuperview];
     [ButtonPointView.line removeFromSuperview];
     //: [self.view endEditing:YES];
     [self.view endEditing:YES];
@@ -1130,7 +1130,7 @@
 - (void)customNotice:(UIScrollView *)scrollView {
     //: if ([scrollView isKindOfClass:[UITextView class]]) {
     if ([scrollView isKindOfClass:[UITextView class]]) {
-        //: [FFFBubbleMenuView.shareMenuView removeFromSuperview];
+        //: [BusyBubbleMenuView.shareMenuView removeFromSuperview];
         [ButtonPointView.line removeFromSuperview];
     }
     //: [self.view endEditing:YES];
@@ -1179,8 +1179,8 @@
 }
 
 
-//: #pragma mark - FFFSessionConfiguratorDelegate
-#pragma mark - FFFSessionConfiguratorDelegate
+//: #pragma mark - BusySessionConfiguratorDelegate
+#pragma mark - BusySessionConfiguratorDelegate
 
 //: - (void)didFetchMessageData
 - (void)barLeft
@@ -1230,7 +1230,7 @@
             break;
         //: case NIMSessionTypeP2P:{
         case NIMSessionTypeP2P:{
-            //: title = [FFFKitUtil showNick:self.session.sessionId inSession:self.session];
+            //: title = [BusyKitUtil showNick:self.session.sessionId inSession:self.session];
             title = [OffMore smallness:self.session.sessionId flush:self.session];
         }
             //: break;
@@ -1320,7 +1320,7 @@
             //: NSString *urlString = imageObject.url;
             NSString *urlString = imageObject.url;
 
-            //: NSMutableDictionary *dic = [[FFFConfig sharedConfig] Gdic];
+            //: NSMutableDictionary *dic = [[BusyConfig sharedConfig] Gdic];
             NSMutableDictionary *dic = [[IndexTag ambit] Gdic];
             //: NSData *data = [dic objectForKey:message.messageId];
             NSData *data = [dic objectForKey:message.messageId];
@@ -1388,7 +1388,7 @@
 
         //: UIViewController *topvc = [self getTopMostController];
         UIViewController *topvc = [self itemController];
-        //: if (![topvc isKindOfClass:NSClassFromString(@"NTESSessionViewController")] && ![topvc isKindOfClass:[FFFSessionViewController class]]) {
+        //: if (![topvc isKindOfClass:NSClassFromString(@"NTESSessionViewController")] && ![topvc isKindOfClass:[BusySessionViewController class]]) {
         if (![topvc isKindOfClass:NSClassFromString(@"TopViewController")] && ![topvc isKindOfClass:[DirectionViewController class]]) {
             //: return;
             return;
@@ -1479,7 +1479,7 @@
 - (void)setViewStop:(BOOL)ban {
     //: if (ban){
     if (ban){
-        //: [self.sessionInputView setInputTextPlaceHolder:[FFFLanguageManager getTextWithKey:@"message_administrator_speak"] color:[UIColor redColor]];
+        //: [self.sessionInputView setInputTextPlaceHolder:[BusyLanguageManager getTextWithKey:@"message_administrator_speak"] color:[UIColor redColor]];
         [self.sessionInputView event:[SendName streetSmart:[GrayBottomData mMorningTitle]] findTitle:[UIColor redColor]];
         //: self.sessionInputView.userInteractionEnabled = NO;
         self.sessionInputView.userInteractionEnabled = NO;
@@ -1487,7 +1487,7 @@
         self.canTapVoiceBtn = NO;
     //: } else {
     } else {
-        //: [self.sessionInputView setInputTextPlaceHolder:[FFFLanguageManager getTextWithKey:@"message_please_enter_content"] color:[UIColor grayColor]];
+        //: [self.sessionInputView setInputTextPlaceHolder:[BusyLanguageManager getTextWithKey:@"message_please_enter_content"] color:[UIColor grayColor]];
         [self.sessionInputView event:[SendName streetSmart:[GrayBottomData dream_gangMessage]] findTitle:[UIColor grayColor]];
         //: self.sessionInputView.userInteractionEnabled = YES;
         self.sessionInputView.userInteractionEnabled = YES;
@@ -1556,7 +1556,7 @@
     //: if ([message.session isEqual:_session])
     if ([message.session isEqual:_session])
     {
-        //: FFFMessageModel *model = [self.interactor findMessageModel:message];
+        //: BusyMessageModel *model = [self.interactor findMessageModel:message];
         MoreModel *model = [self.interactor with:message];
         //下完缩略图之后，因为比例有变化，重新刷下宽高。
         //: [model cleanCache];
@@ -1662,7 +1662,7 @@
     if(!error) {
         //: if ([self recordFileCanBeSend:filePath]) {
         if ([self compartment:filePath]) {
-            //: [self sendMessage:[FFFMessageMaker msgWithAudio:filePath]];
+            //: [self sendMessage:[BusyMessageMaker msgWithAudio:filePath]];
             [self inputTap:[SharedMaker timeCapsule:filePath]];
         //: }else{
         }else{
@@ -1743,7 +1743,7 @@
                 //: if (error)
                 if (error)
                 {
-                    //: [weakSelf.view makeToast:[FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
+                    //: [weakSelf.view makeToast:[BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
                     [weakSelf.view makeToast:[SendName streetSmart:[GrayBottomData kRedId]] duration:2 position:CSToastPositionCenter];
                 }
 
@@ -1753,7 +1753,7 @@
             }];
 
 }
-//: - (BOOL)onTapMediaItem:(FFFMediaItem *)item{
+//: - (BOOL)onTapMediaItem:(BusyMediaItem *)item{
 - (BOOL)ended:(ModelMessage *)item{
     //: SEL sel = item.selctor;
     SEL sel = item.selctor;
@@ -1789,7 +1789,7 @@
         [users addObject:self.session.sessionId];
     }
 
-    //: NIMMessage *message = [FFFMessageMaker msgWithText:text];
+    //: NIMMessage *message = [BusyMessageMaker msgWithText:text];
     NIMMessage *message = [SharedMaker icon:text];
     //: if (atUsers.count)
     if (atUsers.count)
@@ -1801,7 +1801,7 @@
         //: apnsOption.forcePush = YES;
         apnsOption.forcePush = YES;
 
-        //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+        //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
         InfoGreenImage *option = [[InfoGreenImage alloc] init];
         //: option.session = self.session;
         option.session = self.session;
@@ -1830,7 +1830,7 @@
         [users addObject:self.session.sessionId];
     }
 
-    //: NIMMessage *message = [FFFMessageMaker msgWithText:text];
+    //: NIMMessage *message = [BusyMessageMaker msgWithText:text];
     NIMMessage *message = [SharedMaker icon:text];
     //: NSString *type = @"";
     NSString *type = @"";
@@ -1872,11 +1872,11 @@
         contents = [NSString stringWithFormat:@"%zd\"",(NSInteger)((audioObject.duration+500)/1000)];
     }
 
-    //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+    //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
     InfoGreenImage *option = [[InfoGreenImage alloc] init];
     //: option.message = replymessage;
     option.message = replymessage;
-    //: FFFKitInfo *info = [[MyUserKit sharedKit] infoByUser:replymessage.from option:option];
+    //: BusyKitInfo *info = [[MyUserKit sharedKit] infoByUser:replymessage.from option:option];
     Info *info = [[Case pastTop] consumer:replymessage.from message:option];
 
     //: NSDictionary *dic = @{
@@ -1905,7 +1905,7 @@
         //: apnsOption.forcePush = YES;
         apnsOption.forcePush = YES;
 
-        //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+        //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
         InfoGreenImage *option = [[InfoGreenImage alloc] init];
         //: option.session = self.session;
         option.session = self.session;
@@ -1947,7 +1947,7 @@
                       //: compltion:^(NSMapTable *result)
                       viewThis:^(NSMapTable *result)
      {
-        //: NIMQuickComment *oldComment = [FFFKitQuickCommentUtil myCommentFromComments:0 keys:@[@(number)] comments:result];
+        //: NIMQuickComment *oldComment = [BusyKitQuickCommentUtil myCommentFromComments:0 keys:@[@(number)] comments:result];
         NIMQuickComment *oldComment = [TapColorUtil file:0 net:@[@(number)] collectionComments:result];
         //: BOOL contains = oldComment ? YES : NO;
         BOOL contains = oldComment ? YES : NO;
@@ -1963,7 +1963,7 @@
                 //: if (error)
                 if (error)
                 {
-                    //: [weakSelf.view makeToast:[FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
+                    //: [weakSelf.view makeToast:[BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
                     [weakSelf.view makeToast:[SendName streetSmart:[GrayBottomData kRedId]] duration:2 position:CSToastPositionCenter];
                 }
 
@@ -1986,7 +1986,7 @@
                 //: if (error)
                 if (error)
                 {
-                    //: [weakSelf.view makeToast:[FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
+                    //: [weakSelf.view makeToast:[BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
                     [weakSelf.view makeToast:[SendName streetSmart:[GrayBottomData kRedId]] duration:2 position:CSToastPositionCenter];
                 }
 
@@ -2005,16 +2005,16 @@
     //: self.messageForMenu = nil;
     self.messageForMenu = nil;
     //: [self.interactor setReferenceMessage:nil];
-    [self.interactor setMagnitudeRelation:nil];
+    [self.interactor setReferenceMessage:nil];
 
     //: if ([self.sessionConfig respondsToSelector:@selector(clearThreadMessageAfterSent)])
-    if ([self.secret respondsToSelector:@selector(shouldIn)])
+    if ([self.sessionConfig respondsToSelector:@selector(shouldIn)])
     {
         //: if ([self.sessionConfig clearThreadMessageAfterSent])
-        if ([self.secret shouldIn])
+        if ([self.sessionConfig shouldIn])
         {
             //: [self.sessionConfig cleanThreadMessage];
-            [self.secret harvestMoon];
+            [self.sessionConfig harvestMoon];
         }
     }
 }
@@ -2040,10 +2040,10 @@
 //    [self sendMessage:message];
 //
 
-    //: NIMMessage *message = [FFFMessageMaker msgWithImageData:imageData extension:@""];
+    //: NIMMessage *message = [BusyMessageMaker msgWithImageData:imageData extension:@""];
     NIMMessage *message = [SharedMaker tool:imageData formatExtension:@""];
 //    message.messageSubType = 77;//标记gif用
-    //: NSMutableDictionary *dic = [[FFFConfig sharedConfig] Gdic];
+    //: NSMutableDictionary *dic = [[BusyConfig sharedConfig] Gdic];
     NSMutableDictionary *dic = [[IndexTag ambit] Gdic];
 //    NSData *imageData = UIImagePNGRepresentation(image);
     //: [dic setObject:imageData forKey:message.messageId];
@@ -2052,7 +2052,7 @@
     //: [self sendMessage:message];
     [self inputTap:message];
 
-    //: [self.sessionInputView.toolBar setPlaceHolder:[FFFLanguageManager getTextWithKey:@"message_please_enter_content"]];
+    //: [self.sessionInputView.toolBar setPlaceHolder:[BusyLanguageManager getTextWithKey:@"message_please_enter_content"]];
     [self.sessionInputView.toolBar setCompartmentHolder:[SendName streetSmart:[GrayBottomData dream_gangMessage]]];
 
 //    [self.sessionInputView endEditing:YES];
@@ -2130,15 +2130,15 @@
     [self noneClean:message];
 }
 
-//: #pragma mark - FFFMessageCellDelegate
+//: #pragma mark - BusyMessageCellDelegate
 #pragma mark - SharedDelegate
-//: - (BOOL)onTapCell:(FFFKitEvent *)event{
+//: - (BOOL)onTapCell:(BusyKitEvent *)event{
 - (BOOL)replyEnable:(DirectionEvent *)event{
     //: BOOL handle = NO;
     BOOL handle = NO;
     //: NSString *eventName = event.eventName;
     NSString *eventName = event.eventName;
-    //: if ([eventName isEqualToString:FFFKitEventNameTapAudio])
+    //: if ([eventName isEqualToString:BusyKitEventNameTapAudio])
     if ([eventName isEqualToString:mainEventId])
     {
         //: [self.interactor mediaAudioPressed:event.messageModel];
@@ -2178,7 +2178,7 @@
     //: _messageForMenu = message;
     _messageForMenu = message;
     //: [self.interactor setReferenceMessage:message];
-    [self.interactor setMagnitudeRelation:message];
+    [self.interactor setReferenceMessage:message];
     //: if (![self becomeFirstResponder]) {
     if (![self becomeFirstResponder]) {
         //: handle = NO;
@@ -2189,7 +2189,7 @@
     //: if ([self shouldShowMenuByMessage:message])
     if ([self add:message])
     {
-        //: [FFFBubbleMenuView.shareMenuView removeFromSuperview];
+        //: [BusyBubbleMenuView.shareMenuView removeFromSuperview];
         [ButtonPointView.line removeFromSuperview];
         //: [self showMenuWithMessage:message withView:view];
         [self along:message oldShow:view];
@@ -2207,7 +2207,7 @@
     //: _messageForMenu = message;
     _messageForMenu = message;
     //: [self.interactor setReferenceMessage:message];
-    [self.interactor setMagnitudeRelation:message];
+    [self.interactor setReferenceMessage:message];
 
     //: handle = [self shouldShowMenuByMessage:message];
     handle = [self add:message];
@@ -2228,7 +2228,7 @@
     //: _messageForMenu = message;
     _messageForMenu = message;
     //: [self.interactor setReferenceMessage:message];
-    [self.interactor setMagnitudeRelation:message];
+    [self.interactor setReferenceMessage:message];
     //: if (![self becomeFirstResponder]) {
     if (![self becomeFirstResponder]) {
         //: handle = NO;
@@ -2249,10 +2249,10 @@
     //: BOOL disable = NO;
     BOOL disable = NO;
     //: if ([self.sessionConfig respondsToSelector:@selector(disableAudioPlayedStatusIcon)])
-    if ([self.secret respondsToSelector:@selector(belowAddTo)])
+    if ([self.sessionConfig respondsToSelector:@selector(belowAddTo)])
     {
         //: disable = [self.sessionConfig disableAudioPlayedStatusIcon];
-        disable = [self.secret belowAddTo];
+        disable = [self.sessionConfig belowAddTo];
     }
     //: return disable;
     return disable;
@@ -2284,7 +2284,7 @@
                 //: return;
                 return;
             }
-            //: [weakSelf.view makeToast:[FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
+            //: [weakSelf.view makeToast:[BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
             [weakSelf.view makeToast:[SendName streetSmart:[GrayBottomData kRedId]] duration:2 position:CSToastPositionCenter];
         //: }];
         }];
@@ -2308,7 +2308,7 @@
                 //: return;
                 return;
             }
-            //: [weakSelf.view makeToast:[FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
+            //: [weakSelf.view makeToast:[BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
             [weakSelf.view makeToast:[SendName streetSmart:[GrayBottomData kRedId]] duration:2 position:CSToastPositionCenter];
         //: }];
         }];
@@ -2318,8 +2318,8 @@
 
 //: #pragma mark - 配置项
 #pragma mark - 配置项
-//: - (id<FFFSessionConfig>)sessionConfig
-- (id<QuantityelligenceInformationCan>)secret
+//: - (id<BusySessionConfig>)sessionConfig
+- (id<QuantityelligenceInformationCan>)sessionConfig
 {
     //: return nil; 
     return nil; //使用默认配置
@@ -2334,9 +2334,9 @@
     //: BOOL should = YES;
     BOOL should = YES;
     //: if ([self.sessionConfig respondsToSelector:@selector(disableReceiveNewMessages)]) {
-    if ([self.secret respondsToSelector:@selector(hiddenShould)]) {
+    if ([self.sessionConfig respondsToSelector:@selector(hiddenShould)]) {
         //: should = ![self.sessionConfig disableReceiveNewMessages];
-        should = ![self.secret hiddenShould];
+        should = ![self.sessionConfig hiddenShould];
     }
     //: return should;
     return should;
@@ -2351,9 +2351,9 @@
     //: BOOL should = YES;
     BOOL should = YES;
     //: if ([self.sessionConfig respondsToSelector:@selector(disableInputView)]) {
-    if ([self.secret respondsToSelector:@selector(indexColor)]) {
+    if ([self.sessionConfig respondsToSelector:@selector(indexColor)]) {
         //: should = ![self.sessionConfig disableInputView];
-        should = ![self.secret indexColor];
+        should = ![self.sessionConfig indexColor];
     }
     //: return should;
     return should;
@@ -2367,9 +2367,9 @@
     //: NIMAudioType type = NIMAudioTypeAAC;
     NIMAudioType type = NIMAudioTypeAAC;
     //: if ([self.sessionConfig respondsToSelector:@selector(recordType)]) {
-    if ([self.secret respondsToSelector:@selector(numerousnessRequest)]) {
+    if ([self.sessionConfig respondsToSelector:@selector(numerousnessRequest)]) {
         //: type = [self.sessionConfig recordType];
-        type = [self.secret numerousnessRequest];
+        type = [self.sessionConfig numerousnessRequest];
     }
     //: return type;
     return type;
@@ -2382,9 +2382,9 @@
     //: BOOL needProximityMonitor = YES;
     BOOL needProximityMonitor = YES;
     //: if ([self.sessionConfig respondsToSelector:@selector(disableProximityMonitor)]) {
-    if ([self.secret respondsToSelector:@selector(incapacitateGreen)]) {
+    if ([self.sessionConfig respondsToSelector:@selector(incapacitateGreen)]) {
         //: needProximityMonitor = !self.sessionConfig.disableProximityMonitor;
-        needProximityMonitor = !self.secret.incapacitateGreen;
+        needProximityMonitor = !self.sessionConfig.incapacitateGreen;
     }
     //: return needProximityMonitor;
     return needProximityMonitor;
@@ -2466,8 +2466,8 @@
     [UIMenuController sharedMenuController].menuItems = nil;
 }
 
-//: - (void)onTapMenuItemCopy:(FFFMediaItem *)item
-- (void)withDomain:(ModelMessage *)item
+//: - (void)onTapMenuItemCopy:(BusyMediaItem *)item
+- (void)onTapMenuItemCopy:(ModelMessage *)item
 {
     //: NIMMessage *message = [self messageForMenu];
     NIMMessage *message = [self messageForMenu];
@@ -2487,7 +2487,7 @@
     }
 }
 
-//: - (void)onTapMenuItemDelete:(FFFMediaItem *)item
+//: - (void)onTapMenuItemDelete:(BusyMediaItem *)item
 - (void)marginOfError:(ModelMessage *)item
 {
     //: NIMMessage *message = [self messageForMenu];
@@ -2514,9 +2514,9 @@
     [self.interactor bar:messages];
 }
 
-//: - (FFFMessageModel *)uiDeleteMessage:(NIMMessage *)message{
+//: - (BusyMessageModel *)uiDeleteMessage:(NIMMessage *)message{
 - (MoreModel *)analogDigitalConverter:(NIMMessage *)message{
-    //: FFFMessageModel *model = [self.interactor deleteMessage:message];
+    //: BusyMessageModel *model = [self.interactor deleteMessage:message];
     MoreModel *model = [self.interactor messageFind:message];
     //: if (model.shouldShowReadLabel && model.message.session.sessionType == NIMSessionTypeP2P)
     if (model.shouldShowReadLabel && model.message.session.sessionType == NIMSessionTypeP2P)
@@ -2568,7 +2568,7 @@
     [self.customAlbumView.albumPickerView.selectedAssets removeAllObjects];
     //: [self.customAlbumView.albumPickerView.collectionView reloadData];
     [self.customAlbumView.albumPickerView.collectionView reloadData];
-    //: [self.customAlbumView.confirmButton setTitle:[FFFLanguageManager getTextWithKey:@"user_profile_avtivity_send"] forState:UIControlStateNormal];
+    //: [self.customAlbumView.confirmButton setTitle:[BusyLanguageManager getTextWithKey:@"user_profile_avtivity_send"] forState:UIControlStateNormal];
     [self.customAlbumView.confirmButton setTitle:[SendName streetSmart:[GrayBottomData dream_voiceTitle]] forState:UIControlStateNormal];
     //: [self.customAlbumView animationShow];
     [self.customAlbumView animationInsideExhibit];
@@ -2611,7 +2611,7 @@
                 if (path) {
                     //: NSLog(@"视频路径: %@", path);
                     // 使用路径...
-                    //: NIMMessage *message = [FFFMessageMaker msgWithVideo:path];
+                    //: NIMMessage *message = [BusyMessageMaker msgWithVideo:path];
                     NIMMessage *message = [SharedMaker intervalerval:path];
                     //: [self sendMessage:message];
                     [self inputTap:message];
@@ -2632,10 +2632,10 @@
             [self getSizeFromImageAssetFirst:asset context:^(UIImage *image) {
                 //: if (image) {
                 if (image) {
-                    //: NIMMessage *message = [FFFMessageMaker msgWithImage:image];
+                    //: NIMMessage *message = [BusyMessageMaker msgWithImage:image];
                     NIMMessage *message = [SharedMaker file:image];
 
-                    //: NSMutableDictionary *dic = [[FFFConfig sharedConfig] Gdic];
+                    //: NSMutableDictionary *dic = [[BusyConfig sharedConfig] Gdic];
                     NSMutableDictionary *dic = [[IndexTag ambit] Gdic];
                     //: NSData *imageData = UIImagePNGRepresentation(image);
                     NSData *imageData = UIImagePNGRepresentation(image);
@@ -2828,21 +2828,21 @@
 
 //: #pragma mark - NIMMeidaButton
 #pragma mark - NIMMeidaButton
-//: - (void)onTapMediaItemPicture:(FFFMediaItem *)item
+//: - (void)onTapMediaItemPicture:(BusyMediaItem *)item
 - (void)placeUprightPicture:(ModelMessage *)item
 {
     //: [self.interactor mediaPicturePressed];
     [self.interactor vertical];
 }
 
-//: - (void)onTapMediaItemShoot:(FFFMediaItem *)item
+//: - (void)onTapMediaItemShoot:(BusyMediaItem *)item
 - (void)click:(ModelMessage *)item
 {
     //: [self.interactor mediaShootPressed];
     [self.interactor titleInvite];
 }
 
-//: - (void)onTapMediaItemLocation:(FFFMediaItem *)item
+//: - (void)onTapMediaItemLocation:(BusyMediaItem *)item
 - (void)part:(ModelMessage *)item
 {
 //    [self.interactor mediaLocationPressed];
@@ -2860,7 +2860,7 @@
 {
 //    ButtonPointView.shareMenuView.praiseView.hidden = YES;
 //    ButtonPointView.shareMenuView.buttonsBgView.hidden = NO;
-    //: [FFFBubbleMenuView.shareMenuView removeFromSuperview];
+    //: [BusyBubbleMenuView.shareMenuView removeFromSuperview];
     [ButtonPointView.line removeFromSuperview];
     //: [self.sessionInputView endEditing:YES];
     [self.sessionInputView endEditing:YES];
@@ -2968,12 +2968,12 @@
 //: - (void)setUpTitleView
 - (void)createView
 {
-    //: FFFKitTitleView *titleView = (FFFKitTitleView *)self.navigationItem.titleView;
+    //: BusyKitTitleView *titleView = (BusyKitTitleView *)self.navigationItem.titleView;
     MyNameView *titleView = (MyNameView *)self.navigationItem.titleView;
-    //: if (!titleView || ![titleView isKindOfClass:[FFFKitTitleView class]])
+    //: if (!titleView || ![titleView isKindOfClass:[BusyKitTitleView class]])
     if (!titleView || ![titleView isKindOfClass:[MyNameView class]])
     {
-        //: titleView = [[FFFKitTitleView alloc] initWithFrame:CGRectZero];
+        //: titleView = [[BusyKitTitleView alloc] initWithFrame:CGRectZero];
         titleView = [[MyNameView alloc] initWithFrame:CGRectZero];
         //: self.navigationItem.titleView = titleView;
         self.navigationItem.titleView = titleView;
@@ -3102,7 +3102,7 @@
 //: - (void)showMenuWithMessage:(NIMMessage *)message withView:(UIView *)view {
 - (void)along:(NIMMessage *)message oldShow:(UIView *)view {
 
-    //: [[FFFBubbleMenuView shareMenuView] removeFromSuperview];
+    //: [[BusyBubbleMenuView shareMenuView] removeFromSuperview];
     [[ButtonPointView line] removeFromSuperview];
 
     //: NSArray *btns = [self genMediaButtonsWithMessage:message];
@@ -3120,7 +3120,7 @@
          //: autoreleasepool{} __weak __typeof__(self) __weak_self__ = self;
          autoreleasepool{} __weak __typeof__(self) __weak_self__ = self;
                       ;
-        //: [[FFFBubbleMenuView shareMenuView] showViewWithButtonModels:btns cursorStartRect:cursorStartRectToWindow selectionTextRectInWindow:tempRect selectBlock:^(FFFMediaItem *item) {
+        //: [[BusyBubbleMenuView shareMenuView] showViewWithButtonModels:btns cursorStartRect:cursorStartRectToWindow selectionTextRectInWindow:tempRect selectBlock:^(BusyMediaItem *item) {
         [[ButtonPointView line] info:btns praiseRect:cursorStartRectToWindow streetSmartMode:tempRect title:^(ModelMessage *item) {
             @
              //: try{} @finally{} __typeof__(self) self = __weak_self__;
@@ -3129,7 +3129,7 @@
             //: [self onTapMediaItem:item];
             [self ended:item];
 
-            //: [FFFBubbleMenuView.shareMenuView removeFromSuperview];
+            //: [BusyBubbleMenuView.shareMenuView removeFromSuperview];
             [ButtonPointView.line removeFromSuperview];
         //: }praiseBlock:^(NSInteger tag) {
         }demonstrate:^(NSInteger tag) {
@@ -3153,7 +3153,7 @@
                       //: compltion:^(NSMapTable *result)
                       viewThis:^(NSMapTable *result)
      {
-        //: NIMQuickComment *oldComment = [FFFKitQuickCommentUtil myCommentFromComments:0 keys:@[@(index)] comments:result];
+        //: NIMQuickComment *oldComment = [BusyKitQuickCommentUtil myCommentFromComments:0 keys:@[@(index)] comments:result];
         NIMQuickComment *oldComment = [TapColorUtil file:0 net:@[@(index)] collectionComments:result];
         //: BOOL contains = oldComment ? YES : NO;
         BOOL contains = oldComment ? YES : NO;
@@ -3167,7 +3167,7 @@
                 //: if (error)
                 if (error)
                 {
-                    //: [weakSelf.view makeToast:[FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
+                    //: [weakSelf.view makeToast:[BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
                     [weakSelf.view makeToast:[SendName streetSmart:[GrayBottomData kRedId]] duration:2 position:CSToastPositionCenter];
                 }
 
@@ -3190,7 +3190,7 @@
                 //: if (error)
                 if (error)
                 {
-                    //: [weakSelf.view makeToast:[FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
+                    //: [weakSelf.view makeToast:[BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"] duration:2 position:CSToastPositionCenter];
                     [weakSelf.view makeToast:[SendName streetSmart:[GrayBottomData kRedId]] duration:2 position:CSToastPositionCenter];
                 }
 
@@ -3211,22 +3211,22 @@
     //: NSArray *items;
     NSArray *items;
     //: if (!self.sessionConfig)
-    if (!self.secret)
+    if (!self.sessionConfig)
     {
         //: items = [[MyUserKit sharedKit].config defaultMenuItemsWithMessage:message];
         items = [[Case pastTop].config ting:message];
     }
     //: else if([self.sessionConfig respondsToSelector:@selector(menuItemsWithMessage:)])
-    else if([self.secret respondsToSelector:@selector(shouldMaxSession:)])
+    else if([self.sessionConfig respondsToSelector:@selector(shouldMaxSession:)])
     {
         //: items = [self.sessionConfig menuItemsWithMessage:message];
-        items = [self.secret shouldMaxSession:message];
+        items = [self.sessionConfig shouldMaxSession:message];
     }
 
-    //: [items enumerateObjectsUsingBlock:^(FFFMediaItem *item, NSUInteger idx, BOOL *stop) {
+    //: [items enumerateObjectsUsingBlock:^(BusyMediaItem *item, NSUInteger idx, BOOL *stop) {
     [items enumerateObjectsUsingBlock:^(ModelMessage *item, NSUInteger idx, BOOL *stop) {
 
-        //: FFFBubbleButtonModel *model = [[FFFBubbleButtonModel alloc] init];
+        //: BusyBubbleButtonModel *model = [[BusyBubbleButtonModel alloc] init];
         ModelContent *model = [[ModelContent alloc] init];
         //: model.normalImage = item.normalImage;
         model.normalImage = item.normalImage;
@@ -3395,7 +3395,7 @@
         btnAlbum.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [btnAlbum setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btnAlbum setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        //: [btnAlbum setTitle:[FFFLanguageManager getTextWithKey:@"message_send_album"] forState:UIControlStateNormal];
+        //: [btnAlbum setTitle:[BusyLanguageManager getTextWithKey:@"message_send_album"] forState:UIControlStateNormal];
         [btnAlbum setTitle:[SendName streetSmart:[GrayBottomData showGuaranteeName]] forState:UIControlStateNormal];
         //: [btnAlbum layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyleTop) imageTitleSpace:10];
         [btnAlbum reloadSession:(MKButtonEdgeInsetsStyleTop) text:10];
@@ -3416,7 +3416,7 @@
         btnShot.titleLabel.font = [UIFont systemFontOfSize:14];
         //: [btnShot setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btnShot setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        //: [btnShot setTitle:[FFFLanguageManager getTextWithKey:@"message_send_camera"] forState:UIControlStateNormal];
+        //: [btnShot setTitle:[BusyLanguageManager getTextWithKey:@"message_send_camera"] forState:UIControlStateNormal];
         [btnShot setTitle:[SendName streetSmart:[GrayBottomData app_distinctiveData]] forState:UIControlStateNormal];
         //: [btnShot layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyleTop) imageTitleSpace:10];
         [btnShot reloadSession:(MKButtonEdgeInsetsStyleTop) text:10];
@@ -3427,12 +3427,12 @@
     return _photopicview;
 }
 
-//: - (FFFInputAudioView *)audioContent
+//: - (BusyInputAudioView *)audioContent
 - (SaluteView *)audioContent
 {
     //: if(!_audioContent){
     if(!_audioContent){
-        //: _audioContent = [[FFFInputAudioView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+        //: _audioContent = [[BusyInputAudioView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
         _audioContent = [[SaluteView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
 //        _audioContent.hidden = YES;
     }

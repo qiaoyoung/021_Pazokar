@@ -512,13 +512,13 @@ typedef struct {
         } else if (status == SGPermissionStatusDenied) {
 
 
-            //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"] message:[FFFLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
+            //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"] message:[BusyLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
             UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[SendName streetSmart:[BackgroundData sharedInstance].notiMFromPath] message:[SendName streetSmart:[BackgroundData sharedInstance].mRedData] preferredStyle:UIAlertControllerStyleAlert];
-            //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[BackgroundData sharedInstance].k_showMessage] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             //: }])];
             }])];
-            //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[BackgroundData sharedInstance].notiWithStr] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 //: NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
                 NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
@@ -540,13 +540,13 @@ typedef struct {
 //                [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 //            }
 
-            //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"] message:[FFFLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
+            //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"] message:[BusyLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
             UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[SendName streetSmart:[BackgroundData sharedInstance].notiMFromPath] message:[SendName streetSmart:[BackgroundData sharedInstance].mRedData] preferredStyle:UIAlertControllerStyleAlert];
-            //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[BackgroundData sharedInstance].k_showMessage] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             //: }])];
             }])];
-            //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[BackgroundData sharedInstance].notiWithStr] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 //: NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
                 NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];

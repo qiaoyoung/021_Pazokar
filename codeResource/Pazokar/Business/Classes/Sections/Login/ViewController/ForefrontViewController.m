@@ -66,7 +66,7 @@
     return dreamRestoreGateIdent;
 }
 
-//: #ffffff
+//: #fffBusy
 + (NSString *)k_showSuccessTitle {
     /* static */ NSString *k_showSuccessTitle = nil;
     if (!k_showSuccessTitle) {
@@ -459,7 +459,7 @@
 
     //: UILabel *labtitle = [[UILabel alloc]initWithFrame:CGRectMake(15, (44.0f + [UIDevice vg_statusBarHeight])+20, [[UIScreen mainScreen] bounds].size.width-30, 30)];
     UILabel *labtitle = [[UILabel alloc]initWithFrame:CGRectMake(15, (44.0f + [UIDevice statusOrLevel])+20, [[UIScreen mainScreen] bounds].size.width-30, 30)];
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"register_good_nick"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"register_good_nick"];
     labtitle.text = [SendName streetSmart:[SizeProximateData appNextName]];
     //: labtitle.textColor = [UIColor colorWithHexString:@"#5D5F66"];
     labtitle.textColor = [UIColor status:[SizeProximateData appNameId]];
@@ -525,7 +525,7 @@
     _usernameTextField.textColor = [UIColor status:[SizeProximateData user_nameMyMsg]];
     //    _usernameTextField.keyboardType = UIKeyboardTypeASCIICapable;
 //    _usernameTextField.delegate = self;
-    //: NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc]initWithString:[FFFLanguageManager getTextWithKey:@"nickname_tip"] attributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#999999"]}];
+    //: NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc]initWithString:[BusyLanguageManager getTextWithKey:@"nickname_tip"] attributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#999999"]}];
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc]initWithString:[SendName streetSmart:[SizeProximateData showControlSumValue]] attributes:@{NSForegroundColorAttributeName:[UIColor status:[SizeProximateData showDismissId]]}];
     //: _usernameTextField.attributedPlaceholder = attrString;
     _usernameTextField.attributedPlaceholder = attrString;
@@ -540,7 +540,7 @@
     _loginButton.titleLabel.font = [UIFont systemFontOfSize:16];
     //: [_loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //: [_loginButton setTitle:[FFFLanguageManager getTextWithKey:@"contact_list_activity_complete"] forState:UIControlStateNormal];
+    //: [_loginButton setTitle:[BusyLanguageManager getTextWithKey:@"contact_list_activity_complete"] forState:UIControlStateNormal];
     [_loginButton setTitle:[SendName streetSmart:[SizeProximateData show_neighborhoodData]] forState:UIControlStateNormal];
     //: [_loginButton addTarget:self action:@selector(nextButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [_loginButton addTarget:self action:@selector(videoClick) forControlEvents:UIControlEventTouchUpInside];
@@ -559,9 +559,9 @@
     _registerButton.backgroundColor = [UIColor status:[SizeProximateData mainExplainStr]];
     //: _registerButton.titleLabel.font = [UIFont systemFontOfSize:16];
     _registerButton.titleLabel.font = [UIFont systemFontOfSize:16];
-    //: [_registerButton setTitleColor:[UIColor colorWithHexString:@"#ffffff"] forState:UIControlStateNormal];
+    //: [_registerButton setTitleColor:[UIColor colorWithHexString:@"#fffBusy"] forState:UIControlStateNormal];
     [_registerButton setTitleColor:[UIColor status:[SizeProximateData k_showSuccessTitle]] forState:UIControlStateNormal];
-    //: [_registerButton setTitle:[NSString stringWithFormat:@"%@,%@",[FFFLanguageManager getTextWithKey:@"activity_register_account_has_account"],[FFFLanguageManager getTextWithKey:@"activity_login_login"]] forState:UIControlStateNormal];
+    //: [_registerButton setTitle:[NSString stringWithFormat:@"%@,%@",[BusyLanguageManager getTextWithKey:@"activity_register_account_has_account"],[BusyLanguageManager getTextWithKey:@"activity_login_login"]] forState:UIControlStateNormal];
     [_registerButton setTitle:[NSString stringWithFormat:@"%@,%@",[SendName streetSmart:[SizeProximateData noti_strikeTitle]],[SendName streetSmart:[SizeProximateData mainMPopMsg]]] forState:UIControlStateNormal];
     //: [_registerButton addTarget:self action:@selector(gotologin) forControlEvents:UIControlEventTouchUpInside];
     [_registerButton addTarget:self action:@selector(visualizationInfo) forControlEvents:UIControlEventTouchUpInside];
@@ -622,13 +622,13 @@
 //            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 //        }
 
-        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"] message:[FFFLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
+        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"] message:[BusyLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[SendName streetSmart:[SizeProximateData showTitleCellId]] message:[SendName streetSmart:[SizeProximateData mainFileMyMessage]] preferredStyle:UIAlertControllerStyleAlert];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[SizeProximateData mMotorMessage]] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         //: }])];
         }])];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[SizeProximateData noti_fainVirusName]] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             //: NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
             NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
@@ -689,13 +689,13 @@
 //            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 //        }
 
-        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"] message:[FFFLanguageManager getTextWithKey:@"setting_privacy"] preferredStyle:UIAlertControllerStyleAlert];
+        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"] message:[BusyLanguageManager getTextWithKey:@"setting_privacy"] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[SendName streetSmart:[SizeProximateData showTitleCellId]] message:[SendName streetSmart:[SizeProximateData dream_barMsg]] preferredStyle:UIAlertControllerStyleAlert];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[SizeProximateData mMotorMessage]] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         //: }])];
         }])];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[SizeProximateData noti_fainVirusName]] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             //: NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
             NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
@@ -730,7 +730,7 @@
 //
 //    }];
 
-    //: UIAlertAction *picture = [UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"message_send_album"] style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    //: UIAlertAction *picture = [UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"message_send_album"] style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
     UIAlertAction *picture = [UIAlertAction actionWithTitle:[SendName streetSmart:[SizeProximateData app_guitarText]] style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
 
 //        [self pushTZImagePickerControllerWithAsset:nil];
@@ -740,7 +740,7 @@
             //: }];
             }];
 
-    //: UIAlertAction *cancle = [UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
+    //: UIAlertAction *cancle = [UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
     UIAlertAction *cancle = [UIAlertAction actionWithTitle:[SendName streetSmart:[SizeProximateData mMotorMessage]] style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
    //: }];
    }];
@@ -973,7 +973,7 @@
                 self.avaterUrl = urlString;
             //: }else{
             }else{
-                //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
+                //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
                 [wself.view makeToast:[SendName streetSmart:[SizeProximateData user_contentData]]
                              //: duration:2
                              duration:2
@@ -984,7 +984,7 @@
         }];
     //: }else{
     }else{
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"group_info_activity_update_failed"]
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"group_info_activity_update_failed"]
         [self.view makeToast:[SendName streetSmart:[SizeProximateData k_frameText]]
                     //: duration:2
                     duration:2
@@ -1005,7 +1005,7 @@
 {
     //: if (_usernameTextField.text.length == 0) {
     if (_usernameTextField.text.length == 0) {
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"register_avtivity3_nick"]
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"register_avtivity3_nick"]
         [self.view makeToast:[SendName streetSmart:[SizeProximateData app_regardingMessage]]
                     //: duration:2.0
                     duration:2.0
@@ -1016,7 +1016,7 @@
     }
     //: if ([_usernameTextField.text isEqualToString:self.accountName]) {
     if ([_usernameTextField.text isEqualToString:self.accountName]) {
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"nickname_same_account"]
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"nickname_same_account"]
         [self.view makeToast:[SendName streetSmart:[SizeProximateData dreamKillerIdent]]
                     //: duration:2.0
                     duration:2.0
@@ -1036,7 +1036,7 @@
         manager.headerImage = _headerImage;
     //: }else{
     }else{
-        //: [SVProgressHUD showMessage:[FFFLanguageManager getTextWithKey:@"register_avtivity3_avatar"]];
+        //: [SVProgressHUD showMessage:[BusyLanguageManager getTextWithKey:@"register_avtivity3_avatar"]];
         [SVProgressHUD stormCenter:[SendName streetSmart:[SizeProximateData m_fullData]]];
         //: return;
         return;

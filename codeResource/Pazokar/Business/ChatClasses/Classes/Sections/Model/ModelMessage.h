@@ -12,7 +12,7 @@
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
 
-//: @interface FFFMediaItem : NSObject
+//: @interface BusyMediaItem : NSObject
 @interface ModelMessage : NSObject
 
 //: @property (nonatomic,assign) SEL selctor;
@@ -27,7 +27,7 @@
 //: @property (nonatomic,copy) NSString *title;
 @property (nonatomic,copy) NSString *title;
 
-//: + (FFFMediaItem *)item:(NSString *)selector
+//: + (BusyMediaItem *)item:(NSString *)selector
 + (ModelMessage *)canSearched:(NSString *)selector
            //: normalImage:(UIImage *)normalImage
            drop:(UIImage *)normalImage

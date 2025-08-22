@@ -17,7 +17,7 @@ NSString * actionApi(NSString *api) {
     //: NSString* resultApi;
     NSString* resultApi;
 //    resultApi = [[IndexTag sharedConfig].domainURL stringByAppendingString:api];
-    //: resultApi = [[[FFFConfig sharedConfig] getCurrentDomain] stringByAppendingString:api];
+    //: resultApi = [[[BusyConfig sharedConfig] getCurrentDomain] stringByAppendingString:api];
     resultApi = [[[IndexTag ambit] size] stringByAppendingString:api];
     //: return resultApi;
     return resultApi;

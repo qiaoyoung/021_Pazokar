@@ -31,8 +31,7 @@ static char dream_portraitFormat;
 }
 
 
-//: - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
-- (void)white:(UIAlertView *)alertView input:(NSInteger)buttonIndex
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     //: AlertBlock block = objc_getAssociatedObject(self, &kUIAlertViewBlockAddress);
     AlertBlock block = objc_getAssociatedObject(self, &dream_portraitFormat);

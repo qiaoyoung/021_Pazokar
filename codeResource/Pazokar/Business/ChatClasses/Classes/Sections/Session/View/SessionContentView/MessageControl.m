@@ -9,28 +9,28 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionImageContentView.h"
+//: #import "BusySessionImageContentView.h"
 #import "MessageControl.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
-//: #import "FFFLoadProgressView.h"
+//: #import "BusyLoadProgressView.h"
 #import "BuildView.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
 //: #import <YYImage/YYImage.h>
 #import <YYImage/YYImage.h>
 //: #import "UCZProgressView.h"
 #import "UCZProgressView.h"
 
-//: @interface FFFSessionImageContentView()
+//: @interface BusySessionImageContentView()
 @interface MessageControl()
 
 //: @property (nonatomic,strong,readwrite) YYAnimatedImageView * imageView;
 @property (nonatomic,strong,readwrite) YYAnimatedImageView * imageView;
 
-//: @property (nonatomic,strong) FFFLoadProgressView * progressView;
+//: @property (nonatomic,strong) BusyLoadProgressView * progressView;
 @property (nonatomic,strong) BuildView * progressView;
 
 //@property (nonatomic, strong) UCZProgressView *progressView;
@@ -38,7 +38,7 @@
 //: @end
 @end
 
-//: @implementation FFFSessionImageContentView
+//: @implementation BusySessionImageContentView
 @implementation MessageControl
 
 //: - (instancetype)initSessionMessageContentView{
@@ -64,7 +64,7 @@
 ////        self.progressView.tintColor = [KEKESkinColorManager shareInstance].skinColor;
 //        [self addSubview:self.progressView];
 
-        //: _progressView = [[FFFLoadProgressView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+        //: _progressView = [[BusyLoadProgressView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
         _progressView = [[BuildView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
         //: _progressView.maxProgress = 1.0f;
         _progressView.maxProgress = 1.0f;
@@ -75,7 +75,7 @@
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)data
+//: - (void)refresh:(BusyMessageModel *)data
 - (void)messagePress:(MoreModel *)data
 {
     //: [super refresh:data];
@@ -92,7 +92,7 @@
         //: [imageObject setUploadURL:url];
         [imageObject setUploadURL:url];
 
-        //: NSMutableDictionary *dic = [[FFFConfig sharedConfig] Gdic];
+        //: NSMutableDictionary *dic = [[BusyConfig sharedConfig] Gdic];
         NSMutableDictionary *dic = [[IndexTag ambit] Gdic];
         //: NSData *data = [dic objectForKey:self.model.message.messageId];
         NSData *data = [dic objectForKey:self.model.message.messageId];
@@ -195,9 +195,9 @@
 //: - (void)onTouchUpInside:(id)sender
 - (void)objects:(id)sender
 {
-    //: FFFKitEvent *event = [[FFFKitEvent alloc] init];
+    //: BusyKitEvent *event = [[BusyKitEvent alloc] init];
     DirectionEvent *event = [[DirectionEvent alloc] init];
-    //: event.eventName = FFFKitEventNameTapContent;
+    //: event.eventName = BusyKitEventNameTapContent;
     event.eventName = notiMessageId;
     //: event.messageModel = self.model;
     event.messageModel = self.model;

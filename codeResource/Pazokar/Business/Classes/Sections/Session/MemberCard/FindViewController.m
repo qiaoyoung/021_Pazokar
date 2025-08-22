@@ -8,7 +8,7 @@
 //: back_arrow_bl
 @property (nonatomic, copy) NSString *kForbidManagerReplyData;
 
-//: #ffffff
+//: #fffBusy
 @property (nonatomic, copy) NSString *noti_myRecordName;
 
 //: account
@@ -416,7 +416,7 @@
     return _notiRemoveText;
 }
 
-//: #ffffff
+//: #fffBusy
 - (NSString *)noti_myRecordName {
     if (!_noti_myRecordName) {
 		NSString *origin = @"0703896666666666662338";
@@ -517,34 +517,34 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamMemberCardViewController.h"
+//: #import "BusyTeamMemberCardViewController.h"
 #import "FindViewController.h"
-//: #import "FFFCommonTableData.h"
-#import "FFFCommonTableData.h"
-//: #import "FFFCommonTableDelegate.h"
+//: #import "BusyCommonTableData.h"
+#import "BusyCommonTableData.h"
+//: #import "BusyCommonTableDelegate.h"
 #import "MessageDelegate.h"
-//: #import "FFFAvatarImageView.h"
+//: #import "BusyAvatarImageView.h"
 #import "CustomFormatView.h"
-//: #import "FFFTeamCardMemberItem.h"
+//: #import "BusyTeamCardMemberItem.h"
 #import "HomegirlFormat.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 //: #import "ZMONSetGroupNickNameView.h"
 #import "ColorView.h"
-//: #import "FFFKitColorButtonCell.h"
+//: #import "BusyKitColorButtonCell.h"
 #import "FastenerViewCell.h"
-//: #import "FFFKitSwitcherCell.h"
+//: #import "BusyKitSwitcherCell.h"
 #import "ParentViewCell.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
-//: #import "FFFTeamHelper.h"
+//: #import "BusyTeamHelper.h"
 #import "EnvelopingTitle.h"
 
-//: @interface FFFTeamMemberCardViewController ()<NIMUserManagerDelegate>
+//: @interface BusyTeamMemberCardViewController ()<NIMUserManagerDelegate>
 @interface FindViewController ()<NIMUserManagerDelegate>
 
 //: @property (nonatomic, strong) ZMONSetGroupNickNameView *groupNickNameView;
@@ -553,10 +553,10 @@
 //: @property (nonatomic,strong) NIMUser *user;
 @property (nonatomic,strong) NIMUser *user;
 
-//: @property (nonatomic,strong) FFFCommonTableDelegate *delegator;
+//: @property (nonatomic,strong) BusyCommonTableDelegate *delegator;
 @property (nonatomic,strong) MessageDelegate *delegator;
 
-//: @property (nonatomic,weak) id <FFFTeamMemberListDataSource> dataSource;
+//: @property (nonatomic,weak) id <BusyTeamMemberListDataSource> dataSource;
 @property (nonatomic,weak) id <RowCenter> dataSource;
 
 //: @property (nonatomic,strong) NSArray *data;
@@ -611,7 +611,7 @@
 //: @end
 @end
 
-//: @implementation FFFTeamMemberCardViewController
+//: @implementation BusyTeamMemberCardViewController
 @implementation FindViewController
 
 //: - (void)dealloc {
@@ -759,11 +759,11 @@
         NSString *msg = nil;
         //: if (!error) {
         if (!error) {
-            //: msg = [FFFLanguageManager getTextWithKey:@"modify_activity_modify_success"];
+            //: msg = [BusyLanguageManager getTextWithKey:@"modify_activity_modify_success"];
             msg = [SendName streetSmart:[CableTelevisionData sharedInstance].main_sizeViewText];
         //: }else{
         }else{
-            //: msg = [FFFLanguageManager getTextWithKey:@"group_info_activity_op_failed"];
+            //: msg = [BusyLanguageManager getTextWithKey:@"group_info_activity_op_failed"];
             msg = [SendName streetSmart:[CableTelevisionData sharedInstance].mShowMsg];
             //: switcher.on = !mute;
             switcher.on = !mute;
@@ -956,7 +956,7 @@
         self.labTitleRemark.font = [UIFont systemFontOfSize:14.f];
         //: self.labTitleRemark.textColor = [UIColor colorWithHexString:@"#2C3042"];
         self.labTitleRemark.textColor = [UIColor status:[CableTelevisionData sharedInstance].notiRemoveText];
-        //: self.labTitleRemark.text = [FFFLanguageManager getTextWithKey:@"message_remark_name"];
+        //: self.labTitleRemark.text = [BusyLanguageManager getTextWithKey:@"message_remark_name"];
         self.labTitleRemark.text = [SendName streetSmart:[CableTelevisionData sharedInstance].appSituationId];
         //: [nameView addSubview:self.labTitleRemark];
         [nameView addSubview:self.labTitleRemark];
@@ -999,7 +999,7 @@
         lab2.font = [UIFont systemFontOfSize:14];
         //: lab2.textColor = [UIColor colorWithHexString:@"#2C3042"];
         lab2.textColor = [UIColor status:[CableTelevisionData sharedInstance].notiRemoveText];
-        //: lab2.text = [FFFLanguageManager getTextWithKey:@"activity_group_member_info2_shenfen"];
+        //: lab2.text = [BusyLanguageManager getTextWithKey:@"activity_group_member_info2_shenfen"];
         lab2.text = [SendName streetSmart:[CableTelevisionData sharedInstance].mInputName];
         //: [box2 addSubview:lab2];
         [box2 addSubview:lab2];
@@ -1009,7 +1009,7 @@
         sublab2.font = [UIFont systemFontOfSize:12];
         //: sublab2.textColor = [UIColor colorWithHexString:@"#02D8C9"];
         sublab2.textColor = [UIColor status:[CableTelevisionData sharedInstance].show_situationUrl];
-        //: sublab2.text = [FFFTeamHelper memberTypeText:self.member.type];
+        //: sublab2.text = [BusyTeamHelper memberTypeText:self.member.type];
         sublab2.text = [EnvelopingTitle superstratum:self.member.type];
         //: [box2 addSubview:sublab2];
         [box2 addSubview:sublab2];
@@ -1042,7 +1042,7 @@
         lab3.font = [UIFont systemFontOfSize:14];
         //: lab3.textColor = [UIColor colorWithHexString:@"#2C3042"];
         lab3.textColor = [UIColor status:[CableTelevisionData sharedInstance].notiRemoveText];
-        //: lab3.text = [FFFLanguageManager getTextWithKey:@"activity_group_member_info2_inviter"];
+        //: lab3.text = [BusyLanguageManager getTextWithKey:@"activity_group_member_info2_inviter"];
         lab3.text = [SendName streetSmart:[CableTelevisionData sharedInstance].mainTitleUrl];
         //: [box3 addSubview:lab3];
         [box3 addSubview:lab3];
@@ -1085,7 +1085,7 @@
         lab4.font = [UIFont systemFontOfSize:14];
         //: lab4.textColor = [UIColor colorWithHexString:@"#2C3042"];
         lab4.textColor = [UIColor status:[CableTelevisionData sharedInstance].notiRemoveText];
-        //: lab4.text = [FFFLanguageManager getTextWithKey:@"group_member_info_activity_mute_msg"];
+        //: lab4.text = [BusyLanguageManager getTextWithKey:@"group_member_info_activity_mute_msg"];
         lab4.text = [SendName streetSmart:[CableTelevisionData sharedInstance].k_managerTitle];
         //: [box4 addSubview:lab4];
         [box4 addSubview:lab4];
@@ -1101,7 +1101,7 @@
         [box4 addSubview:pushSwitch];
 
 
-        //: BOOL canEdit = [FFFKitUtil canEditTeamInfo:self.teamListManager.myTeamInfo];
+        //: BOOL canEdit = [BusyKitUtil canEditTeamInfo:self.teamListManager.myTeamInfo];
         BOOL canEdit = [OffMore complete:self.teamListManager.myTeamInfo];
         //: if(canEdit){
         if(canEdit){
@@ -1117,7 +1117,7 @@
             [self.btnDelete setTitle:[CableTelevisionData sharedInstance].mBackgroundKey.maxColor forState:UIControlStateNormal];
             //: [self.btnDelete addTarget:self action:@selector(removeMember) forControlEvents:UIControlEventTouchUpInside];
             [self.btnDelete addTarget:self action:@selector(anyInvite) forControlEvents:UIControlEventTouchUpInside];
-            //: self.btnDelete.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+            //: self.btnDelete.backgroundColor = [UIColor colorWithHexString:@"#fffBusy"];
             self.btnDelete.backgroundColor = [UIColor status:[CableTelevisionData sharedInstance].noti_myRecordName];
             //: self.btnDelete.layer.borderWidth = 1;
             self.btnDelete.layer.borderWidth = 1;

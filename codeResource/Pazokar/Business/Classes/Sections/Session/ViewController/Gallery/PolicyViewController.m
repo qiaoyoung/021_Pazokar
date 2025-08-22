@@ -56,7 +56,7 @@ Byte userBeliefName[] = {89, 33, 64, 7, 59, 131, 213, 167, 178, 175, 181, 176, 1
 #import "UIView+Toast.h"
 //: #import "UIAlertView+NTESBlock.h"
 #import "UIAlertView+Enable.h"
-//: #import "FFFKitAuthorizationTool.h"
+//: #import "BusyKitAuthorizationTool.h"
 #import "LabelTool.h"
 //: #import <SDWebImageFLPlugin/SDWebImageFLPlugin.h>
 #import <SDWebImageFLPlugin/SDWebImageFLPlugin.h>
@@ -515,27 +515,27 @@ Byte userBeliefName[] = {89, 33, 64, 7, 59, 131, 213, 167, 178, 175, 181, 176, 1
 //    }else{
         //: UIImage *image = [self imageWithPath:self.imagePath];
         UIImage *image = [self enableDisable:self.imagePath];
-        //: [FFFKitAuthorizationTool requestPhotoLibraryAuthorization:^(FFFKitAuthorizationStatus status) {
-        [LabelTool tool:^(FFFKitAuthorizationStatus status) {
+        //: [BusyKitAuthorizationTool requestPhotoLibraryAuthorization:^(BusyKitAuthorizationStatus status) {
+        [LabelTool tool:^(BusyKitAuthorizationStatus status) {
             //: switch (status) {
             switch (status) {
-                //: case FFFKitAuthorizationStatusAuthorized:
-                case FFFKitAuthorizationStatusAuthorized:
+                //: case BusyKitAuthorizationStatusAuthorized:
+                case BusyKitAuthorizationStatusAuthorized:
                     //: UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
                     UIImageWriteToSavedPhotosAlbum(image, self, @selector(pin:totalRelation:savingInfo:), NULL);
                     //: break;
                     break;
                 //: default:
                 default:
-                    //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"setting_privacy"] duration:2.0 position:CSToastPositionCenter];
+                    //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"setting_privacy"] duration:2.0 position:CSToastPositionCenter];
                     [self.view makeToast:[SendName streetSmart:StringFromComplyData(dream_cornerId)] duration:2.0 position:CSToastPositionCenter];
-                    //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"] message:[FFFLanguageManager getTextWithKey:@"setting_privacy"] preferredStyle:UIAlertControllerStyleAlert];
+                    //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"] message:[BusyLanguageManager getTextWithKey:@"setting_privacy"] preferredStyle:UIAlertControllerStyleAlert];
                     UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[SendName streetSmart:StringFromComplyData(app_projectText)] message:[SendName streetSmart:StringFromComplyData(dream_cornerId)] preferredStyle:UIAlertControllerStyleAlert];
-                    //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                    //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                     [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:StringFromComplyData(mainMotorId)] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                     //: }])];
                     }])];
-                    //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                     [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:StringFromComplyData(noti_beamAdequateName)] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                         //: NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
                         NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
@@ -562,7 +562,7 @@ Byte userBeliefName[] = {89, 33, 64, 7, 59, 131, 213, 167, 178, 175, 181, 176, 1
 //: - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
 - (void)pin:(UIImage *)image totalRelation:(NSError *)error savingInfo:(void *)contextInfo
 {
-    //: NSString *toast = (!image || error)?[FFFLanguageManager getTextWithKey:@"group_info_activity_update_success"] :[FFFLanguageManager getTextWithKey:@"group_info_activity_update_failed"];
+    //: NSString *toast = (!image || error)?[BusyLanguageManager getTextWithKey:@"group_info_activity_update_success"] :[BusyLanguageManager getTextWithKey:@"group_info_activity_update_failed"];
     NSString *toast = (!image || error)?[SendName streetSmart:StringFromComplyData(kApartmentTitlePath)] :[SendName streetSmart:StringFromComplyData(userBeliefName)];
     //: [self.view makeToast:toast duration:2.0 position:CSToastPositionCenter];
     [self.view makeToast:toast duration:2.0 position:CSToastPositionCenter];

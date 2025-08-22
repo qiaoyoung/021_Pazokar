@@ -82,23 +82,23 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionInteractorImpl.h"
+//: #import "BusySessionInteractorImpl.h"
 #import "FasteningBar.h"
 //: #import <NIMSDK/NIMSDK.h>
 #import <NIMSDK/NIMSDK.h>
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
-//: #import "FFFSessionTableAdapter.h"
+//: #import "BusySessionTableAdapter.h"
 #import "PinAdapter.h"
-//: #import "FFFKitMediaFetcher.h"
+//: #import "BusyKitMediaFetcher.h"
 #import "ParentFetcher.h"
-//: #import "FFFMessageMaker.h"
+//: #import "BusyMessageMaker.h"
 #import "SharedMaker.h"
-//: #import "FFFKitAudioCenter.h"
+//: #import "BusyKitAudioCenter.h"
 #import "BarCenter.h"
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
-//: #import "FFFKitQuickCommentUtil.h"
+//: #import "BusyKitQuickCommentUtil.h"
 #import "TapColorUtil.h"
 //: #import "UIImage+SNCompress.h"
 #import "UIImage+Shared.h"
@@ -129,16 +129,16 @@ dispatch_queue_t colorOperationQueue()
 }
 
 
-//: @interface FFFSessionInteractorImpl()<NIMMediaManagerDelegate>
+//: @interface BusySessionInteractorImpl()<NIMMediaManagerDelegate>
 @interface FasteningBar()<NIMMediaManagerDelegate>
 
 //: @property (nonatomic,strong) NIMSession *session;
 @property (nonatomic,strong) NIMSession *session;
 
-//: @property (nonatomic,strong) id<FFFSessionConfig> sessionConfig;
+//: @property (nonatomic,strong) id<BusySessionConfig> sessionConfig;
 @property (nonatomic,strong) id<QuantityelligenceInformationCan> sessionConfig;
 
-//: @property (nonatomic,strong) FFFKitMediaFetcher *mediaFetcher;
+//: @property (nonatomic,strong) BusyKitMediaFetcher *mediaFetcher;
 @property (nonatomic,strong) ParentFetcher *mediaFetcher;
 
 //: @property (nonatomic,strong) NSMutableArray *pendingChatroomModels;
@@ -156,12 +156,12 @@ dispatch_queue_t colorOperationQueue()
 //: @end
 @end
 
-//: @implementation FFFSessionInteractorImpl
+//: @implementation BusySessionInteractorImpl
 @implementation FasteningBar
 
 //: - (instancetype)initWithSession:(NIMSession *)session
 - (instancetype)initWithSession:(NIMSession *)session
-                         //: config:(id<FFFSessionConfig>)sessionConfig
+                         //: config:(id<BusySessionConfig>)sessionConfig
                          distance:(id<QuantityelligenceInformationCan>)sessionConfig
 {
     //: self = [super init];
@@ -225,9 +225,9 @@ dispatch_queue_t colorOperationQueue()
 - (void)markChildPtolemaicSystemModel {
     //: for (id model in [self items]) {
     for (id model in [self view]) {
-        //: if ([model isKindOfClass:[FFFMessageModel class]]) {
+        //: if ([model isKindOfClass:[BusyMessageModel class]]) {
         if ([model isKindOfClass:[MoreModel class]]) {
-            //: FFFMessageModel *messageModel = (FFFMessageModel *)model;
+            //: BusyMessageModel *messageModel = (BusyMessageModel *)model;
             MoreModel *messageModel = (MoreModel *)model;
             //: if (messageModel.message.status == NIMMessageStatusNone) {
             if (messageModel.message.status == NIMMessageStatusNone) {
@@ -262,7 +262,7 @@ dispatch_queue_t colorOperationQueue()
     NSMutableArray *models = [[NSMutableArray alloc] init];
     //: for (NIMMessage *message in messages) {
     for (NIMMessage *message in messages) {
-        //: FFFMessageModel *model = [[FFFMessageModel alloc] initWithMessage:message];
+        //: BusyMessageModel *model = [[BusyMessageModel alloc] initWithMessage:message];
         MoreModel *model = [[MoreModel alloc] initWithLabel:message];
         //: model.shouldShowSelect = (_sessionState == NIMKitSessionStateSelect);
         model.shouldShowSelect = (_sessionState == NIMKitSessionStateSelect);
@@ -315,7 +315,7 @@ dispatch_queue_t colorOperationQueue()
             //: continue;
             continue;
         }
-        //: FFFMessageModel *model = [[FFFMessageModel alloc] initWithMessage:message];
+        //: BusyMessageModel *model = [[BusyMessageModel alloc] initWithMessage:message];
         MoreModel *model = [[MoreModel alloc] initWithLabel:message];
         //: model.shouldShowSelect = (_sessionState == NIMKitSessionStateSelect);
         model.shouldShowSelect = (_sessionState == NIMKitSessionStateSelect);
@@ -376,7 +376,7 @@ dispatch_queue_t colorOperationQueue()
                 //: continue;
                 continue;
             }
-            //: FFFMessageModel *model = [[FFFMessageModel alloc] initWithMessage:message];
+            //: BusyMessageModel *model = [[BusyMessageModel alloc] initWithMessage:message];
             MoreModel *model = [[MoreModel alloc] initWithLabel:message];
             //: model.shouldShowSelect = (_sessionState == NIMKitSessionStateSelect);
             model.shouldShowSelect = (_sessionState == NIMKitSessionStateSelect);
@@ -414,10 +414,10 @@ dispatch_queue_t colorOperationQueue()
     });
 }
 
-//: - (FFFMessageModel *)deleteMessage:(NIMMessage *)message
+//: - (BusyMessageModel *)deleteMessage:(NIMMessage *)message
 - (MoreModel *)messageFind:(NIMMessage *)message
 {
-    //: FFFMessageModel *model = [self findMessageModel:message];
+    //: BusyMessageModel *model = [self findMessageModel:message];
     MoreModel *model = [self with:message];
     //: if (model) {
     if (model) {
@@ -434,7 +434,7 @@ dispatch_queue_t colorOperationQueue()
     return model;
 }
 
-//: - (FFFMessageModel *)updateMessage:(NIMMessage *)message
+//: - (BusyMessageModel *)updateMessage:(NIMMessage *)message
 - (MoreModel *)modify:(NIMMessage *)message
 {
     //: if (!message)
@@ -444,7 +444,7 @@ dispatch_queue_t colorOperationQueue()
         return nil;
     }
 
-    //: FFFMessageModel *model = [self findMessageModel:message];
+    //: BusyMessageModel *model = [self findMessageModel:message];
     MoreModel *model = [self with:message];
     //: if (model)
     if (model)
@@ -508,7 +508,7 @@ dispatch_queue_t colorOperationQueue()
     }
 }
 
-//: - (FFFMessageModel *)findMessageModel:(NIMMessage *)message
+//: - (BusyMessageModel *)findMessageModel:(NIMMessage *)message
 - (MoreModel *)with:(NIMMessage *)message
 {
     //: if ([message isKindOfClass:[NIMMessage class]]) {
@@ -524,7 +524,7 @@ dispatch_queue_t colorOperationQueue()
 - (NSInteger)circle:(NIMMessage *)message {
     //: if ([message isKindOfClass:[NIMMessage class]]) {
     if ([message isKindOfClass:[NIMMessage class]]) {
-        //: FFFMessageModel *model = [[FFFMessageModel alloc] initWithMessage:message];
+        //: BusyMessageModel *model = [[BusyMessageModel alloc] initWithMessage:message];
         MoreModel *model = [[MoreModel alloc] initWithLabel:message];
         //: model.shouldShowSelect = (_sessionState == NIMKitSessionStateSelect);
         model.shouldShowSelect = (_sessionState == NIMKitSessionStateSelect);
@@ -1067,10 +1067,10 @@ dispatch_queue_t colorOperationQueue()
 - (void)nearCanShould:(NSNotification *)notification {
     //: NSDictionary *userInfo = notification.userInfo;
     NSDictionary *userInfo = notification.userInfo;
-    //: extern NSString *FFFKitInfoKey;
-    extern NSString *FFFKitInfoKey;
-    //: NSArray *teamIds = userInfo[FFFKitInfoKey];
-    NSArray *teamIds = userInfo[FFFKitInfoKey];
+    //: extern NSString *mFileThreadTitle;
+    extern NSString *mFileThreadTitle;
+    //: NSArray *teamIds = userInfo[mFileThreadTitle];
+    NSArray *teamIds = userInfo[mFileThreadTitle];
     //: if ((self.session.sessionType == NIMSessionTypeTeam || self.session.sessionType == NIMSessionTypeSuperTeam)
     if ((self.session.sessionType == NIMSessionTypeTeam || self.session.sessionType == NIMSessionTypeSuperTeam)
         //: && ([teamIds containsObject:self.session.sessionId] || [teamIds containsObject:[NSNull null]])) {
@@ -1084,10 +1084,10 @@ dispatch_queue_t colorOperationQueue()
 - (void)infoCreate:(NSNotification *)notification {
     //: NSDictionary *userInfo = notification.userInfo;
     NSDictionary *userInfo = notification.userInfo;
-    //: extern NSString *FFFKitInfoKey;
-    extern NSString *FFFKitInfoKey;
-    //: NSArray *teamIds = userInfo[FFFKitInfoKey];
-    NSArray *teamIds = userInfo[FFFKitInfoKey];
+    //: extern NSString *mFileThreadTitle;
+    extern NSString *mFileThreadTitle;
+    //: NSArray *teamIds = userInfo[mFileThreadTitle];
+    NSArray *teamIds = userInfo[mFileThreadTitle];
 
     //: if ((self.session.sessionType == NIMSessionTypeTeam || self.session.sessionType == NIMSessionTypeSuperTeam)
     if ((self.session.sessionType == NIMSessionTypeTeam || self.session.sessionType == NIMSessionTypeSuperTeam)
@@ -1114,7 +1114,7 @@ dispatch_queue_t colorOperationQueue()
 
 //: #pragma mark - NIMMeidaButton
 #pragma mark - NIMMeidaButton
-//: - (void)mediaAudioPressed:(FFFMessageModel *)messageModel
+//: - (void)mediaAudioPressed:(BusyMessageModel *)messageModel
 - (void)item:(MoreModel *)messageModel
 {
     //: if (![[NIMSDK sharedSDK].mediaManager isPlaying]) {
@@ -1123,7 +1123,7 @@ dispatch_queue_t colorOperationQueue()
         [[NIMSDK sharedSDK].mediaManager switchAudioOutputDevice:NIMAudioOutputDeviceSpeaker];
         //: self.pendingAudioMessages = [self findRemainAudioMessages:messageModel.message];
         self.pendingAudioMessages = [self chromatic:messageModel.message];
-        //: [[FFFKitAudioCenter instance] play:messageModel.message];
+        //: [[BusyKitAudioCenter instance] play:messageModel.message];
         [[BarCenter disable] scaleWith:messageModel.message];
 
     //: } else {
@@ -1152,10 +1152,10 @@ dispatch_queue_t colorOperationQueue()
 
 
 
-                    //: NIMMessage *message = [FFFMessageMaker msgWithImage:image];
+                    //: NIMMessage *message = [BusyMessageMaker msgWithImage:image];
                     NIMMessage *message = [SharedMaker file:image];
 
-                    //: NSMutableDictionary *dic = [[FFFConfig sharedConfig] Gdic];
+                    //: NSMutableDictionary *dic = [[BusyConfig sharedConfig] Gdic];
                     NSMutableDictionary *dic = [[IndexTag ambit] Gdic];
                     //: NSData *imageData = UIImagePNGRepresentation(image);
                     NSData *imageData = UIImagePNGRepresentation(image);
@@ -1175,7 +1175,7 @@ dispatch_queue_t colorOperationQueue()
                         //iOS 11 苹果采用了新的图片格式 HEIC ，如果采用原图会导致其他设备的兼容问题，在上层做好格式的兼容转换,压成 jpeg
                         //: UIImage *image = [UIImage imageWithContentsOfFile:path];
                         UIImage *image = [UIImage imageWithContentsOfFile:path];
-                        //: message = [FFFMessageMaker msgWithImage:image];
+                        //: message = [BusyMessageMaker msgWithImage:image];
                         message = [SharedMaker file:image];
                     }
                     //: else
@@ -1183,7 +1183,7 @@ dispatch_queue_t colorOperationQueue()
                     {
                         //: UIImage *image = [UIImage imageWithContentsOfFile:path];
                         UIImage *image = [UIImage imageWithContentsOfFile:path];
-                        //: message = [FFFMessageMaker msgWithImage:image];
+                        //: message = [BusyMessageMaker msgWithImage:image];
                         message = [SharedMaker file:image];
                     }
 
@@ -1197,7 +1197,7 @@ dispatch_queue_t colorOperationQueue()
             //: case PHAssetMediaTypeVideo:
             case PHAssetMediaTypeVideo:
             {
-                //: NIMMessage *message = [FFFMessageMaker msgWithVideo:path];
+                //: NIMMessage *message = [BusyMessageMaker msgWithVideo:path];
                 NIMMessage *message = [SharedMaker intervalerval:path];
                 //: [weakSelf sendMessage:message toMessage:nil];
                 [weakSelf dedication:message need:nil];
@@ -1241,11 +1241,11 @@ dispatch_queue_t colorOperationQueue()
         NIMMessage *message;
         //: if (image) {
         if (image) {
-            //: message = [FFFMessageMaker msgWithImage:image];
+            //: message = [BusyMessageMaker msgWithImage:image];
             message = [SharedMaker file:image];
         //: }else{
         }else{
-            //: message = [FFFMessageMaker msgWithVideo:path];
+            //: message = [BusyMessageMaker msgWithVideo:path];
             message = [SharedMaker intervalerval:path];
         }
         //: [weakSelf sendMessage:message toMessage:nil];
@@ -1300,7 +1300,7 @@ dispatch_queue_t colorOperationQueue()
     [self.dataSource complete:handler];
 }
 
-//: - (void)willDisplayMessageModel:(FFFMessageModel *)model
+//: - (void)willDisplayMessageModel:(BusyMessageModel *)model
 - (void)child:(MoreModel *)model
 {
     //: [self.dataSource willDisplayMessageModel:model];
@@ -1386,7 +1386,7 @@ dispatch_queue_t colorOperationQueue()
         [self.pendingAudioMessages removeLastObject];
         //: dispatch_async(dispatch_get_main_queue(), ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            //: [[FFFKitAudioCenter instance] play:message];
+            //: [[BusyKitAudioCenter instance] play:message];
             [[BarCenter disable] scaleWith:message];
         //: });
         });
@@ -1412,12 +1412,12 @@ dispatch_queue_t colorOperationQueue()
     return should;
 }
 
-//: - (FFFKitMediaFetcher *)mediaFetcher
+//: - (BusyKitMediaFetcher *)mediaFetcher
 - (ParentFetcher *)mediaFetcher
 {
     //: if (!_mediaFetcher) {
     if (!_mediaFetcher) {
-        //: _mediaFetcher = [[FFFKitMediaFetcher alloc] init];
+        //: _mediaFetcher = [[BusyKitMediaFetcher alloc] init];
         _mediaFetcher = [[ParentFetcher alloc] init];
     }
     //: return _mediaFetcher;
@@ -1432,21 +1432,21 @@ dispatch_queue_t colorOperationQueue()
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tables:) name:UIApplicationDidBecomeActiveNotification object:nil];
     //: if (self.session.sessionType == NIMSessionTypeTeam || self.session.sessionType == NIMSessionTypeSuperTeam) {
     if (self.session.sessionType == NIMSessionTypeTeam || self.session.sessionType == NIMSessionTypeSuperTeam) {
-        //: extern NSString *const NIMKitTeamInfoHasUpdatedNotification;
-        extern NSString *const NIMKitTeamInfoHasUpdatedNotification;
-        //: extern NSString *const NIMKitTeamMembersHasUpdatedNotification;
-        extern NSString *const NIMKitTeamMembersHasUpdatedNotification;
+        //: extern NSString *const dreamMessageTableKey;
+        extern NSString *const dreamMessageTableKey;
+        //: extern NSString *const k_pathIdent;
+        extern NSString *const k_pathIdent;
 
-        //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTeamInfoHasUpdatedNotification:) name:NIMKitTeamInfoHasUpdatedNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(infoCreate:) name:NIMKitTeamInfoHasUpdatedNotification object:nil];
-        //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTeamMembersHasUpdatedNotification:) name:NIMKitTeamMembersHasUpdatedNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nearCanShould:) name:NIMKitTeamMembersHasUpdatedNotification object:nil];
+        //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTeamInfoHasUpdatedNotification:) name:dreamMessageTableKey object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(infoCreate:) name:dreamMessageTableKey object:nil];
+        //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTeamMembersHasUpdatedNotification:) name:k_pathIdent object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nearCanShould:) name:k_pathIdent object:nil];
     }
 
-    //: extern NSString *const NIMKitUserInfoHasUpdatedNotification;
-    extern NSString *const NIMKitUserInfoHasUpdatedNotification;
-    //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onUserInfoHasUpdatedNotification:) name:NIMKitUserInfoHasUpdatedNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(files:) name:NIMKitUserInfoHasUpdatedNotification object:nil];
+    //: extern NSString *const notiArrayName;
+    extern NSString *const notiArrayName;
+    //: [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onUserInfoHasUpdatedNotification:) name:notiArrayName object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(files:) name:notiArrayName object:nil];
 }
 
 //: - (void)removeListenner
@@ -1470,9 +1470,9 @@ dispatch_queue_t colorOperationQueue()
     NSMutableArray *messages = [[NSMutableArray alloc] init];
     //: [self.dataSource.items enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
     [self.dataSource.user enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        //: if ([obj isKindOfClass:[FFFMessageModel class]]) {
+        //: if ([obj isKindOfClass:[BusyMessageModel class]]) {
         if ([obj isKindOfClass:[MoreModel class]]) {
-            //: FFFMessageModel *model = (FFFMessageModel *)obj;
+            //: BusyMessageModel *model = (BusyMessageModel *)obj;
             MoreModel *model = (MoreModel *)obj;
             //: BOOL isFromMe = [model.message.from isEqualToString:[[NIMSDK sharedSDK].loginManager currentAccount]];
             BOOL isFromMe = [model.message.from isEqualToString:[[NIMSDK sharedSDK].loginManager currentAccount]];
@@ -1581,7 +1581,7 @@ dispatch_queue_t colorOperationQueue()
 //: - (void)refreshAllChatExtendDatasByMessage:(NIMMessage *)message
 - (void)month:(NIMMessage *)message
 {
-    //: FFFMessageModel *model = [self findMessageModel:message];
+    //: BusyMessageModel *model = [self findMessageModel:message];
     MoreModel *model = [self with:message];
     //: if (model)
     if (model)
@@ -1618,12 +1618,12 @@ dispatch_queue_t colorOperationQueue()
     }];
 }
 
-//: - (void)refreshAllAfterFetchCommentsByModels:(NSArray<FFFMessageModel *> *)models
+//: - (void)refreshAllAfterFetchCommentsByModels:(NSArray<BusyMessageModel *> *)models
 - (void)container:(NSArray<MoreModel *> *)models
 {
     //: NSMutableArray *messages = [NSMutableArray array];
     NSMutableArray *messages = [NSMutableArray array];
-    //: for(FFFMessageModel *model in models)
+    //: for(BusyMessageModel *model in models)
     for(MoreModel *model in models)
     {
         //: [messages addObject:model.message];
@@ -1634,7 +1634,7 @@ dispatch_queue_t colorOperationQueue()
     [self bottom:messages];
 }
 
-//: - (void)refreshAllChatExtendDatasBySubModel:(FFFMessageModel *)model
+//: - (void)refreshAllChatExtendDatasBySubModel:(BusyMessageModel *)model
 - (void)load:(MoreModel *)model
                                  //: completion:(NIMSessionInteractorHandler)completion
                                  past:(NIMSessionInteractorHandler)completion
@@ -1643,7 +1643,7 @@ dispatch_queue_t colorOperationQueue()
     NIMMessage *message = model.message;
     //: NIMMessage *threadMessage = [self threadMessageOfMessage:message];
     NIMMessage *threadMessage = [self viewLength:message];
-    //: FFFMessageModel *threadMessageModel = [self findMessageModel:threadMessage];
+    //: BusyMessageModel *threadMessageModel = [self findMessageModel:threadMessage];
     MoreModel *threadMessageModel = [self with:threadMessage];
     //: if (threadMessage)
     if (threadMessage)
@@ -1663,7 +1663,7 @@ dispatch_queue_t colorOperationQueue()
     }
 }
 
-//: - (void)refreshAllChatExtendDatasByModel:(FFFMessageModel *)model
+//: - (void)refreshAllChatExtendDatasByModel:(BusyMessageModel *)model
 - (void)voiceUnder:(MoreModel *)model
                               //: completion:(NIMSessionInteractorHandler)completion
                               byShow:(NIMSessionInteractorHandler)completion
@@ -1734,12 +1734,12 @@ dispatch_queue_t colorOperationQueue()
 }
 
 
-//: - (void)refreshAllChatExtendDatasByModels:(NSArray<FFFMessageModel *> *)models
+//: - (void)refreshAllChatExtendDatasByModels:(NSArray<BusyMessageModel *> *)models
 - (void)maxWith:(NSArray<MoreModel *> *)models
                                //: completion:(NIMSessionInteractorHandler)completion
                                row:(NIMSessionInteractorHandler)completion
 {
-    //: for (FFFMessageModel *model in models)
+    //: for (BusyMessageModel *model in models)
     for (MoreModel *model in models)
     {
         //: [self refreshAllChatExtendDatasByModel:model completion:nil];
@@ -1752,7 +1752,7 @@ dispatch_queue_t colorOperationQueue()
                   //: completion:(NIMSessionInteractorHandler)completion
                   send:(NIMSessionInteractorHandler)completion
 {
-   //: FFFMessageModel *model = [self findMessageModel:message];
+   //: BusyMessageModel *model = [self findMessageModel:message];
    MoreModel *model = [self with:message];
     //: if (model)
     if (model)
@@ -1784,7 +1784,7 @@ dispatch_queue_t colorOperationQueue()
     }
 }
 
-//: - (void)loadThreadAndRepliedMessages:(FFFMessageModel *)model
+//: - (void)loadThreadAndRepliedMessages:(BusyMessageModel *)model
 - (void)compartment:(MoreModel *)model
                           //: completion:(NIMSessionInteractorHandler)completion
                           languageOutside:(NIMSessionInteractorHandler)completion
@@ -1985,7 +1985,7 @@ dispatch_queue_t colorOperationQueue()
     }];
 }
 
-//: - (void)loadChildMessages:(FFFMessageModel *)model
+//: - (void)loadChildMessages:(BusyMessageModel *)model
 - (void)messages:(MoreModel *)model
                //: completion:(NIMSessionInteractorHandler)completion
                member:(NIMSessionInteractorHandler)completion
@@ -2028,7 +2028,7 @@ dispatch_queue_t colorOperationQueue()
     });
 }
 
-//: - (void)loadQuickComments:(FFFMessageModel *)model
+//: - (void)loadQuickComments:(BusyMessageModel *)model
 - (void)recentTool:(MoreModel *)model
                //: completion:(NIMSessionInteractorHandler)completion
                thanLoad:(NIMSessionInteractorHandler)completion
@@ -2061,7 +2061,7 @@ dispatch_queue_t colorOperationQueue()
             //: if (result.count > 0)
             if (result.count > 0)
             {
-                //: model.emoticonsContainerSize = [FFFKitQuickCommentUtil containerSizeWithComments:result];
+                //: model.emoticonsContainerSize = [BusyKitQuickCommentUtil containerSizeWithComments:result];
                 model.emoticonsContainerSize = [TapColorUtil bioLab:result];
             }
             //: else
@@ -2091,7 +2091,7 @@ dispatch_queue_t colorOperationQueue()
     }];
 }
 
-//: - (void)uiReloadThreadMessageBySubMessage:(FFFMessageModel *)model
+//: - (void)uiReloadThreadMessageBySubMessage:(BusyMessageModel *)model
 - (void)bubble:(MoreModel *)model
 {
     //: NIMMessage *message = model.message;
@@ -2115,7 +2115,7 @@ dispatch_queue_t colorOperationQueue()
         //: return;
         return;
     }
-    //: FFFMessageModel *model = [self findMessageModel:message];
+    //: BusyMessageModel *model = [self findMessageModel:message];
     MoreModel *model = [self with:message];
     //: if (model)
     if (model)

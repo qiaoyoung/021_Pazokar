@@ -156,7 +156,7 @@ typedef struct {
 // __M_A_C_R_O__
 //: #import "NTESCustomSysNotificationSender.h"
 #import "ChildShared.h"
-//: #import "FFFKitInfoFetchOption.h"
+//: #import "BusyKitInfoFetchOption.h"
 #import "InfoGreenImage.h"
 //: #import "NTESBundleSetting.h"
 #import "EnvironmentSetting.h"
@@ -334,11 +334,11 @@ typedef struct {
     notification.sendToOnlineUsersOnly = NO;
     //: notification.env = [[NTESBundleSetting sharedConfig] messageEnv];
     notification.env = [[EnvironmentSetting configLocation] cur];
-    //: FFFKitInfoFetchOption *option = [[FFFKitInfoFetchOption alloc] init];
+    //: BusyKitInfoFetchOption *option = [[BusyKitInfoFetchOption alloc] init];
     InfoGreenImage *option = [[InfoGreenImage alloc] init];
     //: option.session = [NIMSession session:teamId type:NIMSessionTypeTeam];
     option.session = [NIMSession session:teamId type:NIMSessionTypeTeam];
-    //: FFFKitInfo *me = [[MyUserKit sharedKit] infoByUser:[NIMSDK sharedSDK].loginManager.currentAccount option:option];
+    //: BusyKitInfo *me = [[MyUserKit sharedKit] infoByUser:[NIMSDK sharedSDK].loginManager.currentAccount option:option];
     Info *me = [[Case pastTop] consumer:[NIMSDK sharedSDK].loginManager.currentAccount message:option];
 
     //: notification.apnsContent = [NSString stringWithFormat:@"%@%@",me.showName,@"正在呼叫您".ntes_localized];

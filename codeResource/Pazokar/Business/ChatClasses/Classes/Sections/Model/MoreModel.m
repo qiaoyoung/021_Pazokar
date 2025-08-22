@@ -71,14 +71,14 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFMessageModel.h"
+//: #import "BusyMessageModel.h"
 #import "MoreModel.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
-//: #import "FFFKitQuickCommentUtil.h"
+//: #import "BusyKitQuickCommentUtil.h"
 #import "TapColorUtil.h"
 
-//: @interface FFFMessageModel()
+//: @interface BusyMessageModel()
 @interface MoreModel()
 
 //: @property (nonatomic,strong) NSMutableDictionary *contentSizeInfo;
@@ -89,7 +89,7 @@
 //: @end
 @end
 
-//: @implementation FFFMessageModel
+//: @implementation BusyMessageModel
 @implementation MoreModel
 
 //: @synthesize contentViewInsets = _contentViewInsets;
@@ -168,7 +168,7 @@
 //: - (BOOL)isEqual:(id)object
 - (BOOL)isEqual:(id)object
 {
-    //: if (![object isKindOfClass:[FFFMessageModel class]])
+    //: if (![object isKindOfClass:[BusyMessageModel class]])
     if (![object isKindOfClass:[MoreModel class]])
     {
         //: return NO;
@@ -177,7 +177,7 @@
     //: else
     else
     {
-        //: FFFMessageModel *model = object;
+        //: BusyMessageModel *model = object;
         MoreModel *model = object;
         //: return [self.message isEqual:model.message];
         return [self.message isEqual:model.message];
@@ -194,7 +194,7 @@
     {
         //: [self updateLayoutConfig];
         [self locationRecord];
-        //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+        //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
         id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
         //: size = [layoutConfig contentSize:self cellWidth:width];
         size = [layoutConfig big:self meanSolarDay:width];
@@ -211,7 +211,7 @@
     //: if (UIEdgeInsetsEqualToEdgeInsets(_contentViewInsets, UIEdgeInsetsZero))
     if (UIEdgeInsetsEqualToEdgeInsets(_contentViewInsets, UIEdgeInsetsZero))
     {
-        //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+        //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
         id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
         //: _contentViewInsets = [layoutConfig contentViewInsets:self];
         _contentViewInsets = [layoutConfig skip:self];
@@ -225,7 +225,7 @@
     //: if (UIEdgeInsetsEqualToEdgeInsets(_bubbleViewInsets, UIEdgeInsetsZero))
     if (UIEdgeInsetsEqualToEdgeInsets(_bubbleViewInsets, UIEdgeInsetsZero))
     {
-        //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+        //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
         id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
         //: _bubbleViewInsets = [layoutConfig cellInsets:self];
         _bubbleViewInsets = [layoutConfig keeping:self];
@@ -237,7 +237,7 @@
 //: - (CGSize)replyContentSize:(CGFloat)width
 - (CGSize)send:(CGFloat)width
 {
-    //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+    //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
     id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
     //: CGSize size = [layoutConfig replyContentSize:self cellWidth:width];
     CGSize size = [layoutConfig asTitle:self show:width];
@@ -250,7 +250,7 @@
     //: if (UIEdgeInsetsEqualToEdgeInsets(_replyContentViewInsets, UIEdgeInsetsZero))
     if (UIEdgeInsetsEqualToEdgeInsets(_replyContentViewInsets, UIEdgeInsetsZero))
     {
-        //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+        //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
         id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
         //: _replyContentViewInsets = [layoutConfig replyContentViewInsets:self];
         _replyContentViewInsets = [layoutConfig sinceLocationInsets:self];
@@ -264,7 +264,7 @@
     //: if (UIEdgeInsetsEqualToEdgeInsets(_replyBubbleViewInsets, UIEdgeInsetsZero))
     if (UIEdgeInsetsEqualToEdgeInsets(_replyBubbleViewInsets, UIEdgeInsetsZero))
     {
-        //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+        //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
         id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
         //: _replyBubbleViewInsets = [layoutConfig replyCellInsets:self];
         _replyBubbleViewInsets = [layoutConfig clean:self];
@@ -277,7 +277,7 @@
 //: - (void)updateLayoutConfig
 - (void)locationRecord
 {
-    //: id<FFFCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
+    //: id<BusyCellLayoutConfig> layoutConfig = [[MyUserKit sharedKit] layoutConfig];
     id<ParentMargin> layoutConfig = [[Case pastTop] layoutConfig];
 
     //: _shouldShowAvatar = [layoutConfig shouldShowAvatar:self];
@@ -319,7 +319,7 @@
 }
 
 //: - (BOOL)needShowReplyCountContent
-- (BOOL)info
+- (BOOL)needShowReplyCountContent
 {
     //: return self.enableSubMessages;
     return self.enableSubMessages;
@@ -359,7 +359,7 @@
             //: if (result.count > 0)
             if (result.count > 0)
             {
-                //: _emoticonsContainerSize = [FFFKitQuickCommentUtil containerSizeWithComments:result];
+                //: _emoticonsContainerSize = [BusyKitQuickCommentUtil containerSizeWithComments:result];
                 _emoticonsContainerSize = [TapColorUtil bioLab:result];
             }
             //: completion(result);

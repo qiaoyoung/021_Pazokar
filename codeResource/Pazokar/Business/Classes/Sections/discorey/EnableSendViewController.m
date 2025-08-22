@@ -11,7 +11,7 @@
 //: discovery
 @property (nonatomic, copy) NSString *k_contentPath;
 
-//: #ffffff
+//: #fffBusy
 @property (nonatomic, copy) NSString *m_toolFormat;
 
 //: group_info_activity_without
@@ -110,7 +110,7 @@
     return _notiShowData;
 }
 
-//: #ffffff
+//: #fffBusy
 - (NSString *)m_toolFormat {
     if (!_m_toolFormat) {
 		NSArray<NSString *> *origin = @[@"7", @"74", @"5", @"84", @"79", @"109", @"176", @"176", @"176", @"176", @"176", @"176", @"246"];
@@ -200,14 +200,14 @@
     labtitle.textColor = [UIColor whiteColor];
     //: labtitle.font = [UIFont boldSystemFontOfSize:18];
     labtitle.font = [UIFont boldSystemFontOfSize:18];
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"discovery"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"discovery"];
     labtitle.text = [SendName streetSmart:[ToolData sharedInstance].k_contentPath];
     //: [topview addSubview:labtitle];
     [topview addSubview:labtitle];
 
     //: UIView *contentView = [[UIView alloc]initWithFrame:CGRectMake(0, (44.0f + [UIDevice vg_statusBarHeight])+10, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height-(44.0f + [UIDevice vg_statusBarHeight]))];
     UIView *contentView = [[UIView alloc]initWithFrame:CGRectMake(0, (44.0f + [UIDevice statusOrLevel])+10, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height-(44.0f + [UIDevice statusOrLevel]))];
-    //: contentView.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+    //: contentView.backgroundColor = [UIColor colorWithHexString:@"#fffBusy"];
     contentView.backgroundColor = [UIColor status:[ToolData sharedInstance].m_toolFormat];
     //: contentView.layer.cornerRadius = 34;
     contentView.layer.cornerRadius = 34;
@@ -244,7 +244,7 @@
         emptyTipLabel.textAlignment = NSTextAlignmentCenter;
         //: [_defView addSubview:emptyTipLabel];
         [_defView addSubview:emptyTipLabel];
-        //: emptyTipLabel.text = [FFFLanguageManager getTextWithKey:@"group_info_activity_without"];
+        //: emptyTipLabel.text = [BusyLanguageManager getTextWithKey:@"group_info_activity_without"];
         emptyTipLabel.text = [SendName streetSmart:[ToolData sharedInstance].mSizeFrameKey];
 
 

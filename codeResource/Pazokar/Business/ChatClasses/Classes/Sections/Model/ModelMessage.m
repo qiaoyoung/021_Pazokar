@@ -9,13 +9,13 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFMediaItem.h"
+//: #import "BusyMediaItem.h"
 #import "ModelMessage.h"
 
-//: @implementation FFFMediaItem
+//: @implementation BusyMediaItem
 @implementation ModelMessage
 
-//: + (FFFMediaItem *)item:(NSString *)selector
+//: + (BusyMediaItem *)item:(NSString *)selector
 + (ModelMessage *)canSearched:(NSString *)selector
            //: normalImage:(UIImage *)normalImage
            drop:(UIImage *)normalImage
@@ -24,7 +24,7 @@
                  //: title:(NSString *)title
                  text:(NSString *)title
 {
-    //: FFFMediaItem *item = [[FFFMediaItem alloc] init];
+    //: BusyMediaItem *item = [[BusyMediaItem alloc] init];
     ModelMessage *item = [[ModelMessage alloc] init];
     //: item.selctor = NSSelectorFromString(selector);
     item.selctor = NSSelectorFromString(selector);

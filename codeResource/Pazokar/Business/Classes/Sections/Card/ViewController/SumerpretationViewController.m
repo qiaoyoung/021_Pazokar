@@ -420,7 +420,7 @@ typedef struct {
     addBtn.titleLabel.font = [UIFont systemFontOfSize:16];
     //: [addBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [addBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //: [addBtn setTitle:[FFFLanguageManager getTextWithKey:@"add_friend_activity_add_friend"] forState:UIControlStateNormal];
+    //: [addBtn setTitle:[BusyLanguageManager getTextWithKey:@"add_friend_activity_add_friend"] forState:UIControlStateNormal];
     [addBtn setTitle:[SendName streetSmart:[[FrankData sharedInstance] userInputMessage]] forState:UIControlStateNormal];
     //: addBtn.backgroundColor = [UIColor colorWithHexString:@"#02D8C9"];
     addBtn.backgroundColor = [UIColor status:[[FrankData sharedInstance] notiManagerFileUrl]];
@@ -469,7 +469,7 @@ typedef struct {
             NSDictionary *data = [resultDict selected:[[FrankData sharedInstance] kRedTitle]];
             //: NSString *account = [data newStringValueForKey:@"account"];
             NSString *account = [data tag:[[FrankData sharedInstance] appListStr]];
-            //: self.account.text = [NSString stringWithFormat:@"%@%@",[FFFLanguageManager getTextWithKey:@"friend_info_activity_account"], account];
+            //: self.account.text = [NSString stringWithFormat:@"%@%@",[BusyLanguageManager getTextWithKey:@"friend_info_activity_account"], account];
             self.account.text = [NSString stringWithFormat:@"%@%@",[SendName streetSmart:[[FrankData sharedInstance] appPathTitle]], account];
         }
 
@@ -498,13 +498,13 @@ typedef struct {
     //: request.message = tempVerificationInfo.length > 0 ? tempVerificationInfo : @"";
     request.message = tempVerificationInfo.length > 0 ? tempVerificationInfo : @"";
 
-    //: NSString *contact_tag_fragment_add_success = [FFFLanguageManager getTextWithKey:@"contact_tag_fragment_add_success"];
+    //: NSString *contact_tag_fragment_add_success = [BusyLanguageManager getTextWithKey:@"contact_tag_fragment_add_success"];
     NSString *contact_tag_fragment_add_success = [SendName streetSmart:[[FrankData sharedInstance] noti_frameMsg]];//@"添加成功".ntes_localized
-    //: NSString *request_successful = [FFFLanguageManager getTextWithKey:@"request_successful"];
+    //: NSString *request_successful = [BusyLanguageManager getTextWithKey:@"request_successful"];
     NSString *request_successful = [SendName streetSmart:[[FrankData sharedInstance] user_afterStr]];//@"请求成功".ntes_localized
-    //: NSString *add_friend_add_fail = [FFFLanguageManager getTextWithKey:@"add_friend_add_fail"];
+    //: NSString *add_friend_add_fail = [BusyLanguageManager getTextWithKey:@"add_friend_add_fail"];
     NSString *add_friend_add_fail = [SendName streetSmart:[[FrankData sharedInstance] k_myIdent]];//@"添加失败".ntes_localized
-    //: NSString *add_friend_request_fail = [FFFLanguageManager getTextWithKey:@"add_friend_request_fail"];
+    //: NSString *add_friend_request_fail = [BusyLanguageManager getTextWithKey:@"add_friend_request_fail"];
     NSString *add_friend_request_fail = [SendName streetSmart:[[FrankData sharedInstance] show_enableIdent]];//@"请求失败".ntes_localized
     //: NSString *successText = request.operation == NIMUserOperationAdd ? contact_tag_fragment_add_success: request_successful;
     NSString *successText = request.operation == NIMUserOperationAdd ? contact_tag_fragment_add_success: request_successful;

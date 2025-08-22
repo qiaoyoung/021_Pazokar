@@ -11,10 +11,10 @@
 // __M_A_C_R_O__
 //: #import <UIKit/UIKit.h>
 #import <UIKit/UIKit.h>
-//: #import "FFFSessionConfig.h"
+//: #import "BusySessionConfig.h"
 #import "QuantityelligenceInformationCan.h"
-//: #import "FFFInputProtocol.h"
-#import "FFFInputProtocol.h"
+//: #import "BusyInputProtocol.h"
+#import "BusyInputProtocol.h"
 //: #import "CustomAlbumPickerView.h"
 #import "SendView.h"
 
@@ -27,10 +27,10 @@
 //: @end
 @end
 
-//: @interface FFFInputMoreContainerView : UIView
+//: @interface BusyInputMoreContainerView : UIView
 @interface AppView : UIView
 
-//: @property (nonatomic,weak) id<FFFSessionConfig> config;
+//: @property (nonatomic,weak) id<BusySessionConfig> config;
 @property (nonatomic,weak) id<QuantityelligenceInformationCan> config;
 //: @property (nonatomic,weak) id<NIMInputActionDelegate> actionDelegate;
 @property (nonatomic,weak) id<FuturismDelegate> actionDelegate;

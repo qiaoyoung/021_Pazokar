@@ -130,18 +130,18 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFTeamCardSelectedViewController.h"
+//: #import "BusyTeamCardSelectedViewController.h"
 #import "StateViewController.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
-//: #import "FFFTeamCartSetTableViewCell.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
+//: #import "BusyTeamCartSetTableViewCell.h"
 #import "RowTitleView.h"
 
-//: @interface FFFTeamCardSelectedViewController ()<UITableViewDelegate, UITableViewDataSource>
+//: @interface BusyTeamCardSelectedViewController ()<UITableViewDelegate, UITableViewDataSource>
 @interface StateViewController ()<UITableViewDelegate, UITableViewDataSource>
 
-//: @property (nonatomic, strong) NSMutableArray <id <FFFKitSelectCardData>> *datas;
-@property (nonatomic, strong) NSMutableArray <id <FFFKitSelectCardData>> *datas;
+//: @property (nonatomic, strong) NSMutableArray <id <BusyKitSelectCardData>> *datas;
+@property (nonatomic, strong) NSMutableArray <id <BusyKitSelectCardData>> *datas;
 
 //: @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UITableView *tableView;
@@ -158,16 +158,16 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFTeamCardSelectedViewController
+//: @implementation BusyTeamCardSelectedViewController
 @implementation StateViewController
 
 //: + (instancetype)instanceWithTitle:(NSString *)title
 + (instancetype)title:(NSString *)title
-                            //: items:(NSMutableArray <id <FFFKitSelectCardData>> *)items
-                            by:(NSMutableArray <id <FFFKitSelectCardData>> *)items
+                            //: items:(NSMutableArray <id <BusyKitSelectCardData>> *)items
+                            by:(NSMutableArray <id <BusyKitSelectCardData>> *)items
                            //: result:(NIMSelectedCompletion)result {
                            user:(NIMSelectedCompletion)result {
-    //: FFFTeamCardSelectedViewController *vc = [[FFFTeamCardSelectedViewController alloc] initWithItems:items];
+    //: BusyTeamCardSelectedViewController *vc = [[BusyTeamCardSelectedViewController alloc] initWithItems:items];
     StateViewController *vc = [[StateViewController alloc] initWithRecent:items];
     //: vc.titleString = title ?: @"";
     vc.titleString = title ?: @"";
@@ -177,8 +177,8 @@ typedef struct {
     return vc;
 }
 
-//: - (instancetype)initWithItems:(NSMutableArray <id <FFFKitSelectCardData>> *)items {
-- (instancetype)initWithRecent:(NSMutableArray <id <FFFKitSelectCardData>> *)items {
+//: - (instancetype)initWithItems:(NSMutableArray <id <BusyKitSelectCardData>> *)items {
+- (instancetype)initWithRecent:(NSMutableArray <id <BusyKitSelectCardData>> *)items {
     //: if (self = [super init]) {
     if (self = [super init]) {
         //: _datas = items;
@@ -187,8 +187,8 @@ typedef struct {
         _selectedIndex = -1;
         //: __weak typeof(self) weakSelf = self;
         __weak typeof(self) weakSelf = self;
-        //: [items enumerateObjectsUsingBlock:^(id<FFFKitSelectCardData> _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [items enumerateObjectsUsingBlock:^(id<FFFKitSelectCardData> _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        //: [items enumerateObjectsUsingBlock:^(id<BusyKitSelectCardData> _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [items enumerateObjectsUsingBlock:^(id<BusyKitSelectCardData> _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             //: if (obj.selected) {
             if (obj.selected) {
                 //: weakSelf.selectedIndex = idx;
@@ -284,8 +284,8 @@ typedef struct {
 - (void)addImage{
     //: if (_oriSelectedIndex != _selectedIndex) {
     if (_oriSelectedIndex != _selectedIndex) {
-        //: id <FFFKitSelectCardData> bodyData = _datas[_selectedIndex];
-        id <FFFKitSelectCardData> bodyData = _datas[_selectedIndex];
+        //: id <BusyKitSelectCardData> bodyData = _datas[_selectedIndex];
+        id <BusyKitSelectCardData> bodyData = _datas[_selectedIndex];
         //: if (_resultHandle) {
         if (_resultHandle) {
             //: _resultHandle(bodyData);
@@ -425,18 +425,18 @@ typedef struct {
 
 //: - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    //: id <FFFKitSelectCardData> bodyData = _datas[indexPath.section];
-    id <FFFKitSelectCardData> bodyData = _datas[indexPath.section];
+    //: id <BusyKitSelectCardData> bodyData = _datas[indexPath.section];
+    id <BusyKitSelectCardData> bodyData = _datas[indexPath.section];
 
 //    RowTitleView *cell = [RowTitleView cellWithTableView:tableView];
     //: NSString *identifier = [NSString stringWithFormat:@"ZMONTeamCartSet%ld",(long)indexPath.row];
     NSString *identifier = [NSString stringWithFormat:[WoodenData sharedInstance].dream_resentIdent,(long)indexPath.row];
-    //: FFFTeamCartSetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    //: BusyTeamCartSetTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     RowTitleView *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     //: if (!cell)
     if (!cell)
     {
-        //: cell = [[FFFTeamCartSetTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        //: cell = [[BusyTeamCartSetTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell = [[RowTitleView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
 
@@ -459,8 +459,8 @@ typedef struct {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     //: _selectedIndex = indexPath.section;
     _selectedIndex = indexPath.section;
-    //: [_datas enumerateObjectsUsingBlock:^(id<FFFKitSelectCardData> _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-    [_datas enumerateObjectsUsingBlock:^(id<FFFKitSelectCardData> _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    //: [_datas enumerateObjectsUsingBlock:^(id<BusyKitSelectCardData> _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [_datas enumerateObjectsUsingBlock:^(id<BusyKitSelectCardData> _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         //: BOOL selected = (idx == indexPath.section);
         BOOL selected = (idx == indexPath.section);
         //: [obj setSelected:selected];
@@ -507,7 +507,7 @@ typedef struct {
 //        btnClear.layer.cornerRadius = 24;
         //: btnClear.frame = CGRectMake(0, 20, [[UIScreen mainScreen] bounds].size.width-30, 48);
         btnClear.frame = CGRectMake(0, 20, [[UIScreen mainScreen] bounds].size.width-30, 48);
-        //: [btnClear setTitle:[FFFLanguageManager getTextWithKey:@"contact_list_activity_complete"] forState:UIControlStateNormal];
+        //: [btnClear setTitle:[BusyLanguageManager getTextWithKey:@"contact_list_activity_complete"] forState:UIControlStateNormal];
         [btnClear setTitle:[SendName streetSmart:[WoodenData sharedInstance].noti_producerBeerGivenMessage] forState:UIControlStateNormal];
         //: [btnClear addTarget:self action:@selector(onDone) forControlEvents:UIControlEventTouchUpInside];
         [btnClear addTarget:self action:@selector(addImage) forControlEvents:UIControlEventTouchUpInside];

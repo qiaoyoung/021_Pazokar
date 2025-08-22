@@ -17,7 +17,7 @@
 //: NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_BEGIN
 
-//: @protocol FFFTeamCardHeaderViewDelegate <NSObject>
+//: @protocol BusyTeamCardHeaderViewDelegate <NSObject>
 @protocol DeviceTingDelegate <NSObject>
 
 //: - (void)onTouchAvatar:(id)sender;
@@ -26,10 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
 //: @end
 @end
 
-//: @interface FFFTeamCardHeaderView : UIView
+//: @interface BusyTeamCardHeaderView : UIView
 @interface LabelTagView : UIView
 
-//: @property (nonatomic, weak) id<FFFTeamCardHeaderViewDelegate> delegate;
+//: @property (nonatomic, weak) id<BusyTeamCardHeaderViewDelegate> delegate;
 @property (nonatomic, weak) id<DeviceTingDelegate> delegate;
 
 //: @property (nonatomic, strong) NIMTeam *team;

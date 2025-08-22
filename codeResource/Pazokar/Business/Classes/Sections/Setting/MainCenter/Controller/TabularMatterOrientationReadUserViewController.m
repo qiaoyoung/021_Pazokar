@@ -529,7 +529,7 @@ typedef struct {
 //
 
 // __M_A_C_R_O__
-//: #import "FFFUserInfoViewController.h"
+//: #import "BusyUserInfoViewController.h"
 #import "TabularMatterOrientationReadUserViewController.h"
 //: #import "NTESSignSettingViewController.h"
 #import "ReadViewController.h"
@@ -544,7 +544,7 @@ typedef struct {
 //: #import "NSSetAvater.h"
 #import "ParameterView.h"
 
-//: @interface FFFUserInfoViewController ()<NIMUserManagerDelegate,TZImagePickerControllerDelegate,NTESCustomUIAlertDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+//: @interface BusyUserInfoViewController ()<NIMUserManagerDelegate,TZImagePickerControllerDelegate,NTESCustomUIAlertDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @interface TabularMatterOrientationReadUserViewController ()<NIMUserManagerDelegate,TZImagePickerControllerDelegate,TagTing,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 //: @property (strong, nonatomic) UIImageView *imgHeader;
@@ -593,7 +593,7 @@ typedef struct {
 //: @end
 @end
 
-//: @implementation FFFUserInfoViewController
+//: @implementation BusyUserInfoViewController
 @implementation TabularMatterOrientationReadUserViewController
 
 //: - (void)viewWillAppear:(BOOL)animated{
@@ -651,7 +651,7 @@ typedef struct {
     labtitle.textColor = [UIColor blackColor];
     //: labtitle.textAlignment = NSTextAlignmentCenter;
     labtitle.textAlignment = NSTextAlignmentCenter;
-    //: labtitle.text = [FFFLanguageManager getTextWithKey:@"my_user_info_activity_title"];
+    //: labtitle.text = [BusyLanguageManager getTextWithKey:@"my_user_info_activity_title"];
     labtitle.text = [SendName streetSmart:[[PopData sharedInstance] noti_voiceData]];
     //: [self.view addSubview:labtitle];
     [self.view addSubview:labtitle];
@@ -717,7 +717,7 @@ typedef struct {
     self.labAccount.font = [UIFont systemFontOfSize:16.f];
     //: self.labAccount.textColor = [UIColor blackColor];
     self.labAccount.textColor = [UIColor blackColor];
-    //: self.labAccount.text = [FFFLanguageManager getTextWithKey:@"user_profile_avtivity_account"];
+    //: self.labAccount.text = [BusyLanguageManager getTextWithKey:@"user_profile_avtivity_account"];
     self.labAccount.text = [SendName streetSmart:[[PopData sharedInstance] dreamInputKey]];
     //: [accountView addSubview:self.labAccount];
     [accountView addSubview:self.labAccount];
@@ -767,7 +767,7 @@ typedef struct {
     //: self.labNickname.textColor = [UIColor blackColor];
     self.labNickname.textColor = [UIColor blackColor];
 //    labtitle.textAlignment = NSTextAlignmentCenter;
-    //: self.labNickname.text = [FFFLanguageManager getTextWithKey:@"activity_my_user_info_nick"];
+    //: self.labNickname.text = [BusyLanguageManager getTextWithKey:@"activity_my_user_info_nick"];
     self.labNickname.text = [SendName streetSmart:[[PopData sharedInstance] show_titleAfterKey]];
     //: [nameView addSubview:self.labNickname];
     [nameView addSubview:self.labNickname];
@@ -813,7 +813,7 @@ typedef struct {
     //: self.labSex.textColor = [UIColor blackColor];
     self.labSex.textColor = [UIColor blackColor];
 //    labtitle.textAlignment = NSTextAlignmentCenter;
-    //: self.labSex.text = [FFFLanguageManager getTextWithKey:@"activity_friend_info_sex"];
+    //: self.labSex.text = [BusyLanguageManager getTextWithKey:@"activity_friend_info_sex"];
     self.labSex.text = [SendName streetSmart:[[PopData sharedInstance] show_controlStr]];
     //: [sexView addSubview:self.labSex];
     [sexView addSubview:self.labSex];
@@ -970,19 +970,19 @@ typedef struct {
     switch (gender) {
         //: case 1:
         case 1:
-            //: genderStr = [FFFLanguageManager getTextWithKey:@"friend_info_activity_nan"];
+            //: genderStr = [BusyLanguageManager getTextWithKey:@"friend_info_activity_nan"];
             genderStr = [SendName streetSmart:[[PopData sharedInstance] userNameMessage]];
             //: break;
             break;
         //: case 2:
         case 2:
-            //: genderStr = [FFFLanguageManager getTextWithKey:@"friend_info_activity_nv"];
+            //: genderStr = [BusyLanguageManager getTextWithKey:@"friend_info_activity_nv"];
             genderStr = [SendName streetSmart:[[PopData sharedInstance] main_viewKey]];
             //: break;
             break;
         //: case 0:
         case 0:
-            //: genderStr = [FFFLanguageManager getTextWithKey:@"friend_info_activity_xu"];
+            //: genderStr = [BusyLanguageManager getTextWithKey:@"friend_info_activity_xu"];
             genderStr = [SendName streetSmart:[[PopData sharedInstance] mainShowPath]];
         //: default:
         default:
@@ -1000,7 +1000,7 @@ typedef struct {
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
     //: pasteboard.string = self.account.text;
     pasteboard.string = self.account.text;
-    //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"复制"]
+    //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"复制"]
     [self.view makeToast:[SendName streetSmart:@"复制"]
                      //: duration:2
                      duration:2
@@ -1060,13 +1060,13 @@ typedef struct {
 //            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 //        }
 
-        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"] message:[FFFLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
+        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"] message:[BusyLanguageManager getTextWithKey:@"setting_privacy_camera"] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[SendName streetSmart:[[PopData sharedInstance] user_teamKey]] message:[SendName streetSmart:[[PopData sharedInstance] show_centerValue]] preferredStyle:UIAlertControllerStyleAlert];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[[PopData sharedInstance] user_textKey]] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         //: }])];
         }])];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[[PopData sharedInstance] show_pinId]] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             //: NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
             NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
@@ -1127,13 +1127,13 @@ typedef struct {
 //            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
 //        }
 
-        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"] message:[FFFLanguageManager getTextWithKey:@"setting_privacy"] preferredStyle:UIAlertControllerStyleAlert];
+        //: UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"] message:[BusyLanguageManager getTextWithKey:@"setting_privacy"] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:[SendName streetSmart:[[PopData sharedInstance] user_teamKey]] message:[SendName streetSmart:[[PopData sharedInstance] userInfoKey]] preferredStyle:UIAlertControllerStyleAlert];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[[PopData sharedInstance] user_textKey]] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         //: }])];
         }])];
-        //: [alertControl addAction:([UIAlertAction actionWithTitle:[FFFLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //: [alertControl addAction:([UIAlertAction actionWithTitle:[BusyLanguageManager getTextWithKey:@"tag_activity_set"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [alertControl addAction:([UIAlertAction actionWithTitle:[SendName streetSmart:[[PopData sharedInstance] show_pinId]] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             //: NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
             NSURL *url = [[NSURL alloc] initWithString:UIApplicationOpenSettingsURLString];
@@ -1476,7 +1476,7 @@ typedef struct {
                         [wself queryedRefresh];
                     //: }else{
                     }else{
-                        //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
+                        //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
                         [wself.view makeToast:[SendName streetSmart:[[PopData sharedInstance] noti_rangeWithId]]
                                      //: duration:2
                                      duration:2
@@ -1487,7 +1487,7 @@ typedef struct {
                 }];
             //: }else{
             }else{
-                //: [wself.view makeToast:[FFFLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
+                //: [wself.view makeToast:[BusyLanguageManager getTextWithKey:@"user_info_avtivity_upload_avatar_failed"]
                 [wself.view makeToast:[SendName streetSmart:[[PopData sharedInstance] noti_rangeWithId]]
                              //: duration:2
                              duration:2
@@ -1498,7 +1498,7 @@ typedef struct {
         }];
     //: }else{
     }else{
-        //: [self.view makeToast:[FFFLanguageManager getTextWithKey:@"group_info_activity_update_failed"]
+        //: [self.view makeToast:[BusyLanguageManager getTextWithKey:@"group_info_activity_update_failed"]
         [self.view makeToast:[SendName streetSmart:[[PopData sharedInstance] noti_cellStr]]
                     //: duration:2
                     duration:2

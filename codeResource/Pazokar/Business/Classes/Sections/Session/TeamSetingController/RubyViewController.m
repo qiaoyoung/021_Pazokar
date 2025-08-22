@@ -63,7 +63,7 @@ Byte appSolutionStr[] = {21, 7, 87, 6, 41, 234, 122, 135, 135, 135, 135, 135, 13
 //
 
 // __M_A_C_R_O__
-//: #import "FFFGroupAvatarViewController.h"
+//: #import "BusyGroupAvatarViewController.h"
 #import "RubyViewController.h"
 //: #import "SVProgressHUD.h"
 #import "SVProgressHUD.h"
@@ -93,10 +93,10 @@ Byte appSolutionStr[] = {21, 7, 87, 6, 41, 234, 122, 135, 135, 135, 135, 135, 13
 #import "UIView+Toast.h"
 //: #import "NTESRegistConfigManager.h"
 #import "PinMoreManager.h"
-//: #import "FFFKitProgressHUD.h"
+//: #import "BusyKitProgressHUD.h"
 #import "KitEffectView.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
 //: #import "NSString+MyUserKit.h"
@@ -104,7 +104,7 @@ Byte appSolutionStr[] = {21, 7, 87, 6, 41, 234, 122, 135, 135, 135, 135, 135, 13
 //: #import "NSSetAvater.h"
 #import "ParameterView.h"
 
-//: @interface FFFGroupAvatarViewController ()<NTESCustomUIAlertDelegate>
+//: @interface BusyGroupAvatarViewController ()<NTESCustomUIAlertDelegate>
 @interface RubyViewController ()<TagTing>
 
 //: @property (nonatomic, strong) UIButton *closeBtn;
@@ -128,7 +128,7 @@ Byte appSolutionStr[] = {21, 7, 87, 6, 41, 234, 122, 135, 135, 135, 135, 135, 13
 //: @end
 @end
 
-//: @implementation FFFGroupAvatarViewController
+//: @implementation BusyGroupAvatarViewController
 @implementation RubyViewController
 
 //: - (void)viewDidLoad {
@@ -160,7 +160,7 @@ Byte appSolutionStr[] = {21, 7, 87, 6, 41, 234, 122, 135, 135, 135, 135, 135, 13
     titleLabel.textColor = [UIColor blackColor];
     //: titleLabel.font = [UIFont boldSystemFontOfSize:16];
     titleLabel.font = [UIFont boldSystemFontOfSize:16];
-    //: titleLabel.text = [FFFLanguageManager getTextWithKey:@"set_group_avater"];
+    //: titleLabel.text = [BusyLanguageManager getTextWithKey:@"set_group_avater"];
     titleLabel.text = [SendName streetSmart:StringFromHockData(appManagerChildValue)];
     //: titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -213,7 +213,7 @@ Byte appSolutionStr[] = {21, 7, 87, 6, 41, 234, 122, 135, 135, 135, 135, 135, 13
     self.accountLabel.font = [UIFont boldSystemFontOfSize:14];
     //: self.accountLabel.textColor = [UIColor colorWithHexString:@"#5D5F66"];
     self.accountLabel.textColor = [UIColor status:StringFromHockData(show_replyName)];
-    //: self.accountLabel.text = [FFFLanguageManager getTextWithKey:@"register_good_avater"];
+    //: self.accountLabel.text = [BusyLanguageManager getTextWithKey:@"register_good_avater"];
     self.accountLabel.text = [SendName streetSmart:StringFromHockData(dreamLetterTitle)];
     //: self.accountLabel.textAlignment = NSTextAlignmentCenter;
     self.accountLabel.textAlignment = NSTextAlignmentCenter;
@@ -289,7 +289,7 @@ Byte appSolutionStr[] = {21, 7, 87, 6, 41, 234, 122, 135, 135, 135, 135, 135, 13
     self.registButton.titleLabel.font = [UIFont systemFontOfSize:16];
     //: [self.registButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.registButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //: [self.registButton setTitle:[FFFLanguageManager getTextWithKey:@"contact_list_activity_complete"] forState:UIControlStateNormal];
+    //: [self.registButton setTitle:[BusyLanguageManager getTextWithKey:@"contact_list_activity_complete"] forState:UIControlStateNormal];
     [self.registButton setTitle:[SendName streetSmart:StringFromHockData(show_awarenessMessage)] forState:UIControlStateNormal];
     //: [bodyView addSubview:self.registButton];
     [bodyView addSubview:self.registButton];

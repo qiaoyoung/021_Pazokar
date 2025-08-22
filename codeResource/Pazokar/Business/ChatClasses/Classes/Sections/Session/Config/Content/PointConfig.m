@@ -9,12 +9,12 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFFileContentConfig.h"
+//: #import "BusyFileContentConfig.h"
 #import "PointConfig.h"
 //: #import "MyUserKit.h"
 #import "Case.h"
 
-//: @implementation FFFFileContentConfig
+//: @implementation BusyFileContentConfig
 @implementation PointConfig
 
 //: - (CGSize)contentSize:(CGFloat)cellWidth message:(NIMMessage *)message
@@ -27,7 +27,7 @@
 //: - (NSString *)cellContent:(NIMMessage *)message
 - (NSString *)picture:(NIMMessage *)message
 {
-    //: return @"FFFSessionFileTransContentView";
+    //: return @"BusySessionFileTransContentView";
     return @"DoingView";
 }
 

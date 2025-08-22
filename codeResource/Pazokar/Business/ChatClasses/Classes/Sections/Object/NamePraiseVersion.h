@@ -9,23 +9,23 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFSessionConfigurator.h"
+//: #import "BusySessionConfigurator.h"
 #import "ViewConfigurator.h"
-//: #import "FFFSessionPrivateProtocol.h"
-#import "FFFSessionPrivateProtocol.h"
+//: #import "BusySessionPrivateProtocol.h"
+#import "BusySessionPrivateProtocol.h"
 
-//: @interface FFFSessionLayoutImpl : NSObject<NIMSessionLayout>
+//: @interface BusySessionLayoutImpl : NSObject<NIMSessionLayout>
 @interface NamePraiseVersion : NSObject<ChildContent>
 
 //: @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) UITableView *tableView;
 
-//: @property (nonatomic,strong) FFFInputView *inputView;
+//: @property (nonatomic,strong) BusyInputView *inputView;
 @property (nonatomic,strong) StateView *inputView;
 
 //: - (instancetype)initWithSession:(NIMSession *)session
 - (instancetype)initWithHideTool:(NIMSession *)session
-                         //: config:(id<FFFSessionConfig>)sessionConfig;
+                         //: config:(id<BusySessionConfig>)sessionConfig;
                          indexConfig:(id<QuantityelligenceInformationCan>)sessionConfig;
 
 //: @end

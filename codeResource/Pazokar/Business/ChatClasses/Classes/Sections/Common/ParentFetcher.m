@@ -145,30 +145,30 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFKitMediaFetcher.h"
+//: #import "BusyKitMediaFetcher.h"
 #import "ParentFetcher.h"
 //: #import <MobileCoreServices/MobileCoreServices.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-//: #import "FFFKitFileLocationHelper.h"
+//: #import "BusyKitFileLocationHelper.h"
 #import "LocationHelper.h"
-//: #import "FFFMessageMaker.h"
+//: #import "BusyMessageMaker.h"
 #import "SharedMaker.h"
-//: #import "FFFGlobalMacro.h"
-#import "FFFGlobalMacro.h"
-//: #import "FFFKitDependency.h"
-#import "FFFKitDependency.h"
+//: #import "BusyGlobalMacro.h"
+#import "BusyGlobalMacro.h"
+//: #import "BusyKitDependency.h"
+#import "BusyKitDependency.h"
 //: #import "TZImageManager.h"
 #import "TZImageManager.h"
-//: #import "FFFKitProgressHUD.h"
+//: #import "BusyKitProgressHUD.h"
 #import "KitEffectView.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
-//: #import "FFFKitMediaPickerController.h"
+//: #import "BusyKitMediaPickerController.h"
 #import "TitleNavigationController.h"
 //: #import "AVAsset+MyUserKit.h"
 #import "AVAsset+Case.h"
 
-//: @interface FFFKitMediaFetcher()<FFFKitMediaPickerDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+//: @interface BusyKitMediaFetcher()<BusyKitMediaPickerDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @interface ParentFetcher()<TopAppDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 //: @property (nonatomic,copy) NIMKitLibraryFetchResult libraryResultHandler;
@@ -180,13 +180,13 @@
 //: @property (nonatomic,weak) UIImagePickerController *imagePicker;
 @property (nonatomic,weak) UIImagePickerController *imagePicker;
 
-//: @property (nonatomic,strong) FFFKitMediaPickerController *assetsPicker;
+//: @property (nonatomic,strong) BusyKitMediaPickerController *assetsPicker;
 @property (nonatomic,strong) TitleNavigationController *assetsPicker;
 
 //: @end
 @end
 
-//: @implementation FFFKitMediaFetcher
+//: @implementation BusyKitMediaFetcher
 @implementation ParentFetcher
 
 //: - (instancetype)init
@@ -306,7 +306,7 @@
 - (void)high:(void(^)(UIViewController * _Nullable picker)) handler {
     //: UIViewController *pickerVC = nil;
     UIViewController *pickerVC = nil;
-    //: FFFKitMediaPickerController *vc = [[FFFKitMediaPickerController alloc] initWithMaxImagesCount:self.limit];
+    //: BusyKitMediaPickerController *vc = [[BusyKitMediaPickerController alloc] initWithMaxImagesCount:self.limit];
     TitleNavigationController *vc = [[TitleNavigationController alloc] initWithView:self.limit];
     //: vc.nim_delegate = self;
     vc.nim_delegate = self;
@@ -379,15 +379,15 @@
             //: default:
             default:
             {
-                //: [[[UIAlertView alloc] initWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"]
+                //: [[[UIAlertView alloc] initWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"]
                 [[[UIAlertView alloc] initWithTitle:[SendName streetSmart:[HormoneData sharedInstance].dreamTeamRecordWoodenName]
-                                            //: message:[FFFLanguageManager getTextWithKey:@"setting_privacy"]
+                                            //: message:[BusyLanguageManager getTextWithKey:@"setting_privacy"]
                                             message:[SendName streetSmart:[HormoneData sharedInstance].kRedData]
                                            //: delegate:self
                                            delegate:self
-                                  //: cancelButtonTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"]
+                                  //: cancelButtonTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"]
                                   cancelButtonTitle:[SendName streetSmart:[HormoneData sharedInstance].showLabelMessage]
-                                  //: otherButtonTitles:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_sure"],nil] show];
+                                  //: otherButtonTitles:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_sure"],nil] show];
                                   otherButtonTitles:[SendName streetSmart:[HormoneData sharedInstance].showSolutionName],nil] show];
 
 //                UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:LangKey(@"warm_prompt") message:LangKey(@"setting_privacy") preferredStyle:UIAlertControllerStyleAlert];
@@ -419,15 +419,15 @@
                 if (status == PHAuthorizationStatusRestricted || status == PHAuthorizationStatusDenied) {
 
 
-                    //: [[[UIAlertView alloc] initWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"]
+                    //: [[[UIAlertView alloc] initWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"]
                     [[[UIAlertView alloc] initWithTitle:[SendName streetSmart:[HormoneData sharedInstance].dreamTeamRecordWoodenName]
-                                                //: message:[FFFLanguageManager getTextWithKey:@"setting_privacy"]
+                                                //: message:[BusyLanguageManager getTextWithKey:@"setting_privacy"]
                                                 message:[SendName streetSmart:[HormoneData sharedInstance].kRedData]
                                                //: delegate:self
                                                delegate:self
-                                      //: cancelButtonTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"]
+                                      //: cancelButtonTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"]
                                       cancelButtonTitle:[SendName streetSmart:[HormoneData sharedInstance].showLabelMessage]
-                                      //: otherButtonTitles:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_sure"],nil] show];
+                                      //: otherButtonTitles:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_sure"],nil] show];
                                       otherButtonTitles:[SendName streetSmart:[HormoneData sharedInstance].showSolutionName],nil] show];
 
                     //: if(handler) handler(nil);
@@ -476,9 +476,9 @@
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             //: NSURL *inputURL = [info objectForKey:UIImagePickerControllerMediaURL];
             NSURL *inputURL = [info objectForKey:UIImagePickerControllerMediaURL];
-            //: NSString *outputFileName = [FFFKitFileLocationHelper genFilenameWithExt:@"mp4"];
+            //: NSString *outputFileName = [BusyKitFileLocationHelper genFilenameWithExt:@"mp4"];
             NSString *outputFileName = [LocationHelper post:[HormoneData sharedInstance].userEnableValue];
-            //: NSString *outputPath = [FFFKitFileLocationHelper filepathForVideo:outputFileName];
+            //: NSString *outputPath = [BusyKitFileLocationHelper filepathForVideo:outputFileName];
             NSString *outputPath = [LocationHelper searchVideo:outputFileName];
             //: AVURLAsset *asset = [AVURLAsset URLAssetWithURL:inputURL options:nil];
             AVURLAsset *asset = [AVURLAsset URLAssetWithURL:inputURL options:nil];
@@ -648,15 +648,15 @@
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
 
 
-        //: [[[UIAlertView alloc] initWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"]
+        //: [[[UIAlertView alloc] initWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"]
         [[[UIAlertView alloc] initWithTitle:[SendName streetSmart:[HormoneData sharedInstance].dreamTeamRecordWoodenName]
-                                    //: message:[FFFLanguageManager getTextWithKey:@"setting_privacy_camera"]
+                                    //: message:[BusyLanguageManager getTextWithKey:@"setting_privacy_camera"]
                                     message:[SendName streetSmart:[HormoneData sharedInstance].showPinContent]
                                    //: delegate:self
                                    delegate:self
-                          //: cancelButtonTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"]
+                          //: cancelButtonTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"]
                           cancelButtonTitle:[SendName streetSmart:[HormoneData sharedInstance].showLabelMessage]
-                          //: otherButtonTitles:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_sure"],nil] show];
+                          //: otherButtonTitles:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_sure"],nil] show];
                           otherButtonTitles:[SendName streetSmart:[HormoneData sharedInstance].showSolutionName],nil] show];
         //: return NO;
         return NO;
@@ -669,15 +669,15 @@
     if(authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied){
 
 
-        //: [[[UIAlertView alloc] initWithTitle:[FFFLanguageManager getTextWithKey:@"warm_prompt"]
+        //: [[[UIAlertView alloc] initWithTitle:[BusyLanguageManager getTextWithKey:@"warm_prompt"]
         [[[UIAlertView alloc] initWithTitle:[SendName streetSmart:[HormoneData sharedInstance].dreamTeamRecordWoodenName]
-                                    //: message:[FFFLanguageManager getTextWithKey:@"setting_privacy_camera"]
+                                    //: message:[BusyLanguageManager getTextWithKey:@"setting_privacy_camera"]
                                     message:[SendName streetSmart:[HormoneData sharedInstance].showPinContent]
                                    //: delegate:self
                                    delegate:self
-                          //: cancelButtonTitle:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"]
+                          //: cancelButtonTitle:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_cancel"]
                           cancelButtonTitle:[SendName streetSmart:[HormoneData sharedInstance].showLabelMessage]
-                          //: otherButtonTitles:[FFFLanguageManager getTextWithKey:@"contact_tag_fragment_sure"],nil] show];
+                          //: otherButtonTitles:[BusyLanguageManager getTextWithKey:@"contact_tag_fragment_sure"],nil] show];
                           otherButtonTitles:[SendName streetSmart:[HormoneData sharedInstance].showSolutionName],nil] show];
 
         //: return NO;

@@ -37,7 +37,7 @@
     return [NSString stringWithUTF8String:(char *)[self SignalingDataToCache:data]];
 }
 
-//: #ffffff
+//: #fffBusy
 - (NSString *)user_deserveText {
     /* static */ NSString *user_deserveText = nil;
     if (!user_deserveText) {
@@ -100,7 +100,7 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFReplyContentView.h"
+//: #import "BusyReplyContentView.h"
 #import "NoticeTagView.h"
 //: #import "UIViewNimKit.h"
 #import "UIViewNimKit.h"
@@ -109,13 +109,13 @@
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"
 
-//: @interface FFFReplyContentView ()
+//: @interface BusyReplyContentView ()
 @interface NoticeTagView ()
 
 //: @end
 @end
 
-//: @implementation FFFReplyContentView
+//: @implementation BusyReplyContentView
 @implementation NoticeTagView
 
 //: - (instancetype)initWithFrame:(CGRect)frame
@@ -126,7 +126,7 @@
     //: if (self)
     if (self)
     {
-        //: self.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+        //: self.backgroundColor = [UIColor colorWithHexString:@"#fffBusy"];
         self.backgroundColor = [UIColor status:[[SignalingData sharedInstance] user_deserveText]];
 
         //: UIView *bg = [[UIView alloc]initWithFrame:CGRectMake(15, 2, [[UIScreen mainScreen] bounds].size.width-30, 48)];

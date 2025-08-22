@@ -86,7 +86,7 @@ typedef struct {
 #import "UIView+Date.h"
 //: #import "M80AttributedLabel.h"
 #import "CypherScrollView.h"
-//: #import "FFFKitUtil.h"
+//: #import "BusyKitUtil.h"
 #import "OffMore.h"
 //: #import "NTESWhiteboardAttachment.h"
 #import "TagAttachment.h"
@@ -132,7 +132,7 @@ typedef struct {
     return self;
 }
 
-//: - (void)refresh:(FFFMessageModel *)data{
+//: - (void)refresh:(BusyMessageModel *)data{
 - (void)messagePress:(MoreModel *)data{
     //: [super refresh:data];
     [super messagePress:data];

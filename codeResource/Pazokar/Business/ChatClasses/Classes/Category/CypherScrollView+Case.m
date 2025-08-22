@@ -11,9 +11,9 @@
 // __M_A_C_R_O__
 //: #import "M80AttributedLabel+MyUserKit.h"
 #import "CypherScrollView+Case.h"
-//: #import "FFFInputEmoticonParser.h"
+//: #import "BusyInputEmoticonParser.h"
 #import "ViewApp.h"
-//: #import "FFFInputEmoticonManager.h"
+//: #import "BusyInputEmoticonManager.h"
 #import "DeviceManager.h"
 //: #import "UIImage+MyUserKit.h"
 #import "UIImage+Case.h"

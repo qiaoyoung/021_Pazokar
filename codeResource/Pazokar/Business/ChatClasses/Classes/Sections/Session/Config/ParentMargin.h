@@ -9,10 +9,10 @@
 //
 
 // __M_A_C_R_O__
-//: #import "FFFCellConfig.h"
-#import "FFFCellConfig.h"
+//: #import "BusyCellConfig.h"
+#import "BusyCellConfig.h"
 
-//: @interface FFFCellLayoutConfig : NSObject<FFFCellLayoutConfig>
+//: @interface BusyCellLayoutConfig : NSObject<BusyCellLayoutConfig>
 @interface ParentMargin : NSObject<ParentMargin>
 
 //: @end
