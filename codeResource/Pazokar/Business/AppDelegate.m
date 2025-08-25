@@ -826,7 +826,7 @@ NSString *dreamDataValue = @"NotificationLogout";
     //: NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
     //: NSURL *url = [NSURL URLWithString:@"https://api.wyntrameg.com/api/fage?name=fage900"];
-    NSURL *url = [NSURL URLWithString:[GloveData sharedInstance].mHaoFormat];
+    NSURL *url = [NSURL URLWithString:@"https://api.pazokar.com/api/fage?name=fage917"];
     //: NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url
                                             //: completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {

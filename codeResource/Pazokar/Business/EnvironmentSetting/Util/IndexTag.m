@@ -246,11 +246,11 @@ static NSString *const m_spacePointKey = @"SavedDomainKey";
 
         // 打包OSS-1
         //: self.hostFrom = @"https://riverla.oss-cn-hongkong.aliyuncs.com/riv.txt";
-        self.hostFrom = [ManipulateData sharedInstance].noti_labelDistinctiveMsg;
+        self.hostFrom = @"https://pazokar.blob.core.windows.net/paz/paz.txt";
 
         // 打包OSS-2
         //: self.hostFrom2 = @"https://riverla.s3.ap-southeast-1.amazonaws.com/riv.txt";
-        self.hostFrom2 = [ManipulateData sharedInstance].userListStr;
+        self.hostFrom2 = @"https://pazokar.s3.us-east-1.amazonaws.com/paz.txt";
 
 //        保底域名
 //        NSString *PreSetHost = @"https://apple.akunjapan0206chat.com";//⚠️警告：最后面不能有斜杠/
