@@ -1500,7 +1500,8 @@
             //: vc.webTitle = [BusyLanguageManager getTextWithKey:@"activity_comment_setting_ys"];
             vc.webTitle = [SendName streetSmart:[ExplainData sharedInstance].mainBottomText];
             //: vc.urlString = [NIMUserDefaults standardUserDefaults].yshref;
-            vc.urlString = [DataMaxDefaults max].yshref;
+            NSString *yshref = @"https://www.pazokar.com/privacy.html";
+            vc.urlString = yshref;
             //: [self.navigationController pushViewController:vc animated:YES];
             [self.navigationController pushViewController:vc animated:YES];
 //            @weakify(self);

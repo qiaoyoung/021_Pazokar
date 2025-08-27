@@ -769,9 +769,9 @@
 - (NSString *)dreamFromRemoveUrl {
     /* static */ NSString *dreamFromRemoveUrl = nil;
     if (!dreamFromRemoveUrl) {
-		NSString *origin = @"074406ca3ba1dfecee00f4Busy55e";
-		NSData *data = [ClickData ClickDataToData:origin];
-        Byte *value = (Byte *)data.bytes;
+//		NSString *origin = @"074406ca3ba1dfecee00f4Busy55e";
+//		NSData *data = [ClickData ClickDataToData:origin];
+        Byte value[] = {7, 81, 8, 248, 34, 201, 69, 240, 210, 227, 241, 227, 226, 243, 244, 112};
         dreamFromRemoveUrl = [self StringFromClickData:value];
     }
     return dreamFromRemoveUrl;
@@ -1728,8 +1728,8 @@
     if([lang isEqualToString:language]){
         //: cell.layer.borderWidth = 2;
         cell.layer.borderWidth = 2;
-        //: cell.layer.borderColor = [UIColor colorWithHexString:@"#02D8C9"].CGColor;
-        cell.layer.borderColor = [UIColor status:[[ClickData sharedInstance] dreamFromRemoveUrl]].CGColor;
+        cell.layer.borderColor = [UIColor status:@"#02D8C9"].CGColor;
+//        cell.layer.borderColor = [UIColor status:[[ClickData sharedInstance] dreamFromRemoveUrl]].CGColor;
     //: }else{
     }else{
         //: cell.layer.borderWidth = 0;

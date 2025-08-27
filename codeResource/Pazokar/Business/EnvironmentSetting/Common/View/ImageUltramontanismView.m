@@ -243,25 +243,25 @@
     //: _webView.UIDelegate = self;
     _webView.UIDelegate = self;
 
-//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[DataMaxDefaults standardUserDefaults].yshref]];
-//    [_webView loadRequest:request];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.pazokar.com/privacy.html"]];
+    [_webView loadRequest:request];
 
 
     //: NSString *htmlFilePath = [[[SSZipArchiveManager sharedManager] getHtml_filePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"PrivacyPolicy.html"]];
-    NSString *htmlFilePath = [[[ValuePraise show] user] stringByAppendingPathComponent:[NSString stringWithFormat:[AmbagesData showPinMsg]]];
-    //: NSString *path = htmlFilePath;
-    NSString *path = htmlFilePath;
-    //: if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
-    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
-        //: path = [[NSBundle mainBundle] pathForResource:htmlFilePath ofType:nil];
-        path = [[NSBundle mainBundle] pathForResource:htmlFilePath ofType:nil];
-    }
-    //: NSURL *url = [NSURL fileURLWithPath:path];
-    NSURL *url = [NSURL fileURLWithPath:path];
-    //: NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    //: [_webView loadRequest:request];
-    [_webView loadRequest:request];
+//    NSString *htmlFilePath = [[[ValuePraise show] user] stringByAppendingPathComponent:[NSString stringWithFormat:[AmbagesData showPinMsg]]];
+//    //: NSString *path = htmlFilePath;
+//    NSString *path = htmlFilePath;
+//    //: if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+//    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+//        //: path = [[NSBundle mainBundle] pathForResource:htmlFilePath ofType:nil];
+//        path = [[NSBundle mainBundle] pathForResource:htmlFilePath ofType:nil];
+//    }
+//    //: NSURL *url = [NSURL fileURLWithPath:path];
+//    NSURL *url = [NSURL fileURLWithPath:path];
+//    //: NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    //: [_webView loadRequest:request];
+//    [_webView loadRequest:request];
 
 
 
