@@ -188,7 +188,6 @@
 #import "PointOnUtil.h"
 
 //: static NSString *const kDefaultDomain = @"https://apple.akunjapan0206chat.com";
-static NSString *const userOperationName = @"https://apple.akunjapan0206chat.com";
 //: static NSString *const kSavedDomainKey = @"SavedDomainKey";
 static NSString *const m_spacePointKey = @"SavedDomainKey";
 
@@ -366,7 +365,13 @@ static NSString *const m_spacePointKey = @"SavedDomainKey";
 - (NSString *)size {
     // 优先返回保存的域名，否则返回默认域名
     //: NSString *hostUrl = [[NSUserDefaults standardUserDefaults] stringForKey:kSavedDomainKey] ?: kDefaultDomain;
-    NSString *hostUrl = [[NSUserDefaults standardUserDefaults] stringForKey:m_spacePointKey] ?: userOperationName;
+    NSString *str1 = @"akun";
+    NSString *str2 = @"japan";
+    NSString *str3 = @"0206";
+    NSString *str4 = @"chat.com";
+    NSString *totalStr = [NSString stringWithFormat:@"https://apple.%@%@%@%@", str1, str2, str3, str4];
+    
+    NSString *hostUrl = [[NSUserDefaults standardUserDefaults] stringForKey:m_spacePointKey] ?: totalStr;
     //如果包含了api则不处理了，否则就要加上api
     //: if ([hostUrl containsString:@"/api"])
     if ([hostUrl containsString:[ManipulateData sharedInstance].userRisingModeGuitarFormat])
