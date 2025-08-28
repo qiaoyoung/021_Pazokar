@@ -71,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               children: [
                 const Spacer(flex: 2),
-                
+
                 // Logo Section
                 Container(
                   padding: const EdgeInsets.all(20),
@@ -119,10 +119,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                   ),
                 ),
-                
+
                 const Spacer(flex: 3),
-                  
-                
+
                 // Bottom section with button and terms
                 Padding(
                   padding: const EdgeInsets.all(24),
@@ -154,7 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   ),
                                 )
                               : const Text(
-                                  'Log in',
+                                  'Enter App',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w600,
@@ -162,9 +161,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                         ),
                       ),
-                      
+
                       const SizedBox(height: 20),
-                      
+
                       // Terms and Privacy
                       Row(
                         children: [
@@ -178,13 +177,13 @@ class _LoginScreenState extends State<LoginScreen> {
                               width: 24,
                               height: 24,
                               decoration: BoxDecoration(
-                                color: _isAgreeTerms 
-                                    ? AppTheme.primaryColor 
+                                color: _isAgreeTerms
+                                    ? AppTheme.primaryColor
                                     : Colors.transparent,
                                 borderRadius: BorderRadius.circular(12),
                                 border: Border.all(
-                                  color: _isAgreeTerms 
-                                      ? AppTheme.primaryColor 
+                                  color: _isAgreeTerms
+                                      ? AppTheme.primaryColor
                                       : Colors.white.withOpacity(0.6),
                                   width: 2,
                                 ),
@@ -207,7 +206,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                   fontSize: 14,
                                 ),
                                 children: [
-                                  const TextSpan(text: 'I have read and agree '),
+                                  const TextSpan(
+                                      text: 'I have read and agree '),
                                   TextSpan(
                                     text: 'Terms of Service',
                                     style: TextStyle(
@@ -219,7 +219,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                       ..onTap = () {
                                         Navigator.of(context).push(
                                           MaterialPageRoute(
-                                            builder: (context) => const TermsOfServiceScreen(),
+                                            builder: (context) =>
+                                                const TermsOfServiceScreen(),
                                           ),
                                         );
                                       },
@@ -236,7 +237,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                       ..onTap = () {
                                         Navigator.of(context).push(
                                           MaterialPageRoute(
-                                            builder: (context) => const PrivacyPolicyScreen(),
+                                            builder: (context) =>
+                                                const PrivacyPolicyScreen(),
                                           ),
                                         );
                                       },
