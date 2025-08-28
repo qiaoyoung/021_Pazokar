@@ -28,8 +28,14 @@
 	<true/>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Pazokar requires access to add new photos to your library, enabling you to save photos directly from the app.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Pazokar needs access to your camera to take profile pictures.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Pazokar needs access to photo library to share images in chat.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Pazokar need to use your address book permissions to recommend friends to you.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Pazokar needs to access the microphone to record audio information for users to have voice chats.</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
